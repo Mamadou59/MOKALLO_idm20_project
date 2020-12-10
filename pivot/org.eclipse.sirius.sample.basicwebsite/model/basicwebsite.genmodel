@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.eclipse.sirius.sample.basicwebsite/src-gen"
+    creationIcons="false" editDirectory="/org.eclipse.sirius.sample.basicwebsite.edit/src-gen"
+    editorDirectory="/org.eclipse.sirius.sample.basicwebsite.editor/src-gen" modelPluginID="org.eclipse.sirius.sample.basicwebsite"
+    modelName="Basicwebsite" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>basicwebsite.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Basicwebsite" basePackage="org.eclipse.sirius.sample" disposableProviderFactory="true"
+      ecorePackage="basicwebsite.ecore#/">
+    <genClasses ecoreClass="basicwebsite.ecore#//Page">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basicwebsite.ecore#//Page/contents"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicwebsite.ecore#//Page/name"/>
+    </genClasses>
+    <genClasses ecoreClass="basicwebsite.ecore#//PageContent"/>
+    <genClasses ecoreClass="basicwebsite.ecore#//TextContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference basicwebsite.ecore#//TextContainer/textelement"/>
+    </genClasses>
+    <genClasses ecoreClass="basicwebsite.ecore#//Paragraph"/>
+    <genClasses ecoreClass="basicwebsite.ecore#//Title">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicwebsite.ecore#//Title/level"/>
+    </genClasses>
+    <genClasses ecoreClass="basicwebsite.ecore#//TextElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute basicwebsite.ecore#//TextElement/text"/>
+    </genClasses>
+    <genClasses ecoreClass="basicwebsite.ecore#//Text"/>
+  </genPackages>
+</genmodel:GenModel>
