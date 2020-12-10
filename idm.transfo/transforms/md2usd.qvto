@@ -1,0 +1,62 @@
+
+modeltype mdMM "strict" uses "http://www.example.org/simplemarkdown";
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+transformation md2usd(in md : mdMM, out usd : usdMM); 
+
+main() {
+	log("Test","j'entre'");
+	//log("size", md.rootObjects()[Document] -> map document2Page());
+	md.rootObjects()[Document] -> map document2Page()
+	//md.rootObjects().allSubobjectsOfType(Block)[Block] -> map block2X();
+}
+
+mapping mdMM::Document::document2Page() :usdMM::Page  {
+	init {
+		log("Test",self.name);
+	}
+	name := self.name;
+	contents += self.contents -> map constructContent();		
+}
+
+// Start transformation block to pagecontent
+abstract mapping mdMM::Block::block2PageContent() : usdMM::PageContent {
+	
+}
+
+// Start transformation TextContainer md to TextContainer usd
+abstract mapping mdMM::TextContainer::textContainerMd2TextContainerUsd() : usdMM::TextContainer inherits mdMM::Block::block2PageContent {
+	textElements += self.elements -> map contructTextElement();
+}
+
+
+mapping mdMM::Paragraph::paragraphMd2ParagraphUsd() : usdMM::Paragraph inherits mdMM::TextContainer::textContainerMd2TextContainerUsd{
+	
+}
+
+mapping mdMM::Title::titleMd2TitleUsd() : usdMM::Title inherits mdMM::TextContainer::textContainerMd2TextContainerUsd{
+	level := self.level;
+}
+
+// Strat TextElement part
+abstract mapping mdMM::TextElement::textElementMd2TextElementUsd() : usdMM::TextElement {
+	text := self.text;
+}
+
+mapping mdMM::Text::textMd2TextUsd() : usdMM::Text inherits mdMM::TextElement::textElementMd2TextElementUsd{
+	
+}
+
+mapping mdMM::StrongEmphasis::strongMd2StrongUsd() : usdMM::Strong inherits mdMM::TextElement::textElementMd2TextElementUsd{
+	
+}
+
+mapping mdMM::TextElement::contructTextElement() : usdMM::TextElement 
+	disjuncts  mdMM::Text::textMd2TextUsd, mdMM::StrongEmphasis::strongMd2StrongUsd{}
+	
+//End TextElement part
+
+mapping mdMM::Block::constructContent() : usdMM::PageContent 
+	disjuncts  Paragraph::paragraphMd2ParagraphUsd, mdMM::Title::titleMd2TitleUsd{}
+// End transformation TextContainer md to TextContainer usd
+// End transformation block to pagecontent
+
