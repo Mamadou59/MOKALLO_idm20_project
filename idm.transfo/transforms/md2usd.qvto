@@ -112,15 +112,32 @@ mapping mdMM::ListItem::listItemMd2ListItemUsd() : usdMM::ListItem {
 
 mapping mdMM::ListItemElement::constructListItemElement() : usdMM::ListItemElement 
 	disjuncts mdMM::OrderedList::orderedListMd2OrderedListUsd, mdMM::BulletList::unorderedListMd2UnorderedListUsd,
-	 			mdMM::Paragraph::paragraphMd2ParagraphUsd{
+	 			mdMM::Paragraph::paragraphMd2ParagraphUsd, mdMM::BlockQuote::blockQuoteMd2BlockQuoteUsd,
+	 			mdMM::CodeBlock::codeBlockMd2codeBlockUsd{
 	
 }
 // End List transformation
 
+// Start BlockQuote transformation
+mapping mdMM::BlockQuote::blockQuoteMd2BlockQuoteUsd() : usdMM::BlockQuote inherits mdMM::Block::block2PageContent{
+	contents += self.contents -> map constructContent();
+}
+// End BlockQuote transformation
+
+// Start CodeBlock transformation
+mapping mdMM::CodeBlock::codeBlockMd2codeBlockUsd() : usdMM::CodeBlock inherits mdMM::Block::block2PageContent{
+	codeLines += self.codelines -> codeLinesMd2CodeLinesUsd();
+}
+
+mapping mdMM::CodeLine::codeLinesMd2CodeLinesUsd() : usdMM::CodeLine {
+	text := self.text;
+}
+// End CodeBlock transformation
+
 mapping mdMM::Block::constructContent() : usdMM::PageContent 
 	disjuncts  mdMM::Paragraph::paragraphMd2ParagraphUsd, mdMM::Title::titleMd2TitleUsd,
-	mdMM::OrderedList::orderedListMd2OrderedListUsd,
-	mdMM::BulletList::unorderedListMd2UnorderedListUsd{}
+				mdMM::OrderedList::orderedListMd2OrderedListUsd, mdMM::BulletList::unorderedListMd2UnorderedListUsd,
+				mdMM::BlockQuote::blockQuoteMd2BlockQuoteUsd, mdMM::CodeBlock::codeBlockMd2codeBlockUsd{}
 // End transformation TextContainer md to TextContainer usd
 
 // End transformation block to pagecontent
