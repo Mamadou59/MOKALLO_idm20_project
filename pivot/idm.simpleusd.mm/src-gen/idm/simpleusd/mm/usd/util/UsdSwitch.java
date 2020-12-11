@@ -127,11 +127,60 @@ public class UsdSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case UsdPackage.STRONG: {
-			Strong strong = (Strong) theEObject;
-			T result = caseStrong(strong);
+		case UsdPackage.LINK_TEXT_ELEMENT: {
+			LinkTextElement linkTextElement = (LinkTextElement) theEObject;
+			T result = caseLinkTextElement(linkTextElement);
 			if (result == null)
-				result = caseTextElement(strong);
+				result = caseTextElement(linkTextElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.LINK: {
+			Link link = (Link) theEObject;
+			T result = caseLink(link);
+			if (result == null)
+				result = caseLinkTextElement(link);
+			if (result == null)
+				result = caseTextElement(link);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.IMAGE: {
+			Image image = (Image) theEObject;
+			T result = caseImage(image);
+			if (result == null)
+				result = caseLinkTextElement(image);
+			if (result == null)
+				result = caseTextElement(image);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.CODE: {
+			Code code = (Code) theEObject;
+			T result = caseCode(code);
+			if (result == null)
+				result = caseTextElement(code);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.STRONG_EMPHASIS: {
+			StrongEmphasis strongEmphasis = (StrongEmphasis) theEObject;
+			T result = caseStrongEmphasis(strongEmphasis);
+			if (result == null)
+				result = caseTextElement(strongEmphasis);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.ITALIC_EMPHASIS: {
+			ItalicEmphasis italicEmphasis = (ItalicEmphasis) theEObject;
+			T result = caseItalicEmphasis(italicEmphasis);
+			if (result == null)
+				result = caseTextElement(italicEmphasis);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -247,17 +296,92 @@ public class UsdSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Strong</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Link Text Element</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Strong</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Link Text Element</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStrong(Strong object) {
+	public T caseLinkTextElement(LinkTextElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLink(Link object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Image</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Image</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImage(Image object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Code</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Code</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCode(Code object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Strong Emphasis</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Strong Emphasis</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStrongEmphasis(StrongEmphasis object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Italic Emphasis</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Italic Emphasis</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseItalicEmphasis(ItalicEmphasis object) {
 		return null;
 	}
 

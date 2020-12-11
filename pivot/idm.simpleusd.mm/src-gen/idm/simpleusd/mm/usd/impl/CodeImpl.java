@@ -2,25 +2,25 @@
  */
 package idm.simpleusd.mm.usd.impl;
 
-import idm.simpleusd.mm.usd.Strong;
+import idm.simpleusd.mm.usd.Code;
 import idm.simpleusd.mm.usd.UsdPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Strong</b></em>'.
+ * An implementation of the model object '<em><b>Code</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class StrongImpl extends TextElementImpl implements Strong {
+public class CodeImpl extends TextElementImpl implements Code {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StrongImpl() {
+	protected CodeImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class StrongImpl extends TextElementImpl implements Strong {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UsdPackage.Literals.STRONG;
+		return UsdPackage.Literals.CODE;
 	}
 
-} //StrongImpl
+} //CodeImpl

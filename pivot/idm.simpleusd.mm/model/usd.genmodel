@@ -16,13 +16,25 @@
     </genClasses>
     <genClasses ecoreClass="usd.ecore#//PageContent"/>
     <genClasses ecoreClass="usd.ecore#//TextContainer">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//TextContainer/textelements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//TextContainer/textElements"/>
     </genClasses>
     <genClasses ecoreClass="usd.ecore#//Paragraph"/>
     <genClasses ecoreClass="usd.ecore#//Title">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Title/level"/>
     </genClasses>
-    <genClasses ecoreClass="usd.ecore#//TextElement"/>
+    <genClasses ecoreClass="usd.ecore#//TextElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//TextElement/text"/>
+    </genClasses>
     <genClasses ecoreClass="usd.ecore#//Text"/>
+    <genClasses ecoreClass="usd.ecore#//LinkTextElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//LinkTextElement/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//LinkTextElement/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//LinkTextElement/textElements"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Link"/>
+    <genClasses ecoreClass="usd.ecore#//Image"/>
+    <genClasses ecoreClass="usd.ecore#//Code"/>
+    <genClasses ecoreClass="usd.ecore#//StrongEmphasis"/>
+    <genClasses ecoreClass="usd.ecore#//ItalicEmphasis"/>
   </genPackages>
 </genmodel:GenModel>

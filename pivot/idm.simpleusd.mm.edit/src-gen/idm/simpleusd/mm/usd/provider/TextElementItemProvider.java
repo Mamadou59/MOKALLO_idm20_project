@@ -4,6 +4,7 @@ package idm.simpleusd.mm.usd.provider;
 
 import idm.simpleusd.mm.usd.TextElement;
 import idm.simpleusd.mm.usd.UsdPackage;
+
 import java.util.Collection;
 import java.util.List;
 

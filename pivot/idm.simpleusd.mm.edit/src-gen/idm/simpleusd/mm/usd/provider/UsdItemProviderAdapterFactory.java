@@ -165,26 +165,118 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.Strong} instances.
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.Link} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StrongItemProvider strongItemProvider;
+	protected LinkItemProvider linkItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.Strong}.
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.Link}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createStrongAdapter() {
-		if (strongItemProvider == null) {
-			strongItemProvider = new StrongItemProvider(this);
+	public Adapter createLinkAdapter() {
+		if (linkItemProvider == null) {
+			linkItemProvider = new LinkItemProvider(this);
 		}
 
-		return strongItemProvider;
+		return linkItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.Image} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ImageItemProvider imageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.Image}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createImageAdapter() {
+		if (imageItemProvider == null) {
+			imageItemProvider = new ImageItemProvider(this);
+		}
+
+		return imageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.Code} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CodeItemProvider codeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.Code}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCodeAdapter() {
+		if (codeItemProvider == null) {
+			codeItemProvider = new CodeItemProvider(this);
+		}
+
+		return codeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.StrongEmphasis} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StrongEmphasisItemProvider strongEmphasisItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.StrongEmphasis}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStrongEmphasisAdapter() {
+		if (strongEmphasisItemProvider == null) {
+			strongEmphasisItemProvider = new StrongEmphasisItemProvider(this);
+		}
+
+		return strongEmphasisItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.ItalicEmphasis} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ItalicEmphasisItemProvider italicEmphasisItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.ItalicEmphasis}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createItalicEmphasisAdapter() {
+		if (italicEmphasisItemProvider == null) {
+			italicEmphasisItemProvider = new ItalicEmphasisItemProvider(this);
+		}
+
+		return italicEmphasisItemProvider;
 	}
 
 	/**
@@ -294,8 +386,16 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 			titleItemProvider.dispose();
 		if (textItemProvider != null)
 			textItemProvider.dispose();
-		if (strongItemProvider != null)
-			strongItemProvider.dispose();
+		if (linkItemProvider != null)
+			linkItemProvider.dispose();
+		if (imageItemProvider != null)
+			imageItemProvider.dispose();
+		if (codeItemProvider != null)
+			codeItemProvider.dispose();
+		if (strongEmphasisItemProvider != null)
+			strongEmphasisItemProvider.dispose();
+		if (italicEmphasisItemProvider != null)
+			italicEmphasisItemProvider.dispose();
 	}
 
 }

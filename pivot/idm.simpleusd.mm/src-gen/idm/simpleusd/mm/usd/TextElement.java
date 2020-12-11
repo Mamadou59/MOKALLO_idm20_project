@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface TextElement extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -43,4 +42,5 @@ public interface TextElement extends EObject {
 	 * @generated
 	 */
 	void setText(String value);
+
 } // TextElement

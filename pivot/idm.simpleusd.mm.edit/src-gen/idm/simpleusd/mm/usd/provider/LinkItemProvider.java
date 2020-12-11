@@ -2,7 +2,7 @@
  */
 package idm.simpleusd.mm.usd.provider;
 
-import idm.simpleusd.mm.usd.Text;
+import idm.simpleusd.mm.usd.Link;
 
 import java.util.Collection;
 import java.util.List;
@@ -13,19 +13,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.Text} object.
+ * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.Link} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class TextItemProvider extends TextElementItemProvider {
+public class LinkItemProvider extends LinkTextElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TextItemProvider(AdapterFactory adapterFactory) {
+	public LinkItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,14 +45,14 @@ public class TextItemProvider extends TextElementItemProvider {
 	}
 
 	/**
-	 * This returns Text.gif.
+	 * This returns Link.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Text"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Link"));
 	}
 
 	/**
@@ -73,9 +73,9 @@ public class TextItemProvider extends TextElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Text) object).getText();
-		return label == null || label.length() == 0 ? getString("_UI_Text_type")
-				: getString("_UI_Text_type") + " " + label;
+		String label = ((Link) object).getText();
+		return label == null || label.length() == 0 ? getString("_UI_Link_type")
+				: getString("_UI_Link_type") + " " + label;
 	}
 
 	/**

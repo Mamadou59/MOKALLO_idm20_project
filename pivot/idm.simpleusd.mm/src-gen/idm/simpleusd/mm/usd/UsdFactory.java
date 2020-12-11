@@ -58,13 +58,49 @@ public interface UsdFactory extends EFactory {
 	Text createText();
 
 	/**
-	 * Returns a new object of class '<em>Strong</em>'.
+	 * Returns a new object of class '<em>Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Strong</em>'.
+	 * @return a new object of class '<em>Link</em>'.
 	 * @generated
 	 */
-	Strong createStrong();
+	Link createLink();
+
+	/**
+	 * Returns a new object of class '<em>Image</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Image</em>'.
+	 * @generated
+	 */
+	Image createImage();
+
+	/**
+	 * Returns a new object of class '<em>Code</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Code</em>'.
+	 * @generated
+	 */
+	Code createCode();
+
+	/**
+	 * Returns a new object of class '<em>Strong Emphasis</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Strong Emphasis</em>'.
+	 * @generated
+	 */
+	StrongEmphasis createStrongEmphasis();
+
+	/**
+	 * Returns a new object of class '<em>Italic Emphasis</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Italic Emphasis</em>'.
+	 * @generated
+	 */
+	ItalicEmphasis createItalicEmphasis();
 
 	/**
 	 * Returns the package supported by this factory.

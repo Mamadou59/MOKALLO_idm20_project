@@ -2,10 +2,15 @@
  */
 package idm.simpleusd.mm.usd.impl;
 
+import idm.simpleusd.mm.usd.Code;
+import idm.simpleusd.mm.usd.Image;
+import idm.simpleusd.mm.usd.ItalicEmphasis;
+import idm.simpleusd.mm.usd.Link;
+import idm.simpleusd.mm.usd.LinkTextElement;
 import idm.simpleusd.mm.usd.Page;
 import idm.simpleusd.mm.usd.PageContent;
 import idm.simpleusd.mm.usd.Paragraph;
-import idm.simpleusd.mm.usd.Strong;
+import idm.simpleusd.mm.usd.StrongEmphasis;
 import idm.simpleusd.mm.usd.Text;
 import idm.simpleusd.mm.usd.TextContainer;
 import idm.simpleusd.mm.usd.TextElement;
@@ -81,7 +86,42 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass strongEClass = null;
+	private EClass linkTextElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass linkEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass imageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strongEmphasisEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass italicEmphasisEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -260,8 +300,80 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStrong() {
-		return strongEClass;
+	public EClass getLinkTextElement() {
+		return linkTextElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLinkTextElement_Url() {
+		return (EAttribute) linkTextElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLinkTextElement_Title() {
+		return (EAttribute) linkTextElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLinkTextElement_TextElements() {
+		return (EReference) linkTextElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLink() {
+		return linkEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getImage() {
+		return imageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCode() {
+		return codeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStrongEmphasis() {
+		return strongEmphasisEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getItalicEmphasis() {
+		return italicEmphasisEClass;
 	}
 
 	/**
@@ -312,7 +424,20 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		textEClass = createEClass(TEXT);
 
-		strongEClass = createEClass(STRONG);
+		linkTextElementEClass = createEClass(LINK_TEXT_ELEMENT);
+		createEAttribute(linkTextElementEClass, LINK_TEXT_ELEMENT__URL);
+		createEAttribute(linkTextElementEClass, LINK_TEXT_ELEMENT__TITLE);
+		createEReference(linkTextElementEClass, LINK_TEXT_ELEMENT__TEXT_ELEMENTS);
+
+		linkEClass = createEClass(LINK);
+
+		imageEClass = createEClass(IMAGE);
+
+		codeEClass = createEClass(CODE);
+
+		strongEmphasisEClass = createEClass(STRONG_EMPHASIS);
+
+		italicEmphasisEClass = createEClass(ITALIC_EMPHASIS);
 	}
 
 	/**
@@ -348,7 +473,12 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		paragraphEClass.getESuperTypes().add(this.getTextContainer());
 		titleEClass.getESuperTypes().add(this.getTextContainer());
 		textEClass.getESuperTypes().add(this.getTextElement());
-		strongEClass.getESuperTypes().add(this.getTextElement());
+		linkTextElementEClass.getESuperTypes().add(this.getTextElement());
+		linkEClass.getESuperTypes().add(this.getLinkTextElement());
+		imageEClass.getESuperTypes().add(this.getLinkTextElement());
+		codeEClass.getESuperTypes().add(this.getTextElement());
+		strongEmphasisEClass.getESuperTypes().add(this.getTextElement());
+		italicEmphasisEClass.getESuperTypes().add(this.getTextElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -381,7 +511,28 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(strongEClass, Strong.class, "Strong", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(linkTextElementEClass, LinkTextElement.class, "LinkTextElement", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLinkTextElement_Url(), ecorePackage.getEString(), "url", null, 0, 1, LinkTextElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLinkTextElement_Title(), ecorePackage.getEString(), "title", null, 0, 1,
+				LinkTextElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getLinkTextElement_TextElements(), this.getTextElement(), null, "textElements", null, 0, -1,
+				LinkTextElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(codeEClass, Code.class, "Code", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(strongEmphasisEClass, StrongEmphasis.class, "StrongEmphasis", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(italicEmphasisEClass, ItalicEmphasis.class, "ItalicEmphasis", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

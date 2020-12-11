@@ -325,14 +325,14 @@ public interface UsdPackage extends EPackage {
 	int TEXT_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.StrongImpl <em>Strong</em>}' class.
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.LinkTextElementImpl <em>Link Text Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see idm.simpleusd.mm.usd.impl.StrongImpl
-	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getStrong()
+	 * @see idm.simpleusd.mm.usd.impl.LinkTextElementImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getLinkTextElement()
 	 * @generated
 	 */
-	int STRONG = 7;
+	int LINK_TEXT_ELEMENT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -341,25 +341,291 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRONG__TEXT = TEXT_ELEMENT__TEXT;
+	int LINK_TEXT_ELEMENT__TEXT = TEXT_ELEMENT__TEXT;
 
 	/**
-	 * The number of structural features of the '<em>Strong</em>' class.
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRONG_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int LINK_TEXT_ELEMENT__URL = TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Strong</em>' class.
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRONG_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int LINK_TEXT_ELEMENT__TITLE = TEXT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Text Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_TEXT_ELEMENT__TEXT_ELEMENTS = TEXT_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Link Text Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_TEXT_ELEMENT_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Link Text Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_TEXT_ELEMENT_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.LinkImpl <em>Link</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.LinkImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getLink()
+	 * @generated
+	 */
+	int LINK = 8;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__TEXT = LINK_TEXT_ELEMENT__TEXT;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__URL = LINK_TEXT_ELEMENT__URL;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__TITLE = LINK_TEXT_ELEMENT__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Text Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__TEXT_ELEMENTS = LINK_TEXT_ELEMENT__TEXT_ELEMENTS;
+
+	/**
+	 * The number of structural features of the '<em>Link</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_FEATURE_COUNT = LINK_TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Link</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_OPERATION_COUNT = LINK_TEXT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.ImageImpl <em>Image</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.ImageImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getImage()
+	 * @generated
+	 */
+	int IMAGE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__TEXT = LINK_TEXT_ELEMENT__TEXT;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__URL = LINK_TEXT_ELEMENT__URL;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__TITLE = LINK_TEXT_ELEMENT__TITLE;
+
+	/**
+	 * The feature id for the '<em><b>Text Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__TEXT_ELEMENTS = LINK_TEXT_ELEMENT__TEXT_ELEMENTS;
+
+	/**
+	 * The number of structural features of the '<em>Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_FEATURE_COUNT = LINK_TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Image</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE_OPERATION_COUNT = LINK_TEXT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.CodeImpl <em>Code</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.CodeImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getCode()
+	 * @generated
+	 */
+	int CODE = 10;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE__TEXT = TEXT_ELEMENT__TEXT;
+
+	/**
+	 * The number of structural features of the '<em>Code</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Code</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.StrongEmphasisImpl <em>Strong Emphasis</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.StrongEmphasisImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getStrongEmphasis()
+	 * @generated
+	 */
+	int STRONG_EMPHASIS = 11;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRONG_EMPHASIS__TEXT = TEXT_ELEMENT__TEXT;
+
+	/**
+	 * The number of structural features of the '<em>Strong Emphasis</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRONG_EMPHASIS_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Strong Emphasis</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRONG_EMPHASIS_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.ItalicEmphasisImpl <em>Italic Emphasis</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.ItalicEmphasisImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getItalicEmphasis()
+	 * @generated
+	 */
+	int ITALIC_EMPHASIS = 12;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITALIC_EMPHASIS__TEXT = TEXT_ELEMENT__TEXT;
+
+	/**
+	 * The number of structural features of the '<em>Italic Emphasis</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITALIC_EMPHASIS_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Italic Emphasis</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITALIC_EMPHASIS_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Page <em>Page</em>}'.
@@ -487,14 +753,97 @@ public interface UsdPackage extends EPackage {
 	EClass getText();
 
 	/**
-	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Strong <em>Strong</em>}'.
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.LinkTextElement <em>Link Text Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Strong</em>'.
-	 * @see idm.simpleusd.mm.usd.Strong
+	 * @return the meta object for class '<em>Link Text Element</em>'.
+	 * @see idm.simpleusd.mm.usd.LinkTextElement
 	 * @generated
 	 */
-	EClass getStrong();
+	EClass getLinkTextElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.LinkTextElement#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see idm.simpleusd.mm.usd.LinkTextElement#getUrl()
+	 * @see #getLinkTextElement()
+	 * @generated
+	 */
+	EAttribute getLinkTextElement_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.LinkTextElement#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see idm.simpleusd.mm.usd.LinkTextElement#getTitle()
+	 * @see #getLinkTextElement()
+	 * @generated
+	 */
+	EAttribute getLinkTextElement_Title();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.LinkTextElement#getTextElements <em>Text Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Text Elements</em>'.
+	 * @see idm.simpleusd.mm.usd.LinkTextElement#getTextElements()
+	 * @see #getLinkTextElement()
+	 * @generated
+	 */
+	EReference getLinkTextElement_TextElements();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Link <em>Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Link</em>'.
+	 * @see idm.simpleusd.mm.usd.Link
+	 * @generated
+	 */
+	EClass getLink();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Image <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Image</em>'.
+	 * @see idm.simpleusd.mm.usd.Image
+	 * @generated
+	 */
+	EClass getImage();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Code <em>Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Code</em>'.
+	 * @see idm.simpleusd.mm.usd.Code
+	 * @generated
+	 */
+	EClass getCode();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.StrongEmphasis <em>Strong Emphasis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Strong Emphasis</em>'.
+	 * @see idm.simpleusd.mm.usd.StrongEmphasis
+	 * @generated
+	 */
+	EClass getStrongEmphasis();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.ItalicEmphasis <em>Italic Emphasis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Italic Emphasis</em>'.
+	 * @see idm.simpleusd.mm.usd.ItalicEmphasis
+	 * @generated
+	 */
+	EClass getItalicEmphasis();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -630,14 +979,88 @@ public interface UsdPackage extends EPackage {
 		EClass TEXT = eINSTANCE.getText();
 
 		/**
-		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.StrongImpl <em>Strong</em>}' class.
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.LinkTextElementImpl <em>Link Text Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see idm.simpleusd.mm.usd.impl.StrongImpl
-		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getStrong()
+		 * @see idm.simpleusd.mm.usd.impl.LinkTextElementImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getLinkTextElement()
 		 * @generated
 		 */
-		EClass STRONG = eINSTANCE.getStrong();
+		EClass LINK_TEXT_ELEMENT = eINSTANCE.getLinkTextElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LINK_TEXT_ELEMENT__URL = eINSTANCE.getLinkTextElement_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LINK_TEXT_ELEMENT__TITLE = eINSTANCE.getLinkTextElement_Title();
+
+		/**
+		 * The meta object literal for the '<em><b>Text Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LINK_TEXT_ELEMENT__TEXT_ELEMENTS = eINSTANCE.getLinkTextElement_TextElements();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.LinkImpl <em>Link</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.LinkImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getLink()
+		 * @generated
+		 */
+		EClass LINK = eINSTANCE.getLink();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.ImageImpl <em>Image</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.ImageImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getImage()
+		 * @generated
+		 */
+		EClass IMAGE = eINSTANCE.getImage();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.CodeImpl <em>Code</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.CodeImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getCode()
+		 * @generated
+		 */
+		EClass CODE = eINSTANCE.getCode();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.StrongEmphasisImpl <em>Strong Emphasis</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.StrongEmphasisImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getStrongEmphasis()
+		 * @generated
+		 */
+		EClass STRONG_EMPHASIS = eINSTANCE.getStrongEmphasis();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.ItalicEmphasisImpl <em>Italic Emphasis</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.ItalicEmphasisImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getItalicEmphasis()
+		 * @generated
+		 */
+		EClass ITALIC_EMPHASIS = eINSTANCE.getItalicEmphasis();
 
 	}
 

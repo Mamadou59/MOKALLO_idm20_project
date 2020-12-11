@@ -102,8 +102,33 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseStrong(Strong object) {
-			return createStrongAdapter();
+		public Adapter caseLinkTextElement(LinkTextElement object) {
+			return createLinkTextElementAdapter();
+		}
+
+		@Override
+		public Adapter caseLink(Link object) {
+			return createLinkAdapter();
+		}
+
+		@Override
+		public Adapter caseImage(Image object) {
+			return createImageAdapter();
+		}
+
+		@Override
+		public Adapter caseCode(Code object) {
+			return createCodeAdapter();
+		}
+
+		@Override
+		public Adapter caseStrongEmphasis(StrongEmphasis object) {
+			return createStrongEmphasisAdapter();
+		}
+
+		@Override
+		public Adapter caseItalicEmphasis(ItalicEmphasis object) {
+			return createItalicEmphasisAdapter();
 		}
 
 		@Override
@@ -224,16 +249,86 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.Strong <em>Strong</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.LinkTextElement <em>Link Text Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.simpleusd.mm.usd.Strong
+	 * @see idm.simpleusd.mm.usd.LinkTextElement
 	 * @generated
 	 */
-	public Adapter createStrongAdapter() {
+	public Adapter createLinkTextElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.Link <em>Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.Link
+	 * @generated
+	 */
+	public Adapter createLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.Image <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.Image
+	 * @generated
+	 */
+	public Adapter createImageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.Code <em>Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.Code
+	 * @generated
+	 */
+	public Adapter createCodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.StrongEmphasis <em>Strong Emphasis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.StrongEmphasis
+	 * @generated
+	 */
+	public Adapter createStrongEmphasisAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.ItalicEmphasis <em>Italic Emphasis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.ItalicEmphasis
+	 * @generated
+	 */
+	public Adapter createItalicEmphasisAdapter() {
 		return null;
 	}
 

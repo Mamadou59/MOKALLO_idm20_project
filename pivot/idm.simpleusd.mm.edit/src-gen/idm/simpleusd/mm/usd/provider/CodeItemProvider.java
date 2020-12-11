@@ -2,7 +2,7 @@
  */
 package idm.simpleusd.mm.usd.provider;
 
-import idm.simpleusd.mm.usd.Strong;
+import idm.simpleusd.mm.usd.Code;
 
 import java.util.Collection;
 import java.util.List;
@@ -13,19 +13,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.Strong} object.
+ * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.Code} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class StrongItemProvider extends TextElementItemProvider {
+public class CodeItemProvider extends TextElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StrongItemProvider(AdapterFactory adapterFactory) {
+	public CodeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,14 +45,14 @@ public class StrongItemProvider extends TextElementItemProvider {
 	}
 
 	/**
-	 * This returns Strong.gif.
+	 * This returns Code.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Strong"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Code"));
 	}
 
 	/**
@@ -73,9 +73,9 @@ public class StrongItemProvider extends TextElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Strong) object).getText();
-		return label == null || label.length() == 0 ? getString("_UI_Strong_type")
-				: getString("_UI_Strong_type") + " " + label;
+		String label = ((Code) object).getText();
+		return label == null || label.length() == 0 ? getString("_UI_Code_type")
+				: getString("_UI_Code_type") + " " + label;
 	}
 
 	/**

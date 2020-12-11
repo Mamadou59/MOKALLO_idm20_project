@@ -63,8 +63,16 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 			return createTitle();
 		case UsdPackage.TEXT:
 			return createText();
-		case UsdPackage.STRONG:
-			return createStrong();
+		case UsdPackage.LINK:
+			return createLink();
+		case UsdPackage.IMAGE:
+			return createImage();
+		case UsdPackage.CODE:
+			return createCode();
+		case UsdPackage.STRONG_EMPHASIS:
+			return createStrongEmphasis();
+		case UsdPackage.ITALIC_EMPHASIS:
+			return createItalicEmphasis();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -115,9 +123,49 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Strong createStrong() {
-		StrongImpl strong = new StrongImpl();
-		return strong;
+	public Link createLink() {
+		LinkImpl link = new LinkImpl();
+		return link;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Image createImage() {
+		ImageImpl image = new ImageImpl();
+		return image;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Code createCode() {
+		CodeImpl code = new CodeImpl();
+		return code;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StrongEmphasis createStrongEmphasis() {
+		StrongEmphasisImpl strongEmphasis = new StrongEmphasisImpl();
+		return strongEmphasis;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ItalicEmphasis createItalicEmphasis() {
+		ItalicEmphasisImpl italicEmphasis = new ItalicEmphasisImpl();
+		return italicEmphasis;
 	}
 
 	/**
