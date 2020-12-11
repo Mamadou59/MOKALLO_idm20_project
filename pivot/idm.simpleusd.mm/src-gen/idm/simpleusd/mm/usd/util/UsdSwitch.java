@@ -95,6 +95,8 @@ public class UsdSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextContainer(paragraph);
 			if (result == null)
+				result = caseListItemElement(paragraph);
+			if (result == null)
 				result = casePageContent(paragraph);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -181,6 +183,57 @@ public class UsdSwitch<T> extends Switch<T> {
 			T result = caseItalicEmphasis(italicEmphasis);
 			if (result == null)
 				result = caseTextElement(italicEmphasis);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.LIST_ELEMENT: {
+			ListElement listElement = (ListElement) theEObject;
+			T result = caseListElement(listElement);
+			if (result == null)
+				result = casePageContent(listElement);
+			if (result == null)
+				result = caseListItemElement(listElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.LIST_ITEM: {
+			ListItem listItem = (ListItem) theEObject;
+			T result = caseListItem(listItem);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.LIST_ITEM_ELEMENT: {
+			ListItemElement listItemElement = (ListItemElement) theEObject;
+			T result = caseListItemElement(listItemElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.ORDERED_LIST: {
+			OrderedList orderedList = (OrderedList) theEObject;
+			T result = caseOrderedList(orderedList);
+			if (result == null)
+				result = caseListElement(orderedList);
+			if (result == null)
+				result = casePageContent(orderedList);
+			if (result == null)
+				result = caseListItemElement(orderedList);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.UNORDERED_LIST: {
+			UnorderedList unorderedList = (UnorderedList) theEObject;
+			T result = caseUnorderedList(unorderedList);
+			if (result == null)
+				result = caseListElement(unorderedList);
+			if (result == null)
+				result = casePageContent(unorderedList);
+			if (result == null)
+				result = caseListItemElement(unorderedList);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -382,6 +435,81 @@ public class UsdSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseItalicEmphasis(ItalicEmphasis object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>List Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>List Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseListElement(ListElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>List Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>List Item</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseListItem(ListItem object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>List Item Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>List Item Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseListItemElement(ListItemElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ordered List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ordered List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOrderedList(OrderedList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Unordered List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Unordered List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnorderedList(UnorderedList object) {
 		return null;
 	}
 

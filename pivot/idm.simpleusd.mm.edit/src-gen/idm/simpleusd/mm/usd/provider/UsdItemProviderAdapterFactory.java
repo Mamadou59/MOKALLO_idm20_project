@@ -280,6 +280,75 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.ListItem} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ListItemItemProvider listItemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.ListItem}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createListItemAdapter() {
+		if (listItemItemProvider == null) {
+			listItemItemProvider = new ListItemItemProvider(this);
+		}
+
+		return listItemItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.OrderedList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OrderedListItemProvider orderedListItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.OrderedList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOrderedListAdapter() {
+		if (orderedListItemProvider == null) {
+			orderedListItemProvider = new OrderedListItemProvider(this);
+		}
+
+		return orderedListItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.UnorderedList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UnorderedListItemProvider unorderedListItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.UnorderedList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUnorderedListAdapter() {
+		if (unorderedListItemProvider == null) {
+			unorderedListItemProvider = new UnorderedListItemProvider(this);
+		}
+
+		return unorderedListItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -396,6 +465,12 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 			strongEmphasisItemProvider.dispose();
 		if (italicEmphasisItemProvider != null)
 			italicEmphasisItemProvider.dispose();
+		if (listItemItemProvider != null)
+			listItemItemProvider.dispose();
+		if (orderedListItemProvider != null)
+			orderedListItemProvider.dispose();
+		if (unorderedListItemProvider != null)
+			unorderedListItemProvider.dispose();
 	}
 
 }

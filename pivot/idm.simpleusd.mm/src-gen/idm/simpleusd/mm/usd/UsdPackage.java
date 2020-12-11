@@ -628,6 +628,182 @@ public interface UsdPackage extends EPackage {
 	int ITALIC_EMPHASIS_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.ListElementImpl <em>List Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.ListElementImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getListElement()
+	 * @generated
+	 */
+	int LIST_ELEMENT = 13;
+
+	/**
+	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ELEMENT__ITEMS = PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>List Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ELEMENT_FEATURE_COUNT = PAGE_CONTENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>List Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ELEMENT_OPERATION_COUNT = PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.ListItemImpl <em>List Item</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.ListItemImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getListItem()
+	 * @generated
+	 */
+	int LIST_ITEM = 14;
+
+	/**
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ITEM__ELEMENTS = 0;
+
+	/**
+	 * The number of structural features of the '<em>List Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ITEM_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>List Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ITEM_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.ListItemElement <em>List Item Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.ListItemElement
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getListItemElement()
+	 * @generated
+	 */
+	int LIST_ITEM_ELEMENT = 15;
+
+	/**
+	 * The number of structural features of the '<em>List Item Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ITEM_ELEMENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>List Item Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ITEM_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.OrderedListImpl <em>Ordered List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.OrderedListImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getOrderedList()
+	 * @generated
+	 */
+	int ORDERED_LIST = 16;
+
+	/**
+	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERED_LIST__ITEMS = LIST_ELEMENT__ITEMS;
+
+	/**
+	 * The number of structural features of the '<em>Ordered List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERED_LIST_FEATURE_COUNT = LIST_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Ordered List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDERED_LIST_OPERATION_COUNT = LIST_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.UnorderedListImpl <em>Unordered List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.UnorderedListImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getUnorderedList()
+	 * @generated
+	 */
+	int UNORDERED_LIST = 17;
+
+	/**
+	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNORDERED_LIST__ITEMS = LIST_ELEMENT__ITEMS;
+
+	/**
+	 * The number of structural features of the '<em>Unordered List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNORDERED_LIST_FEATURE_COUNT = LIST_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Unordered List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNORDERED_LIST_OPERATION_COUNT = LIST_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Page <em>Page</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -846,6 +1022,78 @@ public interface UsdPackage extends EPackage {
 	EClass getItalicEmphasis();
 
 	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.ListElement <em>List Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>List Element</em>'.
+	 * @see idm.simpleusd.mm.usd.ListElement
+	 * @generated
+	 */
+	EClass getListElement();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.ListElement#getItems <em>Items</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Items</em>'.
+	 * @see idm.simpleusd.mm.usd.ListElement#getItems()
+	 * @see #getListElement()
+	 * @generated
+	 */
+	EReference getListElement_Items();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.ListItem <em>List Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>List Item</em>'.
+	 * @see idm.simpleusd.mm.usd.ListItem
+	 * @generated
+	 */
+	EClass getListItem();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.ListItem#getElements <em>Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Elements</em>'.
+	 * @see idm.simpleusd.mm.usd.ListItem#getElements()
+	 * @see #getListItem()
+	 * @generated
+	 */
+	EReference getListItem_Elements();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.ListItemElement <em>List Item Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>List Item Element</em>'.
+	 * @see idm.simpleusd.mm.usd.ListItemElement
+	 * @generated
+	 */
+	EClass getListItemElement();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.OrderedList <em>Ordered List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Ordered List</em>'.
+	 * @see idm.simpleusd.mm.usd.OrderedList
+	 * @generated
+	 */
+	EClass getOrderedList();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.UnorderedList <em>Unordered List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unordered List</em>'.
+	 * @see idm.simpleusd.mm.usd.UnorderedList
+	 * @generated
+	 */
+	EClass getUnorderedList();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1061,6 +1309,72 @@ public interface UsdPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ITALIC_EMPHASIS = eINSTANCE.getItalicEmphasis();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.ListElementImpl <em>List Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.ListElementImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getListElement()
+		 * @generated
+		 */
+		EClass LIST_ELEMENT = eINSTANCE.getListElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Items</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIST_ELEMENT__ITEMS = eINSTANCE.getListElement_Items();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.ListItemImpl <em>List Item</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.ListItemImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getListItem()
+		 * @generated
+		 */
+		EClass LIST_ITEM = eINSTANCE.getListItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIST_ITEM__ELEMENTS = eINSTANCE.getListItem_Elements();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.ListItemElement <em>List Item Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.ListItemElement
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getListItemElement()
+		 * @generated
+		 */
+		EClass LIST_ITEM_ELEMENT = eINSTANCE.getListItemElement();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.OrderedListImpl <em>Ordered List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.OrderedListImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getOrderedList()
+		 * @generated
+		 */
+		EClass ORDERED_LIST = eINSTANCE.getOrderedList();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.UnorderedListImpl <em>Unordered List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.UnorderedListImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getUnorderedList()
+		 * @generated
+		 */
+		EClass UNORDERED_LIST = eINSTANCE.getUnorderedList();
 
 	}
 

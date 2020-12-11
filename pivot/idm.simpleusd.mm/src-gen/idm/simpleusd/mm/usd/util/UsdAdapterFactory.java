@@ -132,6 +132,31 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseListElement(ListElement object) {
+			return createListElementAdapter();
+		}
+
+		@Override
+		public Adapter caseListItem(ListItem object) {
+			return createListItemAdapter();
+		}
+
+		@Override
+		public Adapter caseListItemElement(ListItemElement object) {
+			return createListItemElementAdapter();
+		}
+
+		@Override
+		public Adapter caseOrderedList(OrderedList object) {
+			return createOrderedListAdapter();
+		}
+
+		@Override
+		public Adapter caseUnorderedList(UnorderedList object) {
+			return createUnorderedListAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -329,6 +354,76 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createItalicEmphasisAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.ListElement <em>List Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.ListElement
+	 * @generated
+	 */
+	public Adapter createListElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.ListItem <em>List Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.ListItem
+	 * @generated
+	 */
+	public Adapter createListItemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.ListItemElement <em>List Item Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.ListItemElement
+	 * @generated
+	 */
+	public Adapter createListItemElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.OrderedList <em>Ordered List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.OrderedList
+	 * @generated
+	 */
+	public Adapter createOrderedListAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.UnorderedList <em>Unordered List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.UnorderedList
+	 * @generated
+	 */
+	public Adapter createUnorderedListAdapter() {
 		return null;
 	}
 

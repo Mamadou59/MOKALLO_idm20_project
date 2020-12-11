@@ -7,6 +7,10 @@ import idm.simpleusd.mm.usd.Image;
 import idm.simpleusd.mm.usd.ItalicEmphasis;
 import idm.simpleusd.mm.usd.Link;
 import idm.simpleusd.mm.usd.LinkTextElement;
+import idm.simpleusd.mm.usd.ListElement;
+import idm.simpleusd.mm.usd.ListItem;
+import idm.simpleusd.mm.usd.ListItemElement;
+import idm.simpleusd.mm.usd.OrderedList;
 import idm.simpleusd.mm.usd.Page;
 import idm.simpleusd.mm.usd.PageContent;
 import idm.simpleusd.mm.usd.Paragraph;
@@ -15,6 +19,7 @@ import idm.simpleusd.mm.usd.Text;
 import idm.simpleusd.mm.usd.TextContainer;
 import idm.simpleusd.mm.usd.TextElement;
 import idm.simpleusd.mm.usd.Title;
+import idm.simpleusd.mm.usd.UnorderedList;
 import idm.simpleusd.mm.usd.UsdFactory;
 import idm.simpleusd.mm.usd.UsdPackage;
 
@@ -122,6 +127,41 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	private EClass italicEmphasisEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass listElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass listItemEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass listItemElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orderedListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unorderedListEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -381,6 +421,69 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getListElement() {
+		return listElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getListElement_Items() {
+		return (EReference) listElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getListItem() {
+		return listItemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getListItem_Elements() {
+		return (EReference) listItemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getListItemElement() {
+		return listItemElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOrderedList() {
+		return orderedListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUnorderedList() {
+		return unorderedListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public UsdFactory getUsdFactory() {
 		return (UsdFactory) getEFactoryInstance();
 	}
@@ -438,6 +541,18 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		strongEmphasisEClass = createEClass(STRONG_EMPHASIS);
 
 		italicEmphasisEClass = createEClass(ITALIC_EMPHASIS);
+
+		listElementEClass = createEClass(LIST_ELEMENT);
+		createEReference(listElementEClass, LIST_ELEMENT__ITEMS);
+
+		listItemEClass = createEClass(LIST_ITEM);
+		createEReference(listItemEClass, LIST_ITEM__ELEMENTS);
+
+		listItemElementEClass = createEClass(LIST_ITEM_ELEMENT);
+
+		orderedListEClass = createEClass(ORDERED_LIST);
+
+		unorderedListEClass = createEClass(UNORDERED_LIST);
 	}
 
 	/**
@@ -471,6 +586,7 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		// Add supertypes to classes
 		textContainerEClass.getESuperTypes().add(this.getPageContent());
 		paragraphEClass.getESuperTypes().add(this.getTextContainer());
+		paragraphEClass.getESuperTypes().add(this.getListItemElement());
 		titleEClass.getESuperTypes().add(this.getTextContainer());
 		textEClass.getESuperTypes().add(this.getTextElement());
 		linkTextElementEClass.getESuperTypes().add(this.getTextElement());
@@ -479,6 +595,10 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		codeEClass.getESuperTypes().add(this.getTextElement());
 		strongEmphasisEClass.getESuperTypes().add(this.getTextElement());
 		italicEmphasisEClass.getESuperTypes().add(this.getTextElement());
+		listElementEClass.getESuperTypes().add(this.getPageContent());
+		listElementEClass.getESuperTypes().add(this.getListItemElement());
+		orderedListEClass.getESuperTypes().add(this.getListElement());
+		unorderedListEClass.getESuperTypes().add(this.getListElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -532,6 +652,27 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(italicEmphasisEClass, ItalicEmphasis.class, "ItalicEmphasis", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(listElementEClass, ListElement.class, "ListElement", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getListElement_Items(), this.getListItem(), null, "items", null, 0, -1, ListElement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(listItemEClass, ListItem.class, "ListItem", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getListItem_Elements(), this.getListItemElement(), null, "elements", null, 0, -1, ListItem.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(listItemElementEClass, ListItemElement.class, "ListItemElement", IS_ABSTRACT, IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(orderedListEClass, OrderedList.class, "OrderedList", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(unorderedListEClass, UnorderedList.class, "UnorderedList", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource

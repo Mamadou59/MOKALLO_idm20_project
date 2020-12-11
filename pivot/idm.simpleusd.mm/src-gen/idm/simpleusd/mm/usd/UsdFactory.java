@@ -103,6 +103,33 @@ public interface UsdFactory extends EFactory {
 	ItalicEmphasis createItalicEmphasis();
 
 	/**
+	 * Returns a new object of class '<em>List Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>List Item</em>'.
+	 * @generated
+	 */
+	ListItem createListItem();
+
+	/**
+	 * Returns a new object of class '<em>Ordered List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Ordered List</em>'.
+	 * @generated
+	 */
+	OrderedList createOrderedList();
+
+	/**
+	 * Returns a new object of class '<em>Unordered List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unordered List</em>'.
+	 * @generated
+	 */
+	UnorderedList createUnorderedList();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

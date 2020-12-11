@@ -73,6 +73,12 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 			return createStrongEmphasis();
 		case UsdPackage.ITALIC_EMPHASIS:
 			return createItalicEmphasis();
+		case UsdPackage.LIST_ITEM:
+			return createListItem();
+		case UsdPackage.ORDERED_LIST:
+			return createOrderedList();
+		case UsdPackage.UNORDERED_LIST:
+			return createUnorderedList();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -166,6 +172,36 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 	public ItalicEmphasis createItalicEmphasis() {
 		ItalicEmphasisImpl italicEmphasis = new ItalicEmphasisImpl();
 		return italicEmphasis;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ListItem createListItem() {
+		ListItemImpl listItem = new ListItemImpl();
+		return listItem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OrderedList createOrderedList() {
+		OrderedListImpl orderedList = new OrderedListImpl();
+		return orderedList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnorderedList createUnorderedList() {
+		UnorderedListImpl unorderedList = new UnorderedListImpl();
+		return unorderedList;
 	}
 
 	/**

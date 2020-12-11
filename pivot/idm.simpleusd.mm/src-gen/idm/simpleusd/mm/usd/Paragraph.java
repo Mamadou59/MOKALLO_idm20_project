@@ -12,5 +12,5 @@ package idm.simpleusd.mm.usd;
  * @model
  * @generated
  */
-public interface Paragraph extends TextContainer {
+public interface Paragraph extends TextContainer, ListItemElement {
 } // Paragraph

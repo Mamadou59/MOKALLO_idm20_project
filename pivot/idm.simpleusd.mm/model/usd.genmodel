@@ -36,5 +36,14 @@
     <genClasses ecoreClass="usd.ecore#//Code"/>
     <genClasses ecoreClass="usd.ecore#//StrongEmphasis"/>
     <genClasses ecoreClass="usd.ecore#//ItalicEmphasis"/>
+    <genClasses ecoreClass="usd.ecore#//ListElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//ListElement/items"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//ListItem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//ListItem/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//ListItemElement"/>
+    <genClasses ecoreClass="usd.ecore#//OrderedList"/>
+    <genClasses ecoreClass="usd.ecore#//UnorderedList"/>
   </genPackages>
 </genmodel:GenModel>

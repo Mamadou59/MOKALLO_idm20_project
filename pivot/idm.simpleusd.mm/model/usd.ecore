@@ -11,7 +11,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="textElements" upperBound="-1"
         eType="#//TextElement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Paragraph" eSuperTypes="#//TextContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Paragraph" eSuperTypes="#//TextContainer #//ListItemElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Title" eSuperTypes="#//TextContainer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
@@ -30,4 +30,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="Code" eSuperTypes="#//TextElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="StrongEmphasis" eSuperTypes="#//TextElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ItalicEmphasis" eSuperTypes="#//TextElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ListElement" abstract="true" eSuperTypes="#//PageContent #//ListItemElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//ListItem" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//ListItemElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListItemElement" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrderedList" eSuperTypes="#//ListElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UnorderedList" eSuperTypes="#//ListElement"/>
 </ecore:EPackage>

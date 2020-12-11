@@ -2,7 +2,7 @@
  */
 package idm.simpleusd.mm.usd.provider;
 
-import idm.simpleusd.mm.usd.Page;
+import idm.simpleusd.mm.usd.ListItem;
 import idm.simpleusd.mm.usd.UsdFactory;
 import idm.simpleusd.mm.usd.UsdPackage;
 
@@ -16,24 +16,22 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.Page} object.
+ * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.ListItem} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PageItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class ListItemItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -41,7 +39,7 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PageItemProvider(AdapterFactory adapterFactory) {
+	public ListItemItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -56,24 +54,8 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Page_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Page_name_feature", "_UI_Page_type"),
-						UsdPackage.Literals.PAGE__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
 	}
 
 	/**
@@ -88,7 +70,7 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(UsdPackage.Literals.PAGE__CONTENTS);
+			childrenFeatures.add(UsdPackage.Literals.LIST_ITEM__ELEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -107,14 +89,14 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 	}
 
 	/**
-	 * This returns Page.gif.
+	 * This returns ListItem.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Page"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ListItem"));
 	}
 
 	/**
@@ -135,9 +117,7 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Page) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Page_type")
-				: getString("_UI_Page_type") + " " + label;
+		return getString("_UI_ListItem_type");
 	}
 
 	/**
@@ -151,11 +131,8 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Page.class)) {
-		case UsdPackage.PAGE__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case UsdPackage.PAGE__CONTENTS:
+		switch (notification.getFeatureID(ListItem.class)) {
+		case UsdPackage.LIST_ITEM__ELEMENTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -173,17 +150,14 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createParagraph()));
-
-		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createTitle()));
-
 		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createOrderedList()));
+				createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS, UsdFactory.eINSTANCE.createParagraph()));
 
-		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createUnorderedList()));
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS,
+				UsdFactory.eINSTANCE.createOrderedList()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS,
+				UsdFactory.eINSTANCE.createUnorderedList()));
 	}
 
 	/**
