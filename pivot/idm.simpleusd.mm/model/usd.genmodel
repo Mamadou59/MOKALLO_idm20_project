@@ -45,5 +45,14 @@
     <genClasses ecoreClass="usd.ecore#//ListItemElement"/>
     <genClasses ecoreClass="usd.ecore#//OrderedList"/>
     <genClasses ecoreClass="usd.ecore#//UnorderedList"/>
+    <genClasses ecoreClass="usd.ecore#//BlockQuote">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//BlockQuote/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//CodeBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//CodeBlock/codeLines"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//CodeLine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//CodeLine/text"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

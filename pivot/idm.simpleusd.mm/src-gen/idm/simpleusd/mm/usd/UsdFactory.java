@@ -130,6 +130,33 @@ public interface UsdFactory extends EFactory {
 	UnorderedList createUnorderedList();
 
 	/**
+	 * Returns a new object of class '<em>Block Quote</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Block Quote</em>'.
+	 * @generated
+	 */
+	BlockQuote createBlockQuote();
+
+	/**
+	 * Returns a new object of class '<em>Code Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Code Block</em>'.
+	 * @generated
+	 */
+	CodeBlock createCodeBlock();
+
+	/**
+	 * Returns a new object of class '<em>Code Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Code Line</em>'.
+	 * @generated
+	 */
+	CodeLine createCodeLine();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

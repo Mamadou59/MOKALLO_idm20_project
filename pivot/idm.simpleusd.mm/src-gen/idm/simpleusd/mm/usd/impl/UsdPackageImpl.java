@@ -2,7 +2,10 @@
  */
 package idm.simpleusd.mm.usd.impl;
 
+import idm.simpleusd.mm.usd.BlockQuote;
 import idm.simpleusd.mm.usd.Code;
+import idm.simpleusd.mm.usd.CodeBlock;
+import idm.simpleusd.mm.usd.CodeLine;
 import idm.simpleusd.mm.usd.Image;
 import idm.simpleusd.mm.usd.ItalicEmphasis;
 import idm.simpleusd.mm.usd.Link;
@@ -162,6 +165,27 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	private EClass unorderedListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass blockQuoteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeBlockEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeLineEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -484,6 +508,60 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getBlockQuote() {
+		return blockQuoteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBlockQuote_Contents() {
+		return (EReference) blockQuoteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCodeBlock() {
+		return codeBlockEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCodeBlock_CodeLines() {
+		return (EReference) codeBlockEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCodeLine() {
+		return codeLineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCodeLine_Text() {
+		return (EAttribute) codeLineEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public UsdFactory getUsdFactory() {
 		return (UsdFactory) getEFactoryInstance();
 	}
@@ -553,6 +631,15 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		orderedListEClass = createEClass(ORDERED_LIST);
 
 		unorderedListEClass = createEClass(UNORDERED_LIST);
+
+		blockQuoteEClass = createEClass(BLOCK_QUOTE);
+		createEReference(blockQuoteEClass, BLOCK_QUOTE__CONTENTS);
+
+		codeBlockEClass = createEClass(CODE_BLOCK);
+		createEReference(codeBlockEClass, CODE_BLOCK__CODE_LINES);
+
+		codeLineEClass = createEClass(CODE_LINE);
+		createEAttribute(codeLineEClass, CODE_LINE__TEXT);
 	}
 
 	/**
@@ -599,6 +686,10 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		listElementEClass.getESuperTypes().add(this.getListItemElement());
 		orderedListEClass.getESuperTypes().add(this.getListElement());
 		unorderedListEClass.getESuperTypes().add(this.getListElement());
+		blockQuoteEClass.getESuperTypes().add(this.getListItemElement());
+		blockQuoteEClass.getESuperTypes().add(this.getPageContent());
+		codeBlockEClass.getESuperTypes().add(this.getPageContent());
+		codeBlockEClass.getESuperTypes().add(this.getListItemElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -674,6 +765,23 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		initEClass(unorderedListEClass, UnorderedList.class, "UnorderedList", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(blockQuoteEClass, BlockQuote.class, "BlockQuote", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBlockQuote_Contents(), this.getPageContent(), null, "contents", null, 0, -1, BlockQuote.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(codeBlockEClass, CodeBlock.class, "CodeBlock", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCodeBlock_CodeLines(), this.getCodeLine(), null, "codeLines", null, 0, -1, CodeBlock.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(codeLineEClass, CodeLine.class, "CodeLine", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCodeLine_Text(), ecorePackage.getEString(), "text", null, 0, 1, CodeLine.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

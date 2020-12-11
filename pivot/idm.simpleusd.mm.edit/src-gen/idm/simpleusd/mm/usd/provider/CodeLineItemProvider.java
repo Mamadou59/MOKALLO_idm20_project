@@ -2,8 +2,7 @@
  */
 package idm.simpleusd.mm.usd.provider;
 
-import idm.simpleusd.mm.usd.ListItem;
-import idm.simpleusd.mm.usd.UsdFactory;
+import idm.simpleusd.mm.usd.CodeLine;
 import idm.simpleusd.mm.usd.UsdPackage;
 
 import java.util.Collection;
@@ -14,24 +13,24 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.ListItem} object.
+ * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.CodeLine} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ListItemItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class CodeLineItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -39,7 +38,7 @@ public class ListItemItemProvider extends ItemProviderAdapter implements IEditin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ListItemItemProvider(AdapterFactory adapterFactory) {
+	public CodeLineItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -54,49 +53,36 @@ public class ListItemItemProvider extends ItemProviderAdapter implements IEditin
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addTextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * This adds a property descriptor for the Text feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(UsdPackage.Literals.LIST_ITEM__ELEMENTS);
-		}
-		return childrenFeatures;
+	protected void addTextPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_CodeLine_text_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_CodeLine_text_feature",
+								"_UI_CodeLine_type"),
+						UsdPackage.Literals.CODE_LINE__TEXT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns ListItem.gif.
+	 * This returns CodeLine.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ListItem"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CodeLine"));
 	}
 
 	/**
@@ -117,7 +103,9 @@ public class ListItemItemProvider extends ItemProviderAdapter implements IEditin
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ListItem_type");
+		String label = ((CodeLine) object).getText();
+		return label == null || label.length() == 0 ? getString("_UI_CodeLine_type")
+				: getString("_UI_CodeLine_type") + " " + label;
 	}
 
 	/**
@@ -131,9 +119,9 @@ public class ListItemItemProvider extends ItemProviderAdapter implements IEditin
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ListItem.class)) {
-		case UsdPackage.LIST_ITEM__ELEMENTS:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+		switch (notification.getFeatureID(CodeLine.class)) {
+		case UsdPackage.CODE_LINE__TEXT:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -149,21 +137,6 @@ public class ListItemItemProvider extends ItemProviderAdapter implements IEditin
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS, UsdFactory.eINSTANCE.createParagraph()));
-
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS,
-				UsdFactory.eINSTANCE.createOrderedList()));
-
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS,
-				UsdFactory.eINSTANCE.createUnorderedList()));
-
-		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS, UsdFactory.eINSTANCE.createBlockQuote()));
-
-		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS, UsdFactory.eINSTANCE.createCodeBlock()));
 	}
 
 	/**

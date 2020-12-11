@@ -41,4 +41,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="ListItemElement" abstract="true" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="OrderedList" eSuperTypes="#//ListElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="UnorderedList" eSuperTypes="#//ListElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BlockQuote" eSuperTypes="#//ListItemElement #//PageContent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contents" upperBound="-1"
+        eType="#//PageContent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeBlock" eSuperTypes="#//PageContent #//ListItemElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="codeLines" upperBound="-1"
+        eType="#//CodeLine" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CodeLine">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

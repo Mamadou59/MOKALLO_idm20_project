@@ -79,6 +79,12 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 			return createOrderedList();
 		case UsdPackage.UNORDERED_LIST:
 			return createUnorderedList();
+		case UsdPackage.BLOCK_QUOTE:
+			return createBlockQuote();
+		case UsdPackage.CODE_BLOCK:
+			return createCodeBlock();
+		case UsdPackage.CODE_LINE:
+			return createCodeLine();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -202,6 +208,36 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 	public UnorderedList createUnorderedList() {
 		UnorderedListImpl unorderedList = new UnorderedListImpl();
 		return unorderedList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BlockQuote createBlockQuote() {
+		BlockQuoteImpl blockQuote = new BlockQuoteImpl();
+		return blockQuote;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CodeBlock createCodeBlock() {
+		CodeBlockImpl codeBlock = new CodeBlockImpl();
+		return codeBlock;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CodeLine createCodeLine() {
+		CodeLineImpl codeLine = new CodeLineImpl();
+		return codeLine;
 	}
 
 	/**

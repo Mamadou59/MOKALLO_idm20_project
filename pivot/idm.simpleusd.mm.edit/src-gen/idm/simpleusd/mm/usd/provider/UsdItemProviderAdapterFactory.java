@@ -349,6 +349,75 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.BlockQuote} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BlockQuoteItemProvider blockQuoteItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.BlockQuote}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBlockQuoteAdapter() {
+		if (blockQuoteItemProvider == null) {
+			blockQuoteItemProvider = new BlockQuoteItemProvider(this);
+		}
+
+		return blockQuoteItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.CodeBlock} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CodeBlockItemProvider codeBlockItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.CodeBlock}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCodeBlockAdapter() {
+		if (codeBlockItemProvider == null) {
+			codeBlockItemProvider = new CodeBlockItemProvider(this);
+		}
+
+		return codeBlockItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.CodeLine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CodeLineItemProvider codeLineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.CodeLine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCodeLineAdapter() {
+		if (codeLineItemProvider == null) {
+			codeLineItemProvider = new CodeLineItemProvider(this);
+		}
+
+		return codeLineItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -471,6 +540,12 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 			orderedListItemProvider.dispose();
 		if (unorderedListItemProvider != null)
 			unorderedListItemProvider.dispose();
+		if (blockQuoteItemProvider != null)
+			blockQuoteItemProvider.dispose();
+		if (codeBlockItemProvider != null)
+			codeBlockItemProvider.dispose();
+		if (codeLineItemProvider != null)
+			codeLineItemProvider.dispose();
 	}
 
 }

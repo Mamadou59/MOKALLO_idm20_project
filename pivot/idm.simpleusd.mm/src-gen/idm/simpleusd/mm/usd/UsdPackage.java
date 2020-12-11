@@ -804,6 +804,117 @@ public interface UsdPackage extends EPackage {
 	int UNORDERED_LIST_OPERATION_COUNT = LIST_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.BlockQuoteImpl <em>Block Quote</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.BlockQuoteImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getBlockQuote()
+	 * @generated
+	 */
+	int BLOCK_QUOTE = 18;
+
+	/**
+	 * The feature id for the '<em><b>Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE__CONTENTS = LIST_ITEM_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Block Quote</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE_FEATURE_COUNT = LIST_ITEM_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Block Quote</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE_OPERATION_COUNT = LIST_ITEM_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.CodeBlockImpl <em>Code Block</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.CodeBlockImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getCodeBlock()
+	 * @generated
+	 */
+	int CODE_BLOCK = 19;
+
+	/**
+	 * The feature id for the '<em><b>Code Lines</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK__CODE_LINES = PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Code Block</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK_FEATURE_COUNT = PAGE_CONTENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Code Block</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK_OPERATION_COUNT = PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.CodeLineImpl <em>Code Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.CodeLineImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getCodeLine()
+	 * @generated
+	 */
+	int CODE_LINE = 20;
+
+	/**
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_LINE__TEXT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Code Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_LINE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Code Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_LINE_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Page <em>Page</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1094,6 +1205,69 @@ public interface UsdPackage extends EPackage {
 	EClass getUnorderedList();
 
 	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.BlockQuote <em>Block Quote</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Block Quote</em>'.
+	 * @see idm.simpleusd.mm.usd.BlockQuote
+	 * @generated
+	 */
+	EClass getBlockQuote();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.BlockQuote#getContents <em>Contents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Contents</em>'.
+	 * @see idm.simpleusd.mm.usd.BlockQuote#getContents()
+	 * @see #getBlockQuote()
+	 * @generated
+	 */
+	EReference getBlockQuote_Contents();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.CodeBlock <em>Code Block</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Code Block</em>'.
+	 * @see idm.simpleusd.mm.usd.CodeBlock
+	 * @generated
+	 */
+	EClass getCodeBlock();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.CodeBlock#getCodeLines <em>Code Lines</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Code Lines</em>'.
+	 * @see idm.simpleusd.mm.usd.CodeBlock#getCodeLines()
+	 * @see #getCodeBlock()
+	 * @generated
+	 */
+	EReference getCodeBlock_CodeLines();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.CodeLine <em>Code Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Code Line</em>'.
+	 * @see idm.simpleusd.mm.usd.CodeLine
+	 * @generated
+	 */
+	EClass getCodeLine();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.CodeLine#getText <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see idm.simpleusd.mm.usd.CodeLine#getText()
+	 * @see #getCodeLine()
+	 * @generated
+	 */
+	EAttribute getCodeLine_Text();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1375,6 +1549,60 @@ public interface UsdPackage extends EPackage {
 		 * @generated
 		 */
 		EClass UNORDERED_LIST = eINSTANCE.getUnorderedList();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.BlockQuoteImpl <em>Block Quote</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.BlockQuoteImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getBlockQuote()
+		 * @generated
+		 */
+		EClass BLOCK_QUOTE = eINSTANCE.getBlockQuote();
+
+		/**
+		 * The meta object literal for the '<em><b>Contents</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BLOCK_QUOTE__CONTENTS = eINSTANCE.getBlockQuote_Contents();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.CodeBlockImpl <em>Code Block</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.CodeBlockImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getCodeBlock()
+		 * @generated
+		 */
+		EClass CODE_BLOCK = eINSTANCE.getCodeBlock();
+
+		/**
+		 * The meta object literal for the '<em><b>Code Lines</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CODE_BLOCK__CODE_LINES = eINSTANCE.getCodeBlock_CodeLines();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.CodeLineImpl <em>Code Line</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.CodeLineImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getCodeLine()
+		 * @generated
+		 */
+		EClass CODE_LINE = eINSTANCE.getCodeLine();
+
+		/**
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CODE_LINE__TEXT = eINSTANCE.getCodeLine_Text();
 
 	}
 
