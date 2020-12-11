@@ -52,4 +52,5 @@
   <eClassifiers xsi:type="ecore:EClass" name="CodeLine">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HorizontalLine" eSuperTypes="#//PageContent"/>
 </ecore:EPackage>

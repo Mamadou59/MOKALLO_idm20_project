@@ -85,6 +85,8 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 			return createCodeBlock();
 		case UsdPackage.CODE_LINE:
 			return createCodeLine();
+		case UsdPackage.HORIZONTAL_LINE:
+			return createHorizontalLine();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -238,6 +240,16 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 	public CodeLine createCodeLine() {
 		CodeLineImpl codeLine = new CodeLineImpl();
 		return codeLine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HorizontalLine createHorizontalLine() {
+		HorizontalLineImpl horizontalLine = new HorizontalLineImpl();
+		return horizontalLine;
 	}
 
 	/**

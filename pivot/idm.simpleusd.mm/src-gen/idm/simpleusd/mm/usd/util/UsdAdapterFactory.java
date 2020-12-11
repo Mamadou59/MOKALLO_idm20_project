@@ -172,6 +172,11 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseHorizontalLine(HorizontalLine object) {
+			return createHorizontalLineAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -481,6 +486,20 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCodeLineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.HorizontalLine <em>Horizontal Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.HorizontalLine
+	 * @generated
+	 */
+	public Adapter createHorizontalLineAdapter() {
 		return null;
 	}
 

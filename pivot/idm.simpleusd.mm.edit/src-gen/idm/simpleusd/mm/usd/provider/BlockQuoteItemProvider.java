@@ -167,6 +167,9 @@ public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEdit
 
 		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
 				UsdFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
+				UsdFactory.eINSTANCE.createHorizontalLine()));
 	}
 
 	/**

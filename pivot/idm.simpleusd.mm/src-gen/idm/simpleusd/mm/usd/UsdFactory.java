@@ -157,6 +157,15 @@ public interface UsdFactory extends EFactory {
 	CodeLine createCodeLine();
 
 	/**
+	 * Returns a new object of class '<em>Horizontal Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Horizontal Line</em>'.
+	 * @generated
+	 */
+	HorizontalLine createHorizontalLine();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

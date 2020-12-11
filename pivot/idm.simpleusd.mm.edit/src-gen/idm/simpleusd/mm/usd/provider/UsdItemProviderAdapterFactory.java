@@ -418,6 +418,29 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.HorizontalLine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HorizontalLineItemProvider horizontalLineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.HorizontalLine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHorizontalLineAdapter() {
+		if (horizontalLineItemProvider == null) {
+			horizontalLineItemProvider = new HorizontalLineItemProvider(this);
+		}
+
+		return horizontalLineItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -546,6 +569,8 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 			codeBlockItemProvider.dispose();
 		if (codeLineItemProvider != null)
 			codeLineItemProvider.dispose();
+		if (horizontalLineItemProvider != null)
+			horizontalLineItemProvider.dispose();
 	}
 
 }

@@ -4,14 +4,10 @@ modeltype usdMM "strict" uses "http://www.example.org/usd";
 transformation md2usd(in md : mdMM, out usd : usdMM); 
 
 main() {
-	//log("Test","j'entre'");
 	md.rootObjects()[Document] -> map document2Page()
 }
 
 mapping mdMM::Document::document2Page() :usdMM::Page  {
-	init {
-		//log("Test",self.name);
-	}
 	name := self.name;
 	contents += self.contents -> map constructContent();		
 }
@@ -134,10 +130,15 @@ mapping mdMM::CodeLine::codeLinesMd2CodeLinesUsd() : usdMM::CodeLine {
 }
 // End CodeBlock transformation
 
+mapping mdMM::HorizontalLine::horizontalLineMd2HorizontalLineUsd() : usdMM::HorizontalLine inherits mdMM::Block::block2PageContent{
+	
+}
+
 mapping mdMM::Block::constructContent() : usdMM::PageContent 
 	disjuncts  mdMM::Paragraph::paragraphMd2ParagraphUsd, mdMM::Title::titleMd2TitleUsd,
 				mdMM::OrderedList::orderedListMd2OrderedListUsd, mdMM::BulletList::unorderedListMd2UnorderedListUsd,
-				mdMM::BlockQuote::blockQuoteMd2BlockQuoteUsd, mdMM::CodeBlock::codeBlockMd2codeBlockUsd{}
+				mdMM::BlockQuote::blockQuoteMd2BlockQuoteUsd, mdMM::CodeBlock::codeBlockMd2codeBlockUsd,
+				mdMM::HorizontalLine::horizontalLineMd2HorizontalLineUsd{}
 // End transformation TextContainer md to TextContainer usd
 
 // End transformation block to pagecontent

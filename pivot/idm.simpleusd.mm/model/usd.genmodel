@@ -54,5 +54,6 @@
     <genClasses ecoreClass="usd.ecore#//CodeLine">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//CodeLine/text"/>
     </genClasses>
+    <genClasses ecoreClass="usd.ecore#//HorizontalLine"/>
   </genPackages>
 </genmodel:GenModel>

@@ -6,6 +6,7 @@ import idm.simpleusd.mm.usd.BlockQuote;
 import idm.simpleusd.mm.usd.Code;
 import idm.simpleusd.mm.usd.CodeBlock;
 import idm.simpleusd.mm.usd.CodeLine;
+import idm.simpleusd.mm.usd.HorizontalLine;
 import idm.simpleusd.mm.usd.Image;
 import idm.simpleusd.mm.usd.ItalicEmphasis;
 import idm.simpleusd.mm.usd.Link;
@@ -186,6 +187,13 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	private EClass codeLineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass horizontalLineEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -562,6 +570,15 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getHorizontalLine() {
+		return horizontalLineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public UsdFactory getUsdFactory() {
 		return (UsdFactory) getEFactoryInstance();
 	}
@@ -640,6 +657,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		codeLineEClass = createEClass(CODE_LINE);
 		createEAttribute(codeLineEClass, CODE_LINE__TEXT);
+
+		horizontalLineEClass = createEClass(HORIZONTAL_LINE);
 	}
 
 	/**
@@ -690,6 +709,7 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		blockQuoteEClass.getESuperTypes().add(this.getPageContent());
 		codeBlockEClass.getESuperTypes().add(this.getPageContent());
 		codeBlockEClass.getESuperTypes().add(this.getListItemElement());
+		horizontalLineEClass.getESuperTypes().add(this.getPageContent());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -782,6 +802,9 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCodeLine_Text(), ecorePackage.getEString(), "text", null, 0, 1, CodeLine.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(horizontalLineEClass, HorizontalLine.class, "HorizontalLine", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -915,6 +915,34 @@ public interface UsdPackage extends EPackage {
 	int CODE_LINE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.HorizontalLineImpl <em>Horizontal Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.HorizontalLineImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getHorizontalLine()
+	 * @generated
+	 */
+	int HORIZONTAL_LINE = 21;
+
+	/**
+	 * The number of structural features of the '<em>Horizontal Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HORIZONTAL_LINE_FEATURE_COUNT = PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Horizontal Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HORIZONTAL_LINE_OPERATION_COUNT = PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Page <em>Page</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1268,6 +1296,16 @@ public interface UsdPackage extends EPackage {
 	EAttribute getCodeLine_Text();
 
 	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.HorizontalLine <em>Horizontal Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Horizontal Line</em>'.
+	 * @see idm.simpleusd.mm.usd.HorizontalLine
+	 * @generated
+	 */
+	EClass getHorizontalLine();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1603,6 +1641,16 @@ public interface UsdPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute CODE_LINE__TEXT = eINSTANCE.getCodeLine_Text();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.HorizontalLineImpl <em>Horizontal Line</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.HorizontalLineImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getHorizontalLine()
+		 * @generated
+		 */
+		EClass HORIZONTAL_LINE = eINSTANCE.getHorizontalLine();
 
 	}
 
