@@ -83,8 +83,44 @@ mapping mdMM::TextElement::contructTextElement() : usdMM::TextElement
 	
 //End TextElement part
 
+
+// Start List transformation
+//abstract mapping mdMM::List::ListMd2ListUsd() : ListElement inherits mdMM::Block::block2PageContent {
+//	
+//}
+
+mapping mdMM::OrderedList::orderedListMd2OrderedListUsd() : usdMM::OrderedList  {
+	items += self.items -> map listItemMd2ListItemUsd();
+}
+
+mapping mdMM::BulletList::unorderedListMd2UnorderedListUsd() : usdMM::UnorderedList {
+	items += self.items -> map listItemMd2ListItemUsd();
+}
+
+mapping mdMM::ListItem::listItemMd2ListItemUsd() : usdMM::ListItem {
+	elements += self.elements -> map constructListItemElement();
+}
+
+//abstract mapping mdMM::ListItemElement::listItemElementMd2ListItemElementUsd() : usdMM::ListItemElement {
+//	
+//}
+
+//mapping mdMM::OrderedListItem::listItemMd2ListItemUsd() : usdMM::ListItem {
+//}
+//mapping mdMM::BulletListItem::listItemMd2ListItemUsd() : usdMM::ListItem {
+//}
+
+mapping mdMM::ListItemElement::constructListItemElement() : usdMM::ListItemElement 
+	disjuncts mdMM::OrderedList::orderedListMd2OrderedListUsd, mdMM::BulletList::unorderedListMd2UnorderedListUsd,
+	 			mdMM::Paragraph::paragraphMd2ParagraphUsd{
+	
+}
+// End List transformation
+
 mapping mdMM::Block::constructContent() : usdMM::PageContent 
-	disjuncts  Paragraph::paragraphMd2ParagraphUsd, mdMM::Title::titleMd2TitleUsd{}
+	disjuncts  mdMM::Paragraph::paragraphMd2ParagraphUsd, mdMM::Title::titleMd2TitleUsd,
+	mdMM::OrderedList::orderedListMd2OrderedListUsd,
+	mdMM::BulletList::unorderedListMd2UnorderedListUsd{}
 // End transformation TextContainer md to TextContainer usd
 
 // End transformation block to pagecontent
