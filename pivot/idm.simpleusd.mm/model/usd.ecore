@@ -15,21 +15,19 @@
   <eClassifiers xsi:type="ecore:EClass" name="Title" eSuperTypes="#//TextContainer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TextElement" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="TextElement" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//TextElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//TextElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="LinkTextElement" abstract="true" eSuperTypes="#//TextElement">
+  <eClassifiers xsi:type="ecore:EClass" name="UrlBasedLink" abstract="true" eSuperTypes="#//CompositeTextElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="textElements" upperBound="-1"
-        eType="#//TextElement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//LinkTextElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//LinkTextElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Code" eSuperTypes="#//TextElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StrongEmphasis" eSuperTypes="#//TextElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ItalicEmphasis" eSuperTypes="#//TextElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//UrlBasedLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//UrlBasedLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Code" eSuperTypes="#//Text"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StrongEmphasis" eSuperTypes="#//CompositeTextElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ItalicEmphasis" eSuperTypes="#//CompositeTextElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="ListElement" abstract="true" eSuperTypes="#//PageContent #//ListItemElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
         eType="#//ListItem" containment="true"/>
@@ -53,4 +51,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HorizontalLine" eSuperTypes="#//PageContent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeTextElement" abstract="true"
+      eSuperTypes="#//TextElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subTextElements" upperBound="-1"
+        eType="#//TextElement" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

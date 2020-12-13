@@ -12,5 +12,6 @@ package idm.simpleusd.mm.usd;
  * @model
  * @generated
  */
-public interface StrongEmphasis extends TextElement {
+public interface StrongEmphasis extends CompositeTextElement {
+
 } // StrongEmphasis

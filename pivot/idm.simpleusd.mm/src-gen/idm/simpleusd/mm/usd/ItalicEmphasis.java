@@ -12,5 +12,6 @@ package idm.simpleusd.mm.usd;
  * @model
  * @generated
  */
-public interface ItalicEmphasis extends TextElement {
+public interface ItalicEmphasis extends CompositeTextElement {
+
 } // ItalicEmphasis

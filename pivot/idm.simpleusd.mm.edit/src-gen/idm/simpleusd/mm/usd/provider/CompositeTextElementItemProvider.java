@@ -2,7 +2,7 @@
  */
 package idm.simpleusd.mm.usd.provider;
 
-import idm.simpleusd.mm.usd.LinkTextElement;
+import idm.simpleusd.mm.usd.CompositeTextElement;
 import idm.simpleusd.mm.usd.UsdFactory;
 import idm.simpleusd.mm.usd.UsdPackage;
 
@@ -14,25 +14,23 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.LinkTextElement} object.
+ * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.CompositeTextElement} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LinkTextElementItemProvider extends TextElementItemProvider {
+public class CompositeTextElementItemProvider extends TextElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LinkTextElementItemProvider(AdapterFactory adapterFactory) {
+	public CompositeTextElementItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -47,42 +45,8 @@ public class LinkTextElementItemProvider extends TextElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addUrlPropertyDescriptor(object);
-			addTitlePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Url feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addUrlPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_LinkTextElement_url_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LinkTextElement_url_feature",
-								"_UI_LinkTextElement_type"),
-						UsdPackage.Literals.LINK_TEXT_ELEMENT__URL, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Title feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTitlePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_LinkTextElement_title_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_LinkTextElement_title_feature",
-								"_UI_LinkTextElement_type"),
-						UsdPackage.Literals.LINK_TEXT_ELEMENT__TITLE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -97,7 +61,7 @@ public class LinkTextElementItemProvider extends TextElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(UsdPackage.Literals.LINK_TEXT_ELEMENT__TEXT_ELEMENTS);
+			childrenFeatures.add(UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -116,14 +80,14 @@ public class LinkTextElementItemProvider extends TextElementItemProvider {
 	}
 
 	/**
-	 * This returns LinkTextElement.gif.
+	 * This returns CompositeTextElement.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/LinkTextElement"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CompositeTextElement"));
 	}
 
 	/**
@@ -144,9 +108,7 @@ public class LinkTextElementItemProvider extends TextElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LinkTextElement) object).getText();
-		return label == null || label.length() == 0 ? getString("_UI_LinkTextElement_type")
-				: getString("_UI_LinkTextElement_type") + " " + label;
+		return getString("_UI_CompositeTextElement_type");
 	}
 
 	/**
@@ -160,12 +122,8 @@ public class LinkTextElementItemProvider extends TextElementItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(LinkTextElement.class)) {
-		case UsdPackage.LINK_TEXT_ELEMENT__URL:
-		case UsdPackage.LINK_TEXT_ELEMENT__TITLE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		case UsdPackage.LINK_TEXT_ELEMENT__TEXT_ELEMENTS:
+		switch (notification.getFeatureID(CompositeTextElement.class)) {
+		case UsdPackage.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -183,22 +141,22 @@ public class LinkTextElementItemProvider extends TextElementItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LINK_TEXT_ELEMENT__TEXT_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
 				UsdFactory.eINSTANCE.createText()));
 
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LINK_TEXT_ELEMENT__TEXT_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
 				UsdFactory.eINSTANCE.createLink()));
 
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LINK_TEXT_ELEMENT__TEXT_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
 				UsdFactory.eINSTANCE.createImage()));
 
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LINK_TEXT_ELEMENT__TEXT_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
 				UsdFactory.eINSTANCE.createCode()));
 
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LINK_TEXT_ELEMENT__TEXT_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
 				UsdFactory.eINSTANCE.createStrongEmphasis()));
 
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LINK_TEXT_ELEMENT__TEXT_ELEMENTS,
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
 				UsdFactory.eINSTANCE.createItalicEmphasis()));
 	}
 

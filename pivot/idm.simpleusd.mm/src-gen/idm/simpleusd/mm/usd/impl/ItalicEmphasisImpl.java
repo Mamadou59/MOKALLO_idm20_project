@@ -4,7 +4,6 @@ package idm.simpleusd.mm.usd.impl;
 
 import idm.simpleusd.mm.usd.ItalicEmphasis;
 import idm.simpleusd.mm.usd.UsdPackage;
-
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -14,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ItalicEmphasisImpl extends TextElementImpl implements ItalicEmphasis {
+public class ItalicEmphasisImpl extends CompositeTextElementImpl implements ItalicEmphasis {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

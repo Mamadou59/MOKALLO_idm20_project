@@ -261,22 +261,13 @@ public interface UsdPackage extends EPackage {
 	int TEXT_ELEMENT = 5;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_ELEMENT__TEXT = 0;
-
-	/**
 	 * The number of structural features of the '<em>Text Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_ELEMENT_FEATURE_COUNT = 1;
+	int TEXT_ELEMENT_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Text Element</em>' class.
@@ -304,7 +295,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT__TEXT = TEXT_ELEMENT__TEXT;
+	int TEXT__TEXT = TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Text</em>' class.
@@ -313,7 +304,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int TEXT_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Text</em>' class.
@@ -325,23 +316,60 @@ public interface UsdPackage extends EPackage {
 	int TEXT_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.LinkTextElementImpl <em>Link Text Element</em>}' class.
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.CompositeTextElementImpl <em>Composite Text Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see idm.simpleusd.mm.usd.impl.LinkTextElementImpl
-	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getLinkTextElement()
+	 * @see idm.simpleusd.mm.usd.impl.CompositeTextElementImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getCompositeTextElement()
 	 * @generated
 	 */
-	int LINK_TEXT_ELEMENT = 7;
+	int COMPOSITE_TEXT_ELEMENT = 22;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * The feature id for the '<em><b>Sub Text Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_TEXT_ELEMENT__TEXT = TEXT_ELEMENT__TEXT;
+	int COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS = TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Composite Text Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Composite Text Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_TEXT_ELEMENT_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.UrlBasedLinkImpl <em>Url Based Link</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.UrlBasedLinkImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getUrlBasedLink()
+	 * @generated
+	 */
+	int URL_BASED_LINK = 7;
+
+	/**
+	 * The feature id for the '<em><b>Sub Text Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_BASED_LINK__SUB_TEXT_ELEMENTS = COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -350,7 +378,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_TEXT_ELEMENT__URL = TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int URL_BASED_LINK__URL = COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -359,34 +387,25 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_TEXT_ELEMENT__TITLE = TEXT_ELEMENT_FEATURE_COUNT + 1;
+	int URL_BASED_LINK__TITLE = COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Text Elements</b></em>' containment reference list.
+	 * The number of structural features of the '<em>Url Based Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_TEXT_ELEMENT__TEXT_ELEMENTS = TEXT_ELEMENT_FEATURE_COUNT + 2;
+	int URL_BASED_LINK_FEATURE_COUNT = COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of structural features of the '<em>Link Text Element</em>' class.
+	 * The number of operations of the '<em>Url Based Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_TEXT_ELEMENT_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Link Text Element</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK_TEXT_ELEMENT_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int URL_BASED_LINK_OPERATION_COUNT = COMPOSITE_TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.LinkImpl <em>Link</em>}' class.
@@ -399,13 +418,13 @@ public interface UsdPackage extends EPackage {
 	int LINK = 8;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * The feature id for the '<em><b>Sub Text Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__TEXT = LINK_TEXT_ELEMENT__TEXT;
+	int LINK__SUB_TEXT_ELEMENTS = URL_BASED_LINK__SUB_TEXT_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -414,7 +433,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__URL = LINK_TEXT_ELEMENT__URL;
+	int LINK__URL = URL_BASED_LINK__URL;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -423,16 +442,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__TITLE = LINK_TEXT_ELEMENT__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Text Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINK__TEXT_ELEMENTS = LINK_TEXT_ELEMENT__TEXT_ELEMENTS;
+	int LINK__TITLE = URL_BASED_LINK__TITLE;
 
 	/**
 	 * The number of structural features of the '<em>Link</em>' class.
@@ -441,7 +451,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = LINK_TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int LINK_FEATURE_COUNT = URL_BASED_LINK_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Link</em>' class.
@@ -450,7 +460,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_OPERATION_COUNT = LINK_TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int LINK_OPERATION_COUNT = URL_BASED_LINK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.ImageImpl <em>Image</em>}' class.
@@ -463,13 +473,13 @@ public interface UsdPackage extends EPackage {
 	int IMAGE = 9;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * The feature id for the '<em><b>Sub Text Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE__TEXT = LINK_TEXT_ELEMENT__TEXT;
+	int IMAGE__SUB_TEXT_ELEMENTS = URL_BASED_LINK__SUB_TEXT_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -478,7 +488,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE__URL = LINK_TEXT_ELEMENT__URL;
+	int IMAGE__URL = URL_BASED_LINK__URL;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -487,16 +497,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE__TITLE = LINK_TEXT_ELEMENT__TITLE;
-
-	/**
-	 * The feature id for the '<em><b>Text Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE__TEXT_ELEMENTS = LINK_TEXT_ELEMENT__TEXT_ELEMENTS;
+	int IMAGE__TITLE = URL_BASED_LINK__TITLE;
 
 	/**
 	 * The number of structural features of the '<em>Image</em>' class.
@@ -505,7 +506,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_FEATURE_COUNT = LINK_TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int IMAGE_FEATURE_COUNT = URL_BASED_LINK_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Image</em>' class.
@@ -514,7 +515,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAGE_OPERATION_COUNT = LINK_TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int IMAGE_OPERATION_COUNT = URL_BASED_LINK_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.CodeImpl <em>Code</em>}' class.
@@ -533,7 +534,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE__TEXT = TEXT_ELEMENT__TEXT;
+	int CODE__TEXT = TEXT__TEXT;
 
 	/**
 	 * The number of structural features of the '<em>Code</em>' class.
@@ -542,7 +543,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int CODE_FEATURE_COUNT = TEXT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Code</em>' class.
@@ -551,7 +552,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CODE_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int CODE_OPERATION_COUNT = TEXT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.StrongEmphasisImpl <em>Strong Emphasis</em>}' class.
@@ -564,13 +565,13 @@ public interface UsdPackage extends EPackage {
 	int STRONG_EMPHASIS = 11;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * The feature id for the '<em><b>Sub Text Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRONG_EMPHASIS__TEXT = TEXT_ELEMENT__TEXT;
+	int STRONG_EMPHASIS__SUB_TEXT_ELEMENTS = COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Strong Emphasis</em>' class.
@@ -579,7 +580,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRONG_EMPHASIS_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int STRONG_EMPHASIS_FEATURE_COUNT = COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Strong Emphasis</em>' class.
@@ -588,7 +589,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRONG_EMPHASIS_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int STRONG_EMPHASIS_OPERATION_COUNT = COMPOSITE_TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.ItalicEmphasisImpl <em>Italic Emphasis</em>}' class.
@@ -601,13 +602,13 @@ public interface UsdPackage extends EPackage {
 	int ITALIC_EMPHASIS = 12;
 
 	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
+	 * The feature id for the '<em><b>Sub Text Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ITALIC_EMPHASIS__TEXT = TEXT_ELEMENT__TEXT;
+	int ITALIC_EMPHASIS__SUB_TEXT_ELEMENTS = COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Italic Emphasis</em>' class.
@@ -616,7 +617,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITALIC_EMPHASIS_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int ITALIC_EMPHASIS_FEATURE_COUNT = COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Italic Emphasis</em>' class.
@@ -625,7 +626,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITALIC_EMPHASIS_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int ITALIC_EMPHASIS_OPERATION_COUNT = COMPOSITE_TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.ListElementImpl <em>List Element</em>}' class.
@@ -1047,17 +1048,6 @@ public interface UsdPackage extends EPackage {
 	EClass getTextElement();
 
 	/**
-	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.TextElement#getText <em>Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text</em>'.
-	 * @see idm.simpleusd.mm.usd.TextElement#getText()
-	 * @see #getTextElement()
-	 * @generated
-	 */
-	EAttribute getTextElement_Text();
-
-	/**
 	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Text <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1068,47 +1058,47 @@ public interface UsdPackage extends EPackage {
 	EClass getText();
 
 	/**
-	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.LinkTextElement <em>Link Text Element</em>}'.
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.Text#getText <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Link Text Element</em>'.
-	 * @see idm.simpleusd.mm.usd.LinkTextElement
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see idm.simpleusd.mm.usd.Text#getText()
+	 * @see #getText()
 	 * @generated
 	 */
-	EClass getLinkTextElement();
+	EAttribute getText_Text();
 
 	/**
-	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.LinkTextElement#getUrl <em>Url</em>}'.
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.UrlBasedLink <em>Url Based Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Url Based Link</em>'.
+	 * @see idm.simpleusd.mm.usd.UrlBasedLink
+	 * @generated
+	 */
+	EClass getUrlBasedLink();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.UrlBasedLink#getUrl <em>Url</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Url</em>'.
-	 * @see idm.simpleusd.mm.usd.LinkTextElement#getUrl()
-	 * @see #getLinkTextElement()
+	 * @see idm.simpleusd.mm.usd.UrlBasedLink#getUrl()
+	 * @see #getUrlBasedLink()
 	 * @generated
 	 */
-	EAttribute getLinkTextElement_Url();
+	EAttribute getUrlBasedLink_Url();
 
 	/**
-	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.LinkTextElement#getTitle <em>Title</em>}'.
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.UrlBasedLink#getTitle <em>Title</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Title</em>'.
-	 * @see idm.simpleusd.mm.usd.LinkTextElement#getTitle()
-	 * @see #getLinkTextElement()
+	 * @see idm.simpleusd.mm.usd.UrlBasedLink#getTitle()
+	 * @see #getUrlBasedLink()
 	 * @generated
 	 */
-	EAttribute getLinkTextElement_Title();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.LinkTextElement#getTextElements <em>Text Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Text Elements</em>'.
-	 * @see idm.simpleusd.mm.usd.LinkTextElement#getTextElements()
-	 * @see #getLinkTextElement()
-	 * @generated
-	 */
-	EReference getLinkTextElement_TextElements();
+	EAttribute getUrlBasedLink_Title();
 
 	/**
 	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Link <em>Link</em>}'.
@@ -1306,6 +1296,27 @@ public interface UsdPackage extends EPackage {
 	EClass getHorizontalLine();
 
 	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.CompositeTextElement <em>Composite Text Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Composite Text Element</em>'.
+	 * @see idm.simpleusd.mm.usd.CompositeTextElement
+	 * @generated
+	 */
+	EClass getCompositeTextElement();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.CompositeTextElement#getSubTextElements <em>Sub Text Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sub Text Elements</em>'.
+	 * @see idm.simpleusd.mm.usd.CompositeTextElement#getSubTextElements()
+	 * @see #getCompositeTextElement()
+	 * @generated
+	 */
+	EReference getCompositeTextElement_SubTextElements();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1421,14 +1432,6 @@ public interface UsdPackage extends EPackage {
 		EClass TEXT_ELEMENT = eINSTANCE.getTextElement();
 
 		/**
-		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TEXT_ELEMENT__TEXT = eINSTANCE.getTextElement_Text();
-
-		/**
 		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.TextImpl <em>Text</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1439,14 +1442,22 @@ public interface UsdPackage extends EPackage {
 		EClass TEXT = eINSTANCE.getText();
 
 		/**
-		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.LinkTextElementImpl <em>Link Text Element</em>}' class.
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see idm.simpleusd.mm.usd.impl.LinkTextElementImpl
-		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getLinkTextElement()
 		 * @generated
 		 */
-		EClass LINK_TEXT_ELEMENT = eINSTANCE.getLinkTextElement();
+		EAttribute TEXT__TEXT = eINSTANCE.getText_Text();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.UrlBasedLinkImpl <em>Url Based Link</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.UrlBasedLinkImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getUrlBasedLink()
+		 * @generated
+		 */
+		EClass URL_BASED_LINK = eINSTANCE.getUrlBasedLink();
 
 		/**
 		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
@@ -1454,7 +1465,7 @@ public interface UsdPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LINK_TEXT_ELEMENT__URL = eINSTANCE.getLinkTextElement_Url();
+		EAttribute URL_BASED_LINK__URL = eINSTANCE.getUrlBasedLink_Url();
 
 		/**
 		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
@@ -1462,15 +1473,7 @@ public interface UsdPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LINK_TEXT_ELEMENT__TITLE = eINSTANCE.getLinkTextElement_Title();
-
-		/**
-		 * The meta object literal for the '<em><b>Text Elements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LINK_TEXT_ELEMENT__TEXT_ELEMENTS = eINSTANCE.getLinkTextElement_TextElements();
+		EAttribute URL_BASED_LINK__TITLE = eINSTANCE.getUrlBasedLink_Title();
 
 		/**
 		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.LinkImpl <em>Link</em>}' class.
@@ -1651,6 +1654,24 @@ public interface UsdPackage extends EPackage {
 		 * @generated
 		 */
 		EClass HORIZONTAL_LINE = eINSTANCE.getHorizontalLine();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.CompositeTextElementImpl <em>Composite Text Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.CompositeTextElementImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getCompositeTextElement()
+		 * @generated
+		 */
+		EClass COMPOSITE_TEXT_ELEMENT = eINSTANCE.getCompositeTextElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Sub Text Elements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS = eINSTANCE.getCompositeTextElement_SubTextElements();
 
 	}
 

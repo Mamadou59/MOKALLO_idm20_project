@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ImageImpl extends LinkTextElementImpl implements Image {
+public class ImageImpl extends UrlBasedLinkImpl implements Image {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

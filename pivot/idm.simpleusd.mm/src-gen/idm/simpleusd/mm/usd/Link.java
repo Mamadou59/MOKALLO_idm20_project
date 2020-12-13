@@ -12,5 +12,5 @@ package idm.simpleusd.mm.usd;
  * @model
  * @generated
  */
-public interface Link extends LinkTextElement {
+public interface Link extends UrlBasedLink {
 } // Link

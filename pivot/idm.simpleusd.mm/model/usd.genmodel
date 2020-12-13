@@ -22,14 +22,13 @@
     <genClasses ecoreClass="usd.ecore#//Title">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Title/level"/>
     </genClasses>
-    <genClasses ecoreClass="usd.ecore#//TextElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//TextElement/text"/>
+    <genClasses ecoreClass="usd.ecore#//TextElement"/>
+    <genClasses ecoreClass="usd.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Text/text"/>
     </genClasses>
-    <genClasses ecoreClass="usd.ecore#//Text"/>
-    <genClasses ecoreClass="usd.ecore#//LinkTextElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//LinkTextElement/url"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//LinkTextElement/title"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//LinkTextElement/textElements"/>
+    <genClasses ecoreClass="usd.ecore#//UrlBasedLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//UrlBasedLink/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//UrlBasedLink/title"/>
     </genClasses>
     <genClasses ecoreClass="usd.ecore#//Link"/>
     <genClasses ecoreClass="usd.ecore#//Image"/>
@@ -55,5 +54,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//CodeLine/text"/>
     </genClasses>
     <genClasses ecoreClass="usd.ecore#//HorizontalLine"/>
+    <genClasses ecoreClass="usd.ecore#//CompositeTextElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//CompositeTextElement/subTextElements"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

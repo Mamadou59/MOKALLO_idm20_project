@@ -2,14 +2,11 @@
  */
 package idm.simpleusd.mm.usd.provider;
 
-import idm.simpleusd.mm.usd.ItalicEmphasis;
-
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -18,7 +15,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ItalicEmphasisItemProvider extends TextElementItemProvider {
+public class ItalicEmphasisItemProvider extends CompositeTextElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -73,9 +70,7 @@ public class ItalicEmphasisItemProvider extends TextElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ItalicEmphasis) object).getText();
-		return label == null || label.length() == 0 ? getString("_UI_ItalicEmphasis_type")
-				: getString("_UI_ItalicEmphasis_type") + " " + label;
+		return getString("_UI_ItalicEmphasis_type");
 	}
 
 	/**

@@ -102,8 +102,8 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseLinkTextElement(LinkTextElement object) {
-			return createLinkTextElementAdapter();
+		public Adapter caseUrlBasedLink(UrlBasedLink object) {
+			return createUrlBasedLinkAdapter();
 		}
 
 		@Override
@@ -174,6 +174,11 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseHorizontalLine(HorizontalLine object) {
 			return createHorizontalLineAdapter();
+		}
+
+		@Override
+		public Adapter caseCompositeTextElement(CompositeTextElement object) {
+			return createCompositeTextElementAdapter();
 		}
 
 		@Override
@@ -294,16 +299,16 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.LinkTextElement <em>Link Text Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.UrlBasedLink <em>Url Based Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.simpleusd.mm.usd.LinkTextElement
+	 * @see idm.simpleusd.mm.usd.UrlBasedLink
 	 * @generated
 	 */
-	public Adapter createLinkTextElementAdapter() {
+	public Adapter createUrlBasedLinkAdapter() {
 		return null;
 	}
 
@@ -500,6 +505,20 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createHorizontalLineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.CompositeTextElement <em>Composite Text Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.CompositeTextElement
+	 * @generated
+	 */
+	public Adapter createCompositeTextElementAdapter() {
 		return null;
 	}
 

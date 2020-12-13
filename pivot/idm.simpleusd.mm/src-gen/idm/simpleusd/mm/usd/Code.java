@@ -12,5 +12,5 @@ package idm.simpleusd.mm.usd;
  * @model
  * @generated
  */
-public interface Code extends TextElement {
+public interface Code extends Text {
 } // Code

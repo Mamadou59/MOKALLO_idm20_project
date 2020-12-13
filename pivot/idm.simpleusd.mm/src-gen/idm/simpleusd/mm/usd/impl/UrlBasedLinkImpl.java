@@ -2,41 +2,30 @@
  */
 package idm.simpleusd.mm.usd.impl;
 
-import idm.simpleusd.mm.usd.LinkTextElement;
-import idm.simpleusd.mm.usd.TextElement;
+import idm.simpleusd.mm.usd.UrlBasedLink;
 import idm.simpleusd.mm.usd.UsdPackage;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Link Text Element</b></em>'.
+ * An implementation of the model object '<em><b>Url Based Link</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link idm.simpleusd.mm.usd.impl.LinkTextElementImpl#getUrl <em>Url</em>}</li>
- *   <li>{@link idm.simpleusd.mm.usd.impl.LinkTextElementImpl#getTitle <em>Title</em>}</li>
- *   <li>{@link idm.simpleusd.mm.usd.impl.LinkTextElementImpl#getTextElements <em>Text Elements</em>}</li>
+ *   <li>{@link idm.simpleusd.mm.usd.impl.UrlBasedLinkImpl#getUrl <em>Url</em>}</li>
+ *   <li>{@link idm.simpleusd.mm.usd.impl.UrlBasedLinkImpl#getTitle <em>Title</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class LinkTextElementImpl extends TextElementImpl implements LinkTextElement {
+public abstract class UrlBasedLinkImpl extends CompositeTextElementImpl implements UrlBasedLink {
 	/**
 	 * The default value of the '{@link #getUrl() <em>Url</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -78,21 +67,11 @@ public abstract class LinkTextElementImpl extends TextElementImpl implements Lin
 	protected String title = TITLE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTextElements() <em>Text Elements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTextElements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TextElement> textElements;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LinkTextElementImpl() {
+	protected UrlBasedLinkImpl() {
 		super();
 	}
 
@@ -103,7 +82,7 @@ public abstract class LinkTextElementImpl extends TextElementImpl implements Lin
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UsdPackage.Literals.LINK_TEXT_ELEMENT;
+		return UsdPackage.Literals.URL_BASED_LINK;
 	}
 
 	/**
@@ -124,7 +103,7 @@ public abstract class LinkTextElementImpl extends TextElementImpl implements Lin
 		String oldUrl = url;
 		url = newUrl;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.LINK_TEXT_ELEMENT__URL, oldUrl, url));
+			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.URL_BASED_LINK__URL, oldUrl, url));
 	}
 
 	/**
@@ -145,35 +124,7 @@ public abstract class LinkTextElementImpl extends TextElementImpl implements Lin
 		String oldTitle = title;
 		title = newTitle;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.LINK_TEXT_ELEMENT__TITLE, oldTitle,
-					title));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<TextElement> getTextElements() {
-		if (textElements == null) {
-			textElements = new EObjectContainmentEList<TextElement>(TextElement.class, this,
-					UsdPackage.LINK_TEXT_ELEMENT__TEXT_ELEMENTS);
-		}
-		return textElements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case UsdPackage.LINK_TEXT_ELEMENT__TEXT_ELEMENTS:
-			return ((InternalEList<?>) getTextElements()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.URL_BASED_LINK__TITLE, oldTitle, title));
 	}
 
 	/**
@@ -184,12 +135,10 @@ public abstract class LinkTextElementImpl extends TextElementImpl implements Lin
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case UsdPackage.LINK_TEXT_ELEMENT__URL:
+		case UsdPackage.URL_BASED_LINK__URL:
 			return getUrl();
-		case UsdPackage.LINK_TEXT_ELEMENT__TITLE:
+		case UsdPackage.URL_BASED_LINK__TITLE:
 			return getTitle();
-		case UsdPackage.LINK_TEXT_ELEMENT__TEXT_ELEMENTS:
-			return getTextElements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -199,19 +148,14 @@ public abstract class LinkTextElementImpl extends TextElementImpl implements Lin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case UsdPackage.LINK_TEXT_ELEMENT__URL:
+		case UsdPackage.URL_BASED_LINK__URL:
 			setUrl((String) newValue);
 			return;
-		case UsdPackage.LINK_TEXT_ELEMENT__TITLE:
+		case UsdPackage.URL_BASED_LINK__TITLE:
 			setTitle((String) newValue);
-			return;
-		case UsdPackage.LINK_TEXT_ELEMENT__TEXT_ELEMENTS:
-			getTextElements().clear();
-			getTextElements().addAll((Collection<? extends TextElement>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -225,14 +169,11 @@ public abstract class LinkTextElementImpl extends TextElementImpl implements Lin
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case UsdPackage.LINK_TEXT_ELEMENT__URL:
+		case UsdPackage.URL_BASED_LINK__URL:
 			setUrl(URL_EDEFAULT);
 			return;
-		case UsdPackage.LINK_TEXT_ELEMENT__TITLE:
+		case UsdPackage.URL_BASED_LINK__TITLE:
 			setTitle(TITLE_EDEFAULT);
-			return;
-		case UsdPackage.LINK_TEXT_ELEMENT__TEXT_ELEMENTS:
-			getTextElements().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -246,12 +187,10 @@ public abstract class LinkTextElementImpl extends TextElementImpl implements Lin
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case UsdPackage.LINK_TEXT_ELEMENT__URL:
+		case UsdPackage.URL_BASED_LINK__URL:
 			return URL_EDEFAULT == null ? url != null : !URL_EDEFAULT.equals(url);
-		case UsdPackage.LINK_TEXT_ELEMENT__TITLE:
+		case UsdPackage.URL_BASED_LINK__TITLE:
 			return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
-		case UsdPackage.LINK_TEXT_ELEMENT__TEXT_ELEMENTS:
-			return textElements != null && !textElements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -275,4 +214,4 @@ public abstract class LinkTextElementImpl extends TextElementImpl implements Lin
 		return result.toString();
 	}
 
-} //LinkTextElementImpl
+} //UrlBasedLinkImpl

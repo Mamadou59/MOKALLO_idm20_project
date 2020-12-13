@@ -4,7 +4,6 @@ package idm.simpleusd.mm.usd.impl;
 
 import idm.simpleusd.mm.usd.StrongEmphasis;
 import idm.simpleusd.mm.usd.UsdPackage;
-
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -14,7 +13,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class StrongEmphasisImpl extends TextElementImpl implements StrongEmphasis {
+public class StrongEmphasisImpl extends CompositeTextElementImpl implements StrongEmphasis {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

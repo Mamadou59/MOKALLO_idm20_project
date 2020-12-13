@@ -129,11 +129,13 @@ public class UsdSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case UsdPackage.LINK_TEXT_ELEMENT: {
-			LinkTextElement linkTextElement = (LinkTextElement) theEObject;
-			T result = caseLinkTextElement(linkTextElement);
+		case UsdPackage.URL_BASED_LINK: {
+			UrlBasedLink urlBasedLink = (UrlBasedLink) theEObject;
+			T result = caseUrlBasedLink(urlBasedLink);
 			if (result == null)
-				result = caseTextElement(linkTextElement);
+				result = caseCompositeTextElement(urlBasedLink);
+			if (result == null)
+				result = caseTextElement(urlBasedLink);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -142,7 +144,9 @@ public class UsdSwitch<T> extends Switch<T> {
 			Link link = (Link) theEObject;
 			T result = caseLink(link);
 			if (result == null)
-				result = caseLinkTextElement(link);
+				result = caseUrlBasedLink(link);
+			if (result == null)
+				result = caseCompositeTextElement(link);
 			if (result == null)
 				result = caseTextElement(link);
 			if (result == null)
@@ -153,7 +157,9 @@ public class UsdSwitch<T> extends Switch<T> {
 			Image image = (Image) theEObject;
 			T result = caseImage(image);
 			if (result == null)
-				result = caseLinkTextElement(image);
+				result = caseUrlBasedLink(image);
+			if (result == null)
+				result = caseCompositeTextElement(image);
 			if (result == null)
 				result = caseTextElement(image);
 			if (result == null)
@@ -164,6 +170,8 @@ public class UsdSwitch<T> extends Switch<T> {
 			Code code = (Code) theEObject;
 			T result = caseCode(code);
 			if (result == null)
+				result = caseText(code);
+			if (result == null)
 				result = caseTextElement(code);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -173,6 +181,8 @@ public class UsdSwitch<T> extends Switch<T> {
 			StrongEmphasis strongEmphasis = (StrongEmphasis) theEObject;
 			T result = caseStrongEmphasis(strongEmphasis);
 			if (result == null)
+				result = caseCompositeTextElement(strongEmphasis);
+			if (result == null)
 				result = caseTextElement(strongEmphasis);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -181,6 +191,8 @@ public class UsdSwitch<T> extends Switch<T> {
 		case UsdPackage.ITALIC_EMPHASIS: {
 			ItalicEmphasis italicEmphasis = (ItalicEmphasis) theEObject;
 			T result = caseItalicEmphasis(italicEmphasis);
+			if (result == null)
+				result = caseCompositeTextElement(italicEmphasis);
 			if (result == null)
 				result = caseTextElement(italicEmphasis);
 			if (result == null)
@@ -272,6 +284,15 @@ public class UsdSwitch<T> extends Switch<T> {
 			T result = caseHorizontalLine(horizontalLine);
 			if (result == null)
 				result = casePageContent(horizontalLine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.COMPOSITE_TEXT_ELEMENT: {
+			CompositeTextElement compositeTextElement = (CompositeTextElement) theEObject;
+			T result = caseCompositeTextElement(compositeTextElement);
+			if (result == null)
+				result = caseTextElement(compositeTextElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -387,17 +408,17 @@ public class UsdSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Link Text Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Url Based Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Link Text Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Url Based Link</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLinkTextElement(LinkTextElement object) {
+	public T caseUrlBasedLink(UrlBasedLink object) {
 		return null;
 	}
 
@@ -608,6 +629,21 @@ public class UsdSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseHorizontalLine(HorizontalLine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Composite Text Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Composite Text Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCompositeTextElement(CompositeTextElement object) {
 		return null;
 	}
 

@@ -6,11 +6,11 @@ import idm.simpleusd.mm.usd.BlockQuote;
 import idm.simpleusd.mm.usd.Code;
 import idm.simpleusd.mm.usd.CodeBlock;
 import idm.simpleusd.mm.usd.CodeLine;
+import idm.simpleusd.mm.usd.CompositeTextElement;
 import idm.simpleusd.mm.usd.HorizontalLine;
 import idm.simpleusd.mm.usd.Image;
 import idm.simpleusd.mm.usd.ItalicEmphasis;
 import idm.simpleusd.mm.usd.Link;
-import idm.simpleusd.mm.usd.LinkTextElement;
 import idm.simpleusd.mm.usd.ListElement;
 import idm.simpleusd.mm.usd.ListItem;
 import idm.simpleusd.mm.usd.ListItemElement;
@@ -24,6 +24,7 @@ import idm.simpleusd.mm.usd.TextContainer;
 import idm.simpleusd.mm.usd.TextElement;
 import idm.simpleusd.mm.usd.Title;
 import idm.simpleusd.mm.usd.UnorderedList;
+import idm.simpleusd.mm.usd.UrlBasedLink;
 import idm.simpleusd.mm.usd.UsdFactory;
 import idm.simpleusd.mm.usd.UsdPackage;
 
@@ -95,7 +96,7 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass linkTextElementEClass = null;
+	private EClass urlBasedLinkEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -194,6 +195,13 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	private EClass horizontalLineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass compositeTextElementEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -354,15 +362,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTextElement_Text() {
-		return (EAttribute) textElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getText() {
 		return textEClass;
 	}
@@ -372,8 +371,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLinkTextElement() {
-		return linkTextElementEClass;
+	public EAttribute getText_Text() {
+		return (EAttribute) textEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -381,8 +380,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLinkTextElement_Url() {
-		return (EAttribute) linkTextElementEClass.getEStructuralFeatures().get(0);
+	public EClass getUrlBasedLink() {
+		return urlBasedLinkEClass;
 	}
 
 	/**
@@ -390,8 +389,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getLinkTextElement_Title() {
-		return (EAttribute) linkTextElementEClass.getEStructuralFeatures().get(1);
+	public EAttribute getUrlBasedLink_Url() {
+		return (EAttribute) urlBasedLinkEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -399,8 +398,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getLinkTextElement_TextElements() {
-		return (EReference) linkTextElementEClass.getEStructuralFeatures().get(2);
+	public EAttribute getUrlBasedLink_Title() {
+		return (EAttribute) urlBasedLinkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -579,6 +578,24 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCompositeTextElement() {
+		return compositeTextElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCompositeTextElement_SubTextElements() {
+		return (EReference) compositeTextElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public UsdFactory getUsdFactory() {
 		return (UsdFactory) getEFactoryInstance();
 	}
@@ -618,14 +635,13 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		createEAttribute(titleEClass, TITLE__LEVEL);
 
 		textElementEClass = createEClass(TEXT_ELEMENT);
-		createEAttribute(textElementEClass, TEXT_ELEMENT__TEXT);
 
 		textEClass = createEClass(TEXT);
+		createEAttribute(textEClass, TEXT__TEXT);
 
-		linkTextElementEClass = createEClass(LINK_TEXT_ELEMENT);
-		createEAttribute(linkTextElementEClass, LINK_TEXT_ELEMENT__URL);
-		createEAttribute(linkTextElementEClass, LINK_TEXT_ELEMENT__TITLE);
-		createEReference(linkTextElementEClass, LINK_TEXT_ELEMENT__TEXT_ELEMENTS);
+		urlBasedLinkEClass = createEClass(URL_BASED_LINK);
+		createEAttribute(urlBasedLinkEClass, URL_BASED_LINK__URL);
+		createEAttribute(urlBasedLinkEClass, URL_BASED_LINK__TITLE);
 
 		linkEClass = createEClass(LINK);
 
@@ -659,6 +675,9 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		createEAttribute(codeLineEClass, CODE_LINE__TEXT);
 
 		horizontalLineEClass = createEClass(HORIZONTAL_LINE);
+
+		compositeTextElementEClass = createEClass(COMPOSITE_TEXT_ELEMENT);
+		createEReference(compositeTextElementEClass, COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS);
 	}
 
 	/**
@@ -695,12 +714,12 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		paragraphEClass.getESuperTypes().add(this.getListItemElement());
 		titleEClass.getESuperTypes().add(this.getTextContainer());
 		textEClass.getESuperTypes().add(this.getTextElement());
-		linkTextElementEClass.getESuperTypes().add(this.getTextElement());
-		linkEClass.getESuperTypes().add(this.getLinkTextElement());
-		imageEClass.getESuperTypes().add(this.getLinkTextElement());
-		codeEClass.getESuperTypes().add(this.getTextElement());
-		strongEmphasisEClass.getESuperTypes().add(this.getTextElement());
-		italicEmphasisEClass.getESuperTypes().add(this.getTextElement());
+		urlBasedLinkEClass.getESuperTypes().add(this.getCompositeTextElement());
+		linkEClass.getESuperTypes().add(this.getUrlBasedLink());
+		imageEClass.getESuperTypes().add(this.getUrlBasedLink());
+		codeEClass.getESuperTypes().add(this.getText());
+		strongEmphasisEClass.getESuperTypes().add(this.getCompositeTextElement());
+		italicEmphasisEClass.getESuperTypes().add(this.getCompositeTextElement());
 		listElementEClass.getESuperTypes().add(this.getPageContent());
 		listElementEClass.getESuperTypes().add(this.getListItemElement());
 		orderedListEClass.getESuperTypes().add(this.getListElement());
@@ -710,6 +729,7 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		codeBlockEClass.getESuperTypes().add(this.getPageContent());
 		codeBlockEClass.getESuperTypes().add(this.getListItemElement());
 		horizontalLineEClass.getESuperTypes().add(this.getPageContent());
+		compositeTextElementEClass.getESuperTypes().add(this.getTextElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -737,21 +757,17 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		initEClass(textElementEClass, TextElement.class, "TextElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTextElement_Text(), ecorePackage.getEString(), "text", null, 0, 1, TextElement.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getText_Text(), ecorePackage.getEString(), "text", null, 0, 1, Text.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(linkTextElementEClass, LinkTextElement.class, "LinkTextElement", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(urlBasedLinkEClass, UrlBasedLink.class, "UrlBasedLink", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLinkTextElement_Url(), ecorePackage.getEString(), "url", null, 0, 1, LinkTextElement.class,
+		initEAttribute(getUrlBasedLink_Url(), ecorePackage.getEString(), "url", null, 0, 1, UrlBasedLink.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getLinkTextElement_Title(), ecorePackage.getEString(), "title", null, 0, 1,
-				LinkTextElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getLinkTextElement_TextElements(), this.getTextElement(), null, "textElements", null, 0, -1,
-				LinkTextElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUrlBasedLink_Title(), ecorePackage.getEString(), "title", null, 0, 1, UrlBasedLink.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -805,6 +821,12 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		initEClass(horizontalLineEClass, HorizontalLine.class, "HorizontalLine", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(compositeTextElementEClass, CompositeTextElement.class, "CompositeTextElement", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCompositeTextElement_SubTextElements(), this.getTextElement(), null, "subTextElements", null,
+				0, -1, CompositeTextElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -18,7 +18,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LinkItemProvider extends LinkTextElementItemProvider {
+public class LinkItemProvider extends UrlBasedLinkItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -73,7 +73,7 @@ public class LinkItemProvider extends LinkTextElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Link) object).getText();
+		String label = ((Link) object).getUrl();
 		return label == null || label.length() == 0 ? getString("_UI_Link_type")
 				: getString("_UI_Link_type") + " " + label;
 	}
