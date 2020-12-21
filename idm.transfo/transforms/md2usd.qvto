@@ -117,10 +117,64 @@ abstract mapping mdMM::UrlBasedLink::urlBasedLinkMd2UrlBasedLinkUsd() : usdMM::U
 */
 mapping mdMM::Link::linkMd2LinkUsd() : usdMM::Link
 	inherits mdMM::UrlBasedLink::urlBasedLinkMd2UrlBasedLinkUsd
-	{
+	when {not self.isLinkButton()}  {
 	
 }
 
+// Start transformation from md link to usd button
+
+/**
+* Mapper from markdown Link element to usd button element 
+* wich extends textElementMd2TextElementUsd mapper.
+*/
+mapping mdMM::Link::linkButtonMd2ButtonUsd() : usdMM::Button 
+	inherits mdMM::TextElement::textElementMd2TextElementUsd 
+	when {self.isLinkButton()} {
+	type := self.getType();
+	textContent := self.getTextContent();
+	}
+
+
+/**
+* A query to check if given link is button. 
+*/
+query mdMM::Link::isLinkButton() : Boolean {
+	var textElem := self.allSubobjectsOfType(Text);
+	textElem -> forOne(i){
+		if (i.text.startsWith('[') and i.text.find("btn") > 0){
+			//log(i.text);
+			return true;
+		}else {
+			return false;
+		}
+	};
+	return false;	
+}
+
+/**
+* A query to get a given link type witch is in [type]textContent. 
+*/
+query mdMM::Link::getType() : String {
+	var textElem := self.allSubobjectsOfType(Text);
+	textElem -> forOne(i){
+		var before := i.text.substringBefore(']');
+		var after := before.substringAfter('[');
+		return after;
+	};
+	return "";
+}
+
+/**
+* A query to get a given link textcontent witch is after [type]textContent. 
+*/
+query mdMM::Link::getTextContent() : String {
+	var textElem := self.allSubobjectsOfType(Text);
+	textElem -> forOne(i){
+		return i.text.substringAfter(']');
+	};
+	return "";
+}
+// End transformation from md link to usd button
 
 /**
 * Mapper from markdown LinkWithRef element to usd Link element 
@@ -131,7 +185,6 @@ mapping mdMM::LinkWithRef::linkWithRefMd2LinkUsd() : usdMM::Link
 	init {
 		var ref := self.reference.findLinkReference();
 	}
-
 	if (ref <> null) then {
 		result.url := ref.url;
 		result.title := ref.title;	
@@ -163,7 +216,7 @@ mapping mdMM::TextElement::contructTextElement() : usdMM::TextElement
 	disjuncts  mdMM::Text::textMd2TextUsd, mdMM::StrongEmphasis::strongEmphasisMd2StrongEmphasisUsd,
 				mdMM::Emphasis::emphasisMd2ItalicEmphasisUsd, mdMM::Code::codeMd2CodeUsd,
 				mdMM::Link::linkMd2LinkUsd, mdMM::Image::imageMd2ImageUsd,
-				mdMM::LinkWithRef::linkWithRefMd2LinkUsd{}
+				mdMM::LinkWithRef::linkWithRefMd2LinkUsd, mdMM::Link::linkButtonMd2ButtonUsd{}
 
 //End TextElement transformation
 		
