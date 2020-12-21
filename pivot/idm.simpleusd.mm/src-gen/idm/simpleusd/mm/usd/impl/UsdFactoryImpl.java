@@ -5,6 +5,7 @@ package idm.simpleusd.mm.usd.impl;
 import idm.simpleusd.mm.usd.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -87,8 +88,50 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 			return createCodeLine();
 		case UsdPackage.HORIZONTAL_LINE:
 			return createHorizontalLine();
+		case UsdPackage.TABLE:
+			return createTable();
+		case UsdPackage.TABLE_BODY:
+			return createTableBody();
+		case UsdPackage.TABLE_SEPARATOR:
+			return createTableSeparator();
+		case UsdPackage.TABLE_HEAD:
+			return createTableHead();
+		case UsdPackage.TABLE_ROW:
+			return createTableRow();
+		case UsdPackage.TABLE_CELL:
+			return createTableCell();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+		case UsdPackage.TABLE_CELL_ALIGNEMENT:
+			return createTableCellAlignementFromString(eDataType, initialValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+		case UsdPackage.TABLE_CELL_ALIGNEMENT:
+			return convertTableCellAlignementToString(eDataType, instanceValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -250,6 +293,88 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 	public HorizontalLine createHorizontalLine() {
 		HorizontalLineImpl horizontalLine = new HorizontalLineImpl();
 		return horizontalLine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Table createTable() {
+		TableImpl table = new TableImpl();
+		return table;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableBody createTableBody() {
+		TableBodyImpl tableBody = new TableBodyImpl();
+		return tableBody;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableSeparator createTableSeparator() {
+		TableSeparatorImpl tableSeparator = new TableSeparatorImpl();
+		return tableSeparator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableHead createTableHead() {
+		TableHeadImpl tableHead = new TableHeadImpl();
+		return tableHead;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableRow createTableRow() {
+		TableRowImpl tableRow = new TableRowImpl();
+		return tableRow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableCell createTableCell() {
+		TableCellImpl tableCell = new TableCellImpl();
+		return tableCell;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableCellAlignement createTableCellAlignementFromString(EDataType eDataType, String initialValue) {
+		TableCellAlignement result = TableCellAlignement.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTableCellAlignementToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

@@ -182,6 +182,41 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseTable(Table object) {
+			return createTableAdapter();
+		}
+
+		@Override
+		public Adapter caseTableSection(TableSection object) {
+			return createTableSectionAdapter();
+		}
+
+		@Override
+		public Adapter caseTableBody(TableBody object) {
+			return createTableBodyAdapter();
+		}
+
+		@Override
+		public Adapter caseTableSeparator(TableSeparator object) {
+			return createTableSeparatorAdapter();
+		}
+
+		@Override
+		public Adapter caseTableHead(TableHead object) {
+			return createTableHeadAdapter();
+		}
+
+		@Override
+		public Adapter caseTableRow(TableRow object) {
+			return createTableRowAdapter();
+		}
+
+		@Override
+		public Adapter caseTableCell(TableCell object) {
+			return createTableCellAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -519,6 +554,104 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCompositeTextElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.Table <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.Table
+	 * @generated
+	 */
+	public Adapter createTableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.TableSection <em>Table Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.TableSection
+	 * @generated
+	 */
+	public Adapter createTableSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.TableBody <em>Table Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.TableBody
+	 * @generated
+	 */
+	public Adapter createTableBodyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.TableSeparator <em>Table Separator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.TableSeparator
+	 * @generated
+	 */
+	public Adapter createTableSeparatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.TableHead <em>Table Head</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.TableHead
+	 * @generated
+	 */
+	public Adapter createTableHeadAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.TableRow <em>Table Row</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.TableRow
+	 * @generated
+	 */
+	public Adapter createTableRowAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.TableCell <em>Table Cell</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.simpleusd.mm.usd.TableCell
+	 * @generated
+	 */
+	public Adapter createTableCellAdapter() {
 		return null;
 	}
 

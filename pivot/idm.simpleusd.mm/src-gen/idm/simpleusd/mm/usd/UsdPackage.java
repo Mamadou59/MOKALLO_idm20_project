@@ -4,6 +4,7 @@ package idm.simpleusd.mm.usd;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -944,6 +945,284 @@ public interface UsdPackage extends EPackage {
 	int HORIZONTAL_LINE_OPERATION_COUNT = PAGE_CONTENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.TableImpl <em>Table</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.TableImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTable()
+	 * @generated
+	 */
+	int TABLE = 23;
+
+	/**
+	 * The feature id for the '<em><b>Table Sections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__TABLE_SECTIONS = PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_FEATURE_COUNT = PAGE_CONTENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_OPERATION_COUNT = PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.TableSectionImpl <em>Table Section</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.TableSectionImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableSection()
+	 * @generated
+	 */
+	int TABLE_SECTION = 24;
+
+	/**
+	 * The feature id for the '<em><b>Rows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_SECTION__ROWS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Table Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_SECTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Table Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_SECTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.TableBodyImpl <em>Table Body</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.TableBodyImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableBody()
+	 * @generated
+	 */
+	int TABLE_BODY = 25;
+
+	/**
+	 * The feature id for the '<em><b>Rows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_BODY__ROWS = TABLE_SECTION__ROWS;
+
+	/**
+	 * The number of structural features of the '<em>Table Body</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_BODY_FEATURE_COUNT = TABLE_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Table Body</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_BODY_OPERATION_COUNT = TABLE_SECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.TableSeparatorImpl <em>Table Separator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.TableSeparatorImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableSeparator()
+	 * @generated
+	 */
+	int TABLE_SEPARATOR = 26;
+
+	/**
+	 * The feature id for the '<em><b>Rows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_SEPARATOR__ROWS = TABLE_SECTION__ROWS;
+
+	/**
+	 * The number of structural features of the '<em>Table Separator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_SEPARATOR_FEATURE_COUNT = TABLE_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Table Separator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_SEPARATOR_OPERATION_COUNT = TABLE_SECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.TableHeadImpl <em>Table Head</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.TableHeadImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableHead()
+	 * @generated
+	 */
+	int TABLE_HEAD = 27;
+
+	/**
+	 * The feature id for the '<em><b>Rows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_HEAD__ROWS = TABLE_SECTION__ROWS;
+
+	/**
+	 * The number of structural features of the '<em>Table Head</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_HEAD_FEATURE_COUNT = TABLE_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Table Head</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_HEAD_OPERATION_COUNT = TABLE_SECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.TableRowImpl <em>Table Row</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.TableRowImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableRow()
+	 * @generated
+	 */
+	int TABLE_ROW = 28;
+
+	/**
+	 * The feature id for the '<em><b>Cells</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_ROW__CELLS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Table Row</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_ROW_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Table Row</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_ROW_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.TableCellImpl <em>Table Cell</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.TableCellImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableCell()
+	 * @generated
+	 */
+	int TABLE_CELL = 29;
+
+	/**
+	 * The feature id for the '<em><b>Text Elements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL__TEXT_ELEMENTS = TEXT_CONTAINER__TEXT_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Alignement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL__ALIGNEMENT = TEXT_CONTAINER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Table Cell</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL_FEATURE_COUNT = TEXT_CONTAINER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Table Cell</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL_OPERATION_COUNT = TEXT_CONTAINER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.TableCellAlignement
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableCellAlignement()
+	 * @generated
+	 */
+	int TABLE_CELL_ALIGNEMENT = 30;
+
+	/**
 	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Page <em>Page</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1317,6 +1596,130 @@ public interface UsdPackage extends EPackage {
 	EReference getCompositeTextElement_SubTextElements();
 
 	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Table <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table</em>'.
+	 * @see idm.simpleusd.mm.usd.Table
+	 * @generated
+	 */
+	EClass getTable();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.Table#getTableSections <em>Table Sections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Table Sections</em>'.
+	 * @see idm.simpleusd.mm.usd.Table#getTableSections()
+	 * @see #getTable()
+	 * @generated
+	 */
+	EReference getTable_TableSections();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.TableSection <em>Table Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table Section</em>'.
+	 * @see idm.simpleusd.mm.usd.TableSection
+	 * @generated
+	 */
+	EClass getTableSection();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.TableSection#getRows <em>Rows</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Rows</em>'.
+	 * @see idm.simpleusd.mm.usd.TableSection#getRows()
+	 * @see #getTableSection()
+	 * @generated
+	 */
+	EReference getTableSection_Rows();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.TableBody <em>Table Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table Body</em>'.
+	 * @see idm.simpleusd.mm.usd.TableBody
+	 * @generated
+	 */
+	EClass getTableBody();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.TableSeparator <em>Table Separator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table Separator</em>'.
+	 * @see idm.simpleusd.mm.usd.TableSeparator
+	 * @generated
+	 */
+	EClass getTableSeparator();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.TableHead <em>Table Head</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table Head</em>'.
+	 * @see idm.simpleusd.mm.usd.TableHead
+	 * @generated
+	 */
+	EClass getTableHead();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.TableRow <em>Table Row</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table Row</em>'.
+	 * @see idm.simpleusd.mm.usd.TableRow
+	 * @generated
+	 */
+	EClass getTableRow();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.TableRow#getCells <em>Cells</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Cells</em>'.
+	 * @see idm.simpleusd.mm.usd.TableRow#getCells()
+	 * @see #getTableRow()
+	 * @generated
+	 */
+	EReference getTableRow_Cells();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.TableCell <em>Table Cell</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table Cell</em>'.
+	 * @see idm.simpleusd.mm.usd.TableCell
+	 * @generated
+	 */
+	EClass getTableCell();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.TableCell#getAlignement <em>Alignement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alignement</em>'.
+	 * @see idm.simpleusd.mm.usd.TableCell#getAlignement()
+	 * @see #getTableCell()
+	 * @generated
+	 */
+	EAttribute getTableCell_Alignement();
+
+	/**
+	 * Returns the meta object for enum '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Table Cell Alignement</em>'.
+	 * @see idm.simpleusd.mm.usd.TableCellAlignement
+	 * @generated
+	 */
+	EEnum getTableCellAlignement();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1672,6 +2075,118 @@ public interface UsdPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS = eINSTANCE.getCompositeTextElement_SubTextElements();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.TableImpl <em>Table</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.TableImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTable()
+		 * @generated
+		 */
+		EClass TABLE = eINSTANCE.getTable();
+
+		/**
+		 * The meta object literal for the '<em><b>Table Sections</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE__TABLE_SECTIONS = eINSTANCE.getTable_TableSections();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.TableSectionImpl <em>Table Section</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.TableSectionImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableSection()
+		 * @generated
+		 */
+		EClass TABLE_SECTION = eINSTANCE.getTableSection();
+
+		/**
+		 * The meta object literal for the '<em><b>Rows</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE_SECTION__ROWS = eINSTANCE.getTableSection_Rows();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.TableBodyImpl <em>Table Body</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.TableBodyImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableBody()
+		 * @generated
+		 */
+		EClass TABLE_BODY = eINSTANCE.getTableBody();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.TableSeparatorImpl <em>Table Separator</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.TableSeparatorImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableSeparator()
+		 * @generated
+		 */
+		EClass TABLE_SEPARATOR = eINSTANCE.getTableSeparator();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.TableHeadImpl <em>Table Head</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.TableHeadImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableHead()
+		 * @generated
+		 */
+		EClass TABLE_HEAD = eINSTANCE.getTableHead();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.TableRowImpl <em>Table Row</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.TableRowImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableRow()
+		 * @generated
+		 */
+		EClass TABLE_ROW = eINSTANCE.getTableRow();
+
+		/**
+		 * The meta object literal for the '<em><b>Cells</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE_ROW__CELLS = eINSTANCE.getTableRow_Cells();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.TableCellImpl <em>Table Cell</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.TableCellImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableCell()
+		 * @generated
+		 */
+		EClass TABLE_CELL = eINSTANCE.getTableCell();
+
+		/**
+		 * The meta object literal for the '<em><b>Alignement</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TABLE_CELL__ALIGNEMENT = eINSTANCE.getTableCell_Alignement();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.TableCellAlignement
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableCellAlignement()
+		 * @generated
+		 */
+		EEnum TABLE_CELL_ALIGNEMENT = eINSTANCE.getTableCellAlignement();
 
 	}
 

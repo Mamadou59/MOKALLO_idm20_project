@@ -441,6 +441,144 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.Table} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableItemProvider tableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.Table}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableAdapter() {
+		if (tableItemProvider == null) {
+			tableItemProvider = new TableItemProvider(this);
+		}
+
+		return tableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.TableBody} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableBodyItemProvider tableBodyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.TableBody}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableBodyAdapter() {
+		if (tableBodyItemProvider == null) {
+			tableBodyItemProvider = new TableBodyItemProvider(this);
+		}
+
+		return tableBodyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.TableSeparator} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableSeparatorItemProvider tableSeparatorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.TableSeparator}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableSeparatorAdapter() {
+		if (tableSeparatorItemProvider == null) {
+			tableSeparatorItemProvider = new TableSeparatorItemProvider(this);
+		}
+
+		return tableSeparatorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.TableHead} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableHeadItemProvider tableHeadItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.TableHead}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableHeadAdapter() {
+		if (tableHeadItemProvider == null) {
+			tableHeadItemProvider = new TableHeadItemProvider(this);
+		}
+
+		return tableHeadItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.TableRow} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableRowItemProvider tableRowItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.TableRow}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableRowAdapter() {
+		if (tableRowItemProvider == null) {
+			tableRowItemProvider = new TableRowItemProvider(this);
+		}
+
+		return tableRowItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.TableCell} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableCellItemProvider tableCellItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.TableCell}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableCellAdapter() {
+		if (tableCellItemProvider == null) {
+			tableCellItemProvider = new TableCellItemProvider(this);
+		}
+
+		return tableCellItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -571,6 +709,18 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 			codeLineItemProvider.dispose();
 		if (horizontalLineItemProvider != null)
 			horizontalLineItemProvider.dispose();
+		if (tableItemProvider != null)
+			tableItemProvider.dispose();
+		if (tableBodyItemProvider != null)
+			tableBodyItemProvider.dispose();
+		if (tableSeparatorItemProvider != null)
+			tableSeparatorItemProvider.dispose();
+		if (tableHeadItemProvider != null)
+			tableHeadItemProvider.dispose();
+		if (tableRowItemProvider != null)
+			tableRowItemProvider.dispose();
+		if (tableCellItemProvider != null)
+			tableCellItemProvider.dispose();
 	}
 
 }

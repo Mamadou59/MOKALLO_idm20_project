@@ -10,6 +10,11 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Usd" basePackage="idm.simpleusd.mm" disposableProviderFactory="true"
       ecorePackage="usd.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="usd.ecore#//TableCellAlignement">
+      <genEnumLiterals ecoreEnumLiteral="usd.ecore#//TableCellAlignement/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="usd.ecore#//TableCellAlignement/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="usd.ecore#//TableCellAlignement/CENTER"/>
+    </genEnums>
     <genClasses ecoreClass="usd.ecore#//Page">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Page/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Page/contents"/>
@@ -56,6 +61,21 @@
     <genClasses ecoreClass="usd.ecore#//HorizontalLine"/>
     <genClasses ecoreClass="usd.ecore#//CompositeTextElement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//CompositeTextElement/subTextElements"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Table">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Table/tableSections"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//TableSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//TableSection/rows"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//TableBody"/>
+    <genClasses ecoreClass="usd.ecore#//TableSeparator"/>
+    <genClasses ecoreClass="usd.ecore#//TableHead"/>
+    <genClasses ecoreClass="usd.ecore#//TableRow">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//TableRow/cells"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//TableCell">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//TableCell/alignement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -2,7 +2,7 @@
  */
 package idm.simpleusd.mm.usd.provider;
 
-import idm.simpleusd.mm.usd.BlockQuote;
+import idm.simpleusd.mm.usd.TableSection;
 import idm.simpleusd.mm.usd.UsdFactory;
 import idm.simpleusd.mm.usd.UsdPackage;
 
@@ -26,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.BlockQuote} object.
+ * This is the item provider adapter for a {@link idm.simpleusd.mm.usd.TableSection} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class TableSectionItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -39,7 +39,7 @@ public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEdit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BlockQuoteItemProvider(AdapterFactory adapterFactory) {
+	public TableSectionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -70,7 +70,7 @@ public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEdit
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS);
+			childrenFeatures.add(UsdPackage.Literals.TABLE_SECTION__ROWS);
 		}
 		return childrenFeatures;
 	}
@@ -89,14 +89,14 @@ public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
-	 * This returns BlockQuote.gif.
+	 * This returns TableSection.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/BlockQuote"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/TableSection"));
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEdit
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_BlockQuote_type");
+		return getString("_UI_TableSection_type");
 	}
 
 	/**
@@ -131,8 +131,8 @@ public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEdit
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(BlockQuote.class)) {
-		case UsdPackage.BLOCK_QUOTE__CONTENTS:
+		switch (notification.getFeatureID(TableSection.class)) {
+		case UsdPackage.TABLE_SECTION__ROWS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -150,32 +150,8 @@ public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEdit
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
-				UsdFactory.eINSTANCE.createParagraph()));
-
 		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS, UsdFactory.eINSTANCE.createTitle()));
-
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
-				UsdFactory.eINSTANCE.createOrderedList()));
-
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
-				UsdFactory.eINSTANCE.createUnorderedList()));
-
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
-				UsdFactory.eINSTANCE.createBlockQuote()));
-
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
-				UsdFactory.eINSTANCE.createCodeBlock()));
-
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
-				UsdFactory.eINSTANCE.createHorizontalLine()));
-
-		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS, UsdFactory.eINSTANCE.createTable()));
-
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
-				UsdFactory.eINSTANCE.createTableCell()));
+				createChildParameter(UsdPackage.Literals.TABLE_SECTION__ROWS, UsdFactory.eINSTANCE.createTableRow()));
 	}
 
 	/**
