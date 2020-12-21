@@ -158,6 +158,9 @@ public class TextContainerItemProvider extends PageContentItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.TEXT_CONTAINER__TEXT_ELEMENTS,
 				UsdFactory.eINSTANCE.createItalicEmphasis()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.TEXT_CONTAINER__TEXT_ELEMENTS,
+				UsdFactory.eINSTANCE.createButton()));
 	}
 
 }

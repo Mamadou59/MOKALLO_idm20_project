@@ -579,6 +579,29 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.Button} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ButtonItemProvider buttonItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.Button}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createButtonAdapter() {
+		if (buttonItemProvider == null) {
+			buttonItemProvider = new ButtonItemProvider(this);
+		}
+
+		return buttonItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -721,6 +744,8 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 			tableRowItemProvider.dispose();
 		if (tableCellItemProvider != null)
 			tableCellItemProvider.dispose();
+		if (buttonItemProvider != null)
+			buttonItemProvider.dispose();
 	}
 
 }

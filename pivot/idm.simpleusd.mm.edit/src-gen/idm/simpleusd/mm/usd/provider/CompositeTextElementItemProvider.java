@@ -158,6 +158,9 @@ public class CompositeTextElementItemProvider extends TextElementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
 				UsdFactory.eINSTANCE.createItalicEmphasis()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
+				UsdFactory.eINSTANCE.createButton()));
 	}
 
 }

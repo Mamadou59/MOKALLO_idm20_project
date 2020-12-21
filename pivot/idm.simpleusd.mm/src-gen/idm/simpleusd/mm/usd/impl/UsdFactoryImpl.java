@@ -100,6 +100,8 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 			return createTableRow();
 		case UsdPackage.TABLE_CELL:
 			return createTableCell();
+		case UsdPackage.BUTTON:
+			return createButton();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -353,6 +355,16 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 	public TableCell createTableCell() {
 		TableCellImpl tableCell = new TableCellImpl();
 		return tableCell;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Button createButton() {
+		ButtonImpl button = new ButtonImpl();
+		return button;
 	}
 
 	/**

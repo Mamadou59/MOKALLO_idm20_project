@@ -79,4 +79,8 @@
     <eLiterals name="RIGHT" value="1"/>
     <eLiterals name="CENTER" value="2"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//TextElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textContent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

@@ -3,6 +3,7 @@
 package idm.simpleusd.mm.usd.impl;
 
 import idm.simpleusd.mm.usd.BlockQuote;
+import idm.simpleusd.mm.usd.Button;
 import idm.simpleusd.mm.usd.Code;
 import idm.simpleusd.mm.usd.CodeBlock;
 import idm.simpleusd.mm.usd.CodeLine;
@@ -260,6 +261,13 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	private EClass tableCellEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass buttonEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -760,6 +768,33 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getButton() {
+		return buttonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getButton_TextContent() {
+		return (EAttribute) buttonEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getButton_Type() {
+		return (EAttribute) buttonEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getTableCellAlignement() {
 		return tableCellAlignementEEnum;
 	}
@@ -870,6 +905,10 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		tableCellEClass = createEClass(TABLE_CELL);
 		createEAttribute(tableCellEClass, TABLE_CELL__ALIGNEMENT);
 
+		buttonEClass = createEClass(BUTTON);
+		createEAttribute(buttonEClass, BUTTON__TEXT_CONTENT);
+		createEAttribute(buttonEClass, BUTTON__TYPE);
+
 		// Create enums
 		tableCellAlignementEEnum = createEEnum(TABLE_CELL_ALIGNEMENT);
 	}
@@ -929,6 +968,7 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		tableSeparatorEClass.getESuperTypes().add(this.getTableSection());
 		tableHeadEClass.getESuperTypes().add(this.getTableSection());
 		tableCellEClass.getESuperTypes().add(this.getTextContainer());
+		buttonEClass.getESuperTypes().add(this.getTextElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1058,6 +1098,12 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		initEAttribute(getTableCell_Alignement(), this.getTableCellAlignement(), "alignement", null, 0, 1,
 				TableCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getButton_TextContent(), ecorePackage.getEString(), "textContent", null, 0, 1, Button.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getButton_Type(), ecorePackage.getEString(), "type", null, 0, 1, Button.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(tableCellAlignementEEnum, TableCellAlignement.class, "TableCellAlignement");

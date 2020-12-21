@@ -1213,6 +1213,52 @@ public interface UsdPackage extends EPackage {
 	int TABLE_CELL_OPERATION_COUNT = TEXT_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.ButtonImpl <em>Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.ButtonImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getButton()
+	 * @generated
+	 */
+	int BUTTON = 30;
+
+	/**
+	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__TEXT_CONTENT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__TYPE = TEXT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1220,7 +1266,7 @@ public interface UsdPackage extends EPackage {
 	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableCellAlignement()
 	 * @generated
 	 */
-	int TABLE_CELL_ALIGNEMENT = 30;
+	int TABLE_CELL_ALIGNEMENT = 31;
 
 	/**
 	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Page <em>Page</em>}'.
@@ -1710,6 +1756,38 @@ public interface UsdPackage extends EPackage {
 	EAttribute getTableCell_Alignement();
 
 	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Button <em>Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Button</em>'.
+	 * @see idm.simpleusd.mm.usd.Button
+	 * @generated
+	 */
+	EClass getButton();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.Button#getTextContent <em>Text Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Text Content</em>'.
+	 * @see idm.simpleusd.mm.usd.Button#getTextContent()
+	 * @see #getButton()
+	 * @generated
+	 */
+	EAttribute getButton_TextContent();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.Button#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see idm.simpleusd.mm.usd.Button#getType()
+	 * @see #getButton()
+	 * @generated
+	 */
+	EAttribute getButton_Type();
+
+	/**
 	 * Returns the meta object for enum '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2177,6 +2255,32 @@ public interface UsdPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TABLE_CELL__ALIGNEMENT = eINSTANCE.getTableCell_Alignement();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.ButtonImpl <em>Button</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.ButtonImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getButton()
+		 * @generated
+		 */
+		EClass BUTTON = eINSTANCE.getButton();
+
+		/**
+		 * The meta object literal for the '<em><b>Text Content</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUTTON__TEXT_CONTENT = eINSTANCE.getButton_TextContent();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUTTON__TYPE = eINSTANCE.getButton_Type();
 
 		/**
 		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}' enum.
