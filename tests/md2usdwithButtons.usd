@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="/idm.markdown.parser/src/resources/md/exemplesProjet/buttons.simplemarkdown">
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Button Styles"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Button" textContent="Primary" type="btn" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Primary" type="btn-primary" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Secondary" type="btn-secondary" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Success" type="btn-success" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Info" type="btn-info" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Warning" type="btn-warning" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Danger" type="btn-danger" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Dark" type="btn-dark" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Light" type="btn-light" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Link" type="btn-link" url="#"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Buttton Size"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Button" textContent="Large" type="btn-primary btn-lg" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Default" type="btn-primary btn-md" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Small" type="btn-primary btn-sm" url="#"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Button States"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Button" textContent="Primary Button" type="btn-primary btn-lg" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Active Primary" type="btn-primary active" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Disabled Primary" type="btn-primary disabled" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Disabled Primary" type="lnk btn-primary disabled" url="#"/>
+    <textElements xsi:type="usd:Button" textContent="Enabled Primary" type="lnk btn-primary" url="#"/>
+  </contents>
+</usd:Page>

@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="/idm.markdown.parser/src/resources/md/tests.simplemarkdown">
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="File for tests markdown parser"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Table"/>
+  </contents>
+  <contents xsi:type="usd:Table">
+    <tableSections xsi:type="usd:TableHead">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Syntax"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Description"/>
+        </cells>
+      </rows>
+    </tableSections>
+    <tableSections xsi:type="usd:TableSeparator">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text=":-----------"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="-----------"/>
+        </cells>
+      </rows>
+    </tableSections>
+    <tableSections xsi:type="usd:TableBody">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Header"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Title"/>
+        </cells>
+      </rows>
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Paragraph"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Text"/>
+        </cells>
+      </rows>
+    </tableSections>
+  </contents>
+  <contents xsi:type="usd:Table">
+    <tableSections xsi:type="usd:TableHead">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Syntax"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Description"/>
+        </cells>
+      </rows>
+    </tableSections>
+    <tableSections xsi:type="usd:TableSeparator">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="-----------"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="-----------"/>
+        </cells>
+      </rows>
+    </tableSections>
+    <tableSections xsi:type="usd:TableBody">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Header"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Title"/>
+        </cells>
+      </rows>
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Paragraph"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Text"/>
+        </cells>
+      </rows>
+    </tableSections>
+  </contents>
+  <contents xsi:type="usd:Table">
+    <tableSections xsi:type="usd:TableHead">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Heading Centered"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Heading Left Aligned"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Heading Centered"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Heading Right Aligned"/>
+        </cells>
+      </rows>
+    </tableSections>
+    <tableSections xsi:type="usd:TableSeparator">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="------------------------"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text=":-----------------------"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text=":------------------:"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="------------------------:"/>
+        </cells>
+      </rows>
+    </tableSections>
+    <tableSections xsi:type="usd:TableBody">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Cell text left aligned"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Cell text left aligned"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Cell text centered"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Cell text right aligned"/>
+        </cells>
+      </rows>
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="cell 21"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="cell 22"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="cell 22"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="cell 22"/>
+        </cells>
+      </rows>
+    </tableSections>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="See syntax and option :"/>
+    <textElements xsi:type="usd:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
+      <subTextElements xsi:type="usd:Text" text="Tables Extension"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Text, Strong, Emphasis"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Test "/>
+    <textElements xsi:type="usd:StrongEmphasis">
+      <subTextElements xsi:type="usd:Text" text="ceci est un phrase en strong avec des "/>
+      <subTextElements xsi:type="usd:ItalicEmphasis">
+        <subTextElements xsi:type="usd:Text" text="italiques"/>
+      </subTextElements>
+      <subTextElements xsi:type="usd:Text" text=" et un "/>
+      <subTextElements xsi:type="usd:Link" url="#" title="">
+        <subTextElements xsi:type="usd:Text" text="lien"/>
+      </subTextElements>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Ce paragraphe contient un "/>
+    <textElements xsi:type="usd:StrongEmphasis">
+      <subTextElements xsi:type="usd:Text" text="Strong"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" et un "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="Italique"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=". Il passe a la"/>
+    <textElements xsi:type="usd:Text" text="ligne."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Les "/>
+    <textElements xsi:type="usd:Link" url="#" title="">
+      <subTextElements xsi:type="usd:Text" text="Textes des liens peuvent auusi contenir des "/>
+      <subTextElements xsi:type="usd:ItalicEmphasis">
+        <subTextElements xsi:type="usd:Text" text="Strong"/>
+      </subTextElements>
+      <subTextElements xsi:type="usd:Text" text="* et des "/>
+      <subTextElements xsi:type="usd:ItalicEmphasis">
+        <subTextElements xsi:type="usd:Text" text="Italiques"/>
+      </subTextElements>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Test Link, LinkRef et Reference"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Ceci est un Link avec un Strong dans le titre : "/>
+    <textElements xsi:type="usd:Link" url="#" title="">
+      <subTextElements xsi:type="usd:Text" text="A "/>
+      <subTextElements xsi:type="usd:StrongEmphasis">
+        <subTextElements xsi:type="usd:Text" text="Link"/>
+      </subTextElements>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Ceci est un LinkRef : "/>
+    <textElements xsi:type="usd:Link" url="http://search.msn.com/" title="MSN Search">
+      <subTextElements xsi:type="usd:Text" text="My "/>
+      <subTextElements xsi:type="usd:StrongEmphasis">
+        <subTextElements xsi:type="usd:Text" text="linkref"/>
+      </subTextElements>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Un LinkRef contient un identifiant (ici 'tests' appelé reference. Le Reference correspondante est déclarée à la ligne suivante :"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Ceci est une "/>
+    <textElements xsi:type="usd:Link" url="http://search.msn.com/" title="uref test">
+      <subTextElements xsi:type="usd:Text" text="utilisation de ref"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Markdown supports two style of links: inline and reference."/>
+    <textElements xsi:type="usd:Text" text="In both styles, the link text is delimited by "/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="square brackets"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Inline Links Doc"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="To create an inline link, use a set of regular parentheses immediately after the link text’s closing square bracket. Inside the parentheses, put the URL where you want the link to point, along with an optional title for the link, surrounded in quotes. For example:"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="This is [an example](http://example.com/ &quot;Title&quot;) inline link.&#xD;&#xA;"/>
+    <codeLines text="&#xD;&#xA;"/>
+    <codeLines text="[This link](http://example.net/) has no title attribute.&#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Will produce:"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="&lt;p>This is &lt;a href=&quot;http://example.com/&quot; title=&quot;Title&quot;>&#xD;&#xA;"/>
+    <codeLines text="an example&lt;/a> inline link.&lt;/p>&#xD;&#xA;"/>
+    <codeLines text="&#xD;&#xA;"/>
+    <codeLines text="&lt;p>&lt;a href=&quot;http://example.net/&quot;>This link&lt;/a> has no&#xD;&#xA;"/>
+    <codeLines text="title attribute.&lt;/p>&#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="If you’re referring to a local resource on the same server, you can use relative paths:"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="See my [About](/about/) page for details.   &#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Inline links tests"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="This is "/>
+    <textElements xsi:type="usd:Link" url="http://example.com/" title="Title">
+      <subTextElements xsi:type="usd:Text" text="an example"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" inline link."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Link" url="http://example.net/" title="">
+      <subTextElements xsi:type="usd:Text" text="This link"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" has no title attribute."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="See my "/>
+    <textElements xsi:type="usd:Link" url="/about/" title="">
+      <subTextElements xsi:type="usd:Text" text="About"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" page for details."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Reference Links Docs"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link:"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="This is [an example][id] reference-style link.&#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="You can optionally use a space to separate the sets of brackets:"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="This is [an example] [id] reference-style link.&#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Then, anywhere in the document, you define your link label like this, on a line by itself:"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="[id]: http://example.com/  &quot;Optional Title Here&quot;&#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="That is:"/>
+  </contents>
+  <contents xsi:type="usd:UnorderedList">
+    <items>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="Square brackets containing the link identifier (optionally indented from the left margin using up to three spaces);"/>
+      </elements>
+    </items>
+    <items>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="followed by a colon;"/>
+      </elements>
+    </items>
+    <items>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="followed by one or more spaces (or tabs);"/>
+      </elements>
+    </items>
+    <items>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="followed by the URL for the link;"/>
+      </elements>
+    </items>
+    <items>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="optionally followed by a title attribute for the link, enclosed in double or single quotes, or enclosed in parentheses."/>
+      </elements>
+    </items>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Reference Links Tests"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="This is "/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="an example"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" reference-style link."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="This is "/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="an example"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" "/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="id"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" reference-style link with space. "/>
+    <textElements xsi:type="usd:StrongEmphasis">
+      <subTextElements xsi:type="usd:Text" text="It doesn't work with our parser"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Definitions of the id:"/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="id"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=": http://example.com/  &quot;Optional Title Here&quot;"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="References = Link definition Docs"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="When you specify the link with an ID, you must then define this ID."/>
+    <textElements xsi:type="usd:Text" text="The definition of the ID is called a "/>
+    <textElements xsi:type="usd:Text" text="Reference"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="References can be placed anywhere in your Markdown document. I tend to put them immediately after each paragraph in which they’re used, but if you want, you can put them all at the end of your document, sort of like footnotes."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Link def :"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="I get 10 times more traffic from [Google] [1] than from&#xD;&#xA;"/>
+    <codeLines text="[Yahoo] [2] or [MSN] [3].&#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="References defs :"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="  [1]: http://google.com/        &quot;Google&quot;&#xD;&#xA;"/>
+    <codeLines text="  [2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;&#xD;&#xA;"/>
+    <codeLines text="  [3]: http://search.msn.com/    &quot;MSN Search&quot;&#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="References = Link definition Tests"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="I get 10 times more traffic from "/>
+    <textElements xsi:type="usd:Link" url="http://google.com/" title="">
+      <subTextElements xsi:type="usd:Text" text="Google"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" "/>
+    <textElements xsi:type="usd:Link" url="http://google.com/" title="Google">
+      <subTextElements xsi:type="usd:Text" text="1"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" than from"/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="Yahoo"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" "/>
+    <textElements xsi:type="usd:Link" url="http://search.yahoo.com/" title="Yahoo Search">
+      <subTextElements xsi:type="usd:Text" text="2"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" or "/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="MSN"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" "/>
+    <textElements xsi:type="usd:Link" url="http://search.msn.com/" title="MSN Search">
+      <subTextElements xsi:type="usd:Text" text="3"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="The following three link definitions are equivalent (next line is not visible in final view):"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="This is a link ref with implicit link "/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="google"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Then the definition is (next line is not visible in final view):"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Code"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="This is a normal paragraph:"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="This is a code block.&#xA;"/>
+    <codeLines text="On several line&#xA;"/>
+    <codeLines text="&#xA;"/>
+    <codeLines text="And even with a blank line&#xA;"/>
+    <codeLines text="&#xA;"/>
+    <codeLines text="[link in code](#)&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="Code en debut de ligne&#xD;&#xA;"/>
+    <codeLines text="&#xD;&#xA;"/>
+    <codeLines text="Avec ````&#xD;&#xA;"/>
+    <codeLines text="Comme separateur&#xD;&#xA;"/>
+    <codeLines text="  [link in code](#)&#xD;&#xA;"/>
+    <codeLines text="&#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="A paragraphe with "/>
+    <textElements xsi:type="usd:Text" text="inline code [link in code](#)"/>
+    <textElements xsi:type="usd:Text" text=" and an end."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="This is a paragraphe."/>
+    <textElements xsi:type="usd:Text" text="It continue on this line"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="This is a 2nd paragraphe."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Title level 2"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Hello the world."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="2 Title level 2"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="A line with "/>
+    <textElements xsi:type="usd:StrongEmphasis">
+      <subTextElements xsi:type="usd:Text" text="strong"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" and an "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="italic"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+    <textElements xsi:type="usd:Text" text="Et aussi un "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="mix"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="A line with double space at the end"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="A normal line."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Links"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="A paragraph with a  "/>
+    <textElements xsi:type="usd:Link" url="#" title="">
+      <subTextElements xsi:type="usd:Text" text="link"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" not at the end."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Link" url="#" title="">
+      <subTextElements xsi:type="usd:Text" text="A link"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="at beginning of text."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Try "/>
+    <textElements xsi:type="usd:Link" url="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API" title="">
+      <subTextElements xsi:type="usd:StrongEmphasis">
+        <subTextElements xsi:type="usd:Text" text="strong"/>
+      </subTextElements>
+      <subTextElements xsi:type="usd:Text" text=" title"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Now, try "/>
+    <textElements xsi:type="usd:Link" url="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API" title="">
+      <subTextElements xsi:type="usd:Text" text="image "/>
+      <subTextElements xsi:type="usd:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+        <subTextElements xsi:type="usd:Text" text="image"/>
+      </subTextElements>
+      <subTextElements xsi:type="usd:Text" text=""/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="And now an image : "/>
+    <textElements xsi:type="usd:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+      <subTextElements xsi:type="usd:Text" text="image"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="And finally a "/>
+    <textElements xsi:type="usd:Link" url="#" title="title">
+      <subTextElements xsi:type="usd:Text" text="linkwith title"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Title level 1"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="List :"/>
+  </contents>
+  <contents xsi:type="usd:UnorderedList">
+    <items>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="start list. This is a paragraph"/>
+        <textElements xsi:type="usd:Text" text="on multiple lines."/>
+      </elements>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="And another paragraph"/>
+      </elements>
+    </items>
+    <items>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="item 2."/>
+      </elements>
+      <elements xsi:type="usd:UnorderedList">
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="level 2 item 1"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="level 2 item 2"/>
+          </elements>
+        </items>
+      </elements>
+      <elements xsi:type="usd:UnorderedList">
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="level 2 item 3"/>
+          </elements>
+          <elements xsi:type="usd:UnorderedList">
+            <items>
+              <elements xsi:type="usd:Paragraph">
+                <textElements xsi:type="usd:Text" text="level 3 item 1"/>
+              </elements>
+            </items>
+            <items>
+              <elements xsi:type="usd:Paragraph">
+                <textElements xsi:type="usd:Text" text="level 3 item 2"/>
+              </elements>
+            </items>
+            <items>
+              <elements xsi:type="usd:Paragraph">
+                <textElements xsi:type="usd:Text" text="level 3 item 3"/>
+              </elements>
+            </items>
+            <items>
+              <elements xsi:type="usd:Paragraph">
+                <textElements xsi:type="usd:Text" text="level 4 item 1"/>
+              </elements>
+              <elements xsi:type="usd:UnorderedList">
+                <items>
+                  <elements xsi:type="usd:Paragraph">
+                    <textElements xsi:type="usd:Text" text="next level ??"/>
+                  </elements>
+                </items>
+              </elements>
+            </items>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="level 2 item 4"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="level 2 item 5"/>
+          </elements>
+        </items>
+      </elements>
+    </items>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="un paragraphe"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Try Citation"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Citation :"/>
+  </contents>
+  <contents xsi:type="usd:BlockQuote">
+    <contents xsi:type="usd:Paragraph">
+      <textElements xsi:type="usd:Text" text="Start citation"/>
+    </contents>
+    <contents xsi:type="usd:BlockQuote">
+      <contents xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="double citation"/>
+      </contents>
+      <contents xsi:type="usd:UnorderedList">
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="list in citation"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="item 2"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="item 3"/>
+            <textElements xsi:type="usd:Text" text="fin de list"/>
+          </elements>
+        </items>
+      </contents>
+    </contents>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Titre avec un "/>
+    <textElements xsi:type="usd:Link" url="#" title="">
+      <subTextElements xsi:type="usd:Text" text="lien"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" et un "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="italic"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="*"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Un dernier paragraphe."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Lines"/>
+  </contents>
+  <contents xsi:type="usd:HorizontalLine"/>
+  <contents xsi:type="usd:HorizontalLine"/>
+  <contents xsi:type="usd:HorizontalLine"/>
+  <contents xsi:type="usd:HorizontalLine"/>
+</usd:Page>

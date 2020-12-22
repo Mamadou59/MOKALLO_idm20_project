@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="/idm.markdown.parser/src/resources/md/exemplesProjet/navbar.simplemarkdown">
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="Navbar navbar-expand-md bg-dark navbar-dark collapsable"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Navigation" textContent="Navbar brand" type="navbar-brand" url="#">
+    <groupedItems xsi:type="usd:UnorderedList">
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+    </groupedItems>
+  </contents>
+  <contents xsi:type="usd:Navigation" textContent="Navbar brand2" type="navbar-brand" url="#">
+    <groupedItems xsi:type="usd:UnorderedList">
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+    </groupedItems>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Section"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="3">
+    <textElements xsi:type="usd:Text" text="Collapsible Navbar"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window)."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Only when the button is clicked, the navigation bar will be displayed."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Button" textContent="Doc bootstrap" type="btn-info" url="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp"/>
+  </contents>
+</usd:Page>
