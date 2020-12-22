@@ -252,10 +252,10 @@ public interface UsdPackage extends EPackage {
 	int TITLE_OPERATION_COUNT = TEXT_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.TextElementImpl <em>Text Element</em>}' class.
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.TextElement <em>Text Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see idm.simpleusd.mm.usd.impl.TextElementImpl
+	 * @see idm.simpleusd.mm.usd.TextElement
 	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTextElement()
 	 * @generated
 	 */
@@ -317,6 +317,34 @@ public interface UsdPackage extends EPackage {
 	int TEXT_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.ContainableTextElementImpl <em>Containable Text Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.ContainableTextElementImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getContainableTextElement()
+	 * @generated
+	 */
+	int CONTAINABLE_TEXT_ELEMENT = 33;
+
+	/**
+	 * The number of structural features of the '<em>Containable Text Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT = PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Containable Text Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTAINABLE_TEXT_ELEMENT_OPERATION_COUNT = PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.CompositeTextElementImpl <em>Composite Text Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -333,7 +361,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS = TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Composite Text Element</em>' class.
@@ -342,7 +370,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 1;
+	int COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Composite Text Element</em>' class.
@@ -351,7 +379,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_TEXT_ELEMENT_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int COMPOSITE_TEXT_ELEMENT_OPERATION_COUNT = CONTAINABLE_TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.UrlBasedLinkImpl <em>Url Based Link</em>}' class.
@@ -1213,6 +1241,61 @@ public interface UsdPackage extends EPackage {
 	int TABLE_CELL_OPERATION_COUNT = TEXT_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.ClickableElementImpl <em>Clickable Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.ClickableElementImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getClickableElement()
+	 * @generated
+	 */
+	int CLICKABLE_ELEMENT = 32;
+
+	/**
+	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLICKABLE_ELEMENT__TEXT_CONTENT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLICKABLE_ELEMENT__TYPE = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLICKABLE_ELEMENT__URL = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>Clickable Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLICKABLE_ELEMENT_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>Clickable Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLICKABLE_ELEMENT_OPERATION_COUNT = CONTAINABLE_TEXT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.ButtonImpl <em>Button</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1229,7 +1312,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__TEXT_CONTENT = TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int BUTTON__TEXT_CONTENT = CLICKABLE_ELEMENT__TEXT_CONTENT;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1238,7 +1321,16 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__TYPE = TEXT_ELEMENT_FEATURE_COUNT + 1;
+	int BUTTON__TYPE = CLICKABLE_ELEMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__URL = CLICKABLE_ELEMENT__URL;
 
 	/**
 	 * The number of structural features of the '<em>Button</em>' class.
@@ -1247,7 +1339,7 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON_FEATURE_COUNT = TEXT_ELEMENT_FEATURE_COUNT + 2;
+	int BUTTON_FEATURE_COUNT = CLICKABLE_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Button</em>' class.
@@ -1256,7 +1348,71 @@ public interface UsdPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON_OPERATION_COUNT = TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int BUTTON_OPERATION_COUNT = CLICKABLE_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.NavigationImpl <em>Navigation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.NavigationImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getNavigation()
+	 * @generated
+	 */
+	int NAVIGATION = 31;
+
+	/**
+	 * The feature id for the '<em><b>Text Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION__TEXT_CONTENT = CLICKABLE_ELEMENT__TEXT_CONTENT;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION__TYPE = CLICKABLE_ELEMENT__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION__URL = CLICKABLE_ELEMENT__URL;
+
+	/**
+	 * The feature id for the '<em><b>Grouped Items</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION__GROUPED_ITEMS = CLICKABLE_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Navigation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION_FEATURE_COUNT = CLICKABLE_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Navigation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION_OPERATION_COUNT = CLICKABLE_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}' enum.
@@ -1266,7 +1422,7 @@ public interface UsdPackage extends EPackage {
 	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableCellAlignement()
 	 * @generated
 	 */
-	int TABLE_CELL_ALIGNEMENT = 31;
+	int TABLE_CELL_ALIGNEMENT = 34;
 
 	/**
 	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Page <em>Page</em>}'.
@@ -1766,26 +1922,78 @@ public interface UsdPackage extends EPackage {
 	EClass getButton();
 
 	/**
-	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.Button#getTextContent <em>Text Content</em>}'.
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Navigation <em>Navigation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Navigation</em>'.
+	 * @see idm.simpleusd.mm.usd.Navigation
+	 * @generated
+	 */
+	EClass getNavigation();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.Navigation#getGroupedItems <em>Grouped Items</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Grouped Items</em>'.
+	 * @see idm.simpleusd.mm.usd.Navigation#getGroupedItems()
+	 * @see #getNavigation()
+	 * @generated
+	 */
+	EReference getNavigation_GroupedItems();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.ClickableElement <em>Clickable Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Clickable Element</em>'.
+	 * @see idm.simpleusd.mm.usd.ClickableElement
+	 * @generated
+	 */
+	EClass getClickableElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.ClickableElement#getTextContent <em>Text Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Text Content</em>'.
-	 * @see idm.simpleusd.mm.usd.Button#getTextContent()
-	 * @see #getButton()
+	 * @see idm.simpleusd.mm.usd.ClickableElement#getTextContent()
+	 * @see #getClickableElement()
 	 * @generated
 	 */
-	EAttribute getButton_TextContent();
+	EAttribute getClickableElement_TextContent();
 
 	/**
-	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.Button#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.ClickableElement#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see idm.simpleusd.mm.usd.Button#getType()
-	 * @see #getButton()
+	 * @see idm.simpleusd.mm.usd.ClickableElement#getType()
+	 * @see #getClickableElement()
 	 * @generated
 	 */
-	EAttribute getButton_Type();
+	EAttribute getClickableElement_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.simpleusd.mm.usd.ClickableElement#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see idm.simpleusd.mm.usd.ClickableElement#getUrl()
+	 * @see #getClickableElement()
+	 * @generated
+	 */
+	EAttribute getClickableElement_Url();
+
+	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.ContainableTextElement <em>Containable Text Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Containable Text Element</em>'.
+	 * @see idm.simpleusd.mm.usd.ContainableTextElement
+	 * @generated
+	 */
+	EClass getContainableTextElement();
 
 	/**
 	 * Returns the meta object for enum '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}'.
@@ -1903,10 +2111,10 @@ public interface UsdPackage extends EPackage {
 		EAttribute TITLE__LEVEL = eINSTANCE.getTitle_Level();
 
 		/**
-		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.TextElementImpl <em>Text Element</em>}' class.
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.TextElement <em>Text Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see idm.simpleusd.mm.usd.impl.TextElementImpl
+		 * @see idm.simpleusd.mm.usd.TextElement
 		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTextElement()
 		 * @generated
 		 */
@@ -2267,12 +2475,40 @@ public interface UsdPackage extends EPackage {
 		EClass BUTTON = eINSTANCE.getButton();
 
 		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.NavigationImpl <em>Navigation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.NavigationImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getNavigation()
+		 * @generated
+		 */
+		EClass NAVIGATION = eINSTANCE.getNavigation();
+
+		/**
+		 * The meta object literal for the '<em><b>Grouped Items</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NAVIGATION__GROUPED_ITEMS = eINSTANCE.getNavigation_GroupedItems();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.ClickableElementImpl <em>Clickable Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.ClickableElementImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getClickableElement()
+		 * @generated
+		 */
+		EClass CLICKABLE_ELEMENT = eINSTANCE.getClickableElement();
+
+		/**
 		 * The meta object literal for the '<em><b>Text Content</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BUTTON__TEXT_CONTENT = eINSTANCE.getButton_TextContent();
+		EAttribute CLICKABLE_ELEMENT__TEXT_CONTENT = eINSTANCE.getClickableElement_TextContent();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -2280,7 +2516,25 @@ public interface UsdPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute BUTTON__TYPE = eINSTANCE.getButton_Type();
+		EAttribute CLICKABLE_ELEMENT__TYPE = eINSTANCE.getClickableElement_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLICKABLE_ELEMENT__URL = eINSTANCE.getClickableElement_Url();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.ContainableTextElementImpl <em>Containable Text Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.ContainableTextElementImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getContainableTextElement()
+		 * @generated
+		 */
+		EClass CONTAINABLE_TEXT_ELEMENT = eINSTANCE.getContainableTextElement();
 
 		/**
 		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}' enum.

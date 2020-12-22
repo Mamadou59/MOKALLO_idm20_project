@@ -2,8 +2,8 @@
  */
 package idm.simpleusd.mm.usd.impl;
 
-import idm.simpleusd.mm.usd.CompositeTextElement;
-import idm.simpleusd.mm.usd.TextElement;
+import idm.simpleusd.mm.usd.ListElement;
+import idm.simpleusd.mm.usd.Navigation;
 import idm.simpleusd.mm.usd.UsdPackage;
 
 import java.util.Collection;
@@ -20,34 +20,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Composite Text Element</b></em>'.
+ * An implementation of the model object '<em><b>Navigation</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link idm.simpleusd.mm.usd.impl.CompositeTextElementImpl#getSubTextElements <em>Sub Text Elements</em>}</li>
+ *   <li>{@link idm.simpleusd.mm.usd.impl.NavigationImpl#getGroupedItems <em>Grouped Items</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class CompositeTextElementImpl extends ContainableTextElementImpl implements CompositeTextElement {
+public class NavigationImpl extends ClickableElementImpl implements Navigation {
 	/**
-	 * The cached value of the '{@link #getSubTextElements() <em>Sub Text Elements</em>}' containment reference list.
+	 * The cached value of the '{@link #getGroupedItems() <em>Grouped Items</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSubTextElements()
+	 * @see #getGroupedItems()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TextElement> subTextElements;
+	protected EList<ListElement> groupedItems;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CompositeTextElementImpl() {
+	protected NavigationImpl() {
 		super();
 	}
 
@@ -58,7 +58,7 @@ public abstract class CompositeTextElementImpl extends ContainableTextElementImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT;
+		return UsdPackage.Literals.NAVIGATION;
 	}
 
 	/**
@@ -66,12 +66,12 @@ public abstract class CompositeTextElementImpl extends ContainableTextElementImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TextElement> getSubTextElements() {
-		if (subTextElements == null) {
-			subTextElements = new EObjectContainmentEList<TextElement>(TextElement.class, this,
-					UsdPackage.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS);
+	public EList<ListElement> getGroupedItems() {
+		if (groupedItems == null) {
+			groupedItems = new EObjectContainmentEList<ListElement>(ListElement.class, this,
+					UsdPackage.NAVIGATION__GROUPED_ITEMS);
 		}
-		return subTextElements;
+		return groupedItems;
 	}
 
 	/**
@@ -82,8 +82,8 @@ public abstract class CompositeTextElementImpl extends ContainableTextElementImp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case UsdPackage.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS:
-			return ((InternalEList<?>) getSubTextElements()).basicRemove(otherEnd, msgs);
+		case UsdPackage.NAVIGATION__GROUPED_ITEMS:
+			return ((InternalEList<?>) getGroupedItems()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -96,8 +96,8 @@ public abstract class CompositeTextElementImpl extends ContainableTextElementImp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case UsdPackage.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS:
-			return getSubTextElements();
+		case UsdPackage.NAVIGATION__GROUPED_ITEMS:
+			return getGroupedItems();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,9 +111,9 @@ public abstract class CompositeTextElementImpl extends ContainableTextElementImp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case UsdPackage.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS:
-			getSubTextElements().clear();
-			getSubTextElements().addAll((Collection<? extends TextElement>) newValue);
+		case UsdPackage.NAVIGATION__GROUPED_ITEMS:
+			getGroupedItems().clear();
+			getGroupedItems().addAll((Collection<? extends ListElement>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,8 +127,8 @@ public abstract class CompositeTextElementImpl extends ContainableTextElementImp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case UsdPackage.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS:
-			getSubTextElements().clear();
+		case UsdPackage.NAVIGATION__GROUPED_ITEMS:
+			getGroupedItems().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -142,10 +142,10 @@ public abstract class CompositeTextElementImpl extends ContainableTextElementImp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case UsdPackage.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS:
-			return subTextElements != null && !subTextElements.isEmpty();
+		case UsdPackage.NAVIGATION__GROUPED_ITEMS:
+			return groupedItems != null && !groupedItems.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //CompositeTextElementImpl
+} //NavigationImpl

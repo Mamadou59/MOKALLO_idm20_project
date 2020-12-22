@@ -156,6 +156,18 @@ public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEdit
 		newChildDescriptors.add(
 				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS, UsdFactory.eINSTANCE.createTitle()));
 
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS, UsdFactory.eINSTANCE.createLink()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS, UsdFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
+				UsdFactory.eINSTANCE.createStrongEmphasis()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
+				UsdFactory.eINSTANCE.createItalicEmphasis()));
+
 		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
 				UsdFactory.eINSTANCE.createOrderedList()));
 
@@ -176,6 +188,12 @@ public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEdit
 
 		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
 				UsdFactory.eINSTANCE.createTableCell()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS, UsdFactory.eINSTANCE.createButton()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
+				UsdFactory.eINSTANCE.createNavigation()));
 	}
 
 	/**

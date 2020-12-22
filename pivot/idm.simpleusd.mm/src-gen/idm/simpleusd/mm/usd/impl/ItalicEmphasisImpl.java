@@ -4,6 +4,7 @@ package idm.simpleusd.mm.usd.impl;
 
 import idm.simpleusd.mm.usd.ItalicEmphasis;
 import idm.simpleusd.mm.usd.UsdPackage;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

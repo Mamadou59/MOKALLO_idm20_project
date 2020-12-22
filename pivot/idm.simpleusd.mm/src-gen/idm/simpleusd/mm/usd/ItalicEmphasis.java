@@ -13,5 +13,4 @@ package idm.simpleusd.mm.usd;
  * @generated
  */
 public interface ItalicEmphasis extends CompositeTextElement {
-
 } // ItalicEmphasis

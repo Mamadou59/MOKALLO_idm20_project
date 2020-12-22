@@ -4,10 +4,12 @@ package idm.simpleusd.mm.usd.impl;
 
 import idm.simpleusd.mm.usd.BlockQuote;
 import idm.simpleusd.mm.usd.Button;
+import idm.simpleusd.mm.usd.ClickableElement;
 import idm.simpleusd.mm.usd.Code;
 import idm.simpleusd.mm.usd.CodeBlock;
 import idm.simpleusd.mm.usd.CodeLine;
 import idm.simpleusd.mm.usd.CompositeTextElement;
+import idm.simpleusd.mm.usd.ContainableTextElement;
 import idm.simpleusd.mm.usd.HorizontalLine;
 import idm.simpleusd.mm.usd.Image;
 import idm.simpleusd.mm.usd.ItalicEmphasis;
@@ -15,6 +17,7 @@ import idm.simpleusd.mm.usd.Link;
 import idm.simpleusd.mm.usd.ListElement;
 import idm.simpleusd.mm.usd.ListItem;
 import idm.simpleusd.mm.usd.ListItemElement;
+import idm.simpleusd.mm.usd.Navigation;
 import idm.simpleusd.mm.usd.OrderedList;
 import idm.simpleusd.mm.usd.Page;
 import idm.simpleusd.mm.usd.PageContent;
@@ -268,6 +271,27 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	private EClass buttonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass navigationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass clickableElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass containableTextElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -777,8 +801,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getButton_TextContent() {
-		return (EAttribute) buttonEClass.getEStructuralFeatures().get(0);
+	public EClass getNavigation() {
+		return navigationEClass;
 	}
 
 	/**
@@ -786,8 +810,53 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getButton_Type() {
-		return (EAttribute) buttonEClass.getEStructuralFeatures().get(1);
+	public EReference getNavigation_GroupedItems() {
+		return (EReference) navigationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getClickableElement() {
+		return clickableElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClickableElement_TextContent() {
+		return (EAttribute) clickableElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClickableElement_Type() {
+		return (EAttribute) clickableElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClickableElement_Url() {
+		return (EAttribute) clickableElementEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getContainableTextElement() {
+		return containableTextElementEClass;
 	}
 
 	/**
@@ -906,8 +975,16 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		createEAttribute(tableCellEClass, TABLE_CELL__ALIGNEMENT);
 
 		buttonEClass = createEClass(BUTTON);
-		createEAttribute(buttonEClass, BUTTON__TEXT_CONTENT);
-		createEAttribute(buttonEClass, BUTTON__TYPE);
+
+		navigationEClass = createEClass(NAVIGATION);
+		createEReference(navigationEClass, NAVIGATION__GROUPED_ITEMS);
+
+		clickableElementEClass = createEClass(CLICKABLE_ELEMENT);
+		createEAttribute(clickableElementEClass, CLICKABLE_ELEMENT__TEXT_CONTENT);
+		createEAttribute(clickableElementEClass, CLICKABLE_ELEMENT__TYPE);
+		createEAttribute(clickableElementEClass, CLICKABLE_ELEMENT__URL);
+
+		containableTextElementEClass = createEClass(CONTAINABLE_TEXT_ELEMENT);
 
 		// Create enums
 		tableCellAlignementEEnum = createEEnum(TABLE_CELL_ALIGNEMENT);
@@ -962,13 +1039,18 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		codeBlockEClass.getESuperTypes().add(this.getPageContent());
 		codeBlockEClass.getESuperTypes().add(this.getListItemElement());
 		horizontalLineEClass.getESuperTypes().add(this.getPageContent());
-		compositeTextElementEClass.getESuperTypes().add(this.getTextElement());
+		compositeTextElementEClass.getESuperTypes().add(this.getContainableTextElement());
 		tableEClass.getESuperTypes().add(this.getPageContent());
 		tableBodyEClass.getESuperTypes().add(this.getTableSection());
 		tableSeparatorEClass.getESuperTypes().add(this.getTableSection());
 		tableHeadEClass.getESuperTypes().add(this.getTableSection());
 		tableCellEClass.getESuperTypes().add(this.getTextContainer());
-		buttonEClass.getESuperTypes().add(this.getTextElement());
+		buttonEClass.getESuperTypes().add(this.getClickableElement());
+		navigationEClass.getESuperTypes().add(this.getClickableElement());
+		clickableElementEClass.getESuperTypes().add(this.getContainableTextElement());
+		containableTextElementEClass.getESuperTypes().add(this.getPageContent());
+		containableTextElementEClass.getESuperTypes().add(this.getTextElement());
+		containableTextElementEClass.getESuperTypes().add(this.getListItemElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -994,7 +1076,7 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		initEAttribute(getTitle_Level(), ecorePackage.getEInt(), "level", null, 0, 1, Title.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(textElementEClass, TextElement.class, "TextElement", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(textElementEClass, TextElement.class, "TextElement", IS_ABSTRACT, IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1100,10 +1182,26 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getButton_TextContent(), ecorePackage.getEString(), "textContent", null, 0, 1, Button.class,
+
+		initEClass(navigationEClass, Navigation.class, "Navigation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNavigation_GroupedItems(), this.getListElement(), null, "groupedItems", null, 0, -1,
+				Navigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(clickableElementEClass, ClickableElement.class, "ClickableElement", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getClickableElement_TextContent(), ecorePackage.getEString(), "textContent", null, 0, 1,
+				ClickableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClickableElement_Type(), ecorePackage.getEString(), "type", null, 0, 1,
+				ClickableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClickableElement_Url(), ecorePackage.getEString(), "url", null, 0, 1, ClickableElement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getButton_Type(), ecorePackage.getEString(), "type", null, 0, 1, Button.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(containableTextElementEClass, ContainableTextElement.class, "ContainableTextElement", IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(tableCellAlignementEEnum, TableCellAlignement.class, "TableCellAlignement");

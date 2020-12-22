@@ -179,6 +179,18 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createTitle()));
 
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createLink()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createStrongEmphasis()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createItalicEmphasis()));
+
 		newChildDescriptors.add(
 				createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createOrderedList()));
 
@@ -199,6 +211,12 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 
 		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createTableCell()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createButton()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createNavigation()));
 	}
 
 	/**

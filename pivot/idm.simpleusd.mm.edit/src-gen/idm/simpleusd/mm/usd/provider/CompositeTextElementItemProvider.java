@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class CompositeTextElementItemProvider extends TextElementItemProvider {
+public class CompositeTextElementItemProvider extends ContainableTextElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -161,6 +161,9 @@ public class CompositeTextElementItemProvider extends TextElementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
 				UsdFactory.eINSTANCE.createButton()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
+				UsdFactory.eINSTANCE.createNavigation()));
 	}
 
 }

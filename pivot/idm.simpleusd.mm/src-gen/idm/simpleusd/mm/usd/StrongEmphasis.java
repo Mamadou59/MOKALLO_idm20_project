@@ -13,5 +13,4 @@ package idm.simpleusd.mm.usd;
  * @generated
  */
 public interface StrongEmphasis extends CompositeTextElement {
-
 } // StrongEmphasis

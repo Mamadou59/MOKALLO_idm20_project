@@ -153,6 +153,18 @@ public class ListItemItemProvider extends ItemProviderAdapter implements IEditin
 		newChildDescriptors.add(
 				createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS, UsdFactory.eINSTANCE.createParagraph()));
 
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS, UsdFactory.eINSTANCE.createLink()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS, UsdFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS,
+				UsdFactory.eINSTANCE.createStrongEmphasis()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS,
+				UsdFactory.eINSTANCE.createItalicEmphasis()));
+
 		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS,
 				UsdFactory.eINSTANCE.createOrderedList()));
 
@@ -164,6 +176,12 @@ public class ListItemItemProvider extends ItemProviderAdapter implements IEditin
 
 		newChildDescriptors.add(
 				createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS, UsdFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS, UsdFactory.eINSTANCE.createButton()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.LIST_ITEM__ELEMENTS, UsdFactory.eINSTANCE.createNavigation()));
 	}
 
 	/**

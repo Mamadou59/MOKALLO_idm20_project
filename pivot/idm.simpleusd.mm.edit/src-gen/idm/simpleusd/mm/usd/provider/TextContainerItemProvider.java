@@ -161,6 +161,9 @@ public class TextContainerItemProvider extends PageContentItemProvider {
 
 		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.TEXT_CONTAINER__TEXT_ELEMENTS,
 				UsdFactory.eINSTANCE.createButton()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.TEXT_CONTAINER__TEXT_ELEMENTS,
+				UsdFactory.eINSTANCE.createNavigation()));
 	}
 
 }

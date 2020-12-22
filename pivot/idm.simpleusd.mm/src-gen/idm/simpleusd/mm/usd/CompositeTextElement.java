@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface CompositeTextElement extends TextElement {
+public interface CompositeTextElement extends ContainableTextElement {
 	/**
 	 * Returns the value of the '<em><b>Sub Text Elements</b></em>' containment reference list.
 	 * The list contents are of type {@link idm.simpleusd.mm.usd.TextElement}.

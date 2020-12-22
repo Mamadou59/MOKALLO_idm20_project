@@ -135,7 +135,13 @@ public class UsdSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseCompositeTextElement(urlBasedLink);
 			if (result == null)
+				result = caseContainableTextElement(urlBasedLink);
+			if (result == null)
+				result = casePageContent(urlBasedLink);
+			if (result == null)
 				result = caseTextElement(urlBasedLink);
+			if (result == null)
+				result = caseListItemElement(urlBasedLink);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -148,7 +154,13 @@ public class UsdSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseCompositeTextElement(link);
 			if (result == null)
+				result = caseContainableTextElement(link);
+			if (result == null)
+				result = casePageContent(link);
+			if (result == null)
 				result = caseTextElement(link);
+			if (result == null)
+				result = caseListItemElement(link);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -161,7 +173,13 @@ public class UsdSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseCompositeTextElement(image);
 			if (result == null)
+				result = caseContainableTextElement(image);
+			if (result == null)
+				result = casePageContent(image);
+			if (result == null)
 				result = caseTextElement(image);
+			if (result == null)
+				result = caseListItemElement(image);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -183,7 +201,13 @@ public class UsdSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseCompositeTextElement(strongEmphasis);
 			if (result == null)
+				result = caseContainableTextElement(strongEmphasis);
+			if (result == null)
+				result = casePageContent(strongEmphasis);
+			if (result == null)
 				result = caseTextElement(strongEmphasis);
+			if (result == null)
+				result = caseListItemElement(strongEmphasis);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -194,7 +218,13 @@ public class UsdSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseCompositeTextElement(italicEmphasis);
 			if (result == null)
+				result = caseContainableTextElement(italicEmphasis);
+			if (result == null)
+				result = casePageContent(italicEmphasis);
+			if (result == null)
 				result = caseTextElement(italicEmphasis);
+			if (result == null)
+				result = caseListItemElement(italicEmphasis);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -292,7 +322,13 @@ public class UsdSwitch<T> extends Switch<T> {
 			CompositeTextElement compositeTextElement = (CompositeTextElement) theEObject;
 			T result = caseCompositeTextElement(compositeTextElement);
 			if (result == null)
+				result = caseContainableTextElement(compositeTextElement);
+			if (result == null)
+				result = casePageContent(compositeTextElement);
+			if (result == null)
 				result = caseTextElement(compositeTextElement);
+			if (result == null)
+				result = caseListItemElement(compositeTextElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -362,7 +398,60 @@ public class UsdSwitch<T> extends Switch<T> {
 			Button button = (Button) theEObject;
 			T result = caseButton(button);
 			if (result == null)
+				result = caseClickableElement(button);
+			if (result == null)
+				result = caseContainableTextElement(button);
+			if (result == null)
+				result = casePageContent(button);
+			if (result == null)
 				result = caseTextElement(button);
+			if (result == null)
+				result = caseListItemElement(button);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.NAVIGATION: {
+			Navigation navigation = (Navigation) theEObject;
+			T result = caseNavigation(navigation);
+			if (result == null)
+				result = caseClickableElement(navigation);
+			if (result == null)
+				result = caseContainableTextElement(navigation);
+			if (result == null)
+				result = casePageContent(navigation);
+			if (result == null)
+				result = caseTextElement(navigation);
+			if (result == null)
+				result = caseListItemElement(navigation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.CLICKABLE_ELEMENT: {
+			ClickableElement clickableElement = (ClickableElement) theEObject;
+			T result = caseClickableElement(clickableElement);
+			if (result == null)
+				result = caseContainableTextElement(clickableElement);
+			if (result == null)
+				result = casePageContent(clickableElement);
+			if (result == null)
+				result = caseTextElement(clickableElement);
+			if (result == null)
+				result = caseListItemElement(clickableElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.CONTAINABLE_TEXT_ELEMENT: {
+			ContainableTextElement containableTextElement = (ContainableTextElement) theEObject;
+			T result = caseContainableTextElement(containableTextElement);
+			if (result == null)
+				result = casePageContent(containableTextElement);
+			if (result == null)
+				result = caseTextElement(containableTextElement);
+			if (result == null)
+				result = caseListItemElement(containableTextElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -834,6 +923,51 @@ public class UsdSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseButton(Button object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Navigation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Navigation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNavigation(Navigation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Clickable Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Clickable Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseClickableElement(ClickableElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Containable Text Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Containable Text Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseContainableTextElement(ContainableTextElement object) {
 		return null;
 	}
 

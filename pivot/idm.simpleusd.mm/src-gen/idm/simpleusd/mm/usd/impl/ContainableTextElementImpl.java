@@ -2,27 +2,25 @@
  */
 package idm.simpleusd.mm.usd.impl;
 
-import idm.simpleusd.mm.usd.TextElement;
+import idm.simpleusd.mm.usd.ContainableTextElement;
 import idm.simpleusd.mm.usd.UsdPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Text Element</b></em>'.
+ * An implementation of the model object '<em><b>Containable Text Element</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class TextElementImpl extends MinimalEObjectImpl.Container implements TextElement {
+public abstract class ContainableTextElementImpl extends PageContentImpl implements ContainableTextElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TextElementImpl() {
+	protected ContainableTextElementImpl() {
 		super();
 	}
 
@@ -33,7 +31,7 @@ public abstract class TextElementImpl extends MinimalEObjectImpl.Container imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return UsdPackage.Literals.TEXT_ELEMENT;
+		return UsdPackage.Literals.CONTAINABLE_TEXT_ELEMENT;
 	}
 
-} //TextElementImpl
+} //ContainableTextElementImpl
