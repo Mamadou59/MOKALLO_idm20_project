@@ -91,4 +91,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContainableTextElement" abstract="true"
       eSuperTypes="#//PageContent #//TextElement #//ListItemElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#//PageContent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contents" upperBound="-1"
+        eType="#//PageContent" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

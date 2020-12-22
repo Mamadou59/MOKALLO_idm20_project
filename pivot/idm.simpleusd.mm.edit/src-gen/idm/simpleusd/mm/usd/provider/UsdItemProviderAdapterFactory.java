@@ -625,6 +625,29 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.simpleusd.mm.usd.Section} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SectionItemProvider sectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.simpleusd.mm.usd.Section}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSectionAdapter() {
+		if (sectionItemProvider == null) {
+			sectionItemProvider = new SectionItemProvider(this);
+		}
+
+		return sectionItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -771,6 +794,8 @@ public class UsdItemProviderAdapterFactory extends UsdAdapterFactory
 			buttonItemProvider.dispose();
 		if (navigationItemProvider != null)
 			navigationItemProvider.dispose();
+		if (sectionItemProvider != null)
+			sectionItemProvider.dispose();
 	}
 
 }

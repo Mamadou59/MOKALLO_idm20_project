@@ -104,6 +104,8 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 			return createButton();
 		case UsdPackage.NAVIGATION:
 			return createNavigation();
+		case UsdPackage.SECTION:
+			return createSection();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -377,6 +379,16 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 	public Navigation createNavigation() {
 		NavigationImpl navigation = new NavigationImpl();
 		return navigation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Section createSection() {
+		SectionImpl section = new SectionImpl();
+		return section;
 	}
 
 	/**

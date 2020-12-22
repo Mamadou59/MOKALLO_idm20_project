@@ -22,6 +22,7 @@ import idm.simpleusd.mm.usd.OrderedList;
 import idm.simpleusd.mm.usd.Page;
 import idm.simpleusd.mm.usd.PageContent;
 import idm.simpleusd.mm.usd.Paragraph;
+import idm.simpleusd.mm.usd.Section;
 import idm.simpleusd.mm.usd.StrongEmphasis;
 import idm.simpleusd.mm.usd.Table;
 import idm.simpleusd.mm.usd.TableBody;
@@ -292,6 +293,13 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	private EClass containableTextElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -864,6 +872,24 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSection() {
+		return sectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSection_Contents() {
+		return (EReference) sectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getTableCellAlignement() {
 		return tableCellAlignementEEnum;
 	}
@@ -986,6 +1012,9 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		containableTextElementEClass = createEClass(CONTAINABLE_TEXT_ELEMENT);
 
+		sectionEClass = createEClass(SECTION);
+		createEReference(sectionEClass, SECTION__CONTENTS);
+
 		// Create enums
 		tableCellAlignementEEnum = createEEnum(TABLE_CELL_ALIGNEMENT);
 	}
@@ -1051,6 +1080,7 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		containableTextElementEClass.getESuperTypes().add(this.getPageContent());
 		containableTextElementEClass.getESuperTypes().add(this.getTextElement());
 		containableTextElementEClass.getESuperTypes().add(this.getListItemElement());
+		sectionEClass.getESuperTypes().add(this.getPageContent());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1202,6 +1232,11 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		initEClass(containableTextElementEClass, ContainableTextElement.class, "ContainableTextElement", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(sectionEClass, Section.class, "Section", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSection_Contents(), this.getPageContent(), null, "contents", null, 0, -1, Section.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(tableCellAlignementEEnum, TableCellAlignement.class, "TableCellAlignement");

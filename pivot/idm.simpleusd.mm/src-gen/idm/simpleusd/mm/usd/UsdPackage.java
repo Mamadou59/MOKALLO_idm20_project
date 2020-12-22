@@ -1415,6 +1415,43 @@ public interface UsdPackage extends EPackage {
 	int NAVIGATION_OPERATION_COUNT = CLICKABLE_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.simpleusd.mm.usd.impl.SectionImpl <em>Section</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.simpleusd.mm.usd.impl.SectionImpl
+	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getSection()
+	 * @generated
+	 */
+	int SECTION = 34;
+
+	/**
+	 * The feature id for the '<em><b>Contents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECTION__CONTENTS = PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECTION_FEATURE_COUNT = PAGE_CONTENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SECTION_OPERATION_COUNT = PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1422,7 +1459,7 @@ public interface UsdPackage extends EPackage {
 	 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getTableCellAlignement()
 	 * @generated
 	 */
-	int TABLE_CELL_ALIGNEMENT = 34;
+	int TABLE_CELL_ALIGNEMENT = 35;
 
 	/**
 	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Page <em>Page</em>}'.
@@ -1996,6 +2033,27 @@ public interface UsdPackage extends EPackage {
 	EClass getContainableTextElement();
 
 	/**
+	 * Returns the meta object for class '{@link idm.simpleusd.mm.usd.Section <em>Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Section</em>'.
+	 * @see idm.simpleusd.mm.usd.Section
+	 * @generated
+	 */
+	EClass getSection();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.simpleusd.mm.usd.Section#getContents <em>Contents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Contents</em>'.
+	 * @see idm.simpleusd.mm.usd.Section#getContents()
+	 * @see #getSection()
+	 * @generated
+	 */
+	EReference getSection_Contents();
+
+	/**
 	 * Returns the meta object for enum '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2535,6 +2593,24 @@ public interface UsdPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONTAINABLE_TEXT_ELEMENT = eINSTANCE.getContainableTextElement();
+
+		/**
+		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.impl.SectionImpl <em>Section</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.simpleusd.mm.usd.impl.SectionImpl
+		 * @see idm.simpleusd.mm.usd.impl.UsdPackageImpl#getSection()
+		 * @generated
+		 */
+		EClass SECTION = eINSTANCE.getSection();
+
+		/**
+		 * The meta object literal for the '<em><b>Contents</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SECTION__CONTENTS = eINSTANCE.getSection_Contents();
 
 		/**
 		 * The meta object literal for the '{@link idm.simpleusd.mm.usd.TableCellAlignement <em>Table Cell Alignement</em>}' enum.
