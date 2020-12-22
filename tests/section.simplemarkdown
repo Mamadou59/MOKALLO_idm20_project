@@ -73,6 +73,9 @@
           <elements xsi:type="simplemarkdown:Text" text="TITLE HEADING"/>
         </contents>
         <contents xsi:type="simplemarkdown:BlockQuote">
+          <contents xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="Start section"/>
+          </contents>
           <contents xsi:type="simplemarkdown:Title" level="5">
             <elements xsi:type="simplemarkdown:Text" text="Title description, Sep 2, 2017"/>
           </contents>

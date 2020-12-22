@@ -19,6 +19,7 @@ Resize this responsive page to see the effect!
 >>>>> Lorem ipsum dolor sit ame.
 >>> ## [Colomn 8]
 >>> ## TITLE HEADING
+>>>> Start section
 >>>> ##### Title description, Sep 2, 2017
 >>>>> Some text..
 >>>>> Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
