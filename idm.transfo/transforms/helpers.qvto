@@ -1,0 +1,57 @@
+
+modeltype mdMM "strict" uses "http://www.example.org/simplemarkdown";
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+transformation md2usd(in md : mdMM, out usd : usdMM); 
+	
+
+
+helper mdMM::Paragraph::getNavigationElement() : mdMM::Link {
+	var linkElements := self.subobjectsOfType(mdMM::Link);
+	linkElements -> forEach(l) {
+		if(l.isNavigationLink()) {
+			return l;
+		}
+	};
+	return null;
+}
+
+/**
+* A query to check if given link is button. 
+*/
+helper mdMM::Link::isLinkButton() : Boolean {
+	var textElem := self.allSubobjectsOfType(Text);
+	textElem -> forOne(i){
+		if (i.text.startsWith('[') and i.text.find("btn") > 0){
+			return true;
+		}else {
+			return false;
+		}
+	};
+	return false;	
+}
+/**
+* A query to check if given link is button. 
+*/
+helper mdMM::Link::isNavigationLink() : Boolean {
+	var textElem := self.allSubobjectsOfType(Text);
+	textElem -> forOne(i){
+		if (i.text.startsWith('[') and i.text.find("nav") > 0){
+			return true;
+		}else {
+			return false;
+		}
+	};
+	return false;	
+}
+
+helper mdMM::Paragraph::isThereNavigationElement() : Boolean {
+
+	var linkElements := self.subobjectsOfType(mdMM::Link);
+	linkElements -> forEach(link) {
+		if(link.isNavigationLink()) {
+			return true;
+		}
+	};
+	
+	return false;
+}

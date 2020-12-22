@@ -1,0 +1,39 @@
+
+modeltype mdMM "strict" uses "http://www.example.org/simplemarkdown";
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+transformation md2usd(in md : mdMM, out usd : usdMM); 
+	
+
+/**
+* A query to get a given link type witch is in [type]textContent. 
+*/
+query mdMM::Link::getType() : String {
+	var textElem := self.allSubobjectsOfType(Text);
+	textElem -> forOne(i){
+		var before := i.text.substringBefore(']');
+		var after := before.substringAfter('[');
+		return after;
+	};
+	return "";
+}
+
+/**
+* A query to get a given link textcontent witch is after [type]textContent. 
+*/
+query mdMM::Link::getTextContent() : String {
+	var textElem := self.allSubobjectsOfType(Text);
+	textElem -> forOne(i){
+		return i.text.substringAfter(']');
+	};
+	return "";
+}
+
+
+
+/**
+* A query to find a Reference of a given link reference name. 
+*/
+query String::findLinkReference() : Reference {
+	var mdReferences := md.objectsOfType(Reference);
+	return mdReferences -> selectOne(i | i.reference = self);
+}
