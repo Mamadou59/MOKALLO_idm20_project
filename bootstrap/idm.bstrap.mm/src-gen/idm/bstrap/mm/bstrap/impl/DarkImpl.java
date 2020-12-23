@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class DarkImpl extends BackgroundImpl implements Dark {
+public class DarkImpl extends ButtonStyleImpl implements Dark {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

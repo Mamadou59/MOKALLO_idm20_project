@@ -3,7 +3,8 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.TextElement;
+import idm.bstrap.mm.bstrap.PageContent;
+import idm.bstrap.mm.bstrap.TextContainer;
 
 import java.util.Collection;
 
@@ -25,21 +26,32 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link idm.bstrap.mm.bstrap.impl.ContainerImpl#getTextelements <em>Textelements</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.ContainerImpl#getPagecontents <em>Pagecontents</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.ContainerImpl#getTextcontainers <em>Textcontainers</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class ContainerImpl extends PageContentImpl implements idm.bstrap.mm.bstrap.Container {
 	/**
-	 * The cached value of the '{@link #getTextelements() <em>Textelements</em>}' containment reference list.
+	 * The cached value of the '{@link #getPagecontents() <em>Pagecontents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTextelements()
+	 * @see #getPagecontents()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TextElement> textelements;
+	protected EList<PageContent> pagecontents;
+
+	/**
+	 * The cached value of the '{@link #getTextcontainers() <em>Textcontainers</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTextcontainers()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TextContainer> textcontainers;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -65,12 +77,25 @@ public abstract class ContainerImpl extends PageContentImpl implements idm.bstra
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TextElement> getTextelements() {
-		if (textelements == null) {
-			textelements = new EObjectContainmentEList<TextElement>(TextElement.class, this,
-					BstrapPackage.CONTAINER__TEXTELEMENTS);
+	public EList<PageContent> getPagecontents() {
+		if (pagecontents == null) {
+			pagecontents = new EObjectContainmentEList<PageContent>(PageContent.class, this,
+					BstrapPackage.CONTAINER__PAGECONTENTS);
 		}
-		return textelements;
+		return pagecontents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<TextContainer> getTextcontainers() {
+		if (textcontainers == null) {
+			textcontainers = new EObjectContainmentEList<TextContainer>(TextContainer.class, this,
+					BstrapPackage.CONTAINER__TEXTCONTAINERS);
+		}
+		return textcontainers;
 	}
 
 	/**
@@ -81,8 +106,10 @@ public abstract class ContainerImpl extends PageContentImpl implements idm.bstra
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case BstrapPackage.CONTAINER__TEXTELEMENTS:
-			return ((InternalEList<?>) getTextelements()).basicRemove(otherEnd, msgs);
+		case BstrapPackage.CONTAINER__PAGECONTENTS:
+			return ((InternalEList<?>) getPagecontents()).basicRemove(otherEnd, msgs);
+		case BstrapPackage.CONTAINER__TEXTCONTAINERS:
+			return ((InternalEList<?>) getTextcontainers()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -95,8 +122,10 @@ public abstract class ContainerImpl extends PageContentImpl implements idm.bstra
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BstrapPackage.CONTAINER__TEXTELEMENTS:
-			return getTextelements();
+		case BstrapPackage.CONTAINER__PAGECONTENTS:
+			return getPagecontents();
+		case BstrapPackage.CONTAINER__TEXTCONTAINERS:
+			return getTextcontainers();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,9 +139,13 @@ public abstract class ContainerImpl extends PageContentImpl implements idm.bstra
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BstrapPackage.CONTAINER__TEXTELEMENTS:
-			getTextelements().clear();
-			getTextelements().addAll((Collection<? extends TextElement>) newValue);
+		case BstrapPackage.CONTAINER__PAGECONTENTS:
+			getPagecontents().clear();
+			getPagecontents().addAll((Collection<? extends PageContent>) newValue);
+			return;
+		case BstrapPackage.CONTAINER__TEXTCONTAINERS:
+			getTextcontainers().clear();
+			getTextcontainers().addAll((Collection<? extends TextContainer>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,8 +159,11 @@ public abstract class ContainerImpl extends PageContentImpl implements idm.bstra
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.CONTAINER__TEXTELEMENTS:
-			getTextelements().clear();
+		case BstrapPackage.CONTAINER__PAGECONTENTS:
+			getPagecontents().clear();
+			return;
+		case BstrapPackage.CONTAINER__TEXTCONTAINERS:
+			getTextcontainers().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -141,8 +177,10 @@ public abstract class ContainerImpl extends PageContentImpl implements idm.bstra
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.CONTAINER__TEXTELEMENTS:
-			return textelements != null && !textelements.isEmpty();
+		case BstrapPackage.CONTAINER__PAGECONTENTS:
+			return pagecontents != null && !pagecontents.isEmpty();
+		case BstrapPackage.CONTAINER__TEXTCONTAINERS:
+			return textcontainers != null && !textcontainers.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

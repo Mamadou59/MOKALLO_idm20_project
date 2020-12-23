@@ -9,8 +9,8 @@ package idm.bstrap.mm.bstrap;
  *
  *
  * @see idm.bstrap.mm.bstrap.BstrapPackage#getBorder()
- * @model abstract="true"
+ * @model
  * @generated
  */
-public interface Border extends General {
+public interface Border extends BorderProperty {
 } // Border

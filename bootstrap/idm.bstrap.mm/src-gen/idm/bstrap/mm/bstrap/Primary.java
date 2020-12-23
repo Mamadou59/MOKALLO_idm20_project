@@ -12,5 +12,5 @@ package idm.bstrap.mm.bstrap;
  * @model
  * @generated
  */
-public interface Primary extends Background {
+public interface Primary extends ButtonStyle {
 } // Primary

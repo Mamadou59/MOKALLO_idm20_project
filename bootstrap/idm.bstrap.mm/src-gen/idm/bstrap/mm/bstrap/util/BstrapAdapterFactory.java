@@ -2,7 +2,60 @@
  */
 package idm.bstrap.mm.bstrap.util;
 
-import idm.bstrap.mm.bstrap.*;
+import idm.bstrap.mm.bstrap.Active;
+import idm.bstrap.mm.bstrap.Background;
+import idm.bstrap.mm.bstrap.Basic;
+import idm.bstrap.mm.bstrap.Blockquote;
+import idm.bstrap.mm.bstrap.Border;
+import idm.bstrap.mm.bstrap.BorderProperty;
+import idm.bstrap.mm.bstrap.BstrapPackage;
+import idm.bstrap.mm.bstrap.Button;
+import idm.bstrap.mm.bstrap.ButtonProperty;
+import idm.bstrap.mm.bstrap.ButtonSize;
+import idm.bstrap.mm.bstrap.ButtonState;
+import idm.bstrap.mm.bstrap.ButtonStyle;
+import idm.bstrap.mm.bstrap.Center;
+import idm.bstrap.mm.bstrap.Circle;
+import idm.bstrap.mm.bstrap.Code;
+import idm.bstrap.mm.bstrap.ColoredBorder;
+import idm.bstrap.mm.bstrap.CompositeTextElement;
+import idm.bstrap.mm.bstrap.ContainableTextElement;
+import idm.bstrap.mm.bstrap.Container;
+import idm.bstrap.mm.bstrap.Dark;
+import idm.bstrap.mm.bstrap.Disabled;
+import idm.bstrap.mm.bstrap.Display1;
+import idm.bstrap.mm.bstrap.Display2;
+import idm.bstrap.mm.bstrap.Display3;
+import idm.bstrap.mm.bstrap.Display4;
+import idm.bstrap.mm.bstrap.DisplayProperty;
+import idm.bstrap.mm.bstrap.FixContainer;
+import idm.bstrap.mm.bstrap.FluidContainer;
+import idm.bstrap.mm.bstrap.General;
+import idm.bstrap.mm.bstrap.Image;
+import idm.bstrap.mm.bstrap.ImageAligning;
+import idm.bstrap.mm.bstrap.ImageProperty;
+import idm.bstrap.mm.bstrap.ImageShape;
+import idm.bstrap.mm.bstrap.Info;
+import idm.bstrap.mm.bstrap.Light;
+import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.MargesProperty;
+import idm.bstrap.mm.bstrap.Margin;
+import idm.bstrap.mm.bstrap.Padding;
+import idm.bstrap.mm.bstrap.Page;
+import idm.bstrap.mm.bstrap.PageContent;
+import idm.bstrap.mm.bstrap.Paragraphe;
+import idm.bstrap.mm.bstrap.Primary;
+import idm.bstrap.mm.bstrap.PropertyClass;
+import idm.bstrap.mm.bstrap.Responsive;
+import idm.bstrap.mm.bstrap.Rounded;
+import idm.bstrap.mm.bstrap.Secondary;
+import idm.bstrap.mm.bstrap.Succes;
+import idm.bstrap.mm.bstrap.Text;
+import idm.bstrap.mm.bstrap.TextContainer;
+import idm.bstrap.mm.bstrap.TextElements;
+import idm.bstrap.mm.bstrap.Thumbnail;
+import idm.bstrap.mm.bstrap.Title;
+import idm.bstrap.mm.bstrap.UrlBasedLink;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -87,6 +140,66 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseTextContainer(TextContainer object) {
+			return createTextContainerAdapter();
+		}
+
+		@Override
+		public Adapter caseParagraphe(Paragraphe object) {
+			return createParagrapheAdapter();
+		}
+
+		@Override
+		public Adapter caseTitle(Title object) {
+			return createTitleAdapter();
+		}
+
+		@Override
+		public Adapter caseTextElements(TextElements object) {
+			return createTextElementsAdapter();
+		}
+
+		@Override
+		public Adapter caseText(Text object) {
+			return createTextAdapter();
+		}
+
+		@Override
+		public Adapter caseCode(Code object) {
+			return createCodeAdapter();
+		}
+
+		@Override
+		public Adapter caseBlockquote(Blockquote object) {
+			return createBlockquoteAdapter();
+		}
+
+		@Override
+		public Adapter caseCompositeTextElement(CompositeTextElement object) {
+			return createCompositeTextElementAdapter();
+		}
+
+		@Override
+		public Adapter caseUrlBasedLink(UrlBasedLink object) {
+			return createUrlBasedLinkAdapter();
+		}
+
+		@Override
+		public Adapter caseImage(Image object) {
+			return createImageAdapter();
+		}
+
+		@Override
+		public Adapter caseContainableTextElement(ContainableTextElement object) {
+			return createContainableTextElementAdapter();
+		}
+
+		@Override
+		public Adapter caseGeneral(General object) {
+			return createGeneralAdapter();
+		}
+
+		@Override
 		public Adapter casePropertyClass(PropertyClass object) {
 			return createPropertyClassAdapter();
 		}
@@ -112,13 +225,53 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseBorderProperty(BorderProperty object) {
+			return createBorderPropertyAdapter();
+		}
+
+		@Override
 		public Adapter caseBorder(Border object) {
 			return createBorderAdapter();
 		}
 
 		@Override
-		public Adapter caseDark(Dark object) {
-			return createDarkAdapter();
+		public Adapter caseColoredBorder(ColoredBorder object) {
+			return createColoredBorderAdapter();
+		}
+
+		@Override
+		public Adapter caseDisplayProperty(DisplayProperty object) {
+			return createDisplayPropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseDisplay1(Display1 object) {
+			return createDisplay1Adapter();
+		}
+
+		@Override
+		public Adapter caseDisplay2(Display2 object) {
+			return createDisplay2Adapter();
+		}
+
+		@Override
+		public Adapter caseDisplay3(Display3 object) {
+			return createDisplay3Adapter();
+		}
+
+		@Override
+		public Adapter caseDisplay4(Display4 object) {
+			return createDisplay4Adapter();
+		}
+
+		@Override
+		public Adapter caseButtonProperty(ButtonProperty object) {
+			return createButtonPropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseBasic(Basic object) {
+			return createBasicAdapter();
 		}
 
 		@Override
@@ -127,33 +280,108 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseNewEClass13(NewEClass13 object) {
-			return createNewEClass13Adapter();
+		public Adapter caseSecondary(Secondary object) {
+			return createSecondaryAdapter();
 		}
 
 		@Override
-		public Adapter caseNewEClass14(NewEClass14 object) {
-			return createNewEClass14Adapter();
+		public Adapter caseDark(Dark object) {
+			return createDarkAdapter();
 		}
 
 		@Override
-		public Adapter caseGeneral(General object) {
-			return createGeneralAdapter();
+		public Adapter caseInfo(Info object) {
+			return createInfoAdapter();
 		}
 
 		@Override
-		public Adapter caseTextElement(TextElement object) {
-			return createTextElementAdapter();
+		public Adapter caseLight(Light object) {
+			return createLightAdapter();
 		}
 
 		@Override
-		public Adapter caseTitle(Title object) {
-			return createTitleAdapter();
+		public Adapter caseImageProperty(ImageProperty object) {
+			return createImagePropertyAdapter();
 		}
 
 		@Override
-		public Adapter caseParagraphe(Paragraphe object) {
-			return createParagrapheAdapter();
+		public Adapter caseImageShape(ImageShape object) {
+			return createImageShapeAdapter();
+		}
+
+		@Override
+		public Adapter caseSucces(Succes object) {
+			return createSuccesAdapter();
+		}
+
+		@Override
+		public Adapter caseImageAligning(ImageAligning object) {
+			return createImageAligningAdapter();
+		}
+
+		@Override
+		public Adapter caseRounded(Rounded object) {
+			return createRoundedAdapter();
+		}
+
+		@Override
+		public Adapter caseThumbnail(Thumbnail object) {
+			return createThumbnailAdapter();
+		}
+
+		@Override
+		public Adapter caseCircle(Circle object) {
+			return createCircleAdapter();
+		}
+
+		@Override
+		public Adapter caseFloat(idm.bstrap.mm.bstrap.Float object) {
+			return createFloatAdapter();
+		}
+
+		@Override
+		public Adapter caseCenter(Center object) {
+			return createCenterAdapter();
+		}
+
+		@Override
+		public Adapter caseResponsive(Responsive object) {
+			return createResponsiveAdapter();
+		}
+
+		@Override
+		public Adapter caseButtonStyle(ButtonStyle object) {
+			return createButtonStyleAdapter();
+		}
+
+		@Override
+		public Adapter caseButtonSize(ButtonSize object) {
+			return createButtonSizeAdapter();
+		}
+
+		@Override
+		public Adapter caseLink(Link object) {
+			return createLinkAdapter();
+		}
+
+		@Override
+		public Adapter caseButtonState(ButtonState object) {
+			return createButtonStateAdapter();
+		}
+
+		@Override
+		public Adapter caseDisabled(Disabled object) {
+			return createDisabledAdapter();
+		}
+
+		@Override
+		public Adapter caseActive(Active object) {
+			return createActiveAdapter();
+		}
+
+		@Override
+		public Adapter caseButton(Button object) {
+			return createButtonAdapter();
 		}
 
 		@Override
@@ -237,6 +465,174 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TextContainer <em>Text Container</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.TextContainer
+	 * @generated
+	 */
+	public Adapter createTextContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Paragraphe <em>Paragraphe</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Paragraphe
+	 * @generated
+	 */
+	public Adapter createParagrapheAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Title <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Title
+	 * @generated
+	 */
+	public Adapter createTitleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TextElements <em>Text Elements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.TextElements
+	 * @generated
+	 */
+	public Adapter createTextElementsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Text <em>Text</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Text
+	 * @generated
+	 */
+	public Adapter createTextAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Code <em>Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Code
+	 * @generated
+	 */
+	public Adapter createCodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Blockquote <em>Blockquote</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Blockquote
+	 * @generated
+	 */
+	public Adapter createBlockquoteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.CompositeTextElement <em>Composite Text Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.CompositeTextElement
+	 * @generated
+	 */
+	public Adapter createCompositeTextElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.UrlBasedLink <em>Url Based Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.UrlBasedLink
+	 * @generated
+	 */
+	public Adapter createUrlBasedLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Image <em>Image</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Image
+	 * @generated
+	 */
+	public Adapter createImageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ContainableTextElement <em>Containable Text Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.ContainableTextElement
+	 * @generated
+	 */
+	public Adapter createContainableTextElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.General <em>General</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.General
+	 * @generated
+	 */
+	public Adapter createGeneralAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.PropertyClass <em>Property Class</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -307,6 +703,20 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.BorderProperty <em>Border Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.BorderProperty
+	 * @generated
+	 */
+	public Adapter createBorderPropertyAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Border <em>Border</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -321,16 +731,114 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Dark <em>Dark</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ColoredBorder <em>Colored Border</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Dark
+	 * @see idm.bstrap.mm.bstrap.ColoredBorder
 	 * @generated
 	 */
-	public Adapter createDarkAdapter() {
+	public Adapter createColoredBorderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.DisplayProperty <em>Display Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.DisplayProperty
+	 * @generated
+	 */
+	public Adapter createDisplayPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Display1 <em>Display1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Display1
+	 * @generated
+	 */
+	public Adapter createDisplay1Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Display2 <em>Display2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Display2
+	 * @generated
+	 */
+	public Adapter createDisplay2Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Display3 <em>Display3</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Display3
+	 * @generated
+	 */
+	public Adapter createDisplay3Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Display4 <em>Display4</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Display4
+	 * @generated
+	 */
+	public Adapter createDisplay4Adapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ButtonProperty <em>Button Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.ButtonProperty
+	 * @generated
+	 */
+	public Adapter createButtonPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Basic <em>Basic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Basic
+	 * @generated
+	 */
+	public Adapter createBasicAdapter() {
 		return null;
 	}
 
@@ -349,86 +857,296 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.NewEClass13 <em>New EClass13</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Secondary <em>Secondary</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.NewEClass13
+	 * @see idm.bstrap.mm.bstrap.Secondary
 	 * @generated
 	 */
-	public Adapter createNewEClass13Adapter() {
+	public Adapter createSecondaryAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.NewEClass14 <em>New EClass14</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Dark <em>Dark</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.NewEClass14
+	 * @see idm.bstrap.mm.bstrap.Dark
 	 * @generated
 	 */
-	public Adapter createNewEClass14Adapter() {
+	public Adapter createDarkAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.General <em>General</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Info <em>Info</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.General
+	 * @see idm.bstrap.mm.bstrap.Info
 	 * @generated
 	 */
-	public Adapter createGeneralAdapter() {
+	public Adapter createInfoAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TextElement <em>Text Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Light <em>Light</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.TextElement
+	 * @see idm.bstrap.mm.bstrap.Light
 	 * @generated
 	 */
-	public Adapter createTextElementAdapter() {
+	public Adapter createLightAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Title <em>Title</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ImageProperty <em>Image Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Title
+	 * @see idm.bstrap.mm.bstrap.ImageProperty
 	 * @generated
 	 */
-	public Adapter createTitleAdapter() {
+	public Adapter createImagePropertyAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Paragraphe <em>Paragraphe</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ImageShape <em>Image Shape</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Paragraphe
+	 * @see idm.bstrap.mm.bstrap.ImageShape
 	 * @generated
 	 */
-	public Adapter createParagrapheAdapter() {
+	public Adapter createImageShapeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Succes <em>Succes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Succes
+	 * @generated
+	 */
+	public Adapter createSuccesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ImageAligning <em>Image Aligning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.ImageAligning
+	 * @generated
+	 */
+	public Adapter createImageAligningAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Rounded <em>Rounded</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Rounded
+	 * @generated
+	 */
+	public Adapter createRoundedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Thumbnail <em>Thumbnail</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Thumbnail
+	 * @generated
+	 */
+	public Adapter createThumbnailAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Circle <em>Circle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Circle
+	 * @generated
+	 */
+	public Adapter createCircleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Float <em>Float</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Float
+	 * @generated
+	 */
+	public Adapter createFloatAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Center <em>Center</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Center
+	 * @generated
+	 */
+	public Adapter createCenterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Responsive <em>Responsive</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Responsive
+	 * @generated
+	 */
+	public Adapter createResponsiveAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ButtonStyle <em>Button Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.ButtonStyle
+	 * @generated
+	 */
+	public Adapter createButtonStyleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ButtonSize <em>Button Size</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.ButtonSize
+	 * @generated
+	 */
+	public Adapter createButtonSizeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Link <em>Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Link
+	 * @generated
+	 */
+	public Adapter createLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ButtonState <em>Button State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.ButtonState
+	 * @generated
+	 */
+	public Adapter createButtonStateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Disabled <em>Disabled</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Disabled
+	 * @generated
+	 */
+	public Adapter createDisabledAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Active <em>Active</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Active
+	 * @generated
+	 */
+	public Adapter createActiveAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Button <em>Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Button
+	 * @generated
+	 */
+	public Adapter createButtonAdapter() {
 		return null;
 	}
 

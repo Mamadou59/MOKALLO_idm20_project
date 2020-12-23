@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ParagrapheImpl extends TextElementImpl implements Paragraphe {
+public class ParagrapheImpl extends TextContainerImpl implements Paragraphe {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

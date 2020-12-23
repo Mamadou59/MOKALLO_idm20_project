@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public abstract class BorderImpl extends GeneralImpl implements Border {
+public class BorderImpl extends BorderPropertyImpl implements Border {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -15,24 +15,24 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link idm.bstrap.mm.bstrap.PageContent#getGeneralproperties <em>Generalproperties</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.PageContent#getGeneralProperties <em>General Properties</em>}</li>
  * </ul>
  *
  * @see idm.bstrap.mm.bstrap.BstrapPackage#getPageContent()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface PageContent extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Generalproperties</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>General Properties</b></em>' containment reference list.
 	 * The list contents are of type {@link idm.bstrap.mm.bstrap.General}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Generalproperties</em>' containment reference list.
-	 * @see idm.bstrap.mm.bstrap.BstrapPackage#getPageContent_Generalproperties()
+	 * @return the value of the '<em>General Properties</em>' containment reference list.
+	 * @see idm.bstrap.mm.bstrap.BstrapPackage#getPageContent_GeneralProperties()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<General> getGeneralproperties();
+	EList<General> getGeneralProperties();
 
 } // PageContent

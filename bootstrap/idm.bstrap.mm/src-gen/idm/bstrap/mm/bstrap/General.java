@@ -9,7 +9,7 @@ package idm.bstrap.mm.bstrap;
  *
  *
  * @see idm.bstrap.mm.bstrap.BstrapPackage#getGeneral()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface General extends PropertyClass {

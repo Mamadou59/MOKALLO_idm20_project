@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class PrimaryImpl extends BackgroundImpl implements Primary {
+public class PrimaryImpl extends ButtonStyleImpl implements Primary {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

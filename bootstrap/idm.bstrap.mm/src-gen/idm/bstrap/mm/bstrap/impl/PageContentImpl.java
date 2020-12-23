@@ -28,21 +28,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link idm.bstrap.mm.bstrap.impl.PageContentImpl#getGeneralproperties <em>Generalproperties</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.PageContentImpl#getGeneralProperties <em>General Properties</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class PageContentImpl extends MinimalEObjectImpl.Container implements PageContent {
+public class PageContentImpl extends MinimalEObjectImpl.Container implements PageContent {
 	/**
-	 * The cached value of the '{@link #getGeneralproperties() <em>Generalproperties</em>}' containment reference list.
+	 * The cached value of the '{@link #getGeneralProperties() <em>General Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGeneralproperties()
+	 * @see #getGeneralProperties()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<General> generalproperties;
+	protected EList<General> generalProperties;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,12 +68,12 @@ public abstract class PageContentImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<General> getGeneralproperties() {
-		if (generalproperties == null) {
-			generalproperties = new EObjectContainmentEList<General>(General.class, this,
-					BstrapPackage.PAGE_CONTENT__GENERALPROPERTIES);
+	public EList<General> getGeneralProperties() {
+		if (generalProperties == null) {
+			generalProperties = new EObjectContainmentEList<General>(General.class, this,
+					BstrapPackage.PAGE_CONTENT__GENERAL_PROPERTIES);
 		}
-		return generalproperties;
+		return generalProperties;
 	}
 
 	/**
@@ -84,8 +84,8 @@ public abstract class PageContentImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case BstrapPackage.PAGE_CONTENT__GENERALPROPERTIES:
-			return ((InternalEList<?>) getGeneralproperties()).basicRemove(otherEnd, msgs);
+		case BstrapPackage.PAGE_CONTENT__GENERAL_PROPERTIES:
+			return ((InternalEList<?>) getGeneralProperties()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -98,8 +98,8 @@ public abstract class PageContentImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BstrapPackage.PAGE_CONTENT__GENERALPROPERTIES:
-			return getGeneralproperties();
+		case BstrapPackage.PAGE_CONTENT__GENERAL_PROPERTIES:
+			return getGeneralProperties();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -113,9 +113,9 @@ public abstract class PageContentImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BstrapPackage.PAGE_CONTENT__GENERALPROPERTIES:
-			getGeneralproperties().clear();
-			getGeneralproperties().addAll((Collection<? extends General>) newValue);
+		case BstrapPackage.PAGE_CONTENT__GENERAL_PROPERTIES:
+			getGeneralProperties().clear();
+			getGeneralProperties().addAll((Collection<? extends General>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -129,8 +129,8 @@ public abstract class PageContentImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.PAGE_CONTENT__GENERALPROPERTIES:
-			getGeneralproperties().clear();
+		case BstrapPackage.PAGE_CONTENT__GENERAL_PROPERTIES:
+			getGeneralProperties().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -144,8 +144,8 @@ public abstract class PageContentImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.PAGE_CONTENT__GENERALPROPERTIES:
-			return generalproperties != null && !generalproperties.isEmpty();
+		case BstrapPackage.PAGE_CONTENT__GENERAL_PROPERTIES:
+			return generalProperties != null && !generalProperties.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
