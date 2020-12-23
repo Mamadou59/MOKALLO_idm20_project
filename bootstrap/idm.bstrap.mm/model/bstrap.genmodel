@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/idm.bstrap.mm/src-gen" creationIcons="false" editDirectory="/idm.bstrap.mm.edit/src-gen"
+    editorDirectory="/idm.bstrap.mm.editor/src-gen" modelPluginID="idm.bstrap.mm"
+    modelName="Bstrap" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>bstrap.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Bstrap" basePackage="idm.bstrap.mm" disposableProviderFactory="true"
+      ecorePackage="bstrap.ecore#/">
+    <genClasses ecoreClass="bstrap.ecore#//Page">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Page/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Page/pagecontents"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Container">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Container/pagecontents"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Container/textcontainers"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//FixContainer"/>
+    <genClasses ecoreClass="bstrap.ecore#//FluidContainer"/>
+    <genClasses ecoreClass="bstrap.ecore#//PropertyClass"/>
+    <genClasses ecoreClass="bstrap.ecore#//MargesProperty"/>
+    <genClasses ecoreClass="bstrap.ecore#//Margin"/>
+    <genClasses ecoreClass="bstrap.ecore#//Padding"/>
+    <genClasses ecoreClass="bstrap.ecore#//BackgroundProperty"/>
+    <genClasses ecoreClass="bstrap.ecore#//BorderProperty"/>
+    <genClasses ecoreClass="bstrap.ecore#//Dark"/>
+    <genClasses ecoreClass="bstrap.ecore#//Primary"/>
+    <genClasses ecoreClass="bstrap.ecore#//NewEClass13"/>
+    <genClasses ecoreClass="bstrap.ecore#//NewEClass14"/>
+    <genClasses ecoreClass="bstrap.ecore#//General"/>
+    <genClasses ecoreClass="bstrap.ecore#//TextContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//TextContainer/textelements"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Paragraphe"/>
+    <genClasses ecoreClass="bstrap.ecore#//Title">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Title/level"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Title/displayproperty"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//PageContent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//PageContent/generalproperties"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//DisplayProperty"/>
+    <genClasses ecoreClass="bstrap.ecore#//Display1"/>
+    <genClasses ecoreClass="bstrap.ecore#//Display4"/>
+    <genClasses ecoreClass="bstrap.ecore#//Display2"/>
+    <genClasses ecoreClass="bstrap.ecore#//Display3"/>
+    <genClasses image="false" ecoreClass="bstrap.ecore#//TextElements"/>
+    <genClasses ecoreClass="bstrap.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Text/text"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Code"/>
+    <genClasses ecoreClass="bstrap.ecore#//Blockquote">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Blockquote/pagecontents"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//CompositeTextElement"/>
+    <genClasses ecoreClass="bstrap.ecore#//Link"/>
+    <genClasses ecoreClass="bstrap.ecore#//UrlBasedLink"/>
+    <genClasses ecoreClass="bstrap.ecore#//Image">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Image/imageproperties"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//ContainableTextElement"/>
+    <genClasses ecoreClass="bstrap.ecore#//ImageProperty"/>
+    <genClasses ecoreClass="bstrap.ecore#//ImageShape"/>
+    <genClasses ecoreClass="bstrap.ecore#//ImageAligning"/>
+    <genClasses ecoreClass="bstrap.ecore#//Float"/>
+    <genClasses ecoreClass="bstrap.ecore#//Rounded"/>
+    <genClasses ecoreClass="bstrap.ecore#//Circle"/>
+    <genClasses ecoreClass="bstrap.ecore#//Thumbnail"/>
+    <genClasses ecoreClass="bstrap.ecore#//Center"/>
+    <genClasses ecoreClass="bstrap.ecore#//Responsive"/>
+    <genClasses ecoreClass="bstrap.ecore#//ButtonProperty"/>
+    <genClasses ecoreClass="bstrap.ecore#//Basic"/>
+    <genClasses ecoreClass="bstrap.ecore#//Primary.1"/>
+    <genClasses ecoreClass="bstrap.ecore#//Secondary"/>
+    <genClasses ecoreClass="bstrap.ecore#//Button">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Button/buttonproperty"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
