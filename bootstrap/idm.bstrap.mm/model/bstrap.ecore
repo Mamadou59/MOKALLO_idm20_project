@@ -7,14 +7,14 @@
         eType="#//PageContent" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Container" abstract="true" eSuperTypes="#//PageContent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pagecontents" upperBound="-1"
-        eType="#//PageContent" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="textcontainers" upperBound="-1"
-        eType="#//TextContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="textpagecontents" upperBound="-1"
+        eType="#//TextPageContent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="containers" upperBound="-1"
+        eType="#//Container" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FixContainer" eSuperTypes="#//Container"/>
   <eClassifiers xsi:type="ecore:EClass" name="FluidContainer" eSuperTypes="#//Container"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TextContainer" abstract="true" eSuperTypes="#//PageContent">
+  <eClassifiers xsi:type="ecore:EClass" name="TextContainer" abstract="true" eSuperTypes="#//TextPageContent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="textelements" upperBound="-1"
         eType="#//TextElements" containment="true"/>
   </eClassifiers>
@@ -29,26 +29,23 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Code" eSuperTypes="#//Text"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Blockquote" eSuperTypes="#//PageContent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pagecontents" upperBound="-1"
-        eType="#//PageContent" containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompositeTextElement" abstract="true"
-      eSuperTypes="#//ContainableTextElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subTextElements" upperBound="-1"
-        eType="#//TextElements" containment="true"/>
+      eSuperTypes="#//ContainableTextElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UrlBasedLink" abstract="true" eSuperTypes="#//CompositeTextElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UrlBasedLink" abstract="true" eSuperTypes="#//CompositeTextElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//UrlBasedLink">
     <eStructuralFeatures xsi:type="ecore:EReference" name="imageproperties" upperBound="-1"
         eType="#//ImageProperty" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContainableTextElement" abstract="true"
-      eSuperTypes="#//TextElements #//PageContent"/>
+      eSuperTypes="#//TextElements #//TextPageContent"/>
   <eClassifiers xsi:type="ecore:EClass" name="General" abstract="true" eSuperTypes="#//PropertyClass"/>
   <eClassifiers xsi:type="ecore:EClass" name="PropertyClass" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="MargesProperty" abstract="true" eSuperTypes="#//General">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignement" eType="#//Alignement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Margin" eSuperTypes="#//MargesProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="Padding" eSuperTypes="#//MargesProperty"/>
@@ -76,23 +73,21 @@
   <eClassifiers xsi:type="ecore:EClass" name="Display3" eSuperTypes="#//DisplayProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="Display4" eSuperTypes="#//DisplayProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="ButtonProperty" abstract="true" eSuperTypes="#//PropertyClass"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Basic" eSuperTypes="#//ButtonStyle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Primary" eSuperTypes="#//ButtonStyle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Secondary" eSuperTypes="#//ButtonStyle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Dark" eSuperTypes="#//ButtonStyle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Info" eSuperTypes="#//ButtonStyle"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Light" eSuperTypes="#//ButtonStyle"/>
   <eClassifiers xsi:type="ecore:EClass" name="ImageProperty" abstract="true" eSuperTypes="#//PropertyClass"/>
   <eClassifiers xsi:type="ecore:EClass" name="ImageShape" abstract="true" eSuperTypes="#//ImageProperty"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Succes" eSuperTypes="#//ButtonStyle"/>
   <eClassifiers xsi:type="ecore:EClass" name="ImageAligning" abstract="true" eSuperTypes="#//ImageProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="Rounded" eSuperTypes="#//ImageShape"/>
   <eClassifiers xsi:type="ecore:EClass" name="Thumbnail" eSuperTypes="#//ImageShape"/>
   <eClassifiers xsi:type="ecore:EClass" name="Circle" eSuperTypes="#//ImageShape"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Float" eSuperTypes="#//ImageAligning"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Float" eSuperTypes="#//ImageAligning">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignement" eType="#//Alignement"
+        defaultValueLiteral="LEFT"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Center" eSuperTypes="#//ImageAligning"/>
   <eClassifiers xsi:type="ecore:EClass" name="Responsive" eSuperTypes="#//ImageAligning"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ButtonStyle" abstract="true" eSuperTypes="#//ButtonProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonStyle" eSuperTypes="#//ButtonProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ButtonSize" eSuperTypes="#//ButtonProperty">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="#//Size"/>
   </eClassifiers>
@@ -108,9 +103,18 @@
   <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//ContainableTextElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="buttonproperties" upperBound="-1"
         eType="#//ButtonProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PageContent">
+  <eClassifiers xsi:type="ecore:EClass" name="PageContent" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="generalProperties" upperBound="-1"
         eType="#//General" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TextPageContent" abstract="true" eSuperTypes="#//PageContent"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Alignement">
+    <eLiterals name="CENTER" literal="CENTER"/>
+    <eLiterals name="TOP" value="1" literal="TOP"/>
+    <eLiterals name="BOTTOM" value="2"/>
+    <eLiterals name="LEFT" value="3"/>
+    <eLiterals name="RIGHT" value="4"/>
   </eClassifiers>
 </ecore:EPackage>

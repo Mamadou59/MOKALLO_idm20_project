@@ -23,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TextContainerItemProvider extends PageContentItemProvider {
+public class TextContainerItemProvider extends TextPageContentItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -146,12 +146,6 @@ public class TextContainerItemProvider extends PageContentItemProvider {
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
 				BstrapFactory.eINSTANCE.createCode()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
-				BstrapFactory.eINSTANCE.createContainableTextElement()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
-				BstrapFactory.eINSTANCE.createCompositeTextElement()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
 				BstrapFactory.eINSTANCE.createImage()));

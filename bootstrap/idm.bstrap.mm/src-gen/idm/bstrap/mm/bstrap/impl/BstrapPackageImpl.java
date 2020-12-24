@@ -3,9 +3,8 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.Active;
+import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.Background;
-import idm.bstrap.mm.bstrap.Basic;
-import idm.bstrap.mm.bstrap.Blockquote;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BorderProperty;
 import idm.bstrap.mm.bstrap.BstrapFactory;
@@ -22,7 +21,6 @@ import idm.bstrap.mm.bstrap.Color;
 import idm.bstrap.mm.bstrap.ColoredBorder;
 import idm.bstrap.mm.bstrap.CompositeTextElement;
 import idm.bstrap.mm.bstrap.ContainableTextElement;
-import idm.bstrap.mm.bstrap.Dark;
 import idm.bstrap.mm.bstrap.Disabled;
 import idm.bstrap.mm.bstrap.Display1;
 import idm.bstrap.mm.bstrap.Display2;
@@ -36,8 +34,6 @@ import idm.bstrap.mm.bstrap.Image;
 import idm.bstrap.mm.bstrap.ImageAligning;
 import idm.bstrap.mm.bstrap.ImageProperty;
 import idm.bstrap.mm.bstrap.ImageShape;
-import idm.bstrap.mm.bstrap.Info;
-import idm.bstrap.mm.bstrap.Light;
 import idm.bstrap.mm.bstrap.Link;
 import idm.bstrap.mm.bstrap.MargesProperty;
 import idm.bstrap.mm.bstrap.Margin;
@@ -45,16 +41,14 @@ import idm.bstrap.mm.bstrap.Padding;
 import idm.bstrap.mm.bstrap.Page;
 import idm.bstrap.mm.bstrap.PageContent;
 import idm.bstrap.mm.bstrap.Paragraphe;
-import idm.bstrap.mm.bstrap.Primary;
 import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
-import idm.bstrap.mm.bstrap.Secondary;
 import idm.bstrap.mm.bstrap.Size;
-import idm.bstrap.mm.bstrap.Succes;
 import idm.bstrap.mm.bstrap.Text;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
+import idm.bstrap.mm.bstrap.TextPageContent;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
 import idm.bstrap.mm.bstrap.UrlBasedLink;
@@ -143,13 +137,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	private EClass codeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass blockquoteEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -289,48 +276,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass basicEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass primaryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass secondaryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass darkEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass infoEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass lightEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass imagePropertyEClass = null;
 
 	/**
@@ -339,13 +284,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	private EClass imageShapeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass succesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -457,6 +395,13 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass textPageContentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum colorEEnum = null;
 
 	/**
@@ -465,6 +410,13 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	private EEnum sizeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum alignementEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -571,7 +523,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainer_Pagecontents() {
+	public EReference getContainer_Textpagecontents() {
 		return (EReference) containerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -580,7 +532,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainer_Textcontainers() {
+	public EReference getContainer_Containers() {
 		return (EReference) containerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -697,24 +649,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBlockquote() {
-		return blockquoteEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBlockquote_Pagecontents() {
-		return (EReference) blockquoteEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCompositeTextElement() {
 		return compositeTextElementEClass;
 	}
@@ -735,6 +669,24 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EClass getUrlBasedLink() {
 		return urlBasedLinkEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUrlBasedLink_Url() {
+		return (EAttribute) urlBasedLinkEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUrlBasedLink_Title() {
+		return (EAttribute) urlBasedLinkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -798,6 +750,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EAttribute getMargesProperty_Level() {
 		return (EAttribute) margesPropertyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMargesProperty_Alignement() {
+		return (EAttribute) margesPropertyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -931,60 +892,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBasic() {
-		return basicEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPrimary() {
-		return primaryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSecondary() {
-		return secondaryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDark() {
-		return darkEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInfo() {
-		return infoEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getLight() {
-		return lightEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getImageProperty() {
 		return imagePropertyEClass;
 	}
@@ -996,15 +903,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EClass getImageShape() {
 		return imageShapeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSucces() {
-		return succesEClass;
 	}
 
 	/**
@@ -1057,6 +955,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFloat_Alignement() {
+		return (EAttribute) floatEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCenter() {
 		return centerEClass;
 	}
@@ -1077,6 +984,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EClass getButtonStyle() {
 		return buttonStyleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getButtonStyle_Color() {
+		return (EAttribute) buttonStyleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1156,6 +1072,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getButton_Content() {
+		return (EAttribute) buttonEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPageContent() {
 		return pageContentEClass;
 	}
@@ -1174,6 +1099,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTextPageContent() {
+		return textPageContentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getColor() {
 		return colorEEnum;
 	}
@@ -1185,6 +1119,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EEnum getSize() {
 		return sizeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getAlignement() {
+		return alignementEEnum;
 	}
 
 	/**
@@ -1221,8 +1164,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		createEReference(pageEClass, PAGE__PAGECONTENTS);
 
 		containerEClass = createEClass(CONTAINER);
-		createEReference(containerEClass, CONTAINER__PAGECONTENTS);
-		createEReference(containerEClass, CONTAINER__TEXTCONTAINERS);
+		createEReference(containerEClass, CONTAINER__TEXTPAGECONTENTS);
+		createEReference(containerEClass, CONTAINER__CONTAINERS);
 
 		fixContainerEClass = createEClass(FIX_CONTAINER);
 
@@ -1244,13 +1187,12 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		codeEClass = createEClass(CODE);
 
-		blockquoteEClass = createEClass(BLOCKQUOTE);
-		createEReference(blockquoteEClass, BLOCKQUOTE__PAGECONTENTS);
-
 		compositeTextElementEClass = createEClass(COMPOSITE_TEXT_ELEMENT);
 		createEReference(compositeTextElementEClass, COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS);
 
 		urlBasedLinkEClass = createEClass(URL_BASED_LINK);
+		createEAttribute(urlBasedLinkEClass, URL_BASED_LINK__URL);
+		createEAttribute(urlBasedLinkEClass, URL_BASED_LINK__TITLE);
 
 		imageEClass = createEClass(IMAGE);
 		createEReference(imageEClass, IMAGE__IMAGEPROPERTIES);
@@ -1263,6 +1205,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		margesPropertyEClass = createEClass(MARGES_PROPERTY);
 		createEAttribute(margesPropertyEClass, MARGES_PROPERTY__LEVEL);
+		createEAttribute(margesPropertyEClass, MARGES_PROPERTY__ALIGNEMENT);
 
 		marginEClass = createEClass(MARGIN);
 
@@ -1290,23 +1233,9 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		buttonPropertyEClass = createEClass(BUTTON_PROPERTY);
 
-		basicEClass = createEClass(BASIC);
-
-		primaryEClass = createEClass(PRIMARY);
-
-		secondaryEClass = createEClass(SECONDARY);
-
-		darkEClass = createEClass(DARK);
-
-		infoEClass = createEClass(INFO);
-
-		lightEClass = createEClass(LIGHT);
-
 		imagePropertyEClass = createEClass(IMAGE_PROPERTY);
 
 		imageShapeEClass = createEClass(IMAGE_SHAPE);
-
-		succesEClass = createEClass(SUCCES);
 
 		imageAligningEClass = createEClass(IMAGE_ALIGNING);
 
@@ -1317,12 +1246,14 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		circleEClass = createEClass(CIRCLE);
 
 		floatEClass = createEClass(FLOAT);
+		createEAttribute(floatEClass, FLOAT__ALIGNEMENT);
 
 		centerEClass = createEClass(CENTER);
 
 		responsiveEClass = createEClass(RESPONSIVE);
 
 		buttonStyleEClass = createEClass(BUTTON_STYLE);
+		createEAttribute(buttonStyleEClass, BUTTON_STYLE__COLOR);
 
 		buttonSizeEClass = createEClass(BUTTON_SIZE);
 		createEAttribute(buttonSizeEClass, BUTTON_SIZE__SIZE);
@@ -1337,13 +1268,17 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		buttonEClass = createEClass(BUTTON);
 		createEReference(buttonEClass, BUTTON__BUTTONPROPERTIES);
+		createEAttribute(buttonEClass, BUTTON__CONTENT);
 
 		pageContentEClass = createEClass(PAGE_CONTENT);
 		createEReference(pageContentEClass, PAGE_CONTENT__GENERAL_PROPERTIES);
 
+		textPageContentEClass = createEClass(TEXT_PAGE_CONTENT);
+
 		// Create enums
 		colorEEnum = createEEnum(COLOR);
 		sizeEEnum = createEEnum(SIZE);
+		alignementEEnum = createEEnum(ALIGNEMENT);
 	}
 
 	/**
@@ -1378,17 +1313,16 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		containerEClass.getESuperTypes().add(this.getPageContent());
 		fixContainerEClass.getESuperTypes().add(this.getContainer());
 		fluidContainerEClass.getESuperTypes().add(this.getContainer());
-		textContainerEClass.getESuperTypes().add(this.getPageContent());
+		textContainerEClass.getESuperTypes().add(this.getTextPageContent());
 		paragrapheEClass.getESuperTypes().add(this.getTextContainer());
 		titleEClass.getESuperTypes().add(this.getTextContainer());
 		textEClass.getESuperTypes().add(this.getTextElements());
 		codeEClass.getESuperTypes().add(this.getText());
-		blockquoteEClass.getESuperTypes().add(this.getPageContent());
 		compositeTextElementEClass.getESuperTypes().add(this.getContainableTextElement());
 		urlBasedLinkEClass.getESuperTypes().add(this.getCompositeTextElement());
 		imageEClass.getESuperTypes().add(this.getUrlBasedLink());
 		containableTextElementEClass.getESuperTypes().add(this.getTextElements());
-		containableTextElementEClass.getESuperTypes().add(this.getPageContent());
+		containableTextElementEClass.getESuperTypes().add(this.getTextPageContent());
 		generalEClass.getESuperTypes().add(this.getPropertyClass());
 		margesPropertyEClass.getESuperTypes().add(this.getGeneral());
 		marginEClass.getESuperTypes().add(this.getMargesProperty());
@@ -1402,15 +1336,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		display3EClass.getESuperTypes().add(this.getDisplayProperty());
 		display4EClass.getESuperTypes().add(this.getDisplayProperty());
 		buttonPropertyEClass.getESuperTypes().add(this.getPropertyClass());
-		basicEClass.getESuperTypes().add(this.getButtonStyle());
-		primaryEClass.getESuperTypes().add(this.getButtonStyle());
-		secondaryEClass.getESuperTypes().add(this.getButtonStyle());
-		darkEClass.getESuperTypes().add(this.getButtonStyle());
-		infoEClass.getESuperTypes().add(this.getButtonStyle());
-		lightEClass.getESuperTypes().add(this.getButtonStyle());
 		imagePropertyEClass.getESuperTypes().add(this.getPropertyClass());
 		imageShapeEClass.getESuperTypes().add(this.getImageProperty());
-		succesEClass.getESuperTypes().add(this.getButtonStyle());
 		imageAligningEClass.getESuperTypes().add(this.getImageProperty());
 		roundedEClass.getESuperTypes().add(this.getImageShape());
 		thumbnailEClass.getESuperTypes().add(this.getImageShape());
@@ -1425,6 +1352,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		disabledEClass.getESuperTypes().add(this.getButtonState());
 		activeEClass.getESuperTypes().add(this.getButtonState());
 		buttonEClass.getESuperTypes().add(this.getContainableTextElement());
+		textPageContentEClass.getESuperTypes().add(this.getPageContent());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1436,10 +1364,10 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(containerEClass, idm.bstrap.mm.bstrap.Container.class, "Container", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContainer_Pagecontents(), this.getPageContent(), null, "pagecontents", null, 0, -1,
-				idm.bstrap.mm.bstrap.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getContainer_Textpagecontents(), this.getTextPageContent(), null, "textpagecontents", null, 0,
+				-1, idm.bstrap.mm.bstrap.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainer_Textcontainers(), this.getTextContainer(), null, "textcontainers", null, 0, -1,
+		initEReference(getContainer_Containers(), this.getContainer(), null, "containers", null, 0, -1,
 				idm.bstrap.mm.bstrap.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1474,13 +1402,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(codeEClass, Code.class, "Code", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(blockquoteEClass, Blockquote.class, "Blockquote", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBlockquote_Pagecontents(), this.getPageContent(), null, "pagecontents", null, 0, -1,
-				Blockquote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(compositeTextElementEClass, CompositeTextElement.class, "CompositeTextElement", !IS_ABSTRACT,
+		initEClass(compositeTextElementEClass, CompositeTextElement.class, "CompositeTextElement", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositeTextElement_SubTextElements(), this.getTextElements(), null, "subTextElements", null,
 				0, -1, CompositeTextElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
@@ -1488,13 +1410,17 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(urlBasedLinkEClass, UrlBasedLink.class, "UrlBasedLink", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUrlBasedLink_Url(), ecorePackage.getEString(), "url", null, 0, 1, UrlBasedLink.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUrlBasedLink_Title(), ecorePackage.getEString(), "title", null, 0, 1, UrlBasedLink.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImage_Imageproperties(), this.getImageProperty(), null, "imageproperties", null, 0, -1,
 				Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(containableTextElementEClass, ContainableTextElement.class, "ContainableTextElement", !IS_ABSTRACT,
+		initEClass(containableTextElementEClass, ContainableTextElement.class, "ContainableTextElement", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(generalEClass, General.class, "General", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1506,6 +1432,9 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMargesProperty_Level(), ecorePackage.getEString(), "level", null, 0, 1, MargesProperty.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMargesProperty_Alignement(), this.getAlignement(), "alignement", null, 0, 1,
+				MargesProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(marginEClass, Margin.class, "Margin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1544,26 +1473,11 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEClass(buttonPropertyEClass, ButtonProperty.class, "ButtonProperty", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(basicEClass, Basic.class, "Basic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(primaryEClass, Primary.class, "Primary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(secondaryEClass, Secondary.class, "Secondary", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(darkEClass, Dark.class, "Dark", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(infoEClass, Info.class, "Info", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(lightEClass, Light.class, "Light", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(imagePropertyEClass, ImageProperty.class, "ImageProperty", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(imageShapeEClass, ImageShape.class, "ImageShape", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(succesEClass, Succes.class, "Succes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(imageAligningEClass, ImageAligning.class, "ImageAligning", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1577,14 +1491,19 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(floatEClass, idm.bstrap.mm.bstrap.Float.class, "Float", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFloat_Alignement(), this.getAlignement(), "alignement", "LEFT", 0, 1,
+				idm.bstrap.mm.bstrap.Float.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(centerEClass, Center.class, "Center", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(responsiveEClass, Responsive.class, "Responsive", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(buttonStyleEClass, ButtonStyle.class, "ButtonStyle", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(buttonStyleEClass, ButtonStyle.class, "ButtonStyle", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getButtonStyle_Color(), this.getColor(), "color", null, 0, 1, ButtonStyle.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(buttonSizeEClass, ButtonSize.class, "ButtonSize", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1605,12 +1524,17 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEReference(getButton_Buttonproperties(), this.getButtonProperty(), null, "buttonproperties", null, 0, -1,
 				Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getButton_Content(), ecorePackage.getEString(), "content", null, 0, 1, Button.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(pageContentEClass, PageContent.class, "PageContent", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(pageContentEClass, PageContent.class, "PageContent", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPageContent_GeneralProperties(), this.getGeneral(), null, "generalProperties", null, 0, -1,
 				PageContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(textPageContentEClass, TextPageContent.class, "TextPageContent", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(colorEEnum, Color.class, "Color");
@@ -1627,6 +1551,13 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		addEEnumLiteral(sizeEEnum, Size.DEFAULT);
 		addEEnumLiteral(sizeEEnum, Size.SMALL);
 		addEEnumLiteral(sizeEEnum, Size.LARGE);
+
+		initEEnum(alignementEEnum, Alignement.class, "Alignement");
+		addEEnumLiteral(alignementEEnum, Alignement.CENTER);
+		addEEnumLiteral(alignementEEnum, Alignement.TOP);
+		addEEnumLiteral(alignementEEnum, Alignement.BOTTOM);
+		addEEnumLiteral(alignementEEnum, Alignement.LEFT);
+		addEEnumLiteral(alignementEEnum, Alignement.RIGHT);
 
 		// Create resource
 		createResource(eNS_URI);

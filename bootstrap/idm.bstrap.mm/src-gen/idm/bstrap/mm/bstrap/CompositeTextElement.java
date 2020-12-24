@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see idm.bstrap.mm.bstrap.BstrapPackage#getCompositeTextElement()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface CompositeTextElement extends ContainableTextElement {

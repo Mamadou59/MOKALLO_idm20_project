@@ -2,6 +2,8 @@
  */
 package idm.bstrap.mm.bstrap.provider;
 
+import idm.bstrap.mm.bstrap.Color;
+import idm.bstrap.mm.bstrap.Link;
 import java.util.Collection;
 import java.util.List;
 
@@ -71,7 +73,10 @@ public class LinkItemProvider extends ButtonStyleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Link_type");
+		Color labelValue = ((Link) object).getColor();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ? getString("_UI_Link_type")
+				: getString("_UI_Link_type") + " " + label;
 	}
 
 	/**

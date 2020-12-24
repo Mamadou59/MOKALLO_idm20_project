@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class PageContentImpl extends MinimalEObjectImpl.Container implements PageContent {
+public abstract class PageContentImpl extends MinimalEObjectImpl.Container implements PageContent {
 	/**
 	 * The cached value of the '{@link #getGeneralProperties() <em>General Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

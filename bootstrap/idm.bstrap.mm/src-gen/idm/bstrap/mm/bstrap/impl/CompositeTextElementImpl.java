@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class CompositeTextElementImpl extends ContainableTextElementImpl implements CompositeTextElement {
+public abstract class CompositeTextElementImpl extends ContainableTextElementImpl implements CompositeTextElement {
 	/**
 	 * The cached value of the '{@link #getSubTextElements() <em>Sub Text Elements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

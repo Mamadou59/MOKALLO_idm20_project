@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface TextContainer extends PageContent {
+public interface TextContainer extends TextPageContent {
 	/**
 	 * Returns the value of the '<em><b>Textelements</b></em>' containment reference list.
 	 * The list contents are of type {@link idm.bstrap.mm.bstrap.TextElements}.

@@ -4,8 +4,6 @@ package idm.bstrap.mm.bstrap.util;
 
 import idm.bstrap.mm.bstrap.Active;
 import idm.bstrap.mm.bstrap.Background;
-import idm.bstrap.mm.bstrap.Basic;
-import idm.bstrap.mm.bstrap.Blockquote;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BorderProperty;
 import idm.bstrap.mm.bstrap.BstrapPackage;
@@ -21,7 +19,6 @@ import idm.bstrap.mm.bstrap.ColoredBorder;
 import idm.bstrap.mm.bstrap.CompositeTextElement;
 import idm.bstrap.mm.bstrap.ContainableTextElement;
 import idm.bstrap.mm.bstrap.Container;
-import idm.bstrap.mm.bstrap.Dark;
 import idm.bstrap.mm.bstrap.Disabled;
 import idm.bstrap.mm.bstrap.Display1;
 import idm.bstrap.mm.bstrap.Display2;
@@ -35,8 +32,6 @@ import idm.bstrap.mm.bstrap.Image;
 import idm.bstrap.mm.bstrap.ImageAligning;
 import idm.bstrap.mm.bstrap.ImageProperty;
 import idm.bstrap.mm.bstrap.ImageShape;
-import idm.bstrap.mm.bstrap.Info;
-import idm.bstrap.mm.bstrap.Light;
 import idm.bstrap.mm.bstrap.Link;
 import idm.bstrap.mm.bstrap.MargesProperty;
 import idm.bstrap.mm.bstrap.Margin;
@@ -44,15 +39,13 @@ import idm.bstrap.mm.bstrap.Padding;
 import idm.bstrap.mm.bstrap.Page;
 import idm.bstrap.mm.bstrap.PageContent;
 import idm.bstrap.mm.bstrap.Paragraphe;
-import idm.bstrap.mm.bstrap.Primary;
 import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
-import idm.bstrap.mm.bstrap.Secondary;
-import idm.bstrap.mm.bstrap.Succes;
 import idm.bstrap.mm.bstrap.Text;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
+import idm.bstrap.mm.bstrap.TextPageContent;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
 import idm.bstrap.mm.bstrap.UrlBasedLink;
@@ -170,11 +163,6 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseBlockquote(Blockquote object) {
-			return createBlockquoteAdapter();
-		}
-
-		@Override
 		public Adapter caseCompositeTextElement(CompositeTextElement object) {
 			return createCompositeTextElementAdapter();
 		}
@@ -270,36 +258,6 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseBasic(Basic object) {
-			return createBasicAdapter();
-		}
-
-		@Override
-		public Adapter casePrimary(Primary object) {
-			return createPrimaryAdapter();
-		}
-
-		@Override
-		public Adapter caseSecondary(Secondary object) {
-			return createSecondaryAdapter();
-		}
-
-		@Override
-		public Adapter caseDark(Dark object) {
-			return createDarkAdapter();
-		}
-
-		@Override
-		public Adapter caseInfo(Info object) {
-			return createInfoAdapter();
-		}
-
-		@Override
-		public Adapter caseLight(Light object) {
-			return createLightAdapter();
-		}
-
-		@Override
 		public Adapter caseImageProperty(ImageProperty object) {
 			return createImagePropertyAdapter();
 		}
@@ -307,11 +265,6 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseImageShape(ImageShape object) {
 			return createImageShapeAdapter();
-		}
-
-		@Override
-		public Adapter caseSucces(Succes object) {
-			return createSuccesAdapter();
 		}
 
 		@Override
@@ -387,6 +340,11 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter casePageContent(PageContent object) {
 			return createPageContentAdapter();
+		}
+
+		@Override
+		public Adapter caseTextPageContent(TextPageContent object) {
+			return createTextPageContentAdapter();
 		}
 
 		@Override
@@ -545,20 +503,6 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCodeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Blockquote <em>Blockquote</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Blockquote
-	 * @generated
-	 */
-	public Adapter createBlockquoteAdapter() {
 		return null;
 	}
 
@@ -829,90 +773,6 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Basic <em>Basic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Basic
-	 * @generated
-	 */
-	public Adapter createBasicAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Primary <em>Primary</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Primary
-	 * @generated
-	 */
-	public Adapter createPrimaryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Secondary <em>Secondary</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Secondary
-	 * @generated
-	 */
-	public Adapter createSecondaryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Dark <em>Dark</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Dark
-	 * @generated
-	 */
-	public Adapter createDarkAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Info <em>Info</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Info
-	 * @generated
-	 */
-	public Adapter createInfoAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Light <em>Light</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Light
-	 * @generated
-	 */
-	public Adapter createLightAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ImageProperty <em>Image Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -937,20 +797,6 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createImageShapeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Succes <em>Succes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Succes
-	 * @generated
-	 */
-	public Adapter createSuccesAdapter() {
 		return null;
 	}
 
@@ -1161,6 +1007,20 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPageContentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TextPageContent <em>Text Page Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.TextPageContent
+	 * @generated
+	 */
+	public Adapter createTextPageContentAdapter() {
 		return null;
 	}
 

@@ -174,9 +174,6 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
-				BstrapFactory.eINSTANCE.createPageContent()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
 				BstrapFactory.eINSTANCE.createFixContainer()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
@@ -187,15 +184,6 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 
 		newChildDescriptors.add(
 				createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS, BstrapFactory.eINSTANCE.createTitle()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
-				BstrapFactory.eINSTANCE.createBlockquote()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
-				BstrapFactory.eINSTANCE.createContainableTextElement()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
-				BstrapFactory.eINSTANCE.createCompositeTextElement()));
 
 		newChildDescriptors.add(
 				createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS, BstrapFactory.eINSTANCE.createImage()));

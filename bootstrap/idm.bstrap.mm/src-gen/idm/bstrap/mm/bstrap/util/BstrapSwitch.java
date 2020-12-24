@@ -4,8 +4,6 @@ package idm.bstrap.mm.bstrap.util;
 
 import idm.bstrap.mm.bstrap.Active;
 import idm.bstrap.mm.bstrap.Background;
-import idm.bstrap.mm.bstrap.Basic;
-import idm.bstrap.mm.bstrap.Blockquote;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BorderProperty;
 import idm.bstrap.mm.bstrap.BstrapPackage;
@@ -21,7 +19,6 @@ import idm.bstrap.mm.bstrap.ColoredBorder;
 import idm.bstrap.mm.bstrap.CompositeTextElement;
 import idm.bstrap.mm.bstrap.ContainableTextElement;
 import idm.bstrap.mm.bstrap.Container;
-import idm.bstrap.mm.bstrap.Dark;
 import idm.bstrap.mm.bstrap.Disabled;
 import idm.bstrap.mm.bstrap.Display1;
 import idm.bstrap.mm.bstrap.Display2;
@@ -35,8 +32,6 @@ import idm.bstrap.mm.bstrap.Image;
 import idm.bstrap.mm.bstrap.ImageAligning;
 import idm.bstrap.mm.bstrap.ImageProperty;
 import idm.bstrap.mm.bstrap.ImageShape;
-import idm.bstrap.mm.bstrap.Info;
-import idm.bstrap.mm.bstrap.Light;
 import idm.bstrap.mm.bstrap.Link;
 import idm.bstrap.mm.bstrap.MargesProperty;
 import idm.bstrap.mm.bstrap.Margin;
@@ -44,15 +39,13 @@ import idm.bstrap.mm.bstrap.Padding;
 import idm.bstrap.mm.bstrap.Page;
 import idm.bstrap.mm.bstrap.PageContent;
 import idm.bstrap.mm.bstrap.Paragraphe;
-import idm.bstrap.mm.bstrap.Primary;
 import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
-import idm.bstrap.mm.bstrap.Secondary;
-import idm.bstrap.mm.bstrap.Succes;
 import idm.bstrap.mm.bstrap.Text;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
+import idm.bstrap.mm.bstrap.TextPageContent;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
 import idm.bstrap.mm.bstrap.UrlBasedLink;
@@ -161,6 +154,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			TextContainer textContainer = (TextContainer) theEObject;
 			T result = caseTextContainer(textContainer);
 			if (result == null)
+				result = caseTextPageContent(textContainer);
+			if (result == null)
 				result = casePageContent(textContainer);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -172,6 +167,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextContainer(paragraphe);
 			if (result == null)
+				result = caseTextPageContent(paragraphe);
+			if (result == null)
 				result = casePageContent(paragraphe);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -182,6 +179,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			T result = caseTitle(title);
 			if (result == null)
 				result = caseTextContainer(title);
+			if (result == null)
+				result = caseTextPageContent(title);
 			if (result == null)
 				result = casePageContent(title);
 			if (result == null)
@@ -215,15 +214,6 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case BstrapPackage.BLOCKQUOTE: {
-			Blockquote blockquote = (Blockquote) theEObject;
-			T result = caseBlockquote(blockquote);
-			if (result == null)
-				result = casePageContent(blockquote);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case BstrapPackage.COMPOSITE_TEXT_ELEMENT: {
 			CompositeTextElement compositeTextElement = (CompositeTextElement) theEObject;
 			T result = caseCompositeTextElement(compositeTextElement);
@@ -231,6 +221,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseContainableTextElement(compositeTextElement);
 			if (result == null)
 				result = caseTextElements(compositeTextElement);
+			if (result == null)
+				result = caseTextPageContent(compositeTextElement);
 			if (result == null)
 				result = casePageContent(compositeTextElement);
 			if (result == null)
@@ -246,6 +238,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseContainableTextElement(urlBasedLink);
 			if (result == null)
 				result = caseTextElements(urlBasedLink);
+			if (result == null)
+				result = caseTextPageContent(urlBasedLink);
 			if (result == null)
 				result = casePageContent(urlBasedLink);
 			if (result == null)
@@ -264,6 +258,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextElements(image);
 			if (result == null)
+				result = caseTextPageContent(image);
+			if (result == null)
 				result = casePageContent(image);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -274,6 +270,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			T result = caseContainableTextElement(containableTextElement);
 			if (result == null)
 				result = caseTextElements(containableTextElement);
+			if (result == null)
+				result = caseTextPageContent(containableTextElement);
 			if (result == null)
 				result = casePageContent(containableTextElement);
 			if (result == null)
@@ -433,84 +431,6 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case BstrapPackage.BASIC: {
-			Basic basic = (Basic) theEObject;
-			T result = caseBasic(basic);
-			if (result == null)
-				result = caseButtonStyle(basic);
-			if (result == null)
-				result = caseButtonProperty(basic);
-			if (result == null)
-				result = casePropertyClass(basic);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.PRIMARY: {
-			Primary primary = (Primary) theEObject;
-			T result = casePrimary(primary);
-			if (result == null)
-				result = caseButtonStyle(primary);
-			if (result == null)
-				result = caseButtonProperty(primary);
-			if (result == null)
-				result = casePropertyClass(primary);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.SECONDARY: {
-			Secondary secondary = (Secondary) theEObject;
-			T result = caseSecondary(secondary);
-			if (result == null)
-				result = caseButtonStyle(secondary);
-			if (result == null)
-				result = caseButtonProperty(secondary);
-			if (result == null)
-				result = casePropertyClass(secondary);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.DARK: {
-			Dark dark = (Dark) theEObject;
-			T result = caseDark(dark);
-			if (result == null)
-				result = caseButtonStyle(dark);
-			if (result == null)
-				result = caseButtonProperty(dark);
-			if (result == null)
-				result = casePropertyClass(dark);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.INFO: {
-			Info info = (Info) theEObject;
-			T result = caseInfo(info);
-			if (result == null)
-				result = caseButtonStyle(info);
-			if (result == null)
-				result = caseButtonProperty(info);
-			if (result == null)
-				result = casePropertyClass(info);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.LIGHT: {
-			Light light = (Light) theEObject;
-			T result = caseLight(light);
-			if (result == null)
-				result = caseButtonStyle(light);
-			if (result == null)
-				result = caseButtonProperty(light);
-			if (result == null)
-				result = casePropertyClass(light);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case BstrapPackage.IMAGE_PROPERTY: {
 			ImageProperty imageProperty = (ImageProperty) theEObject;
 			T result = caseImageProperty(imageProperty);
@@ -527,19 +447,6 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseImageProperty(imageShape);
 			if (result == null)
 				result = casePropertyClass(imageShape);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.SUCCES: {
-			Succes succes = (Succes) theEObject;
-			T result = caseSucces(succes);
-			if (result == null)
-				result = caseButtonStyle(succes);
-			if (result == null)
-				result = caseButtonProperty(succes);
-			if (result == null)
-				result = casePropertyClass(succes);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -713,6 +620,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextElements(button);
 			if (result == null)
+				result = caseTextPageContent(button);
+			if (result == null)
 				result = casePageContent(button);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -721,6 +630,15 @@ public class BstrapSwitch<T> extends Switch<T> {
 		case BstrapPackage.PAGE_CONTENT: {
 			PageContent pageContent = (PageContent) theEObject;
 			T result = casePageContent(pageContent);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TEXT_PAGE_CONTENT: {
+			TextPageContent textPageContent = (TextPageContent) theEObject;
+			T result = caseTextPageContent(textPageContent);
+			if (result == null)
+				result = casePageContent(textPageContent);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -877,21 +795,6 @@ public class BstrapSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCode(Code object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Blockquote</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Blockquote</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBlockquote(Blockquote object) {
 		return null;
 	}
 
@@ -1181,96 +1084,6 @@ public class BstrapSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Basic</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Basic</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBasic(Basic object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Primary</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Primary</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePrimary(Primary object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Secondary</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Secondary</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSecondary(Secondary object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Dark</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Dark</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDark(Dark object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Info</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Info</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInfo(Info object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Light</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Light</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLight(Light object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Image Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1297,21 +1110,6 @@ public class BstrapSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseImageShape(ImageShape object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Succes</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Succes</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSucces(Succes object) {
 		return null;
 	}
 
@@ -1537,6 +1335,21 @@ public class BstrapSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePageContent(PageContent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Page Content</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Page Content</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextPageContent(TextPageContent object) {
 		return null;
 	}
 

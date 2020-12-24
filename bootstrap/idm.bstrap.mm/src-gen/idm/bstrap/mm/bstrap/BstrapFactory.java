@@ -85,24 +85,6 @@ public interface BstrapFactory extends EFactory {
 	Code createCode();
 
 	/**
-	 * Returns a new object of class '<em>Blockquote</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Blockquote</em>'.
-	 * @generated
-	 */
-	Blockquote createBlockquote();
-
-	/**
-	 * Returns a new object of class '<em>Composite Text Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Composite Text Element</em>'.
-	 * @generated
-	 */
-	CompositeTextElement createCompositeTextElement();
-
-	/**
 	 * Returns a new object of class '<em>Image</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,15 +92,6 @@ public interface BstrapFactory extends EFactory {
 	 * @generated
 	 */
 	Image createImage();
-
-	/**
-	 * Returns a new object of class '<em>Containable Text Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Containable Text Element</em>'.
-	 * @generated
-	 */
-	ContainableTextElement createContainableTextElement();
 
 	/**
 	 * Returns a new object of class '<em>Margin</em>'.
@@ -202,69 +175,6 @@ public interface BstrapFactory extends EFactory {
 	Display4 createDisplay4();
 
 	/**
-	 * Returns a new object of class '<em>Basic</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Basic</em>'.
-	 * @generated
-	 */
-	Basic createBasic();
-
-	/**
-	 * Returns a new object of class '<em>Primary</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Primary</em>'.
-	 * @generated
-	 */
-	Primary createPrimary();
-
-	/**
-	 * Returns a new object of class '<em>Secondary</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Secondary</em>'.
-	 * @generated
-	 */
-	Secondary createSecondary();
-
-	/**
-	 * Returns a new object of class '<em>Dark</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dark</em>'.
-	 * @generated
-	 */
-	Dark createDark();
-
-	/**
-	 * Returns a new object of class '<em>Info</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Info</em>'.
-	 * @generated
-	 */
-	Info createInfo();
-
-	/**
-	 * Returns a new object of class '<em>Light</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Light</em>'.
-	 * @generated
-	 */
-	Light createLight();
-
-	/**
-	 * Returns a new object of class '<em>Succes</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Succes</em>'.
-	 * @generated
-	 */
-	Succes createSucces();
-
-	/**
 	 * Returns a new object of class '<em>Rounded</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -319,6 +229,15 @@ public interface BstrapFactory extends EFactory {
 	Responsive createResponsive();
 
 	/**
+	 * Returns a new object of class '<em>Button Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Button Style</em>'.
+	 * @generated
+	 */
+	ButtonStyle createButtonStyle();
+
+	/**
 	 * Returns a new object of class '<em>Button Size</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -362,15 +281,6 @@ public interface BstrapFactory extends EFactory {
 	 * @generated
 	 */
 	Button createButton();
-
-	/**
-	 * Returns a new object of class '<em>Page Content</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Page Content</em>'.
-	 * @generated
-	 */
-	PageContent createPageContent();
 
 	/**
 	 * Returns the package supported by this factory.

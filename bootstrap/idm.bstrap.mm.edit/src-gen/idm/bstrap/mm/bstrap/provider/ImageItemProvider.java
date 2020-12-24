@@ -108,7 +108,9 @@ public class ImageItemProvider extends UrlBasedLinkItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Image_type");
+		String label = ((Image) object).getUrl();
+		return label == null || label.length() == 0 ? getString("_UI_Image_type")
+				: getString("_UI_Image_type") + " " + label;
 	}
 
 	/**

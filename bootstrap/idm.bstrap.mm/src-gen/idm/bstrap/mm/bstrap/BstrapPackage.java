@@ -111,7 +111,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getPageContent()
 	 * @generated
 	 */
-	int PAGE_CONTENT = 53;
+	int PAGE_CONTENT = 45;
 
 	/**
 	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
@@ -160,22 +160,22 @@ public interface BstrapPackage extends EPackage {
 	int CONTAINER__GENERAL_PROPERTIES = PAGE_CONTENT__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Pagecontents</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Textpagecontents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__PAGECONTENTS = PAGE_CONTENT_FEATURE_COUNT + 0;
+	int CONTAINER__TEXTPAGECONTENTS = PAGE_CONTENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Textcontainers</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Containers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__TEXTCONTAINERS = PAGE_CONTENT_FEATURE_COUNT + 1;
+	int CONTAINER__CONTAINERS = PAGE_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Container</em>' class.
@@ -215,22 +215,22 @@ public interface BstrapPackage extends EPackage {
 	int FIX_CONTAINER__GENERAL_PROPERTIES = CONTAINER__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Pagecontents</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Textpagecontents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIX_CONTAINER__PAGECONTENTS = CONTAINER__PAGECONTENTS;
+	int FIX_CONTAINER__TEXTPAGECONTENTS = CONTAINER__TEXTPAGECONTENTS;
 
 	/**
-	 * The feature id for the '<em><b>Textcontainers</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Containers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIX_CONTAINER__TEXTCONTAINERS = CONTAINER__TEXTCONTAINERS;
+	int FIX_CONTAINER__CONTAINERS = CONTAINER__CONTAINERS;
 
 	/**
 	 * The number of structural features of the '<em>Fix Container</em>' class.
@@ -270,22 +270,22 @@ public interface BstrapPackage extends EPackage {
 	int FLUID_CONTAINER__GENERAL_PROPERTIES = CONTAINER__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Pagecontents</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Textpagecontents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLUID_CONTAINER__PAGECONTENTS = CONTAINER__PAGECONTENTS;
+	int FLUID_CONTAINER__TEXTPAGECONTENTS = CONTAINER__TEXTPAGECONTENTS;
 
 	/**
-	 * The feature id for the '<em><b>Textcontainers</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Containers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLUID_CONTAINER__TEXTCONTAINERS = CONTAINER__TEXTCONTAINERS;
+	int FLUID_CONTAINER__CONTAINERS = CONTAINER__CONTAINERS;
 
 	/**
 	 * The number of structural features of the '<em>Fluid Container</em>' class.
@@ -306,6 +306,43 @@ public interface BstrapPackage extends EPackage {
 	int FLUID_CONTAINER_OPERATION_COUNT = CONTAINER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TextPageContentImpl <em>Text Page Content</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.TextPageContentImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTextPageContent()
+	 * @generated
+	 */
+	int TEXT_PAGE_CONTENT = 46;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_PAGE_CONTENT__GENERAL_PROPERTIES = PAGE_CONTENT__GENERAL_PROPERTIES;
+
+	/**
+	 * The number of structural features of the '<em>Text Page Content</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_PAGE_CONTENT_FEATURE_COUNT = PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Text Page Content</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_PAGE_CONTENT_OPERATION_COUNT = PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TextContainerImpl <em>Text Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -322,7 +359,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CONTAINER__GENERAL_PROPERTIES = PAGE_CONTENT__GENERAL_PROPERTIES;
+	int TEXT_CONTAINER__GENERAL_PROPERTIES = TEXT_PAGE_CONTENT__GENERAL_PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Textelements</b></em>' containment reference list.
@@ -331,7 +368,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CONTAINER__TEXTELEMENTS = PAGE_CONTENT_FEATURE_COUNT + 0;
+	int TEXT_CONTAINER__TEXTELEMENTS = TEXT_PAGE_CONTENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Text Container</em>' class.
@@ -340,7 +377,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CONTAINER_FEATURE_COUNT = PAGE_CONTENT_FEATURE_COUNT + 1;
+	int TEXT_CONTAINER_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Text Container</em>' class.
@@ -349,7 +386,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CONTAINER_OPERATION_COUNT = PAGE_CONTENT_OPERATION_COUNT + 0;
+	int TEXT_CONTAINER_OPERATION_COUNT = TEXT_PAGE_CONTENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ParagrapheImpl <em>Paragraphe</em>}' class.
@@ -564,52 +601,6 @@ public interface BstrapPackage extends EPackage {
 	int CODE_OPERATION_COUNT = TEXT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BlockquoteImpl <em>Blockquote</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.BlockquoteImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBlockquote()
-	 * @generated
-	 */
-	int BLOCKQUOTE = 10;
-
-	/**
-	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BLOCKQUOTE__GENERAL_PROPERTIES = PAGE_CONTENT__GENERAL_PROPERTIES;
-
-	/**
-	 * The feature id for the '<em><b>Pagecontents</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BLOCKQUOTE__PAGECONTENTS = PAGE_CONTENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Blockquote</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BLOCKQUOTE_FEATURE_COUNT = PAGE_CONTENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Blockquote</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BLOCKQUOTE_OPERATION_COUNT = PAGE_CONTENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ContainableTextElementImpl <em>Containable Text Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -617,7 +608,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getContainableTextElement()
 	 * @generated
 	 */
-	int CONTAINABLE_TEXT_ELEMENT = 14;
+	int CONTAINABLE_TEXT_ELEMENT = 13;
 
 	/**
 	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
@@ -654,7 +645,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getCompositeTextElement()
 	 * @generated
 	 */
-	int COMPOSITE_TEXT_ELEMENT = 11;
+	int COMPOSITE_TEXT_ELEMENT = 10;
 
 	/**
 	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
@@ -700,7 +691,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getUrlBasedLink()
 	 * @generated
 	 */
-	int URL_BASED_LINK = 12;
+	int URL_BASED_LINK = 11;
 
 	/**
 	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
@@ -721,13 +712,31 @@ public interface BstrapPackage extends EPackage {
 	int URL_BASED_LINK__SUB_TEXT_ELEMENTS = COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_BASED_LINK__URL = COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int URL_BASED_LINK__TITLE = COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Url Based Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int URL_BASED_LINK_FEATURE_COUNT = COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int URL_BASED_LINK_FEATURE_COUNT = COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Url Based Link</em>' class.
@@ -746,7 +755,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getImage()
 	 * @generated
 	 */
-	int IMAGE = 13;
+	int IMAGE = 12;
 
 	/**
 	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
@@ -765,6 +774,24 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE__SUB_TEXT_ELEMENTS = URL_BASED_LINK__SUB_TEXT_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__URL = URL_BASED_LINK__URL;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAGE__TITLE = URL_BASED_LINK__TITLE;
 
 	/**
 	 * The feature id for the '<em><b>Imageproperties</b></em>' containment reference list.
@@ -801,7 +828,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getPropertyClass()
 	 * @generated
 	 */
-	int PROPERTY_CLASS = 16;
+	int PROPERTY_CLASS = 15;
 
 	/**
 	 * The number of structural features of the '<em>Property Class</em>' class.
@@ -829,7 +856,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getGeneral()
 	 * @generated
 	 */
-	int GENERAL = 15;
+	int GENERAL = 14;
 
 	/**
 	 * The number of structural features of the '<em>General</em>' class.
@@ -857,7 +884,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getMargesProperty()
 	 * @generated
 	 */
-	int MARGES_PROPERTY = 17;
+	int MARGES_PROPERTY = 16;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -869,13 +896,22 @@ public interface BstrapPackage extends EPackage {
 	int MARGES_PROPERTY__LEVEL = GENERAL_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Alignement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARGES_PROPERTY__ALIGNEMENT = GENERAL_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Marges Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MARGES_PROPERTY_FEATURE_COUNT = GENERAL_FEATURE_COUNT + 1;
+	int MARGES_PROPERTY_FEATURE_COUNT = GENERAL_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Marges Property</em>' class.
@@ -894,7 +930,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getMargin()
 	 * @generated
 	 */
-	int MARGIN = 18;
+	int MARGIN = 17;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -904,6 +940,15 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int MARGIN__LEVEL = MARGES_PROPERTY__LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Alignement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MARGIN__ALIGNEMENT = MARGES_PROPERTY__ALIGNEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Margin</em>' class.
@@ -931,7 +976,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getPadding()
 	 * @generated
 	 */
-	int PADDING = 19;
+	int PADDING = 18;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -941,6 +986,15 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int PADDING__LEVEL = MARGES_PROPERTY__LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Alignement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PADDING__ALIGNEMENT = MARGES_PROPERTY__ALIGNEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Padding</em>' class.
@@ -968,7 +1022,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBackground()
 	 * @generated
 	 */
-	int BACKGROUND = 20;
+	int BACKGROUND = 19;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -1005,7 +1059,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBorderProperty()
 	 * @generated
 	 */
-	int BORDER_PROPERTY = 21;
+	int BORDER_PROPERTY = 20;
 
 	/**
 	 * The number of structural features of the '<em>Border Property</em>' class.
@@ -1033,7 +1087,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBorder()
 	 * @generated
 	 */
-	int BORDER = 22;
+	int BORDER = 21;
 
 	/**
 	 * The number of structural features of the '<em>Border</em>' class.
@@ -1061,7 +1115,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getColoredBorder()
 	 * @generated
 	 */
-	int COLORED_BORDER = 23;
+	int COLORED_BORDER = 22;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -1098,7 +1152,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getDisplayProperty()
 	 * @generated
 	 */
-	int DISPLAY_PROPERTY = 24;
+	int DISPLAY_PROPERTY = 23;
 
 	/**
 	 * The number of structural features of the '<em>Display Property</em>' class.
@@ -1126,7 +1180,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getDisplay1()
 	 * @generated
 	 */
-	int DISPLAY1 = 25;
+	int DISPLAY1 = 24;
 
 	/**
 	 * The number of structural features of the '<em>Display1</em>' class.
@@ -1154,7 +1208,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getDisplay2()
 	 * @generated
 	 */
-	int DISPLAY2 = 26;
+	int DISPLAY2 = 25;
 
 	/**
 	 * The number of structural features of the '<em>Display2</em>' class.
@@ -1182,7 +1236,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getDisplay3()
 	 * @generated
 	 */
-	int DISPLAY3 = 27;
+	int DISPLAY3 = 26;
 
 	/**
 	 * The number of structural features of the '<em>Display3</em>' class.
@@ -1210,7 +1264,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getDisplay4()
 	 * @generated
 	 */
-	int DISPLAY4 = 28;
+	int DISPLAY4 = 27;
 
 	/**
 	 * The number of structural features of the '<em>Display4</em>' class.
@@ -1238,7 +1292,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonProperty()
 	 * @generated
 	 */
-	int BUTTON_PROPERTY = 29;
+	int BUTTON_PROPERTY = 28;
 
 	/**
 	 * The number of structural features of the '<em>Button Property</em>' class.
@@ -1266,193 +1320,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonStyle()
 	 * @generated
 	 */
-	int BUTTON_STYLE = 46;
-
-	/**
-	 * The number of structural features of the '<em>Button Style</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUTTON_STYLE_FEATURE_COUNT = BUTTON_PROPERTY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Button Style</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUTTON_STYLE_OPERATION_COUNT = BUTTON_PROPERTY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BasicImpl <em>Basic</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.BasicImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBasic()
-	 * @generated
-	 */
-	int BASIC = 30;
-
-	/**
-	 * The number of structural features of the '<em>Basic</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BASIC_FEATURE_COUNT = BUTTON_STYLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Basic</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BASIC_OPERATION_COUNT = BUTTON_STYLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.PrimaryImpl <em>Primary</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.PrimaryImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getPrimary()
-	 * @generated
-	 */
-	int PRIMARY = 31;
-
-	/**
-	 * The number of structural features of the '<em>Primary</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIMARY_FEATURE_COUNT = BUTTON_STYLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Primary</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRIMARY_OPERATION_COUNT = BUTTON_STYLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.SecondaryImpl <em>Secondary</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.SecondaryImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSecondary()
-	 * @generated
-	 */
-	int SECONDARY = 32;
-
-	/**
-	 * The number of structural features of the '<em>Secondary</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECONDARY_FEATURE_COUNT = BUTTON_STYLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Secondary</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SECONDARY_OPERATION_COUNT = BUTTON_STYLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.DarkImpl <em>Dark</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.DarkImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getDark()
-	 * @generated
-	 */
-	int DARK = 33;
-
-	/**
-	 * The number of structural features of the '<em>Dark</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_FEATURE_COUNT = BUTTON_STYLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Dark</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DARK_OPERATION_COUNT = BUTTON_STYLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.InfoImpl <em>Info</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.InfoImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getInfo()
-	 * @generated
-	 */
-	int INFO = 34;
-
-	/**
-	 * The number of structural features of the '<em>Info</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFO_FEATURE_COUNT = BUTTON_STYLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Info</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INFO_OPERATION_COUNT = BUTTON_STYLE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.LightImpl <em>Light</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.LightImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLight()
-	 * @generated
-	 */
-	int LIGHT = 35;
-
-	/**
-	 * The number of structural features of the '<em>Light</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIGHT_FEATURE_COUNT = BUTTON_STYLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Light</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LIGHT_OPERATION_COUNT = BUTTON_STYLE_OPERATION_COUNT + 0;
+	int BUTTON_STYLE = 38;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ImagePropertyImpl <em>Image Property</em>}' class.
@@ -1462,7 +1330,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getImageProperty()
 	 * @generated
 	 */
-	int IMAGE_PROPERTY = 36;
+	int IMAGE_PROPERTY = 29;
 
 	/**
 	 * The number of structural features of the '<em>Image Property</em>' class.
@@ -1490,7 +1358,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getImageShape()
 	 * @generated
 	 */
-	int IMAGE_SHAPE = 37;
+	int IMAGE_SHAPE = 30;
 
 	/**
 	 * The number of structural features of the '<em>Image Shape</em>' class.
@@ -1511,34 +1379,6 @@ public interface BstrapPackage extends EPackage {
 	int IMAGE_SHAPE_OPERATION_COUNT = IMAGE_PROPERTY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.SuccesImpl <em>Succes</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.SuccesImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSucces()
-	 * @generated
-	 */
-	int SUCCES = 38;
-
-	/**
-	 * The number of structural features of the '<em>Succes</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUCCES_FEATURE_COUNT = BUTTON_STYLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Succes</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUCCES_OPERATION_COUNT = BUTTON_STYLE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ImageAligningImpl <em>Image Aligning</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1546,7 +1386,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getImageAligning()
 	 * @generated
 	 */
-	int IMAGE_ALIGNING = 39;
+	int IMAGE_ALIGNING = 31;
 
 	/**
 	 * The number of structural features of the '<em>Image Aligning</em>' class.
@@ -1574,7 +1414,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getRounded()
 	 * @generated
 	 */
-	int ROUNDED = 40;
+	int ROUNDED = 32;
 
 	/**
 	 * The number of structural features of the '<em>Rounded</em>' class.
@@ -1602,7 +1442,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getThumbnail()
 	 * @generated
 	 */
-	int THUMBNAIL = 41;
+	int THUMBNAIL = 33;
 
 	/**
 	 * The number of structural features of the '<em>Thumbnail</em>' class.
@@ -1630,7 +1470,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getCircle()
 	 * @generated
 	 */
-	int CIRCLE = 42;
+	int CIRCLE = 34;
 
 	/**
 	 * The number of structural features of the '<em>Circle</em>' class.
@@ -1658,7 +1498,16 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getFloat()
 	 * @generated
 	 */
-	int FLOAT = 43;
+	int FLOAT = 35;
+
+	/**
+	 * The feature id for the '<em><b>Alignement</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FLOAT__ALIGNEMENT = IMAGE_ALIGNING_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Float</em>' class.
@@ -1667,7 +1516,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FLOAT_FEATURE_COUNT = IMAGE_ALIGNING_FEATURE_COUNT + 0;
+	int FLOAT_FEATURE_COUNT = IMAGE_ALIGNING_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Float</em>' class.
@@ -1686,7 +1535,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getCenter()
 	 * @generated
 	 */
-	int CENTER = 44;
+	int CENTER = 36;
 
 	/**
 	 * The number of structural features of the '<em>Center</em>' class.
@@ -1714,7 +1563,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getResponsive()
 	 * @generated
 	 */
-	int RESPONSIVE = 45;
+	int RESPONSIVE = 37;
 
 	/**
 	 * The number of structural features of the '<em>Responsive</em>' class.
@@ -1735,6 +1584,33 @@ public interface BstrapPackage extends EPackage {
 	int RESPONSIVE_OPERATION_COUNT = IMAGE_ALIGNING_OPERATION_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON_STYLE__COLOR = BUTTON_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Button Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON_STYLE_FEATURE_COUNT = BUTTON_PROPERTY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Button Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON_STYLE_OPERATION_COUNT = BUTTON_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ButtonSizeImpl <em>Button Size</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1742,7 +1618,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonSize()
 	 * @generated
 	 */
-	int BUTTON_SIZE = 47;
+	int BUTTON_SIZE = 39;
 
 	/**
 	 * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -1779,7 +1655,16 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLink()
 	 * @generated
 	 */
-	int LINK = 48;
+	int LINK = 40;
+
+	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__COLOR = BUTTON_STYLE__COLOR;
 
 	/**
 	 * The number of structural features of the '<em>Link</em>' class.
@@ -1807,7 +1692,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonState()
 	 * @generated
 	 */
-	int BUTTON_STATE = 49;
+	int BUTTON_STATE = 41;
 
 	/**
 	 * The number of structural features of the '<em>Button State</em>' class.
@@ -1835,7 +1720,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getDisabled()
 	 * @generated
 	 */
-	int DISABLED = 50;
+	int DISABLED = 42;
 
 	/**
 	 * The number of structural features of the '<em>Disabled</em>' class.
@@ -1863,7 +1748,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getActive()
 	 * @generated
 	 */
-	int ACTIVE = 51;
+	int ACTIVE = 43;
 
 	/**
 	 * The number of structural features of the '<em>Active</em>' class.
@@ -1891,7 +1776,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButton()
 	 * @generated
 	 */
-	int BUTTON = 52;
+	int BUTTON = 44;
 
 	/**
 	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
@@ -1912,13 +1797,22 @@ public interface BstrapPackage extends EPackage {
 	int BUTTON__BUTTONPROPERTIES = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__CONTENT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Button</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 1;
+	int BUTTON_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Button</em>' class.
@@ -1937,7 +1831,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getColor()
 	 * @generated
 	 */
-	int COLOR = 54;
+	int COLOR = 47;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Size <em>Size</em>}' enum.
@@ -1947,7 +1841,17 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 55;
+	int SIZE = 48;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Alignement <em>Alignement</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.Alignement
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlignement()
+	 * @generated
+	 */
+	int ALIGNEMENT = 49;
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Page <em>Page</em>}'.
@@ -1992,26 +1896,26 @@ public interface BstrapPackage extends EPackage {
 	EClass getContainer();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Container#getPagecontents <em>Pagecontents</em>}'.
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Container#getTextpagecontents <em>Textpagecontents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pagecontents</em>'.
-	 * @see idm.bstrap.mm.bstrap.Container#getPagecontents()
+	 * @return the meta object for the containment reference list '<em>Textpagecontents</em>'.
+	 * @see idm.bstrap.mm.bstrap.Container#getTextpagecontents()
 	 * @see #getContainer()
 	 * @generated
 	 */
-	EReference getContainer_Pagecontents();
+	EReference getContainer_Textpagecontents();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Container#getTextcontainers <em>Textcontainers</em>}'.
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Container#getContainers <em>Containers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Textcontainers</em>'.
-	 * @see idm.bstrap.mm.bstrap.Container#getTextcontainers()
+	 * @return the meta object for the containment reference list '<em>Containers</em>'.
+	 * @see idm.bstrap.mm.bstrap.Container#getContainers()
 	 * @see #getContainer()
 	 * @generated
 	 */
-	EReference getContainer_Textcontainers();
+	EReference getContainer_Containers();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.FixContainer <em>Fix Container</em>}'.
@@ -2138,27 +2042,6 @@ public interface BstrapPackage extends EPackage {
 	EClass getCode();
 
 	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Blockquote <em>Blockquote</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Blockquote</em>'.
-	 * @see idm.bstrap.mm.bstrap.Blockquote
-	 * @generated
-	 */
-	EClass getBlockquote();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Blockquote#getPagecontents <em>Pagecontents</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Pagecontents</em>'.
-	 * @see idm.bstrap.mm.bstrap.Blockquote#getPagecontents()
-	 * @see #getBlockquote()
-	 * @generated
-	 */
-	EReference getBlockquote_Pagecontents();
-
-	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.CompositeTextElement <em>Composite Text Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2188,6 +2071,28 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getUrlBasedLink();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.UrlBasedLink#getUrl <em>Url</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Url</em>'.
+	 * @see idm.bstrap.mm.bstrap.UrlBasedLink#getUrl()
+	 * @see #getUrlBasedLink()
+	 * @generated
+	 */
+	EAttribute getUrlBasedLink_Url();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.UrlBasedLink#getTitle <em>Title</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Title</em>'.
+	 * @see idm.bstrap.mm.bstrap.UrlBasedLink#getTitle()
+	 * @see #getUrlBasedLink()
+	 * @generated
+	 */
+	EAttribute getUrlBasedLink_Title();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Image <em>Image</em>}'.
@@ -2260,6 +2165,17 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMargesProperty_Level();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.MargesProperty#getAlignement <em>Alignement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alignement</em>'.
+	 * @see idm.bstrap.mm.bstrap.MargesProperty#getAlignement()
+	 * @see #getMargesProperty()
+	 * @generated
+	 */
+	EAttribute getMargesProperty_Alignement();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Margin <em>Margin</em>}'.
@@ -2404,66 +2320,6 @@ public interface BstrapPackage extends EPackage {
 	EClass getButtonProperty();
 
 	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Basic <em>Basic</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Basic</em>'.
-	 * @see idm.bstrap.mm.bstrap.Basic
-	 * @generated
-	 */
-	EClass getBasic();
-
-	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Primary <em>Primary</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Primary</em>'.
-	 * @see idm.bstrap.mm.bstrap.Primary
-	 * @generated
-	 */
-	EClass getPrimary();
-
-	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Secondary <em>Secondary</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Secondary</em>'.
-	 * @see idm.bstrap.mm.bstrap.Secondary
-	 * @generated
-	 */
-	EClass getSecondary();
-
-	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Dark <em>Dark</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Dark</em>'.
-	 * @see idm.bstrap.mm.bstrap.Dark
-	 * @generated
-	 */
-	EClass getDark();
-
-	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Info <em>Info</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Info</em>'.
-	 * @see idm.bstrap.mm.bstrap.Info
-	 * @generated
-	 */
-	EClass getInfo();
-
-	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Light <em>Light</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Light</em>'.
-	 * @see idm.bstrap.mm.bstrap.Light
-	 * @generated
-	 */
-	EClass getLight();
-
-	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ImageProperty <em>Image Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2482,16 +2338,6 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getImageShape();
-
-	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Succes <em>Succes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Succes</em>'.
-	 * @see idm.bstrap.mm.bstrap.Succes
-	 * @generated
-	 */
-	EClass getSucces();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ImageAligning <em>Image Aligning</em>}'.
@@ -2544,6 +2390,17 @@ public interface BstrapPackage extends EPackage {
 	EClass getFloat();
 
 	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.Float#getAlignement <em>Alignement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alignement</em>'.
+	 * @see idm.bstrap.mm.bstrap.Float#getAlignement()
+	 * @see #getFloat()
+	 * @generated
+	 */
+	EAttribute getFloat_Alignement();
+
+	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Center <em>Center</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2572,6 +2429,17 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getButtonStyle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.ButtonStyle#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see idm.bstrap.mm.bstrap.ButtonStyle#getColor()
+	 * @see #getButtonStyle()
+	 * @generated
+	 */
+	EAttribute getButtonStyle_Color();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ButtonSize <em>Button Size</em>}'.
@@ -2656,6 +2524,17 @@ public interface BstrapPackage extends EPackage {
 	EReference getButton_Buttonproperties();
 
 	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.Button#getContent <em>Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Content</em>'.
+	 * @see idm.bstrap.mm.bstrap.Button#getContent()
+	 * @see #getButton()
+	 * @generated
+	 */
+	EAttribute getButton_Content();
+
+	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.PageContent <em>Page Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2677,6 +2556,16 @@ public interface BstrapPackage extends EPackage {
 	EReference getPageContent_GeneralProperties();
 
 	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.TextPageContent <em>Text Page Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Text Page Content</em>'.
+	 * @see idm.bstrap.mm.bstrap.TextPageContent
+	 * @generated
+	 */
+	EClass getTextPageContent();
+
+	/**
 	 * Returns the meta object for enum '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2695,6 +2584,16 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getSize();
+
+	/**
+	 * Returns the meta object for enum '{@link idm.bstrap.mm.bstrap.Alignement <em>Alignement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Alignement</em>'.
+	 * @see idm.bstrap.mm.bstrap.Alignement
+	 * @generated
+	 */
+	EEnum getAlignement();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2756,20 +2655,20 @@ public interface BstrapPackage extends EPackage {
 		EClass CONTAINER = eINSTANCE.getContainer();
 
 		/**
-		 * The meta object literal for the '<em><b>Pagecontents</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Textpagecontents</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTAINER__PAGECONTENTS = eINSTANCE.getContainer_Pagecontents();
+		EReference CONTAINER__TEXTPAGECONTENTS = eINSTANCE.getContainer_Textpagecontents();
 
 		/**
-		 * The meta object literal for the '<em><b>Textcontainers</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Containers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTAINER__TEXTCONTAINERS = eINSTANCE.getContainer_Textcontainers();
+		EReference CONTAINER__CONTAINERS = eINSTANCE.getContainer_Containers();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.FixContainerImpl <em>Fix Container</em>}' class.
@@ -2884,24 +2783,6 @@ public interface BstrapPackage extends EPackage {
 		EClass CODE = eINSTANCE.getCode();
 
 		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BlockquoteImpl <em>Blockquote</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.impl.BlockquoteImpl
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBlockquote()
-		 * @generated
-		 */
-		EClass BLOCKQUOTE = eINSTANCE.getBlockquote();
-
-		/**
-		 * The meta object literal for the '<em><b>Pagecontents</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BLOCKQUOTE__PAGECONTENTS = eINSTANCE.getBlockquote_Pagecontents();
-
-		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.CompositeTextElementImpl <em>Composite Text Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2928,6 +2809,22 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass URL_BASED_LINK = eINSTANCE.getUrlBasedLink();
+
+		/**
+		 * The meta object literal for the '<em><b>Url</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute URL_BASED_LINK__URL = eINSTANCE.getUrlBasedLink_Url();
+
+		/**
+		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute URL_BASED_LINK__TITLE = eINSTANCE.getUrlBasedLink_Title();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ImageImpl <em>Image</em>}' class.
@@ -2994,6 +2891,14 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute MARGES_PROPERTY__LEVEL = eINSTANCE.getMargesProperty_Level();
+
+		/**
+		 * The meta object literal for the '<em><b>Alignement</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MARGES_PROPERTY__ALIGNEMENT = eINSTANCE.getMargesProperty_Alignement();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.MarginImpl <em>Margin</em>}' class.
@@ -3132,66 +3037,6 @@ public interface BstrapPackage extends EPackage {
 		EClass BUTTON_PROPERTY = eINSTANCE.getButtonProperty();
 
 		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BasicImpl <em>Basic</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.impl.BasicImpl
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBasic()
-		 * @generated
-		 */
-		EClass BASIC = eINSTANCE.getBasic();
-
-		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.PrimaryImpl <em>Primary</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.impl.PrimaryImpl
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getPrimary()
-		 * @generated
-		 */
-		EClass PRIMARY = eINSTANCE.getPrimary();
-
-		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.SecondaryImpl <em>Secondary</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.impl.SecondaryImpl
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSecondary()
-		 * @generated
-		 */
-		EClass SECONDARY = eINSTANCE.getSecondary();
-
-		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.DarkImpl <em>Dark</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.impl.DarkImpl
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getDark()
-		 * @generated
-		 */
-		EClass DARK = eINSTANCE.getDark();
-
-		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.InfoImpl <em>Info</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.impl.InfoImpl
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getInfo()
-		 * @generated
-		 */
-		EClass INFO = eINSTANCE.getInfo();
-
-		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.LightImpl <em>Light</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.impl.LightImpl
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLight()
-		 * @generated
-		 */
-		EClass LIGHT = eINSTANCE.getLight();
-
-		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ImagePropertyImpl <em>Image Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3210,16 +3055,6 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass IMAGE_SHAPE = eINSTANCE.getImageShape();
-
-		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.SuccesImpl <em>Succes</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.impl.SuccesImpl
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSucces()
-		 * @generated
-		 */
-		EClass SUCCES = eINSTANCE.getSucces();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ImageAligningImpl <em>Image Aligning</em>}' class.
@@ -3272,6 +3107,14 @@ public interface BstrapPackage extends EPackage {
 		EClass FLOAT = eINSTANCE.getFloat();
 
 		/**
+		 * The meta object literal for the '<em><b>Alignement</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FLOAT__ALIGNEMENT = eINSTANCE.getFloat_Alignement();
+
+		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.CenterImpl <em>Center</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3300,6 +3143,14 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BUTTON_STYLE = eINSTANCE.getButtonStyle();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUTTON_STYLE__COLOR = eINSTANCE.getButtonStyle_Color();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ButtonSizeImpl <em>Button Size</em>}' class.
@@ -3378,6 +3229,14 @@ public interface BstrapPackage extends EPackage {
 		EReference BUTTON__BUTTONPROPERTIES = eINSTANCE.getButton_Buttonproperties();
 
 		/**
+		 * The meta object literal for the '<em><b>Content</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUTTON__CONTENT = eINSTANCE.getButton_Content();
+
+		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.PageContentImpl <em>Page Content</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3394,6 +3253,16 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PAGE_CONTENT__GENERAL_PROPERTIES = eINSTANCE.getPageContent_GeneralProperties();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.TextPageContentImpl <em>Text Page Content</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.TextPageContentImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTextPageContent()
+		 * @generated
+		 */
+		EClass TEXT_PAGE_CONTENT = eINSTANCE.getTextPageContent();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.
@@ -3414,6 +3283,16 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum SIZE = eINSTANCE.getSize();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.Alignement <em>Alignement</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.Alignement
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlignement()
+		 * @generated
+		 */
+		EEnum ALIGNEMENT = eINSTANCE.getAlignement();
 
 	}
 

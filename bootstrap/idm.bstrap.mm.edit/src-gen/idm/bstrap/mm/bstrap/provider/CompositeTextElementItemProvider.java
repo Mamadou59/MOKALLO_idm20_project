@@ -148,12 +148,6 @@ public class CompositeTextElementItemProvider extends ContainableTextElementItem
 				BstrapFactory.eINSTANCE.createCode()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
-				BstrapFactory.eINSTANCE.createContainableTextElement()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
-				BstrapFactory.eINSTANCE.createCompositeTextElement()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,
 				BstrapFactory.eINSTANCE.createImage()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS,

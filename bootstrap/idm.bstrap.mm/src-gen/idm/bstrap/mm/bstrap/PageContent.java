@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see idm.bstrap.mm.bstrap.BstrapPackage#getPageContent()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface PageContent extends EObject {

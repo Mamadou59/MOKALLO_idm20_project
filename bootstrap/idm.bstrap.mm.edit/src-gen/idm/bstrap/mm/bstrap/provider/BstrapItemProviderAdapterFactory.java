@@ -234,52 +234,6 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Blockquote} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BlockquoteItemProvider blockquoteItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Blockquote}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBlockquoteAdapter() {
-		if (blockquoteItemProvider == null) {
-			blockquoteItemProvider = new BlockquoteItemProvider(this);
-		}
-
-		return blockquoteItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.CompositeTextElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CompositeTextElementItemProvider compositeTextElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.CompositeTextElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCompositeTextElementAdapter() {
-		if (compositeTextElementItemProvider == null) {
-			compositeTextElementItemProvider = new CompositeTextElementItemProvider(this);
-		}
-
-		return compositeTextElementItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Image} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -300,29 +254,6 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 		}
 
 		return imageItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.ContainableTextElement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ContainableTextElementItemProvider containableTextElementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.ContainableTextElement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createContainableTextElementAdapter() {
-		if (containableTextElementItemProvider == null) {
-			containableTextElementItemProvider = new ContainableTextElementItemProvider(this);
-		}
-
-		return containableTextElementItemProvider;
 	}
 
 	/**
@@ -533,167 +464,6 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Basic} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected BasicItemProvider basicItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Basic}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createBasicAdapter() {
-		if (basicItemProvider == null) {
-			basicItemProvider = new BasicItemProvider(this);
-		}
-
-		return basicItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Primary} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PrimaryItemProvider primaryItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Primary}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPrimaryAdapter() {
-		if (primaryItemProvider == null) {
-			primaryItemProvider = new PrimaryItemProvider(this);
-		}
-
-		return primaryItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Secondary} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SecondaryItemProvider secondaryItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Secondary}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSecondaryAdapter() {
-		if (secondaryItemProvider == null) {
-			secondaryItemProvider = new SecondaryItemProvider(this);
-		}
-
-		return secondaryItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Dark} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DarkItemProvider darkItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Dark}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDarkAdapter() {
-		if (darkItemProvider == null) {
-			darkItemProvider = new DarkItemProvider(this);
-		}
-
-		return darkItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Info} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected InfoItemProvider infoItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Info}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createInfoAdapter() {
-		if (infoItemProvider == null) {
-			infoItemProvider = new InfoItemProvider(this);
-		}
-
-		return infoItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Light} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected LightItemProvider lightItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Light}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createLightAdapter() {
-		if (lightItemProvider == null) {
-			lightItemProvider = new LightItemProvider(this);
-		}
-
-		return lightItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Succes} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SuccesItemProvider succesItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Succes}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSuccesAdapter() {
-		if (succesItemProvider == null) {
-			succesItemProvider = new SuccesItemProvider(this);
-		}
-
-		return succesItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Rounded} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -832,6 +602,29 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.ButtonStyle} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ButtonStyleItemProvider buttonStyleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.ButtonStyle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createButtonStyleAdapter() {
+		if (buttonStyleItemProvider == null) {
+			buttonStyleItemProvider = new ButtonStyleItemProvider(this);
+		}
+
+		return buttonStyleItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.ButtonSize} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -947,29 +740,6 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.PageContent} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PageContentItemProvider pageContentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.PageContent}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPageContentAdapter() {
-		if (pageContentItemProvider == null) {
-			pageContentItemProvider = new PageContentItemProvider(this);
-		}
-
-		return pageContentItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1082,14 +852,8 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 			textItemProvider.dispose();
 		if (codeItemProvider != null)
 			codeItemProvider.dispose();
-		if (blockquoteItemProvider != null)
-			blockquoteItemProvider.dispose();
-		if (compositeTextElementItemProvider != null)
-			compositeTextElementItemProvider.dispose();
 		if (imageItemProvider != null)
 			imageItemProvider.dispose();
-		if (containableTextElementItemProvider != null)
-			containableTextElementItemProvider.dispose();
 		if (marginItemProvider != null)
 			marginItemProvider.dispose();
 		if (paddingItemProvider != null)
@@ -1108,20 +872,6 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 			display3ItemProvider.dispose();
 		if (display4ItemProvider != null)
 			display4ItemProvider.dispose();
-		if (basicItemProvider != null)
-			basicItemProvider.dispose();
-		if (primaryItemProvider != null)
-			primaryItemProvider.dispose();
-		if (secondaryItemProvider != null)
-			secondaryItemProvider.dispose();
-		if (darkItemProvider != null)
-			darkItemProvider.dispose();
-		if (infoItemProvider != null)
-			infoItemProvider.dispose();
-		if (lightItemProvider != null)
-			lightItemProvider.dispose();
-		if (succesItemProvider != null)
-			succesItemProvider.dispose();
 		if (roundedItemProvider != null)
 			roundedItemProvider.dispose();
 		if (thumbnailItemProvider != null)
@@ -1134,6 +884,8 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 			centerItemProvider.dispose();
 		if (responsiveItemProvider != null)
 			responsiveItemProvider.dispose();
+		if (buttonStyleItemProvider != null)
+			buttonStyleItemProvider.dispose();
 		if (buttonSizeItemProvider != null)
 			buttonSizeItemProvider.dispose();
 		if (linkItemProvider != null)
@@ -1144,8 +896,6 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 			activeItemProvider.dispose();
 		if (buttonItemProvider != null)
 			buttonItemProvider.dispose();
-		if (pageContentItemProvider != null)
-			pageContentItemProvider.dispose();
 	}
 
 }

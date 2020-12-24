@@ -3,22 +3,19 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.Active;
+import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.Background;
-import idm.bstrap.mm.bstrap.Basic;
-import idm.bstrap.mm.bstrap.Blockquote;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
 import idm.bstrap.mm.bstrap.ButtonSize;
+import idm.bstrap.mm.bstrap.ButtonStyle;
 import idm.bstrap.mm.bstrap.Center;
 import idm.bstrap.mm.bstrap.Circle;
 import idm.bstrap.mm.bstrap.Code;
 import idm.bstrap.mm.bstrap.Color;
 import idm.bstrap.mm.bstrap.ColoredBorder;
-import idm.bstrap.mm.bstrap.CompositeTextElement;
-import idm.bstrap.mm.bstrap.ContainableTextElement;
-import idm.bstrap.mm.bstrap.Dark;
 import idm.bstrap.mm.bstrap.Disabled;
 import idm.bstrap.mm.bstrap.Display1;
 import idm.bstrap.mm.bstrap.Display2;
@@ -27,20 +24,14 @@ import idm.bstrap.mm.bstrap.Display4;
 import idm.bstrap.mm.bstrap.FixContainer;
 import idm.bstrap.mm.bstrap.FluidContainer;
 import idm.bstrap.mm.bstrap.Image;
-import idm.bstrap.mm.bstrap.Info;
-import idm.bstrap.mm.bstrap.Light;
 import idm.bstrap.mm.bstrap.Link;
 import idm.bstrap.mm.bstrap.Margin;
 import idm.bstrap.mm.bstrap.Padding;
 import idm.bstrap.mm.bstrap.Page;
-import idm.bstrap.mm.bstrap.PageContent;
 import idm.bstrap.mm.bstrap.Paragraphe;
-import idm.bstrap.mm.bstrap.Primary;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
-import idm.bstrap.mm.bstrap.Secondary;
 import idm.bstrap.mm.bstrap.Size;
-import idm.bstrap.mm.bstrap.Succes;
 import idm.bstrap.mm.bstrap.Text;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
@@ -112,14 +103,8 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createText();
 		case BstrapPackage.CODE:
 			return createCode();
-		case BstrapPackage.BLOCKQUOTE:
-			return createBlockquote();
-		case BstrapPackage.COMPOSITE_TEXT_ELEMENT:
-			return createCompositeTextElement();
 		case BstrapPackage.IMAGE:
 			return createImage();
-		case BstrapPackage.CONTAINABLE_TEXT_ELEMENT:
-			return createContainableTextElement();
 		case BstrapPackage.MARGIN:
 			return createMargin();
 		case BstrapPackage.PADDING:
@@ -138,20 +123,6 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createDisplay3();
 		case BstrapPackage.DISPLAY4:
 			return createDisplay4();
-		case BstrapPackage.BASIC:
-			return createBasic();
-		case BstrapPackage.PRIMARY:
-			return createPrimary();
-		case BstrapPackage.SECONDARY:
-			return createSecondary();
-		case BstrapPackage.DARK:
-			return createDark();
-		case BstrapPackage.INFO:
-			return createInfo();
-		case BstrapPackage.LIGHT:
-			return createLight();
-		case BstrapPackage.SUCCES:
-			return createSucces();
 		case BstrapPackage.ROUNDED:
 			return createRounded();
 		case BstrapPackage.THUMBNAIL:
@@ -164,6 +135,8 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createCenter();
 		case BstrapPackage.RESPONSIVE:
 			return createResponsive();
+		case BstrapPackage.BUTTON_STYLE:
+			return createButtonStyle();
 		case BstrapPackage.BUTTON_SIZE:
 			return createButtonSize();
 		case BstrapPackage.LINK:
@@ -174,8 +147,6 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createActive();
 		case BstrapPackage.BUTTON:
 			return createButton();
-		case BstrapPackage.PAGE_CONTENT:
-			return createPageContent();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -193,6 +164,8 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createColorFromString(eDataType, initialValue);
 		case BstrapPackage.SIZE:
 			return createSizeFromString(eDataType, initialValue);
+		case BstrapPackage.ALIGNEMENT:
+			return createAlignementFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -210,6 +183,8 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return convertColorToString(eDataType, instanceValue);
 		case BstrapPackage.SIZE:
 			return convertSizeToString(eDataType, instanceValue);
+		case BstrapPackage.ALIGNEMENT:
+			return convertAlignementToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -290,39 +265,9 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Blockquote createBlockquote() {
-		BlockquoteImpl blockquote = new BlockquoteImpl();
-		return blockquote;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CompositeTextElement createCompositeTextElement() {
-		CompositeTextElementImpl compositeTextElement = new CompositeTextElementImpl();
-		return compositeTextElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Image createImage() {
 		ImageImpl image = new ImageImpl();
 		return image;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ContainableTextElement createContainableTextElement() {
-		ContainableTextElementImpl containableTextElement = new ContainableTextElementImpl();
-		return containableTextElement;
 	}
 
 	/**
@@ -420,76 +365,6 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Basic createBasic() {
-		BasicImpl basic = new BasicImpl();
-		return basic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Primary createPrimary() {
-		PrimaryImpl primary = new PrimaryImpl();
-		return primary;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Secondary createSecondary() {
-		SecondaryImpl secondary = new SecondaryImpl();
-		return secondary;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Dark createDark() {
-		DarkImpl dark = new DarkImpl();
-		return dark;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Info createInfo() {
-		InfoImpl info = new InfoImpl();
-		return info;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Light createLight() {
-		LightImpl light = new LightImpl();
-		return light;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Succes createSucces() {
-		SuccesImpl succes = new SuccesImpl();
-		return succes;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Rounded createRounded() {
 		RoundedImpl rounded = new RoundedImpl();
 		return rounded;
@@ -550,6 +425,16 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ButtonStyle createButtonStyle() {
+		ButtonStyleImpl buttonStyle = new ButtonStyleImpl();
+		return buttonStyle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ButtonSize createButtonSize() {
 		ButtonSizeImpl buttonSize = new ButtonSizeImpl();
 		return buttonSize;
@@ -600,16 +485,6 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PageContent createPageContent() {
-		PageContentImpl pageContent = new PageContentImpl();
-		return pageContent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Color createColorFromString(EDataType eDataType, String initialValue) {
 		Color result = Color.get(initialValue);
 		if (result == null)
@@ -646,6 +521,28 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * @generated
 	 */
 	public String convertSizeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Alignement createAlignementFromString(EDataType eDataType, String initialValue) {
+		Alignement result = Alignement.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAlignementToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

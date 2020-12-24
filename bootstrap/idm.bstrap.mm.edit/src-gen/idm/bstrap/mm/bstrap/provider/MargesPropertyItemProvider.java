@@ -45,6 +45,7 @@ public class MargesPropertyItemProvider extends GeneralItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addLevelPropertyDescriptor(object);
+			addAlignementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -62,6 +63,22 @@ public class MargesPropertyItemProvider extends GeneralItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_MargesProperty_level_feature",
 								"_UI_MargesProperty_type"),
 						BstrapPackage.Literals.MARGES_PROPERTY__LEVEL, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Alignement feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAlignementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_MargesProperty_alignement_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_MargesProperty_alignement_feature",
+								"_UI_MargesProperty_type"),
+						BstrapPackage.Literals.MARGES_PROPERTY__ALIGNEMENT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -112,6 +129,7 @@ public class MargesPropertyItemProvider extends GeneralItemProvider {
 
 		switch (notification.getFeatureID(MargesProperty.class)) {
 		case BstrapPackage.MARGES_PROPERTY__LEVEL:
+		case BstrapPackage.MARGES_PROPERTY__ALIGNEMENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

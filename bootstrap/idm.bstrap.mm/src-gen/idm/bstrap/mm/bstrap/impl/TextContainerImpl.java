@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class TextContainerImpl extends PageContentImpl implements TextContainer {
+public abstract class TextContainerImpl extends TextPageContentImpl implements TextContainer {
 	/**
 	 * The cached value of the '{@link #getTextelements() <em>Textelements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
