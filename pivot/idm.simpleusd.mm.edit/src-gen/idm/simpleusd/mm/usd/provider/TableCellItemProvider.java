@@ -46,6 +46,7 @@ public class TableCellItemProvider extends TextContainerItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addAlignementPropertyDescriptor(object);
+			addSpanPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -64,6 +65,22 @@ public class TableCellItemProvider extends TextContainerItemProvider {
 								"_UI_TableCell_type"),
 						UsdPackage.Literals.TABLE_CELL__ALIGNEMENT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Span feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSpanPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_TableCell_span_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_TableCell_span_feature",
+								"_UI_TableCell_type"),
+						UsdPackage.Literals.TABLE_CELL__SPAN, true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -114,6 +131,7 @@ public class TableCellItemProvider extends TextContainerItemProvider {
 
 		switch (notification.getFeatureID(TableCell.class)) {
 		case UsdPackage.TABLE_CELL__ALIGNEMENT:
+		case UsdPackage.TABLE_CELL__SPAN:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

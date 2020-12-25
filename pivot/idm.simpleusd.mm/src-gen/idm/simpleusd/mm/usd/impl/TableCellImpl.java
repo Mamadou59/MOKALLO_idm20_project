@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link idm.simpleusd.mm.usd.impl.TableCellImpl#getAlignement <em>Alignement</em>}</li>
+ *   <li>{@link idm.simpleusd.mm.usd.impl.TableCellImpl#getSpan <em>Span</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +46,26 @@ public class TableCellImpl extends TextContainerImpl implements TableCell {
 	 * @ordered
 	 */
 	protected TableCellAlignement alignement = ALIGNEMENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getSpan() <em>Span</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpan()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int SPAN_EDEFAULT = 1;
+
+	/**
+	 * The cached value of the '{@link #getSpan() <em>Span</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSpan()
+	 * @generated
+	 * @ordered
+	 */
+	protected int span = SPAN_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -92,11 +113,34 @@ public class TableCellImpl extends TextContainerImpl implements TableCell {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getSpan() {
+		return span;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSpan(int newSpan) {
+		int oldSpan = span;
+		span = newSpan;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.TABLE_CELL__SPAN, oldSpan, span));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case UsdPackage.TABLE_CELL__ALIGNEMENT:
 			return getAlignement();
+		case UsdPackage.TABLE_CELL__SPAN:
+			return getSpan();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,6 +155,9 @@ public class TableCellImpl extends TextContainerImpl implements TableCell {
 		switch (featureID) {
 		case UsdPackage.TABLE_CELL__ALIGNEMENT:
 			setAlignement((TableCellAlignement) newValue);
+			return;
+		case UsdPackage.TABLE_CELL__SPAN:
+			setSpan((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,6 +174,9 @@ public class TableCellImpl extends TextContainerImpl implements TableCell {
 		case UsdPackage.TABLE_CELL__ALIGNEMENT:
 			setAlignement(ALIGNEMENT_EDEFAULT);
 			return;
+		case UsdPackage.TABLE_CELL__SPAN:
+			setSpan(SPAN_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -141,6 +191,8 @@ public class TableCellImpl extends TextContainerImpl implements TableCell {
 		switch (featureID) {
 		case UsdPackage.TABLE_CELL__ALIGNEMENT:
 			return alignement != ALIGNEMENT_EDEFAULT;
+		case UsdPackage.TABLE_CELL__SPAN:
+			return span != SPAN_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -158,6 +210,8 @@ public class TableCellImpl extends TextContainerImpl implements TableCell {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (alignement: ");
 		result.append(alignement);
+		result.append(", span: ");
+		result.append(span);
 		result.append(')');
 		return result.toString();
 	}

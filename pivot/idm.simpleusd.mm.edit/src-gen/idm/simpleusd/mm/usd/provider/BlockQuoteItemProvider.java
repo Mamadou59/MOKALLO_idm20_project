@@ -184,12 +184,6 @@ public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEdit
 				UsdFactory.eINSTANCE.createHorizontalLine()));
 
 		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS, UsdFactory.eINSTANCE.createTable()));
-
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
-				UsdFactory.eINSTANCE.createTableCell()));
-
-		newChildDescriptors.add(
 				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS, UsdFactory.eINSTANCE.createButton()));
 
 		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
@@ -197,6 +191,12 @@ public class BlockQuoteItemProvider extends ItemProviderAdapter implements IEdit
 
 		newChildDescriptors.add(
 				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS, UsdFactory.eINSTANCE.createSection()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS, UsdFactory.eINSTANCE.createTable()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.BLOCK_QUOTE__CONTENTS,
+				UsdFactory.eINSTANCE.createTableCell()));
 	}
 
 	/**

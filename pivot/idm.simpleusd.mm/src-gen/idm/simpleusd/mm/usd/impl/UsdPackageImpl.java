@@ -49,6 +49,8 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Package</b>.
@@ -222,55 +224,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass tableEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tableSectionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tableBodyEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tableSeparatorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tableHeadEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tableRowEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass tableCellEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass buttonEClass = null;
 
 	/**
@@ -300,6 +253,55 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	private EClass sectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableSectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableBodyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableHeadEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableSeparatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableRowEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableCellEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -357,6 +359,9 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 				: new UsdPackageImpl();
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		XMLTypePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theUsdPackage.createPackageContents();
@@ -701,105 +706,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTable() {
-		return tableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTable_TableSections() {
-		return (EReference) tableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTableSection() {
-		return tableSectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTableSection_Rows() {
-		return (EReference) tableSectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTableBody() {
-		return tableBodyEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTableSeparator() {
-		return tableSeparatorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTableHead() {
-		return tableHeadEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTableRow() {
-		return tableRowEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTableRow_Cells() {
-		return (EReference) tableRowEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getTableCell() {
-		return tableCellEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getTableCell_Alignement() {
-		return (EAttribute) tableCellEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getButton() {
 		return buttonEClass;
 	}
@@ -883,6 +789,123 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 */
 	public EReference getSection_Contents() {
 		return (EReference) sectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTable() {
+		return tableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTable_Tablesections() {
+		return (EReference) tableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableSection() {
+		return tableSectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTableSection_Rows() {
+		return (EReference) tableSectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableBody() {
+		return tableBodyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableHead() {
+		return tableHeadEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableSeparator() {
+		return tableSeparatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableRow() {
+		return tableRowEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTableRow_Cells() {
+		return (EReference) tableRowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTableRow_RowNumber() {
+		return (EAttribute) tableRowEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableCell() {
+		return tableCellEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTableCell_Alignement() {
+		return (EAttribute) tableCellEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTableCell_Span() {
+		return (EAttribute) tableCellEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -982,24 +1005,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		compositeTextElementEClass = createEClass(COMPOSITE_TEXT_ELEMENT);
 		createEReference(compositeTextElementEClass, COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS);
 
-		tableEClass = createEClass(TABLE);
-		createEReference(tableEClass, TABLE__TABLE_SECTIONS);
-
-		tableSectionEClass = createEClass(TABLE_SECTION);
-		createEReference(tableSectionEClass, TABLE_SECTION__ROWS);
-
-		tableBodyEClass = createEClass(TABLE_BODY);
-
-		tableSeparatorEClass = createEClass(TABLE_SEPARATOR);
-
-		tableHeadEClass = createEClass(TABLE_HEAD);
-
-		tableRowEClass = createEClass(TABLE_ROW);
-		createEReference(tableRowEClass, TABLE_ROW__CELLS);
-
-		tableCellEClass = createEClass(TABLE_CELL);
-		createEAttribute(tableCellEClass, TABLE_CELL__ALIGNEMENT);
-
 		buttonEClass = createEClass(BUTTON);
 
 		navigationEClass = createEClass(NAVIGATION);
@@ -1014,6 +1019,26 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 
 		sectionEClass = createEClass(SECTION);
 		createEReference(sectionEClass, SECTION__CONTENTS);
+
+		tableEClass = createEClass(TABLE);
+		createEReference(tableEClass, TABLE__TABLESECTIONS);
+
+		tableSectionEClass = createEClass(TABLE_SECTION);
+		createEReference(tableSectionEClass, TABLE_SECTION__ROWS);
+
+		tableBodyEClass = createEClass(TABLE_BODY);
+
+		tableHeadEClass = createEClass(TABLE_HEAD);
+
+		tableSeparatorEClass = createEClass(TABLE_SEPARATOR);
+
+		tableRowEClass = createEClass(TABLE_ROW);
+		createEReference(tableRowEClass, TABLE_ROW__CELLS);
+		createEAttribute(tableRowEClass, TABLE_ROW__ROW_NUMBER);
+
+		tableCellEClass = createEClass(TABLE_CELL);
+		createEAttribute(tableCellEClass, TABLE_CELL__ALIGNEMENT);
+		createEAttribute(tableCellEClass, TABLE_CELL__SPAN);
 
 		// Create enums
 		tableCellAlignementEEnum = createEEnum(TABLE_CELL_ALIGNEMENT);
@@ -1043,6 +1068,10 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
+				.getEPackage(XMLTypePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -1069,11 +1098,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		codeBlockEClass.getESuperTypes().add(this.getListItemElement());
 		horizontalLineEClass.getESuperTypes().add(this.getPageContent());
 		compositeTextElementEClass.getESuperTypes().add(this.getContainableTextElement());
-		tableEClass.getESuperTypes().add(this.getPageContent());
-		tableBodyEClass.getESuperTypes().add(this.getTableSection());
-		tableSeparatorEClass.getESuperTypes().add(this.getTableSection());
-		tableHeadEClass.getESuperTypes().add(this.getTableSection());
-		tableCellEClass.getESuperTypes().add(this.getTextContainer());
 		buttonEClass.getESuperTypes().add(this.getClickableElement());
 		navigationEClass.getESuperTypes().add(this.getClickableElement());
 		clickableElementEClass.getESuperTypes().add(this.getContainableTextElement());
@@ -1081,6 +1105,11 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		containableTextElementEClass.getESuperTypes().add(this.getTextElement());
 		containableTextElementEClass.getESuperTypes().add(this.getListItemElement());
 		sectionEClass.getESuperTypes().add(this.getPageContent());
+		tableEClass.getESuperTypes().add(this.getPageContent());
+		tableBodyEClass.getESuperTypes().add(this.getTableSection());
+		tableHeadEClass.getESuperTypes().add(this.getTableSection());
+		tableSeparatorEClass.getESuperTypes().add(this.getTableSection());
+		tableCellEClass.getESuperTypes().add(this.getTextContainer());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1179,38 +1208,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 				0, -1, CompositeTextElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTable_TableSections(), this.getTableSection(), null, "tableSections", null, 0, -1,
-				Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tableSectionEClass, TableSection.class, "TableSection", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTableSection_Rows(), this.getTableRow(), null, "rows", null, 0, -1, TableSection.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tableBodyEClass, TableBody.class, "TableBody", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(tableSeparatorEClass, TableSeparator.class, "TableSeparator", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(tableHeadEClass, TableHead.class, "TableHead", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(tableRowEClass, TableRow.class, "TableRow", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTableRow_Cells(), this.getTableCell(), null, "cells", null, 0, -1, TableRow.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(tableCellEClass, TableCell.class, "TableCell", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTableCell_Alignement(), this.getTableCellAlignement(), "alignement", null, 0, 1,
-				TableCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(navigationEClass, Navigation.class, "Navigation", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1237,6 +1234,42 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		initEReference(getSection_Contents(), this.getPageContent(), null, "contents", null, 0, -1, Section.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTable_Tablesections(), this.getTableSection(), null, "tablesections", null, 0, -1,
+				Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tableSectionEClass, TableSection.class, "TableSection", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTableSection_Rows(), this.getTableRow(), null, "rows", null, 0, -1, TableSection.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tableBodyEClass, TableBody.class, "TableBody", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tableHeadEClass, TableHead.class, "TableHead", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tableSeparatorEClass, TableSeparator.class, "TableSeparator", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tableRowEClass, TableRow.class, "TableRow", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTableRow_Cells(), this.getTableCell(), null, "cells", null, 0, -1, TableRow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTableRow_RowNumber(), theXMLTypePackage.getInt(), "rowNumber", null, 0, 1, TableRow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tableCellEClass, TableCell.class, "TableCell", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTableCell_Alignement(), this.getTableCellAlignement(), "alignement", null, 0, 1,
+				TableCell.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTableCell_Span(), theXMLTypePackage.getInt(), "span", "1", 0, 1, TableCell.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(tableCellAlignementEEnum, TableCellAlignement.class, "TableCellAlignement");

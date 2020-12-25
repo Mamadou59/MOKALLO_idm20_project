@@ -333,67 +333,6 @@ public class UsdSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case UsdPackage.TABLE: {
-			Table table = (Table) theEObject;
-			T result = caseTable(table);
-			if (result == null)
-				result = casePageContent(table);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case UsdPackage.TABLE_SECTION: {
-			TableSection tableSection = (TableSection) theEObject;
-			T result = caseTableSection(tableSection);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case UsdPackage.TABLE_BODY: {
-			TableBody tableBody = (TableBody) theEObject;
-			T result = caseTableBody(tableBody);
-			if (result == null)
-				result = caseTableSection(tableBody);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case UsdPackage.TABLE_SEPARATOR: {
-			TableSeparator tableSeparator = (TableSeparator) theEObject;
-			T result = caseTableSeparator(tableSeparator);
-			if (result == null)
-				result = caseTableSection(tableSeparator);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case UsdPackage.TABLE_HEAD: {
-			TableHead tableHead = (TableHead) theEObject;
-			T result = caseTableHead(tableHead);
-			if (result == null)
-				result = caseTableSection(tableHead);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case UsdPackage.TABLE_ROW: {
-			TableRow tableRow = (TableRow) theEObject;
-			T result = caseTableRow(tableRow);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case UsdPackage.TABLE_CELL: {
-			TableCell tableCell = (TableCell) theEObject;
-			T result = caseTableCell(tableCell);
-			if (result == null)
-				result = caseTextContainer(tableCell);
-			if (result == null)
-				result = casePageContent(tableCell);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case UsdPackage.BUTTON: {
 			Button button = (Button) theEObject;
 			T result = caseButton(button);
@@ -461,6 +400,67 @@ public class UsdSwitch<T> extends Switch<T> {
 			T result = caseSection(section);
 			if (result == null)
 				result = casePageContent(section);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.TABLE: {
+			Table table = (Table) theEObject;
+			T result = caseTable(table);
+			if (result == null)
+				result = casePageContent(table);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.TABLE_SECTION: {
+			TableSection tableSection = (TableSection) theEObject;
+			T result = caseTableSection(tableSection);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.TABLE_BODY: {
+			TableBody tableBody = (TableBody) theEObject;
+			T result = caseTableBody(tableBody);
+			if (result == null)
+				result = caseTableSection(tableBody);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.TABLE_HEAD: {
+			TableHead tableHead = (TableHead) theEObject;
+			T result = caseTableHead(tableHead);
+			if (result == null)
+				result = caseTableSection(tableHead);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.TABLE_SEPARATOR: {
+			TableSeparator tableSeparator = (TableSeparator) theEObject;
+			T result = caseTableSeparator(tableSeparator);
+			if (result == null)
+				result = caseTableSection(tableSeparator);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.TABLE_ROW: {
+			TableRow tableRow = (TableRow) theEObject;
+			T result = caseTableRow(tableRow);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UsdPackage.TABLE_CELL: {
+			TableCell tableCell = (TableCell) theEObject;
+			T result = caseTableCell(tableCell);
+			if (result == null)
+				result = caseTextContainer(tableCell);
+			if (result == null)
+				result = casePageContent(tableCell);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -816,111 +816,6 @@ public class UsdSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Table</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Table</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTable(Table object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Table Section</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Table Section</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTableSection(TableSection object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Table Body</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Table Body</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTableBody(TableBody object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Table Separator</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Table Separator</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTableSeparator(TableSeparator object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Table Head</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Table Head</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTableHead(TableHead object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Table Row</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Table Row</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTableRow(TableRow object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Table Cell</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Table Cell</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTableCell(TableCell object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Button</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -992,6 +887,111 @@ public class UsdSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSection(Section object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTable(Table object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTableSection(TableSection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table Body</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table Body</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTableBody(TableBody object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table Head</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table Head</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTableHead(TableHead object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table Separator</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table Separator</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTableSeparator(TableSeparator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table Row</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table Row</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTableRow(TableRow object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table Cell</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table Cell</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTableCell(TableCell object) {
 		return null;
 	}
 

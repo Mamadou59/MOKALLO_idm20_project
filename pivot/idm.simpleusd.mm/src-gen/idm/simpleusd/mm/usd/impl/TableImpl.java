@@ -26,21 +26,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link idm.simpleusd.mm.usd.impl.TableImpl#getTableSections <em>Table Sections</em>}</li>
+ *   <li>{@link idm.simpleusd.mm.usd.impl.TableImpl#getTablesections <em>Tablesections</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class TableImpl extends PageContentImpl implements Table {
 	/**
-	 * The cached value of the '{@link #getTableSections() <em>Table Sections</em>}' containment reference list.
+	 * The cached value of the '{@link #getTablesections() <em>Tablesections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTableSections()
+	 * @see #getTablesections()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TableSection> tableSections;
+	protected EList<TableSection> tablesections;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,12 +66,12 @@ public class TableImpl extends PageContentImpl implements Table {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TableSection> getTableSections() {
-		if (tableSections == null) {
-			tableSections = new EObjectContainmentEList<TableSection>(TableSection.class, this,
-					UsdPackage.TABLE__TABLE_SECTIONS);
+	public EList<TableSection> getTablesections() {
+		if (tablesections == null) {
+			tablesections = new EObjectContainmentEList<TableSection>(TableSection.class, this,
+					UsdPackage.TABLE__TABLESECTIONS);
 		}
-		return tableSections;
+		return tablesections;
 	}
 
 	/**
@@ -82,8 +82,8 @@ public class TableImpl extends PageContentImpl implements Table {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case UsdPackage.TABLE__TABLE_SECTIONS:
-			return ((InternalEList<?>) getTableSections()).basicRemove(otherEnd, msgs);
+		case UsdPackage.TABLE__TABLESECTIONS:
+			return ((InternalEList<?>) getTablesections()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -96,8 +96,8 @@ public class TableImpl extends PageContentImpl implements Table {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case UsdPackage.TABLE__TABLE_SECTIONS:
-			return getTableSections();
+		case UsdPackage.TABLE__TABLESECTIONS:
+			return getTablesections();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,9 +111,9 @@ public class TableImpl extends PageContentImpl implements Table {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case UsdPackage.TABLE__TABLE_SECTIONS:
-			getTableSections().clear();
-			getTableSections().addAll((Collection<? extends TableSection>) newValue);
+		case UsdPackage.TABLE__TABLESECTIONS:
+			getTablesections().clear();
+			getTablesections().addAll((Collection<? extends TableSection>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,8 +127,8 @@ public class TableImpl extends PageContentImpl implements Table {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case UsdPackage.TABLE__TABLE_SECTIONS:
-			getTableSections().clear();
+		case UsdPackage.TABLE__TABLESECTIONS:
+			getTablesections().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -142,8 +142,8 @@ public class TableImpl extends PageContentImpl implements Table {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case UsdPackage.TABLE__TABLE_SECTIONS:
-			return tableSections != null && !tableSections.isEmpty();
+		case UsdPackage.TABLE__TABLESECTIONS:
+			return tablesections != null && !tablesections.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

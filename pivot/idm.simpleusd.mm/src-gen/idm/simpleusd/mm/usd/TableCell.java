@@ -12,6 +12,7 @@ package idm.simpleusd.mm.usd;
  * </p>
  * <ul>
  *   <li>{@link idm.simpleusd.mm.usd.TableCell#getAlignement <em>Alignement</em>}</li>
+ *   <li>{@link idm.simpleusd.mm.usd.TableCell#getSpan <em>Span</em>}</li>
  * </ul>
  *
  * @see idm.simpleusd.mm.usd.UsdPackage#getTableCell()
@@ -43,5 +44,28 @@ public interface TableCell extends TextContainer {
 	 * @generated
 	 */
 	void setAlignement(TableCellAlignement value);
+
+	/**
+	 * Returns the value of the '<em><b>Span</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Span</em>' attribute.
+	 * @see #setSpan(int)
+	 * @see idm.simpleusd.mm.usd.UsdPackage#getTableCell_Span()
+	 * @model default="1" dataType="org.eclipse.emf.ecore.xml.type.Int"
+	 * @generated
+	 */
+	int getSpan();
+
+	/**
+	 * Sets the value of the '{@link idm.simpleusd.mm.usd.TableCell#getSpan <em>Span</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Span</em>' attribute.
+	 * @see #getSpan()
+	 * @generated
+	 */
+	void setSpan(int value);
 
 } // TableCell

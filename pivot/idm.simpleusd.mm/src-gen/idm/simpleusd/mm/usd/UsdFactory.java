@@ -166,60 +166,6 @@ public interface UsdFactory extends EFactory {
 	HorizontalLine createHorizontalLine();
 
 	/**
-	 * Returns a new object of class '<em>Table</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Table</em>'.
-	 * @generated
-	 */
-	Table createTable();
-
-	/**
-	 * Returns a new object of class '<em>Table Body</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Table Body</em>'.
-	 * @generated
-	 */
-	TableBody createTableBody();
-
-	/**
-	 * Returns a new object of class '<em>Table Separator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Table Separator</em>'.
-	 * @generated
-	 */
-	TableSeparator createTableSeparator();
-
-	/**
-	 * Returns a new object of class '<em>Table Head</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Table Head</em>'.
-	 * @generated
-	 */
-	TableHead createTableHead();
-
-	/**
-	 * Returns a new object of class '<em>Table Row</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Table Row</em>'.
-	 * @generated
-	 */
-	TableRow createTableRow();
-
-	/**
-	 * Returns a new object of class '<em>Table Cell</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Table Cell</em>'.
-	 * @generated
-	 */
-	TableCell createTableCell();
-
-	/**
 	 * Returns a new object of class '<em>Button</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -245,6 +191,60 @@ public interface UsdFactory extends EFactory {
 	 * @generated
 	 */
 	Section createSection();
+
+	/**
+	 * Returns a new object of class '<em>Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table</em>'.
+	 * @generated
+	 */
+	Table createTable();
+
+	/**
+	 * Returns a new object of class '<em>Table Body</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table Body</em>'.
+	 * @generated
+	 */
+	TableBody createTableBody();
+
+	/**
+	 * Returns a new object of class '<em>Table Head</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table Head</em>'.
+	 * @generated
+	 */
+	TableHead createTableHead();
+
+	/**
+	 * Returns a new object of class '<em>Table Separator</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table Separator</em>'.
+	 * @generated
+	 */
+	TableSeparator createTableSeparator();
+
+	/**
+	 * Returns a new object of class '<em>Table Row</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table Row</em>'.
+	 * @generated
+	 */
+	TableRow createTableRow();
+
+	/**
+	 * Returns a new object of class '<em>Table Cell</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table Cell</em>'.
+	 * @generated
+	 */
+	TableCell createTableCell();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -58,13 +58,9 @@ helper mdMM::Paragraph::isThereNavigationElement() : Boolean {
 
 helper mdMM::BlockQuote::isSection() : Boolean {
 	var blockElements := self.subobjectsOfType(mdMM::Paragraph);
-	//log("paragraph", blockElements);
-//	log("size",blockElements -> size());
 	blockElements -> forOne(p) {
 		var elems := blockElements.elements[Text];
-		log("elem",elems);
 		elems -> forOne(elem){
-			log("res =>",elem.text.toLower() = "start section");
 			return elem.text.toLower() = "start section";
 		}
 	};

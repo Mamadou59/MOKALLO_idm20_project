@@ -175,12 +175,6 @@ public class SectionItemProvider extends PageContentItemProvider {
 				UsdFactory.eINSTANCE.createHorizontalLine()));
 
 		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createTable()));
-
-		newChildDescriptors.add(
-				createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createTableCell()));
-
-		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createButton()));
 
 		newChildDescriptors.add(
@@ -188,6 +182,12 @@ public class SectionItemProvider extends PageContentItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createSection()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createTable()));
+
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.SECTION__CONTENTS, UsdFactory.eINSTANCE.createTableCell()));
 	}
 
 }

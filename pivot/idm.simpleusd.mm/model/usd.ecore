@@ -56,29 +56,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="subTextElements" upperBound="-1"
         eType="#//TextElement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//PageContent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tableSections" upperBound="-1"
-        eType="#//TableSection" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TableSection" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="rows" upperBound="-1" eType="#//TableRow"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TableBody" eSuperTypes="#//TableSection"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TableSeparator" eSuperTypes="#//TableSection"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TableHead" eSuperTypes="#//TableSection"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TableRow">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cells" upperBound="-1"
-        eType="#//TableCell" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TableCell" eSuperTypes="#//TextContainer">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignement" eType="#//TableCellAlignement"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="TableCellAlignement">
-    <eLiterals name="LEFT"/>
-    <eLiterals name="RIGHT" value="1"/>
-    <eLiterals name="CENTER" value="2"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//ClickableElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Navigation" eSuperTypes="#//ClickableElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupedItems" upperBound="-1"
@@ -94,5 +71,31 @@
   <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#//PageContent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="contents" upperBound="-1"
         eType="#//PageContent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//PageContent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tablesections" upperBound="-1"
+        eType="#//TableSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TableSection" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rows" upperBound="-1" eType="#//TableRow"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TableBody" eSuperTypes="#//TableSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TableHead" eSuperTypes="#//TableSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TableSeparator" eSuperTypes="#//TableSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TableRow">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cells" upperBound="-1"
+        eType="#//TableCell" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rowNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TableCell" eSuperTypes="#//TextContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="alignement" eType="#//TableCellAlignement"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="span" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"
+        defaultValueLiteral="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TableCellAlignement">
+    <eLiterals name="LEFT"/>
+    <eLiterals name="RIGHT" value="1"/>
+    <eLiterals name="CENTER" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

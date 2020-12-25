@@ -88,24 +88,24 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 			return createCodeLine();
 		case UsdPackage.HORIZONTAL_LINE:
 			return createHorizontalLine();
-		case UsdPackage.TABLE:
-			return createTable();
-		case UsdPackage.TABLE_BODY:
-			return createTableBody();
-		case UsdPackage.TABLE_SEPARATOR:
-			return createTableSeparator();
-		case UsdPackage.TABLE_HEAD:
-			return createTableHead();
-		case UsdPackage.TABLE_ROW:
-			return createTableRow();
-		case UsdPackage.TABLE_CELL:
-			return createTableCell();
 		case UsdPackage.BUTTON:
 			return createButton();
 		case UsdPackage.NAVIGATION:
 			return createNavigation();
 		case UsdPackage.SECTION:
 			return createSection();
+		case UsdPackage.TABLE:
+			return createTable();
+		case UsdPackage.TABLE_BODY:
+			return createTableBody();
+		case UsdPackage.TABLE_HEAD:
+			return createTableHead();
+		case UsdPackage.TABLE_SEPARATOR:
+			return createTableSeparator();
+		case UsdPackage.TABLE_ROW:
+			return createTableRow();
+		case UsdPackage.TABLE_CELL:
+			return createTableCell();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -306,66 +306,6 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Table createTable() {
-		TableImpl table = new TableImpl();
-		return table;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TableBody createTableBody() {
-		TableBodyImpl tableBody = new TableBodyImpl();
-		return tableBody;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TableSeparator createTableSeparator() {
-		TableSeparatorImpl tableSeparator = new TableSeparatorImpl();
-		return tableSeparator;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TableHead createTableHead() {
-		TableHeadImpl tableHead = new TableHeadImpl();
-		return tableHead;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TableRow createTableRow() {
-		TableRowImpl tableRow = new TableRowImpl();
-		return tableRow;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TableCell createTableCell() {
-		TableCellImpl tableCell = new TableCellImpl();
-		return tableCell;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Button createButton() {
 		ButtonImpl button = new ButtonImpl();
 		return button;
@@ -389,6 +329,66 @@ public class UsdFactoryImpl extends EFactoryImpl implements UsdFactory {
 	public Section createSection() {
 		SectionImpl section = new SectionImpl();
 		return section;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Table createTable() {
+		TableImpl table = new TableImpl();
+		return table;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableBody createTableBody() {
+		TableBodyImpl tableBody = new TableBodyImpl();
+		return tableBody;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableHead createTableHead() {
+		TableHeadImpl tableHead = new TableHeadImpl();
+		return tableHead;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableSeparator createTableSeparator() {
+		TableSeparatorImpl tableSeparator = new TableSeparatorImpl();
+		return tableSeparator;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableRow createTableRow() {
+		TableRowImpl tableRow = new TableRowImpl();
+		return tableRow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableCell createTableCell() {
+		TableCellImpl tableCell = new TableCellImpl();
+		return tableCell;
 	}
 
 	/**

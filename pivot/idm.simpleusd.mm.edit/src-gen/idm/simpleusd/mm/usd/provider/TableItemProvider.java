@@ -61,7 +61,7 @@ public class TableItemProvider extends PageContentItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(UsdPackage.Literals.TABLE__TABLE_SECTIONS);
+			childrenFeatures.add(UsdPackage.Literals.TABLE__TABLESECTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -123,7 +123,7 @@ public class TableItemProvider extends PageContentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Table.class)) {
-		case UsdPackage.TABLE__TABLE_SECTIONS:
+		case UsdPackage.TABLE__TABLESECTIONS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -141,14 +141,14 @@ public class TableItemProvider extends PageContentItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.TABLE__TABLE_SECTIONS,
-				UsdFactory.eINSTANCE.createTableBody()));
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.TABLE__TABLESECTIONS, UsdFactory.eINSTANCE.createTableBody()));
 
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.TABLE__TABLE_SECTIONS,
+		newChildDescriptors.add(
+				createChildParameter(UsdPackage.Literals.TABLE__TABLESECTIONS, UsdFactory.eINSTANCE.createTableHead()));
+
+		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.TABLE__TABLESECTIONS,
 				UsdFactory.eINSTANCE.createTableSeparator()));
-
-		newChildDescriptors.add(createChildParameter(UsdPackage.Literals.TABLE__TABLE_SECTIONS,
-				UsdFactory.eINSTANCE.createTableHead()));
 	}
 
 }

@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link idm.simpleusd.mm.usd.Table#getTableSections <em>Table Sections</em>}</li>
+ *   <li>{@link idm.simpleusd.mm.usd.Table#getTablesections <em>Tablesections</em>}</li>
  * </ul>
  *
  * @see idm.simpleusd.mm.usd.UsdPackage#getTable()
@@ -22,15 +22,15 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Table extends PageContent {
 	/**
-	 * Returns the value of the '<em><b>Table Sections</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Tablesections</b></em>' containment reference list.
 	 * The list contents are of type {@link idm.simpleusd.mm.usd.TableSection}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Table Sections</em>' containment reference list.
-	 * @see idm.simpleusd.mm.usd.UsdPackage#getTable_TableSections()
+	 * @return the value of the '<em>Tablesections</em>' containment reference list.
+	 * @see idm.simpleusd.mm.usd.UsdPackage#getTable_Tablesections()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<TableSection> getTableSections();
+	EList<TableSection> getTablesections();
 
 } // Table

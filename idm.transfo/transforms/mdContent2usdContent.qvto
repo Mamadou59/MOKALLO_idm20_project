@@ -128,7 +128,7 @@ mapping mdMM::ListItemElement::constructListItemElement() : usdMM::ListItemEleme
 * Mapper from markdown TableBlock element to usd Table element.
 */
 mapping mdMM::TableBlock::tableBlockMd2TableUsd() : usdMM::Table {
-	tableSections += self.sections -> map constructTableSection();
+	tablesections += self.sections -> map constructTableSection();
 }
 
 /**
@@ -181,7 +181,11 @@ mapping mdMM::TableRow::tableRowMd2TableRowUsd() : usdMM::TableRow {
 * wich extends textContainerMd2TextContainerUsd mapper.
 */
 mapping mdMM::TableCell::tableCellMd2TableCellUsd() : usdMM::TableCell 
-	inherits mdMM::TextContainer::textContainerMd2TextContainerUsd {}
+	inherits mdMM::TextContainer::textContainerMd2TextContainerUsd {
+	// This error occured 
+	// The type 'md2usd::Set(TableCellAlignement)' does not conform to the type 'usd::TableCellAlignement' of the property 'alignement'
+	// alignement := self.alignement;
+	span := self.span;}
 		
 /**
 * Mapper from ListItemElement to usd ListItemElement wich make disjunction beetwen 

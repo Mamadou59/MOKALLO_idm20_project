@@ -207,12 +207,6 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 				createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createHorizontalLine()));
 
 		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createTable()));
-
-		newChildDescriptors
-				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createTableCell()));
-
-		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createButton()));
 
 		newChildDescriptors
@@ -220,6 +214,12 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 
 		newChildDescriptors
 				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createSection()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createTable()));
+
+		newChildDescriptors
+				.add(createChildParameter(UsdPackage.Literals.PAGE__CONTENTS, UsdFactory.eINSTANCE.createTableCell()));
 	}
 
 	/**

@@ -62,21 +62,6 @@
     <genClasses ecoreClass="usd.ecore#//CompositeTextElement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//CompositeTextElement/subTextElements"/>
     </genClasses>
-    <genClasses ecoreClass="usd.ecore#//Table">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Table/tableSections"/>
-    </genClasses>
-    <genClasses ecoreClass="usd.ecore#//TableSection">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//TableSection/rows"/>
-    </genClasses>
-    <genClasses ecoreClass="usd.ecore#//TableBody"/>
-    <genClasses ecoreClass="usd.ecore#//TableSeparator"/>
-    <genClasses ecoreClass="usd.ecore#//TableHead"/>
-    <genClasses ecoreClass="usd.ecore#//TableRow">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//TableRow/cells"/>
-    </genClasses>
-    <genClasses ecoreClass="usd.ecore#//TableCell">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//TableCell/alignement"/>
-    </genClasses>
     <genClasses ecoreClass="usd.ecore#//Button"/>
     <genClasses ecoreClass="usd.ecore#//Navigation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Navigation/groupedItems"/>
@@ -89,6 +74,23 @@
     <genClasses ecoreClass="usd.ecore#//ContainableTextElement"/>
     <genClasses ecoreClass="usd.ecore#//Section">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Section/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//Table">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Table/tablesections"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//TableSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//TableSection/rows"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//TableBody"/>
+    <genClasses ecoreClass="usd.ecore#//TableHead"/>
+    <genClasses ecoreClass="usd.ecore#//TableSeparator"/>
+    <genClasses ecoreClass="usd.ecore#//TableRow">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//TableRow/cells"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//TableRow/rowNumber"/>
+    </genClasses>
+    <genClasses ecoreClass="usd.ecore#//TableCell">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//TableCell/alignement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//TableCell/span"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

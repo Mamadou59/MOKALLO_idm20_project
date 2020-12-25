@@ -8,6 +8,7 @@ import idm.simpleusd.mm.usd.UsdPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -29,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link idm.simpleusd.mm.usd.impl.TableRowImpl#getCells <em>Cells</em>}</li>
+ *   <li>{@link idm.simpleusd.mm.usd.impl.TableRowImpl#getRowNumber <em>Row Number</em>}</li>
  * </ul>
  *
  * @generated
@@ -43,6 +46,26 @@ public class TableRowImpl extends MinimalEObjectImpl.Container implements TableR
 	 * @ordered
 	 */
 	protected EList<TableCell> cells;
+
+	/**
+	 * The default value of the '{@link #getRowNumber() <em>Row Number</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRowNumber()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ROW_NUMBER_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getRowNumber() <em>Row Number</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRowNumber()
+	 * @generated
+	 * @ordered
+	 */
+	protected int rowNumber = ROW_NUMBER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -80,6 +103,28 @@ public class TableRowImpl extends MinimalEObjectImpl.Container implements TableR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getRowNumber() {
+		return rowNumber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRowNumber(int newRowNumber) {
+		int oldRowNumber = rowNumber;
+		rowNumber = newRowNumber;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, UsdPackage.TABLE_ROW__ROW_NUMBER, oldRowNumber,
+					rowNumber));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -99,6 +144,8 @@ public class TableRowImpl extends MinimalEObjectImpl.Container implements TableR
 		switch (featureID) {
 		case UsdPackage.TABLE_ROW__CELLS:
 			return getCells();
+		case UsdPackage.TABLE_ROW__ROW_NUMBER:
+			return getRowNumber();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,6 +163,9 @@ public class TableRowImpl extends MinimalEObjectImpl.Container implements TableR
 			getCells().clear();
 			getCells().addAll((Collection<? extends TableCell>) newValue);
 			return;
+		case UsdPackage.TABLE_ROW__ROW_NUMBER:
+			setRowNumber((Integer) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -131,6 +181,9 @@ public class TableRowImpl extends MinimalEObjectImpl.Container implements TableR
 		case UsdPackage.TABLE_ROW__CELLS:
 			getCells().clear();
 			return;
+		case UsdPackage.TABLE_ROW__ROW_NUMBER:
+			setRowNumber(ROW_NUMBER_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -145,8 +198,27 @@ public class TableRowImpl extends MinimalEObjectImpl.Container implements TableR
 		switch (featureID) {
 		case UsdPackage.TABLE_ROW__CELLS:
 			return cells != null && !cells.isEmpty();
+		case UsdPackage.TABLE_ROW__ROW_NUMBER:
+			return rowNumber != ROW_NUMBER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (rowNumber: ");
+		result.append(rowNumber);
+		result.append(')');
+		return result.toString();
 	}
 
 } //TableRowImpl
