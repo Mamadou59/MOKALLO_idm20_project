@@ -6,8 +6,8 @@ import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.ContainableTextElement;
 import idm.bstrap.mm.bstrap.General;
 import idm.bstrap.mm.bstrap.PageContent;
-
 import idm.bstrap.mm.bstrap.TextPageContent;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

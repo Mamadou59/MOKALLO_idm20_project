@@ -3,24 +3,24 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.CompositeTextElement;
+import idm.bstrap.mm.bstrap.NavBarProperty;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Composite Text Element</b></em>'.
+ * An implementation of the model object '<em><b>Nav Bar Property</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class CompositeTextElementImpl extends ContainableTextElementImpl implements CompositeTextElement {
+public abstract class NavBarPropertyImpl extends PropertyClassImpl implements NavBarProperty {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CompositeTextElementImpl() {
+	protected NavBarPropertyImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public abstract class CompositeTextElementImpl extends ContainableTextElementImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BstrapPackage.Literals.COMPOSITE_TEXT_ELEMENT;
+		return BstrapPackage.Literals.NAV_BAR_PROPERTY;
 	}
 
-} //CompositeTextElementImpl
+} //NavBarPropertyImpl

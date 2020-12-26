@@ -3,24 +3,24 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.Dark;
+import idm.bstrap.mm.bstrap.Centered;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Dark</b></em>'.
+ * An implementation of the model object '<em><b>Centered</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class DarkImpl extends ButtonStyleImpl implements Dark {
+public class CenteredImpl extends NavBarPropertyImpl implements Centered {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DarkImpl() {
+	protected CenteredImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class DarkImpl extends ButtonStyleImpl implements Dark {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BstrapPackage.Literals.DARK;
+		return BstrapPackage.Literals.CENTERED;
 	}
 
-} //DarkImpl
+} //CenteredImpl

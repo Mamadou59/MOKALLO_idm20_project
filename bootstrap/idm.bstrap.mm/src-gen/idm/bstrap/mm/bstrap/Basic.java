@@ -12,5 +12,5 @@ package idm.bstrap.mm.bstrap;
  * @model
  * @generated
  */
-public interface Basic extends ButtonStyle {
+public interface Basic extends NavBarProperty {
 } // Basic

@@ -371,13 +371,22 @@ public interface BstrapPackage extends EPackage {
 	int TEXT_CONTAINER__TEXTELEMENTS = TEXT_PAGE_CONTENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CONTAINER__COLOR = TEXT_PAGE_CONTENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Text Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CONTAINER_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 1;
+	int TEXT_CONTAINER_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Text Container</em>' class.
@@ -415,6 +424,15 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int PARAGRAPHE__TEXTELEMENTS = TEXT_CONTAINER__TEXTELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAGRAPHE__COLOR = TEXT_CONTAINER__COLOR;
 
 	/**
 	 * The number of structural features of the '<em>Paragraphe</em>' class.
@@ -463,6 +481,15 @@ public interface BstrapPackage extends EPackage {
 	int TITLE__TEXTELEMENTS = TEXT_CONTAINER__TEXTELEMENTS;
 
 	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE__COLOR = TEXT_CONTAINER__COLOR;
+
+	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -499,6 +526,34 @@ public interface BstrapPackage extends EPackage {
 	int TITLE_OPERATION_COUNT = TEXT_CONTAINER_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.ListItemElement <em>List Item Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.ListItemElement
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getListItemElement()
+	 * @generated
+	 */
+	int LIST_ITEM_ELEMENT = 51;
+
+	/**
+	 * The number of structural features of the '<em>List Item Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ITEM_ELEMENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>List Item Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ITEM_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.TextElements <em>Text Elements</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -515,7 +570,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_ELEMENTS_FEATURE_COUNT = 0;
+	int TEXT_ELEMENTS_FEATURE_COUNT = LIST_ITEM_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Text Elements</em>' class.
@@ -524,7 +579,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_ELEMENTS_OPERATION_COUNT = 0;
+	int TEXT_ELEMENTS_OPERATION_COUNT = LIST_ITEM_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TextImpl <em>Text</em>}' class.
@@ -546,13 +601,22 @@ public interface BstrapPackage extends EPackage {
 	int TEXT__TEXT = TEXT_ELEMENTS_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT__EMPHASIS = TEXT_ELEMENTS_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Text</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FEATURE_COUNT = TEXT_ELEMENTS_FEATURE_COUNT + 1;
+	int TEXT_FEATURE_COUNT = TEXT_ELEMENTS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Text</em>' class.
@@ -581,6 +645,15 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int CODE__TEXT = TEXT__TEXT;
+
+	/**
+	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE__EMPHASIS = TEXT__EMPHASIS;
 
 	/**
 	 * The number of structural features of the '<em>Code</em>' class.
@@ -657,22 +730,13 @@ public interface BstrapPackage extends EPackage {
 	int COMPOSITE_TEXT_ELEMENT__GENERAL_PROPERTIES = CONTAINABLE_TEXT_ELEMENT__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Sub Text Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Composite Text Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 1;
+	int COMPOSITE_TEXT_ELEMENT_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Composite Text Element</em>' class.
@@ -701,15 +765,6 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int URL_BASED_LINK__GENERAL_PROPERTIES = COMPOSITE_TEXT_ELEMENT__GENERAL_PROPERTIES;
-
-	/**
-	 * The feature id for the '<em><b>Sub Text Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int URL_BASED_LINK__SUB_TEXT_ELEMENTS = COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -765,15 +820,6 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int IMAGE__GENERAL_PROPERTIES = URL_BASED_LINK__GENERAL_PROPERTIES;
-
-	/**
-	 * The feature id for the '<em><b>Sub Text Elements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IMAGE__SUB_TEXT_ELEMENTS = URL_BASED_LINK__SUB_TEXT_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -1161,7 +1207,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISPLAY_PROPERTY_FEATURE_COUNT = 0;
+	int DISPLAY_PROPERTY_FEATURE_COUNT = PROPERTY_CLASS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Display Property</em>' class.
@@ -1170,7 +1216,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DISPLAY_PROPERTY_OPERATION_COUNT = 0;
+	int DISPLAY_PROPERTY_OPERATION_COUNT = PROPERTY_CLASS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.Display1Impl <em>Display1</em>}' class.
@@ -1824,6 +1870,552 @@ public interface BstrapPackage extends EPackage {
 	int BUTTON_OPERATION_COUNT = CONTAINABLE_TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ListElementImpl <em>List Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.ListElementImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getListElement()
+	 * @generated
+	 */
+	int LIST_ELEMENT = 47;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ELEMENT__GENERAL_PROPERTIES = TEXT_PAGE_CONTENT__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Listitems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ELEMENT__LISTITEMS = TEXT_PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Listproperty</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ELEMENT__LISTPROPERTY = TEXT_PAGE_CONTENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>List Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ELEMENT_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>List Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ELEMENT_OPERATION_COUNT = TEXT_PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.OrderListImpl <em>Order List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.OrderListImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getOrderList()
+	 * @generated
+	 */
+	int ORDER_LIST = 48;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_LIST__GENERAL_PROPERTIES = LIST_ELEMENT__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Listitems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_LIST__LISTITEMS = LIST_ELEMENT__LISTITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Listproperty</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_LIST__LISTPROPERTY = LIST_ELEMENT__LISTPROPERTY;
+
+	/**
+	 * The number of structural features of the '<em>Order List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_LIST_FEATURE_COUNT = LIST_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Order List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ORDER_LIST_OPERATION_COUNT = LIST_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.UnOrderedListImpl <em>Un Ordered List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.UnOrderedListImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getUnOrderedList()
+	 * @generated
+	 */
+	int UN_ORDERED_LIST = 49;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UN_ORDERED_LIST__GENERAL_PROPERTIES = LIST_ELEMENT__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Listitems</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UN_ORDERED_LIST__LISTITEMS = LIST_ELEMENT__LISTITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Listproperty</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UN_ORDERED_LIST__LISTPROPERTY = LIST_ELEMENT__LISTPROPERTY;
+
+	/**
+	 * The number of structural features of the '<em>Un Ordered List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UN_ORDERED_LIST_FEATURE_COUNT = LIST_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Un Ordered List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UN_ORDERED_LIST_OPERATION_COUNT = LIST_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ListItemImpl <em>List Item</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.ListItemImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getListItem()
+	 * @generated
+	 */
+	int LIST_ITEM = 50;
+
+	/**
+	 * The feature id for the '<em><b>Listitemelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ITEM__LISTITEMELEMENTS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Active</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ITEM__ACTIVE = 1;
+
+	/**
+	 * The number of structural features of the '<em>List Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ITEM_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>List Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_ITEM_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.NavigationImpl <em>Navigation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.NavigationImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getNavigation()
+	 * @generated
+	 */
+	int NAVIGATION = 52;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION__GENERAL_PROPERTIES = TEXT_PAGE_CONTENT__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Listelement</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION__LISTELEMENT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Navbar</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION__NAVBAR = TEXT_PAGE_CONTENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Navigation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Navigation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION_OPERATION_COUNT = TEXT_PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.NavBarPropertyImpl <em>Nav Bar Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.NavBarPropertyImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getNavBarProperty()
+	 * @generated
+	 */
+	int NAV_BAR_PROPERTY = 57;
+
+	/**
+	 * The number of structural features of the '<em>Nav Bar Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAV_BAR_PROPERTY_FEATURE_COUNT = PROPERTY_CLASS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Nav Bar Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAV_BAR_PROPERTY_OPERATION_COUNT = PROPERTY_CLASS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.CenteredImpl <em>Centered</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.CenteredImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getCentered()
+	 * @generated
+	 */
+	int CENTERED = 53;
+
+	/**
+	 * The number of structural features of the '<em>Centered</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CENTERED_FEATURE_COUNT = NAV_BAR_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Centered</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CENTERED_OPERATION_COUNT = NAV_BAR_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ListPropertyImpl <em>List Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.ListPropertyImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getListProperty()
+	 * @generated
+	 */
+	int LIST_PROPERTY = 54;
+
+	/**
+	 * The number of structural features of the '<em>List Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_PROPERTY_FEATURE_COUNT = PROPERTY_CLASS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>List Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIST_PROPERTY_OPERATION_COUNT = PROPERTY_CLASS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BasicListImpl <em>Basic List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.BasicListImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBasicList()
+	 * @generated
+	 */
+	int BASIC_LIST = 55;
+
+	/**
+	 * The number of structural features of the '<em>Basic List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_LIST_FEATURE_COUNT = LIST_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Basic List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_LIST_OPERATION_COUNT = LIST_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.HorizontalListImpl <em>Horizontal List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.HorizontalListImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getHorizontalList()
+	 * @generated
+	 */
+	int HORIZONTAL_LIST = 56;
+
+	/**
+	 * The number of structural features of the '<em>Horizontal List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HORIZONTAL_LIST_FEATURE_COUNT = LIST_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Horizontal List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HORIZONTAL_LIST_OPERATION_COUNT = LIST_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BasicImpl <em>Basic</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.BasicImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBasic()
+	 * @generated
+	 */
+	int BASIC = 58;
+
+	/**
+	 * The number of structural features of the '<em>Basic</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_FEATURE_COUNT = NAV_BAR_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Basic</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_OPERATION_COUNT = NAV_BAR_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.VerticalImpl <em>Vertical</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.VerticalImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getVertical()
+	 * @generated
+	 */
+	int VERTICAL = 59;
+
+	/**
+	 * The number of structural features of the '<em>Vertical</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTICAL_FEATURE_COUNT = NAV_BAR_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Vertical</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VERTICAL_OPERATION_COUNT = NAV_BAR_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.EmphasisImpl <em>Emphasis</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.EmphasisImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getEmphasis()
+	 * @generated
+	 */
+	int EMPHASIS = 60;
+
+	/**
+	 * The number of structural features of the '<em>Emphasis</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPHASIS_FEATURE_COUNT = PROPERTY_CLASS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Emphasis</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMPHASIS_OPERATION_COUNT = PROPERTY_CLASS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ItalicImpl <em>Italic</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.ItalicImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getItalic()
+	 * @generated
+	 */
+	int ITALIC = 61;
+
+	/**
+	 * The number of structural features of the '<em>Italic</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITALIC_FEATURE_COUNT = EMPHASIS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Italic</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITALIC_OPERATION_COUNT = EMPHASIS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BoldImpl <em>Bold</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.BoldImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBold()
+	 * @generated
+	 */
+	int BOLD = 62;
+
+	/**
+	 * The number of structural features of the '<em>Bold</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOLD_FEATURE_COUNT = EMPHASIS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Bold</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOLD_OPERATION_COUNT = EMPHASIS_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1831,7 +2423,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getColor()
 	 * @generated
 	 */
-	int COLOR = 47;
+	int COLOR = 63;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Size <em>Size</em>}' enum.
@@ -1841,7 +2433,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 48;
+	int SIZE = 64;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Alignement <em>Alignement</em>}' enum.
@@ -1851,7 +2443,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlignement()
 	 * @generated
 	 */
-	int ALIGNEMENT = 49;
+	int ALIGNEMENT = 65;
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Page <em>Page</em>}'.
@@ -1959,6 +2551,17 @@ public interface BstrapPackage extends EPackage {
 	EReference getTextContainer_Textelements();
 
 	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.TextContainer#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see idm.bstrap.mm.bstrap.TextContainer#getColor()
+	 * @see #getTextContainer()
+	 * @generated
+	 */
+	EAttribute getTextContainer_Color();
+
+	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Paragraphe <em>Paragraphe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2032,6 +2635,17 @@ public interface BstrapPackage extends EPackage {
 	EAttribute getText_Text();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Text#getEmphasis <em>Emphasis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Emphasis</em>'.
+	 * @see idm.bstrap.mm.bstrap.Text#getEmphasis()
+	 * @see #getText()
+	 * @generated
+	 */
+	EReference getText_Emphasis();
+
+	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Code <em>Code</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2050,17 +2664,6 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getCompositeTextElement();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.CompositeTextElement#getSubTextElements <em>Sub Text Elements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub Text Elements</em>'.
-	 * @see idm.bstrap.mm.bstrap.CompositeTextElement#getSubTextElements()
-	 * @see #getCompositeTextElement()
-	 * @generated
-	 */
-	EReference getCompositeTextElement_SubTextElements();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.UrlBasedLink <em>Url Based Link</em>}'.
@@ -2566,6 +3169,232 @@ public interface BstrapPackage extends EPackage {
 	EClass getTextPageContent();
 
 	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ListElement <em>List Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>List Element</em>'.
+	 * @see idm.bstrap.mm.bstrap.ListElement
+	 * @generated
+	 */
+	EClass getListElement();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.ListElement#getListitems <em>Listitems</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Listitems</em>'.
+	 * @see idm.bstrap.mm.bstrap.ListElement#getListitems()
+	 * @see #getListElement()
+	 * @generated
+	 */
+	EReference getListElement_Listitems();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.ListElement#getListproperty <em>Listproperty</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Listproperty</em>'.
+	 * @see idm.bstrap.mm.bstrap.ListElement#getListproperty()
+	 * @see #getListElement()
+	 * @generated
+	 */
+	EReference getListElement_Listproperty();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.OrderList <em>Order List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Order List</em>'.
+	 * @see idm.bstrap.mm.bstrap.OrderList
+	 * @generated
+	 */
+	EClass getOrderList();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.UnOrderedList <em>Un Ordered List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Un Ordered List</em>'.
+	 * @see idm.bstrap.mm.bstrap.UnOrderedList
+	 * @generated
+	 */
+	EClass getUnOrderedList();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ListItem <em>List Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>List Item</em>'.
+	 * @see idm.bstrap.mm.bstrap.ListItem
+	 * @generated
+	 */
+	EClass getListItem();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.ListItem#getListitemelements <em>Listitemelements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Listitemelements</em>'.
+	 * @see idm.bstrap.mm.bstrap.ListItem#getListitemelements()
+	 * @see #getListItem()
+	 * @generated
+	 */
+	EReference getListItem_Listitemelements();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.ListItem#isActive <em>Active</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Active</em>'.
+	 * @see idm.bstrap.mm.bstrap.ListItem#isActive()
+	 * @see #getListItem()
+	 * @generated
+	 */
+	EAttribute getListItem_Active();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ListItemElement <em>List Item Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>List Item Element</em>'.
+	 * @see idm.bstrap.mm.bstrap.ListItemElement
+	 * @generated
+	 */
+	EClass getListItemElement();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Navigation <em>Navigation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Navigation</em>'.
+	 * @see idm.bstrap.mm.bstrap.Navigation
+	 * @generated
+	 */
+	EClass getNavigation();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Navigation#getListelement <em>Listelement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Listelement</em>'.
+	 * @see idm.bstrap.mm.bstrap.Navigation#getListelement()
+	 * @see #getNavigation()
+	 * @generated
+	 */
+	EReference getNavigation_Listelement();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Navigation#getNavbar <em>Navbar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Navbar</em>'.
+	 * @see idm.bstrap.mm.bstrap.Navigation#getNavbar()
+	 * @see #getNavigation()
+	 * @generated
+	 */
+	EReference getNavigation_Navbar();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Centered <em>Centered</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Centered</em>'.
+	 * @see idm.bstrap.mm.bstrap.Centered
+	 * @generated
+	 */
+	EClass getCentered();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ListProperty <em>List Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>List Property</em>'.
+	 * @see idm.bstrap.mm.bstrap.ListProperty
+	 * @generated
+	 */
+	EClass getListProperty();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.BasicList <em>Basic List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Basic List</em>'.
+	 * @see idm.bstrap.mm.bstrap.BasicList
+	 * @generated
+	 */
+	EClass getBasicList();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.HorizontalList <em>Horizontal List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Horizontal List</em>'.
+	 * @see idm.bstrap.mm.bstrap.HorizontalList
+	 * @generated
+	 */
+	EClass getHorizontalList();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.NavBarProperty <em>Nav Bar Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Nav Bar Property</em>'.
+	 * @see idm.bstrap.mm.bstrap.NavBarProperty
+	 * @generated
+	 */
+	EClass getNavBarProperty();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Basic <em>Basic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Basic</em>'.
+	 * @see idm.bstrap.mm.bstrap.Basic
+	 * @generated
+	 */
+	EClass getBasic();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Vertical <em>Vertical</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Vertical</em>'.
+	 * @see idm.bstrap.mm.bstrap.Vertical
+	 * @generated
+	 */
+	EClass getVertical();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Emphasis <em>Emphasis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Emphasis</em>'.
+	 * @see idm.bstrap.mm.bstrap.Emphasis
+	 * @generated
+	 */
+	EClass getEmphasis();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Italic <em>Italic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Italic</em>'.
+	 * @see idm.bstrap.mm.bstrap.Italic
+	 * @generated
+	 */
+	EClass getItalic();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Bold <em>Bold</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bold</em>'.
+	 * @see idm.bstrap.mm.bstrap.Bold
+	 * @generated
+	 */
+	EClass getBold();
+
+	/**
 	 * Returns the meta object for enum '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2709,6 +3538,14 @@ public interface BstrapPackage extends EPackage {
 		EReference TEXT_CONTAINER__TEXTELEMENTS = eINSTANCE.getTextContainer_Textelements();
 
 		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_CONTAINER__COLOR = eINSTANCE.getTextContainer_Color();
+
+		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ParagrapheImpl <em>Paragraphe</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2773,6 +3610,14 @@ public interface BstrapPackage extends EPackage {
 		EAttribute TEXT__TEXT = eINSTANCE.getText_Text();
 
 		/**
+		 * The meta object literal for the '<em><b>Emphasis</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEXT__EMPHASIS = eINSTANCE.getText_Emphasis();
+
+		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.CodeImpl <em>Code</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2791,14 +3636,6 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COMPOSITE_TEXT_ELEMENT = eINSTANCE.getCompositeTextElement();
-
-		/**
-		 * The meta object literal for the '<em><b>Sub Text Elements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS = eINSTANCE.getCompositeTextElement_SubTextElements();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.UrlBasedLinkImpl <em>Url Based Link</em>}' class.
@@ -3263,6 +4100,214 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TEXT_PAGE_CONTENT = eINSTANCE.getTextPageContent();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ListElementImpl <em>List Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.ListElementImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getListElement()
+		 * @generated
+		 */
+		EClass LIST_ELEMENT = eINSTANCE.getListElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Listitems</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIST_ELEMENT__LISTITEMS = eINSTANCE.getListElement_Listitems();
+
+		/**
+		 * The meta object literal for the '<em><b>Listproperty</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIST_ELEMENT__LISTPROPERTY = eINSTANCE.getListElement_Listproperty();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.OrderListImpl <em>Order List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.OrderListImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getOrderList()
+		 * @generated
+		 */
+		EClass ORDER_LIST = eINSTANCE.getOrderList();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.UnOrderedListImpl <em>Un Ordered List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.UnOrderedListImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getUnOrderedList()
+		 * @generated
+		 */
+		EClass UN_ORDERED_LIST = eINSTANCE.getUnOrderedList();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ListItemImpl <em>List Item</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.ListItemImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getListItem()
+		 * @generated
+		 */
+		EClass LIST_ITEM = eINSTANCE.getListItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Listitemelements</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIST_ITEM__LISTITEMELEMENTS = eINSTANCE.getListItem_Listitemelements();
+
+		/**
+		 * The meta object literal for the '<em><b>Active</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LIST_ITEM__ACTIVE = eINSTANCE.getListItem_Active();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.ListItemElement <em>List Item Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.ListItemElement
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getListItemElement()
+		 * @generated
+		 */
+		EClass LIST_ITEM_ELEMENT = eINSTANCE.getListItemElement();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.NavigationImpl <em>Navigation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.NavigationImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getNavigation()
+		 * @generated
+		 */
+		EClass NAVIGATION = eINSTANCE.getNavigation();
+
+		/**
+		 * The meta object literal for the '<em><b>Listelement</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NAVIGATION__LISTELEMENT = eINSTANCE.getNavigation_Listelement();
+
+		/**
+		 * The meta object literal for the '<em><b>Navbar</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NAVIGATION__NAVBAR = eINSTANCE.getNavigation_Navbar();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.CenteredImpl <em>Centered</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.CenteredImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getCentered()
+		 * @generated
+		 */
+		EClass CENTERED = eINSTANCE.getCentered();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ListPropertyImpl <em>List Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.ListPropertyImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getListProperty()
+		 * @generated
+		 */
+		EClass LIST_PROPERTY = eINSTANCE.getListProperty();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BasicListImpl <em>Basic List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.BasicListImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBasicList()
+		 * @generated
+		 */
+		EClass BASIC_LIST = eINSTANCE.getBasicList();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.HorizontalListImpl <em>Horizontal List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.HorizontalListImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getHorizontalList()
+		 * @generated
+		 */
+		EClass HORIZONTAL_LIST = eINSTANCE.getHorizontalList();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.NavBarPropertyImpl <em>Nav Bar Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.NavBarPropertyImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getNavBarProperty()
+		 * @generated
+		 */
+		EClass NAV_BAR_PROPERTY = eINSTANCE.getNavBarProperty();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BasicImpl <em>Basic</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.BasicImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBasic()
+		 * @generated
+		 */
+		EClass BASIC = eINSTANCE.getBasic();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.VerticalImpl <em>Vertical</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.VerticalImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getVertical()
+		 * @generated
+		 */
+		EClass VERTICAL = eINSTANCE.getVertical();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.EmphasisImpl <em>Emphasis</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.EmphasisImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getEmphasis()
+		 * @generated
+		 */
+		EClass EMPHASIS = eINSTANCE.getEmphasis();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ItalicImpl <em>Italic</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.ItalicImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getItalic()
+		 * @generated
+		 */
+		EClass ITALIC = eINSTANCE.getItalic();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BoldImpl <em>Bold</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.BoldImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBold()
+		 * @generated
+		 */
+		EClass BOLD = eINSTANCE.getBold();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.

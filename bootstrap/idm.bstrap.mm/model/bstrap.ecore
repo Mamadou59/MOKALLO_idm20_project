@@ -17,16 +17,20 @@
   <eClassifiers xsi:type="ecore:EClass" name="TextContainer" abstract="true" eSuperTypes="#//TextPageContent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="textelements" upperBound="-1"
         eType="#//TextElements" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Paragraphe" eSuperTypes="#//TextContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Paragraphe" eSuperTypes="#//TextContainer #//ListItemElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Title" eSuperTypes="#//TextContainer">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="displayproperties" upperBound="-1"
         eType="#//DisplayProperty" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TextElements" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextElements" abstract="true" interface="true"
+      eSuperTypes="#//ListItemElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//TextElements">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emphasis" upperBound="-1"
+        eType="#//Emphasis" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Code" eSuperTypes="#//Text"/>
   <eClassifiers xsi:type="ecore:EClass" name="CompositeTextElement" abstract="true"
@@ -57,7 +61,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ColoredBorder" eSuperTypes="#//BorderProperty">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DisplayProperty" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DisplayProperty" abstract="true" eSuperTypes="#//PropertyClass"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Color">
     <eLiterals name="DARK"/>
     <eLiterals name="PRIMARY" value="1"/>
@@ -117,4 +121,34 @@
     <eLiterals name="LEFT" value="3"/>
     <eLiterals name="RIGHT" value="4"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListElement" abstract="true" eSuperTypes="#//TextPageContent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listitems" upperBound="-1"
+        eType="#//ListItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listproperty" upperBound="-1"
+        eType="#//ListProperty" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrderList" eSuperTypes="#//ListElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UnOrderedList" eSuperTypes="#//ListElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ListItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listitemelements" upperBound="-1"
+        eType="#//ListItemElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="active" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListItemElement" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Navigation" eSuperTypes="#//TextPageContent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listelement" upperBound="-1"
+        eType="#//ListElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="navbar" upperBound="-1"
+        eType="#//NavBarProperty" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Centered" eSuperTypes="#//NavBarProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ListProperty" abstract="true" eSuperTypes="#//PropertyClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BasicList" eSuperTypes="#//ListProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HorizontalList" eSuperTypes="#//ListProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NavBarProperty" abstract="true" eSuperTypes="#//PropertyClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Basic" eSuperTypes="#//NavBarProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Vertical" eSuperTypes="#//NavBarProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Emphasis" abstract="true" eSuperTypes="#//PropertyClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Italic" eSuperTypes="#//Emphasis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Bold" eSuperTypes="#//Emphasis"/>
 </ecore:EPackage>

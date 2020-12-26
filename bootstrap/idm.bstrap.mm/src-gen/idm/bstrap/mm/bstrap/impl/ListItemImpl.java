@@ -3,9 +3,8 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.Color;
-import idm.bstrap.mm.bstrap.TextContainer;
-import idm.bstrap.mm.bstrap.TextElements;
+import idm.bstrap.mm.bstrap.ListItem;
+import idm.bstrap.mm.bstrap.ListItemElement;
 
 import java.util.Collection;
 
@@ -18,61 +17,62 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Text Container</b></em>'.
+ * An implementation of the model object '<em><b>List Item</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link idm.bstrap.mm.bstrap.impl.TextContainerImpl#getTextelements <em>Textelements</em>}</li>
- *   <li>{@link idm.bstrap.mm.bstrap.impl.TextContainerImpl#getColor <em>Color</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.ListItemImpl#getListitemelements <em>Listitemelements</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.ListItemImpl#isActive <em>Active</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class TextContainerImpl extends TextPageContentImpl implements TextContainer {
+public class ListItemImpl extends MinimalEObjectImpl.Container implements ListItem {
 	/**
-	 * The cached value of the '{@link #getTextelements() <em>Textelements</em>}' containment reference list.
+	 * The cached value of the '{@link #getListitemelements() <em>Listitemelements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTextelements()
+	 * @see #getListitemelements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TextElements> textelements;
+	protected EList<ListItemElement> listitemelements;
 
 	/**
-	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * The default value of the '{@link #isActive() <em>Active</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getColor()
+	 * @see #isActive()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color COLOR_EDEFAULT = Color.DARK;
+	protected static final boolean ACTIVE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
+	 * The cached value of the '{@link #isActive() <em>Active</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getColor()
+	 * @see #isActive()
 	 * @generated
 	 * @ordered
 	 */
-	protected Color color = COLOR_EDEFAULT;
+	protected boolean active = ACTIVE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TextContainerImpl() {
+	protected ListItemImpl() {
 		super();
 	}
 
@@ -83,7 +83,7 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BstrapPackage.Literals.TEXT_CONTAINER;
+		return BstrapPackage.Literals.LIST_ITEM;
 	}
 
 	/**
@@ -91,12 +91,12 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TextElements> getTextelements() {
-		if (textelements == null) {
-			textelements = new EObjectContainmentEList<TextElements>(TextElements.class, this,
-					BstrapPackage.TEXT_CONTAINER__TEXTELEMENTS);
+	public EList<ListItemElement> getListitemelements() {
+		if (listitemelements == null) {
+			listitemelements = new EObjectContainmentEList<ListItemElement>(ListItemElement.class, this,
+					BstrapPackage.LIST_ITEM__LISTITEMELEMENTS);
 		}
-		return textelements;
+		return listitemelements;
 	}
 
 	/**
@@ -104,8 +104,8 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Color getColor() {
-		return color;
+	public boolean isActive() {
+		return active;
 	}
 
 	/**
@@ -113,12 +113,11 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setColor(Color newColor) {
-		Color oldColor = color;
-		color = newColor == null ? COLOR_EDEFAULT : newColor;
+	public void setActive(boolean newActive) {
+		boolean oldActive = active;
+		active = newActive;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BstrapPackage.TEXT_CONTAINER__COLOR, oldColor,
-					color));
+			eNotify(new ENotificationImpl(this, Notification.SET, BstrapPackage.LIST_ITEM__ACTIVE, oldActive, active));
 	}
 
 	/**
@@ -129,8 +128,8 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case BstrapPackage.TEXT_CONTAINER__TEXTELEMENTS:
-			return ((InternalEList<?>) getTextelements()).basicRemove(otherEnd, msgs);
+		case BstrapPackage.LIST_ITEM__LISTITEMELEMENTS:
+			return ((InternalEList<?>) getListitemelements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -143,10 +142,10 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BstrapPackage.TEXT_CONTAINER__TEXTELEMENTS:
-			return getTextelements();
-		case BstrapPackage.TEXT_CONTAINER__COLOR:
-			return getColor();
+		case BstrapPackage.LIST_ITEM__LISTITEMELEMENTS:
+			return getListitemelements();
+		case BstrapPackage.LIST_ITEM__ACTIVE:
+			return isActive();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -160,12 +159,12 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BstrapPackage.TEXT_CONTAINER__TEXTELEMENTS:
-			getTextelements().clear();
-			getTextelements().addAll((Collection<? extends TextElements>) newValue);
+		case BstrapPackage.LIST_ITEM__LISTITEMELEMENTS:
+			getListitemelements().clear();
+			getListitemelements().addAll((Collection<? extends ListItemElement>) newValue);
 			return;
-		case BstrapPackage.TEXT_CONTAINER__COLOR:
-			setColor((Color) newValue);
+		case BstrapPackage.LIST_ITEM__ACTIVE:
+			setActive((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -179,11 +178,11 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.TEXT_CONTAINER__TEXTELEMENTS:
-			getTextelements().clear();
+		case BstrapPackage.LIST_ITEM__LISTITEMELEMENTS:
+			getListitemelements().clear();
 			return;
-		case BstrapPackage.TEXT_CONTAINER__COLOR:
-			setColor(COLOR_EDEFAULT);
+		case BstrapPackage.LIST_ITEM__ACTIVE:
+			setActive(ACTIVE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -197,10 +196,10 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.TEXT_CONTAINER__TEXTELEMENTS:
-			return textelements != null && !textelements.isEmpty();
-		case BstrapPackage.TEXT_CONTAINER__COLOR:
-			return color != COLOR_EDEFAULT;
+		case BstrapPackage.LIST_ITEM__LISTITEMELEMENTS:
+			return listitemelements != null && !listitemelements.isEmpty();
+		case BstrapPackage.LIST_ITEM__ACTIVE:
+			return active != ACTIVE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -216,10 +215,10 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (color: ");
-		result.append(color);
+		result.append(" (active: ");
+		result.append(active);
 		result.append(')');
 		return result.toString();
 	}
 
-} //TextContainerImpl
+} //ListItemImpl

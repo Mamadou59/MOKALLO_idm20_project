@@ -3,24 +3,24 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.Primary;
+import idm.bstrap.mm.bstrap.ListProperty;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Primary</b></em>'.
+ * An implementation of the model object '<em><b>List Property</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class PrimaryImpl extends ButtonStyleImpl implements Primary {
+public abstract class ListPropertyImpl extends PropertyClassImpl implements ListProperty {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PrimaryImpl() {
+	protected ListPropertyImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class PrimaryImpl extends ButtonStyleImpl implements Primary {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BstrapPackage.Literals.PRIMARY;
+		return BstrapPackage.Literals.LIST_PROPERTY;
 	}
 
-} //PrimaryImpl
+} //ListPropertyImpl

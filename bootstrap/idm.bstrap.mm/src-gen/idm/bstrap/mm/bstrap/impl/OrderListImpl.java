@@ -3,24 +3,24 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.Secondary;
+import idm.bstrap.mm.bstrap.OrderList;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Secondary</b></em>'.
+ * An implementation of the model object '<em><b>Order List</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class SecondaryImpl extends ButtonStyleImpl implements Secondary {
+public class OrderListImpl extends ListElementImpl implements OrderList {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SecondaryImpl() {
+	protected OrderListImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class SecondaryImpl extends ButtonStyleImpl implements Secondary {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BstrapPackage.Literals.SECONDARY;
+		return BstrapPackage.Literals.ORDER_LIST;
 	}
 
-} //SecondaryImpl
+} //OrderListImpl

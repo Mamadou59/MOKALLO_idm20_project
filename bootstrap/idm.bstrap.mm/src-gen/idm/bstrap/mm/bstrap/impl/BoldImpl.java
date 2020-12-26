@@ -2,25 +2,25 @@
  */
 package idm.bstrap.mm.bstrap.impl;
 
+import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.CompositeTextElement;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Composite Text Element</b></em>'.
+ * An implementation of the model object '<em><b>Bold</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class CompositeTextElementImpl extends ContainableTextElementImpl implements CompositeTextElement {
+public class BoldImpl extends EmphasisImpl implements Bold {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CompositeTextElementImpl() {
+	protected BoldImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public abstract class CompositeTextElementImpl extends ContainableTextElementImp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BstrapPackage.Literals.COMPOSITE_TEXT_ELEMENT;
+		return BstrapPackage.Literals.BOLD;
 	}
 
-} //CompositeTextElementImpl
+} //BoldImpl

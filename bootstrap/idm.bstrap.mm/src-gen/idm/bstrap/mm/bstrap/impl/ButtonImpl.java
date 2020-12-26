@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -54,6 +55,7 @@ public class ButtonImpl extends ContainableTextElementImpl implements Button {
 	 * @ordered
 	 */
 	protected static final String CONTENT_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getContent() <em>Content</em>}' attribute.
 	 * <!-- begin-user-doc -->

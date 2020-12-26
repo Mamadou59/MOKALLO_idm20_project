@@ -283,6 +283,105 @@ public interface BstrapFactory extends EFactory {
 	Button createButton();
 
 	/**
+	 * Returns a new object of class '<em>Order List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Order List</em>'.
+	 * @generated
+	 */
+	OrderList createOrderList();
+
+	/**
+	 * Returns a new object of class '<em>Un Ordered List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Un Ordered List</em>'.
+	 * @generated
+	 */
+	UnOrderedList createUnOrderedList();
+
+	/**
+	 * Returns a new object of class '<em>List Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>List Item</em>'.
+	 * @generated
+	 */
+	ListItem createListItem();
+
+	/**
+	 * Returns a new object of class '<em>Navigation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Navigation</em>'.
+	 * @generated
+	 */
+	Navigation createNavigation();
+
+	/**
+	 * Returns a new object of class '<em>Centered</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Centered</em>'.
+	 * @generated
+	 */
+	Centered createCentered();
+
+	/**
+	 * Returns a new object of class '<em>Basic List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Basic List</em>'.
+	 * @generated
+	 */
+	BasicList createBasicList();
+
+	/**
+	 * Returns a new object of class '<em>Horizontal List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Horizontal List</em>'.
+	 * @generated
+	 */
+	HorizontalList createHorizontalList();
+
+	/**
+	 * Returns a new object of class '<em>Basic</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Basic</em>'.
+	 * @generated
+	 */
+	Basic createBasic();
+
+	/**
+	 * Returns a new object of class '<em>Vertical</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Vertical</em>'.
+	 * @generated
+	 */
+	Vertical createVertical();
+
+	/**
+	 * Returns a new object of class '<em>Italic</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Italic</em>'.
+	 * @generated
+	 */
+	Italic createItalic();
+
+	/**
+	 * Returns a new object of class '<em>Bold</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bold</em>'.
+	 * @generated
+	 */
+	Bold createBold();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

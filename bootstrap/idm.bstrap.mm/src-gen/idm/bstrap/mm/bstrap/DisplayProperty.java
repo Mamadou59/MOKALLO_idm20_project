@@ -2,8 +2,6 @@
  */
 package idm.bstrap.mm.bstrap;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Display Property</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface DisplayProperty extends EObject {
+public interface DisplayProperty extends PropertyClass {
 } // DisplayProperty

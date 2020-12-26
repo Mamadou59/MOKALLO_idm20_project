@@ -12,5 +12,5 @@ package idm.bstrap.mm.bstrap;
  * @model
  * @generated
  */
-public interface Paragraphe extends TextContainer {
+public interface Paragraphe extends TextContainer, ListItemElement {
 } // Paragraphe

@@ -5,6 +5,9 @@ package idm.bstrap.mm.bstrap.impl;
 import idm.bstrap.mm.bstrap.Active;
 import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.Background;
+import idm.bstrap.mm.bstrap.Basic;
+import idm.bstrap.mm.bstrap.BasicList;
+import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
@@ -12,6 +15,7 @@ import idm.bstrap.mm.bstrap.Button;
 import idm.bstrap.mm.bstrap.ButtonSize;
 import idm.bstrap.mm.bstrap.ButtonStyle;
 import idm.bstrap.mm.bstrap.Center;
+import idm.bstrap.mm.bstrap.Centered;
 import idm.bstrap.mm.bstrap.Circle;
 import idm.bstrap.mm.bstrap.Code;
 import idm.bstrap.mm.bstrap.Color;
@@ -23,9 +27,14 @@ import idm.bstrap.mm.bstrap.Display3;
 import idm.bstrap.mm.bstrap.Display4;
 import idm.bstrap.mm.bstrap.FixContainer;
 import idm.bstrap.mm.bstrap.FluidContainer;
+import idm.bstrap.mm.bstrap.HorizontalList;
 import idm.bstrap.mm.bstrap.Image;
+import idm.bstrap.mm.bstrap.Italic;
 import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.ListItem;
 import idm.bstrap.mm.bstrap.Margin;
+import idm.bstrap.mm.bstrap.Navigation;
+import idm.bstrap.mm.bstrap.OrderList;
 import idm.bstrap.mm.bstrap.Padding;
 import idm.bstrap.mm.bstrap.Page;
 import idm.bstrap.mm.bstrap.Paragraphe;
@@ -35,6 +44,8 @@ import idm.bstrap.mm.bstrap.Size;
 import idm.bstrap.mm.bstrap.Text;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
+import idm.bstrap.mm.bstrap.UnOrderedList;
+import idm.bstrap.mm.bstrap.Vertical;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -147,6 +158,28 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createActive();
 		case BstrapPackage.BUTTON:
 			return createButton();
+		case BstrapPackage.ORDER_LIST:
+			return createOrderList();
+		case BstrapPackage.UN_ORDERED_LIST:
+			return createUnOrderedList();
+		case BstrapPackage.LIST_ITEM:
+			return createListItem();
+		case BstrapPackage.NAVIGATION:
+			return createNavigation();
+		case BstrapPackage.CENTERED:
+			return createCentered();
+		case BstrapPackage.BASIC_LIST:
+			return createBasicList();
+		case BstrapPackage.HORIZONTAL_LIST:
+			return createHorizontalList();
+		case BstrapPackage.BASIC:
+			return createBasic();
+		case BstrapPackage.VERTICAL:
+			return createVertical();
+		case BstrapPackage.ITALIC:
+			return createItalic();
+		case BstrapPackage.BOLD:
+			return createBold();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -478,6 +511,116 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	public Button createButton() {
 		ButtonImpl button = new ButtonImpl();
 		return button;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OrderList createOrderList() {
+		OrderListImpl orderList = new OrderListImpl();
+		return orderList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnOrderedList createUnOrderedList() {
+		UnOrderedListImpl unOrderedList = new UnOrderedListImpl();
+		return unOrderedList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ListItem createListItem() {
+		ListItemImpl listItem = new ListItemImpl();
+		return listItem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Navigation createNavigation() {
+		NavigationImpl navigation = new NavigationImpl();
+		return navigation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Centered createCentered() {
+		CenteredImpl centered = new CenteredImpl();
+		return centered;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BasicList createBasicList() {
+		BasicListImpl basicList = new BasicListImpl();
+		return basicList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HorizontalList createHorizontalList() {
+		HorizontalListImpl horizontalList = new HorizontalListImpl();
+		return horizontalList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Basic createBasic() {
+		BasicImpl basic = new BasicImpl();
+		return basic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Vertical createVertical() {
+		VerticalImpl vertical = new VerticalImpl();
+		return vertical;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Italic createItalic() {
+		ItalicImpl italic = new ItalicImpl();
+		return italic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bold createBold() {
+		BoldImpl bold = new BoldImpl();
+		return bold;
 	}
 
 	/**

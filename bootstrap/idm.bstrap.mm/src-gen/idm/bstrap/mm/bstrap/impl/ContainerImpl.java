@@ -4,6 +4,7 @@ package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.TextPageContent;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;

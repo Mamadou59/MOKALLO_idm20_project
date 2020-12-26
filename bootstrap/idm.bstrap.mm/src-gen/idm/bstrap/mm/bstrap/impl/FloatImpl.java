@@ -6,7 +6,9 @@ import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -32,6 +34,7 @@ public class FloatImpl extends ImageAligningImpl implements idm.bstrap.mm.bstrap
 	 * @ordered
 	 */
 	protected static final Alignement ALIGNEMENT_EDEFAULT = Alignement.LEFT;
+
 	/**
 	 * The cached value of the '{@link #getAlignement() <em>Alignement</em>}' attribute.
 	 * <!-- begin-user-doc -->

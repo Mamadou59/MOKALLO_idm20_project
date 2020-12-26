@@ -4,10 +4,12 @@ package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.ButtonStyle;
-
 import idm.bstrap.mm.bstrap.Color;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -33,6 +35,7 @@ public class ButtonStyleImpl extends ButtonPropertyImpl implements ButtonStyle {
 	 * @ordered
 	 */
 	protected static final Color COLOR_EDEFAULT = Color.DARK;
+
 	/**
 	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
 	 * <!-- begin-user-doc -->

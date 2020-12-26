@@ -3,24 +3,24 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.Info;
+import idm.bstrap.mm.bstrap.HorizontalList;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Info</b></em>'.
+ * An implementation of the model object '<em><b>Horizontal List</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class InfoImpl extends ButtonStyleImpl implements Info {
+public class HorizontalListImpl extends ListPropertyImpl implements HorizontalList {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InfoImpl() {
+	protected HorizontalListImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class InfoImpl extends ButtonStyleImpl implements Info {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BstrapPackage.Literals.INFO;
+		return BstrapPackage.Literals.HORIZONTAL_LIST;
 	}
 
-} //InfoImpl
+} //HorizontalListImpl

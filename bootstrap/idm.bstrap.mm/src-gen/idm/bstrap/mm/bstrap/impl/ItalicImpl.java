@@ -3,24 +3,24 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.Succes;
+import idm.bstrap.mm.bstrap.Italic;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Succes</b></em>'.
+ * An implementation of the model object '<em><b>Italic</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class SuccesImpl extends ButtonStyleImpl implements Succes {
+public class ItalicImpl extends EmphasisImpl implements Italic {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SuccesImpl() {
+	protected ItalicImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class SuccesImpl extends ButtonStyleImpl implements Succes {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BstrapPackage.Literals.SUCCES;
+		return BstrapPackage.Literals.ITALIC;
 	}
 
-} //SuccesImpl
+} //ItalicImpl
