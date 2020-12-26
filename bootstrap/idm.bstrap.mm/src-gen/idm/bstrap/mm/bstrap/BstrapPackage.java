@@ -380,13 +380,22 @@ public interface BstrapPackage extends EPackage {
 	int TEXT_CONTAINER__COLOR = TEXT_PAGE_CONTENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CONTAINER__EMPHASIS = TEXT_PAGE_CONTENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Text Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CONTAINER_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 2;
+	int TEXT_CONTAINER_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Text Container</em>' class.
@@ -433,6 +442,15 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int PARAGRAPHE__COLOR = TEXT_CONTAINER__COLOR;
+
+	/**
+	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PARAGRAPHE__EMPHASIS = TEXT_CONTAINER__EMPHASIS;
 
 	/**
 	 * The number of structural features of the '<em>Paragraphe</em>' class.
@@ -488,6 +506,15 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int TITLE__COLOR = TEXT_CONTAINER__COLOR;
+
+	/**
+	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TITLE__EMPHASIS = TEXT_CONTAINER__EMPHASIS;
 
 	/**
 	 * The feature id for the '<em><b>Level</b></em>' attribute.
@@ -601,22 +628,13 @@ public interface BstrapPackage extends EPackage {
 	int TEXT__TEXT = TEXT_ELEMENTS_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT__EMPHASIS = TEXT_ELEMENTS_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Text</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FEATURE_COUNT = TEXT_ELEMENTS_FEATURE_COUNT + 2;
+	int TEXT_FEATURE_COUNT = TEXT_ELEMENTS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Text</em>' class.
@@ -645,15 +663,6 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int CODE__TEXT = TEXT__TEXT;
-
-	/**
-	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CODE__EMPHASIS = TEXT__EMPHASIS;
 
 	/**
 	 * The number of structural features of the '<em>Code</em>' class.
@@ -1359,16 +1368,6 @@ public interface BstrapPackage extends EPackage {
 	int BUTTON_PROPERTY_OPERATION_COUNT = PROPERTY_CLASS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ButtonStyleImpl <em>Button Style</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.ButtonStyleImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonStyle()
-	 * @generated
-	 */
-	int BUTTON_STYLE = 38;
-
-	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ImagePropertyImpl <em>Image Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1630,6 +1629,16 @@ public interface BstrapPackage extends EPackage {
 	int RESPONSIVE_OPERATION_COUNT = IMAGE_ALIGNING_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ButtonStyleImpl <em>Button Style</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.ButtonStyleImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonStyle()
+	 * @generated
+	 */
+	int BUTTON_STYLE = 38;
+
+	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1694,14 +1703,14 @@ public interface BstrapPackage extends EPackage {
 	int BUTTON_SIZE_OPERATION_COUNT = BUTTON_PROPERTY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.LinkImpl <em>Link</em>}' class.
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.LinkPropertyImpl <em>Link Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.LinkImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLink()
+	 * @see idm.bstrap.mm.bstrap.impl.LinkPropertyImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLinkProperty()
 	 * @generated
 	 */
-	int LINK = 40;
+	int LINK_PROPERTY = 40;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -1710,25 +1719,25 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__COLOR = BUTTON_STYLE__COLOR;
+	int LINK_PROPERTY__COLOR = BUTTON_STYLE__COLOR;
 
 	/**
-	 * The number of structural features of the '<em>Link</em>' class.
+	 * The number of structural features of the '<em>Link Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = BUTTON_STYLE_FEATURE_COUNT + 0;
+	int LINK_PROPERTY_FEATURE_COUNT = BUTTON_STYLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Link</em>' class.
+	 * The number of operations of the '<em>Link Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_OPERATION_COUNT = BUTTON_STYLE_OPERATION_COUNT + 0;
+	int LINK_PROPERTY_OPERATION_COUNT = BUTTON_STYLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ButtonStateImpl <em>Button State</em>}' class.
@@ -1815,6 +1824,43 @@ public interface BstrapPackage extends EPackage {
 	int ACTIVE_OPERATION_COUNT = BUTTON_STATE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TextContainableImpl <em>Text Containable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.TextContainableImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTextContainable()
+	 * @generated
+	 */
+	int TEXT_CONTAINABLE = 66;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CONTAINABLE__GENERAL_PROPERTIES = CONTAINABLE_TEXT_ELEMENT__GENERAL_PROPERTIES;
+
+	/**
+	 * The number of structural features of the '<em>Text Containable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CONTAINABLE_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Text Containable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CONTAINABLE_OPERATION_COUNT = CONTAINABLE_TEXT_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ButtonImpl <em>Button</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1831,7 +1877,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__GENERAL_PROPERTIES = CONTAINABLE_TEXT_ELEMENT__GENERAL_PROPERTIES;
+	int BUTTON__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Buttonproperties</b></em>' containment reference list.
@@ -1840,7 +1886,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__BUTTONPROPERTIES = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int BUTTON__BUTTONPROPERTIES = TEXT_CONTAINABLE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -1849,7 +1895,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__CONTENT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 1;
+	int BUTTON__CONTENT = TEXT_CONTAINABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Button</em>' class.
@@ -1858,7 +1904,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 2;
+	int BUTTON_FEATURE_COUNT = TEXT_CONTAINABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Button</em>' class.
@@ -1867,7 +1913,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON_OPERATION_COUNT = CONTAINABLE_TEXT_ELEMENT_OPERATION_COUNT + 0;
+	int BUTTON_OPERATION_COUNT = TEXT_CONTAINABLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ListElementImpl <em>List Element</em>}' class.
@@ -2360,32 +2406,32 @@ public interface BstrapPackage extends EPackage {
 	int EMPHASIS_OPERATION_COUNT = PROPERTY_CLASS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ItalicImpl <em>Italic</em>}' class.
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ItalicPropertyImpl <em>Italic Property</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.ItalicImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getItalic()
+	 * @see idm.bstrap.mm.bstrap.impl.ItalicPropertyImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getItalicProperty()
 	 * @generated
 	 */
-	int ITALIC = 61;
+	int ITALIC_PROPERTY = 61;
 
 	/**
-	 * The number of structural features of the '<em>Italic</em>' class.
+	 * The number of structural features of the '<em>Italic Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ITALIC_FEATURE_COUNT = EMPHASIS_FEATURE_COUNT + 0;
+	int ITALIC_PROPERTY_FEATURE_COUNT = EMPHASIS_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Italic</em>' class.
+	 * The number of operations of the '<em>Italic Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ITALIC_OPERATION_COUNT = EMPHASIS_OPERATION_COUNT + 0;
+	int ITALIC_PROPERTY_OPERATION_COUNT = EMPHASIS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BoldImpl <em>Bold</em>}' class.
@@ -2416,6 +2462,135 @@ public interface BstrapPackage extends EPackage {
 	int BOLD_OPERATION_COUNT = EMPHASIS_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.LinkImpl <em>Link</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.LinkImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLink()
+	 * @generated
+	 */
+	int LINK = 63;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__GENERAL_PROPERTIES = URL_BASED_LINK__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Url</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__URL = URL_BASED_LINK__URL;
+
+	/**
+	 * The feature id for the '<em><b>Title</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__TITLE = URL_BASED_LINK__TITLE;
+
+	/**
+	 * The number of structural features of the '<em>Link</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_FEATURE_COUNT = URL_BASED_LINK_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Link</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_OPERATION_COUNT = URL_BASED_LINK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.StrongImpl <em>Strong</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.StrongImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getStrong()
+	 * @generated
+	 */
+	int STRONG = 64;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRONG__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
+
+	/**
+	 * The number of structural features of the '<em>Strong</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRONG_FEATURE_COUNT = TEXT_CONTAINABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Strong</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRONG_OPERATION_COUNT = TEXT_CONTAINABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ItalicImpl <em>Italic</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.ItalicImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getItalic()
+	 * @generated
+	 */
+	int ITALIC = 65;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITALIC__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
+
+	/**
+	 * The number of structural features of the '<em>Italic</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITALIC_FEATURE_COUNT = TEXT_CONTAINABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Italic</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITALIC_OPERATION_COUNT = TEXT_CONTAINABLE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2423,7 +2598,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getColor()
 	 * @generated
 	 */
-	int COLOR = 63;
+	int COLOR = 67;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Size <em>Size</em>}' enum.
@@ -2433,7 +2608,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 64;
+	int SIZE = 68;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Alignement <em>Alignement</em>}' enum.
@@ -2443,7 +2618,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlignement()
 	 * @generated
 	 */
-	int ALIGNEMENT = 65;
+	int ALIGNEMENT = 69;
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Page <em>Page</em>}'.
@@ -2562,6 +2737,17 @@ public interface BstrapPackage extends EPackage {
 	EAttribute getTextContainer_Color();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.TextContainer#getEmphasis <em>Emphasis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Emphasis</em>'.
+	 * @see idm.bstrap.mm.bstrap.TextContainer#getEmphasis()
+	 * @see #getTextContainer()
+	 * @generated
+	 */
+	EReference getTextContainer_Emphasis();
+
+	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Paragraphe <em>Paragraphe</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2633,17 +2819,6 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getText_Text();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Text#getEmphasis <em>Emphasis</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Emphasis</em>'.
-	 * @see idm.bstrap.mm.bstrap.Text#getEmphasis()
-	 * @see #getText()
-	 * @generated
-	 */
-	EReference getText_Emphasis();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Code <em>Code</em>}'.
@@ -3066,14 +3241,14 @@ public interface BstrapPackage extends EPackage {
 	EAttribute getButtonSize_Size();
 
 	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Link <em>Link</em>}'.
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.LinkProperty <em>Link Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Link</em>'.
-	 * @see idm.bstrap.mm.bstrap.Link
+	 * @return the meta object for class '<em>Link Property</em>'.
+	 * @see idm.bstrap.mm.bstrap.LinkProperty
 	 * @generated
 	 */
-	EClass getLink();
+	EClass getLinkProperty();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ButtonState <em>Button State</em>}'.
@@ -3375,14 +3550,14 @@ public interface BstrapPackage extends EPackage {
 	EClass getEmphasis();
 
 	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Italic <em>Italic</em>}'.
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ItalicProperty <em>Italic Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Italic</em>'.
-	 * @see idm.bstrap.mm.bstrap.Italic
+	 * @return the meta object for class '<em>Italic Property</em>'.
+	 * @see idm.bstrap.mm.bstrap.ItalicProperty
 	 * @generated
 	 */
-	EClass getItalic();
+	EClass getItalicProperty();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Bold <em>Bold</em>}'.
@@ -3393,6 +3568,46 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBold();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Link <em>Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Link</em>'.
+	 * @see idm.bstrap.mm.bstrap.Link
+	 * @generated
+	 */
+	EClass getLink();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Strong <em>Strong</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Strong</em>'.
+	 * @see idm.bstrap.mm.bstrap.Strong
+	 * @generated
+	 */
+	EClass getStrong();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Italic <em>Italic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Italic</em>'.
+	 * @see idm.bstrap.mm.bstrap.Italic
+	 * @generated
+	 */
+	EClass getItalic();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.TextContainable <em>Text Containable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Text Containable</em>'.
+	 * @see idm.bstrap.mm.bstrap.TextContainable
+	 * @generated
+	 */
+	EClass getTextContainable();
 
 	/**
 	 * Returns the meta object for enum '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}'.
@@ -3546,6 +3761,14 @@ public interface BstrapPackage extends EPackage {
 		EAttribute TEXT_CONTAINER__COLOR = eINSTANCE.getTextContainer_Color();
 
 		/**
+		 * The meta object literal for the '<em><b>Emphasis</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEXT_CONTAINER__EMPHASIS = eINSTANCE.getTextContainer_Emphasis();
+
+		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ParagrapheImpl <em>Paragraphe</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3608,14 +3831,6 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TEXT__TEXT = eINSTANCE.getText_Text();
-
-		/**
-		 * The meta object literal for the '<em><b>Emphasis</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TEXT__EMPHASIS = eINSTANCE.getText_Emphasis();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.CodeImpl <em>Code</em>}' class.
@@ -4008,14 +4223,14 @@ public interface BstrapPackage extends EPackage {
 		EAttribute BUTTON_SIZE__SIZE = eINSTANCE.getButtonSize_Size();
 
 		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.LinkImpl <em>Link</em>}' class.
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.LinkPropertyImpl <em>Link Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.impl.LinkImpl
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLink()
+		 * @see idm.bstrap.mm.bstrap.impl.LinkPropertyImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLinkProperty()
 		 * @generated
 		 */
-		EClass LINK = eINSTANCE.getLink();
+		EClass LINK_PROPERTY = eINSTANCE.getLinkProperty();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ButtonStateImpl <em>Button State</em>}' class.
@@ -4290,14 +4505,14 @@ public interface BstrapPackage extends EPackage {
 		EClass EMPHASIS = eINSTANCE.getEmphasis();
 
 		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ItalicImpl <em>Italic</em>}' class.
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ItalicPropertyImpl <em>Italic Property</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.impl.ItalicImpl
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getItalic()
+		 * @see idm.bstrap.mm.bstrap.impl.ItalicPropertyImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getItalicProperty()
 		 * @generated
 		 */
-		EClass ITALIC = eINSTANCE.getItalic();
+		EClass ITALIC_PROPERTY = eINSTANCE.getItalicProperty();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BoldImpl <em>Bold</em>}' class.
@@ -4308,6 +4523,46 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BOLD = eINSTANCE.getBold();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.LinkImpl <em>Link</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.LinkImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLink()
+		 * @generated
+		 */
+		EClass LINK = eINSTANCE.getLink();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.StrongImpl <em>Strong</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.StrongImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getStrong()
+		 * @generated
+		 */
+		EClass STRONG = eINSTANCE.getStrong();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ItalicImpl <em>Italic</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.ItalicImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getItalic()
+		 * @generated
+		 */
+		EClass ITALIC = eINSTANCE.getItalic();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.TextContainableImpl <em>Text Containable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.TextContainableImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTextContainable()
+		 * @generated
+		 */
+		EClass TEXT_CONTAINABLE = eINSTANCE.getTextContainable();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.

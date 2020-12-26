@@ -11,19 +11,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.Primary} object.
+ * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.Bold} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PrimaryItemProvider extends ButtonStyleItemProvider {
+public class BoldItemProvider extends EmphasisItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrimaryItemProvider(AdapterFactory adapterFactory) {
+	public BoldItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,14 +43,14 @@ public class PrimaryItemProvider extends ButtonStyleItemProvider {
 	}
 
 	/**
-	 * This returns Primary.gif.
+	 * This returns Bold.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Primary"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Bold"));
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class PrimaryItemProvider extends ButtonStyleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Primary_type");
+		return getString("_UI_Bold_type");
 	}
 
 	/**

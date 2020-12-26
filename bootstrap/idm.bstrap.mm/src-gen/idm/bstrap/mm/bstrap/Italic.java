@@ -12,5 +12,5 @@ package idm.bstrap.mm.bstrap;
  * @model
  * @generated
  */
-public interface Italic extends Emphasis {
+public interface Italic extends TextContainable {
 } // Italic

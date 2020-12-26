@@ -18,6 +18,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="textelements" upperBound="-1"
         eType="#//TextElements" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="emphasis" upperBound="-1"
+        eType="#//Emphasis" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Paragraphe" eSuperTypes="#//TextContainer #//ListItemElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Title" eSuperTypes="#//TextContainer">
@@ -29,8 +31,6 @@
       eSuperTypes="#//ListItemElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//TextElements">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="emphasis" upperBound="-1"
-        eType="#//Emphasis" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Code" eSuperTypes="#//Text"/>
   <eClassifiers xsi:type="ecore:EClass" name="CompositeTextElement" abstract="true"
@@ -95,7 +95,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ButtonSize" eSuperTypes="#//ButtonProperty">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="#//Size"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//ButtonStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkProperty" eSuperTypes="#//ButtonStyle"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Size">
     <eLiterals name="DEFAULT" value="1"/>
     <eLiterals name="SMALL" value="2"/>
@@ -104,7 +104,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ButtonState" abstract="true" eSuperTypes="#//ButtonProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="Disabled" eSuperTypes="#//ButtonState"/>
   <eClassifiers xsi:type="ecore:EClass" name="Active" eSuperTypes="#//ButtonState"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//ContainableTextElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//TextContainable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="buttonproperties" upperBound="-1"
         eType="#//ButtonProperty" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -149,6 +149,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Basic" eSuperTypes="#//NavBarProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="Vertical" eSuperTypes="#//NavBarProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="Emphasis" abstract="true" eSuperTypes="#//PropertyClass"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Italic" eSuperTypes="#//Emphasis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ItalicProperty" eSuperTypes="#//Emphasis"/>
   <eClassifiers xsi:type="ecore:EClass" name="Bold" eSuperTypes="#//Emphasis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//UrlBasedLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Strong" eSuperTypes="#//TextContainable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Italic" eSuperTypes="#//TextContainable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextContainable" abstract="true" eSuperTypes="#//ContainableTextElement"/>
 </ecore:EPackage>

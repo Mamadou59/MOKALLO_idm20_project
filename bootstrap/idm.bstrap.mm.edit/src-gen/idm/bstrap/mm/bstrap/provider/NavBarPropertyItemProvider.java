@@ -11,19 +11,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.Dark} object.
+ * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.NavBarProperty} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class DarkItemProvider extends ButtonStyleItemProvider {
+public class NavBarPropertyItemProvider extends PropertyClassItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DarkItemProvider(AdapterFactory adapterFactory) {
+	public NavBarPropertyItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,14 +43,14 @@ public class DarkItemProvider extends ButtonStyleItemProvider {
 	}
 
 	/**
-	 * This returns Dark.gif.
+	 * This returns NavBarProperty.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Dark"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/NavBarProperty"));
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class DarkItemProvider extends ButtonStyleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Dark_type");
+		return getString("_UI_NavBarProperty_type");
 	}
 
 	/**

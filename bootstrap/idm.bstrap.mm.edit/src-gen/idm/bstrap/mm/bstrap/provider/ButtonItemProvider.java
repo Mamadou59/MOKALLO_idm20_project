@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ButtonItemProvider extends ContainableTextElementItemProvider {
+public class ButtonItemProvider extends TextContainableItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -172,7 +172,7 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 				BstrapFactory.eINSTANCE.createButtonSize()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
-				BstrapFactory.eINSTANCE.createLink()));
+				BstrapFactory.eINSTANCE.createLinkProperty()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
 				BstrapFactory.eINSTANCE.createDisabled()));

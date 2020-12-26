@@ -35,7 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ButtonImpl extends ContainableTextElementImpl implements Button {
+public class ButtonImpl extends TextContainableImpl implements Button {
 	/**
 	 * The cached value of the '{@link #getButtonproperties() <em>Buttonproperties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

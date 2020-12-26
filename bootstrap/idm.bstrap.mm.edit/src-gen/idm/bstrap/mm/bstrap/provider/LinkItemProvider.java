@@ -2,8 +2,8 @@
  */
 package idm.bstrap.mm.bstrap.provider;
 
-import idm.bstrap.mm.bstrap.Color;
 import idm.bstrap.mm.bstrap.Link;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -18,7 +18,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LinkItemProvider extends ButtonStyleItemProvider {
+public class LinkItemProvider extends UrlBasedLinkItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -73,8 +73,7 @@ public class LinkItemProvider extends ButtonStyleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		Color labelValue = ((Link) object).getColor();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((Link) object).getUrl();
 		return label == null || label.length() == 0 ? getString("_UI_Link_type")
 				: getString("_UI_Link_type") + " " + label;
 	}

@@ -11,19 +11,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.Light} object.
+ * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.ItalicProperty} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LightItemProvider extends ButtonStyleItemProvider {
+public class ItalicPropertyItemProvider extends EmphasisItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LightItemProvider(AdapterFactory adapterFactory) {
+	public ItalicPropertyItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,14 +43,14 @@ public class LightItemProvider extends ButtonStyleItemProvider {
 	}
 
 	/**
-	 * This returns Light.gif.
+	 * This returns ItalicProperty.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Light"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ItalicProperty"));
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class LightItemProvider extends ButtonStyleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Light_type");
+		return getString("_UI_ItalicProperty_type");
 	}
 
 	/**

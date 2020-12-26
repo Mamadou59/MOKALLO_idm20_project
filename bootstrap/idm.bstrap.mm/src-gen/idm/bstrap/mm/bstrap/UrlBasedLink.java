@@ -20,7 +20,6 @@ package idm.bstrap.mm.bstrap;
  * @generated
  */
 public interface UrlBasedLink extends CompositeTextElement {
-
 	/**
 	 * Returns the value of the '<em><b>Url</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -64,4 +63,5 @@ public interface UrlBasedLink extends CompositeTextElement {
 	 * @generated
 	 */
 	void setTitle(String value);
+
 } // UrlBasedLink

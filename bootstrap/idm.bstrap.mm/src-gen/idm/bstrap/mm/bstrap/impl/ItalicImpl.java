@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ItalicImpl extends EmphasisImpl implements Italic {
+public class ItalicImpl extends TextContainableImpl implements Italic {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

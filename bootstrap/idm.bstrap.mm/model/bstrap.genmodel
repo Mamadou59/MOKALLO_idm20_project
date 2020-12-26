@@ -45,6 +45,7 @@
     <genClasses ecoreClass="bstrap.ecore#//TextContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//TextContainer/textelements"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//TextContainer/color"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//TextContainer/emphasis"/>
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//Paragraphe"/>
     <genClasses ecoreClass="bstrap.ecore#//Title">
@@ -54,7 +55,6 @@
     <genClasses image="false" ecoreClass="bstrap.ecore#//TextElements"/>
     <genClasses ecoreClass="bstrap.ecore#//Text">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Text/text"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Text/emphasis"/>
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//Code"/>
     <genClasses ecoreClass="bstrap.ecore#//CompositeTextElement"/>
@@ -105,7 +105,7 @@
     <genClasses ecoreClass="bstrap.ecore#//ButtonSize">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//ButtonSize/size"/>
     </genClasses>
-    <genClasses ecoreClass="bstrap.ecore#//Link"/>
+    <genClasses ecoreClass="bstrap.ecore#//LinkProperty"/>
     <genClasses ecoreClass="bstrap.ecore#//ButtonState"/>
     <genClasses ecoreClass="bstrap.ecore#//Disabled"/>
     <genClasses ecoreClass="bstrap.ecore#//Active"/>
@@ -140,7 +140,11 @@
     <genClasses ecoreClass="bstrap.ecore#//Basic"/>
     <genClasses ecoreClass="bstrap.ecore#//Vertical"/>
     <genClasses ecoreClass="bstrap.ecore#//Emphasis"/>
-    <genClasses ecoreClass="bstrap.ecore#//Italic"/>
+    <genClasses ecoreClass="bstrap.ecore#//ItalicProperty"/>
     <genClasses ecoreClass="bstrap.ecore#//Bold"/>
+    <genClasses ecoreClass="bstrap.ecore#//Link"/>
+    <genClasses ecoreClass="bstrap.ecore#//Strong"/>
+    <genClasses ecoreClass="bstrap.ecore#//Italic"/>
+    <genClasses ecoreClass="bstrap.ecore#//TextContainable"/>
   </genPackages>
 </genmodel:GenModel>

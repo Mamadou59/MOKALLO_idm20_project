@@ -19,7 +19,6 @@ package idm.bstrap.mm.bstrap;
  * @generated
  */
 public interface ButtonStyle extends ButtonProperty {
-
 	/**
 	 * Returns the value of the '<em><b>Color</b></em>' attribute.
 	 * The literals are from the enumeration {@link idm.bstrap.mm.bstrap.Color}.
@@ -44,4 +43,5 @@ public interface ButtonStyle extends ButtonProperty {
 	 * @generated
 	 */
 	void setColor(Color value);
+
 } // ButtonStyle

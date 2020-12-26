@@ -5,6 +5,7 @@ package idm.bstrap.mm.bstrap.provider;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.ButtonStyle;
 import idm.bstrap.mm.bstrap.Color;
+
 import java.util.Collection;
 import java.util.List;
 

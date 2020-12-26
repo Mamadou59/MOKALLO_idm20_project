@@ -4,6 +4,7 @@ package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Color;
+import idm.bstrap.mm.bstrap.Emphasis;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
 
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link idm.bstrap.mm.bstrap.impl.TextContainerImpl#getTextelements <em>Textelements</em>}</li>
  *   <li>{@link idm.bstrap.mm.bstrap.impl.TextContainerImpl#getColor <em>Color</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.TextContainerImpl#getEmphasis <em>Emphasis</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +68,16 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 	 * @ordered
 	 */
 	protected Color color = COLOR_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getEmphasis() <em>Emphasis</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEmphasis()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Emphasis> emphasis;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,11 +138,26 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Emphasis> getEmphasis() {
+		if (emphasis == null) {
+			emphasis = new EObjectContainmentEList<Emphasis>(Emphasis.class, this,
+					BstrapPackage.TEXT_CONTAINER__EMPHASIS);
+		}
+		return emphasis;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case BstrapPackage.TEXT_CONTAINER__TEXTELEMENTS:
 			return ((InternalEList<?>) getTextelements()).basicRemove(otherEnd, msgs);
+		case BstrapPackage.TEXT_CONTAINER__EMPHASIS:
+			return ((InternalEList<?>) getEmphasis()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -147,6 +174,8 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 			return getTextelements();
 		case BstrapPackage.TEXT_CONTAINER__COLOR:
 			return getColor();
+		case BstrapPackage.TEXT_CONTAINER__EMPHASIS:
+			return getEmphasis();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,6 +196,10 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 		case BstrapPackage.TEXT_CONTAINER__COLOR:
 			setColor((Color) newValue);
 			return;
+		case BstrapPackage.TEXT_CONTAINER__EMPHASIS:
+			getEmphasis().clear();
+			getEmphasis().addAll((Collection<? extends Emphasis>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -185,6 +218,9 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 		case BstrapPackage.TEXT_CONTAINER__COLOR:
 			setColor(COLOR_EDEFAULT);
 			return;
+		case BstrapPackage.TEXT_CONTAINER__EMPHASIS:
+			getEmphasis().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -201,6 +237,8 @@ public abstract class TextContainerImpl extends TextPageContentImpl implements T
 			return textelements != null && !textelements.isEmpty();
 		case BstrapPackage.TEXT_CONTAINER__COLOR:
 			return color != COLOR_EDEFAULT;
+		case BstrapPackage.TEXT_CONTAINER__EMPHASIS:
+			return emphasis != null && !emphasis.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

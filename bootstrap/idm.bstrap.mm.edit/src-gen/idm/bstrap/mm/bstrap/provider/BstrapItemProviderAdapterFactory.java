@@ -648,26 +648,26 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Link} instances.
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.LinkProperty} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LinkItemProvider linkItemProvider;
+	protected LinkPropertyItemProvider linkPropertyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Link}.
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.LinkProperty}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLinkAdapter() {
-		if (linkItemProvider == null) {
-			linkItemProvider = new LinkItemProvider(this);
+	public Adapter createLinkPropertyAdapter() {
+		if (linkPropertyItemProvider == null) {
+			linkPropertyItemProvider = new LinkPropertyItemProvider(this);
 		}
 
-		return linkItemProvider;
+		return linkPropertyItemProvider;
 	}
 
 	/**
@@ -737,6 +737,328 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 		}
 
 		return buttonItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.OrderList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OrderListItemProvider orderListItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.OrderList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOrderListAdapter() {
+		if (orderListItemProvider == null) {
+			orderListItemProvider = new OrderListItemProvider(this);
+		}
+
+		return orderListItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.UnOrderedList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UnOrderedListItemProvider unOrderedListItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.UnOrderedList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUnOrderedListAdapter() {
+		if (unOrderedListItemProvider == null) {
+			unOrderedListItemProvider = new UnOrderedListItemProvider(this);
+		}
+
+		return unOrderedListItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.ListItem} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ListItemItemProvider listItemItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.ListItem}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createListItemAdapter() {
+		if (listItemItemProvider == null) {
+			listItemItemProvider = new ListItemItemProvider(this);
+		}
+
+		return listItemItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Navigation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NavigationItemProvider navigationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Navigation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNavigationAdapter() {
+		if (navigationItemProvider == null) {
+			navigationItemProvider = new NavigationItemProvider(this);
+		}
+
+		return navigationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Centered} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CenteredItemProvider centeredItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Centered}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCenteredAdapter() {
+		if (centeredItemProvider == null) {
+			centeredItemProvider = new CenteredItemProvider(this);
+		}
+
+		return centeredItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.BasicList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BasicListItemProvider basicListItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.BasicList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBasicListAdapter() {
+		if (basicListItemProvider == null) {
+			basicListItemProvider = new BasicListItemProvider(this);
+		}
+
+		return basicListItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.HorizontalList} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HorizontalListItemProvider horizontalListItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.HorizontalList}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHorizontalListAdapter() {
+		if (horizontalListItemProvider == null) {
+			horizontalListItemProvider = new HorizontalListItemProvider(this);
+		}
+
+		return horizontalListItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Basic} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BasicItemProvider basicItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Basic}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBasicAdapter() {
+		if (basicItemProvider == null) {
+			basicItemProvider = new BasicItemProvider(this);
+		}
+
+		return basicItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Vertical} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VerticalItemProvider verticalItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Vertical}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVerticalAdapter() {
+		if (verticalItemProvider == null) {
+			verticalItemProvider = new VerticalItemProvider(this);
+		}
+
+		return verticalItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.ItalicProperty} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ItalicPropertyItemProvider italicPropertyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.ItalicProperty}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createItalicPropertyAdapter() {
+		if (italicPropertyItemProvider == null) {
+			italicPropertyItemProvider = new ItalicPropertyItemProvider(this);
+		}
+
+		return italicPropertyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Bold} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BoldItemProvider boldItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Bold}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBoldAdapter() {
+		if (boldItemProvider == null) {
+			boldItemProvider = new BoldItemProvider(this);
+		}
+
+		return boldItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Link} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LinkItemProvider linkItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Link}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLinkAdapter() {
+		if (linkItemProvider == null) {
+			linkItemProvider = new LinkItemProvider(this);
+		}
+
+		return linkItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Strong} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StrongItemProvider strongItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Strong}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStrongAdapter() {
+		if (strongItemProvider == null) {
+			strongItemProvider = new StrongItemProvider(this);
+		}
+
+		return strongItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Italic} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ItalicItemProvider italicItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Italic}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createItalicAdapter() {
+		if (italicItemProvider == null) {
+			italicItemProvider = new ItalicItemProvider(this);
+		}
+
+		return italicItemProvider;
 	}
 
 	/**
@@ -888,14 +1210,42 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 			buttonStyleItemProvider.dispose();
 		if (buttonSizeItemProvider != null)
 			buttonSizeItemProvider.dispose();
-		if (linkItemProvider != null)
-			linkItemProvider.dispose();
+		if (linkPropertyItemProvider != null)
+			linkPropertyItemProvider.dispose();
 		if (disabledItemProvider != null)
 			disabledItemProvider.dispose();
 		if (activeItemProvider != null)
 			activeItemProvider.dispose();
 		if (buttonItemProvider != null)
 			buttonItemProvider.dispose();
+		if (orderListItemProvider != null)
+			orderListItemProvider.dispose();
+		if (unOrderedListItemProvider != null)
+			unOrderedListItemProvider.dispose();
+		if (listItemItemProvider != null)
+			listItemItemProvider.dispose();
+		if (navigationItemProvider != null)
+			navigationItemProvider.dispose();
+		if (centeredItemProvider != null)
+			centeredItemProvider.dispose();
+		if (basicListItemProvider != null)
+			basicListItemProvider.dispose();
+		if (horizontalListItemProvider != null)
+			horizontalListItemProvider.dispose();
+		if (basicItemProvider != null)
+			basicItemProvider.dispose();
+		if (verticalItemProvider != null)
+			verticalItemProvider.dispose();
+		if (italicPropertyItemProvider != null)
+			italicPropertyItemProvider.dispose();
+		if (boldItemProvider != null)
+			boldItemProvider.dispose();
+		if (linkItemProvider != null)
+			linkItemProvider.dispose();
+		if (strongItemProvider != null)
+			strongItemProvider.dispose();
+		if (italicItemProvider != null)
+			italicItemProvider.dispose();
 	}
 
 }

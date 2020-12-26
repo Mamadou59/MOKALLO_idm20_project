@@ -12,5 +12,5 @@ package idm.bstrap.mm.bstrap;
  * @model
  * @generated
  */
-public interface Link extends ButtonStyle {
+public interface Link extends UrlBasedLink {
 } // Link

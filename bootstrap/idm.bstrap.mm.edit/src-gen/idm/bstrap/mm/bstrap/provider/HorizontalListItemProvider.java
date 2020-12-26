@@ -11,19 +11,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.Secondary} object.
+ * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.HorizontalList} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SecondaryItemProvider extends ButtonStyleItemProvider {
+public class HorizontalListItemProvider extends ListPropertyItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SecondaryItemProvider(AdapterFactory adapterFactory) {
+	public HorizontalListItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,14 +43,14 @@ public class SecondaryItemProvider extends ButtonStyleItemProvider {
 	}
 
 	/**
-	 * This returns Secondary.gif.
+	 * This returns HorizontalList.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Secondary"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/HorizontalList"));
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class SecondaryItemProvider extends ButtonStyleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Secondary_type");
+		return getString("_UI_HorizontalList_type");
 	}
 
 	/**

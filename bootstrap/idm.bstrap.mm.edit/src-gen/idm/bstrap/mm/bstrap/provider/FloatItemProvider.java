@@ -4,6 +4,7 @@ package idm.bstrap.mm.bstrap.provider;
 
 import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.BstrapPackage;
+
 import java.util.Collection;
 import java.util.List;
 

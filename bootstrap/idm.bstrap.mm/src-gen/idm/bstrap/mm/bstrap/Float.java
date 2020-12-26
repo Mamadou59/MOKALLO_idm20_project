@@ -19,7 +19,6 @@ package idm.bstrap.mm.bstrap;
  * @generated
  */
 public interface Float extends ImageAligning {
-
 	/**
 	 * Returns the value of the '<em><b>Alignement</b></em>' attribute.
 	 * The default value is <code>"LEFT"</code>.
@@ -45,4 +44,5 @@ public interface Float extends ImageAligning {
 	 * @generated
 	 */
 	void setAlignement(Alignement value);
+
 } // Float

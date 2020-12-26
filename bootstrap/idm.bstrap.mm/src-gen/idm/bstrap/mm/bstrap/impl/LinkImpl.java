@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class LinkImpl extends ButtonStyleImpl implements Link {
+public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

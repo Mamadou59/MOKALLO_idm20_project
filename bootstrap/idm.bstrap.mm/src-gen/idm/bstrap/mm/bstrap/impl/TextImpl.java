@@ -3,24 +3,14 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.Emphasis;
 import idm.bstrap.mm.bstrap.Text;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +21,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link idm.bstrap.mm.bstrap.impl.TextImpl#getText <em>Text</em>}</li>
- *   <li>{@link idm.bstrap.mm.bstrap.impl.TextImpl#getEmphasis <em>Emphasis</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,16 +45,6 @@ public class TextImpl extends MinimalEObjectImpl.Container implements Text {
 	 * @ordered
 	 */
 	protected String text = TEXT_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getEmphasis() <em>Emphasis</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEmphasis()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Emphasis> emphasis;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,39 +91,11 @@ public class TextImpl extends MinimalEObjectImpl.Container implements Text {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Emphasis> getEmphasis() {
-		if (emphasis == null) {
-			emphasis = new EObjectContainmentEList<Emphasis>(Emphasis.class, this, BstrapPackage.TEXT__EMPHASIS);
-		}
-		return emphasis;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case BstrapPackage.TEXT__EMPHASIS:
-			return ((InternalEList<?>) getEmphasis()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case BstrapPackage.TEXT__TEXT:
 			return getText();
-		case BstrapPackage.TEXT__EMPHASIS:
-			return getEmphasis();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -154,16 +105,11 @@ public class TextImpl extends MinimalEObjectImpl.Container implements Text {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case BstrapPackage.TEXT__TEXT:
 			setText((String) newValue);
-			return;
-		case BstrapPackage.TEXT__EMPHASIS:
-			getEmphasis().clear();
-			getEmphasis().addAll((Collection<? extends Emphasis>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,9 +126,6 @@ public class TextImpl extends MinimalEObjectImpl.Container implements Text {
 		case BstrapPackage.TEXT__TEXT:
 			setText(TEXT_EDEFAULT);
 			return;
-		case BstrapPackage.TEXT__EMPHASIS:
-			getEmphasis().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -197,8 +140,6 @@ public class TextImpl extends MinimalEObjectImpl.Container implements Text {
 		switch (featureID) {
 		case BstrapPackage.TEXT__TEXT:
 			return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
-		case BstrapPackage.TEXT__EMPHASIS:
-			return emphasis != null && !emphasis.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

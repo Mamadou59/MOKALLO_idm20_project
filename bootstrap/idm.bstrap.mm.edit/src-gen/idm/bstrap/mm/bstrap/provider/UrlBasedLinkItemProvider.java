@@ -4,6 +4,7 @@ package idm.bstrap.mm.bstrap.provider;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.UrlBasedLink;
+
 import java.util.Collection;
 import java.util.List;
 

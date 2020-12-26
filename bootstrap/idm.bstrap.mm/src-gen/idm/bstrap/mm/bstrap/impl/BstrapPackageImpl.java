@@ -41,7 +41,9 @@ import idm.bstrap.mm.bstrap.ImageAligning;
 import idm.bstrap.mm.bstrap.ImageProperty;
 import idm.bstrap.mm.bstrap.ImageShape;
 import idm.bstrap.mm.bstrap.Italic;
+import idm.bstrap.mm.bstrap.ItalicProperty;
 import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.LinkProperty;
 import idm.bstrap.mm.bstrap.ListElement;
 import idm.bstrap.mm.bstrap.ListItem;
 import idm.bstrap.mm.bstrap.ListItemElement;
@@ -59,7 +61,9 @@ import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
 import idm.bstrap.mm.bstrap.Size;
+import idm.bstrap.mm.bstrap.Strong;
 import idm.bstrap.mm.bstrap.Text;
+import idm.bstrap.mm.bstrap.TextContainable;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
 import idm.bstrap.mm.bstrap.TextPageContent;
@@ -369,7 +373,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass linkEClass = null;
+	private EClass linkPropertyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -516,7 +520,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass italicEClass = null;
+	private EClass italicPropertyEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -524,6 +528,34 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	private EClass boldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass linkEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strongEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass italicEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textContainableEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -714,6 +746,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTextContainer_Emphasis() {
+		return (EReference) textContainerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getParagraphe() {
 		return paragrapheEClass;
 	}
@@ -770,15 +811,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EAttribute getText_Text() {
 		return (EAttribute) textEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getText_Emphasis() {
-		return (EReference) textEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1155,8 +1187,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLink() {
-		return linkEClass;
+	public EClass getLinkProperty() {
+		return linkPropertyEClass;
 	}
 
 	/**
@@ -1425,8 +1457,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getItalic() {
-		return italicEClass;
+	public EClass getItalicProperty() {
+		return italicPropertyEClass;
 	}
 
 	/**
@@ -1436,6 +1468,42 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EClass getBold() {
 		return boldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLink() {
+		return linkEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStrong() {
+		return strongEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getItalic() {
+		return italicEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTextContainable() {
+		return textContainableEClass;
 	}
 
 	/**
@@ -1509,6 +1577,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		textContainerEClass = createEClass(TEXT_CONTAINER);
 		createEReference(textContainerEClass, TEXT_CONTAINER__TEXTELEMENTS);
 		createEAttribute(textContainerEClass, TEXT_CONTAINER__COLOR);
+		createEReference(textContainerEClass, TEXT_CONTAINER__EMPHASIS);
 
 		paragrapheEClass = createEClass(PARAGRAPHE);
 
@@ -1520,7 +1589,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		textEClass = createEClass(TEXT);
 		createEAttribute(textEClass, TEXT__TEXT);
-		createEReference(textEClass, TEXT__EMPHASIS);
 
 		codeEClass = createEClass(CODE);
 
@@ -1594,7 +1662,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		buttonSizeEClass = createEClass(BUTTON_SIZE);
 		createEAttribute(buttonSizeEClass, BUTTON_SIZE__SIZE);
 
-		linkEClass = createEClass(LINK);
+		linkPropertyEClass = createEClass(LINK_PROPERTY);
 
 		buttonStateEClass = createEClass(BUTTON_STATE);
 
@@ -1645,9 +1713,17 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		emphasisEClass = createEClass(EMPHASIS);
 
-		italicEClass = createEClass(ITALIC);
+		italicPropertyEClass = createEClass(ITALIC_PROPERTY);
 
 		boldEClass = createEClass(BOLD);
+
+		linkEClass = createEClass(LINK);
+
+		strongEClass = createEClass(STRONG);
+
+		italicEClass = createEClass(ITALIC);
+
+		textContainableEClass = createEClass(TEXT_CONTAINABLE);
 
 		// Create enums
 		colorEEnum = createEEnum(COLOR);
@@ -1724,11 +1800,11 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		responsiveEClass.getESuperTypes().add(this.getImageAligning());
 		buttonStyleEClass.getESuperTypes().add(this.getButtonProperty());
 		buttonSizeEClass.getESuperTypes().add(this.getButtonProperty());
-		linkEClass.getESuperTypes().add(this.getButtonStyle());
+		linkPropertyEClass.getESuperTypes().add(this.getButtonStyle());
 		buttonStateEClass.getESuperTypes().add(this.getButtonProperty());
 		disabledEClass.getESuperTypes().add(this.getButtonState());
 		activeEClass.getESuperTypes().add(this.getButtonState());
-		buttonEClass.getESuperTypes().add(this.getContainableTextElement());
+		buttonEClass.getESuperTypes().add(this.getTextContainable());
 		textPageContentEClass.getESuperTypes().add(this.getPageContent());
 		listElementEClass.getESuperTypes().add(this.getTextPageContent());
 		orderListEClass.getESuperTypes().add(this.getListElement());
@@ -1742,8 +1818,12 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		basicEClass.getESuperTypes().add(this.getNavBarProperty());
 		verticalEClass.getESuperTypes().add(this.getNavBarProperty());
 		emphasisEClass.getESuperTypes().add(this.getPropertyClass());
-		italicEClass.getESuperTypes().add(this.getEmphasis());
+		italicPropertyEClass.getESuperTypes().add(this.getEmphasis());
 		boldEClass.getESuperTypes().add(this.getEmphasis());
+		linkEClass.getESuperTypes().add(this.getUrlBasedLink());
+		strongEClass.getESuperTypes().add(this.getTextContainable());
+		italicEClass.getESuperTypes().add(this.getTextContainable());
+		textContainableEClass.getESuperTypes().add(this.getContainableTextElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1775,6 +1855,9 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getTextContainer_Color(), this.getColor(), "color", null, 0, 1, TextContainer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTextContainer_Emphasis(), this.getEmphasis(), null, "emphasis", null, 0, -1,
+				TextContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(paragrapheEClass, Paragraphe.class, "Paragraphe", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1792,9 +1875,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getText_Text(), ecorePackage.getEString(), "text", null, 0, 1, Text.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getText_Emphasis(), this.getEmphasis(), null, "emphasis", null, 0, -1, Text.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 
 		initEClass(codeEClass, Code.class, "Code", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1903,7 +1983,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEAttribute(getButtonSize_Size(), this.getSize(), "size", null, 0, 1, ButtonSize.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(linkPropertyEClass, LinkProperty.class, "LinkProperty", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(buttonStateEClass, ButtonState.class, "ButtonState", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1986,9 +2067,19 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(emphasisEClass, Emphasis.class, "Emphasis", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(italicEClass, Italic.class, "Italic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(italicPropertyEClass, ItalicProperty.class, "ItalicProperty", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(boldEClass, Bold.class, "Bold", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(strongEClass, Strong.class, "Strong", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(italicEClass, Italic.class, "Italic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(textContainableEClass, TextContainable.class, "TextContainable", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(colorEEnum, Color.class, "Color");

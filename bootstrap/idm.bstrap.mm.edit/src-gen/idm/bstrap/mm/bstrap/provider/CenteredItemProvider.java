@@ -11,19 +11,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.Succes} object.
+ * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.Centered} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class SuccesItemProvider extends ButtonStyleItemProvider {
+public class CenteredItemProvider extends NavBarPropertyItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SuccesItemProvider(AdapterFactory adapterFactory) {
+	public CenteredItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,14 +43,14 @@ public class SuccesItemProvider extends ButtonStyleItemProvider {
 	}
 
 	/**
-	 * This returns Succes.gif.
+	 * This returns Centered.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Succes"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Centered"));
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class SuccesItemProvider extends ButtonStyleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Succes_type");
+		return getString("_UI_Centered_type");
 	}
 
 	/**

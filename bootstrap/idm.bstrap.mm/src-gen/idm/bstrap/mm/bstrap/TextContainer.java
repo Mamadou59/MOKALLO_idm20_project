@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link idm.bstrap.mm.bstrap.TextContainer#getTextelements <em>Textelements</em>}</li>
  *   <li>{@link idm.bstrap.mm.bstrap.TextContainer#getColor <em>Color</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.TextContainer#getEmphasis <em>Emphasis</em>}</li>
  * </ul>
  *
  * @see idm.bstrap.mm.bstrap.BstrapPackage#getTextContainer()
@@ -58,5 +59,17 @@ public interface TextContainer extends TextPageContent {
 	 * @generated
 	 */
 	void setColor(Color value);
+
+	/**
+	 * Returns the value of the '<em><b>Emphasis</b></em>' containment reference list.
+	 * The list contents are of type {@link idm.bstrap.mm.bstrap.Emphasis}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Emphasis</em>' containment reference list.
+	 * @see idm.bstrap.mm.bstrap.BstrapPackage#getTextContainer_Emphasis()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Emphasis> getEmphasis();
 
 } // TextContainer

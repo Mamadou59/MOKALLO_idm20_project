@@ -13,5 +13,4 @@ package idm.bstrap.mm.bstrap;
  * @generated
  */
 public interface CompositeTextElement extends ContainableTextElement {
-
 } // CompositeTextElement

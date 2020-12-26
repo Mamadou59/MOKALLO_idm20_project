@@ -30,7 +30,9 @@ import idm.bstrap.mm.bstrap.FluidContainer;
 import idm.bstrap.mm.bstrap.HorizontalList;
 import idm.bstrap.mm.bstrap.Image;
 import idm.bstrap.mm.bstrap.Italic;
+import idm.bstrap.mm.bstrap.ItalicProperty;
 import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.LinkProperty;
 import idm.bstrap.mm.bstrap.ListItem;
 import idm.bstrap.mm.bstrap.Margin;
 import idm.bstrap.mm.bstrap.Navigation;
@@ -41,6 +43,7 @@ import idm.bstrap.mm.bstrap.Paragraphe;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
 import idm.bstrap.mm.bstrap.Size;
+import idm.bstrap.mm.bstrap.Strong;
 import idm.bstrap.mm.bstrap.Text;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
@@ -150,8 +153,8 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createButtonStyle();
 		case BstrapPackage.BUTTON_SIZE:
 			return createButtonSize();
-		case BstrapPackage.LINK:
-			return createLink();
+		case BstrapPackage.LINK_PROPERTY:
+			return createLinkProperty();
 		case BstrapPackage.DISABLED:
 			return createDisabled();
 		case BstrapPackage.ACTIVE:
@@ -176,10 +179,16 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createBasic();
 		case BstrapPackage.VERTICAL:
 			return createVertical();
-		case BstrapPackage.ITALIC:
-			return createItalic();
+		case BstrapPackage.ITALIC_PROPERTY:
+			return createItalicProperty();
 		case BstrapPackage.BOLD:
 			return createBold();
+		case BstrapPackage.LINK:
+			return createLink();
+		case BstrapPackage.STRONG:
+			return createStrong();
+		case BstrapPackage.ITALIC:
+			return createItalic();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -478,9 +487,9 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Link createLink() {
-		LinkImpl link = new LinkImpl();
-		return link;
+	public LinkProperty createLinkProperty() {
+		LinkPropertyImpl linkProperty = new LinkPropertyImpl();
+		return linkProperty;
 	}
 
 	/**
@@ -608,9 +617,9 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Italic createItalic() {
-		ItalicImpl italic = new ItalicImpl();
-		return italic;
+	public ItalicProperty createItalicProperty() {
+		ItalicPropertyImpl italicProperty = new ItalicPropertyImpl();
+		return italicProperty;
 	}
 
 	/**
@@ -621,6 +630,36 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	public Bold createBold() {
 		BoldImpl bold = new BoldImpl();
 		return bold;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Link createLink() {
+		LinkImpl link = new LinkImpl();
+		return link;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Strong createStrong() {
+		StrongImpl strong = new StrongImpl();
+		return strong;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Italic createItalic() {
+		ItalicImpl italic = new ItalicImpl();
+		return italic;
 	}
 
 	/**

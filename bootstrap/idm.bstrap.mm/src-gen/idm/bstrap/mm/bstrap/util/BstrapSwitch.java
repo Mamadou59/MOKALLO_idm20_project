@@ -39,7 +39,9 @@ import idm.bstrap.mm.bstrap.ImageAligning;
 import idm.bstrap.mm.bstrap.ImageProperty;
 import idm.bstrap.mm.bstrap.ImageShape;
 import idm.bstrap.mm.bstrap.Italic;
+import idm.bstrap.mm.bstrap.ItalicProperty;
 import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.LinkProperty;
 import idm.bstrap.mm.bstrap.ListElement;
 import idm.bstrap.mm.bstrap.ListItem;
 import idm.bstrap.mm.bstrap.ListItemElement;
@@ -56,7 +58,9 @@ import idm.bstrap.mm.bstrap.Paragraphe;
 import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
+import idm.bstrap.mm.bstrap.Strong;
 import idm.bstrap.mm.bstrap.Text;
+import idm.bstrap.mm.bstrap.TextContainable;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
 import idm.bstrap.mm.bstrap.TextPageContent;
@@ -64,8 +68,8 @@ import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
 import idm.bstrap.mm.bstrap.UnOrderedList;
 import idm.bstrap.mm.bstrap.UrlBasedLink;
-
 import idm.bstrap.mm.bstrap.Vertical;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -604,15 +608,15 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case BstrapPackage.LINK: {
-			Link link = (Link) theEObject;
-			T result = caseLink(link);
+		case BstrapPackage.LINK_PROPERTY: {
+			LinkProperty linkProperty = (LinkProperty) theEObject;
+			T result = caseLinkProperty(linkProperty);
 			if (result == null)
-				result = caseButtonStyle(link);
+				result = caseButtonStyle(linkProperty);
 			if (result == null)
-				result = caseButtonProperty(link);
+				result = caseButtonProperty(linkProperty);
 			if (result == null)
-				result = casePropertyClass(link);
+				result = casePropertyClass(linkProperty);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -657,6 +661,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 		case BstrapPackage.BUTTON: {
 			Button button = (Button) theEObject;
 			T result = caseButton(button);
+			if (result == null)
+				result = caseTextContainable(button);
 			if (result == null)
 				result = caseContainableTextElement(button);
 			if (result == null)
@@ -831,13 +837,13 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case BstrapPackage.ITALIC: {
-			Italic italic = (Italic) theEObject;
-			T result = caseItalic(italic);
+		case BstrapPackage.ITALIC_PROPERTY: {
+			ItalicProperty italicProperty = (ItalicProperty) theEObject;
+			T result = caseItalicProperty(italicProperty);
 			if (result == null)
-				result = caseEmphasis(italic);
+				result = caseEmphasis(italicProperty);
 			if (result == null)
-				result = casePropertyClass(italic);
+				result = casePropertyClass(italicProperty);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -849,6 +855,82 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseEmphasis(bold);
 			if (result == null)
 				result = casePropertyClass(bold);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.LINK: {
+			Link link = (Link) theEObject;
+			T result = caseLink(link);
+			if (result == null)
+				result = caseUrlBasedLink(link);
+			if (result == null)
+				result = caseCompositeTextElement(link);
+			if (result == null)
+				result = caseContainableTextElement(link);
+			if (result == null)
+				result = caseTextElements(link);
+			if (result == null)
+				result = caseTextPageContent(link);
+			if (result == null)
+				result = caseListItemElement(link);
+			if (result == null)
+				result = casePageContent(link);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.STRONG: {
+			Strong strong = (Strong) theEObject;
+			T result = caseStrong(strong);
+			if (result == null)
+				result = caseTextContainable(strong);
+			if (result == null)
+				result = caseContainableTextElement(strong);
+			if (result == null)
+				result = caseTextElements(strong);
+			if (result == null)
+				result = caseTextPageContent(strong);
+			if (result == null)
+				result = caseListItemElement(strong);
+			if (result == null)
+				result = casePageContent(strong);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.ITALIC: {
+			Italic italic = (Italic) theEObject;
+			T result = caseItalic(italic);
+			if (result == null)
+				result = caseTextContainable(italic);
+			if (result == null)
+				result = caseContainableTextElement(italic);
+			if (result == null)
+				result = caseTextElements(italic);
+			if (result == null)
+				result = caseTextPageContent(italic);
+			if (result == null)
+				result = caseListItemElement(italic);
+			if (result == null)
+				result = casePageContent(italic);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TEXT_CONTAINABLE: {
+			TextContainable textContainable = (TextContainable) theEObject;
+			T result = caseTextContainable(textContainable);
+			if (result == null)
+				result = caseContainableTextElement(textContainable);
+			if (result == null)
+				result = caseTextElements(textContainable);
+			if (result == null)
+				result = caseTextPageContent(textContainable);
+			if (result == null)
+				result = caseListItemElement(textContainable);
+			if (result == null)
+				result = casePageContent(textContainable);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1459,17 +1541,17 @@ public class BstrapSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Link Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Link Property</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLink(Link object) {
+	public T caseLinkProperty(LinkProperty object) {
 		return null;
 	}
 
@@ -1774,17 +1856,17 @@ public class BstrapSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Italic</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Italic Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Italic</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Italic Property</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseItalic(Italic object) {
+	public T caseItalicProperty(ItalicProperty object) {
 		return null;
 	}
 
@@ -1800,6 +1882,66 @@ public class BstrapSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBold(Bold object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLink(Link object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Strong</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Strong</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStrong(Strong object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Italic</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Italic</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseItalic(Italic object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Containable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Containable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextContainable(TextContainable object) {
 		return null;
 	}
 

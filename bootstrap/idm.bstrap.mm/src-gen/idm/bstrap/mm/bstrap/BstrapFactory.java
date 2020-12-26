@@ -247,13 +247,13 @@ public interface BstrapFactory extends EFactory {
 	ButtonSize createButtonSize();
 
 	/**
-	 * Returns a new object of class '<em>Link</em>'.
+	 * Returns a new object of class '<em>Link Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Link</em>'.
+	 * @return a new object of class '<em>Link Property</em>'.
 	 * @generated
 	 */
-	Link createLink();
+	LinkProperty createLinkProperty();
 
 	/**
 	 * Returns a new object of class '<em>Disabled</em>'.
@@ -364,13 +364,13 @@ public interface BstrapFactory extends EFactory {
 	Vertical createVertical();
 
 	/**
-	 * Returns a new object of class '<em>Italic</em>'.
+	 * Returns a new object of class '<em>Italic Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Italic</em>'.
+	 * @return a new object of class '<em>Italic Property</em>'.
 	 * @generated
 	 */
-	Italic createItalic();
+	ItalicProperty createItalicProperty();
 
 	/**
 	 * Returns a new object of class '<em>Bold</em>'.
@@ -380,6 +380,33 @@ public interface BstrapFactory extends EFactory {
 	 * @generated
 	 */
 	Bold createBold();
+
+	/**
+	 * Returns a new object of class '<em>Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Link</em>'.
+	 * @generated
+	 */
+	Link createLink();
+
+	/**
+	 * Returns a new object of class '<em>Strong</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Strong</em>'.
+	 * @generated
+	 */
+	Strong createStrong();
+
+	/**
+	 * Returns a new object of class '<em>Italic</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Italic</em>'.
+	 * @generated
+	 */
+	Italic createItalic();
 
 	/**
 	 * Returns the package supported by this factory.

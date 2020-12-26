@@ -39,7 +39,9 @@ import idm.bstrap.mm.bstrap.ImageAligning;
 import idm.bstrap.mm.bstrap.ImageProperty;
 import idm.bstrap.mm.bstrap.ImageShape;
 import idm.bstrap.mm.bstrap.Italic;
+import idm.bstrap.mm.bstrap.ItalicProperty;
 import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.LinkProperty;
 import idm.bstrap.mm.bstrap.ListElement;
 import idm.bstrap.mm.bstrap.ListItem;
 import idm.bstrap.mm.bstrap.ListItemElement;
@@ -56,7 +58,9 @@ import idm.bstrap.mm.bstrap.Paragraphe;
 import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
+import idm.bstrap.mm.bstrap.Strong;
 import idm.bstrap.mm.bstrap.Text;
+import idm.bstrap.mm.bstrap.TextContainable;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
 import idm.bstrap.mm.bstrap.TextPageContent;
@@ -64,8 +68,8 @@ import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
 import idm.bstrap.mm.bstrap.UnOrderedList;
 import idm.bstrap.mm.bstrap.UrlBasedLink;
-
 import idm.bstrap.mm.bstrap.Vertical;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -329,8 +333,8 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseLink(Link object) {
-			return createLinkAdapter();
+		public Adapter caseLinkProperty(LinkProperty object) {
+			return createLinkPropertyAdapter();
 		}
 
 		@Override
@@ -434,13 +438,33 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseItalic(Italic object) {
-			return createItalicAdapter();
+		public Adapter caseItalicProperty(ItalicProperty object) {
+			return createItalicPropertyAdapter();
 		}
 
 		@Override
 		public Adapter caseBold(Bold object) {
 			return createBoldAdapter();
+		}
+
+		@Override
+		public Adapter caseLink(Link object) {
+			return createLinkAdapter();
+		}
+
+		@Override
+		public Adapter caseStrong(Strong object) {
+			return createStrongAdapter();
+		}
+
+		@Override
+		public Adapter caseItalic(Italic object) {
+			return createItalicAdapter();
+		}
+
+		@Override
+		public Adapter caseTextContainable(TextContainable object) {
+			return createTextContainableAdapter();
 		}
 
 		@Override
@@ -1023,16 +1047,16 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Link <em>Link</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.LinkProperty <em>Link Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Link
+	 * @see idm.bstrap.mm.bstrap.LinkProperty
 	 * @generated
 	 */
-	public Adapter createLinkAdapter() {
+	public Adapter createLinkPropertyAdapter() {
 		return null;
 	}
 
@@ -1317,16 +1341,16 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Italic <em>Italic</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ItalicProperty <em>Italic Property</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.Italic
+	 * @see idm.bstrap.mm.bstrap.ItalicProperty
 	 * @generated
 	 */
-	public Adapter createItalicAdapter() {
+	public Adapter createItalicPropertyAdapter() {
 		return null;
 	}
 
@@ -1341,6 +1365,62 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBoldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Link <em>Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Link
+	 * @generated
+	 */
+	public Adapter createLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Strong <em>Strong</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Strong
+	 * @generated
+	 */
+	public Adapter createStrongAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Italic <em>Italic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Italic
+	 * @generated
+	 */
+	public Adapter createItalicAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TextContainable <em>Text Containable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.TextContainable
+	 * @generated
+	 */
+	public Adapter createTextContainableAdapter() {
 		return null;
 	}
 
