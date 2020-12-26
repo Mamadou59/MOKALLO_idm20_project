@@ -7,11 +7,11 @@
     <semanticResources>../plugin.properties</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_cMsh0ESCEeuCMsghZ_yjCQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_cOLIgESCEeuCMsghZ_yjCQ" name="bstrap" repPath="#_cNmgwESCEeuCMsghZ_yjCQ" changeId="9c14fe92-a17f-412c-a978-7c4c0ea1804b">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_cOLIgESCEeuCMsghZ_yjCQ" name="bstrap" repPath="#_cNmgwESCEeuCMsghZ_yjCQ" changeId="287c6702-0d21-4458-b8d6-9cbf3b98c456">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="bstrap.ecore#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5odPQEUREeuKp6j6ct4PTA" name="bstrapProperty" repPath="#_5oVTcEUREeuKp6j6ct4PTA" changeId="c31a31f6-a92d-472d-b33a-1656ed476d0c">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5odPQEUREeuKp6j6ct4PTA" name="bstrapProperty" repPath="#_5oVTcEUREeuKp6j6ct4PTA" changeId="d623f0f2-8edf-46d8-b3e2-6b6eaf67c6da">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="bstrap.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -186,10 +186,6 @@
         <children xmi:type="notation:Node" xmi:id="_cNblkEUaEeuKp6j6ct4PTA" type="2003" element="_cNAu0EUaEeuKp6j6ct4PTA">
           <children xmi:type="notation:Node" xmi:id="_cNcMoEUaEeuKp6j6ct4PTA" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_cNcMoUUaEeuKp6j6ct4PTA" type="7004">
-            <children xmi:type="notation:Node" xmi:id="_uvNr0EV0EeunavjVvZdbMg" type="3010" element="_uuZMcEV0EeunavjVvZdbMg">
-              <styles xmi:type="notation:FontStyle" xmi:id="_uvNr0UV0EeunavjVvZdbMg" fontColor="2697711" fontName="Ubuntu" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_uvNr0kV0EeunavjVvZdbMg"/>
-            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_cNcMokUaEeuKp6j6ct4PTA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_cNcMo0UaEeuKp6j6ct4PTA"/>
           </children>
@@ -365,6 +361,10 @@
         <children xmi:type="notation:Node" xmi:id="_ZTPlMEezEeuZPamLLuiQaA" type="2003" element="_ZSL1QEezEeuZPamLLuiQaA">
           <children xmi:type="notation:Node" xmi:id="_ZTQMQEezEeuZPamLLuiQaA" type="5007"/>
           <children xmi:type="notation:Node" xmi:id="_ZTQzUEezEeuZPamLLuiQaA" type="7004">
+            <children xmi:type="notation:Node" xmi:id="_x5wrIEe3EeuZPamLLuiQaA" type="3010" element="_uuZMcEV0EeunavjVvZdbMg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_x5wrIUe3EeuZPamLLuiQaA" fontName="Ubuntu" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_x5wrIke3EeuZPamLLuiQaA"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_ZTQzUUezEeuZPamLLuiQaA"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_ZTQzUkezEeuZPamLLuiQaA"/>
           </children>
@@ -1373,14 +1373,6 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_uuZMcEV0EeunavjVvZdbMg" name="content : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="bstrap.ecore#//Button/content"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="bstrap.ecore#//Button/content"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_1SYd4UV0EeunavjVvZdbMg" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_P-TEUEUcEeuKp6j6ct4PTA" name="General" tooltipText="" incomingEdges="_pjOQKEUcEeuKp6j6ct4PTA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="bstrap.ecore#//General"/>
@@ -1880,6 +1872,14 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@conditionnalStyles.1/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_uuZMcEV0EeunavjVvZdbMg" name="content : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="bstrap.ecore#//TextContainable/content"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="bstrap.ecore#//TextContainable/content"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_1SYd4UV0EeunavjVvZdbMg" labelAlignment="LEFT">
+          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_68HZRkezEeuZPamLLuiQaA" sourceNode="_ZSL1QEezEeuZPamLLuiQaA" targetNode="_eaKQYEStEeu7U5tjkN7Qew">
       <target xmi:type="ecore:EClass" href="bstrap.ecore#//TextContainable"/>
@@ -3241,9 +3241,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_IqpUsEUVEeuKp6j6ct4PTA" name="SUCCES" tooltipText="">
-        <target xmi:type="ecore:EEnumLiteral" href="bstrap.ecore#//Color/SUCCES"/>
-        <semanticElements xmi:type="ecore:EEnumLiteral" href="bstrap.ecore#//Color/SUCCES"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_IqpUsEUVEeuKp6j6ct4PTA" name="SUCCESS" tooltipText="">
+        <target xmi:type="ecore:EEnumLiteral" href="bstrap.ecore#//Color/SUCCESS"/>
+        <semanticElements xmi:type="ecore:EEnumLiteral" href="bstrap.ecore#//Color/SUCCESS"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_Iqp7wEUVEeuKp6j6ct4PTA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']/@style"/>
         </ownedStyle>

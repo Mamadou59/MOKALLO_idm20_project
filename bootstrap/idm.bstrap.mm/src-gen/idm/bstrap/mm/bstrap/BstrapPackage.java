@@ -1843,13 +1843,22 @@ public interface BstrapPackage extends EPackage {
 	int TEXT_CONTAINABLE__GENERAL_PROPERTIES = CONTAINABLE_TEXT_ELEMENT__GENERAL_PROPERTIES;
 
 	/**
+	 * The feature id for the '<em><b>Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CONTAINABLE__CONTENT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Text Containable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CONTAINABLE_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int TEXT_CONTAINABLE_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Text Containable</em>' class.
@@ -1880,6 +1889,15 @@ public interface BstrapPackage extends EPackage {
 	int BUTTON__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
 
 	/**
+	 * The feature id for the '<em><b>Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__CONTENT = TEXT_CONTAINABLE__CONTENT;
+
+	/**
 	 * The feature id for the '<em><b>Buttonproperties</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1889,22 +1907,13 @@ public interface BstrapPackage extends EPackage {
 	int BUTTON__BUTTONPROPERTIES = TEXT_CONTAINABLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Content</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BUTTON__CONTENT = TEXT_CONTAINABLE_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Button</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON_FEATURE_COUNT = TEXT_CONTAINABLE_FEATURE_COUNT + 2;
+	int BUTTON_FEATURE_COUNT = TEXT_CONTAINABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Button</em>' class.
@@ -2536,6 +2545,15 @@ public interface BstrapPackage extends EPackage {
 	int STRONG__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
 
 	/**
+	 * The feature id for the '<em><b>Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRONG__CONTENT = TEXT_CONTAINABLE__CONTENT;
+
+	/**
 	 * The number of structural features of the '<em>Strong</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2571,6 +2589,15 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int ITALIC__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITALIC__CONTENT = TEXT_CONTAINABLE__CONTENT;
 
 	/**
 	 * The number of structural features of the '<em>Italic</em>' class.
@@ -3302,17 +3329,6 @@ public interface BstrapPackage extends EPackage {
 	EReference getButton_Buttonproperties();
 
 	/**
-	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.Button#getContent <em>Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content</em>'.
-	 * @see idm.bstrap.mm.bstrap.Button#getContent()
-	 * @see #getButton()
-	 * @generated
-	 */
-	EAttribute getButton_Content();
-
-	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.PageContent <em>Page Content</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3608,6 +3624,17 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTextContainable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.TextContainable#getContent <em>Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Content</em>'.
+	 * @see idm.bstrap.mm.bstrap.TextContainable#getContent()
+	 * @see #getTextContainable()
+	 * @generated
+	 */
+	EAttribute getTextContainable_Content();
 
 	/**
 	 * Returns the meta object for enum '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}'.
@@ -4281,14 +4308,6 @@ public interface BstrapPackage extends EPackage {
 		EReference BUTTON__BUTTONPROPERTIES = eINSTANCE.getButton_Buttonproperties();
 
 		/**
-		 * The meta object literal for the '<em><b>Content</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BUTTON__CONTENT = eINSTANCE.getButton_Content();
-
-		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.PageContentImpl <em>Page Content</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4563,6 +4582,14 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TEXT_CONTAINABLE = eINSTANCE.getTextContainable();
+
+		/**
+		 * The meta object literal for the '<em><b>Content</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT_CONTAINABLE__CONTENT = eINSTANCE.getTextContainable_Content();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.

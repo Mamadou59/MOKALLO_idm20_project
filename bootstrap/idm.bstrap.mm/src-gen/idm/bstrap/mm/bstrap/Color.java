@@ -49,19 +49,18 @@ public enum Color implements Enumerator {
 	SECONDARY(2, "SECONDARY", "SECONDARY"),
 
 	/**
-	 * The '<em><b>SUCCES</b></em>' literal object.
+	 * The '<em><b>SUCCESS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SUCCES_VALUE
+	 * @see #SUCCESS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	SUCCES(3, "SUCCES", "SUCCES"),
-
+	SUCCESS(3, "SUCCESS", "SUCCESS"),
 	/**
 	 * The '<em><b>INFO</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #INFO_VALUE
 	 * @generated
 	 * @ordered
@@ -132,15 +131,15 @@ public enum Color implements Enumerator {
 	public static final int SECONDARY_VALUE = 2;
 
 	/**
-	 * The '<em><b>SUCCES</b></em>' literal value.
+	 * The '<em><b>SUCCESS</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #SUCCES
+	 * @see #SUCCESS
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SUCCES_VALUE = 3;
+	public static final int SUCCESS_VALUE = 3;
 
 	/**
 	 * The '<em><b>INFO</b></em>' literal value.
@@ -192,7 +191,7 @@ public enum Color implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Color[] VALUES_ARRAY = new Color[] { DARK, PRIMARY, SECONDARY, SUCCES, INFO, WHITE, WARNING,
+	private static final Color[] VALUES_ARRAY = new Color[] { DARK, PRIMARY, SECONDARY, SUCCESS, INFO, WHITE, WARNING,
 			DANGER, };
 
 	/**
@@ -255,8 +254,8 @@ public enum Color implements Enumerator {
 			return PRIMARY;
 		case SECONDARY_VALUE:
 			return SECONDARY;
-		case SUCCES_VALUE:
-			return SUCCES;
+		case SUCCESS_VALUE:
+			return SUCCESS;
 		case INFO_VALUE:
 			return INFO;
 		case WHITE_VALUE:

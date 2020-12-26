@@ -2,6 +2,7 @@
  */
 package idm.bstrap.mm.bstrap.provider;
 
+import idm.bstrap.mm.bstrap.Strong;
 import java.util.Collection;
 import java.util.List;
 
@@ -71,7 +72,9 @@ public class StrongItemProvider extends TextContainableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Strong_type");
+		String label = ((Strong) object).getContent();
+		return label == null || label.length() == 0 ? getString("_UI_Strong_type")
+				: getString("_UI_Strong_type") + " " + label;
 	}
 
 	/**

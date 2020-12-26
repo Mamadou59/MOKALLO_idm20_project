@@ -2,6 +2,7 @@
  */
 package idm.bstrap.mm.bstrap.provider;
 
+import idm.bstrap.mm.bstrap.Italic;
 import java.util.Collection;
 import java.util.List;
 
@@ -71,7 +72,9 @@ public class ItalicItemProvider extends TextContainableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Italic_type");
+		String label = ((Italic) object).getContent();
+		return label == null || label.length() == 0 ? getString("_UI_Italic_type")
+				: getString("_UI_Italic_type") + " " + label;
 	}
 
 	/**

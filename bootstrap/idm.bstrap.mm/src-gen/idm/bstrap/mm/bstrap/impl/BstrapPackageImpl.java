@@ -1241,15 +1241,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getButton_Content() {
-		return (EAttribute) buttonEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPageContent() {
 		return pageContentEClass;
 	}
@@ -1511,6 +1502,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getTextContainable_Content() {
+		return (EAttribute) textContainableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getColor() {
 		return colorEEnum;
 	}
@@ -1672,7 +1672,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		buttonEClass = createEClass(BUTTON);
 		createEReference(buttonEClass, BUTTON__BUTTONPROPERTIES);
-		createEAttribute(buttonEClass, BUTTON__CONTENT);
 
 		pageContentEClass = createEClass(PAGE_CONTENT);
 		createEReference(pageContentEClass, PAGE_CONTENT__GENERAL_PROPERTIES);
@@ -1724,6 +1723,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		italicEClass = createEClass(ITALIC);
 
 		textContainableEClass = createEClass(TEXT_CONTAINABLE);
+		createEAttribute(textContainableEClass, TEXT_CONTAINABLE__CONTENT);
 
 		// Create enums
 		colorEEnum = createEEnum(COLOR);
@@ -1998,8 +1998,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEReference(getButton_Buttonproperties(), this.getButtonProperty(), null, "buttonproperties", null, 0, -1,
 				Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getButton_Content(), ecorePackage.getEString(), "content", null, 0, 1, Button.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pageContentEClass, PageContent.class, "PageContent", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2080,13 +2078,16 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(textContainableEClass, TextContainable.class, "TextContainable", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTextContainable_Content(), ecorePackage.getEString(), "content", null, 0, 1,
+				TextContainable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(colorEEnum, Color.class, "Color");
 		addEEnumLiteral(colorEEnum, Color.DARK);
 		addEEnumLiteral(colorEEnum, Color.PRIMARY);
 		addEEnumLiteral(colorEEnum, Color.SECONDARY);
-		addEEnumLiteral(colorEEnum, Color.SUCCES);
+		addEEnumLiteral(colorEEnum, Color.SUCCESS);
 		addEEnumLiteral(colorEEnum, Color.INFO);
 		addEEnumLiteral(colorEEnum, Color.WHITE);
 		addEEnumLiteral(colorEEnum, Color.WARNING);

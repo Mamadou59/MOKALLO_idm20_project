@@ -14,7 +14,7 @@
       <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/DARK"/>
       <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/PRIMARY"/>
       <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/SECONDARY"/>
-      <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/SUCCES"/>
+      <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/SUCCESS"/>
       <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/INFO"/>
       <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/WHITE"/>
       <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/WARNING"/>
@@ -111,7 +111,6 @@
     <genClasses ecoreClass="bstrap.ecore#//Active"/>
     <genClasses ecoreClass="bstrap.ecore#//Button">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Button/buttonproperties"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//Button/content"/>
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//PageContent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//PageContent/generalProperties"/>
@@ -145,6 +144,8 @@
     <genClasses ecoreClass="bstrap.ecore#//Link"/>
     <genClasses ecoreClass="bstrap.ecore#//Strong"/>
     <genClasses ecoreClass="bstrap.ecore#//Italic"/>
-    <genClasses ecoreClass="bstrap.ecore#//TextContainable"/>
+    <genClasses ecoreClass="bstrap.ecore#//TextContainable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//TextContainable/content"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
