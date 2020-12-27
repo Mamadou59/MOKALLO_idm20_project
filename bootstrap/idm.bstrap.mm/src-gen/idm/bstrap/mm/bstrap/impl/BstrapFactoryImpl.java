@@ -9,6 +9,7 @@ import idm.bstrap.mm.bstrap.Basic;
 import idm.bstrap.mm.bstrap.BasicList;
 import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.Border;
+import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
@@ -189,6 +190,8 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createStrong();
 		case BstrapPackage.ITALIC:
 			return createItalic();
+		case BstrapPackage.BRAND:
+			return createBrand();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -660,6 +663,16 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	public Italic createItalic() {
 		ItalicImpl italic = new ItalicImpl();
 		return italic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Brand createBrand() {
+		BrandImpl brand = new BrandImpl();
+		return brand;
 	}
 
 	/**

@@ -1062,6 +1062,29 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Brand} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BrandItemProvider brandItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Brand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBrandAdapter() {
+		if (brandItemProvider == null) {
+			brandItemProvider = new BrandItemProvider(this);
+		}
+
+		return brandItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1246,6 +1269,8 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 			strongItemProvider.dispose();
 		if (italicItemProvider != null)
 			italicItemProvider.dispose();
+		if (brandItemProvider != null)
+			brandItemProvider.dispose();
 	}
 
 }

@@ -10,6 +10,7 @@ import idm.bstrap.mm.bstrap.BasicList;
 import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BorderProperty;
+import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
@@ -62,10 +63,12 @@ import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
 import idm.bstrap.mm.bstrap.Size;
 import idm.bstrap.mm.bstrap.Strong;
+import idm.bstrap.mm.bstrap.TestNestedElement;
 import idm.bstrap.mm.bstrap.Text;
 import idm.bstrap.mm.bstrap.TextContainable;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
+import idm.bstrap.mm.bstrap.TextNested;
 import idm.bstrap.mm.bstrap.TextPageContent;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
@@ -556,6 +559,27 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	private EClass textContainableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textNestedEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass testNestedElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass brandEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1502,8 +1526,35 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getTextContainable_Content() {
-		return (EAttribute) textContainableEClass.getEStructuralFeatures().get(0);
+	public EClass getTextNested() {
+		return textNestedEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTextNested_Testnestedelements() {
+		return (EReference) textNestedEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTestNestedElement() {
+		return testNestedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBrand() {
+		return brandEClass;
 	}
 
 	/**
@@ -1723,7 +1774,13 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		italicEClass = createEClass(ITALIC);
 
 		textContainableEClass = createEClass(TEXT_CONTAINABLE);
-		createEAttribute(textContainableEClass, TEXT_CONTAINABLE__CONTENT);
+
+		textNestedEClass = createEClass(TEXT_NESTED);
+		createEReference(textNestedEClass, TEXT_NESTED__TESTNESTEDELEMENTS);
+
+		testNestedElementEClass = createEClass(TEST_NESTED_ELEMENT);
+
+		brandEClass = createEClass(BRAND);
 
 		// Create enums
 		colorEEnum = createEEnum(COLOR);
@@ -1769,6 +1826,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		titleEClass.getESuperTypes().add(this.getTextContainer());
 		textElementsEClass.getESuperTypes().add(this.getListItemElement());
 		textEClass.getESuperTypes().add(this.getTextElements());
+		textEClass.getESuperTypes().add(this.getTestNestedElement());
 		codeEClass.getESuperTypes().add(this.getText());
 		compositeTextElementEClass.getESuperTypes().add(this.getContainableTextElement());
 		urlBasedLinkEClass.getESuperTypes().add(this.getCompositeTextElement());
@@ -1804,9 +1862,11 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		buttonStateEClass.getESuperTypes().add(this.getButtonProperty());
 		disabledEClass.getESuperTypes().add(this.getButtonState());
 		activeEClass.getESuperTypes().add(this.getButtonState());
-		buttonEClass.getESuperTypes().add(this.getTextContainable());
+		buttonEClass.getESuperTypes().add(this.getContainableTextElement());
+		buttonEClass.getESuperTypes().add(this.getTextNested());
 		textPageContentEClass.getESuperTypes().add(this.getPageContent());
 		listElementEClass.getESuperTypes().add(this.getTextPageContent());
+		listElementEClass.getESuperTypes().add(this.getListItemElement());
 		orderListEClass.getESuperTypes().add(this.getListElement());
 		unOrderedListEClass.getESuperTypes().add(this.getListElement());
 		navigationEClass.getESuperTypes().add(this.getTextPageContent());
@@ -1821,9 +1881,13 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		italicPropertyEClass.getESuperTypes().add(this.getEmphasis());
 		boldEClass.getESuperTypes().add(this.getEmphasis());
 		linkEClass.getESuperTypes().add(this.getUrlBasedLink());
+		linkEClass.getESuperTypes().add(this.getTextNested());
 		strongEClass.getESuperTypes().add(this.getTextContainable());
 		italicEClass.getESuperTypes().add(this.getTextContainable());
 		textContainableEClass.getESuperTypes().add(this.getContainableTextElement());
+		textContainableEClass.getESuperTypes().add(this.getTextNested());
+		textContainableEClass.getESuperTypes().add(this.getTestNestedElement());
+		brandEClass.getESuperTypes().add(this.getNavBarProperty());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2078,9 +2142,17 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(textContainableEClass, TextContainable.class, "TextContainable", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTextContainable_Content(), ecorePackage.getEString(), "content", null, 0, 1,
-				TextContainable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(textNestedEClass, TextNested.class, "TextNested", IS_ABSTRACT, IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTextNested_Testnestedelements(), this.getTestNestedElement(), null, "testnestedelements",
+				null, 0, -1, TextNested.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(testNestedElementEClass, TestNestedElement.class, "TestNestedElement", IS_ABSTRACT, IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(brandEClass, Brand.class, "Brand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(colorEEnum, Color.class, "Color");

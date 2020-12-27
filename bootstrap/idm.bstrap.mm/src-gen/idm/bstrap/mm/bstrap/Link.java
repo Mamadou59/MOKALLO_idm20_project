@@ -12,5 +12,5 @@ package idm.bstrap.mm.bstrap;
  * @model
  * @generated
  */
-public interface Link extends UrlBasedLink {
+public interface Link extends UrlBasedLink, TextNested {
 } // Link

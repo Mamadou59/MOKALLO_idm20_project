@@ -9,6 +9,7 @@ import idm.bstrap.mm.bstrap.BasicList;
 import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BorderProperty;
+import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
 import idm.bstrap.mm.bstrap.ButtonProperty;
@@ -59,10 +60,12 @@ import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
 import idm.bstrap.mm.bstrap.Strong;
+import idm.bstrap.mm.bstrap.TestNestedElement;
 import idm.bstrap.mm.bstrap.Text;
 import idm.bstrap.mm.bstrap.TextContainable;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
+import idm.bstrap.mm.bstrap.TextNested;
 import idm.bstrap.mm.bstrap.TextPageContent;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
@@ -465,6 +468,21 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseTextContainable(TextContainable object) {
 			return createTextContainableAdapter();
+		}
+
+		@Override
+		public Adapter caseTextNested(TextNested object) {
+			return createTextNestedAdapter();
+		}
+
+		@Override
+		public Adapter caseTestNestedElement(TestNestedElement object) {
+			return createTestNestedElementAdapter();
+		}
+
+		@Override
+		public Adapter caseBrand(Brand object) {
+			return createBrandAdapter();
 		}
 
 		@Override
@@ -1421,6 +1439,48 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTextContainableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TextNested <em>Text Nested</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.TextNested
+	 * @generated
+	 */
+	public Adapter createTextNestedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TestNestedElement <em>Test Nested Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.TestNestedElement
+	 * @generated
+	 */
+	public Adapter createTestNestedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Brand <em>Brand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Brand
+	 * @generated
+	 */
+	public Adapter createBrandAdapter() {
 		return null;
 	}
 

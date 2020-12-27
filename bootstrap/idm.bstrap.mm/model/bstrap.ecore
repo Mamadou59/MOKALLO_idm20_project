@@ -29,7 +29,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextElements" abstract="true" interface="true"
       eSuperTypes="#//ListItemElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//TextElements">
+  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//TextElements #//TestNestedElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Code" eSuperTypes="#//Text"/>
@@ -95,7 +95,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ButtonSize" eSuperTypes="#//ButtonProperty">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="#//Size"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LinkProperty" eSuperTypes="#//ButtonStyle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonLink" eSuperTypes="#//ButtonStyle"/>
   <eClassifiers xsi:type="ecore:EEnum" name="Size">
     <eLiterals name="DEFAULT" value="1"/>
     <eLiterals name="SMALL" value="2"/>
@@ -104,7 +104,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ButtonState" abstract="true" eSuperTypes="#//ButtonProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="Disabled" eSuperTypes="#//ButtonState"/>
   <eClassifiers xsi:type="ecore:EClass" name="Active" eSuperTypes="#//ButtonState"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//TextContainable">
+  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//ContainableTextElement #//TextNested">
     <eStructuralFeatures xsi:type="ecore:EReference" name="buttonproperties" upperBound="-1"
         eType="#//ButtonProperty" containment="true"/>
   </eClassifiers>
@@ -120,7 +120,7 @@
     <eLiterals name="LEFT" value="3"/>
     <eLiterals name="RIGHT" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ListElement" abstract="true" eSuperTypes="#//TextPageContent">
+  <eClassifiers xsi:type="ecore:EClass" name="ListElement" abstract="true" eSuperTypes="#//TextPageContent #//ListItemElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="listitems" upperBound="-1"
         eType="#//ListItem" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="listproperty" upperBound="-1"
@@ -139,6 +139,8 @@
         eType="#//ListElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="navbar" upperBound="-1"
         eType="#//NavBarProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//Link" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Centered" eSuperTypes="#//NavBarProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="ListProperty" abstract="true" eSuperTypes="#//PropertyClass"/>
@@ -150,10 +152,16 @@
   <eClassifiers xsi:type="ecore:EClass" name="Emphasis" abstract="true" eSuperTypes="#//PropertyClass"/>
   <eClassifiers xsi:type="ecore:EClass" name="ItalicProperty" eSuperTypes="#//Emphasis"/>
   <eClassifiers xsi:type="ecore:EClass" name="Bold" eSuperTypes="#//Emphasis"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//UrlBasedLink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//UrlBasedLink #//TextNested"/>
   <eClassifiers xsi:type="ecore:EClass" name="Strong" eSuperTypes="#//TextContainable"/>
   <eClassifiers xsi:type="ecore:EClass" name="Italic" eSuperTypes="#//TextContainable"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TextContainable" abstract="true" eSuperTypes="#//ContainableTextElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextContainable" abstract="true" eSuperTypes="#//ContainableTextElement #//TextNested #//TestNestedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextNested" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testnestedelements" upperBound="-1"
+        eType="#//TestNestedElement" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TestNestedElement" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Brand" eSuperTypes="#//NavBarProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkProperty" abstract="true" eSuperTypes="#//PropertyClass"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkBrand" eSuperTypes="#//LinkProperty"/>
 </ecore:EPackage>

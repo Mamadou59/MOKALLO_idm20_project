@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ButtonItemProvider extends TextContainableItemProvider {
+public class ButtonItemProvider extends ContainableTextElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -60,6 +60,7 @@ public class ButtonItemProvider extends TextContainableItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS);
 			childrenFeatures.add(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES);
 		}
 		return childrenFeatures;
@@ -107,9 +108,7 @@ public class ButtonItemProvider extends TextContainableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Button) object).getContent();
-		return label == null || label.length() == 0 ? getString("_UI_Button_type")
-				: getString("_UI_Button_type") + " " + label;
+		return getString("_UI_Button_type");
 	}
 
 	/**
@@ -124,6 +123,7 @@ public class ButtonItemProvider extends TextContainableItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Button.class)) {
+		case BstrapPackage.BUTTON__TESTNESTEDELEMENTS:
 		case BstrapPackage.BUTTON__BUTTONPROPERTIES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -141,6 +141,18 @@ public class ButtonItemProvider extends TextContainableItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+				BstrapFactory.eINSTANCE.createText()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+				BstrapFactory.eINSTANCE.createCode()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+				BstrapFactory.eINSTANCE.createStrong()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+				BstrapFactory.eINSTANCE.createItalic()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
 				BstrapFactory.eINSTANCE.createButtonStyle()));

@@ -11,19 +11,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.Italic} object.
+ * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.Brand} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ItalicItemProvider extends TextContainableItemProvider {
+public class BrandItemProvider extends NavBarPropertyItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ItalicItemProvider(AdapterFactory adapterFactory) {
+	public BrandItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,14 +43,14 @@ public class ItalicItemProvider extends TextContainableItemProvider {
 	}
 
 	/**
-	 * This returns Italic.gif.
+	 * This returns Brand.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Italic"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Brand"));
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class ItalicItemProvider extends TextContainableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Italic_type");
+		return getString("_UI_Brand_type");
 	}
 
 	/**

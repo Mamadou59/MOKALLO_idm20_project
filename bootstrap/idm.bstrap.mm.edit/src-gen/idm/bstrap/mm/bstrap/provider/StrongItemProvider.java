@@ -2,13 +2,11 @@
  */
 package idm.bstrap.mm.bstrap.provider;
 
-import idm.bstrap.mm.bstrap.Strong;
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
@@ -72,9 +70,7 @@ public class StrongItemProvider extends TextContainableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Strong) object).getContent();
-		return label == null || label.length() == 0 ? getString("_UI_Strong_type")
-				: getString("_UI_Strong_type") + " " + label;
+		return getString("_UI_Strong_type");
 	}
 
 	/**

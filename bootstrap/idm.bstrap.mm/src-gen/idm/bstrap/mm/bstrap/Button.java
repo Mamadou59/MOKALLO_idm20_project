@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Button extends TextContainable {
+public interface Button extends ContainableTextElement, TextNested {
 	/**
 	 * Returns the value of the '<em><b>Buttonproperties</b></em>' containment reference list.
 	 * The list contents are of type {@link idm.bstrap.mm.bstrap.ButtonProperty}.

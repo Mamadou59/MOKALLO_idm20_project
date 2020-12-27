@@ -3,11 +3,17 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
+import idm.bstrap.mm.bstrap.TestNestedElement;
 import idm.bstrap.mm.bstrap.TextContainable;
 
-import org.eclipse.emf.common.notify.Notification;
+import idm.bstrap.mm.bstrap.TextNested;
+import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,30 +23,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link idm.bstrap.mm.bstrap.impl.TextContainableImpl#getContent <em>Content</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.TextContainableImpl#getTestnestedelements <em>Testnestedelements</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class TextContainableImpl extends ContainableTextElementImpl implements TextContainable {
 	/**
-	 * The default value of the '{@link #getContent() <em>Content</em>}' attribute.
+	 * The cached value of the '{@link #getTestnestedelements() <em>Testnestedelements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getContent()
+	 * @see #getTestnestedelements()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONTENT_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getContent() <em>Content</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContent()
-	 * @generated
-	 * @ordered
-	 */
-	protected String content = CONTENT_EDEFAULT;
+	protected EList<TestNestedElement> testnestedelements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,8 +63,12 @@ public abstract class TextContainableImpl extends ContainableTextElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getContent() {
-		return content;
+	public EList<TestNestedElement> getTestnestedelements() {
+		if (testnestedelements == null) {
+			testnestedelements = new EObjectContainmentEList<TestNestedElement>(TestNestedElement.class, this,
+					BstrapPackage.TEXT_CONTAINABLE__TESTNESTEDELEMENTS);
+		}
+		return testnestedelements;
 	}
 
 	/**
@@ -75,12 +76,13 @@ public abstract class TextContainableImpl extends ContainableTextElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setContent(String newContent) {
-		String oldContent = content;
-		content = newContent;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BstrapPackage.TEXT_CONTAINABLE__CONTENT, oldContent,
-					content));
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case BstrapPackage.TEXT_CONTAINABLE__TESTNESTEDELEMENTS:
+			return ((InternalEList<?>) getTestnestedelements()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -91,8 +93,8 @@ public abstract class TextContainableImpl extends ContainableTextElementImpl imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BstrapPackage.TEXT_CONTAINABLE__CONTENT:
-			return getContent();
+		case BstrapPackage.TEXT_CONTAINABLE__TESTNESTEDELEMENTS:
+			return getTestnestedelements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -102,11 +104,13 @@ public abstract class TextContainableImpl extends ContainableTextElementImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BstrapPackage.TEXT_CONTAINABLE__CONTENT:
-			setContent((String) newValue);
+		case BstrapPackage.TEXT_CONTAINABLE__TESTNESTEDELEMENTS:
+			getTestnestedelements().clear();
+			getTestnestedelements().addAll((Collection<? extends TestNestedElement>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -120,8 +124,8 @@ public abstract class TextContainableImpl extends ContainableTextElementImpl imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.TEXT_CONTAINABLE__CONTENT:
-			setContent(CONTENT_EDEFAULT);
+		case BstrapPackage.TEXT_CONTAINABLE__TESTNESTEDELEMENTS:
+			getTestnestedelements().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -135,8 +139,8 @@ public abstract class TextContainableImpl extends ContainableTextElementImpl imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.TEXT_CONTAINABLE__CONTENT:
-			return CONTENT_EDEFAULT == null ? content != null : !CONTENT_EDEFAULT.equals(content);
+		case BstrapPackage.TEXT_CONTAINABLE__TESTNESTEDELEMENTS:
+			return testnestedelements != null && !testnestedelements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -147,15 +151,46 @@ public abstract class TextContainableImpl extends ContainableTextElementImpl imp
 	 * @generated
 	 */
 	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == TextNested.class) {
+			switch (derivedFeatureID) {
+			case BstrapPackage.TEXT_CONTAINABLE__TESTNESTEDELEMENTS:
+				return BstrapPackage.TEXT_NESTED__TESTNESTEDELEMENTS;
+			default:
+				return -1;
+			}
+		}
+		if (baseClass == TestNestedElement.class) {
+			switch (derivedFeatureID) {
+			default:
+				return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
 
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (content: ");
-		result.append(content);
-		result.append(')');
-		return result.toString();
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == TextNested.class) {
+			switch (baseFeatureID) {
+			case BstrapPackage.TEXT_NESTED__TESTNESTEDELEMENTS:
+				return BstrapPackage.TEXT_CONTAINABLE__TESTNESTEDELEMENTS;
+			default:
+				return -1;
+			}
+		}
+		if (baseClass == TestNestedElement.class) {
+			switch (baseFeatureID) {
+			default:
+				return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //TextContainableImpl

@@ -1834,42 +1834,6 @@ public interface BstrapPackage extends EPackage {
 	int TEXT_CONTAINABLE = 66;
 
 	/**
-	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CONTAINABLE__GENERAL_PROPERTIES = CONTAINABLE_TEXT_ELEMENT__GENERAL_PROPERTIES;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CONTAINABLE__CONTENT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Text Containable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CONTAINABLE_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Text Containable</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_CONTAINABLE_OPERATION_COUNT = CONTAINABLE_TEXT_ELEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ButtonImpl <em>Button</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1886,16 +1850,16 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
+	int BUTTON__GENERAL_PROPERTIES = CONTAINABLE_TEXT_ELEMENT__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Content</b></em>' attribute.
+	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__CONTENT = TEXT_CONTAINABLE__CONTENT;
+	int BUTTON__TESTNESTEDELEMENTS = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Buttonproperties</b></em>' containment reference list.
@@ -1904,7 +1868,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__BUTTONPROPERTIES = TEXT_CONTAINABLE_FEATURE_COUNT + 0;
+	int BUTTON__BUTTONPROPERTIES = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Button</em>' class.
@@ -1913,7 +1877,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON_FEATURE_COUNT = TEXT_CONTAINABLE_FEATURE_COUNT + 1;
+	int BUTTON_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Button</em>' class.
@@ -1922,7 +1886,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON_OPERATION_COUNT = TEXT_CONTAINABLE_OPERATION_COUNT + 0;
+	int BUTTON_OPERATION_COUNT = CONTAINABLE_TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ListElementImpl <em>List Element</em>}' class.
@@ -2508,13 +2472,22 @@ public interface BstrapPackage extends EPackage {
 	int LINK__TITLE = URL_BASED_LINK__TITLE;
 
 	/**
+	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__TESTNESTEDELEMENTS = URL_BASED_LINK_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = URL_BASED_LINK_FEATURE_COUNT + 0;
+	int LINK_FEATURE_COUNT = URL_BASED_LINK_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Link</em>' class.
@@ -2524,6 +2497,42 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int LINK_OPERATION_COUNT = URL_BASED_LINK_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CONTAINABLE__GENERAL_PROPERTIES = CONTAINABLE_TEXT_ELEMENT__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CONTAINABLE__TESTNESTEDELEMENTS = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Text Containable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CONTAINABLE_FEATURE_COUNT = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Text Containable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_CONTAINABLE_OPERATION_COUNT = CONTAINABLE_TEXT_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.StrongImpl <em>Strong</em>}' class.
@@ -2545,13 +2554,13 @@ public interface BstrapPackage extends EPackage {
 	int STRONG__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Content</b></em>' attribute.
+	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRONG__CONTENT = TEXT_CONTAINABLE__CONTENT;
+	int STRONG__TESTNESTEDELEMENTS = TEXT_CONTAINABLE__TESTNESTEDELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Strong</em>' class.
@@ -2591,13 +2600,13 @@ public interface BstrapPackage extends EPackage {
 	int ITALIC__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Content</b></em>' attribute.
+	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ITALIC__CONTENT = TEXT_CONTAINABLE__CONTENT;
+	int ITALIC__TESTNESTEDELEMENTS = TEXT_CONTAINABLE__TESTNESTEDELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Italic</em>' class.
@@ -2618,6 +2627,99 @@ public interface BstrapPackage extends EPackage {
 	int ITALIC_OPERATION_COUNT = TEXT_CONTAINABLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.TextNested <em>Text Nested</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.TextNested
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTextNested()
+	 * @generated
+	 */
+	int TEXT_NESTED = 67;
+
+	/**
+	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_NESTED__TESTNESTEDELEMENTS = 0;
+
+	/**
+	 * The number of structural features of the '<em>Text Nested</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_NESTED_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Text Nested</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_NESTED_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.TestNestedElement <em>Test Nested Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.TestNestedElement
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTestNestedElement()
+	 * @generated
+	 */
+	int TEST_NESTED_ELEMENT = 68;
+
+	/**
+	 * The number of structural features of the '<em>Test Nested Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEST_NESTED_ELEMENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Test Nested Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEST_NESTED_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BrandImpl <em>Brand</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.BrandImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBrand()
+	 * @generated
+	 */
+	int BRAND = 69;
+
+	/**
+	 * The number of structural features of the '<em>Brand</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRAND_FEATURE_COUNT = NAV_BAR_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Brand</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRAND_OPERATION_COUNT = NAV_BAR_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2625,7 +2727,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getColor()
 	 * @generated
 	 */
-	int COLOR = 67;
+	int COLOR = 70;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Size <em>Size</em>}' enum.
@@ -2635,7 +2737,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 68;
+	int SIZE = 71;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Alignement <em>Alignement</em>}' enum.
@@ -2645,7 +2747,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlignement()
 	 * @generated
 	 */
-	int ALIGNEMENT = 69;
+	int ALIGNEMENT = 72;
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Page <em>Page</em>}'.
@@ -3626,15 +3728,45 @@ public interface BstrapPackage extends EPackage {
 	EClass getTextContainable();
 
 	/**
-	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.TextContainable#getContent <em>Content</em>}'.
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.TextNested <em>Text Nested</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Content</em>'.
-	 * @see idm.bstrap.mm.bstrap.TextContainable#getContent()
-	 * @see #getTextContainable()
+	 * @return the meta object for class '<em>Text Nested</em>'.
+	 * @see idm.bstrap.mm.bstrap.TextNested
 	 * @generated
 	 */
-	EAttribute getTextContainable_Content();
+	EClass getTextNested();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.TextNested#getTestnestedelements <em>Testnestedelements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Testnestedelements</em>'.
+	 * @see idm.bstrap.mm.bstrap.TextNested#getTestnestedelements()
+	 * @see #getTextNested()
+	 * @generated
+	 */
+	EReference getTextNested_Testnestedelements();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.TestNestedElement <em>Test Nested Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Test Nested Element</em>'.
+	 * @see idm.bstrap.mm.bstrap.TestNestedElement
+	 * @generated
+	 */
+	EClass getTestNestedElement();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Brand <em>Brand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Brand</em>'.
+	 * @see idm.bstrap.mm.bstrap.Brand
+	 * @generated
+	 */
+	EClass getBrand();
 
 	/**
 	 * Returns the meta object for enum '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}'.
@@ -4584,12 +4716,42 @@ public interface BstrapPackage extends EPackage {
 		EClass TEXT_CONTAINABLE = eINSTANCE.getTextContainable();
 
 		/**
-		 * The meta object literal for the '<em><b>Content</b></em>' attribute feature.
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.TextNested <em>Text Nested</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.TextNested
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTextNested()
+		 * @generated
+		 */
+		EClass TEXT_NESTED = eINSTANCE.getTextNested();
+
+		/**
+		 * The meta object literal for the '<em><b>Testnestedelements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TEXT_CONTAINABLE__CONTENT = eINSTANCE.getTextContainable_Content();
+		EReference TEXT_NESTED__TESTNESTEDELEMENTS = eINSTANCE.getTextNested_Testnestedelements();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.TestNestedElement <em>Test Nested Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.TestNestedElement
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTestNestedElement()
+		 * @generated
+		 */
+		EClass TEST_NESTED_ELEMENT = eINSTANCE.getTestNestedElement();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BrandImpl <em>Brand</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.BrandImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBrand()
+		 * @generated
+		 */
+		EClass BRAND = eINSTANCE.getBrand();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.

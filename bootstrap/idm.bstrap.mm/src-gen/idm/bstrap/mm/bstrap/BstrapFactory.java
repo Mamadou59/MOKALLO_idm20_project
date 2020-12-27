@@ -409,6 +409,15 @@ public interface BstrapFactory extends EFactory {
 	Italic createItalic();
 
 	/**
+	 * Returns a new object of class '<em>Brand</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Brand</em>'.
+	 * @generated
+	 */
+	Brand createBrand();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

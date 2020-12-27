@@ -105,7 +105,7 @@
     <genClasses ecoreClass="bstrap.ecore#//ButtonSize">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//ButtonSize/size"/>
     </genClasses>
-    <genClasses ecoreClass="bstrap.ecore#//LinkProperty"/>
+    <genClasses ecoreClass="bstrap.ecore#//ButtonLink"/>
     <genClasses ecoreClass="bstrap.ecore#//ButtonState"/>
     <genClasses ecoreClass="bstrap.ecore#//Disabled"/>
     <genClasses ecoreClass="bstrap.ecore#//Active"/>
@@ -130,6 +130,7 @@
     <genClasses ecoreClass="bstrap.ecore#//Navigation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Navigation/listelement"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Navigation/navbar"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Navigation/links"/>
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//Centered"/>
     <genClasses ecoreClass="bstrap.ecore#//ListProperty"/>
@@ -144,8 +145,13 @@
     <genClasses ecoreClass="bstrap.ecore#//Link"/>
     <genClasses ecoreClass="bstrap.ecore#//Strong"/>
     <genClasses ecoreClass="bstrap.ecore#//Italic"/>
-    <genClasses ecoreClass="bstrap.ecore#//TextContainable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//TextContainable/content"/>
+    <genClasses ecoreClass="bstrap.ecore#//TextContainable"/>
+    <genClasses ecoreClass="bstrap.ecore#//TextNested">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//TextNested/testnestedelements"/>
     </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//TestNestedElement"/>
+    <genClasses ecoreClass="bstrap.ecore#//Brand"/>
+    <genClasses ecoreClass="bstrap.ecore#//LinkProperty"/>
+    <genClasses ecoreClass="bstrap.ecore#//LinkBrand"/>
   </genPackages>
 </genmodel:GenModel>

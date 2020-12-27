@@ -157,6 +157,9 @@ public class NavigationItemProvider extends TextPageContentItemProvider {
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.NAVIGATION__NAVBAR,
 				BstrapFactory.eINSTANCE.createVertical()));
+
+		newChildDescriptors.add(
+				createChildParameter(BstrapPackage.Literals.NAVIGATION__NAVBAR, BstrapFactory.eINSTANCE.createBrand()));
 	}
 
 }

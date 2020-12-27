@@ -189,6 +189,12 @@ public class ListItemItemProvider extends ItemProviderAdapter implements IEditin
 				BstrapFactory.eINSTANCE.createButton()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LIST_ITEM__LISTITEMELEMENTS,
+				BstrapFactory.eINSTANCE.createOrderList()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LIST_ITEM__LISTITEMELEMENTS,
+				BstrapFactory.eINSTANCE.createUnOrderedList()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LIST_ITEM__LISTITEMELEMENTS,
 				BstrapFactory.eINSTANCE.createLink()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LIST_ITEM__LISTITEMELEMENTS,

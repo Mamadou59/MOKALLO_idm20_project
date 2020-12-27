@@ -9,6 +9,7 @@ import idm.bstrap.mm.bstrap.BasicList;
 import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BorderProperty;
+import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
 import idm.bstrap.mm.bstrap.ButtonProperty;
@@ -59,10 +60,12 @@ import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
 import idm.bstrap.mm.bstrap.Strong;
+import idm.bstrap.mm.bstrap.TestNestedElement;
 import idm.bstrap.mm.bstrap.Text;
 import idm.bstrap.mm.bstrap.TextContainable;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
+import idm.bstrap.mm.bstrap.TextNested;
 import idm.bstrap.mm.bstrap.TextPageContent;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
@@ -224,6 +227,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextElements(text);
 			if (result == null)
+				result = caseTestNestedElement(text);
+			if (result == null)
 				result = caseListItemElement(text);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -236,6 +241,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseText(code);
 			if (result == null)
 				result = caseTextElements(code);
+			if (result == null)
+				result = caseTestNestedElement(code);
 			if (result == null)
 				result = caseListItemElement(code);
 			if (result == null)
@@ -662,9 +669,9 @@ public class BstrapSwitch<T> extends Switch<T> {
 			Button button = (Button) theEObject;
 			T result = caseButton(button);
 			if (result == null)
-				result = caseTextContainable(button);
-			if (result == null)
 				result = caseContainableTextElement(button);
+			if (result == null)
+				result = caseTextNested(button);
 			if (result == null)
 				result = caseTextElements(button);
 			if (result == null)
@@ -699,6 +706,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextPageContent(listElement);
 			if (result == null)
+				result = caseListItemElement(listElement);
+			if (result == null)
 				result = casePageContent(listElement);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -712,6 +721,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextPageContent(orderList);
 			if (result == null)
+				result = caseListItemElement(orderList);
+			if (result == null)
 				result = casePageContent(orderList);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -724,6 +735,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseListElement(unOrderedList);
 			if (result == null)
 				result = caseTextPageContent(unOrderedList);
+			if (result == null)
+				result = caseListItemElement(unOrderedList);
 			if (result == null)
 				result = casePageContent(unOrderedList);
 			if (result == null)
@@ -865,6 +878,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseUrlBasedLink(link);
 			if (result == null)
+				result = caseTextNested(link);
+			if (result == null)
 				result = caseCompositeTextElement(link);
 			if (result == null)
 				result = caseContainableTextElement(link);
@@ -888,6 +903,10 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseContainableTextElement(strong);
 			if (result == null)
+				result = caseTextNested(strong);
+			if (result == null)
+				result = caseTestNestedElement(strong);
+			if (result == null)
 				result = caseTextElements(strong);
 			if (result == null)
 				result = caseTextPageContent(strong);
@@ -907,6 +926,10 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseContainableTextElement(italic);
 			if (result == null)
+				result = caseTextNested(italic);
+			if (result == null)
+				result = caseTestNestedElement(italic);
+			if (result == null)
 				result = caseTextElements(italic);
 			if (result == null)
 				result = caseTextPageContent(italic);
@@ -924,6 +947,10 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseContainableTextElement(textContainable);
 			if (result == null)
+				result = caseTextNested(textContainable);
+			if (result == null)
+				result = caseTestNestedElement(textContainable);
+			if (result == null)
 				result = caseTextElements(textContainable);
 			if (result == null)
 				result = caseTextPageContent(textContainable);
@@ -931,6 +958,31 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseListItemElement(textContainable);
 			if (result == null)
 				result = casePageContent(textContainable);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TEXT_NESTED: {
+			TextNested textNested = (TextNested) theEObject;
+			T result = caseTextNested(textNested);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TEST_NESTED_ELEMENT: {
+			TestNestedElement testNestedElement = (TestNestedElement) theEObject;
+			T result = caseTestNestedElement(testNestedElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BRAND: {
+			Brand brand = (Brand) theEObject;
+			T result = caseBrand(brand);
+			if (result == null)
+				result = caseNavBarProperty(brand);
+			if (result == null)
+				result = casePropertyClass(brand);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1942,6 +1994,51 @@ public class BstrapSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTextContainable(TextContainable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Nested</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Nested</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextNested(TextNested object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Test Nested Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Test Nested Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTestNestedElement(TestNestedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Brand</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Brand</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBrand(Brand object) {
 		return null;
 	}
 
