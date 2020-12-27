@@ -1,0 +1,136 @@
+import usdTextElement2bstrapTextElements;
+	
+
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+modeltype bstrapMM "strict" uses "http://www.example.org/bstrap";
+
+transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
+
+/**
+* Map an usd PageContent element to Bstrap PageContent element.
+*/
+abstract mapping usdMM::PageContent::pageContentUsd2PageContentBstrap() : bstrapMM::PageContent {
+	// TODO don't forgot parsing bstrap properties
+	//generalProperties += self.SOMETHINK
+}
+
+/**
+* Abstract mapper wich map an usd TextContainer element to Bstrap TextContainer element.
+*/
+abstract mapping usdMM::TextContainer::textContainerUsd2TextContainerBstrap() : bstrapMM::TextContainer 
+	inherits usdMM::PageContent::pageContentUsd2PageContentBstrap{
+		textelements += self.textElements -> map constructTextElement();
+}
+
+/**
+* A mapper wich map an usd Paragraph element to bstrap Paragraph element.
+*/
+mapping usdMM::Paragraph::paragraphUsd2ParagraphBstrap() : bstrapMM::Paragraphe 
+	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap{}
+	
+	
+/**
+* A mapper wich map an usd Navigation element to bstrap Navigation element.
+*/
+mapping usdMM::Navigation::navigationUsd2NavigationBstrap() : bstrapMM::Navigation {
+	links := object bstrapMM::Link{
+		linkproperties := object LinkBrand{};
+		url := self.url;
+		textnestedelements := object bstrapMM::Text{
+			text := self.textContent;
+		};
+	};
+	listelement += self.groupedItems -> map constructListElement();
+	//TODO don't forgot general properties
+	navbar += self.type.parseNavProperties();
+	
+}
+
+/**
+* A mapper which map a string properties to specified bootstrap Nav properties
+*/
+mapping String::parseNavProperties() : Set(NavBarProperty) {
+	init {
+		result := Set{};
+		log(self);
+		if (self.find('vertical') > 0){
+			result += object Vertical{}
+		}
+		else if (self.find('basic') > 0){
+			result += object Basic{}
+		}
+		else if (self.find('centred') > 0){
+			result += object Centered{}
+		}
+		else if (self.find('brand') > 0 or self.find('navbar-brand') > 0){
+			log("test",self);
+			result += object Brand{}
+		}
+	}
+}
+
+/**
+* A mapper wich map an usd OrderedList element to bstrap OrderedList element.
+*/
+mapping usdMM::OrderedList::orderedListUsd2OrderedListBstrap() : bstrapMM::OrderList {
+	listitems += self.items -> map listItemUsd2ListItemBstrap();
+}
+
+/**
+* A mapper wich map an usd UnorderedList element to bstrap UnOrderedList element.
+*/
+mapping usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap() : bstrapMM::UnOrderedList {
+	listitems += self.items -> map listItemUsd2ListItemBstrap();
+}
+
+/**
+* A mapper wich map an usd ListItem element to bstrap ListItem element.
+*/
+mapping  usdMM::ListItem::listItemUsd2ListItemBstrap() : bstrapMM::ListItem {
+	listitemelements += self.elements -> map constructListItemElement();
+}
+
+/**
+* A mapper wich map an usd ListElement to bstrap ListElement.
+*/
+mapping usdMM::ListElement::constructListElement() : bstrapMM::ListElement 
+	disjuncts usdMM::OrderedList::orderedListUsd2OrderedListBstrap,
+				usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap{}
+
+/**
+* A mapper wich map an usd ListItemElement to bstrap ListElement.
+*/
+mapping usdMM::ListItemElement::constructListItemElement() : bstrapMM::ListItemElement 
+	disjuncts usdMM::Paragraph::paragraphUsd2ParagraphBstrap, usdMM::OrderedList::orderedListUsd2OrderedListBstrap,
+				usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap, usdMM::Link::linkUsd2LinkBstrap {
+	
+}
+
+/**
+* A mapper wich map an usd Title element to bstrap Title element.
+*/
+mapping usdMM::Title::titleUsd2TitleBstrap() : bstrapMM::Title 
+	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap{
+		level := self.level;
+		// TODO displayproperties.
+		
+}
+
+	
+	
+//mapping usdMM::Section::sectionUsd2ContainerBstrap() : bstrapMM::FixContainer
+//	inherits usdMM::PageContent::pageContentUsd2PageContentBstrap{
+//		pagecontents += self.contents -> map constructPageContent();
+//}
+
+/**
+* Map a usd PageContent element to bstrap PageContent element, 
+* wich make disjunction beetwen these maps paragraphUsd2ParagraphBstrap,
+* titleUsd2TitleBstrap
+*/
+mapping usdMM::PageContent::constructPageContent() : bstrapMM::PageContent 
+	disjuncts usdMM::Paragraph::paragraphUsd2ParagraphBstrap, usdMM::Title::titleUsd2TitleBstrap,
+				usdMM::OrderedList::orderedListUsd2OrderedListBstrap,usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap,
+				usdMM::Navigation::navigationUsd2NavigationBstrap{}
+	
+	
