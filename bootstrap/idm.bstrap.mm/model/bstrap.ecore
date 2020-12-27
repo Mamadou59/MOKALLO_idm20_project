@@ -152,7 +152,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Emphasis" abstract="true" eSuperTypes="#//PropertyClass"/>
   <eClassifiers xsi:type="ecore:EClass" name="ItalicProperty" eSuperTypes="#//Emphasis"/>
   <eClassifiers xsi:type="ecore:EClass" name="Bold" eSuperTypes="#//Emphasis"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//UrlBasedLink #//TextNested"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//UrlBasedLink #//TextNested">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkproperties" upperBound="-1"
+        eType="#//LinkProperty" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Strong" eSuperTypes="#//TextContainable"/>
   <eClassifiers xsi:type="ecore:EClass" name="Italic" eSuperTypes="#//TextContainable"/>
   <eClassifiers xsi:type="ecore:EClass" name="TextContainable" abstract="true" eSuperTypes="#//ContainableTextElement #//TextNested #//TestNestedElement"/>

@@ -14,6 +14,7 @@ import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
+import idm.bstrap.mm.bstrap.ButtonLink;
 import idm.bstrap.mm.bstrap.ButtonProperty;
 import idm.bstrap.mm.bstrap.ButtonSize;
 import idm.bstrap.mm.bstrap.ButtonState;
@@ -44,6 +45,7 @@ import idm.bstrap.mm.bstrap.ImageShape;
 import idm.bstrap.mm.bstrap.Italic;
 import idm.bstrap.mm.bstrap.ItalicProperty;
 import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.LinkBrand;
 import idm.bstrap.mm.bstrap.LinkProperty;
 import idm.bstrap.mm.bstrap.ListElement;
 import idm.bstrap.mm.bstrap.ListItem;
@@ -376,7 +378,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass linkPropertyEClass = null;
+	private EClass buttonLinkEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -580,6 +582,20 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	private EClass brandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass linkPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass linkBrandEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1211,8 +1227,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLinkProperty() {
-		return linkPropertyEClass;
+	public EClass getButtonLink() {
+		return buttonLinkEClass;
 	}
 
 	/**
@@ -1400,6 +1416,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getNavigation_Links() {
+		return (EReference) navigationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCentered() {
 		return centeredEClass;
 	}
@@ -1499,6 +1524,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLink_Linkproperties() {
+		return (EReference) linkEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStrong() {
 		return strongEClass;
 	}
@@ -1555,6 +1589,24 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EClass getBrand() {
 		return brandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLinkProperty() {
+		return linkPropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLinkBrand() {
+		return linkBrandEClass;
 	}
 
 	/**
@@ -1713,7 +1765,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		buttonSizeEClass = createEClass(BUTTON_SIZE);
 		createEAttribute(buttonSizeEClass, BUTTON_SIZE__SIZE);
 
-		linkPropertyEClass = createEClass(LINK_PROPERTY);
+		buttonLinkEClass = createEClass(BUTTON_LINK);
 
 		buttonStateEClass = createEClass(BUTTON_STATE);
 
@@ -1746,6 +1798,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		navigationEClass = createEClass(NAVIGATION);
 		createEReference(navigationEClass, NAVIGATION__LISTELEMENT);
 		createEReference(navigationEClass, NAVIGATION__NAVBAR);
+		createEReference(navigationEClass, NAVIGATION__LINKS);
 
 		centeredEClass = createEClass(CENTERED);
 
@@ -1768,6 +1821,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		boldEClass = createEClass(BOLD);
 
 		linkEClass = createEClass(LINK);
+		createEReference(linkEClass, LINK__LINKPROPERTIES);
 
 		strongEClass = createEClass(STRONG);
 
@@ -1781,6 +1835,10 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		testNestedElementEClass = createEClass(TEST_NESTED_ELEMENT);
 
 		brandEClass = createEClass(BRAND);
+
+		linkPropertyEClass = createEClass(LINK_PROPERTY);
+
+		linkBrandEClass = createEClass(LINK_BRAND);
 
 		// Create enums
 		colorEEnum = createEEnum(COLOR);
@@ -1858,7 +1916,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		responsiveEClass.getESuperTypes().add(this.getImageAligning());
 		buttonStyleEClass.getESuperTypes().add(this.getButtonProperty());
 		buttonSizeEClass.getESuperTypes().add(this.getButtonProperty());
-		linkPropertyEClass.getESuperTypes().add(this.getButtonStyle());
+		buttonLinkEClass.getESuperTypes().add(this.getButtonStyle());
 		buttonStateEClass.getESuperTypes().add(this.getButtonProperty());
 		disabledEClass.getESuperTypes().add(this.getButtonState());
 		activeEClass.getESuperTypes().add(this.getButtonState());
@@ -1888,6 +1946,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		textContainableEClass.getESuperTypes().add(this.getTextNested());
 		textContainableEClass.getESuperTypes().add(this.getTestNestedElement());
 		brandEClass.getESuperTypes().add(this.getNavBarProperty());
+		linkPropertyEClass.getESuperTypes().add(this.getPropertyClass());
+		linkBrandEClass.getESuperTypes().add(this.getLinkProperty());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2047,7 +2107,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEAttribute(getButtonSize_Size(), this.getSize(), "size", null, 0, 1, ButtonSize.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(linkPropertyEClass, LinkProperty.class, "LinkProperty", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(buttonLinkEClass, ButtonLink.class, "ButtonLink", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(buttonStateEClass, ButtonState.class, "ButtonState", IS_ABSTRACT, !IS_INTERFACE,
@@ -2106,6 +2166,9 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEReference(getNavigation_Navbar(), this.getNavBarProperty(), null, "navbar", null, 0, -1, Navigation.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNavigation_Links(), this.getLink(), null, "links", null, 0, -1, Navigation.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(centeredEClass, Centered.class, "Centered", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2135,6 +2198,9 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEClass(boldEClass, Bold.class, "Bold", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLink_Linkproperties(), this.getLinkProperty(), null, "linkproperties", null, 0, -1,
+				Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(strongEClass, Strong.class, "Strong", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2153,6 +2219,12 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(brandEClass, Brand.class, "Brand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(linkPropertyEClass, LinkProperty.class, "LinkProperty", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(linkBrandEClass, LinkBrand.class, "LinkBrand", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(colorEEnum, Color.class, "Color");

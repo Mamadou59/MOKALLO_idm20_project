@@ -2,6 +2,9 @@
  */
 package idm.bstrap.mm.bstrap.provider;
 
+import idm.bstrap.mm.bstrap.ButtonLink;
+import idm.bstrap.mm.bstrap.Color;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -11,19 +14,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.LinkProperty} object.
+ * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.ButtonLink} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LinkPropertyItemProvider extends PropertyClassItemProvider {
+public class ButtonLinkItemProvider extends ButtonStyleItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LinkPropertyItemProvider(AdapterFactory adapterFactory) {
+	public ButtonLinkItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,14 +46,14 @@ public class LinkPropertyItemProvider extends PropertyClassItemProvider {
 	}
 
 	/**
-	 * This returns LinkProperty.gif.
+	 * This returns ButtonLink.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/LinkProperty"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ButtonLink"));
 	}
 
 	/**
@@ -71,7 +74,10 @@ public class LinkPropertyItemProvider extends PropertyClassItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_LinkProperty_type");
+		Color labelValue = ((ButtonLink) object).getColor();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ? getString("_UI_ButtonLink_type")
+				: getString("_UI_ButtonLink_type") + " " + label;
 	}
 
 	/**

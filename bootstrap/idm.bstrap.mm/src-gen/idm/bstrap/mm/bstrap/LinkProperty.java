@@ -9,8 +9,8 @@ package idm.bstrap.mm.bstrap;
  *
  *
  * @see idm.bstrap.mm.bstrap.BstrapPackage#getLinkProperty()
- * @model
+ * @model abstract="true"
  * @generated
  */
-public interface LinkProperty extends ButtonStyle {
+public interface LinkProperty extends PropertyClass {
 } // LinkProperty

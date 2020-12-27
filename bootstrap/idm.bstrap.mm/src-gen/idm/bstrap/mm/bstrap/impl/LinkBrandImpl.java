@@ -3,24 +3,24 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.Strong;
+import idm.bstrap.mm.bstrap.LinkBrand;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Strong</b></em>'.
+ * An implementation of the model object '<em><b>Link Brand</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class StrongImpl extends TextContainableImpl implements Strong {
+public class LinkBrandImpl extends LinkPropertyImpl implements LinkBrand {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StrongImpl() {
+	protected LinkBrandImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class StrongImpl extends TextContainableImpl implements Strong {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BstrapPackage.Literals.STRONG;
+		return BstrapPackage.Literals.LINK_BRAND;
 	}
 
-} //StrongImpl
+} //LinkBrandImpl

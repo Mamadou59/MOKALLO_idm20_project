@@ -13,6 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -161,7 +162,7 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 				BstrapFactory.eINSTANCE.createButtonSize()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
-				BstrapFactory.eINSTANCE.createLinkProperty()));
+				BstrapFactory.eINSTANCE.createButtonLink()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
 				BstrapFactory.eINSTANCE.createDisabled()));

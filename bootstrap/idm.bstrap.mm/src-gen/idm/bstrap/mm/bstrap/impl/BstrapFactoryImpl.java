@@ -13,6 +13,7 @@ import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
+import idm.bstrap.mm.bstrap.ButtonLink;
 import idm.bstrap.mm.bstrap.ButtonSize;
 import idm.bstrap.mm.bstrap.ButtonStyle;
 import idm.bstrap.mm.bstrap.Center;
@@ -33,7 +34,7 @@ import idm.bstrap.mm.bstrap.Image;
 import idm.bstrap.mm.bstrap.Italic;
 import idm.bstrap.mm.bstrap.ItalicProperty;
 import idm.bstrap.mm.bstrap.Link;
-import idm.bstrap.mm.bstrap.LinkProperty;
+import idm.bstrap.mm.bstrap.LinkBrand;
 import idm.bstrap.mm.bstrap.ListItem;
 import idm.bstrap.mm.bstrap.Margin;
 import idm.bstrap.mm.bstrap.Navigation;
@@ -154,8 +155,8 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createButtonStyle();
 		case BstrapPackage.BUTTON_SIZE:
 			return createButtonSize();
-		case BstrapPackage.LINK_PROPERTY:
-			return createLinkProperty();
+		case BstrapPackage.BUTTON_LINK:
+			return createButtonLink();
 		case BstrapPackage.DISABLED:
 			return createDisabled();
 		case BstrapPackage.ACTIVE:
@@ -192,6 +193,8 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createItalic();
 		case BstrapPackage.BRAND:
 			return createBrand();
+		case BstrapPackage.LINK_BRAND:
+			return createLinkBrand();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -490,9 +493,9 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LinkProperty createLinkProperty() {
-		LinkPropertyImpl linkProperty = new LinkPropertyImpl();
-		return linkProperty;
+	public ButtonLink createButtonLink() {
+		ButtonLinkImpl buttonLink = new ButtonLinkImpl();
+		return buttonLink;
 	}
 
 	/**
@@ -673,6 +676,16 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	public Brand createBrand() {
 		BrandImpl brand = new BrandImpl();
 		return brand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LinkBrand createLinkBrand() {
+		LinkBrandImpl linkBrand = new LinkBrandImpl();
+		return linkBrand;
 	}
 
 	/**

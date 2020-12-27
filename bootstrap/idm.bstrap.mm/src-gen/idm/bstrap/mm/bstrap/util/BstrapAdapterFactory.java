@@ -12,6 +12,7 @@ import idm.bstrap.mm.bstrap.BorderProperty;
 import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
+import idm.bstrap.mm.bstrap.ButtonLink;
 import idm.bstrap.mm.bstrap.ButtonProperty;
 import idm.bstrap.mm.bstrap.ButtonSize;
 import idm.bstrap.mm.bstrap.ButtonState;
@@ -42,6 +43,7 @@ import idm.bstrap.mm.bstrap.ImageShape;
 import idm.bstrap.mm.bstrap.Italic;
 import idm.bstrap.mm.bstrap.ItalicProperty;
 import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.LinkBrand;
 import idm.bstrap.mm.bstrap.LinkProperty;
 import idm.bstrap.mm.bstrap.ListElement;
 import idm.bstrap.mm.bstrap.ListItem;
@@ -336,8 +338,8 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseLinkProperty(LinkProperty object) {
-			return createLinkPropertyAdapter();
+		public Adapter caseButtonLink(ButtonLink object) {
+			return createButtonLinkAdapter();
 		}
 
 		@Override
@@ -483,6 +485,16 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseBrand(Brand object) {
 			return createBrandAdapter();
+		}
+
+		@Override
+		public Adapter caseLinkProperty(LinkProperty object) {
+			return createLinkPropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseLinkBrand(LinkBrand object) {
+			return createLinkBrandAdapter();
 		}
 
 		@Override
@@ -1065,16 +1077,16 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.LinkProperty <em>Link Property</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ButtonLink <em>Button Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.LinkProperty
+	 * @see idm.bstrap.mm.bstrap.ButtonLink
 	 * @generated
 	 */
-	public Adapter createLinkPropertyAdapter() {
+	public Adapter createButtonLinkAdapter() {
 		return null;
 	}
 
@@ -1481,6 +1493,34 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBrandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.LinkProperty <em>Link Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.LinkProperty
+	 * @generated
+	 */
+	public Adapter createLinkPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.LinkBrand <em>Link Brand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.LinkBrand
+	 * @generated
+	 */
+	public Adapter createLinkBrandAdapter() {
 		return null;
 	}
 

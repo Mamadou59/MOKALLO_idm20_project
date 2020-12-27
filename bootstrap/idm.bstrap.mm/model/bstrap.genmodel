@@ -142,7 +142,9 @@
     <genClasses ecoreClass="bstrap.ecore#//Emphasis"/>
     <genClasses ecoreClass="bstrap.ecore#//ItalicProperty"/>
     <genClasses ecoreClass="bstrap.ecore#//Bold"/>
-    <genClasses ecoreClass="bstrap.ecore#//Link"/>
+    <genClasses ecoreClass="bstrap.ecore#//Link">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Link/linkproperties"/>
+    </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//Strong"/>
     <genClasses ecoreClass="bstrap.ecore#//Italic"/>
     <genClasses ecoreClass="bstrap.ecore#//TextContainable"/>

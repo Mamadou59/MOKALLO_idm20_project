@@ -247,13 +247,13 @@ public interface BstrapFactory extends EFactory {
 	ButtonSize createButtonSize();
 
 	/**
-	 * Returns a new object of class '<em>Link Property</em>'.
+	 * Returns a new object of class '<em>Button Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Link Property</em>'.
+	 * @return a new object of class '<em>Button Link</em>'.
 	 * @generated
 	 */
-	LinkProperty createLinkProperty();
+	ButtonLink createButtonLink();
 
 	/**
 	 * Returns a new object of class '<em>Disabled</em>'.
@@ -416,6 +416,15 @@ public interface BstrapFactory extends EFactory {
 	 * @generated
 	 */
 	Brand createBrand();
+
+	/**
+	 * Returns a new object of class '<em>Link Brand</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Link Brand</em>'.
+	 * @generated
+	 */
+	LinkBrand createLinkBrand();
 
 	/**
 	 * Returns the package supported by this factory.

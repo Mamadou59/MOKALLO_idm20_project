@@ -12,6 +12,7 @@ import idm.bstrap.mm.bstrap.BorderProperty;
 import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
+import idm.bstrap.mm.bstrap.ButtonLink;
 import idm.bstrap.mm.bstrap.ButtonProperty;
 import idm.bstrap.mm.bstrap.ButtonSize;
 import idm.bstrap.mm.bstrap.ButtonState;
@@ -42,6 +43,7 @@ import idm.bstrap.mm.bstrap.ImageShape;
 import idm.bstrap.mm.bstrap.Italic;
 import idm.bstrap.mm.bstrap.ItalicProperty;
 import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.LinkBrand;
 import idm.bstrap.mm.bstrap.LinkProperty;
 import idm.bstrap.mm.bstrap.ListElement;
 import idm.bstrap.mm.bstrap.ListItem;
@@ -615,15 +617,15 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case BstrapPackage.LINK_PROPERTY: {
-			LinkProperty linkProperty = (LinkProperty) theEObject;
-			T result = caseLinkProperty(linkProperty);
+		case BstrapPackage.BUTTON_LINK: {
+			ButtonLink buttonLink = (ButtonLink) theEObject;
+			T result = caseButtonLink(buttonLink);
 			if (result == null)
-				result = caseButtonStyle(linkProperty);
+				result = caseButtonStyle(buttonLink);
 			if (result == null)
-				result = caseButtonProperty(linkProperty);
+				result = caseButtonProperty(buttonLink);
 			if (result == null)
-				result = casePropertyClass(linkProperty);
+				result = casePropertyClass(buttonLink);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -983,6 +985,26 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseNavBarProperty(brand);
 			if (result == null)
 				result = casePropertyClass(brand);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.LINK_PROPERTY: {
+			LinkProperty linkProperty = (LinkProperty) theEObject;
+			T result = caseLinkProperty(linkProperty);
+			if (result == null)
+				result = casePropertyClass(linkProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.LINK_BRAND: {
+			LinkBrand linkBrand = (LinkBrand) theEObject;
+			T result = caseLinkBrand(linkBrand);
+			if (result == null)
+				result = caseLinkProperty(linkBrand);
+			if (result == null)
+				result = casePropertyClass(linkBrand);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1593,17 +1615,17 @@ public class BstrapSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Link Property</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Button Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Link Property</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Button Link</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLinkProperty(LinkProperty object) {
+	public T caseButtonLink(ButtonLink object) {
 		return null;
 	}
 
@@ -2039,6 +2061,36 @@ public class BstrapSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBrand(Brand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkProperty(LinkProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link Brand</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link Brand</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkBrand(LinkBrand object) {
 		return null;
 	}
 

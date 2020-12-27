@@ -648,26 +648,26 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.LinkProperty} instances.
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.ButtonLink} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LinkPropertyItemProvider linkPropertyItemProvider;
+	protected ButtonLinkItemProvider buttonLinkItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.LinkProperty}.
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.ButtonLink}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createLinkPropertyAdapter() {
-		if (linkPropertyItemProvider == null) {
-			linkPropertyItemProvider = new LinkPropertyItemProvider(this);
+	public Adapter createButtonLinkAdapter() {
+		if (buttonLinkItemProvider == null) {
+			buttonLinkItemProvider = new ButtonLinkItemProvider(this);
 		}
 
-		return linkPropertyItemProvider;
+		return buttonLinkItemProvider;
 	}
 
 	/**
@@ -1085,6 +1085,29 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.LinkBrand} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LinkBrandItemProvider linkBrandItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.LinkBrand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLinkBrandAdapter() {
+		if (linkBrandItemProvider == null) {
+			linkBrandItemProvider = new LinkBrandItemProvider(this);
+		}
+
+		return linkBrandItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1233,8 +1256,8 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 			buttonStyleItemProvider.dispose();
 		if (buttonSizeItemProvider != null)
 			buttonSizeItemProvider.dispose();
-		if (linkPropertyItemProvider != null)
-			linkPropertyItemProvider.dispose();
+		if (buttonLinkItemProvider != null)
+			buttonLinkItemProvider.dispose();
 		if (disabledItemProvider != null)
 			disabledItemProvider.dispose();
 		if (activeItemProvider != null)
@@ -1271,6 +1294,8 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 			italicItemProvider.dispose();
 		if (brandItemProvider != null)
 			brandItemProvider.dispose();
+		if (linkBrandItemProvider != null)
+			linkBrandItemProvider.dispose();
 	}
 
 }

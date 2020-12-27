@@ -13,6 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -61,6 +62,7 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS);
+			childrenFeatures.add(BstrapPackage.Literals.LINK__LINKPROPERTIES);
 		}
 		return childrenFeatures;
 	}
@@ -125,6 +127,7 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 
 		switch (notification.getFeatureID(Link.class)) {
 		case BstrapPackage.LINK__TESTNESTEDELEMENTS:
+		case BstrapPackage.LINK__LINKPROPERTIES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -153,6 +156,9 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createItalic()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__LINKPROPERTIES,
+				BstrapFactory.eINSTANCE.createLinkBrand()));
 	}
 
 }

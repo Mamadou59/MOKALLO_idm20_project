@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link idm.bstrap.mm.bstrap.Navigation#getListelement <em>Listelement</em>}</li>
  *   <li>{@link idm.bstrap.mm.bstrap.Navigation#getNavbar <em>Navbar</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.Navigation#getLinks <em>Links</em>}</li>
  * </ul>
  *
  * @see idm.bstrap.mm.bstrap.BstrapPackage#getNavigation()
@@ -45,5 +46,17 @@ public interface Navigation extends TextPageContent {
 	 * @generated
 	 */
 	EList<NavBarProperty> getNavbar();
+
+	/**
+	 * Returns the value of the '<em><b>Links</b></em>' containment reference list.
+	 * The list contents are of type {@link idm.bstrap.mm.bstrap.Link}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Links</em>' containment reference list.
+	 * @see idm.bstrap.mm.bstrap.BstrapPackage#getNavigation_Links()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Link> getLinks();
 
 } // Navigation

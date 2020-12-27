@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class LinkPropertyImpl extends ButtonStyleImpl implements LinkProperty {
+public abstract class LinkPropertyImpl extends PropertyClassImpl implements LinkProperty {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

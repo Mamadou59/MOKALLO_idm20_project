@@ -4,14 +4,19 @@ package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Link;
-
+import idm.bstrap.mm.bstrap.LinkProperty;
 import idm.bstrap.mm.bstrap.TestNestedElement;
 import idm.bstrap.mm.bstrap.TextNested;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -24,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link idm.bstrap.mm.bstrap.impl.LinkImpl#getTestnestedelements <em>Testnestedelements</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.LinkImpl#getLinkproperties <em>Linkproperties</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +44,16 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	 * @ordered
 	 */
 	protected EList<TestNestedElement> testnestedelements;
+
+	/**
+	 * The cached value of the '{@link #getLinkproperties() <em>Linkproperties</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLinkproperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<LinkProperty> linkproperties;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -76,11 +92,26 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<LinkProperty> getLinkproperties() {
+		if (linkproperties == null) {
+			linkproperties = new EObjectContainmentEList<LinkProperty>(LinkProperty.class, this,
+					BstrapPackage.LINK__LINKPROPERTIES);
+		}
+		return linkproperties;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case BstrapPackage.LINK__TESTNESTEDELEMENTS:
 			return ((InternalEList<?>) getTestnestedelements()).basicRemove(otherEnd, msgs);
+		case BstrapPackage.LINK__LINKPROPERTIES:
+			return ((InternalEList<?>) getLinkproperties()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -95,6 +126,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 		switch (featureID) {
 		case BstrapPackage.LINK__TESTNESTEDELEMENTS:
 			return getTestnestedelements();
+		case BstrapPackage.LINK__LINKPROPERTIES:
+			return getLinkproperties();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,6 +145,10 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 			getTestnestedelements().clear();
 			getTestnestedelements().addAll((Collection<? extends TestNestedElement>) newValue);
 			return;
+		case BstrapPackage.LINK__LINKPROPERTIES:
+			getLinkproperties().clear();
+			getLinkproperties().addAll((Collection<? extends LinkProperty>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -127,6 +164,9 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 		case BstrapPackage.LINK__TESTNESTEDELEMENTS:
 			getTestnestedelements().clear();
 			return;
+		case BstrapPackage.LINK__LINKPROPERTIES:
+			getLinkproperties().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -141,6 +181,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 		switch (featureID) {
 		case BstrapPackage.LINK__TESTNESTEDELEMENTS:
 			return testnestedelements != null && !testnestedelements.isEmpty();
+		case BstrapPackage.LINK__LINKPROPERTIES:
+			return linkproperties != null && !linkproperties.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

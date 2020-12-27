@@ -63,6 +63,7 @@ public class NavigationItemProvider extends TextPageContentItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BstrapPackage.Literals.NAVIGATION__LISTELEMENT);
 			childrenFeatures.add(BstrapPackage.Literals.NAVIGATION__NAVBAR);
+			childrenFeatures.add(BstrapPackage.Literals.NAVIGATION__LINKS);
 		}
 		return childrenFeatures;
 	}
@@ -126,6 +127,7 @@ public class NavigationItemProvider extends TextPageContentItemProvider {
 		switch (notification.getFeatureID(Navigation.class)) {
 		case BstrapPackage.NAVIGATION__LISTELEMENT:
 		case BstrapPackage.NAVIGATION__NAVBAR:
+		case BstrapPackage.NAVIGATION__LINKS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -160,6 +162,9 @@ public class NavigationItemProvider extends TextPageContentItemProvider {
 
 		newChildDescriptors.add(
 				createChildParameter(BstrapPackage.Literals.NAVIGATION__NAVBAR, BstrapFactory.eINSTANCE.createBrand()));
+
+		newChildDescriptors.add(
+				createChildParameter(BstrapPackage.Literals.NAVIGATION__LINKS, BstrapFactory.eINSTANCE.createLink()));
 	}
 
 }

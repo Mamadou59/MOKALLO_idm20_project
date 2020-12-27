@@ -1703,14 +1703,14 @@ public interface BstrapPackage extends EPackage {
 	int BUTTON_SIZE_OPERATION_COUNT = BUTTON_PROPERTY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.LinkPropertyImpl <em>Link Property</em>}' class.
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ButtonLinkImpl <em>Button Link</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.LinkPropertyImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLinkProperty()
+	 * @see idm.bstrap.mm.bstrap.impl.ButtonLinkImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonLink()
 	 * @generated
 	 */
-	int LINK_PROPERTY = 40;
+	int BUTTON_LINK = 40;
 
 	/**
 	 * The feature id for the '<em><b>Color</b></em>' attribute.
@@ -1719,25 +1719,25 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_PROPERTY__COLOR = BUTTON_STYLE__COLOR;
+	int BUTTON_LINK__COLOR = BUTTON_STYLE__COLOR;
 
 	/**
-	 * The number of structural features of the '<em>Link Property</em>' class.
+	 * The number of structural features of the '<em>Button Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_PROPERTY_FEATURE_COUNT = BUTTON_STYLE_FEATURE_COUNT + 0;
+	int BUTTON_LINK_FEATURE_COUNT = BUTTON_STYLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>Link Property</em>' class.
+	 * The number of operations of the '<em>Button Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_PROPERTY_OPERATION_COUNT = BUTTON_STYLE_OPERATION_COUNT + 0;
+	int BUTTON_LINK_OPERATION_COUNT = BUTTON_STYLE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ButtonStateImpl <em>Button State</em>}' class.
@@ -1822,16 +1822,6 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int ACTIVE_OPERATION_COUNT = BUTTON_STATE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TextContainableImpl <em>Text Containable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.impl.TextContainableImpl
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTextContainable()
-	 * @generated
-	 */
-	int TEXT_CONTAINABLE = 66;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ButtonImpl <em>Button</em>}' class.
@@ -2137,13 +2127,22 @@ public interface BstrapPackage extends EPackage {
 	int NAVIGATION__NAVBAR = TEXT_PAGE_CONTENT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Links</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAVIGATION__LINKS = TEXT_PAGE_CONTENT_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Navigation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NAVIGATION_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 2;
+	int NAVIGATION_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Navigation</em>' class.
@@ -2481,13 +2480,22 @@ public interface BstrapPackage extends EPackage {
 	int LINK__TESTNESTEDELEMENTS = URL_BASED_LINK_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Linkproperties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__LINKPROPERTIES = URL_BASED_LINK_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = URL_BASED_LINK_FEATURE_COUNT + 1;
+	int LINK_FEATURE_COUNT = URL_BASED_LINK_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Link</em>' class.
@@ -2497,6 +2505,16 @@ public interface BstrapPackage extends EPackage {
 	 * @ordered
 	 */
 	int LINK_OPERATION_COUNT = URL_BASED_LINK_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TextContainableImpl <em>Text Containable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.TextContainableImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTextContainable()
+	 * @generated
+	 */
+	int TEXT_CONTAINABLE = 66;
 
 	/**
 	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
@@ -2720,6 +2738,62 @@ public interface BstrapPackage extends EPackage {
 	int BRAND_OPERATION_COUNT = NAV_BAR_PROPERTY_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.LinkPropertyImpl <em>Link Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.LinkPropertyImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLinkProperty()
+	 * @generated
+	 */
+	int LINK_PROPERTY = 70;
+
+	/**
+	 * The number of structural features of the '<em>Link Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_PROPERTY_FEATURE_COUNT = PROPERTY_CLASS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Link Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_PROPERTY_OPERATION_COUNT = PROPERTY_CLASS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.LinkBrandImpl <em>Link Brand</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.LinkBrandImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLinkBrand()
+	 * @generated
+	 */
+	int LINK_BRAND = 71;
+
+	/**
+	 * The number of structural features of the '<em>Link Brand</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_BRAND_FEATURE_COUNT = LINK_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Link Brand</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK_BRAND_OPERATION_COUNT = LINK_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2727,7 +2801,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getColor()
 	 * @generated
 	 */
-	int COLOR = 70;
+	int COLOR = 72;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Size <em>Size</em>}' enum.
@@ -2737,7 +2811,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 71;
+	int SIZE = 73;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Alignement <em>Alignement</em>}' enum.
@@ -2747,7 +2821,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlignement()
 	 * @generated
 	 */
-	int ALIGNEMENT = 72;
+	int ALIGNEMENT = 74;
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Page <em>Page</em>}'.
@@ -3370,14 +3444,14 @@ public interface BstrapPackage extends EPackage {
 	EAttribute getButtonSize_Size();
 
 	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.LinkProperty <em>Link Property</em>}'.
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ButtonLink <em>Button Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Link Property</em>'.
-	 * @see idm.bstrap.mm.bstrap.LinkProperty
+	 * @return the meta object for class '<em>Button Link</em>'.
+	 * @see idm.bstrap.mm.bstrap.ButtonLink
 	 * @generated
 	 */
-	EClass getLinkProperty();
+	EClass getButtonLink();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ButtonState <em>Button State</em>}'.
@@ -3588,6 +3662,17 @@ public interface BstrapPackage extends EPackage {
 	EReference getNavigation_Navbar();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Navigation#getLinks <em>Links</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Links</em>'.
+	 * @see idm.bstrap.mm.bstrap.Navigation#getLinks()
+	 * @see #getNavigation()
+	 * @generated
+	 */
+	EReference getNavigation_Links();
+
+	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Centered <em>Centered</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3698,6 +3783,17 @@ public interface BstrapPackage extends EPackage {
 	EClass getLink();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Link#getLinkproperties <em>Linkproperties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Linkproperties</em>'.
+	 * @see idm.bstrap.mm.bstrap.Link#getLinkproperties()
+	 * @see #getLink()
+	 * @generated
+	 */
+	EReference getLink_Linkproperties();
+
+	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Strong <em>Strong</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3767,6 +3863,26 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBrand();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.LinkProperty <em>Link Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Link Property</em>'.
+	 * @see idm.bstrap.mm.bstrap.LinkProperty
+	 * @generated
+	 */
+	EClass getLinkProperty();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.LinkBrand <em>Link Brand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Link Brand</em>'.
+	 * @see idm.bstrap.mm.bstrap.LinkBrand
+	 * @generated
+	 */
+	EClass getLinkBrand();
 
 	/**
 	 * Returns the meta object for enum '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}'.
@@ -4382,14 +4498,14 @@ public interface BstrapPackage extends EPackage {
 		EAttribute BUTTON_SIZE__SIZE = eINSTANCE.getButtonSize_Size();
 
 		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.LinkPropertyImpl <em>Link Property</em>}' class.
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ButtonLinkImpl <em>Button Link</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.impl.LinkPropertyImpl
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLinkProperty()
+		 * @see idm.bstrap.mm.bstrap.impl.ButtonLinkImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonLink()
 		 * @generated
 		 */
-		EClass LINK_PROPERTY = eINSTANCE.getLinkProperty();
+		EClass BUTTON_LINK = eINSTANCE.getButtonLink();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ButtonStateImpl <em>Button State</em>}' class.
@@ -4576,6 +4692,14 @@ public interface BstrapPackage extends EPackage {
 		EReference NAVIGATION__NAVBAR = eINSTANCE.getNavigation_Navbar();
 
 		/**
+		 * The meta object literal for the '<em><b>Links</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference NAVIGATION__LINKS = eINSTANCE.getNavigation_Links();
+
+		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.CenteredImpl <em>Centered</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4686,6 +4810,14 @@ public interface BstrapPackage extends EPackage {
 		EClass LINK = eINSTANCE.getLink();
 
 		/**
+		 * The meta object literal for the '<em><b>Linkproperties</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LINK__LINKPROPERTIES = eINSTANCE.getLink_Linkproperties();
+
+		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.StrongImpl <em>Strong</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4752,6 +4884,26 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BRAND = eINSTANCE.getBrand();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.LinkPropertyImpl <em>Link Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.LinkPropertyImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLinkProperty()
+		 * @generated
+		 */
+		EClass LINK_PROPERTY = eINSTANCE.getLinkProperty();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.LinkBrandImpl <em>Link Brand</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.LinkBrandImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getLinkBrand()
+		 * @generated
+		 */
+		EClass LINK_BRAND = eINSTANCE.getLinkBrand();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.

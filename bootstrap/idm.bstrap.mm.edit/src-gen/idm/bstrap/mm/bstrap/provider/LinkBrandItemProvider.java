@@ -11,19 +11,19 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.LinkProperty} object.
+ * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.LinkBrand} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class LinkPropertyItemProvider extends PropertyClassItemProvider {
+public class LinkBrandItemProvider extends LinkPropertyItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public LinkPropertyItemProvider(AdapterFactory adapterFactory) {
+	public LinkBrandItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,14 +43,14 @@ public class LinkPropertyItemProvider extends PropertyClassItemProvider {
 	}
 
 	/**
-	 * This returns LinkProperty.gif.
+	 * This returns LinkBrand.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/LinkProperty"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/LinkBrand"));
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class LinkPropertyItemProvider extends PropertyClassItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_LinkProperty_type");
+		return getString("_UI_LinkBrand_type");
 	}
 
 	/**

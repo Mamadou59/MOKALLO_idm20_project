@@ -57,10 +57,11 @@ public enum Color implements Enumerator {
 	 * @ordered
 	 */
 	SUCCESS(3, "SUCCESS", "SUCCESS"),
+
 	/**
 	 * The '<em><b>INFO</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #INFO_VALUE
 	 * @generated
 	 * @ordered
