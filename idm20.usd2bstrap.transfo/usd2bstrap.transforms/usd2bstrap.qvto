@@ -1,0 +1,20 @@
+import usdContent2BstrapPageContent;
+	
+
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+modeltype bstrapMM "strict" uses "http://www.example.org/bstrap";
+
+transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
+
+main() {
+	usd.rootObjects()[Page] -> map pageUsd2PageBstrap();
+}
+
+/**
+* Map a usd page element to bstrap Page element.
+*/
+mapping usdMM::Page::pageUsd2PageBstrap() : bstrapMM::Page {
+	name := self.name;
+	pagecontents += self.contents -> map constructPageContent();
+}
+
