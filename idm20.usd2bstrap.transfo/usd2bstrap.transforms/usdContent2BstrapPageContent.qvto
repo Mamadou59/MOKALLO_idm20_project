@@ -1,4 +1,6 @@
 import usdTextElement2bstrapTextElements;
+import propertiesParsers;
+	
 	
 
 modeltype usdMM "strict" uses "http://www.example.org/usd";
@@ -11,7 +13,7 @@ transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
 */
 abstract mapping usdMM::PageContent::pageContentUsd2PageContentBstrap() : bstrapMM::PageContent {
 	// TODO don't forgot parsing bstrap properties
-	//generalProperties += self.SOMETHINK
+	//generalProperties += self.
 }
 
 /**
@@ -20,7 +22,47 @@ abstract mapping usdMM::PageContent::pageContentUsd2PageContentBstrap() : bstrap
 abstract mapping usdMM::TextContainer::textContainerUsd2TextContainerBstrap() : bstrapMM::TextContainer 
 	inherits usdMM::PageContent::pageContentUsd2PageContentBstrap{
 		textelements += self.textElements -> map constructTextElement();
+		var textWithProps := self.textElements[usdMM::Text] -> selectOne(t|t.text.containsProperties());
+		if (textWithProps <> null){
+			color := textWithProps.text.findColor();
+			emphasis += textWithProps.text -> map disjunctsEmphasisProperties();
+			var props := textWithProps.text.substringBefore(")")+")";
+			if (props.find('background:') > 0){
+				generalProperties += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generalProperties += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generalProperties += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generalProperties += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generalProperties += prop.getColoredBorder();
+					};
+				}
+			}
+		};		
 }
+
+
+/**
+* A mapper wich map an usd Title element to bstrap Title element.
+*/
+mapping usdMM::Title::titleUsd2TitleBstrap() : bstrapMM::Title 
+	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap{
+		level := self.level;
+		displayproperties += self.textElements[usd::Text] -> selectOne(t|t.text.containsProperties()).text 
+								-> map disjunctsDisplayProperties();
+		
+}
+
 
 /**
 * A mapper wich map an usd Paragraph element to bstrap Paragraph element.
@@ -35,39 +77,47 @@ mapping usdMM::Paragraph::paragraphUsd2ParagraphBstrap() : bstrapMM::Paragraphe
 mapping usdMM::Navigation::navigationUsd2NavigationBstrap() : bstrapMM::Navigation {
 	links := object bstrapMM::Link{
 		linkproperties := object LinkBrand{};
-		url := self.url;
 		textnestedelements := object bstrapMM::Text{
-			text := self.textContent;
+			var t := self.textContent.substringAfter(")");
+			if(t = null){
+				t := self.textContent;
+			};
+			text := t;
 		};
 	};
+	// Mapping nav elements
 	listelement += self.groupedItems -> map constructListElement();
-	//TODO don't forgot general properties
 	navbar += self.type.parseNavProperties();
+	
+	if (self.textContent.containsProperties()){
+		var props := self.textContent.substringBefore(")")+")";
+		if (props <> null){
+			if (props.find('background:') > 0){
+				generalProperties += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generalProperties += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generalProperties += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generalProperties += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generalProperties += prop.getColoredBorder();
+					};
+				}
+			}
+		}
+	}
 	
 }
 
-/**
-* A mapper which map a string properties to specified bootstrap Nav properties
-*/
-mapping String::parseNavProperties() : Set(NavBarProperty) {
-	init {
-		result := Set{};
-		log(self);
-		if (self.find('vertical') > 0){
-			result += object Vertical{}
-		}
-		else if (self.find('basic') > 0){
-			result += object Basic{}
-		}
-		else if (self.find('centred') > 0){
-			result += object Centered{}
-		}
-		else if (self.find('brand') > 0 or self.find('navbar-brand') > 0){
-			log("test",self);
-			result += object Brand{}
-		}
-	}
-}
 
 /**
 * A mapper wich map an usd OrderedList element to bstrap OrderedList element.
@@ -106,22 +156,17 @@ mapping usdMM::ListItemElement::constructListItemElement() : bstrapMM::ListItemE
 	
 }
 
-/**
-* A mapper wich map an usd Title element to bstrap Title element.
-*/
-mapping usdMM::Title::titleUsd2TitleBstrap() : bstrapMM::Title 
-	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap{
-		level := self.level;
-		// TODO displayproperties.
-		
-}
 
-	
-	
 //mapping usdMM::Section::sectionUsd2ContainerBstrap() : bstrapMM::FixContainer
 //	inherits usdMM::PageContent::pageContentUsd2PageContentBstrap{
 //		pagecontents += self.contents -> map constructPageContent();
 //}
+
+/**
+* A mapper wich map an usd HorizontalLine element to bstrap HorizontalLine element.
+*/
+mapping usdMM::HorizontalLine::horizontalUsd2HorizontalBstrap() : bstrapMM::HorizontalLine {}
+
 
 /**
 * Map a usd PageContent element to bstrap PageContent element, 
@@ -130,7 +175,7 @@ mapping usdMM::Title::titleUsd2TitleBstrap() : bstrapMM::Title
 */
 mapping usdMM::PageContent::constructPageContent() : bstrapMM::PageContent 
 	disjuncts usdMM::Paragraph::paragraphUsd2ParagraphBstrap, usdMM::Title::titleUsd2TitleBstrap,
-				usdMM::OrderedList::orderedListUsd2OrderedListBstrap,usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap,
-				usdMM::Navigation::navigationUsd2NavigationBstrap{}
+				usdMM::OrderedList::orderedListUsd2OrderedListBstrap, usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap,
+				usdMM::Navigation::navigationUsd2NavigationBstrap, usdMM::HorizontalLine::horizontalUsd2HorizontalBstrap{}
 	
 	

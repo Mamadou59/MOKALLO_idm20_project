@@ -1,4 +1,5 @@
-import helpers;
+import propertiesParsers;
+	
 	
 
 modeltype usdMM "strict" uses "http://www.example.org/usd";
@@ -10,24 +11,31 @@ transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
 * A mapper which map an usd Text element to bstrap Text element.
 */
 mapping usdMM::Text::textUsd2TextBstrap() : bstrapMM::Text{	
-	text := self.text;
+	var textContent := self.text.getText();
+	if (self.container().metaClassName().=("Link")){
+		textContent := textContent.substringBefore("]").substringAfter("[");
+	};
+	text := textContent.trim();
+	
+	
 }
 
 /**
 * A mapper which map an usd Code element to bstrap code element.
 */
 mapping usdMM::Code::codeUsd2CodeBstrap() : bstrapMM::Code 
-	inherits usdMM::Text::textUsd2TextBstrap{
-	
-}
+	inherits usdMM::Text::textUsd2TextBstrap{}
 
 /**
 * An anstract mapper which map an usd UrlBasedLink element to bstrap UrlBasedLink element.
 */
-abstract mapping usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap() : bstrapMM::UrlBasedLink {
+abstract mapping usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap() : bstrapMM::UrlBasedLink 
+	inherits usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement
+	{
 	url := self.url;
 	title := self.title;
 }
+
 
 /**
 * An anstract mapper which map an usd CompositeTextElement element to bstrap TextNested element.
@@ -37,20 +45,52 @@ abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2TextNested
 }
 
 /**
+* An abstract mapper which map an usd Composite element to bstrap ContainableTextElement element.
+* And also parse a specified propertie to bootstrap properties
+*/
+abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement() : bstrapMM::ContainableTextElement {
+	var textWithProps := self.subTextElements[usdMM::Text] -> selectOne(t|t.text.containsProperties());
+	if (textWithProps <> null){
+		var props := textWithProps.text.substringBefore(")")+")";
+		if (props.find('background:') > 0){
+			generalProperties += props.backGroundWrapper();
+		};
+		if (props.find('margin:') > 0){
+			generalProperties += props.marginWrapper();
+		};
+		if (props.find('padding:') > 0){
+			generalProperties += props.paddingWrapper();
+		};
+		if (props.find('border:') > 0){
+			var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+			if(prop <> null){
+				prop := prop.trim();
+				if (prop.find("border") > 0){
+					generalProperties += prop.getBorder();
+				};
+				if (prop.find("borderColor") > 0){
+					generalProperties += prop.getColoredBorder();
+				};
+			}
+		}
+	};
+}
+
+/**
 * A mapper which map an usd Link element to bstrap Link element.
 * It also extends urlBasedLinkUsd2UrlBasedLinkBstrap and compositeTextElementUsd2TextNestedBstrap
 */
 mapping usdMM::Link::linkUsd2LinkBstrap() : bstrapMM::Link 
 	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap, 
-			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap{
-}
+			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap{}
 
 /**
 * A mapper which map an usd ItalicEmphasis element to bstrap Italic element.
 * It also extends compositeTextElementUsd2TextNestedBstrap.
 */
 mapping usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap() : bstrapMM::Italic 
-	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap{
+	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap,
+			usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement{
 }
 
 /**
@@ -58,7 +98,8 @@ mapping usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap() : bstrapMM::Italic
 * It also extends compositeTextElementUsd2TextNestedBstrap.
 */
 mapping usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap() : bstrapMM::Strong 
-	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap{}
+	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap,
+			usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement{}
 
 /**
 * A mapper which map an usd TextElement element to bstrap TextNestedElement.
@@ -71,89 +112,62 @@ mapping usdMM::TextElement::contructTextNestedElement() : bstrapMM::TextNestedEl
 
 /**
 * A mapper which map an usd Image element to bstrap Image element.
-* It also extends urlBasedLinkUsd2UrlBasedLinkBstrap.
+* Extends urlBasedLinkUsd2UrlBasedLinkBstrap and also parse specified image properties to bootstrap properties.
 */
 mapping usdMM::Image::imageUsd2ImageBstrap() : bstrapMM::Image 
-	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap{}
+	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap{
+		title := self.subTextElements[usdMM::Text] -> selectOne(text| true).text.getText();
+		var textWithProps := self.subTextElements[usdMM::Text] -> selectOne(t|t.text.containsProperties());
+		if (textWithProps <> null){
+			if (textWithProps.text.find("imageShape:") > 0){
+				imageproperties += textWithProps.text.getImageShape();
+			};
+			if (textWithProps.text.find("imageAligning:") > 0){
+				imageproperties += textWithProps.text.getImageAligning();
+			};
+			
+		}
+	}
 	
 /**
 * A mapper which map an usd Button element to bstrap Button element.
 * With specified properties. 
 */
 mapping usdMM::Button::buttonUsd2ButtonBstrap() : bstrapMM::Button{
+	
 	result.buttonproperties += self.type.parseButtonProperties();
-}
-
-/**
-* A mapper which map a string properties to specified button properties
-*/
-mapping String::parseButtonProperties() : Set(ButtonProperty) {
-	init {
-		result := Set{};
-		
-		if (self.find('btn-primary') > 0){
-			result += object ButtonStyle {
-				color := Color::PRIMARY;
+	var subText := self.subTextElements[usdMM::Text] -> selectOne(t|true);
+	textnestedelements += object bstrapMM::Text {
+		text := subText.text.substringAfter(']');
+	};
+	if (subText.text.containsProperties()){
+		var props := subText.text.substringBefore(")")+")";
+		if (props <> null){
+			if (props.find('background:') > 0){
+				generalProperties += props.backGroundWrapper();
 			};
+			if (props.find('margin:') > 0){
+				generalProperties += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generalProperties += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generalProperties += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generalProperties += prop.getColoredBorder();
+					};
+				}
+			}
 		}
-		else if (self.find("btn-info") > 0){
-			result += object ButtonStyle {
-				color := Color::INFO;
-			};
-		}
-		else if (self.find("btn-dark") > 0){
-			result += object ButtonStyle {
-				color := Color::DARK;
-			};
-		}
-		else if (self.find("btn-secondary") > 0){
-			result += object ButtonStyle {
-				color := Color::SECONDARY;
-			};
-		}
-		else if (self.find("btn-success") > 0){
-			result += object ButtonStyle {
-				color := Color::SUCCESS;
-			};
-		}
-		else if (self.find("btn-light") > 0 or self.find("btn-white") > 0){
-			result += object ButtonStyle {
-				color := Color::WHITE;
-			};
-		}
-		else if (self.find("btn-danger") > 0){
-			result += object ButtonStyle {
-				color := Color::DANGER;
-			};
-		}
-		else if (self.find("btn-warning") > 0){
-			result += object ButtonStyle {
-				color := Color::WARNING;
-			};
-		}
-		else if (self.find("btn-link") > 0){
-			result += object ButtonLink {
-			};
-		};
-		
-		if (self.find("active") > 0){
-			result += object Active{};
-		};
-		if (self.find("disabled") > 0){
-			result += object Disabled{};
-		};
-		if (self.find("btn-sm") > 0){
-			result += object ButtonSize{
-				size := Size::SMALL;
-			};
-		};
-		if (self.find("btn-lg") > 0){
-			result += object ButtonSize{
-				size := Size::LARGE;
-			};
-		}	
 	}
 }
+
 
 
 /**

@@ -1,0 +1,54 @@
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+modeltype bstrapMM "strict" uses "http://www.example.org/bstrap";
+
+transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
+
+/**
+* A query to find property value in to String 
+*/
+query String::findProperty() : String {
+	var prop := self;
+	var propBefore := prop.substringBefore(',');
+	if (propBefore <> null){
+		prop := propBefore;
+	};
+	return prop.toLower().trim();
+}
+
+/**
+* A query to find specific text in to String 
+*/
+query String::getText() : String {
+	
+	var textContent := self.substringAfter(')');
+	if (textContent = null){
+		textContent := self;
+	};
+	return textContent;
+}
+
+/**
+* A query to find property level value in to String 
+*/
+query String::getLevel() : Integer {
+	
+	if (self.find('level') > 0 ){
+		var prop := self.substringAfter('level:').findProperty();
+		return prop.toInteger();
+	};
+	return 0;
+}
+
+/**
+* A query to get specified tabAlignment.
+*/
+query usdMM::TableCellAlignement::getTabAlignment() : bstrapMM::Alignement {
+	var alignment := bstrap::Alignement::CENTER;
+	var name := self.toString();
+	switch {
+		case(name.=("LEFT")) alignment := bstrap::Alignement::LEFT;
+		case(name.=("RIGHT")) alignment := bstrap::Alignement::RIGHT;
+	};
+	return alignment;
+	
+}
