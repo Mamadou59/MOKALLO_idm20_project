@@ -4,7 +4,9 @@ modeltype usdMM "strict" uses "http://www.example.org/usd";
 transformation md2usd(in md : mdMM, out usd : usdMM); 
 	
 
-
+/**
+* An helper to get a navigation first link Element
+*/
 helper mdMM::Paragraph::getNavigationElement() : mdMM::Link {
 	var linkElements := self.subobjectsOfType(mdMM::Link);
 	linkElements -> forEach(l) {
@@ -16,12 +18,12 @@ helper mdMM::Paragraph::getNavigationElement() : mdMM::Link {
 }
 
 /**
-* A query to check if given link is button. 
+* An helper to check if given link is button. 
 */
 helper mdMM::Link::isLinkButton() : Boolean {
 	var textElem := self.allSubobjectsOfType(Text);
 	textElem -> forOne(i){
-		if (i.text.startsWith('[') and i.text.find("btn") > 0){
+		if ((i.text.startsWith('[') or (i.text.startsWith('(') and i.text.find(":") > 0)) and i.text.find("btn") > 0){
 			return true;
 		}else {
 			return false;
@@ -29,13 +31,21 @@ helper mdMM::Link::isLinkButton() : Boolean {
 	};
 	return false;	
 }
+
 /**
-* A query to check if given link is button. 
+* An helper to check if given String contains properties. 
+*/
+helper String::containsProperties() : Boolean {
+	return self.startsWith('(') and self.find(":") > 0;
+}
+
+/**
+* An helper to check if given link is button. 
 */
 helper mdMM::Link::isNavigationLink() : Boolean {
 	var textElem := self.allSubobjectsOfType(Text);
 	textElem -> forOne(i){
-		if (i.text.startsWith('[') and i.text.find("nav") > 0){
+		if ((i.text.startsWith('[') or (i.text.startsWith('(') and i.text.find(":") > 0)) and i.text.find("nav") > 0){
 			return true;
 		}else {
 			return false;
@@ -44,8 +54,10 @@ helper mdMM::Link::isNavigationLink() : Boolean {
 	return false;	
 }
 
+/**
+* An helper to check if given Paragraph contains Link reference Navigation. 
+*/
 helper mdMM::Paragraph::isThereNavigationElement() : Boolean {
-
 	var linkElements := self.subobjectsOfType(mdMM::Link);
 	linkElements -> forEach(link) {
 		if(link.isNavigationLink()) {
@@ -73,4 +85,18 @@ helper mdMM::Paragraph::notSectionRef() : Boolean {
 		return (elem.text.toLower() <> "start section");
 	};
 	return true;
+}
+
+/**
+* An helper to get specified tabCellAlignment.
+*/
+helper mdMM::TableCellAlignement::getTabCellAlignment() : usdMM::TableCellAlignement {
+	var alignment := usdMM::TableCellAlignement::CENTER;
+	var name := self.toString();
+	switch {
+		case(name.=("LEFT")) alignment := usdMM::TableCellAlignement::LEFT;
+		case(name.=("RIGHT")) alignment := usdMM::TableCellAlignement::RIGHT;
+	};
+	return alignment;
+	
 }

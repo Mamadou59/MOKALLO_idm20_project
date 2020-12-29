@@ -26,7 +26,6 @@ mapping mdMM::Paragraph::paragraphMd2ParagraphUsdIfContentNavigationLink() : usd
 		var navLink := self.getNavigationElement(); 
 		textContent := navLink.getTextContent();
 		type := navLink.getType();
-		url := navLink.url;
 		groupedItems := object usdMM::UnorderedList {
 			items += linkElements -> map linkMd2NavElementUsd();
 		};
@@ -182,9 +181,7 @@ mapping mdMM::TableRow::tableRowMd2TableRowUsd() : usdMM::TableRow {
 */
 mapping mdMM::TableCell::tableCellMd2TableCellUsd() : usdMM::TableCell 
 	inherits mdMM::TextContainer::textContainerMd2TextContainerUsd {
-	// This error occured 
-	// The type 'md2usd::Set(TableCellAlignement)' does not conform to the type 'usd::TableCellAlignement' of the property 'alignement'
-	// alignement := self.alignement;
+	alignement := self.alignement.getTabCellAlignment();
 	span := self.span;}
 		
 /**

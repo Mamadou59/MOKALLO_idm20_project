@@ -1,3 +1,5 @@
+import helpers;
+	
 
 modeltype mdMM "strict" uses "http://www.example.org/simplemarkdown";
 modeltype usdMM "strict" uses "http://www.example.org/usd";
@@ -23,7 +25,12 @@ query mdMM::Link::getType() : String {
 query mdMM::Link::getTextContent() : String {
 	var textElem := self.allSubobjectsOfType(Text);
 	textElem -> forOne(i){
-		return i.text.substringAfter(']');
+		var textContent := i.text.substringAfter(']');
+		if ((self.isLinkButton() or self.isNavigationLink() ) and i.text.containsProperties()){
+			var prop := "("+i.text.substringBefore(')').substringAfter('(')+")";
+			textContent:= prop.+(textContent);
+		};
+		return textContent;
 	};
 	return "";
 }

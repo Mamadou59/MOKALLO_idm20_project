@@ -2,18 +2,20 @@ import helpers;
 import queries;
 	
 	
-
 modeltype mdMM "strict" uses "http://www.example.org/simplemarkdown";
 modeltype usdMM "strict" uses "http://www.example.org/usd";
 transformation md2usd(in md : mdMM, out usd : usdMM); 
 	
 
+/**
+* A mapper to map link md to ListItem usd which always contains link
+**/
 mapping mdMM::Link::linkMd2NavElementUsd() : usdMM::ListItem 
 	when {not self.isNavigationLink()}{
 	elements := object usdMM::Link {
 		url := self.url;
 		title := self.title;
-	} 
+	} 	
 }
 
 
@@ -88,26 +90,24 @@ mapping mdMM::Link::linkMd2LinkUsd() : usdMM::Link
 
 // Start transformation from md link to usd button
 
-abstract mapping mdMM::Link::linkMd2ClickableElement() : usdMM::ClickableElement 
-	inherits mdMM::TextElement::textElementMd2TextElementUsd 
-	when {self.isLinkButton() or self.isNavigationLink()} {
-		type := self.getType();
-		textContent := self.getTextContent();
-		url := self.url;
-	}
 
 /**
 * Mapper from markdown Link element to usd button element 
 * wich extends textElementMd2TextElementUsd mapper.
 */
 mapping mdMM::Link::linkButtonMd2ButtonUsd() : usdMM::Button 
-	inherits mdMM::Link::linkMd2ClickableElement 
+	inherits mdMM::CompositeTextElement::compositeTextElementMd2CompositeTextElementUsd
 	when {self.isLinkButton() and not self.isNavigationLink()} {
+		type := self.getType();
 	}
 	
+/**
+* Mapper from markdown Link element to usd Navigation element 
+*/	
 mapping mdMM::Link::linkMd2NavigationUsd() : usdMM::Navigation 
-	inherits mdMM::Link::linkMd2ClickableElement 
 	when {self.isNavigationLink() and not self.isLinkButton()}{
+	type := self.getType();
+	textContent := self.getTextContent();
 }
 
 /**
@@ -131,21 +131,6 @@ mapping mdMM::LinkWithRef::linkWithRefMd2LinkUsd() : usdMM::Link
 */
 mapping mdMM::Image::imageMd2ImageUsd() : usdMM::Image 
 	inherits mdMM::UrlBasedLink::urlBasedLinkMd2UrlBasedLinkUsd {}
-
-/**
-* A query to check if given link is button. 
-*/
-query mdMM::Link::isNavigationLink() : Boolean {
-	var textElem := self.allSubobjectsOfType(Text);
-	textElem -> forOne(i){
-		if (i.text.startsWith('[') and i.text.find("nav") > 0){
-			return true;
-		}else {
-			return false;
-		}
-	};
-	return false;	
-}
 
 
 /**
