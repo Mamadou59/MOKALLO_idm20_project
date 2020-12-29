@@ -1,0 +1,352 @@
+[comment encoding = UTF-8 /]
+[module handleSpecificProperties('http://www.example.org/bstrap')]
+[import idm::bootstraptransfo::bstrap::gen::java::request::defineWebSiteConcepts /]
+
+[comment]+++++++++++ Main Button Properties   ++++++++++++++++++++++++++++++[/comment]
+
+[**
+ * Handle  ButtonProperty (ButtonStyle,ButtonSize,ButtonState)
+ * @param aButtonProperty
+ */]
+[template public getButtonProperty(aButtonProperty : ButtonProperty)]
+[self.declareComment()/]
+[/template]
+
+[**
+ * Handle  ButtonProperty (ButtonSize)
+ * @param aButtonProperty
+ */]
+[template public getButtonProperty(aButtonProperty : ButtonSize)]
+ btn-[self.size.getSize()/]
+[/template]
+[**
+ * Handle  ButtonProperty (ButtonState)
+ * @param aButtonProperty
+ */]
+[template public getButtonProperty(aButtonProperty : ButtonState)]
+ [self.getButtonState()/]
+[/template]
+[**
+ * Handle  ButtonProperty (ButtonStyle)
+ * @param aButtonProperty
+ */]
+[template public getButtonProperty(aButtonProperty : ButtonStyle)]
+ [self.getButtonStyle()/]
+[/template]
+[template public getButtonStyleProperty(aButtonStyle : ButtonStyle)]
+ [self.getButtonStyle()/]
+[/template] 
+[template public getButtonStyleProperty(aButtonStyle : ButtonLink)]
+ btn-link
+[/template] 
+
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+[comment]+++++++++++  Button State   ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle  ButtonState (Active,Disabled)
+ * @param aButtonState
+ */]
+[template private getButtonState(aButtonState : ButtonState)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle  ButtonState (Active)
+ * @param aButtonState
+ */]
+[template private getButtonState(aButtonState : Active)]
+[self.getClassName()/]"
+[/template]
+[**
+ * Handle  ButtonState (Disabled)
+ * @param aButtonState
+ */]
+[template private getButtonState(aButtonState : Disabled)]
+" [self.getClassName()/]
+[/template]
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+[comment]+++++++++++  Button Style   ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle  ButtonStyle (link,...)
+ * @param aButtonStyle
+ */]
+[template private getButtonStyle(aButtonStyle : ButtonStyle)]
+btn-[self.color.getColor() /]
+[/template]
+[**
+ * Handle  ButtonStyle (Link)
+ * @param aButtonStyle
+ */]
+[template private getButtonStyle(aButtonStyle : Link)]
+btn-[self.getClassName()/]"
+[/template]
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+
+[comment]+++++++++++Main Images properties ++++++++++++++++++++++++++++++[/comment]
+
+[**
+ * Handle  ImageProperty (ImageShape,ImageAligning)
+ * @param aImageProperty
+ */]
+[template public getImageProperty(anImageProperty : ImageProperty)]
+ [self.declareComment()/]
+[/template]
+
+[**
+ * Handle  ImageProperty (ImageShape)
+ * @param anImageProperty
+ */]
+[template public getImageProperty(anImageProperty : ImageShape)]
+ [self.getImageShape()/]
+[/template]
+[**
+ * Handle  ImageProperty (ImageAligning)
+ * @param anImageProperty
+ */]
+[template public getImageProperty(anImageProperty : ImageAligning)]
+[self.getImageAligning()/]
+[/template]
+
+ 
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+[comment]+++++++++++ Images Shape ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle  ImageShape (Rounded,Circle,Thumbail)
+ * @param anImageShape
+ */]
+[template private getImageShape(aImageProperty : ImageShape)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle  ImageShape (Rounded)
+ * @param anImageShape
+ */]
+[template private getImageShape(aImageProperty : Rounded)]
+[self.getClassName()/]
+[/template]
+[**
+ * Handle  ImageShape (Circle)
+ * @param anImageShape
+ */]
+[template private getImageShape(aImageProperty : Circle)]
+rounded-[self.getClassName()/]
+[/template]
+[**
+ * Handle  ImageShape (Thumbail)
+ * @param anImageShape
+ */]
+[template private getImageShape(aImageProperty : Thumbnail)]
+img-[self.getClassName()/]
+[/template]
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+[comment]+++++++++++ Images Aligning ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle  ImageAligning (Float,Center,Responsive)
+ * @param anImageAligning
+ */]
+[template private getImageAligning(anImageAligning : ImageAligning)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle  ImageAligning (Float)
+ * @param anImageAligning
+ */]
+[template private getImageAligning(anImageAligning : Float)]
+ [self.getClassName()/]-[self.alignement.getAlignement()/]
+[/template]
+[**
+ * Handle  ImageAligning (Center)
+ * @param anImageAligning
+ */]
+[template private getImageAligning(anImageAligning : Center)]
+ mx-auto d-block
+[/template]
+[**
+ * Handle  ImageAligning (Responsive)
+ * @param anImageAligning
+ */]
+[template private getImageAligning(anImageAligning : Responsive)]
+ img-fluid
+[/template]
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+[comment]+++++++++++Main Display properties ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle  DisplayProperty (Display1,Display2,...,Display4)
+ * @param aDisplayProperty
+ */]
+[template public getDisplayProperties(aDisplayProperty : DisplayProperty)]
+ [self.getDisplayProperty()/]
+[/template]
+[**
+ * Handle  DisplayProperty (Display1)
+ * @param aDisplayProperty
+ */]
+[template private getDisplayProperty(aDisplayProperty : DisplayProperty)]
+[/template]
+[template private getDisplayProperty(aDisplayProperty : Display1)]
+display-1
+[/template]
+[template private getDisplayProperty(aDisplayProperty : Display2)]
+display-2
+[/template]
+[template private getDisplayProperty(aDisplayProperty : Display3)]
+display-3
+[/template]
+[template private getDisplayProperty(aDisplayProperty : Display4)]
+display-4
+[/template]
+
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+[comment]+++++++++++Main Color properties ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle  ColorProperty (Primary,Secondary,...)
+ * @param aColor
+ */]
+[template public getColorProperty(aColor : Color)]
+ text-[self.getColor()/]
+[/template]
+
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+[comment]+++++++++++Main Emphasis properties ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle  EmphasisProperty (italic,Bold,)
+ * @param anEmphasis
+ */]
+[template public getEmphasisProperty(anEmphasis : Emphasis)]
+[self.declareComment()/]
+[/template]
+[template public getEmphasisProperty(anEmphasis : Italic)]
+ font-italic
+[/template]
+[template public getEmphasisProperty(anEmphasis : Bold)]
+ font-weight-bold
+[/template]
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+[comment]+++++++++++Main List properties (ul,ol) ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle  ListProperty when it is in NavBar
+ * @param aListProperty
+ */]
+[template public getNavigationBarClass(aListElement : ListElement) ? (self.eContainer().oclIsKindOf(Navigation))]
+ navbar-nav
+[/template]
+[**
+ *  Handle  ListProperty (BasicList,StateList,HorizontalList)
+ * 	@param aListProperty
+*/]
+[template public getListProperty(aListProperty : ListProperty)]
+ [self.declareComment()/]
+[/template]
+[template public getListProperty(aListProperty : BasicList)]
+ [self.getListPropertyClassName()/]
+[/template]
+[template public getListProperty(aListProperty : HorizontalList)]
+ [self.getListPropertyClassName()/] [self.getListPropertyClassName()/]-horizontal
+[/template]
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+[comment]+++++++++++Main NavBar properties (Basic,Vertical,Centered ++++++++++++++++++++++++++++++[/comment]
+[**
+ *  Handle  NavProperty (Basic,Vertical,Centered)
+ * 	@param aNavBarProperty
+*/]
+[template public getNaVBarProperty(aNavBarProperty : NavBarProperty)]
+ [self.declareComment()/]
+[/template]
+[template public getNaVBarProperty(aNavBarProperty : Basic)]
+ navbar navbar-expand-md
+[/template]
+[template public getNaVBarProperty(aNavBarProperty : Vertical)]
+ navbar
+[/template]
+[template public getNaVBarProperty(aNavBarProperty : Centered)]
+ navbar navbar-expand-md justify-content-center
+[/template]
+[template public getNaVBarProperty(aNavBarProperty : Brand)]
+ navbar navbar-expand-sm bg-dark navbar-dark
+[/template]
+
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+
+[comment]+++++++++++Main Link Brand () ++++++++++++++++++++++++++++++[/comment]
+[**
+ *  Handle  LinkProperty (Brand)
+ * 	@param aLinkProperty
+*/]
+[template public getLinkBrand(aLinkProperty : LinkProperty)]
+ navbar-brand
+[/template]
+[template public getLinkBrand(aLinkBrand : LinkBrand)]
+ navbar-brand
+[/template]
+
+ 
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+
+[comment]+++++++++++Main Table Property  ++++++++++++++++++++++++++++++[/comment]
+[**
+ *  Handle  TableProperty (BasicTable,StripedRows,DarkTable,HoverRows,BorderedTable)
+ * 	@param aLinkProperty
+*/]
+[template public getTableProperty(aTableProperty : TableProperty)]
+[self.declareComment()/]
+[/template]
+[template public getTableProperty(aTableProperty : BasicTable)]
+ table
+[/template]
+[template public getTableProperty(aTableProperty : StripedRows)]
+ table table-striped
+[/template]
+
+[template public getTableProperty(aTableProperty : DarkTable)]
+ table table-dark
+[/template]
+[template public getTableProperty(aTableProperty : HoverRows)]
+ table table-hover
+[/template]
+[template public getTableProperty(aTableProperty : BorderedTable)]
+ table table-bordered
+[/template]
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

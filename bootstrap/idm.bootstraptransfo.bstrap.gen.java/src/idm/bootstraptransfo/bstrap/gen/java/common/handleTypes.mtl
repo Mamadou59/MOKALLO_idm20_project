@@ -1,0 +1,238 @@
+[comment encoding = UTF-8 /]
+[module handleTypes('http://www.example.org/bstrap')]
+[import idm::bootstraptransfo::bstrap::gen::java::common::handleGeneralProperties /]
+[import idm::bootstraptransfo::bstrap::gen::java::common::handleSpecificProperties /]
+[import idm::bootstraptransfo::bstrap::gen::java::request::defineWebSiteConcepts/]
+
+
+[comment]+++++++++++++++TextContainer ++++++++++++++[/comment]
+[**
+ * handle TextContainer (paragraph,Title,TableCell)  
+ */]
+[template public generateTextContainer(aTextContainer : TextContainer)]
+[self.declareComment()/]
+[/template]
+[**
+ * handle TextContainer (paragraph)  
+ */]
+[template public generateTextContainer(aTextContainer : Paragraphe){ aBalise : String= 'p'; }]
+[comment]gèrer les classes[/comment]
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.color.getColorProperty()/] [self.emphasis.getEmphasisProperty()/]">[self.textelements.generateTextElements()/][aBalise.getCloseBaliseName()/]
+[/template]
+
+[**
+ * handle TextContainer (Title)  
+ */]
+[template public generateTextContainer(aTextContainer : Title) { aBalise : String = 'h'+ self.level; }]
+[comment]gèrer les classes[/comment]
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.color.getColorProperty()/] [self.displayproperties.getDisplayProperties()/] [self.emphasis.getEmphasisProperty()/]">[self.textelements.generateTextElements()/][getCloseBaliseName(aBalise)/]
+[/template]
+[**
+ * handle TextContainer (TableCell)  
+ */]
+[template public generateTextContainer(aTextContainer : TableCell) { aBalise : String = self.getTableCellName(); }]
+[comment]gèrer les classes[/comment]
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.color.getColorProperty()/] [self.emphasis.getEmphasisProperty()/] [self.alignment.getAlignement()/] " colspan="[self.span/]">[self.textelements.generateTextElements()/][getCloseBaliseName(aBalise)/]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+
+
+[comment]+++++++++++++++TextElement ++++++++++++++[/comment]
+[**
+ * handle TextElement (text and containableTextElements)  
+ */]
+
+[template public generateTextElements(aTextElements : TextElements)]
+[self.declareComment()/]
+[/template]
+[**
+ * handle TextElement (text)  
+ */]
+
+[template public generateTextElements(aTextElements : Text)]
+[self.text/]
+[/template]
+[template public generateTextElements(aTextElements : Code) { aBalise : String = 'code'; }]
+<[aBalise/]>[self.text/][aBalise.getCloseBaliseName()/]
+[/template]
+[**
+ * handle TextElement ( containableTextElements)  
+ */]
+
+[template public generateTextElements(aTextElements : ContainableTextElement)]
+[self.generateContainableTextElement()/]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++ContainableTextElement++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle code generation of a containableTextElement in a Page  (TextContainable,CompositeTextElement,Button)
+ */]
+[template public generateContainableTextElement(aContainableTextElement : ContainableTextElement)]
+[self.declareComment()/]
+[/template]
+[template public generateContainableTextElement(aContainableTextElement : TextContainable) ]
+[self.generateTextContainable()/]
+[/template]
+
+[**
+ * Handle code generation of a containableTextElement in a Page  (Button)
+ */]
+
+[template public generateContainableTextElement(aTextContainable : Button) { aBalise : String = self.getClassName(); }]
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] btn [self.buttonproperties.getButtonProperty()/]"> [self.textnestedelements.generateTestnestedElement()/]
+[getCloseBaliseName(aBalise)/]
+[/template]
+
+[**
+ * Handle code generation of a containableTextElement in a Page  (CompositeTextElement)
+ */]
+[template public generateContainableTextElement(aContainableTextElement : CompositeTextElement)]
+[self.generateCompositeTextElement()/]
+[/template]
+[comment]-------------------- ----------------------------------[/comment]
+
+
+[comment]+++++++++++CompositeTextElement++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle code generation of a CompositeTextElement in a Page  (UrlBasedLink,...)
+ */]
+[template public generateCompositeTextElement(aCompositeTextElement : CompositeTextElement)]
+[self.declareComment()/]
+[/template]
+
+[**
+ * Handle code generation of a UrlBasedLink in a Page  (UrlBasedLink)
+ */]
+[template public generateCompositeTextElement(aCompositeTextElement : UrlBasedLink)]
+[self.generateUrlBasedLink()/]
+[/template]
+[comment]-------------------- ----------------------------------[/comment]
+
+
+
+[comment]+++++++++++CompositeTextElement++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle code generation of a UrlBasedLink in a Page  (Image,Link)
+ */]
+[template public generateUrlBasedLink(aUrlBasedLink : UrlBasedLink)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle code generation of a UrlBasedLink in a Page  (Image)
+ */]
+[template public generateUrlBasedLink(aUrlBasedLink : Image) { aBalise :String = 'img'; }]
+<[aBalise/] src="[self.url/]" alt= "[self.title/]" title= "[self.title/]" [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [aUrlBasedLink.imageproperties.getImageProperty()/]"/>
+[/template]
+[**
+ * Handle code generation of a UrlBasedLink in a Page  (Link)
+ */]
+[template public generateUrlBasedLink(aUrlBasedLink : Link) { aBalise :String = 'a'; }]
+<[aBalise/] href="[self.url/]"  title= "[self.title/]"[self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.linkproperties.getLinkBrand()/]"> [aUrlBasedLink.textnestedelements.generateTestnestedElement()/] [aBalise.getCloseBaliseName()/]
+[/template]
+
+
+[comment]-------------------- ----------------------------------[/comment]
+
+
+
+
+[comment]+++++++++++++++TextContaible ++++++++++++++[/comment]
+[**
+ * handle TextContainer (Strong,Italic)  
+ */]
+[template public generateTextContainable(aTextContainable : TextContainable)]
+[self.declareComment()/]
+[/template]
+[template public generateTextContainable(aTextContainable : Strong) { aBaliseName : String = 'Strong'; }]
+<[aBaliseName/] [self.declareClass()/] "[self.generalProperties.getGeneralClass()/] "> [self.textnestedelements.generateTestnestedElement()/] [aBaliseName.getCloseBaliseName()/]
+[/template] 
+
+[template public generateTextContainable(aTextContainable : Italic) { aBaliseName : String = 'em'; }]
+<[aBaliseName/] [self.declareClass()/] "[self.generalProperties.getGeneralClass()/] "> [self.textnestedelements.generateTestnestedElement()/] [aBaliseName.getCloseBaliseName()/]
+[/template] 
+
+[comment]------------------------------------------------------[/comment]
+
+
+
+
+
+
+
+
+
+[comment]+++++++++++++++ Main TextNestedElement ++++++++++++++[/comment]
+[**
+ * handle TextNestedElement (Text,TextContainable)  
+ */]
+
+[template public generateTestnestedElement(aTextNestedElement : TextNestedElement)]
+[self.declareComment()/]
+[/template]
+[template public generateTestnestedElement(aTestNested : Text)]
+[self.generateTextElements()/]
+[/template]
+[template public generateTestnestedElement(aTestNested : TextContainable)]
+[self.generateTextElements()/]
+[/template]
+
+[comment]------------------------------------------------------[/comment]
+
+
+
+[comment]+++++++++++++++ Main BlockQuote ++++++++++++++[/comment]
+[**
+ * handle BlockQuote (BlockQuote)  
+ */]
+
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++++++ Main CodeBlock ++++++++++++++[/comment]
+[**
+ * handle CodeBlock (CodeBlock)  
+ */]
+[template public generateCodeBlockElement(aCodeBlock : CodeBlock) { aBaliseName : String = 'pre'; }]
+<[aBaliseName/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/]" >
+[self.codelines.generateCodeLineElement()/]
+[aBaliseName.getCloseBaliseName()/]
+[/template]
+
+[comment]------------------------------------------------------[/comment]
+
+
+
+
+[comment]+++++++++++++++ Main CodeLine ++++++++++++++[/comment]
+[**
+ * handle CodeBlock (CodeLine)  
+ */]
+[template public generateCodeLineElement(aCodeLine : CodeLine) ]
+[self.content/]
+
+[/template]
+[template public generateHorizontalLine(anHorizontalLine : HorizontalLine) { aBalise : String = 'hr'; }]
+<[aBalise/]/>
+[/template]
+
+[comment]------------------------------------------------------[/comment]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
