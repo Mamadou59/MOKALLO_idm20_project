@@ -337,7 +337,7 @@ public class UsdSwitch<T> extends Switch<T> {
 			Button button = (Button) theEObject;
 			T result = caseButton(button);
 			if (result == null)
-				result = caseClickableElement(button);
+				result = caseCompositeTextElement(button);
 			if (result == null)
 				result = caseContainableTextElement(button);
 			if (result == null)
@@ -354,8 +354,6 @@ public class UsdSwitch<T> extends Switch<T> {
 			Navigation navigation = (Navigation) theEObject;
 			T result = caseNavigation(navigation);
 			if (result == null)
-				result = caseClickableElement(navigation);
-			if (result == null)
 				result = caseContainableTextElement(navigation);
 			if (result == null)
 				result = casePageContent(navigation);
@@ -363,21 +361,6 @@ public class UsdSwitch<T> extends Switch<T> {
 				result = caseTextElement(navigation);
 			if (result == null)
 				result = caseListItemElement(navigation);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case UsdPackage.CLICKABLE_ELEMENT: {
-			ClickableElement clickableElement = (ClickableElement) theEObject;
-			T result = caseClickableElement(clickableElement);
-			if (result == null)
-				result = caseContainableTextElement(clickableElement);
-			if (result == null)
-				result = casePageContent(clickableElement);
-			if (result == null)
-				result = caseTextElement(clickableElement);
-			if (result == null)
-				result = caseListItemElement(clickableElement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -842,21 +825,6 @@ public class UsdSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNavigation(Navigation object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Clickable Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Clickable Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseClickableElement(ClickableElement object) {
 		return null;
 	}
 
