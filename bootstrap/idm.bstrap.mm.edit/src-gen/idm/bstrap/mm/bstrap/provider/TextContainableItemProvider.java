@@ -61,7 +61,7 @@ public class TextContainableItemProvider extends ContainableTextElementItemProvi
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS);
+			childrenFeatures.add(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -123,7 +123,7 @@ public class TextContainableItemProvider extends ContainableTextElementItemProvi
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TextContainable.class)) {
-		case BstrapPackage.TEXT_CONTAINABLE__TESTNESTEDELEMENTS:
+		case BstrapPackage.TEXT_CONTAINABLE__TEXTNESTEDELEMENTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -141,16 +141,16 @@ public class TextContainableItemProvider extends ContainableTextElementItemProvi
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createText()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createCode()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createStrong()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createItalic()));
 	}
 

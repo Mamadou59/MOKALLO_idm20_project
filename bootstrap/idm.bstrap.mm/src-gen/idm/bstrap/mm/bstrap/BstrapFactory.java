@@ -427,6 +427,141 @@ public interface BstrapFactory extends EFactory {
 	LinkBrand createLinkBrand();
 
 	/**
+	 * Returns a new object of class '<em>Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table</em>'.
+	 * @generated
+	 */
+	Table createTable();
+
+	/**
+	 * Returns a new object of class '<em>Thead</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Thead</em>'.
+	 * @generated
+	 */
+	Thead createThead();
+
+	/**
+	 * Returns a new object of class '<em>Tbody</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tbody</em>'.
+	 * @generated
+	 */
+	Tbody createTbody();
+
+	/**
+	 * Returns a new object of class '<em>Tfoot</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tfoot</em>'.
+	 * @generated
+	 */
+	Tfoot createTfoot();
+
+	/**
+	 * Returns a new object of class '<em>Table Row</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table Row</em>'.
+	 * @generated
+	 */
+	TableRow createTableRow();
+
+	/**
+	 * Returns a new object of class '<em>Table Cell</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table Cell</em>'.
+	 * @generated
+	 */
+	TableCell createTableCell();
+
+	/**
+	 * Returns a new object of class '<em>Basic Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Basic Table</em>'.
+	 * @generated
+	 */
+	BasicTable createBasicTable();
+
+	/**
+	 * Returns a new object of class '<em>Striped Rows</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Striped Rows</em>'.
+	 * @generated
+	 */
+	StripedRows createStripedRows();
+
+	/**
+	 * Returns a new object of class '<em>Bordered Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bordered Table</em>'.
+	 * @generated
+	 */
+	BorderedTable createBorderedTable();
+
+	/**
+	 * Returns a new object of class '<em>Hover Rows</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Hover Rows</em>'.
+	 * @generated
+	 */
+	HoverRows createHoverRows();
+
+	/**
+	 * Returns a new object of class '<em>Dark Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dark Table</em>'.
+	 * @generated
+	 */
+	DarkTable createDarkTable();
+
+	/**
+	 * Returns a new object of class '<em>Block Quote</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Block Quote</em>'.
+	 * @generated
+	 */
+	BlockQuote createBlockQuote();
+
+	/**
+	 * Returns a new object of class '<em>Code Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Code Block</em>'.
+	 * @generated
+	 */
+	CodeBlock createCodeBlock();
+
+	/**
+	 * Returns a new object of class '<em>Code Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Code Line</em>'.
+	 * @generated
+	 */
+	CodeLine createCodeLine();
+
+	/**
+	 * Returns a new object of class '<em>Horizontal Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Horizontal Line</em>'.
+	 * @generated
+	 */
+	HorizontalLine createHorizontalLine();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

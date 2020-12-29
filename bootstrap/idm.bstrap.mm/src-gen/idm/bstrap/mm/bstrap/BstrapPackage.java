@@ -1843,13 +1843,13 @@ public interface BstrapPackage extends EPackage {
 	int BUTTON__GENERAL_PROPERTIES = CONTAINABLE_TEXT_ELEMENT__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Textnestedelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BUTTON__TESTNESTEDELEMENTS = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int BUTTON__TEXTNESTEDELEMENTS = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Buttonproperties</b></em>' containment reference list.
@@ -2471,13 +2471,13 @@ public interface BstrapPackage extends EPackage {
 	int LINK__TITLE = URL_BASED_LINK__TITLE;
 
 	/**
-	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Textnestedelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK__TESTNESTEDELEMENTS = URL_BASED_LINK_FEATURE_COUNT + 0;
+	int LINK__TEXTNESTEDELEMENTS = URL_BASED_LINK_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Linkproperties</b></em>' containment reference list.
@@ -2526,13 +2526,13 @@ public interface BstrapPackage extends EPackage {
 	int TEXT_CONTAINABLE__GENERAL_PROPERTIES = CONTAINABLE_TEXT_ELEMENT__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Textnestedelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_CONTAINABLE__TESTNESTEDELEMENTS = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
+	int TEXT_CONTAINABLE__TEXTNESTEDELEMENTS = CONTAINABLE_TEXT_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Text Containable</em>' class.
@@ -2572,13 +2572,13 @@ public interface BstrapPackage extends EPackage {
 	int STRONG__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Textnestedelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRONG__TESTNESTEDELEMENTS = TEXT_CONTAINABLE__TESTNESTEDELEMENTS;
+	int STRONG__TEXTNESTEDELEMENTS = TEXT_CONTAINABLE__TEXTNESTEDELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Strong</em>' class.
@@ -2618,13 +2618,13 @@ public interface BstrapPackage extends EPackage {
 	int ITALIC__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Textnestedelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ITALIC__TESTNESTEDELEMENTS = TEXT_CONTAINABLE__TESTNESTEDELEMENTS;
+	int ITALIC__TEXTNESTEDELEMENTS = TEXT_CONTAINABLE__TEXTNESTEDELEMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Italic</em>' class.
@@ -2655,13 +2655,13 @@ public interface BstrapPackage extends EPackage {
 	int TEXT_NESTED = 67;
 
 	/**
-	 * The feature id for the '<em><b>Testnestedelements</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Textnestedelements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_NESTED__TESTNESTEDELEMENTS = 0;
+	int TEXT_NESTED__TEXTNESTEDELEMENTS = 0;
 
 	/**
 	 * The number of structural features of the '<em>Text Nested</em>' class.
@@ -2682,32 +2682,32 @@ public interface BstrapPackage extends EPackage {
 	int TEXT_NESTED_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.TestNestedElement <em>Test Nested Element</em>}' class.
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.TextNestedElement <em>Text Nested Element</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see idm.bstrap.mm.bstrap.TestNestedElement
-	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTestNestedElement()
+	 * @see idm.bstrap.mm.bstrap.TextNestedElement
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTextNestedElement()
 	 * @generated
 	 */
-	int TEST_NESTED_ELEMENT = 68;
+	int TEXT_NESTED_ELEMENT = 68;
 
 	/**
-	 * The number of structural features of the '<em>Test Nested Element</em>' class.
+	 * The number of structural features of the '<em>Text Nested Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEST_NESTED_ELEMENT_FEATURE_COUNT = 0;
+	int TEXT_NESTED_ELEMENT_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Test Nested Element</em>' class.
+	 * The number of operations of the '<em>Text Nested Element</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEST_NESTED_ELEMENT_OPERATION_COUNT = 0;
+	int TEXT_NESTED_ELEMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BrandImpl <em>Brand</em>}' class.
@@ -2794,6 +2794,707 @@ public interface BstrapPackage extends EPackage {
 	int LINK_BRAND_OPERATION_COUNT = LINK_PROPERTY_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TableImpl <em>Table</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.TableImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTable()
+	 * @generated
+	 */
+	int TABLE = 72;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__GENERAL_PROPERTIES = TEXT_PAGE_CONTENT__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Tablesections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__TABLESECTIONS = TEXT_PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tableproperties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__TABLEPROPERTIES = TEXT_PAGE_CONTENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_OPERATION_COUNT = TEXT_PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TableSectionImpl <em>Table Section</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.TableSectionImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTableSection()
+	 * @generated
+	 */
+	int TABLE_SECTION = 76;
+
+	/**
+	 * The feature id for the '<em><b>Tablerows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_SECTION__TABLEROWS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Generals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_SECTION__GENERALS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Table Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_SECTION_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Table Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_SECTION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TheadImpl <em>Thead</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.TheadImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getThead()
+	 * @generated
+	 */
+	int THEAD = 73;
+
+	/**
+	 * The feature id for the '<em><b>Tablerows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THEAD__TABLEROWS = TABLE_SECTION__TABLEROWS;
+
+	/**
+	 * The feature id for the '<em><b>Generals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THEAD__GENERALS = TABLE_SECTION__GENERALS;
+
+	/**
+	 * The number of structural features of the '<em>Thead</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THEAD_FEATURE_COUNT = TABLE_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Thead</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int THEAD_OPERATION_COUNT = TABLE_SECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TbodyImpl <em>Tbody</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.TbodyImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTbody()
+	 * @generated
+	 */
+	int TBODY = 74;
+
+	/**
+	 * The feature id for the '<em><b>Tablerows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TBODY__TABLEROWS = TABLE_SECTION__TABLEROWS;
+
+	/**
+	 * The feature id for the '<em><b>Generals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TBODY__GENERALS = TABLE_SECTION__GENERALS;
+
+	/**
+	 * The number of structural features of the '<em>Tbody</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TBODY_FEATURE_COUNT = TABLE_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Tbody</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TBODY_OPERATION_COUNT = TABLE_SECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TfootImpl <em>Tfoot</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.TfootImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTfoot()
+	 * @generated
+	 */
+	int TFOOT = 75;
+
+	/**
+	 * The feature id for the '<em><b>Tablerows</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFOOT__TABLEROWS = TABLE_SECTION__TABLEROWS;
+
+	/**
+	 * The feature id for the '<em><b>Generals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFOOT__GENERALS = TABLE_SECTION__GENERALS;
+
+	/**
+	 * The number of structural features of the '<em>Tfoot</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFOOT_FEATURE_COUNT = TABLE_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Tfoot</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TFOOT_OPERATION_COUNT = TABLE_SECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TableRowImpl <em>Table Row</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.TableRowImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTableRow()
+	 * @generated
+	 */
+	int TABLE_ROW = 77;
+
+	/**
+	 * The feature id for the '<em><b>Tablecells</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_ROW__TABLECELLS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Generals</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_ROW__GENERALS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Table Row</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_ROW_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Table Row</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_ROW_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TableCellImpl <em>Table Cell</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.TableCellImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTableCell()
+	 * @generated
+	 */
+	int TABLE_CELL = 78;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL__GENERAL_PROPERTIES = TEXT_CONTAINER__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Textelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL__TEXTELEMENTS = TEXT_CONTAINER__TEXTELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL__COLOR = TEXT_CONTAINER__COLOR;
+
+	/**
+	 * The feature id for the '<em><b>Emphasis</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL__EMPHASIS = TEXT_CONTAINER__EMPHASIS;
+
+	/**
+	 * The feature id for the '<em><b>Alignment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL__ALIGNMENT = TEXT_CONTAINER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Span</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL__SPAN = TEXT_CONTAINER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Table Cell</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL_FEATURE_COUNT = TEXT_CONTAINER_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Table Cell</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_CELL_OPERATION_COUNT = TEXT_CONTAINER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.TablePropertyImpl <em>Table Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.TablePropertyImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTableProperty()
+	 * @generated
+	 */
+	int TABLE_PROPERTY = 79;
+
+	/**
+	 * The number of structural features of the '<em>Table Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_PROPERTY_FEATURE_COUNT = PROPERTY_CLASS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Table Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE_PROPERTY_OPERATION_COUNT = PROPERTY_CLASS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BasicTableImpl <em>Basic Table</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.BasicTableImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBasicTable()
+	 * @generated
+	 */
+	int BASIC_TABLE = 80;
+
+	/**
+	 * The number of structural features of the '<em>Basic Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_TABLE_FEATURE_COUNT = TABLE_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Basic Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BASIC_TABLE_OPERATION_COUNT = TABLE_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.StripedRowsImpl <em>Striped Rows</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.StripedRowsImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getStripedRows()
+	 * @generated
+	 */
+	int STRIPED_ROWS = 81;
+
+	/**
+	 * The number of structural features of the '<em>Striped Rows</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRIPED_ROWS_FEATURE_COUNT = TABLE_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Striped Rows</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRIPED_ROWS_OPERATION_COUNT = TABLE_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BorderedTableImpl <em>Bordered Table</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.BorderedTableImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBorderedTable()
+	 * @generated
+	 */
+	int BORDERED_TABLE = 82;
+
+	/**
+	 * The number of structural features of the '<em>Bordered Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BORDERED_TABLE_FEATURE_COUNT = TABLE_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Bordered Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BORDERED_TABLE_OPERATION_COUNT = TABLE_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.HoverRowsImpl <em>Hover Rows</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.HoverRowsImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getHoverRows()
+	 * @generated
+	 */
+	int HOVER_ROWS = 83;
+
+	/**
+	 * The number of structural features of the '<em>Hover Rows</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOVER_ROWS_FEATURE_COUNT = TABLE_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Hover Rows</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOVER_ROWS_OPERATION_COUNT = TABLE_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.DarkTableImpl <em>Dark Table</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.DarkTableImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getDarkTable()
+	 * @generated
+	 */
+	int DARK_TABLE = 84;
+
+	/**
+	 * The number of structural features of the '<em>Dark Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DARK_TABLE_FEATURE_COUNT = TABLE_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Dark Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DARK_TABLE_OPERATION_COUNT = TABLE_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BlockQuoteImpl <em>Block Quote</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.BlockQuoteImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBlockQuote()
+	 * @generated
+	 */
+	int BLOCK_QUOTE = 85;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE__GENERAL_PROPERTIES = TEXT_PAGE_CONTENT__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Pagecontents</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE__PAGECONTENTS = TEXT_PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Block Quote</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Block Quote</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BLOCK_QUOTE_OPERATION_COUNT = TEXT_PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.CodeBlockImpl <em>Code Block</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.CodeBlockImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getCodeBlock()
+	 * @generated
+	 */
+	int CODE_BLOCK = 86;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK__GENERAL_PROPERTIES = TEXT_PAGE_CONTENT__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Codelines</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK__CODELINES = TEXT_PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Code Block</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Code Block</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_BLOCK_OPERATION_COUNT = TEXT_PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.CodeLineImpl <em>Code Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.CodeLineImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getCodeLine()
+	 * @generated
+	 */
+	int CODE_LINE = 87;
+
+	/**
+	 * The feature id for the '<em><b>Content</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_LINE__CONTENT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Code Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_LINE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Code Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CODE_LINE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.HorizontalLineImpl <em>Horizontal Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.HorizontalLineImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getHorizontalLine()
+	 * @generated
+	 */
+	int HORIZONTAL_LINE = 88;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HORIZONTAL_LINE__GENERAL_PROPERTIES = TEXT_PAGE_CONTENT__GENERAL_PROPERTIES;
+
+	/**
+	 * The number of structural features of the '<em>Horizontal Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HORIZONTAL_LINE_FEATURE_COUNT = TEXT_PAGE_CONTENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Horizontal Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HORIZONTAL_LINE_OPERATION_COUNT = TEXT_PAGE_CONTENT_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2801,7 +3502,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getColor()
 	 * @generated
 	 */
-	int COLOR = 72;
+	int COLOR = 89;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Size <em>Size</em>}' enum.
@@ -2811,7 +3512,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 73;
+	int SIZE = 90;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Alignement <em>Alignement</em>}' enum.
@@ -2821,7 +3522,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlignement()
 	 * @generated
 	 */
-	int ALIGNEMENT = 74;
+	int ALIGNEMENT = 91;
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Page <em>Page</em>}'.
@@ -3834,25 +4535,25 @@ public interface BstrapPackage extends EPackage {
 	EClass getTextNested();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.TextNested#getTestnestedelements <em>Testnestedelements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.TextNested#getTextnestedelements <em>Textnestedelements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Testnestedelements</em>'.
-	 * @see idm.bstrap.mm.bstrap.TextNested#getTestnestedelements()
+	 * @return the meta object for the containment reference list '<em>Textnestedelements</em>'.
+	 * @see idm.bstrap.mm.bstrap.TextNested#getTextnestedelements()
 	 * @see #getTextNested()
 	 * @generated
 	 */
-	EReference getTextNested_Testnestedelements();
+	EReference getTextNested_Textnestedelements();
 
 	/**
-	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.TestNestedElement <em>Test Nested Element</em>}'.
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.TextNestedElement <em>Text Nested Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Test Nested Element</em>'.
-	 * @see idm.bstrap.mm.bstrap.TestNestedElement
+	 * @return the meta object for class '<em>Text Nested Element</em>'.
+	 * @see idm.bstrap.mm.bstrap.TextNestedElement
 	 * @generated
 	 */
-	EClass getTestNestedElement();
+	EClass getTextNestedElement();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Brand <em>Brand</em>}'.
@@ -3883,6 +4584,297 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getLinkBrand();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Table <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table</em>'.
+	 * @see idm.bstrap.mm.bstrap.Table
+	 * @generated
+	 */
+	EClass getTable();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Table#getTablesections <em>Tablesections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tablesections</em>'.
+	 * @see idm.bstrap.mm.bstrap.Table#getTablesections()
+	 * @see #getTable()
+	 * @generated
+	 */
+	EReference getTable_Tablesections();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Table#getTableproperties <em>Tableproperties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tableproperties</em>'.
+	 * @see idm.bstrap.mm.bstrap.Table#getTableproperties()
+	 * @see #getTable()
+	 * @generated
+	 */
+	EReference getTable_Tableproperties();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Thead <em>Thead</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Thead</em>'.
+	 * @see idm.bstrap.mm.bstrap.Thead
+	 * @generated
+	 */
+	EClass getThead();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Tbody <em>Tbody</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tbody</em>'.
+	 * @see idm.bstrap.mm.bstrap.Tbody
+	 * @generated
+	 */
+	EClass getTbody();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Tfoot <em>Tfoot</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Tfoot</em>'.
+	 * @see idm.bstrap.mm.bstrap.Tfoot
+	 * @generated
+	 */
+	EClass getTfoot();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.TableSection <em>Table Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table Section</em>'.
+	 * @see idm.bstrap.mm.bstrap.TableSection
+	 * @generated
+	 */
+	EClass getTableSection();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.TableSection#getTablerows <em>Tablerows</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tablerows</em>'.
+	 * @see idm.bstrap.mm.bstrap.TableSection#getTablerows()
+	 * @see #getTableSection()
+	 * @generated
+	 */
+	EReference getTableSection_Tablerows();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.TableSection#getGenerals <em>Generals</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Generals</em>'.
+	 * @see idm.bstrap.mm.bstrap.TableSection#getGenerals()
+	 * @see #getTableSection()
+	 * @generated
+	 */
+	EReference getTableSection_Generals();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.TableRow <em>Table Row</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table Row</em>'.
+	 * @see idm.bstrap.mm.bstrap.TableRow
+	 * @generated
+	 */
+	EClass getTableRow();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.TableRow#getTablecells <em>Tablecells</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tablecells</em>'.
+	 * @see idm.bstrap.mm.bstrap.TableRow#getTablecells()
+	 * @see #getTableRow()
+	 * @generated
+	 */
+	EReference getTableRow_Tablecells();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.TableRow#getGenerals <em>Generals</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Generals</em>'.
+	 * @see idm.bstrap.mm.bstrap.TableRow#getGenerals()
+	 * @see #getTableRow()
+	 * @generated
+	 */
+	EReference getTableRow_Generals();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.TableCell <em>Table Cell</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table Cell</em>'.
+	 * @see idm.bstrap.mm.bstrap.TableCell
+	 * @generated
+	 */
+	EClass getTableCell();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.TableCell#getAlignment <em>Alignment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Alignment</em>'.
+	 * @see idm.bstrap.mm.bstrap.TableCell#getAlignment()
+	 * @see #getTableCell()
+	 * @generated
+	 */
+	EAttribute getTableCell_Alignment();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.TableCell#getSpan <em>Span</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Span</em>'.
+	 * @see idm.bstrap.mm.bstrap.TableCell#getSpan()
+	 * @see #getTableCell()
+	 * @generated
+	 */
+	EAttribute getTableCell_Span();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.TableProperty <em>Table Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Table Property</em>'.
+	 * @see idm.bstrap.mm.bstrap.TableProperty
+	 * @generated
+	 */
+	EClass getTableProperty();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.BasicTable <em>Basic Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Basic Table</em>'.
+	 * @see idm.bstrap.mm.bstrap.BasicTable
+	 * @generated
+	 */
+	EClass getBasicTable();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.StripedRows <em>Striped Rows</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Striped Rows</em>'.
+	 * @see idm.bstrap.mm.bstrap.StripedRows
+	 * @generated
+	 */
+	EClass getStripedRows();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.BorderedTable <em>Bordered Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Bordered Table</em>'.
+	 * @see idm.bstrap.mm.bstrap.BorderedTable
+	 * @generated
+	 */
+	EClass getBorderedTable();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.HoverRows <em>Hover Rows</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Hover Rows</em>'.
+	 * @see idm.bstrap.mm.bstrap.HoverRows
+	 * @generated
+	 */
+	EClass getHoverRows();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.DarkTable <em>Dark Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Dark Table</em>'.
+	 * @see idm.bstrap.mm.bstrap.DarkTable
+	 * @generated
+	 */
+	EClass getDarkTable();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.BlockQuote <em>Block Quote</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Block Quote</em>'.
+	 * @see idm.bstrap.mm.bstrap.BlockQuote
+	 * @generated
+	 */
+	EClass getBlockQuote();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.BlockQuote#getPagecontents <em>Pagecontents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pagecontents</em>'.
+	 * @see idm.bstrap.mm.bstrap.BlockQuote#getPagecontents()
+	 * @see #getBlockQuote()
+	 * @generated
+	 */
+	EReference getBlockQuote_Pagecontents();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.CodeBlock <em>Code Block</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Code Block</em>'.
+	 * @see idm.bstrap.mm.bstrap.CodeBlock
+	 * @generated
+	 */
+	EClass getCodeBlock();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.CodeBlock#getCodelines <em>Codelines</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Codelines</em>'.
+	 * @see idm.bstrap.mm.bstrap.CodeBlock#getCodelines()
+	 * @see #getCodeBlock()
+	 * @generated
+	 */
+	EReference getCodeBlock_Codelines();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.CodeLine <em>Code Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Code Line</em>'.
+	 * @see idm.bstrap.mm.bstrap.CodeLine
+	 * @generated
+	 */
+	EClass getCodeLine();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.CodeLine#getContent <em>Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Content</em>'.
+	 * @see idm.bstrap.mm.bstrap.CodeLine#getContent()
+	 * @see #getCodeLine()
+	 * @generated
+	 */
+	EAttribute getCodeLine_Content();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.HorizontalLine <em>Horizontal Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Horizontal Line</em>'.
+	 * @see idm.bstrap.mm.bstrap.HorizontalLine
+	 * @generated
+	 */
+	EClass getHorizontalLine();
 
 	/**
 	 * Returns the meta object for enum '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}'.
@@ -4858,22 +5850,22 @@ public interface BstrapPackage extends EPackage {
 		EClass TEXT_NESTED = eINSTANCE.getTextNested();
 
 		/**
-		 * The meta object literal for the '<em><b>Testnestedelements</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Textnestedelements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TEXT_NESTED__TESTNESTEDELEMENTS = eINSTANCE.getTextNested_Testnestedelements();
+		EReference TEXT_NESTED__TEXTNESTEDELEMENTS = eINSTANCE.getTextNested_Textnestedelements();
 
 		/**
-		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.TestNestedElement <em>Test Nested Element</em>}' class.
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.TextNestedElement <em>Text Nested Element</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see idm.bstrap.mm.bstrap.TestNestedElement
-		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTestNestedElement()
+		 * @see idm.bstrap.mm.bstrap.TextNestedElement
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTextNestedElement()
 		 * @generated
 		 */
-		EClass TEST_NESTED_ELEMENT = eINSTANCE.getTestNestedElement();
+		EClass TEXT_NESTED_ELEMENT = eINSTANCE.getTextNestedElement();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BrandImpl <em>Brand</em>}' class.
@@ -4904,6 +5896,264 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass LINK_BRAND = eINSTANCE.getLinkBrand();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.TableImpl <em>Table</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.TableImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTable()
+		 * @generated
+		 */
+		EClass TABLE = eINSTANCE.getTable();
+
+		/**
+		 * The meta object literal for the '<em><b>Tablesections</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE__TABLESECTIONS = eINSTANCE.getTable_Tablesections();
+
+		/**
+		 * The meta object literal for the '<em><b>Tableproperties</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE__TABLEPROPERTIES = eINSTANCE.getTable_Tableproperties();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.TheadImpl <em>Thead</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.TheadImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getThead()
+		 * @generated
+		 */
+		EClass THEAD = eINSTANCE.getThead();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.TbodyImpl <em>Tbody</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.TbodyImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTbody()
+		 * @generated
+		 */
+		EClass TBODY = eINSTANCE.getTbody();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.TfootImpl <em>Tfoot</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.TfootImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTfoot()
+		 * @generated
+		 */
+		EClass TFOOT = eINSTANCE.getTfoot();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.TableSectionImpl <em>Table Section</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.TableSectionImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTableSection()
+		 * @generated
+		 */
+		EClass TABLE_SECTION = eINSTANCE.getTableSection();
+
+		/**
+		 * The meta object literal for the '<em><b>Tablerows</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE_SECTION__TABLEROWS = eINSTANCE.getTableSection_Tablerows();
+
+		/**
+		 * The meta object literal for the '<em><b>Generals</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE_SECTION__GENERALS = eINSTANCE.getTableSection_Generals();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.TableRowImpl <em>Table Row</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.TableRowImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTableRow()
+		 * @generated
+		 */
+		EClass TABLE_ROW = eINSTANCE.getTableRow();
+
+		/**
+		 * The meta object literal for the '<em><b>Tablecells</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE_ROW__TABLECELLS = eINSTANCE.getTableRow_Tablecells();
+
+		/**
+		 * The meta object literal for the '<em><b>Generals</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TABLE_ROW__GENERALS = eINSTANCE.getTableRow_Generals();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.TableCellImpl <em>Table Cell</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.TableCellImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTableCell()
+		 * @generated
+		 */
+		EClass TABLE_CELL = eINSTANCE.getTableCell();
+
+		/**
+		 * The meta object literal for the '<em><b>Alignment</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TABLE_CELL__ALIGNMENT = eINSTANCE.getTableCell_Alignment();
+
+		/**
+		 * The meta object literal for the '<em><b>Span</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TABLE_CELL__SPAN = eINSTANCE.getTableCell_Span();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.TablePropertyImpl <em>Table Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.TablePropertyImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getTableProperty()
+		 * @generated
+		 */
+		EClass TABLE_PROPERTY = eINSTANCE.getTableProperty();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BasicTableImpl <em>Basic Table</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.BasicTableImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBasicTable()
+		 * @generated
+		 */
+		EClass BASIC_TABLE = eINSTANCE.getBasicTable();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.StripedRowsImpl <em>Striped Rows</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.StripedRowsImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getStripedRows()
+		 * @generated
+		 */
+		EClass STRIPED_ROWS = eINSTANCE.getStripedRows();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BorderedTableImpl <em>Bordered Table</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.BorderedTableImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBorderedTable()
+		 * @generated
+		 */
+		EClass BORDERED_TABLE = eINSTANCE.getBorderedTable();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.HoverRowsImpl <em>Hover Rows</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.HoverRowsImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getHoverRows()
+		 * @generated
+		 */
+		EClass HOVER_ROWS = eINSTANCE.getHoverRows();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.DarkTableImpl <em>Dark Table</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.DarkTableImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getDarkTable()
+		 * @generated
+		 */
+		EClass DARK_TABLE = eINSTANCE.getDarkTable();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BlockQuoteImpl <em>Block Quote</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.BlockQuoteImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBlockQuote()
+		 * @generated
+		 */
+		EClass BLOCK_QUOTE = eINSTANCE.getBlockQuote();
+
+		/**
+		 * The meta object literal for the '<em><b>Pagecontents</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BLOCK_QUOTE__PAGECONTENTS = eINSTANCE.getBlockQuote_Pagecontents();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.CodeBlockImpl <em>Code Block</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.CodeBlockImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getCodeBlock()
+		 * @generated
+		 */
+		EClass CODE_BLOCK = eINSTANCE.getCodeBlock();
+
+		/**
+		 * The meta object literal for the '<em><b>Codelines</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CODE_BLOCK__CODELINES = eINSTANCE.getCodeBlock_Codelines();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.CodeLineImpl <em>Code Line</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.CodeLineImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getCodeLine()
+		 * @generated
+		 */
+		EClass CODE_LINE = eINSTANCE.getCodeLine();
+
+		/**
+		 * The meta object literal for the '<em><b>Content</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CODE_LINE__CONTENT = eINSTANCE.getCodeLine_Content();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.HorizontalLineImpl <em>Horizontal Line</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.HorizontalLineImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getHorizontalLine()
+		 * @generated
+		 */
+		EClass HORIZONTAL_LINE = eINSTANCE.getHorizontalLine();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.

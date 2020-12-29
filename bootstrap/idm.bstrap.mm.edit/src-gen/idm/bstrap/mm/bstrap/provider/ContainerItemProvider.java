@@ -173,6 +173,21 @@ public class ContainerItemProvider extends PageContentItemProvider {
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
 				BstrapFactory.eINSTANCE.createItalic()));
 
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createTable()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createTableCell()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createBlockQuote()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createHorizontalLine()));
+
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__CONTAINERS,
 				BstrapFactory.eINSTANCE.createFixContainer()));
 

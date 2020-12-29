@@ -61,7 +61,7 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS);
+			childrenFeatures.add(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS);
 			childrenFeatures.add(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES);
 		}
 		return childrenFeatures;
@@ -124,7 +124,7 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Button.class)) {
-		case BstrapPackage.BUTTON__TESTNESTEDELEMENTS:
+		case BstrapPackage.BUTTON__TEXTNESTEDELEMENTS:
 		case BstrapPackage.BUTTON__BUTTONPROPERTIES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -143,16 +143,16 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createText()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createCode()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createStrong()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createItalic()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,

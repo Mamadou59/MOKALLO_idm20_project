@@ -208,6 +208,21 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
 				BstrapFactory.eINSTANCE.createItalic()));
+
+		newChildDescriptors.add(
+				createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS, BstrapFactory.eINSTANCE.createTable()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createTableCell()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createBlockQuote()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createHorizontalLine()));
 	}
 
 	/**

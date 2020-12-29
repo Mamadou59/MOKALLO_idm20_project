@@ -12,5 +12,5 @@ package idm.bstrap.mm.bstrap;
  * @model abstract="true"
  * @generated
  */
-public interface TextContainable extends ContainableTextElement, TextNested, TestNestedElement {
+public interface TextContainable extends ContainableTextElement, TextNested, TextNestedElement {
 } // TextContainable

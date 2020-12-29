@@ -149,11 +149,46 @@
     <genClasses ecoreClass="bstrap.ecore#//Italic"/>
     <genClasses ecoreClass="bstrap.ecore#//TextContainable"/>
     <genClasses ecoreClass="bstrap.ecore#//TextNested">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//TextNested/testnestedelements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//TextNested/textnestedelements"/>
     </genClasses>
-    <genClasses ecoreClass="bstrap.ecore#//TestNestedElement"/>
+    <genClasses ecoreClass="bstrap.ecore#//TextNestedElement"/>
     <genClasses ecoreClass="bstrap.ecore#//Brand"/>
     <genClasses ecoreClass="bstrap.ecore#//LinkProperty"/>
     <genClasses ecoreClass="bstrap.ecore#//LinkBrand"/>
+    <genClasses ecoreClass="bstrap.ecore#//Table">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Table/tablesections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Table/tableproperties"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//Thead"/>
+    <genClasses ecoreClass="bstrap.ecore#//Tbody"/>
+    <genClasses ecoreClass="bstrap.ecore#//Tfoot"/>
+    <genClasses ecoreClass="bstrap.ecore#//TableSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//TableSection/tablerows"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//TableSection/generals"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//TableRow">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//TableRow/tablecells"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//TableRow/generals"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//TableCell">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//TableCell/alignment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//TableCell/span"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//TableProperty"/>
+    <genClasses ecoreClass="bstrap.ecore#//BasicTable"/>
+    <genClasses ecoreClass="bstrap.ecore#//StripedRows"/>
+    <genClasses ecoreClass="bstrap.ecore#//BorderedTable"/>
+    <genClasses ecoreClass="bstrap.ecore#//HoverRows"/>
+    <genClasses ecoreClass="bstrap.ecore#//DarkTable"/>
+    <genClasses ecoreClass="bstrap.ecore#//BlockQuote">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//BlockQuote/pagecontents"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//CodeBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//CodeBlock/codelines"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//CodeLine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//CodeLine/content"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//HorizontalLine"/>
   </genPackages>
 </genmodel:GenModel>

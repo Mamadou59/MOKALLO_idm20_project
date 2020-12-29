@@ -1108,6 +1108,351 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Table} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableItemProvider tableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Table}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableAdapter() {
+		if (tableItemProvider == null) {
+			tableItemProvider = new TableItemProvider(this);
+		}
+
+		return tableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Thead} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TheadItemProvider theadItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Thead}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTheadAdapter() {
+		if (theadItemProvider == null) {
+			theadItemProvider = new TheadItemProvider(this);
+		}
+
+		return theadItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Tbody} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TbodyItemProvider tbodyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Tbody}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTbodyAdapter() {
+		if (tbodyItemProvider == null) {
+			tbodyItemProvider = new TbodyItemProvider(this);
+		}
+
+		return tbodyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Tfoot} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TfootItemProvider tfootItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Tfoot}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTfootAdapter() {
+		if (tfootItemProvider == null) {
+			tfootItemProvider = new TfootItemProvider(this);
+		}
+
+		return tfootItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.TableRow} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableRowItemProvider tableRowItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.TableRow}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableRowAdapter() {
+		if (tableRowItemProvider == null) {
+			tableRowItemProvider = new TableRowItemProvider(this);
+		}
+
+		return tableRowItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.TableCell} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableCellItemProvider tableCellItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.TableCell}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableCellAdapter() {
+		if (tableCellItemProvider == null) {
+			tableCellItemProvider = new TableCellItemProvider(this);
+		}
+
+		return tableCellItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.BasicTable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BasicTableItemProvider basicTableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.BasicTable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBasicTableAdapter() {
+		if (basicTableItemProvider == null) {
+			basicTableItemProvider = new BasicTableItemProvider(this);
+		}
+
+		return basicTableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.StripedRows} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StripedRowsItemProvider stripedRowsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.StripedRows}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStripedRowsAdapter() {
+		if (stripedRowsItemProvider == null) {
+			stripedRowsItemProvider = new StripedRowsItemProvider(this);
+		}
+
+		return stripedRowsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.BorderedTable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BorderedTableItemProvider borderedTableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.BorderedTable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBorderedTableAdapter() {
+		if (borderedTableItemProvider == null) {
+			borderedTableItemProvider = new BorderedTableItemProvider(this);
+		}
+
+		return borderedTableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.HoverRows} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HoverRowsItemProvider hoverRowsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.HoverRows}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHoverRowsAdapter() {
+		if (hoverRowsItemProvider == null) {
+			hoverRowsItemProvider = new HoverRowsItemProvider(this);
+		}
+
+		return hoverRowsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.DarkTable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DarkTableItemProvider darkTableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.DarkTable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDarkTableAdapter() {
+		if (darkTableItemProvider == null) {
+			darkTableItemProvider = new DarkTableItemProvider(this);
+		}
+
+		return darkTableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.BlockQuote} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BlockQuoteItemProvider blockQuoteItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.BlockQuote}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBlockQuoteAdapter() {
+		if (blockQuoteItemProvider == null) {
+			blockQuoteItemProvider = new BlockQuoteItemProvider(this);
+		}
+
+		return blockQuoteItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.CodeBlock} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CodeBlockItemProvider codeBlockItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.CodeBlock}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCodeBlockAdapter() {
+		if (codeBlockItemProvider == null) {
+			codeBlockItemProvider = new CodeBlockItemProvider(this);
+		}
+
+		return codeBlockItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.CodeLine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CodeLineItemProvider codeLineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.CodeLine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCodeLineAdapter() {
+		if (codeLineItemProvider == null) {
+			codeLineItemProvider = new CodeLineItemProvider(this);
+		}
+
+		return codeLineItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.HorizontalLine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HorizontalLineItemProvider horizontalLineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.HorizontalLine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHorizontalLineAdapter() {
+		if (horizontalLineItemProvider == null) {
+			horizontalLineItemProvider = new HorizontalLineItemProvider(this);
+		}
+
+		return horizontalLineItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1296,6 +1641,36 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 			brandItemProvider.dispose();
 		if (linkBrandItemProvider != null)
 			linkBrandItemProvider.dispose();
+		if (tableItemProvider != null)
+			tableItemProvider.dispose();
+		if (theadItemProvider != null)
+			theadItemProvider.dispose();
+		if (tbodyItemProvider != null)
+			tbodyItemProvider.dispose();
+		if (tfootItemProvider != null)
+			tfootItemProvider.dispose();
+		if (tableRowItemProvider != null)
+			tableRowItemProvider.dispose();
+		if (tableCellItemProvider != null)
+			tableCellItemProvider.dispose();
+		if (basicTableItemProvider != null)
+			basicTableItemProvider.dispose();
+		if (stripedRowsItemProvider != null)
+			stripedRowsItemProvider.dispose();
+		if (borderedTableItemProvider != null)
+			borderedTableItemProvider.dispose();
+		if (hoverRowsItemProvider != null)
+			hoverRowsItemProvider.dispose();
+		if (darkTableItemProvider != null)
+			darkTableItemProvider.dispose();
+		if (blockQuoteItemProvider != null)
+			blockQuoteItemProvider.dispose();
+		if (codeBlockItemProvider != null)
+			codeBlockItemProvider.dispose();
+		if (codeLineItemProvider != null)
+			codeLineItemProvider.dispose();
+		if (horizontalLineItemProvider != null)
+			horizontalLineItemProvider.dispose();
 	}
 
 }

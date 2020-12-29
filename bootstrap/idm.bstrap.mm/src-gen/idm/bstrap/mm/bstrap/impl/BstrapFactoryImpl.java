@@ -7,8 +7,11 @@ import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.Background;
 import idm.bstrap.mm.bstrap.Basic;
 import idm.bstrap.mm.bstrap.BasicList;
+import idm.bstrap.mm.bstrap.BasicTable;
+import idm.bstrap.mm.bstrap.BlockQuote;
 import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.Border;
+import idm.bstrap.mm.bstrap.BorderedTable;
 import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
@@ -20,8 +23,11 @@ import idm.bstrap.mm.bstrap.Center;
 import idm.bstrap.mm.bstrap.Centered;
 import idm.bstrap.mm.bstrap.Circle;
 import idm.bstrap.mm.bstrap.Code;
+import idm.bstrap.mm.bstrap.CodeBlock;
+import idm.bstrap.mm.bstrap.CodeLine;
 import idm.bstrap.mm.bstrap.Color;
 import idm.bstrap.mm.bstrap.ColoredBorder;
+import idm.bstrap.mm.bstrap.DarkTable;
 import idm.bstrap.mm.bstrap.Disabled;
 import idm.bstrap.mm.bstrap.Display1;
 import idm.bstrap.mm.bstrap.Display2;
@@ -29,7 +35,9 @@ import idm.bstrap.mm.bstrap.Display3;
 import idm.bstrap.mm.bstrap.Display4;
 import idm.bstrap.mm.bstrap.FixContainer;
 import idm.bstrap.mm.bstrap.FluidContainer;
+import idm.bstrap.mm.bstrap.HorizontalLine;
 import idm.bstrap.mm.bstrap.HorizontalList;
+import idm.bstrap.mm.bstrap.HoverRows;
 import idm.bstrap.mm.bstrap.Image;
 import idm.bstrap.mm.bstrap.Italic;
 import idm.bstrap.mm.bstrap.ItalicProperty;
@@ -45,8 +53,15 @@ import idm.bstrap.mm.bstrap.Paragraphe;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
 import idm.bstrap.mm.bstrap.Size;
+import idm.bstrap.mm.bstrap.StripedRows;
 import idm.bstrap.mm.bstrap.Strong;
+import idm.bstrap.mm.bstrap.Table;
+import idm.bstrap.mm.bstrap.TableCell;
+import idm.bstrap.mm.bstrap.TableRow;
+import idm.bstrap.mm.bstrap.Tbody;
 import idm.bstrap.mm.bstrap.Text;
+import idm.bstrap.mm.bstrap.Tfoot;
+import idm.bstrap.mm.bstrap.Thead;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
 import idm.bstrap.mm.bstrap.UnOrderedList;
@@ -195,6 +210,36 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createBrand();
 		case BstrapPackage.LINK_BRAND:
 			return createLinkBrand();
+		case BstrapPackage.TABLE:
+			return createTable();
+		case BstrapPackage.THEAD:
+			return createThead();
+		case BstrapPackage.TBODY:
+			return createTbody();
+		case BstrapPackage.TFOOT:
+			return createTfoot();
+		case BstrapPackage.TABLE_ROW:
+			return createTableRow();
+		case BstrapPackage.TABLE_CELL:
+			return createTableCell();
+		case BstrapPackage.BASIC_TABLE:
+			return createBasicTable();
+		case BstrapPackage.STRIPED_ROWS:
+			return createStripedRows();
+		case BstrapPackage.BORDERED_TABLE:
+			return createBorderedTable();
+		case BstrapPackage.HOVER_ROWS:
+			return createHoverRows();
+		case BstrapPackage.DARK_TABLE:
+			return createDarkTable();
+		case BstrapPackage.BLOCK_QUOTE:
+			return createBlockQuote();
+		case BstrapPackage.CODE_BLOCK:
+			return createCodeBlock();
+		case BstrapPackage.CODE_LINE:
+			return createCodeLine();
+		case BstrapPackage.HORIZONTAL_LINE:
+			return createHorizontalLine();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -686,6 +731,156 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	public LinkBrand createLinkBrand() {
 		LinkBrandImpl linkBrand = new LinkBrandImpl();
 		return linkBrand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Table createTable() {
+		TableImpl table = new TableImpl();
+		return table;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Thead createThead() {
+		TheadImpl thead = new TheadImpl();
+		return thead;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tbody createTbody() {
+		TbodyImpl tbody = new TbodyImpl();
+		return tbody;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tfoot createTfoot() {
+		TfootImpl tfoot = new TfootImpl();
+		return tfoot;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableRow createTableRow() {
+		TableRowImpl tableRow = new TableRowImpl();
+		return tableRow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableCell createTableCell() {
+		TableCellImpl tableCell = new TableCellImpl();
+		return tableCell;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BasicTable createBasicTable() {
+		BasicTableImpl basicTable = new BasicTableImpl();
+		return basicTable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StripedRows createStripedRows() {
+		StripedRowsImpl stripedRows = new StripedRowsImpl();
+		return stripedRows;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BorderedTable createBorderedTable() {
+		BorderedTableImpl borderedTable = new BorderedTableImpl();
+		return borderedTable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HoverRows createHoverRows() {
+		HoverRowsImpl hoverRows = new HoverRowsImpl();
+		return hoverRows;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DarkTable createDarkTable() {
+		DarkTableImpl darkTable = new DarkTableImpl();
+		return darkTable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BlockQuote createBlockQuote() {
+		BlockQuoteImpl blockQuote = new BlockQuoteImpl();
+		return blockQuote;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CodeBlock createCodeBlock() {
+		CodeBlockImpl codeBlock = new CodeBlockImpl();
+		return codeBlock;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CodeLine createCodeLine() {
+		CodeLineImpl codeLine = new CodeLineImpl();
+		return codeLine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HorizontalLine createHorizontalLine() {
+		HorizontalLineImpl horizontalLine = new HorizontalLineImpl();
+		return horizontalLine;
 	}
 
 	/**

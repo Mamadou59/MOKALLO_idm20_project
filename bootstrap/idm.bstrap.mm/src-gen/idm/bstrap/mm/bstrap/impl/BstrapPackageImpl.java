@@ -7,9 +7,12 @@ import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.Background;
 import idm.bstrap.mm.bstrap.Basic;
 import idm.bstrap.mm.bstrap.BasicList;
+import idm.bstrap.mm.bstrap.BasicTable;
+import idm.bstrap.mm.bstrap.BlockQuote;
 import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BorderProperty;
+import idm.bstrap.mm.bstrap.BorderedTable;
 import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
@@ -23,10 +26,13 @@ import idm.bstrap.mm.bstrap.Center;
 import idm.bstrap.mm.bstrap.Centered;
 import idm.bstrap.mm.bstrap.Circle;
 import idm.bstrap.mm.bstrap.Code;
+import idm.bstrap.mm.bstrap.CodeBlock;
+import idm.bstrap.mm.bstrap.CodeLine;
 import idm.bstrap.mm.bstrap.Color;
 import idm.bstrap.mm.bstrap.ColoredBorder;
 import idm.bstrap.mm.bstrap.CompositeTextElement;
 import idm.bstrap.mm.bstrap.ContainableTextElement;
+import idm.bstrap.mm.bstrap.DarkTable;
 import idm.bstrap.mm.bstrap.Disabled;
 import idm.bstrap.mm.bstrap.Display1;
 import idm.bstrap.mm.bstrap.Display2;
@@ -37,7 +43,9 @@ import idm.bstrap.mm.bstrap.Emphasis;
 import idm.bstrap.mm.bstrap.FixContainer;
 import idm.bstrap.mm.bstrap.FluidContainer;
 import idm.bstrap.mm.bstrap.General;
+import idm.bstrap.mm.bstrap.HorizontalLine;
 import idm.bstrap.mm.bstrap.HorizontalList;
+import idm.bstrap.mm.bstrap.HoverRows;
 import idm.bstrap.mm.bstrap.Image;
 import idm.bstrap.mm.bstrap.ImageAligning;
 import idm.bstrap.mm.bstrap.ImageProperty;
@@ -64,14 +72,23 @@ import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
 import idm.bstrap.mm.bstrap.Size;
+import idm.bstrap.mm.bstrap.StripedRows;
 import idm.bstrap.mm.bstrap.Strong;
-import idm.bstrap.mm.bstrap.TestNestedElement;
+import idm.bstrap.mm.bstrap.Table;
+import idm.bstrap.mm.bstrap.TableCell;
+import idm.bstrap.mm.bstrap.TableProperty;
+import idm.bstrap.mm.bstrap.TableRow;
+import idm.bstrap.mm.bstrap.TableSection;
+import idm.bstrap.mm.bstrap.Tbody;
 import idm.bstrap.mm.bstrap.Text;
 import idm.bstrap.mm.bstrap.TextContainable;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
 import idm.bstrap.mm.bstrap.TextNested;
+import idm.bstrap.mm.bstrap.TextNestedElement;
 import idm.bstrap.mm.bstrap.TextPageContent;
+import idm.bstrap.mm.bstrap.Tfoot;
+import idm.bstrap.mm.bstrap.Thead;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
 import idm.bstrap.mm.bstrap.UnOrderedList;
@@ -574,7 +591,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass testNestedElementEClass = null;
+	private EClass textNestedElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -596,6 +613,125 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	private EClass linkBrandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass theadEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tbodyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tfootEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableSectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableRowEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableCellEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tablePropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass basicTableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stripedRowsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass borderedTableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass hoverRowsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass darkTableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass blockQuoteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeBlockEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeLineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass horizontalLineEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1569,7 +1705,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTextNested_Testnestedelements() {
+	public EReference getTextNested_Textnestedelements() {
 		return (EReference) textNestedEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1578,8 +1714,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getTestNestedElement() {
-		return testNestedElementEClass;
+	public EClass getTextNestedElement() {
+		return textNestedElementEClass;
 	}
 
 	/**
@@ -1607,6 +1743,258 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EClass getLinkBrand() {
 		return linkBrandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTable() {
+		return tableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTable_Tablesections() {
+		return (EReference) tableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTable_Tableproperties() {
+		return (EReference) tableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getThead() {
+		return theadEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTbody() {
+		return tbodyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTfoot() {
+		return tfootEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableSection() {
+		return tableSectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTableSection_Tablerows() {
+		return (EReference) tableSectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTableSection_Generals() {
+		return (EReference) tableSectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableRow() {
+		return tableRowEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTableRow_Tablecells() {
+		return (EReference) tableRowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTableRow_Generals() {
+		return (EReference) tableRowEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableCell() {
+		return tableCellEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTableCell_Alignment() {
+		return (EAttribute) tableCellEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTableCell_Span() {
+		return (EAttribute) tableCellEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableProperty() {
+		return tablePropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBasicTable() {
+		return basicTableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStripedRows() {
+		return stripedRowsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBorderedTable() {
+		return borderedTableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHoverRows() {
+		return hoverRowsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDarkTable() {
+		return darkTableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBlockQuote() {
+		return blockQuoteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBlockQuote_Pagecontents() {
+		return (EReference) blockQuoteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCodeBlock() {
+		return codeBlockEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCodeBlock_Codelines() {
+		return (EReference) codeBlockEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCodeLine() {
+		return codeLineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCodeLine_Content() {
+		return (EAttribute) codeLineEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHorizontalLine() {
+		return horizontalLineEClass;
 	}
 
 	/**
@@ -1830,15 +2218,60 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		textContainableEClass = createEClass(TEXT_CONTAINABLE);
 
 		textNestedEClass = createEClass(TEXT_NESTED);
-		createEReference(textNestedEClass, TEXT_NESTED__TESTNESTEDELEMENTS);
+		createEReference(textNestedEClass, TEXT_NESTED__TEXTNESTEDELEMENTS);
 
-		testNestedElementEClass = createEClass(TEST_NESTED_ELEMENT);
+		textNestedElementEClass = createEClass(TEXT_NESTED_ELEMENT);
 
 		brandEClass = createEClass(BRAND);
 
 		linkPropertyEClass = createEClass(LINK_PROPERTY);
 
 		linkBrandEClass = createEClass(LINK_BRAND);
+
+		tableEClass = createEClass(TABLE);
+		createEReference(tableEClass, TABLE__TABLESECTIONS);
+		createEReference(tableEClass, TABLE__TABLEPROPERTIES);
+
+		theadEClass = createEClass(THEAD);
+
+		tbodyEClass = createEClass(TBODY);
+
+		tfootEClass = createEClass(TFOOT);
+
+		tableSectionEClass = createEClass(TABLE_SECTION);
+		createEReference(tableSectionEClass, TABLE_SECTION__TABLEROWS);
+		createEReference(tableSectionEClass, TABLE_SECTION__GENERALS);
+
+		tableRowEClass = createEClass(TABLE_ROW);
+		createEReference(tableRowEClass, TABLE_ROW__TABLECELLS);
+		createEReference(tableRowEClass, TABLE_ROW__GENERALS);
+
+		tableCellEClass = createEClass(TABLE_CELL);
+		createEAttribute(tableCellEClass, TABLE_CELL__ALIGNMENT);
+		createEAttribute(tableCellEClass, TABLE_CELL__SPAN);
+
+		tablePropertyEClass = createEClass(TABLE_PROPERTY);
+
+		basicTableEClass = createEClass(BASIC_TABLE);
+
+		stripedRowsEClass = createEClass(STRIPED_ROWS);
+
+		borderedTableEClass = createEClass(BORDERED_TABLE);
+
+		hoverRowsEClass = createEClass(HOVER_ROWS);
+
+		darkTableEClass = createEClass(DARK_TABLE);
+
+		blockQuoteEClass = createEClass(BLOCK_QUOTE);
+		createEReference(blockQuoteEClass, BLOCK_QUOTE__PAGECONTENTS);
+
+		codeBlockEClass = createEClass(CODE_BLOCK);
+		createEReference(codeBlockEClass, CODE_BLOCK__CODELINES);
+
+		codeLineEClass = createEClass(CODE_LINE);
+		createEAttribute(codeLineEClass, CODE_LINE__CONTENT);
+
+		horizontalLineEClass = createEClass(HORIZONTAL_LINE);
 
 		// Create enums
 		colorEEnum = createEEnum(COLOR);
@@ -1884,7 +2317,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		titleEClass.getESuperTypes().add(this.getTextContainer());
 		textElementsEClass.getESuperTypes().add(this.getListItemElement());
 		textEClass.getESuperTypes().add(this.getTextElements());
-		textEClass.getESuperTypes().add(this.getTestNestedElement());
+		textEClass.getESuperTypes().add(this.getTextNestedElement());
 		codeEClass.getESuperTypes().add(this.getText());
 		compositeTextElementEClass.getESuperTypes().add(this.getContainableTextElement());
 		urlBasedLinkEClass.getESuperTypes().add(this.getCompositeTextElement());
@@ -1944,10 +2377,26 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		italicEClass.getESuperTypes().add(this.getTextContainable());
 		textContainableEClass.getESuperTypes().add(this.getContainableTextElement());
 		textContainableEClass.getESuperTypes().add(this.getTextNested());
-		textContainableEClass.getESuperTypes().add(this.getTestNestedElement());
+		textContainableEClass.getESuperTypes().add(this.getTextNestedElement());
 		brandEClass.getESuperTypes().add(this.getNavBarProperty());
 		linkPropertyEClass.getESuperTypes().add(this.getPropertyClass());
 		linkBrandEClass.getESuperTypes().add(this.getLinkProperty());
+		tableEClass.getESuperTypes().add(this.getTextPageContent());
+		theadEClass.getESuperTypes().add(this.getTableSection());
+		tbodyEClass.getESuperTypes().add(this.getTableSection());
+		tfootEClass.getESuperTypes().add(this.getTableSection());
+		tableCellEClass.getESuperTypes().add(this.getTextContainer());
+		tablePropertyEClass.getESuperTypes().add(this.getPropertyClass());
+		basicTableEClass.getESuperTypes().add(this.getTableProperty());
+		stripedRowsEClass.getESuperTypes().add(this.getTableProperty());
+		borderedTableEClass.getESuperTypes().add(this.getTableProperty());
+		hoverRowsEClass.getESuperTypes().add(this.getTableProperty());
+		darkTableEClass.getESuperTypes().add(this.getTableProperty());
+		blockQuoteEClass.getESuperTypes().add(this.getTextPageContent());
+		blockQuoteEClass.getESuperTypes().add(this.getListItemElement());
+		codeBlockEClass.getESuperTypes().add(this.getTextPageContent());
+		codeBlockEClass.getESuperTypes().add(this.getListItemElement());
+		horizontalLineEClass.getESuperTypes().add(this.getTextPageContent());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2027,7 +2476,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(margesPropertyEClass, MargesProperty.class, "MargesProperty", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMargesProperty_Level(), ecorePackage.getEString(), "level", null, 0, 1, MargesProperty.class,
+		initEAttribute(getMargesProperty_Level(), ecorePackage.getEInt(), "level", null, 0, 1, MargesProperty.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMargesProperty_Alignement(), this.getAlignement(), "alignement", null, 0, 1,
 				MargesProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
@@ -2039,7 +2488,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(backgroundEClass, Background.class, "Background", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBackground_Color(), this.getColor(), "color", null, 0, 1, Background.class, !IS_TRANSIENT,
+		initEAttribute(getBackground_Color(), this.getColor(), "color", "WHITE", 0, 1, Background.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(borderPropertyEClass, BorderProperty.class, "BorderProperty", IS_ABSTRACT, !IS_INTERFACE,
@@ -2211,11 +2660,11 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(textNestedEClass, TextNested.class, "TextNested", IS_ABSTRACT, IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTextNested_Testnestedelements(), this.getTestNestedElement(), null, "testnestedelements",
+		initEReference(getTextNested_Textnestedelements(), this.getTextNestedElement(), null, "textnestedelements",
 				null, 0, -1, TextNested.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(testNestedElementEClass, TestNestedElement.class, "TestNestedElement", IS_ABSTRACT, IS_INTERFACE,
+		initEClass(textNestedElementEClass, TextNestedElement.class, "TextNestedElement", IS_ABSTRACT, IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(brandEClass, Brand.class, "Brand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2224,6 +2673,83 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(linkBrandEClass, LinkBrand.class, "LinkBrand", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTable_Tablesections(), this.getTableSection(), null, "tablesections", null, 0, -1,
+				Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTable_Tableproperties(), this.getTableProperty(), null, "tableproperties", null, 0, -1,
+				Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(theadEClass, Thead.class, "Thead", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tbodyEClass, Tbody.class, "Tbody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tfootEClass, Tfoot.class, "Tfoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tableSectionEClass, TableSection.class, "TableSection", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTableSection_Tablerows(), this.getTableRow(), null, "tablerows", null, 0, -1,
+				TableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTableSection_Generals(), this.getGeneral(), null, "generals", null, 0, -1, TableSection.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tableRowEClass, TableRow.class, "TableRow", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTableRow_Tablecells(), this.getTableCell(), null, "tablecells", null, 0, -1, TableRow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTableRow_Generals(), this.getGeneral(), null, "generals", null, 0, -1, TableRow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tableCellEClass, TableCell.class, "TableCell", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTableCell_Alignment(), this.getAlignement(), "alignment", null, 0, 1, TableCell.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTableCell_Span(), ecorePackage.getEInt(), "span", null, 0, 1, TableCell.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tablePropertyEClass, TableProperty.class, "TableProperty", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(basicTableEClass, BasicTable.class, "BasicTable", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stripedRowsEClass, StripedRows.class, "StripedRows", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(borderedTableEClass, BorderedTable.class, "BorderedTable", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(hoverRowsEClass, HoverRows.class, "HoverRows", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(darkTableEClass, DarkTable.class, "DarkTable", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(blockQuoteEClass, BlockQuote.class, "BlockQuote", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBlockQuote_Pagecontents(), this.getPageContent(), null, "pagecontents", null, 0, -1,
+				BlockQuote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(codeBlockEClass, CodeBlock.class, "CodeBlock", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCodeBlock_Codelines(), this.getCodeLine(), null, "codelines", null, 0, -1, CodeBlock.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(codeLineEClass, CodeLine.class, "CodeLine", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCodeLine_Content(), ecorePackage.getEString(), "content", null, 0, 1, CodeLine.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(horizontalLineEClass, HorizontalLine.class, "HorizontalLine", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals

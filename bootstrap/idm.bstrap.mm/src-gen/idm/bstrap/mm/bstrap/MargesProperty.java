@@ -25,12 +25,12 @@ public interface MargesProperty extends General {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Level</em>' attribute.
-	 * @see #setLevel(String)
+	 * @see #setLevel(int)
 	 * @see idm.bstrap.mm.bstrap.BstrapPackage#getMargesProperty_Level()
 	 * @model
 	 * @generated
 	 */
-	String getLevel();
+	int getLevel();
 
 	/**
 	 * Sets the value of the '{@link idm.bstrap.mm.bstrap.MargesProperty#getLevel <em>Level</em>}' attribute.
@@ -40,7 +40,7 @@ public interface MargesProperty extends General {
 	 * @see #getLevel()
 	 * @generated
 	 */
-	void setLevel(String value);
+	void setLevel(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Alignement</b></em>' attribute.

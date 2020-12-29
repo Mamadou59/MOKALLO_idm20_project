@@ -202,6 +202,12 @@ public class ListItemItemProvider extends ItemProviderAdapter implements IEditin
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LIST_ITEM__LISTITEMELEMENTS,
 				BstrapFactory.eINSTANCE.createItalic()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LIST_ITEM__LISTITEMELEMENTS,
+				BstrapFactory.eINSTANCE.createBlockQuote()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LIST_ITEM__LISTITEMELEMENTS,
+				BstrapFactory.eINSTANCE.createCodeBlock()));
 	}
 
 	/**

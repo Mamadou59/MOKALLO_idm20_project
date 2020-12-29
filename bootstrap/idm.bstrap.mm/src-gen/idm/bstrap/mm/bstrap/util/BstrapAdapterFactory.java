@@ -6,9 +6,12 @@ import idm.bstrap.mm.bstrap.Active;
 import idm.bstrap.mm.bstrap.Background;
 import idm.bstrap.mm.bstrap.Basic;
 import idm.bstrap.mm.bstrap.BasicList;
+import idm.bstrap.mm.bstrap.BasicTable;
+import idm.bstrap.mm.bstrap.BlockQuote;
 import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BorderProperty;
+import idm.bstrap.mm.bstrap.BorderedTable;
 import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
@@ -21,10 +24,13 @@ import idm.bstrap.mm.bstrap.Center;
 import idm.bstrap.mm.bstrap.Centered;
 import idm.bstrap.mm.bstrap.Circle;
 import idm.bstrap.mm.bstrap.Code;
+import idm.bstrap.mm.bstrap.CodeBlock;
+import idm.bstrap.mm.bstrap.CodeLine;
 import idm.bstrap.mm.bstrap.ColoredBorder;
 import idm.bstrap.mm.bstrap.CompositeTextElement;
 import idm.bstrap.mm.bstrap.ContainableTextElement;
 import idm.bstrap.mm.bstrap.Container;
+import idm.bstrap.mm.bstrap.DarkTable;
 import idm.bstrap.mm.bstrap.Disabled;
 import idm.bstrap.mm.bstrap.Display1;
 import idm.bstrap.mm.bstrap.Display2;
@@ -35,7 +41,9 @@ import idm.bstrap.mm.bstrap.Emphasis;
 import idm.bstrap.mm.bstrap.FixContainer;
 import idm.bstrap.mm.bstrap.FluidContainer;
 import idm.bstrap.mm.bstrap.General;
+import idm.bstrap.mm.bstrap.HorizontalLine;
 import idm.bstrap.mm.bstrap.HorizontalList;
+import idm.bstrap.mm.bstrap.HoverRows;
 import idm.bstrap.mm.bstrap.Image;
 import idm.bstrap.mm.bstrap.ImageAligning;
 import idm.bstrap.mm.bstrap.ImageProperty;
@@ -61,14 +69,23 @@ import idm.bstrap.mm.bstrap.Paragraphe;
 import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
+import idm.bstrap.mm.bstrap.StripedRows;
 import idm.bstrap.mm.bstrap.Strong;
-import idm.bstrap.mm.bstrap.TestNestedElement;
+import idm.bstrap.mm.bstrap.Table;
+import idm.bstrap.mm.bstrap.TableCell;
+import idm.bstrap.mm.bstrap.TableProperty;
+import idm.bstrap.mm.bstrap.TableRow;
+import idm.bstrap.mm.bstrap.TableSection;
+import idm.bstrap.mm.bstrap.Tbody;
 import idm.bstrap.mm.bstrap.Text;
 import idm.bstrap.mm.bstrap.TextContainable;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
 import idm.bstrap.mm.bstrap.TextNested;
+import idm.bstrap.mm.bstrap.TextNestedElement;
 import idm.bstrap.mm.bstrap.TextPageContent;
+import idm.bstrap.mm.bstrap.Tfoot;
+import idm.bstrap.mm.bstrap.Thead;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
 import idm.bstrap.mm.bstrap.UnOrderedList;
@@ -478,8 +495,8 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseTestNestedElement(TestNestedElement object) {
-			return createTestNestedElementAdapter();
+		public Adapter caseTextNestedElement(TextNestedElement object) {
+			return createTextNestedElementAdapter();
 		}
 
 		@Override
@@ -495,6 +512,91 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseLinkBrand(LinkBrand object) {
 			return createLinkBrandAdapter();
+		}
+
+		@Override
+		public Adapter caseTable(Table object) {
+			return createTableAdapter();
+		}
+
+		@Override
+		public Adapter caseThead(Thead object) {
+			return createTheadAdapter();
+		}
+
+		@Override
+		public Adapter caseTbody(Tbody object) {
+			return createTbodyAdapter();
+		}
+
+		@Override
+		public Adapter caseTfoot(Tfoot object) {
+			return createTfootAdapter();
+		}
+
+		@Override
+		public Adapter caseTableSection(TableSection object) {
+			return createTableSectionAdapter();
+		}
+
+		@Override
+		public Adapter caseTableRow(TableRow object) {
+			return createTableRowAdapter();
+		}
+
+		@Override
+		public Adapter caseTableCell(TableCell object) {
+			return createTableCellAdapter();
+		}
+
+		@Override
+		public Adapter caseTableProperty(TableProperty object) {
+			return createTablePropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseBasicTable(BasicTable object) {
+			return createBasicTableAdapter();
+		}
+
+		@Override
+		public Adapter caseStripedRows(StripedRows object) {
+			return createStripedRowsAdapter();
+		}
+
+		@Override
+		public Adapter caseBorderedTable(BorderedTable object) {
+			return createBorderedTableAdapter();
+		}
+
+		@Override
+		public Adapter caseHoverRows(HoverRows object) {
+			return createHoverRowsAdapter();
+		}
+
+		@Override
+		public Adapter caseDarkTable(DarkTable object) {
+			return createDarkTableAdapter();
+		}
+
+		@Override
+		public Adapter caseBlockQuote(BlockQuote object) {
+			return createBlockQuoteAdapter();
+		}
+
+		@Override
+		public Adapter caseCodeBlock(CodeBlock object) {
+			return createCodeBlockAdapter();
+		}
+
+		@Override
+		public Adapter caseCodeLine(CodeLine object) {
+			return createCodeLineAdapter();
+		}
+
+		@Override
+		public Adapter caseHorizontalLine(HorizontalLine object) {
+			return createHorizontalLineAdapter();
 		}
 
 		@Override
@@ -1469,16 +1571,16 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TestNestedElement <em>Test Nested Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TextNestedElement <em>Text Nested Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see idm.bstrap.mm.bstrap.TestNestedElement
+	 * @see idm.bstrap.mm.bstrap.TextNestedElement
 	 * @generated
 	 */
-	public Adapter createTestNestedElementAdapter() {
+	public Adapter createTextNestedElementAdapter() {
 		return null;
 	}
 
@@ -1521,6 +1623,244 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createLinkBrandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Table <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Table
+	 * @generated
+	 */
+	public Adapter createTableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Thead <em>Thead</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Thead
+	 * @generated
+	 */
+	public Adapter createTheadAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Tbody <em>Tbody</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Tbody
+	 * @generated
+	 */
+	public Adapter createTbodyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Tfoot <em>Tfoot</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Tfoot
+	 * @generated
+	 */
+	public Adapter createTfootAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TableSection <em>Table Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.TableSection
+	 * @generated
+	 */
+	public Adapter createTableSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TableRow <em>Table Row</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.TableRow
+	 * @generated
+	 */
+	public Adapter createTableRowAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TableCell <em>Table Cell</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.TableCell
+	 * @generated
+	 */
+	public Adapter createTableCellAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.TableProperty <em>Table Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.TableProperty
+	 * @generated
+	 */
+	public Adapter createTablePropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.BasicTable <em>Basic Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.BasicTable
+	 * @generated
+	 */
+	public Adapter createBasicTableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.StripedRows <em>Striped Rows</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.StripedRows
+	 * @generated
+	 */
+	public Adapter createStripedRowsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.BorderedTable <em>Bordered Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.BorderedTable
+	 * @generated
+	 */
+	public Adapter createBorderedTableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.HoverRows <em>Hover Rows</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.HoverRows
+	 * @generated
+	 */
+	public Adapter createHoverRowsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.DarkTable <em>Dark Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.DarkTable
+	 * @generated
+	 */
+	public Adapter createDarkTableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.BlockQuote <em>Block Quote</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.BlockQuote
+	 * @generated
+	 */
+	public Adapter createBlockQuoteAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.CodeBlock <em>Code Block</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.CodeBlock
+	 * @generated
+	 */
+	public Adapter createCodeBlockAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.CodeLine <em>Code Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.CodeLine
+	 * @generated
+	 */
+	public Adapter createCodeLineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.HorizontalLine <em>Horizontal Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.HorizontalLine
+	 * @generated
+	 */
+	public Adapter createHorizontalLineAdapter() {
 		return null;
 	}
 

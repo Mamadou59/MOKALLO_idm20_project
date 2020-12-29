@@ -61,7 +61,7 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS);
+			childrenFeatures.add(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS);
 			childrenFeatures.add(BstrapPackage.Literals.LINK__LINKPROPERTIES);
 		}
 		return childrenFeatures;
@@ -126,7 +126,7 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Link.class)) {
-		case BstrapPackage.LINK__TESTNESTEDELEMENTS:
+		case BstrapPackage.LINK__TEXTNESTEDELEMENTS:
 		case BstrapPackage.LINK__LINKPROPERTIES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -145,16 +145,16 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createText()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createCode()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createStrong()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createItalic()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__LINKPROPERTIES,

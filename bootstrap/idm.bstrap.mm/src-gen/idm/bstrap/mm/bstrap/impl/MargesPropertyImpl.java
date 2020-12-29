@@ -35,7 +35,7 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LEVEL_EDEFAULT = null;
+	protected static final int LEVEL_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getLevel() <em>Level</em>}' attribute.
@@ -45,7 +45,7 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	 * @generated
 	 * @ordered
 	 */
-	protected String level = LEVEL_EDEFAULT;
+	protected int level = LEVEL_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getAlignement() <em>Alignement</em>}' attribute.
@@ -91,7 +91,7 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLevel() {
+	public int getLevel() {
 		return level;
 	}
 
@@ -100,8 +100,8 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel(String newLevel) {
-		String oldLevel = level;
+	public void setLevel(int newLevel) {
+		int oldLevel = level;
 		level = newLevel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BstrapPackage.MARGES_PROPERTY__LEVEL, oldLevel,
@@ -155,7 +155,7 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case BstrapPackage.MARGES_PROPERTY__LEVEL:
-			setLevel((String) newValue);
+			setLevel((Integer) newValue);
 			return;
 		case BstrapPackage.MARGES_PROPERTY__ALIGNEMENT:
 			setAlignement((Alignement) newValue);
@@ -191,7 +191,7 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case BstrapPackage.MARGES_PROPERTY__LEVEL:
-			return LEVEL_EDEFAULT == null ? level != null : !LEVEL_EDEFAULT.equals(level);
+			return level != LEVEL_EDEFAULT;
 		case BstrapPackage.MARGES_PROPERTY__ALIGNEMENT:
 			return alignement != ALIGNEMENT_EDEFAULT;
 		}

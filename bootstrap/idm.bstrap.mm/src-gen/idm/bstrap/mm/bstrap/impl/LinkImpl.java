@@ -5,8 +5,8 @@ package idm.bstrap.mm.bstrap.impl;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Link;
 import idm.bstrap.mm.bstrap.LinkProperty;
-import idm.bstrap.mm.bstrap.TestNestedElement;
 import idm.bstrap.mm.bstrap.TextNested;
+import idm.bstrap.mm.bstrap.TextNestedElement;
 
 import java.util.Collection;
 
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link idm.bstrap.mm.bstrap.impl.LinkImpl#getTestnestedelements <em>Testnestedelements</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.LinkImpl#getTextnestedelements <em>Textnestedelements</em>}</li>
  *   <li>{@link idm.bstrap.mm.bstrap.impl.LinkImpl#getLinkproperties <em>Linkproperties</em>}</li>
  * </ul>
  *
@@ -36,14 +36,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	/**
-	 * The cached value of the '{@link #getTestnestedelements() <em>Testnestedelements</em>}' containment reference list.
+	 * The cached value of the '{@link #getTextnestedelements() <em>Textnestedelements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTestnestedelements()
+	 * @see #getTextnestedelements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TestNestedElement> testnestedelements;
+	protected EList<TextNestedElement> textnestedelements;
 
 	/**
 	 * The cached value of the '{@link #getLinkproperties() <em>Linkproperties</em>}' containment reference list.
@@ -79,12 +79,12 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TestNestedElement> getTestnestedelements() {
-		if (testnestedelements == null) {
-			testnestedelements = new EObjectContainmentEList<TestNestedElement>(TestNestedElement.class, this,
-					BstrapPackage.LINK__TESTNESTEDELEMENTS);
+	public EList<TextNestedElement> getTextnestedelements() {
+		if (textnestedelements == null) {
+			textnestedelements = new EObjectContainmentEList<TextNestedElement>(TextNestedElement.class, this,
+					BstrapPackage.LINK__TEXTNESTEDELEMENTS);
 		}
-		return testnestedelements;
+		return textnestedelements;
 	}
 
 	/**
@@ -108,8 +108,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case BstrapPackage.LINK__TESTNESTEDELEMENTS:
-			return ((InternalEList<?>) getTestnestedelements()).basicRemove(otherEnd, msgs);
+		case BstrapPackage.LINK__TEXTNESTEDELEMENTS:
+			return ((InternalEList<?>) getTextnestedelements()).basicRemove(otherEnd, msgs);
 		case BstrapPackage.LINK__LINKPROPERTIES:
 			return ((InternalEList<?>) getLinkproperties()).basicRemove(otherEnd, msgs);
 		}
@@ -124,8 +124,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BstrapPackage.LINK__TESTNESTEDELEMENTS:
-			return getTestnestedelements();
+		case BstrapPackage.LINK__TEXTNESTEDELEMENTS:
+			return getTextnestedelements();
 		case BstrapPackage.LINK__LINKPROPERTIES:
 			return getLinkproperties();
 		}
@@ -141,9 +141,9 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BstrapPackage.LINK__TESTNESTEDELEMENTS:
-			getTestnestedelements().clear();
-			getTestnestedelements().addAll((Collection<? extends TestNestedElement>) newValue);
+		case BstrapPackage.LINK__TEXTNESTEDELEMENTS:
+			getTextnestedelements().clear();
+			getTextnestedelements().addAll((Collection<? extends TextNestedElement>) newValue);
 			return;
 		case BstrapPackage.LINK__LINKPROPERTIES:
 			getLinkproperties().clear();
@@ -161,8 +161,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.LINK__TESTNESTEDELEMENTS:
-			getTestnestedelements().clear();
+		case BstrapPackage.LINK__TEXTNESTEDELEMENTS:
+			getTextnestedelements().clear();
 			return;
 		case BstrapPackage.LINK__LINKPROPERTIES:
 			getLinkproperties().clear();
@@ -179,8 +179,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.LINK__TESTNESTEDELEMENTS:
-			return testnestedelements != null && !testnestedelements.isEmpty();
+		case BstrapPackage.LINK__TEXTNESTEDELEMENTS:
+			return textnestedelements != null && !textnestedelements.isEmpty();
 		case BstrapPackage.LINK__LINKPROPERTIES:
 			return linkproperties != null && !linkproperties.isEmpty();
 		}
@@ -196,8 +196,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == TextNested.class) {
 			switch (derivedFeatureID) {
-			case BstrapPackage.LINK__TESTNESTEDELEMENTS:
-				return BstrapPackage.TEXT_NESTED__TESTNESTEDELEMENTS;
+			case BstrapPackage.LINK__TEXTNESTEDELEMENTS:
+				return BstrapPackage.TEXT_NESTED__TEXTNESTEDELEMENTS;
 			default:
 				return -1;
 			}
@@ -214,8 +214,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == TextNested.class) {
 			switch (baseFeatureID) {
-			case BstrapPackage.TEXT_NESTED__TESTNESTEDELEMENTS:
-				return BstrapPackage.LINK__TESTNESTEDELEMENTS;
+			case BstrapPackage.TEXT_NESTED__TEXTNESTEDELEMENTS:
+				return BstrapPackage.LINK__TEXTNESTEDELEMENTS;
 			default:
 				return -1;
 			}

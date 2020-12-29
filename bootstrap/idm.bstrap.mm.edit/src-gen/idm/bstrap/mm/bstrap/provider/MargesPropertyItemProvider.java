@@ -63,7 +63,7 @@ public class MargesPropertyItemProvider extends GeneralItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_MargesProperty_level_feature",
 								"_UI_MargesProperty_type"),
 						BstrapPackage.Literals.MARGES_PROPERTY__LEVEL, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -111,9 +111,8 @@ public class MargesPropertyItemProvider extends GeneralItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MargesProperty) object).getLevel();
-		return label == null || label.length() == 0 ? getString("_UI_MargesProperty_type")
-				: getString("_UI_MargesProperty_type") + " " + label;
+		MargesProperty margesProperty = (MargesProperty) object;
+		return getString("_UI_MargesProperty_type") + " " + margesProperty.getLevel();
 	}
 
 	/**
