@@ -17,9 +17,8 @@ mapping usdMM::Text::textUsd2TextBstrap() : bstrapMM::Text
 		textContent := textContent.substringBefore("]").substringAfter("[");
 	};
 	text := textContent.trim();
-	
-	
 }
+
 
 /**
 * A mapper which map an usd Code element to bstrap code element.
@@ -168,8 +167,6 @@ mapping usdMM::Button::buttonUsd2ButtonBstrap() : bstrapMM::Button{
 		}
 	}
 }
-
-
 
 /**
 * A mapper wich map an usd TextElement element to bstrap TextElement element.

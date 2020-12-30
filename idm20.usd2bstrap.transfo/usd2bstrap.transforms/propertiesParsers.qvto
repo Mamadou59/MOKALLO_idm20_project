@@ -387,6 +387,36 @@ helper String::getTabProperty() : bstrapMM::TableProperty {
 	return null ;
 }
 
+/**
+* helper to get usd Text element which contains properties, 
+*/
+helper usdMM::Section::getPropertyTextElement() : usdMM::Text {
+	return  self.contents[usdMM::Paragraph].textElements[usdMM::Text] -> 
+				selectOne(t | t.text.toLower().trim().startsWith("properties:"));
+}
 
+/**
+* helper to check if section contains fixcontainer property, 
+*/
+helper usdMM::Section::isFixContainer() : Boolean {
+	var text := self.getPropertyTextElement();
+	return text <> null and text.text.trim().toLower().find("fixcontainer") > 0;
+}
+
+/**
+* helper to check if section contains fluidcontainer property, 
+*/
+helper usdMM::Section::isFluidContainer() : Boolean {
+	var text := self.getPropertyTextElement();
+	return text <> null and text.text.toLower().trim().find("fluidcontainer") > 0;
+}
+
+/**
+* helper to check if in the given Paragraph usd element whe can find at least one element to be displayed in this paragraph, 
+*/
+helper usdMM::Paragraph::isThereElementToBeDisplayed() : Boolean {
+	var textElementsWithProps := self.textElements[usdMM::Text] -> selectOne(t | t.text.isPropertyLine());
+	return (textElementsWithProps -> size() <> self.textElements -> size())	
+}
 
 
