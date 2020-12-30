@@ -346,6 +346,46 @@ helper String::getImageAligning() : bstrapMM::ImageAligning {
 	return null;
 }
 
+/**
+* helper to check from given String if it contains properties, 
+*/
+helper String::isPropertyLine() : Boolean {
+	return self.startsWith("properties:(");
+}
+
+/**
+* helper to check if given ListItem is a properties, 
+*/
+helper usdMM::ListItem::isListProperties() : Boolean {
+	return self.elements[usdMM::Paragraph].subobjects()[usdMM::Text] -> selectOne(t | t.text.isPropertyLine()) <> null;
+}
+
+/**
+* helper to construct a BasicList property from a given string which contains property, 
+*/
+helper String::getBasicList() : bstrapMM::ListProperty {
+	var prop := self.toLower();
+	switch {
+		case (prop.find("basiclist") > 0) return object bstrapMM::BasicList {};
+		case (prop.find("horizontallist") > 0) return object bstrapMM::HorizontalList {};
+	};
+	return null ;
+}
+
+/**
+* helper to construct a Table property from a given string which contains property, 
+*/
+helper String::getTabProperty() : bstrapMM::TableProperty {
+	var prop := self.toLower();
+	switch {
+		case (prop.find("basictable") > 0) return object bstrapMM::BasicTable {};
+		case (prop.find("borderedtable") > 0) return object bstrapMM::BorderedTable {};
+		case (prop.find("darktable") > 0) return object bstrapMM::DarkTable {};
+		case (prop.find("stripedrows") > 0) return object bstrapMM::StripedRows {};
+		case (prop.find("hoverrows") > 0) return object bstrapMM::HoverRows {};
+	};
+	return null ;
+}
 
 
 

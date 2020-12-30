@@ -19,12 +19,11 @@ query String::findProperty() : String {
 * A query to find specific text in to String 
 */
 query String::getText() : String {
-	
-	var textContent := self.substringAfter(')');
-	if (textContent = null){
-		textContent := self;
+	var text := self;
+	while (text.find(")")>0) {
+		text := text.substringAfter(")");
 	};
-	return textContent;
+	return text;
 }
 
 /**
