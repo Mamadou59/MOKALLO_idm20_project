@@ -1,0 +1,134 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module handleClass.
+ */]
+[module handleGeneralProperties('http://www.example.org/bstrap')]
+[import idm::bootstraptransfo::bstrap::gen::java::request::defineWebSiteConcepts /]
+
+
+[comment]+++++++++++  general Properties   ++++++++++++++++++++++++++++++[/comment]
+
+[**
+ * Handle all generalProperties
+ * @param aGeneralProperty
+ */]
+[template public getGeneralClass(aGeneralProperty : General)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle all generalProperties(MargesProperty)
+ * @param aGeneralProperty
+ * return  m/p(t,b,l,r)-3
+ */]
+[template public getGeneralClass(aGeneralProperty : MargesProperty)]
+ [self.getMargesLetter()/]
+[/template]
+[**
+ * Handle all generalProperties(BorderProperty)
+ * @param aGeneralProperty
+ * border border/border-color
+ */]
+[template public getGeneralClass(aGeneralProperty : BorderProperty)]
+  [self.getBorderProperty()/]
+[/template]
+[**
+ * Handle all generalProperties(Background)
+ * @param aGeneralProperty
+ * bg-color
+ */]
+[template public getGeneralClass(aGeneralProperty : Background)]
+ bg-[self.color.getColor()/]
+[/template]
+
+
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+[comment]+++++++++++  Marges Properties   ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle MargesProperty (Margin)
+ * @param aMargesProperty
+ */]
+
+[template private getMargesLetter(aMargesProperty : MargesProperty)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle MargesProperty (Margin)
+ * @param aMargesProperty
+ */]
+
+[template private getMargesLetter(aMargesProperty : Margin)]
+m[self.alignement.getAlignement()/]-[self.level/]
+[/template]
+[**
+ * Handle MargesProperty (Margin)
+ * @param aMargesProperty
+ */]
+
+[template private getMargesLetter(aMargesProperty : Padding)]
+p[self.alignement.getAlignement()/]-[self.level/]
+[/template]
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+[comment]+++++++++++  Border Properties   ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle BorderProperty (Border & ColoredBorder)
+ * @param aBorderProperty
+ */]
+[template private getBorderProperty(aBorderProperty : BorderProperty)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle BorderProperty (Border)
+ * @param aBorderProperty
+ */]
+[template private getBorderProperty(aBorderProperty : Border)]
+border
+[/template]
+[**
+ * Handle BorderProperty (  ColoredBorder)
+ * @param aBorderProperty
+ */]
+[template private getBorderProperty(aBorderProperty : ColoredBorder)]
+border-[self.color.getColor()/]
+[/template]
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+[comment]+++++++++++  Background Properties   ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle BackgroundProperty (Border & ColoredBorder)
+ * @param aBorderProperty
+ */]
+[template private getBackgroundProperty(aBackgroundProperty : Background)]
+[self.declareComment()/]
+[/template]
+
+
+
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+[comment]+++++++++++  Text Properties   ++++++++++++++++++++++++++++++[/comment]
+[template public getEmphasisProperty(anEmphasis : Emphasis)]
+[self.declareComment()/]
+[/template]
+[template public getEmphasisProperty(anEmphasis : ItalicProperty)]
+ font-italic
+[/template]
+[template public getEmphasisProperty(anEmphasis : Bold)]
+ font-weight-bold
+[/template]
+
+
+
+[comment] ---------------------------------------------------------------------------	[/comment]
+
+
+
+
+
+
+
+

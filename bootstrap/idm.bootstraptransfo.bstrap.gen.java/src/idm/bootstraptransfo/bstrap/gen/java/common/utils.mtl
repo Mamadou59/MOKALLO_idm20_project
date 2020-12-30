@@ -1,0 +1,152 @@
+[**
+ * This module ensures the definition of some utils functions to use for the generation of code
+ */]
+[module utils('http://www.example.org/bstrap')]
+[import idm::bootstraptransfo::bstrap::gen::java::request::defineWebSiteConcepts /]
+[import idm::bootstraptransfo::bstrap::gen::java::common::handleGeneralProperties /]
+[import idm::bootstraptransfo::bstrap::gen::java::common::handleSpecificProperties /]
+[import idm::bootstraptransfo::bstrap::gen::java::common::handleTypes/]
+[comment][import idm::bootstraptransfo::bstrap::gen::java::common::handleTypes /]
+[import idm::bootstraptransfo::bstrap::gen::java::common::handleGeneralProperties /]
+[import idm::bootstraptransfo::bstrap::gen::java::common::handleSpecificProperties /][/comment]
+
+[**
+ * Generate the head of  a website page
+ */]
+[template public generatePageHeader(aPage : Page)]
+<head>
+  <title>[self.getPageName()/]</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+[/template]
+
+[**
+ * Generate the body of a website page
+ */]
+[template public generateBody(aPage : Page)]
+<body>
+[for (aPageContent : PageContent | aPage.eContents(PageContent))]
+  [aPageContent.generatePageContentElement()/]
+[/for]
+</body>
+[/template]
+[comment]+++++++++++  Page Content   ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle code generation of a  PageContent element in a Page (container,TextPageContent) 
+ */]
+[template public generatePageContentElement(aPageContent : PageContent)]
+[self.declareComment()/]
+[/template]
+
+[**
+ * Handle code generation of a container  element in a Page (container)  
+ */]
+[template public generatePageContentElement(aContainer : Container) 
+{ 
+aBalise : String = 'div'; 
+subContainers : Sequence(Container) = self.eContents(Container);
+textpageContents : Sequence(TextPageContent) = self.eContents(TextPageContent);
+}]
+<[aBalise/] [self.declareClass()/]"[aContainer.getContainerClass()/] [self.generalProperties.getGeneralClass()/]">
+[for (aPageContent : PageContent | aContainer.eContents(PageContent))]
+  [aPageContent.generatePageContentElement()/] 
+[/for]
+[getCloseBaliseName(aBalise)/]
+[/template]
+
+[**
+ * Handle code generation of TextPageContent  element in a Page  (TextPageContent)
+ */]
+[template public generatePageContentElement(aPageContent : TextPageContent)]
+[self.generateTextPageContentElement()/]
+[/template]
+[comment]-----------------------------------------------------[/comment]
+
+
+
+[comment]+++++++++++TextPageContent++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle code generation of TextPageContent in a Page (TextContainer,ContainableTextElement)  
+ */]
+[template public generateTextPageContentElement(aTextPageContent : TextPageContent)]
+[self.declareComment()/]
+[/template]
+
+[**
+ * Handle code generation of a TextContainer (TextContainer)  
+ */]
+[template public generateTextPageContentElement(aTextPageContent : TextContainer)]
+[self.generateTextContainer()/]
+[/template]
+
+[**
+ * Handle code generation of a containableTextElement in a Page  (ContainableTextElement)
+ */]
+[template public generateTextPageContentElement(aTextPageContent : ContainableTextElement)]
+[self.generateContainableTextElement()/]
+[/template]
+
+[**
+ * Handle code generation of a ListElement in a Page  (ListElement)
+ */]
+[template public generateTextPageContentElement(aListElement : ListElement)]
+[self.generateListElement()/]
+[/template]
+[**
+ * Handle code generation of a Navigation in a Page  (Navigation)
+ */]
+[template public generateTextPageContentElement(aNavigation : Navigation)]
+[self.generateNavigationProperty()/]
+[/template]
+
+[**
+ * Handle code generation of a Table in a Page  (Table)
+ */]
+[template public generateTextPageContentElement(aTable : Table) ]
+[self.generateTableElement()/]
+[/template]
+
+[**
+ * Handle code generation of a BlockQuote in a Page  (BlockQuote)
+ */]
+[template public generateTextPageContentElement(aBlockQuote : BlockQuote) ]
+[self.generateBlockQuoteElement()/]
+[/template]
+[**
+ * Handle code generation of a CodeBlock in a Page  (CodeBlock)
+ */]
+[template public generateTextPageContentElement(aCodeBlock : CodeBlock) ]
+[self.generateCodeBlockElement()/]
+[/template]
+[**
+ * Handle code generation of a HorizontalLine in a Page  (HorizontalLine)
+ */]
+[template public generateTextPageContentElement(aHorizontalLine : HorizontalLine) ]
+[self.generateHorizontalLine()/]
+[/template]
+
+
+[comment]-------------------- ----------------------------------[/comment]
+
+[comment]+++++++++++++++ Main BlockQuote ++++++++++++++[/comment]
+[**
+ * handle BlockQuote (BlockQuote)  
+ */]
+[template public generateBlockQuoteElement(aBlockQuote : BlockQuote) { aBaliseName : String = 'blockquote'; }]
+<[aBaliseName/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] blockquote " >
+[self.pagecontents.generatePageContentElement()/]
+[aBaliseName.getCloseBaliseName()/]
+[/template]
+
+[comment]------------------------------------------------------[/comment]
+
+
+
+
+
+

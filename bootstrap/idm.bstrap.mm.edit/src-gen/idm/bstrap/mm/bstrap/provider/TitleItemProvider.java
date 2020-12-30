@@ -4,6 +4,7 @@ package idm.bstrap.mm.bstrap.provider;
 
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
+import idm.bstrap.mm.bstrap.Color;
 import idm.bstrap.mm.bstrap.Title;
 
 import java.util.Collection;
@@ -126,8 +127,10 @@ public class TitleItemProvider extends TextContainerItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		Title title = (Title) object;
-		return getString("_UI_Title_type") + " " + title.getLevel();
+		Color labelValue = ((Title) object).getColor();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ? getString("_UI_Title_type")
+				: getString("_UI_Title_type") + " " + label;
 	}
 
 	/**

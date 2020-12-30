@@ -73,9 +73,8 @@ public class PaddingItemProvider extends MargesPropertyItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Padding) object).getLevel();
-		return label == null || label.length() == 0 ? getString("_UI_Padding_type")
-				: getString("_UI_Padding_type") + " " + label;
+		Padding padding = (Padding) object;
+		return getString("_UI_Padding_type") + " " + padding.getLevel();
 	}
 
 	/**

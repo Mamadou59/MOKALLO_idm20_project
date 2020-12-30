@@ -6,6 +6,7 @@ import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.ContainableTextElement;
 import idm.bstrap.mm.bstrap.General;
 import idm.bstrap.mm.bstrap.PageContent;
+import idm.bstrap.mm.bstrap.TextPageContent;
 
 import java.util.Collection;
 
@@ -34,7 +35,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ContainableTextElementImpl extends MinimalEObjectImpl.Container implements ContainableTextElement {
+public abstract class ContainableTextElementImpl extends MinimalEObjectImpl.Container
+		implements ContainableTextElement {
 	/**
 	 * The cached value of the '{@link #getGeneralProperties() <em>General Properties</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -166,6 +168,12 @@ public class ContainableTextElementImpl extends MinimalEObjectImpl.Container imp
 				return -1;
 			}
 		}
+		if (baseClass == TextPageContent.class) {
+			switch (derivedFeatureID) {
+			default:
+				return -1;
+			}
+		}
 		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
 	}
 
@@ -180,6 +188,12 @@ public class ContainableTextElementImpl extends MinimalEObjectImpl.Container imp
 			switch (baseFeatureID) {
 			case BstrapPackage.PAGE_CONTENT__GENERAL_PROPERTIES:
 				return BstrapPackage.CONTAINABLE_TEXT_ELEMENT__GENERAL_PROPERTIES;
+			default:
+				return -1;
+			}
+		}
+		if (baseClass == TextPageContent.class) {
+			switch (baseFeatureID) {
 			default:
 				return -1;
 			}

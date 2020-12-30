@@ -2,6 +2,7 @@
  */
 package idm.bstrap.mm.bstrap.impl;
 
+import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.MargesProperty;
 
@@ -20,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link idm.bstrap.mm.bstrap.impl.MargesPropertyImpl#getLevel <em>Level</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.MargesPropertyImpl#getAlignement <em>Alignement</em>}</li>
  * </ul>
  *
  * @generated
@@ -33,7 +35,7 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String LEVEL_EDEFAULT = null;
+	protected static final int LEVEL_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getLevel() <em>Level</em>}' attribute.
@@ -43,7 +45,27 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	 * @generated
 	 * @ordered
 	 */
-	protected String level = LEVEL_EDEFAULT;
+	protected int level = LEVEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAlignement() <em>Alignement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlignement()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Alignement ALIGNEMENT_EDEFAULT = Alignement.CENTER;
+
+	/**
+	 * The cached value of the '{@link #getAlignement() <em>Alignement</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAlignement()
+	 * @generated
+	 * @ordered
+	 */
+	protected Alignement alignement = ALIGNEMENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +91,7 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getLevel() {
+	public int getLevel() {
 		return level;
 	}
 
@@ -78,12 +100,34 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setLevel(String newLevel) {
-		String oldLevel = level;
+	public void setLevel(int newLevel) {
+		int oldLevel = level;
 		level = newLevel;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BstrapPackage.MARGES_PROPERTY__LEVEL, oldLevel,
 					level));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Alignement getAlignement() {
+		return alignement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAlignement(Alignement newAlignement) {
+		Alignement oldAlignement = alignement;
+		alignement = newAlignement == null ? ALIGNEMENT_EDEFAULT : newAlignement;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BstrapPackage.MARGES_PROPERTY__ALIGNEMENT,
+					oldAlignement, alignement));
 	}
 
 	/**
@@ -96,6 +140,8 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 		switch (featureID) {
 		case BstrapPackage.MARGES_PROPERTY__LEVEL:
 			return getLevel();
+		case BstrapPackage.MARGES_PROPERTY__ALIGNEMENT:
+			return getAlignement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,7 +155,10 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case BstrapPackage.MARGES_PROPERTY__LEVEL:
-			setLevel((String) newValue);
+			setLevel((Integer) newValue);
+			return;
+		case BstrapPackage.MARGES_PROPERTY__ALIGNEMENT:
+			setAlignement((Alignement) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,6 +175,9 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 		case BstrapPackage.MARGES_PROPERTY__LEVEL:
 			setLevel(LEVEL_EDEFAULT);
 			return;
+		case BstrapPackage.MARGES_PROPERTY__ALIGNEMENT:
+			setAlignement(ALIGNEMENT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -139,7 +191,9 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case BstrapPackage.MARGES_PROPERTY__LEVEL:
-			return LEVEL_EDEFAULT == null ? level != null : !LEVEL_EDEFAULT.equals(level);
+			return level != LEVEL_EDEFAULT;
+		case BstrapPackage.MARGES_PROPERTY__ALIGNEMENT:
+			return alignement != ALIGNEMENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -157,6 +211,8 @@ public abstract class MargesPropertyImpl extends GeneralImpl implements MargesPr
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (level: ");
 		result.append(level);
+		result.append(", alignement: ");
+		result.append(alignement);
 		result.append(')');
 		return result.toString();
 	}

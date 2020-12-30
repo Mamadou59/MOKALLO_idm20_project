@@ -34,7 +34,7 @@ public class BackgroundImpl extends GeneralImpl implements Background {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color COLOR_EDEFAULT = Color.DARK;
+	protected static final Color COLOR_EDEFAULT = Color.WHITE;
 
 	/**
 	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.

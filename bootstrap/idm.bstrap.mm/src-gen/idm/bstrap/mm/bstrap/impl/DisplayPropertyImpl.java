@@ -7,8 +7,6 @@ import idm.bstrap.mm.bstrap.DisplayProperty;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Display Property</b></em>'.
@@ -16,7 +14,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public abstract class DisplayPropertyImpl extends MinimalEObjectImpl.Container implements DisplayProperty {
+public abstract class DisplayPropertyImpl extends PropertyClassImpl implements DisplayProperty {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

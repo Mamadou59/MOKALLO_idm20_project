@@ -3,22 +3,31 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.Active;
+import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.Background;
 import idm.bstrap.mm.bstrap.Basic;
-import idm.bstrap.mm.bstrap.Blockquote;
+import idm.bstrap.mm.bstrap.BasicList;
+import idm.bstrap.mm.bstrap.BasicTable;
+import idm.bstrap.mm.bstrap.BlockQuote;
+import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.Border;
+import idm.bstrap.mm.bstrap.BorderedTable;
+import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
+import idm.bstrap.mm.bstrap.ButtonLink;
 import idm.bstrap.mm.bstrap.ButtonSize;
+import idm.bstrap.mm.bstrap.ButtonStyle;
 import idm.bstrap.mm.bstrap.Center;
+import idm.bstrap.mm.bstrap.Centered;
 import idm.bstrap.mm.bstrap.Circle;
 import idm.bstrap.mm.bstrap.Code;
+import idm.bstrap.mm.bstrap.CodeBlock;
+import idm.bstrap.mm.bstrap.CodeLine;
 import idm.bstrap.mm.bstrap.Color;
 import idm.bstrap.mm.bstrap.ColoredBorder;
-import idm.bstrap.mm.bstrap.CompositeTextElement;
-import idm.bstrap.mm.bstrap.ContainableTextElement;
-import idm.bstrap.mm.bstrap.Dark;
+import idm.bstrap.mm.bstrap.DarkTable;
 import idm.bstrap.mm.bstrap.Disabled;
 import idm.bstrap.mm.bstrap.Display1;
 import idm.bstrap.mm.bstrap.Display2;
@@ -26,24 +35,37 @@ import idm.bstrap.mm.bstrap.Display3;
 import idm.bstrap.mm.bstrap.Display4;
 import idm.bstrap.mm.bstrap.FixContainer;
 import idm.bstrap.mm.bstrap.FluidContainer;
+import idm.bstrap.mm.bstrap.HorizontalLine;
+import idm.bstrap.mm.bstrap.HorizontalList;
+import idm.bstrap.mm.bstrap.HoverRows;
 import idm.bstrap.mm.bstrap.Image;
-import idm.bstrap.mm.bstrap.Info;
-import idm.bstrap.mm.bstrap.Light;
+import idm.bstrap.mm.bstrap.Italic;
+import idm.bstrap.mm.bstrap.ItalicProperty;
 import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.LinkBrand;
+import idm.bstrap.mm.bstrap.ListItem;
 import idm.bstrap.mm.bstrap.Margin;
+import idm.bstrap.mm.bstrap.Navigation;
+import idm.bstrap.mm.bstrap.OrderList;
 import idm.bstrap.mm.bstrap.Padding;
 import idm.bstrap.mm.bstrap.Page;
-import idm.bstrap.mm.bstrap.PageContent;
 import idm.bstrap.mm.bstrap.Paragraphe;
-import idm.bstrap.mm.bstrap.Primary;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
-import idm.bstrap.mm.bstrap.Secondary;
 import idm.bstrap.mm.bstrap.Size;
-import idm.bstrap.mm.bstrap.Succes;
+import idm.bstrap.mm.bstrap.StripedRows;
+import idm.bstrap.mm.bstrap.Strong;
+import idm.bstrap.mm.bstrap.Table;
+import idm.bstrap.mm.bstrap.TableCell;
+import idm.bstrap.mm.bstrap.TableRow;
+import idm.bstrap.mm.bstrap.Tbody;
 import idm.bstrap.mm.bstrap.Text;
+import idm.bstrap.mm.bstrap.Tfoot;
+import idm.bstrap.mm.bstrap.Thead;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
+import idm.bstrap.mm.bstrap.UnOrderedList;
+import idm.bstrap.mm.bstrap.Vertical;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -112,14 +134,8 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createText();
 		case BstrapPackage.CODE:
 			return createCode();
-		case BstrapPackage.BLOCKQUOTE:
-			return createBlockquote();
-		case BstrapPackage.COMPOSITE_TEXT_ELEMENT:
-			return createCompositeTextElement();
 		case BstrapPackage.IMAGE:
 			return createImage();
-		case BstrapPackage.CONTAINABLE_TEXT_ELEMENT:
-			return createContainableTextElement();
 		case BstrapPackage.MARGIN:
 			return createMargin();
 		case BstrapPackage.PADDING:
@@ -138,20 +154,6 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createDisplay3();
 		case BstrapPackage.DISPLAY4:
 			return createDisplay4();
-		case BstrapPackage.BASIC:
-			return createBasic();
-		case BstrapPackage.PRIMARY:
-			return createPrimary();
-		case BstrapPackage.SECONDARY:
-			return createSecondary();
-		case BstrapPackage.DARK:
-			return createDark();
-		case BstrapPackage.INFO:
-			return createInfo();
-		case BstrapPackage.LIGHT:
-			return createLight();
-		case BstrapPackage.SUCCES:
-			return createSucces();
 		case BstrapPackage.ROUNDED:
 			return createRounded();
 		case BstrapPackage.THUMBNAIL:
@@ -164,18 +166,80 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createCenter();
 		case BstrapPackage.RESPONSIVE:
 			return createResponsive();
+		case BstrapPackage.BUTTON_STYLE:
+			return createButtonStyle();
 		case BstrapPackage.BUTTON_SIZE:
 			return createButtonSize();
-		case BstrapPackage.LINK:
-			return createLink();
+		case BstrapPackage.BUTTON_LINK:
+			return createButtonLink();
 		case BstrapPackage.DISABLED:
 			return createDisabled();
 		case BstrapPackage.ACTIVE:
 			return createActive();
 		case BstrapPackage.BUTTON:
 			return createButton();
-		case BstrapPackage.PAGE_CONTENT:
-			return createPageContent();
+		case BstrapPackage.ORDER_LIST:
+			return createOrderList();
+		case BstrapPackage.UN_ORDERED_LIST:
+			return createUnOrderedList();
+		case BstrapPackage.LIST_ITEM:
+			return createListItem();
+		case BstrapPackage.NAVIGATION:
+			return createNavigation();
+		case BstrapPackage.CENTERED:
+			return createCentered();
+		case BstrapPackage.BASIC_LIST:
+			return createBasicList();
+		case BstrapPackage.HORIZONTAL_LIST:
+			return createHorizontalList();
+		case BstrapPackage.BASIC:
+			return createBasic();
+		case BstrapPackage.VERTICAL:
+			return createVertical();
+		case BstrapPackage.ITALIC_PROPERTY:
+			return createItalicProperty();
+		case BstrapPackage.BOLD:
+			return createBold();
+		case BstrapPackage.LINK:
+			return createLink();
+		case BstrapPackage.STRONG:
+			return createStrong();
+		case BstrapPackage.ITALIC:
+			return createItalic();
+		case BstrapPackage.BRAND:
+			return createBrand();
+		case BstrapPackage.LINK_BRAND:
+			return createLinkBrand();
+		case BstrapPackage.TABLE:
+			return createTable();
+		case BstrapPackage.THEAD:
+			return createThead();
+		case BstrapPackage.TBODY:
+			return createTbody();
+		case BstrapPackage.TFOOT:
+			return createTfoot();
+		case BstrapPackage.TABLE_ROW:
+			return createTableRow();
+		case BstrapPackage.TABLE_CELL:
+			return createTableCell();
+		case BstrapPackage.BASIC_TABLE:
+			return createBasicTable();
+		case BstrapPackage.STRIPED_ROWS:
+			return createStripedRows();
+		case BstrapPackage.BORDERED_TABLE:
+			return createBorderedTable();
+		case BstrapPackage.HOVER_ROWS:
+			return createHoverRows();
+		case BstrapPackage.DARK_TABLE:
+			return createDarkTable();
+		case BstrapPackage.BLOCK_QUOTE:
+			return createBlockQuote();
+		case BstrapPackage.CODE_BLOCK:
+			return createCodeBlock();
+		case BstrapPackage.CODE_LINE:
+			return createCodeLine();
+		case BstrapPackage.HORIZONTAL_LINE:
+			return createHorizontalLine();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -193,6 +257,8 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createColorFromString(eDataType, initialValue);
 		case BstrapPackage.SIZE:
 			return createSizeFromString(eDataType, initialValue);
+		case BstrapPackage.ALIGNEMENT:
+			return createAlignementFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -210,6 +276,8 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return convertColorToString(eDataType, instanceValue);
 		case BstrapPackage.SIZE:
 			return convertSizeToString(eDataType, instanceValue);
+		case BstrapPackage.ALIGNEMENT:
+			return convertAlignementToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -290,39 +358,9 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Blockquote createBlockquote() {
-		BlockquoteImpl blockquote = new BlockquoteImpl();
-		return blockquote;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public CompositeTextElement createCompositeTextElement() {
-		CompositeTextElementImpl compositeTextElement = new CompositeTextElementImpl();
-		return compositeTextElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Image createImage() {
 		ImageImpl image = new ImageImpl();
 		return image;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ContainableTextElement createContainableTextElement() {
-		ContainableTextElementImpl containableTextElement = new ContainableTextElementImpl();
-		return containableTextElement;
 	}
 
 	/**
@@ -420,76 +458,6 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Basic createBasic() {
-		BasicImpl basic = new BasicImpl();
-		return basic;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Primary createPrimary() {
-		PrimaryImpl primary = new PrimaryImpl();
-		return primary;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Secondary createSecondary() {
-		SecondaryImpl secondary = new SecondaryImpl();
-		return secondary;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Dark createDark() {
-		DarkImpl dark = new DarkImpl();
-		return dark;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Info createInfo() {
-		InfoImpl info = new InfoImpl();
-		return info;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Light createLight() {
-		LightImpl light = new LightImpl();
-		return light;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Succes createSucces() {
-		SuccesImpl succes = new SuccesImpl();
-		return succes;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Rounded createRounded() {
 		RoundedImpl rounded = new RoundedImpl();
 		return rounded;
@@ -550,6 +518,16 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ButtonStyle createButtonStyle() {
+		ButtonStyleImpl buttonStyle = new ButtonStyleImpl();
+		return buttonStyle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ButtonSize createButtonSize() {
 		ButtonSizeImpl buttonSize = new ButtonSizeImpl();
 		return buttonSize;
@@ -560,9 +538,9 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Link createLink() {
-		LinkImpl link = new LinkImpl();
-		return link;
+	public ButtonLink createButtonLink() {
+		ButtonLinkImpl buttonLink = new ButtonLinkImpl();
+		return buttonLink;
 	}
 
 	/**
@@ -600,9 +578,309 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PageContent createPageContent() {
-		PageContentImpl pageContent = new PageContentImpl();
-		return pageContent;
+	public OrderList createOrderList() {
+		OrderListImpl orderList = new OrderListImpl();
+		return orderList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UnOrderedList createUnOrderedList() {
+		UnOrderedListImpl unOrderedList = new UnOrderedListImpl();
+		return unOrderedList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ListItem createListItem() {
+		ListItemImpl listItem = new ListItemImpl();
+		return listItem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Navigation createNavigation() {
+		NavigationImpl navigation = new NavigationImpl();
+		return navigation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Centered createCentered() {
+		CenteredImpl centered = new CenteredImpl();
+		return centered;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BasicList createBasicList() {
+		BasicListImpl basicList = new BasicListImpl();
+		return basicList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HorizontalList createHorizontalList() {
+		HorizontalListImpl horizontalList = new HorizontalListImpl();
+		return horizontalList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Basic createBasic() {
+		BasicImpl basic = new BasicImpl();
+		return basic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Vertical createVertical() {
+		VerticalImpl vertical = new VerticalImpl();
+		return vertical;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ItalicProperty createItalicProperty() {
+		ItalicPropertyImpl italicProperty = new ItalicPropertyImpl();
+		return italicProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Bold createBold() {
+		BoldImpl bold = new BoldImpl();
+		return bold;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Link createLink() {
+		LinkImpl link = new LinkImpl();
+		return link;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Strong createStrong() {
+		StrongImpl strong = new StrongImpl();
+		return strong;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Italic createItalic() {
+		ItalicImpl italic = new ItalicImpl();
+		return italic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Brand createBrand() {
+		BrandImpl brand = new BrandImpl();
+		return brand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LinkBrand createLinkBrand() {
+		LinkBrandImpl linkBrand = new LinkBrandImpl();
+		return linkBrand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Table createTable() {
+		TableImpl table = new TableImpl();
+		return table;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Thead createThead() {
+		TheadImpl thead = new TheadImpl();
+		return thead;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tbody createTbody() {
+		TbodyImpl tbody = new TbodyImpl();
+		return tbody;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Tfoot createTfoot() {
+		TfootImpl tfoot = new TfootImpl();
+		return tfoot;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableRow createTableRow() {
+		TableRowImpl tableRow = new TableRowImpl();
+		return tableRow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TableCell createTableCell() {
+		TableCellImpl tableCell = new TableCellImpl();
+		return tableCell;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BasicTable createBasicTable() {
+		BasicTableImpl basicTable = new BasicTableImpl();
+		return basicTable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StripedRows createStripedRows() {
+		StripedRowsImpl stripedRows = new StripedRowsImpl();
+		return stripedRows;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BorderedTable createBorderedTable() {
+		BorderedTableImpl borderedTable = new BorderedTableImpl();
+		return borderedTable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HoverRows createHoverRows() {
+		HoverRowsImpl hoverRows = new HoverRowsImpl();
+		return hoverRows;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DarkTable createDarkTable() {
+		DarkTableImpl darkTable = new DarkTableImpl();
+		return darkTable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BlockQuote createBlockQuote() {
+		BlockQuoteImpl blockQuote = new BlockQuoteImpl();
+		return blockQuote;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CodeBlock createCodeBlock() {
+		CodeBlockImpl codeBlock = new CodeBlockImpl();
+		return codeBlock;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CodeLine createCodeLine() {
+		CodeLineImpl codeLine = new CodeLineImpl();
+		return codeLine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HorizontalLine createHorizontalLine() {
+		HorizontalLineImpl horizontalLine = new HorizontalLineImpl();
+		return horizontalLine;
 	}
 
 	/**
@@ -646,6 +924,28 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	 * @generated
 	 */
 	public String convertSizeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Alignement createAlignementFromString(EDataType eDataType, String initialValue) {
+		Alignement result = Alignement.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAlignementToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

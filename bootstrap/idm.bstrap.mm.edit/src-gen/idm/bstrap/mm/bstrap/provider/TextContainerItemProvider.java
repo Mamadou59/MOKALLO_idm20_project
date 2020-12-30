@@ -4,6 +4,7 @@ package idm.bstrap.mm.bstrap.provider;
 
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
+import idm.bstrap.mm.bstrap.Color;
 import idm.bstrap.mm.bstrap.TextContainer;
 
 import java.util.Collection;
@@ -14,7 +15,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -23,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TextContainerItemProvider extends PageContentItemProvider {
+public class TextContainerItemProvider extends TextPageContentItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -45,8 +48,25 @@ public class TextContainerItemProvider extends PageContentItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addColorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Color feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addColorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_TextContainer_color_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_TextContainer_color_feature",
+								"_UI_TextContainer_type"),
+						BstrapPackage.Literals.TEXT_CONTAINER__COLOR, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -62,6 +82,7 @@ public class TextContainerItemProvider extends PageContentItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS);
+			childrenFeatures.add(BstrapPackage.Literals.TEXT_CONTAINER__EMPHASIS);
 		}
 		return childrenFeatures;
 	}
@@ -108,7 +129,10 @@ public class TextContainerItemProvider extends PageContentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_TextContainer_type");
+		Color labelValue = ((TextContainer) object).getColor();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ? getString("_UI_TextContainer_type")
+				: getString("_UI_TextContainer_type") + " " + label;
 	}
 
 	/**
@@ -123,7 +147,11 @@ public class TextContainerItemProvider extends PageContentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(TextContainer.class)) {
+		case BstrapPackage.TEXT_CONTAINER__COLOR:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		case BstrapPackage.TEXT_CONTAINER__TEXTELEMENTS:
+		case BstrapPackage.TEXT_CONTAINER__EMPHASIS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -148,16 +176,25 @@ public class TextContainerItemProvider extends PageContentItemProvider {
 				BstrapFactory.eINSTANCE.createCode()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
-				BstrapFactory.eINSTANCE.createContainableTextElement()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
-				BstrapFactory.eINSTANCE.createCompositeTextElement()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
 				BstrapFactory.eINSTANCE.createImage()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
 				BstrapFactory.eINSTANCE.createButton()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
+				BstrapFactory.eINSTANCE.createLink()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
+				BstrapFactory.eINSTANCE.createStrong()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
+				BstrapFactory.eINSTANCE.createItalic()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__EMPHASIS,
+				BstrapFactory.eINSTANCE.createItalicProperty()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__EMPHASIS,
+				BstrapFactory.eINSTANCE.createBold()));
 	}
 
 }
