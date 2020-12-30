@@ -111,8 +111,12 @@ textpageContents : Sequence(TextPageContent) = self.eContents(TextPageContent);
 [self.generateNavigationProperty()/]
 [/template]
 
-
-
+[**
+ * Handle code generation of a Table in a Page  (Table)
+ */]
+[template public generateTextPageContentElement(aTable : Table) ]
+[self.generateTableElement()/]
+[/template]
 
 [comment]-------------------- ----------------------------------[/comment]
 

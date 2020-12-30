@@ -229,6 +229,55 @@
 [comment]------------------------------------------------------[/comment]
 
 
+[comment]+++++++++++++++ Main TableElement ++++++++++++++[/comment]
+[**
+ * handle Table (Table)  
+ */]
+
+[template public generateTableElement(aTable : Table) { aBaliseName : String = 'table'; }]
+<[aBaliseName/]  [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.tableproperties.getTableProperty()/] ">
+[self.tablesections.generateTableSectionElements()/]
+[aBaliseName.getCloseBaliseName()/]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++++++ Main TabSection ++++++++++++++[/comment]
+[**
+ * handle TableSection (Thead,Tbody,Tfoot)  
+ */]
+
+[template public generateTableSectionElements(aTableSection : TableSection)]
+[self.declareComment()/]
+[/template]
+[template public generateTableSectionElements(aTableSection : Thead) { aBaliseName : String = 'thead'; }]
+<[aBaliseName/] [self.declareClass()/]"[self.generals.getGeneralClass()/]">
+[self.tablerows.generateTableRow()/]
+[aBaliseName.getCloseBaliseName()/]
+[/template]
+[template public generateTableSectionElements(aTableSection : Tbody) { aBaliseName : String = 'tbody'; }]
+<[aBaliseName/] [self.declareClass()/]"[self.generals.getGeneralClass()/]">
+[self.tablerows.generateTableRow()/]
+[aBaliseName.getCloseBaliseName()/]
+[/template]
+[template public generateTableSectionElements(aTableSection : Tfoot) { aBaliseName : String = 'tfoot'; }]
+<[aBaliseName/] [self.declareClass()/]"[self.generals.getGeneralClass()/]">
+[self.tablerows.generateTableRow()/]
+[aBaliseName.getCloseBaliseName()/]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+
+[comment]+++++++++++++++ Main TableRows ++++++++++++++[/comment]
+[**
+ * handle TableRows (TableRows)  
+ */]
+[template public generateTableRow(aTableRow : TableRow) { aBaliseName : String = 'tr'; }]
+<[aBaliseName/] [self.declareClass()/]"[self.generals.getGeneralClass()/]" >
+[self.tablecells.generateTextContainer()/]
+[aBaliseName.getCloseBaliseName()/]
+[/template]
+
+[comment]------------------------------------------------------[/comment]
 
 
 
@@ -249,6 +298,8 @@
 [/template]
 
 [comment]------------------------------------------------------[/comment]
+
+
 
 
 
