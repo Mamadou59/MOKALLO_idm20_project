@@ -5,57 +5,92 @@ package idm.bstrap.mm.bstrap.util;
 import idm.bstrap.mm.bstrap.Active;
 import idm.bstrap.mm.bstrap.Background;
 import idm.bstrap.mm.bstrap.Basic;
-import idm.bstrap.mm.bstrap.Blockquote;
+import idm.bstrap.mm.bstrap.BasicList;
+import idm.bstrap.mm.bstrap.BasicTable;
+import idm.bstrap.mm.bstrap.BlockQuote;
+import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BorderProperty;
+import idm.bstrap.mm.bstrap.BorderedTable;
+import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
+import idm.bstrap.mm.bstrap.ButtonLink;
 import idm.bstrap.mm.bstrap.ButtonProperty;
 import idm.bstrap.mm.bstrap.ButtonSize;
 import idm.bstrap.mm.bstrap.ButtonState;
 import idm.bstrap.mm.bstrap.ButtonStyle;
 import idm.bstrap.mm.bstrap.Center;
+import idm.bstrap.mm.bstrap.Centered;
 import idm.bstrap.mm.bstrap.Circle;
 import idm.bstrap.mm.bstrap.Code;
+import idm.bstrap.mm.bstrap.CodeBlock;
+import idm.bstrap.mm.bstrap.CodeLine;
 import idm.bstrap.mm.bstrap.ColoredBorder;
 import idm.bstrap.mm.bstrap.CompositeTextElement;
 import idm.bstrap.mm.bstrap.ContainableTextElement;
 import idm.bstrap.mm.bstrap.Container;
-import idm.bstrap.mm.bstrap.Dark;
+import idm.bstrap.mm.bstrap.DarkTable;
 import idm.bstrap.mm.bstrap.Disabled;
 import idm.bstrap.mm.bstrap.Display1;
 import idm.bstrap.mm.bstrap.Display2;
 import idm.bstrap.mm.bstrap.Display3;
 import idm.bstrap.mm.bstrap.Display4;
 import idm.bstrap.mm.bstrap.DisplayProperty;
+import idm.bstrap.mm.bstrap.Emphasis;
 import idm.bstrap.mm.bstrap.FixContainer;
 import idm.bstrap.mm.bstrap.FluidContainer;
 import idm.bstrap.mm.bstrap.General;
+import idm.bstrap.mm.bstrap.HorizontalLine;
+import idm.bstrap.mm.bstrap.HorizontalList;
+import idm.bstrap.mm.bstrap.HoverRows;
 import idm.bstrap.mm.bstrap.Image;
 import idm.bstrap.mm.bstrap.ImageAligning;
 import idm.bstrap.mm.bstrap.ImageProperty;
 import idm.bstrap.mm.bstrap.ImageShape;
-import idm.bstrap.mm.bstrap.Info;
-import idm.bstrap.mm.bstrap.Light;
+import idm.bstrap.mm.bstrap.Italic;
+import idm.bstrap.mm.bstrap.ItalicProperty;
 import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.LinkBrand;
+import idm.bstrap.mm.bstrap.LinkProperty;
+import idm.bstrap.mm.bstrap.ListElement;
+import idm.bstrap.mm.bstrap.ListItem;
+import idm.bstrap.mm.bstrap.ListItemElement;
+import idm.bstrap.mm.bstrap.ListProperty;
 import idm.bstrap.mm.bstrap.MargesProperty;
 import idm.bstrap.mm.bstrap.Margin;
+import idm.bstrap.mm.bstrap.NavBarProperty;
+import idm.bstrap.mm.bstrap.Navigation;
+import idm.bstrap.mm.bstrap.OrderList;
 import idm.bstrap.mm.bstrap.Padding;
 import idm.bstrap.mm.bstrap.Page;
 import idm.bstrap.mm.bstrap.PageContent;
 import idm.bstrap.mm.bstrap.Paragraphe;
-import idm.bstrap.mm.bstrap.Primary;
 import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
-import idm.bstrap.mm.bstrap.Secondary;
-import idm.bstrap.mm.bstrap.Succes;
+import idm.bstrap.mm.bstrap.StripedRows;
+import idm.bstrap.mm.bstrap.Strong;
+import idm.bstrap.mm.bstrap.Table;
+import idm.bstrap.mm.bstrap.TableCell;
+import idm.bstrap.mm.bstrap.TableProperty;
+import idm.bstrap.mm.bstrap.TableRow;
+import idm.bstrap.mm.bstrap.TableSection;
+import idm.bstrap.mm.bstrap.Tbody;
 import idm.bstrap.mm.bstrap.Text;
+import idm.bstrap.mm.bstrap.TextContainable;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
+import idm.bstrap.mm.bstrap.TextNested;
+import idm.bstrap.mm.bstrap.TextNestedElement;
+import idm.bstrap.mm.bstrap.TextPageContent;
+import idm.bstrap.mm.bstrap.Tfoot;
+import idm.bstrap.mm.bstrap.Thead;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
+import idm.bstrap.mm.bstrap.UnOrderedList;
 import idm.bstrap.mm.bstrap.UrlBasedLink;
+import idm.bstrap.mm.bstrap.Vertical;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -161,6 +196,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			TextContainer textContainer = (TextContainer) theEObject;
 			T result = caseTextContainer(textContainer);
 			if (result == null)
+				result = caseTextPageContent(textContainer);
+			if (result == null)
 				result = casePageContent(textContainer);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -171,6 +208,10 @@ public class BstrapSwitch<T> extends Switch<T> {
 			T result = caseParagraphe(paragraphe);
 			if (result == null)
 				result = caseTextContainer(paragraphe);
+			if (result == null)
+				result = caseListItemElement(paragraphe);
+			if (result == null)
+				result = caseTextPageContent(paragraphe);
 			if (result == null)
 				result = casePageContent(paragraphe);
 			if (result == null)
@@ -183,6 +224,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextContainer(title);
 			if (result == null)
+				result = caseTextPageContent(title);
+			if (result == null)
 				result = casePageContent(title);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -192,6 +235,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			TextElements textElements = (TextElements) theEObject;
 			T result = caseTextElements(textElements);
 			if (result == null)
+				result = caseListItemElement(textElements);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -200,6 +245,10 @@ public class BstrapSwitch<T> extends Switch<T> {
 			T result = caseText(text);
 			if (result == null)
 				result = caseTextElements(text);
+			if (result == null)
+				result = caseTextNestedElement(text);
+			if (result == null)
+				result = caseListItemElement(text);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -212,14 +261,9 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextElements(code);
 			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.BLOCKQUOTE: {
-			Blockquote blockquote = (Blockquote) theEObject;
-			T result = caseBlockquote(blockquote);
+				result = caseTextNestedElement(code);
 			if (result == null)
-				result = casePageContent(blockquote);
+				result = caseListItemElement(code);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -231,6 +275,10 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseContainableTextElement(compositeTextElement);
 			if (result == null)
 				result = caseTextElements(compositeTextElement);
+			if (result == null)
+				result = caseTextPageContent(compositeTextElement);
+			if (result == null)
+				result = caseListItemElement(compositeTextElement);
 			if (result == null)
 				result = casePageContent(compositeTextElement);
 			if (result == null)
@@ -246,6 +294,10 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseContainableTextElement(urlBasedLink);
 			if (result == null)
 				result = caseTextElements(urlBasedLink);
+			if (result == null)
+				result = caseTextPageContent(urlBasedLink);
+			if (result == null)
+				result = caseListItemElement(urlBasedLink);
 			if (result == null)
 				result = casePageContent(urlBasedLink);
 			if (result == null)
@@ -264,6 +316,10 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextElements(image);
 			if (result == null)
+				result = caseTextPageContent(image);
+			if (result == null)
+				result = caseListItemElement(image);
+			if (result == null)
 				result = casePageContent(image);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -274,6 +330,10 @@ public class BstrapSwitch<T> extends Switch<T> {
 			T result = caseContainableTextElement(containableTextElement);
 			if (result == null)
 				result = caseTextElements(containableTextElement);
+			if (result == null)
+				result = caseTextPageContent(containableTextElement);
+			if (result == null)
+				result = caseListItemElement(containableTextElement);
 			if (result == null)
 				result = casePageContent(containableTextElement);
 			if (result == null)
@@ -385,6 +445,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			DisplayProperty displayProperty = (DisplayProperty) theEObject;
 			T result = caseDisplayProperty(displayProperty);
 			if (result == null)
+				result = casePropertyClass(displayProperty);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -393,6 +455,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			T result = caseDisplay1(display1);
 			if (result == null)
 				result = caseDisplayProperty(display1);
+			if (result == null)
+				result = casePropertyClass(display1);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -403,6 +467,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseDisplayProperty(display2);
 			if (result == null)
+				result = casePropertyClass(display2);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -411,6 +477,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			T result = caseDisplay3(display3);
 			if (result == null)
 				result = caseDisplayProperty(display3);
+			if (result == null)
+				result = casePropertyClass(display3);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -421,6 +489,8 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseDisplayProperty(display4);
 			if (result == null)
+				result = casePropertyClass(display4);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -429,84 +499,6 @@ public class BstrapSwitch<T> extends Switch<T> {
 			T result = caseButtonProperty(buttonProperty);
 			if (result == null)
 				result = casePropertyClass(buttonProperty);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.BASIC: {
-			Basic basic = (Basic) theEObject;
-			T result = caseBasic(basic);
-			if (result == null)
-				result = caseButtonStyle(basic);
-			if (result == null)
-				result = caseButtonProperty(basic);
-			if (result == null)
-				result = casePropertyClass(basic);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.PRIMARY: {
-			Primary primary = (Primary) theEObject;
-			T result = casePrimary(primary);
-			if (result == null)
-				result = caseButtonStyle(primary);
-			if (result == null)
-				result = caseButtonProperty(primary);
-			if (result == null)
-				result = casePropertyClass(primary);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.SECONDARY: {
-			Secondary secondary = (Secondary) theEObject;
-			T result = caseSecondary(secondary);
-			if (result == null)
-				result = caseButtonStyle(secondary);
-			if (result == null)
-				result = caseButtonProperty(secondary);
-			if (result == null)
-				result = casePropertyClass(secondary);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.DARK: {
-			Dark dark = (Dark) theEObject;
-			T result = caseDark(dark);
-			if (result == null)
-				result = caseButtonStyle(dark);
-			if (result == null)
-				result = caseButtonProperty(dark);
-			if (result == null)
-				result = casePropertyClass(dark);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.INFO: {
-			Info info = (Info) theEObject;
-			T result = caseInfo(info);
-			if (result == null)
-				result = caseButtonStyle(info);
-			if (result == null)
-				result = caseButtonProperty(info);
-			if (result == null)
-				result = casePropertyClass(info);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.LIGHT: {
-			Light light = (Light) theEObject;
-			T result = caseLight(light);
-			if (result == null)
-				result = caseButtonStyle(light);
-			if (result == null)
-				result = caseButtonProperty(light);
-			if (result == null)
-				result = casePropertyClass(light);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -527,19 +519,6 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseImageProperty(imageShape);
 			if (result == null)
 				result = casePropertyClass(imageShape);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case BstrapPackage.SUCCES: {
-			Succes succes = (Succes) theEObject;
-			T result = caseSucces(succes);
-			if (result == null)
-				result = caseButtonStyle(succes);
-			if (result == null)
-				result = caseButtonProperty(succes);
-			if (result == null)
-				result = casePropertyClass(succes);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -655,15 +634,15 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case BstrapPackage.LINK: {
-			Link link = (Link) theEObject;
-			T result = caseLink(link);
+		case BstrapPackage.BUTTON_LINK: {
+			ButtonLink buttonLink = (ButtonLink) theEObject;
+			T result = caseButtonLink(buttonLink);
 			if (result == null)
-				result = caseButtonStyle(link);
+				result = caseButtonStyle(buttonLink);
 			if (result == null)
-				result = caseButtonProperty(link);
+				result = caseButtonProperty(buttonLink);
 			if (result == null)
-				result = casePropertyClass(link);
+				result = casePropertyClass(buttonLink);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -711,7 +690,13 @@ public class BstrapSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseContainableTextElement(button);
 			if (result == null)
+				result = caseTextNested(button);
+			if (result == null)
 				result = caseTextElements(button);
+			if (result == null)
+				result = caseTextPageContent(button);
+			if (result == null)
+				result = caseListItemElement(button);
 			if (result == null)
 				result = casePageContent(button);
 			if (result == null)
@@ -721,6 +706,495 @@ public class BstrapSwitch<T> extends Switch<T> {
 		case BstrapPackage.PAGE_CONTENT: {
 			PageContent pageContent = (PageContent) theEObject;
 			T result = casePageContent(pageContent);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TEXT_PAGE_CONTENT: {
+			TextPageContent textPageContent = (TextPageContent) theEObject;
+			T result = caseTextPageContent(textPageContent);
+			if (result == null)
+				result = casePageContent(textPageContent);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.LIST_ELEMENT: {
+			ListElement listElement = (ListElement) theEObject;
+			T result = caseListElement(listElement);
+			if (result == null)
+				result = caseTextPageContent(listElement);
+			if (result == null)
+				result = caseListItemElement(listElement);
+			if (result == null)
+				result = casePageContent(listElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.ORDER_LIST: {
+			OrderList orderList = (OrderList) theEObject;
+			T result = caseOrderList(orderList);
+			if (result == null)
+				result = caseListElement(orderList);
+			if (result == null)
+				result = caseTextPageContent(orderList);
+			if (result == null)
+				result = caseListItemElement(orderList);
+			if (result == null)
+				result = casePageContent(orderList);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.UN_ORDERED_LIST: {
+			UnOrderedList unOrderedList = (UnOrderedList) theEObject;
+			T result = caseUnOrderedList(unOrderedList);
+			if (result == null)
+				result = caseListElement(unOrderedList);
+			if (result == null)
+				result = caseTextPageContent(unOrderedList);
+			if (result == null)
+				result = caseListItemElement(unOrderedList);
+			if (result == null)
+				result = casePageContent(unOrderedList);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.LIST_ITEM: {
+			ListItem listItem = (ListItem) theEObject;
+			T result = caseListItem(listItem);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.LIST_ITEM_ELEMENT: {
+			ListItemElement listItemElement = (ListItemElement) theEObject;
+			T result = caseListItemElement(listItemElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.NAVIGATION: {
+			Navigation navigation = (Navigation) theEObject;
+			T result = caseNavigation(navigation);
+			if (result == null)
+				result = caseTextPageContent(navigation);
+			if (result == null)
+				result = casePageContent(navigation);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.CENTERED: {
+			Centered centered = (Centered) theEObject;
+			T result = caseCentered(centered);
+			if (result == null)
+				result = caseNavBarProperty(centered);
+			if (result == null)
+				result = casePropertyClass(centered);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.LIST_PROPERTY: {
+			ListProperty listProperty = (ListProperty) theEObject;
+			T result = caseListProperty(listProperty);
+			if (result == null)
+				result = casePropertyClass(listProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BASIC_LIST: {
+			BasicList basicList = (BasicList) theEObject;
+			T result = caseBasicList(basicList);
+			if (result == null)
+				result = caseListProperty(basicList);
+			if (result == null)
+				result = casePropertyClass(basicList);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.HORIZONTAL_LIST: {
+			HorizontalList horizontalList = (HorizontalList) theEObject;
+			T result = caseHorizontalList(horizontalList);
+			if (result == null)
+				result = caseListProperty(horizontalList);
+			if (result == null)
+				result = casePropertyClass(horizontalList);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.NAV_BAR_PROPERTY: {
+			NavBarProperty navBarProperty = (NavBarProperty) theEObject;
+			T result = caseNavBarProperty(navBarProperty);
+			if (result == null)
+				result = casePropertyClass(navBarProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BASIC: {
+			Basic basic = (Basic) theEObject;
+			T result = caseBasic(basic);
+			if (result == null)
+				result = caseNavBarProperty(basic);
+			if (result == null)
+				result = casePropertyClass(basic);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.VERTICAL: {
+			Vertical vertical = (Vertical) theEObject;
+			T result = caseVertical(vertical);
+			if (result == null)
+				result = caseNavBarProperty(vertical);
+			if (result == null)
+				result = casePropertyClass(vertical);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.EMPHASIS: {
+			Emphasis emphasis = (Emphasis) theEObject;
+			T result = caseEmphasis(emphasis);
+			if (result == null)
+				result = casePropertyClass(emphasis);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.ITALIC_PROPERTY: {
+			ItalicProperty italicProperty = (ItalicProperty) theEObject;
+			T result = caseItalicProperty(italicProperty);
+			if (result == null)
+				result = caseEmphasis(italicProperty);
+			if (result == null)
+				result = casePropertyClass(italicProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BOLD: {
+			Bold bold = (Bold) theEObject;
+			T result = caseBold(bold);
+			if (result == null)
+				result = caseEmphasis(bold);
+			if (result == null)
+				result = casePropertyClass(bold);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.LINK: {
+			Link link = (Link) theEObject;
+			T result = caseLink(link);
+			if (result == null)
+				result = caseUrlBasedLink(link);
+			if (result == null)
+				result = caseTextNested(link);
+			if (result == null)
+				result = caseCompositeTextElement(link);
+			if (result == null)
+				result = caseContainableTextElement(link);
+			if (result == null)
+				result = caseTextElements(link);
+			if (result == null)
+				result = caseTextPageContent(link);
+			if (result == null)
+				result = caseListItemElement(link);
+			if (result == null)
+				result = casePageContent(link);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.STRONG: {
+			Strong strong = (Strong) theEObject;
+			T result = caseStrong(strong);
+			if (result == null)
+				result = caseTextContainable(strong);
+			if (result == null)
+				result = caseContainableTextElement(strong);
+			if (result == null)
+				result = caseTextNested(strong);
+			if (result == null)
+				result = caseTextNestedElement(strong);
+			if (result == null)
+				result = caseTextElements(strong);
+			if (result == null)
+				result = caseTextPageContent(strong);
+			if (result == null)
+				result = caseListItemElement(strong);
+			if (result == null)
+				result = casePageContent(strong);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.ITALIC: {
+			Italic italic = (Italic) theEObject;
+			T result = caseItalic(italic);
+			if (result == null)
+				result = caseTextContainable(italic);
+			if (result == null)
+				result = caseContainableTextElement(italic);
+			if (result == null)
+				result = caseTextNested(italic);
+			if (result == null)
+				result = caseTextNestedElement(italic);
+			if (result == null)
+				result = caseTextElements(italic);
+			if (result == null)
+				result = caseTextPageContent(italic);
+			if (result == null)
+				result = caseListItemElement(italic);
+			if (result == null)
+				result = casePageContent(italic);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TEXT_CONTAINABLE: {
+			TextContainable textContainable = (TextContainable) theEObject;
+			T result = caseTextContainable(textContainable);
+			if (result == null)
+				result = caseContainableTextElement(textContainable);
+			if (result == null)
+				result = caseTextNested(textContainable);
+			if (result == null)
+				result = caseTextNestedElement(textContainable);
+			if (result == null)
+				result = caseTextElements(textContainable);
+			if (result == null)
+				result = caseTextPageContent(textContainable);
+			if (result == null)
+				result = caseListItemElement(textContainable);
+			if (result == null)
+				result = casePageContent(textContainable);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TEXT_NESTED: {
+			TextNested textNested = (TextNested) theEObject;
+			T result = caseTextNested(textNested);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TEXT_NESTED_ELEMENT: {
+			TextNestedElement textNestedElement = (TextNestedElement) theEObject;
+			T result = caseTextNestedElement(textNestedElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BRAND: {
+			Brand brand = (Brand) theEObject;
+			T result = caseBrand(brand);
+			if (result == null)
+				result = caseNavBarProperty(brand);
+			if (result == null)
+				result = casePropertyClass(brand);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.LINK_PROPERTY: {
+			LinkProperty linkProperty = (LinkProperty) theEObject;
+			T result = caseLinkProperty(linkProperty);
+			if (result == null)
+				result = casePropertyClass(linkProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.LINK_BRAND: {
+			LinkBrand linkBrand = (LinkBrand) theEObject;
+			T result = caseLinkBrand(linkBrand);
+			if (result == null)
+				result = caseLinkProperty(linkBrand);
+			if (result == null)
+				result = casePropertyClass(linkBrand);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TABLE: {
+			Table table = (Table) theEObject;
+			T result = caseTable(table);
+			if (result == null)
+				result = caseTextPageContent(table);
+			if (result == null)
+				result = casePageContent(table);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.THEAD: {
+			Thead thead = (Thead) theEObject;
+			T result = caseThead(thead);
+			if (result == null)
+				result = caseTableSection(thead);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TBODY: {
+			Tbody tbody = (Tbody) theEObject;
+			T result = caseTbody(tbody);
+			if (result == null)
+				result = caseTableSection(tbody);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TFOOT: {
+			Tfoot tfoot = (Tfoot) theEObject;
+			T result = caseTfoot(tfoot);
+			if (result == null)
+				result = caseTableSection(tfoot);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TABLE_SECTION: {
+			TableSection tableSection = (TableSection) theEObject;
+			T result = caseTableSection(tableSection);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TABLE_ROW: {
+			TableRow tableRow = (TableRow) theEObject;
+			T result = caseTableRow(tableRow);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TABLE_CELL: {
+			TableCell tableCell = (TableCell) theEObject;
+			T result = caseTableCell(tableCell);
+			if (result == null)
+				result = caseTextContainer(tableCell);
+			if (result == null)
+				result = caseTextPageContent(tableCell);
+			if (result == null)
+				result = casePageContent(tableCell);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.TABLE_PROPERTY: {
+			TableProperty tableProperty = (TableProperty) theEObject;
+			T result = caseTableProperty(tableProperty);
+			if (result == null)
+				result = casePropertyClass(tableProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BASIC_TABLE: {
+			BasicTable basicTable = (BasicTable) theEObject;
+			T result = caseBasicTable(basicTable);
+			if (result == null)
+				result = caseTableProperty(basicTable);
+			if (result == null)
+				result = casePropertyClass(basicTable);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.STRIPED_ROWS: {
+			StripedRows stripedRows = (StripedRows) theEObject;
+			T result = caseStripedRows(stripedRows);
+			if (result == null)
+				result = caseTableProperty(stripedRows);
+			if (result == null)
+				result = casePropertyClass(stripedRows);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BORDERED_TABLE: {
+			BorderedTable borderedTable = (BorderedTable) theEObject;
+			T result = caseBorderedTable(borderedTable);
+			if (result == null)
+				result = caseTableProperty(borderedTable);
+			if (result == null)
+				result = casePropertyClass(borderedTable);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.HOVER_ROWS: {
+			HoverRows hoverRows = (HoverRows) theEObject;
+			T result = caseHoverRows(hoverRows);
+			if (result == null)
+				result = caseTableProperty(hoverRows);
+			if (result == null)
+				result = casePropertyClass(hoverRows);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.DARK_TABLE: {
+			DarkTable darkTable = (DarkTable) theEObject;
+			T result = caseDarkTable(darkTable);
+			if (result == null)
+				result = caseTableProperty(darkTable);
+			if (result == null)
+				result = casePropertyClass(darkTable);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BLOCK_QUOTE: {
+			BlockQuote blockQuote = (BlockQuote) theEObject;
+			T result = caseBlockQuote(blockQuote);
+			if (result == null)
+				result = caseTextPageContent(blockQuote);
+			if (result == null)
+				result = caseListItemElement(blockQuote);
+			if (result == null)
+				result = casePageContent(blockQuote);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.CODE_BLOCK: {
+			CodeBlock codeBlock = (CodeBlock) theEObject;
+			T result = caseCodeBlock(codeBlock);
+			if (result == null)
+				result = caseTextPageContent(codeBlock);
+			if (result == null)
+				result = caseListItemElement(codeBlock);
+			if (result == null)
+				result = casePageContent(codeBlock);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.CODE_LINE: {
+			CodeLine codeLine = (CodeLine) theEObject;
+			T result = caseCodeLine(codeLine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.HORIZONTAL_LINE: {
+			HorizontalLine horizontalLine = (HorizontalLine) theEObject;
+			T result = caseHorizontalLine(horizontalLine);
+			if (result == null)
+				result = caseTextPageContent(horizontalLine);
+			if (result == null)
+				result = casePageContent(horizontalLine);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -877,21 +1351,6 @@ public class BstrapSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCode(Code object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Blockquote</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Blockquote</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBlockquote(Blockquote object) {
 		return null;
 	}
 
@@ -1181,96 +1640,6 @@ public class BstrapSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Basic</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Basic</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseBasic(Basic object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Primary</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Primary</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePrimary(Primary object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Secondary</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Secondary</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSecondary(Secondary object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Dark</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Dark</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDark(Dark object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Info</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Info</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInfo(Info object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Light</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Light</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLight(Light object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Image Property</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1297,21 +1666,6 @@ public class BstrapSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseImageShape(ImageShape object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Succes</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Succes</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSucces(Succes object) {
 		return null;
 	}
 
@@ -1451,17 +1805,17 @@ public class BstrapSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Button Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Button Link</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseLink(Link object) {
+	public T caseButtonLink(ButtonLink object) {
 		return null;
 	}
 
@@ -1537,6 +1891,651 @@ public class BstrapSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePageContent(PageContent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Page Content</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Page Content</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextPageContent(TextPageContent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>List Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>List Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseListElement(ListElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Order List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Order List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOrderList(OrderList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Un Ordered List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Un Ordered List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseUnOrderedList(UnOrderedList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>List Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>List Item</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseListItem(ListItem object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>List Item Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>List Item Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseListItemElement(ListItemElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Navigation</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Navigation</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNavigation(Navigation object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Centered</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Centered</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCentered(Centered object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>List Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>List Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseListProperty(ListProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Basic List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Basic List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBasicList(BasicList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Horizontal List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Horizontal List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHorizontalList(HorizontalList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Nav Bar Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Nav Bar Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNavBarProperty(NavBarProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Basic</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Basic</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBasic(Basic object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Vertical</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Vertical</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVertical(Vertical object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Emphasis</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Emphasis</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEmphasis(Emphasis object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Italic Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Italic Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseItalicProperty(ItalicProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bold</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bold</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBold(Bold object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLink(Link object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Strong</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Strong</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStrong(Strong object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Italic</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Italic</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseItalic(Italic object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Containable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Containable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextContainable(TextContainable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Nested</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Nested</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextNested(TextNested object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Nested Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Nested Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextNestedElement(TextNestedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Brand</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Brand</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBrand(Brand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkProperty(LinkProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link Brand</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link Brand</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkBrand(LinkBrand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTable(Table object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Thead</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Thead</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseThead(Thead object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tbody</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tbody</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTbody(Tbody object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Tfoot</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Tfoot</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTfoot(Tfoot object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTableSection(TableSection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table Row</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table Row</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTableRow(TableRow object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table Cell</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table Cell</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTableCell(TableCell object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTableProperty(TableProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Basic Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Basic Table</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBasicTable(BasicTable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Striped Rows</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Striped Rows</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStripedRows(StripedRows object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Bordered Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Bordered Table</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBorderedTable(BorderedTable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Hover Rows</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Hover Rows</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHoverRows(HoverRows object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Dark Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Dark Table</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDarkTable(DarkTable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Block Quote</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Block Quote</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBlockQuote(BlockQuote object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Code Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Code Block</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCodeBlock(CodeBlock object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Code Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Code Line</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCodeLine(CodeLine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Horizontal Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Horizontal Line</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHorizontalLine(HorizontalLine object) {
 		return null;
 	}
 

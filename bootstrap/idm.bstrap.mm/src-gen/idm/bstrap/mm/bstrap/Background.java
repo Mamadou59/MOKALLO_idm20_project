@@ -21,6 +21,7 @@ package idm.bstrap.mm.bstrap;
 public interface Background extends General {
 	/**
 	 * Returns the value of the '<em><b>Color</b></em>' attribute.
+	 * The default value is <code>"WHITE"</code>.
 	 * The literals are from the enumeration {@link idm.bstrap.mm.bstrap.Color}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -28,7 +29,7 @@ public interface Background extends General {
 	 * @see idm.bstrap.mm.bstrap.Color
 	 * @see #setColor(Color)
 	 * @see idm.bstrap.mm.bstrap.BstrapPackage#getBackground_Color()
-	 * @model
+	 * @model default="WHITE"
 	 * @generated
 	 */
 	Color getColor();

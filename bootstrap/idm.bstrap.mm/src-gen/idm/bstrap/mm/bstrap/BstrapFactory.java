@@ -85,24 +85,6 @@ public interface BstrapFactory extends EFactory {
 	Code createCode();
 
 	/**
-	 * Returns a new object of class '<em>Blockquote</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Blockquote</em>'.
-	 * @generated
-	 */
-	Blockquote createBlockquote();
-
-	/**
-	 * Returns a new object of class '<em>Composite Text Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Composite Text Element</em>'.
-	 * @generated
-	 */
-	CompositeTextElement createCompositeTextElement();
-
-	/**
 	 * Returns a new object of class '<em>Image</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,15 +92,6 @@ public interface BstrapFactory extends EFactory {
 	 * @generated
 	 */
 	Image createImage();
-
-	/**
-	 * Returns a new object of class '<em>Containable Text Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Containable Text Element</em>'.
-	 * @generated
-	 */
-	ContainableTextElement createContainableTextElement();
 
 	/**
 	 * Returns a new object of class '<em>Margin</em>'.
@@ -202,69 +175,6 @@ public interface BstrapFactory extends EFactory {
 	Display4 createDisplay4();
 
 	/**
-	 * Returns a new object of class '<em>Basic</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Basic</em>'.
-	 * @generated
-	 */
-	Basic createBasic();
-
-	/**
-	 * Returns a new object of class '<em>Primary</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Primary</em>'.
-	 * @generated
-	 */
-	Primary createPrimary();
-
-	/**
-	 * Returns a new object of class '<em>Secondary</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Secondary</em>'.
-	 * @generated
-	 */
-	Secondary createSecondary();
-
-	/**
-	 * Returns a new object of class '<em>Dark</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Dark</em>'.
-	 * @generated
-	 */
-	Dark createDark();
-
-	/**
-	 * Returns a new object of class '<em>Info</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Info</em>'.
-	 * @generated
-	 */
-	Info createInfo();
-
-	/**
-	 * Returns a new object of class '<em>Light</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Light</em>'.
-	 * @generated
-	 */
-	Light createLight();
-
-	/**
-	 * Returns a new object of class '<em>Succes</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Succes</em>'.
-	 * @generated
-	 */
-	Succes createSucces();
-
-	/**
 	 * Returns a new object of class '<em>Rounded</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -319,6 +229,15 @@ public interface BstrapFactory extends EFactory {
 	Responsive createResponsive();
 
 	/**
+	 * Returns a new object of class '<em>Button Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Button Style</em>'.
+	 * @generated
+	 */
+	ButtonStyle createButtonStyle();
+
+	/**
 	 * Returns a new object of class '<em>Button Size</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -328,13 +247,13 @@ public interface BstrapFactory extends EFactory {
 	ButtonSize createButtonSize();
 
 	/**
-	 * Returns a new object of class '<em>Link</em>'.
+	 * Returns a new object of class '<em>Button Link</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Link</em>'.
+	 * @return a new object of class '<em>Button Link</em>'.
 	 * @generated
 	 */
-	Link createLink();
+	ButtonLink createButtonLink();
 
 	/**
 	 * Returns a new object of class '<em>Disabled</em>'.
@@ -364,13 +283,283 @@ public interface BstrapFactory extends EFactory {
 	Button createButton();
 
 	/**
-	 * Returns a new object of class '<em>Page Content</em>'.
+	 * Returns a new object of class '<em>Order List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Page Content</em>'.
+	 * @return a new object of class '<em>Order List</em>'.
 	 * @generated
 	 */
-	PageContent createPageContent();
+	OrderList createOrderList();
+
+	/**
+	 * Returns a new object of class '<em>Un Ordered List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Un Ordered List</em>'.
+	 * @generated
+	 */
+	UnOrderedList createUnOrderedList();
+
+	/**
+	 * Returns a new object of class '<em>List Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>List Item</em>'.
+	 * @generated
+	 */
+	ListItem createListItem();
+
+	/**
+	 * Returns a new object of class '<em>Navigation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Navigation</em>'.
+	 * @generated
+	 */
+	Navigation createNavigation();
+
+	/**
+	 * Returns a new object of class '<em>Centered</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Centered</em>'.
+	 * @generated
+	 */
+	Centered createCentered();
+
+	/**
+	 * Returns a new object of class '<em>Basic List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Basic List</em>'.
+	 * @generated
+	 */
+	BasicList createBasicList();
+
+	/**
+	 * Returns a new object of class '<em>Horizontal List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Horizontal List</em>'.
+	 * @generated
+	 */
+	HorizontalList createHorizontalList();
+
+	/**
+	 * Returns a new object of class '<em>Basic</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Basic</em>'.
+	 * @generated
+	 */
+	Basic createBasic();
+
+	/**
+	 * Returns a new object of class '<em>Vertical</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Vertical</em>'.
+	 * @generated
+	 */
+	Vertical createVertical();
+
+	/**
+	 * Returns a new object of class '<em>Italic Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Italic Property</em>'.
+	 * @generated
+	 */
+	ItalicProperty createItalicProperty();
+
+	/**
+	 * Returns a new object of class '<em>Bold</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bold</em>'.
+	 * @generated
+	 */
+	Bold createBold();
+
+	/**
+	 * Returns a new object of class '<em>Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Link</em>'.
+	 * @generated
+	 */
+	Link createLink();
+
+	/**
+	 * Returns a new object of class '<em>Strong</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Strong</em>'.
+	 * @generated
+	 */
+	Strong createStrong();
+
+	/**
+	 * Returns a new object of class '<em>Italic</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Italic</em>'.
+	 * @generated
+	 */
+	Italic createItalic();
+
+	/**
+	 * Returns a new object of class '<em>Brand</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Brand</em>'.
+	 * @generated
+	 */
+	Brand createBrand();
+
+	/**
+	 * Returns a new object of class '<em>Link Brand</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Link Brand</em>'.
+	 * @generated
+	 */
+	LinkBrand createLinkBrand();
+
+	/**
+	 * Returns a new object of class '<em>Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table</em>'.
+	 * @generated
+	 */
+	Table createTable();
+
+	/**
+	 * Returns a new object of class '<em>Thead</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Thead</em>'.
+	 * @generated
+	 */
+	Thead createThead();
+
+	/**
+	 * Returns a new object of class '<em>Tbody</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tbody</em>'.
+	 * @generated
+	 */
+	Tbody createTbody();
+
+	/**
+	 * Returns a new object of class '<em>Tfoot</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Tfoot</em>'.
+	 * @generated
+	 */
+	Tfoot createTfoot();
+
+	/**
+	 * Returns a new object of class '<em>Table Row</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table Row</em>'.
+	 * @generated
+	 */
+	TableRow createTableRow();
+
+	/**
+	 * Returns a new object of class '<em>Table Cell</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table Cell</em>'.
+	 * @generated
+	 */
+	TableCell createTableCell();
+
+	/**
+	 * Returns a new object of class '<em>Basic Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Basic Table</em>'.
+	 * @generated
+	 */
+	BasicTable createBasicTable();
+
+	/**
+	 * Returns a new object of class '<em>Striped Rows</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Striped Rows</em>'.
+	 * @generated
+	 */
+	StripedRows createStripedRows();
+
+	/**
+	 * Returns a new object of class '<em>Bordered Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Bordered Table</em>'.
+	 * @generated
+	 */
+	BorderedTable createBorderedTable();
+
+	/**
+	 * Returns a new object of class '<em>Hover Rows</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Hover Rows</em>'.
+	 * @generated
+	 */
+	HoverRows createHoverRows();
+
+	/**
+	 * Returns a new object of class '<em>Dark Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Dark Table</em>'.
+	 * @generated
+	 */
+	DarkTable createDarkTable();
+
+	/**
+	 * Returns a new object of class '<em>Block Quote</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Block Quote</em>'.
+	 * @generated
+	 */
+	BlockQuote createBlockQuote();
+
+	/**
+	 * Returns a new object of class '<em>Code Block</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Code Block</em>'.
+	 * @generated
+	 */
+	CodeBlock createCodeBlock();
+
+	/**
+	 * Returns a new object of class '<em>Code Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Code Line</em>'.
+	 * @generated
+	 */
+	CodeLine createCodeLine();
+
+	/**
+	 * Returns a new object of class '<em>Horizontal Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Horizontal Line</em>'.
+	 * @generated
+	 */
+	HorizontalLine createHorizontalLine();
 
 	/**
 	 * Returns the package supported by this factory.

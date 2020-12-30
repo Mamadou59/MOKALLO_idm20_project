@@ -3,61 +3,97 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.Active;
+import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.Background;
 import idm.bstrap.mm.bstrap.Basic;
-import idm.bstrap.mm.bstrap.Blockquote;
+import idm.bstrap.mm.bstrap.BasicList;
+import idm.bstrap.mm.bstrap.BasicTable;
+import idm.bstrap.mm.bstrap.BlockQuote;
+import idm.bstrap.mm.bstrap.Bold;
 import idm.bstrap.mm.bstrap.Border;
 import idm.bstrap.mm.bstrap.BorderProperty;
+import idm.bstrap.mm.bstrap.BorderedTable;
+import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
+import idm.bstrap.mm.bstrap.ButtonLink;
 import idm.bstrap.mm.bstrap.ButtonProperty;
 import idm.bstrap.mm.bstrap.ButtonSize;
 import idm.bstrap.mm.bstrap.ButtonState;
 import idm.bstrap.mm.bstrap.ButtonStyle;
 import idm.bstrap.mm.bstrap.Center;
+import idm.bstrap.mm.bstrap.Centered;
 import idm.bstrap.mm.bstrap.Circle;
 import idm.bstrap.mm.bstrap.Code;
+import idm.bstrap.mm.bstrap.CodeBlock;
+import idm.bstrap.mm.bstrap.CodeLine;
 import idm.bstrap.mm.bstrap.Color;
 import idm.bstrap.mm.bstrap.ColoredBorder;
 import idm.bstrap.mm.bstrap.CompositeTextElement;
 import idm.bstrap.mm.bstrap.ContainableTextElement;
-import idm.bstrap.mm.bstrap.Dark;
+import idm.bstrap.mm.bstrap.DarkTable;
 import idm.bstrap.mm.bstrap.Disabled;
 import idm.bstrap.mm.bstrap.Display1;
 import idm.bstrap.mm.bstrap.Display2;
 import idm.bstrap.mm.bstrap.Display3;
 import idm.bstrap.mm.bstrap.Display4;
 import idm.bstrap.mm.bstrap.DisplayProperty;
+import idm.bstrap.mm.bstrap.Emphasis;
 import idm.bstrap.mm.bstrap.FixContainer;
 import idm.bstrap.mm.bstrap.FluidContainer;
 import idm.bstrap.mm.bstrap.General;
+import idm.bstrap.mm.bstrap.HorizontalLine;
+import idm.bstrap.mm.bstrap.HorizontalList;
+import idm.bstrap.mm.bstrap.HoverRows;
 import idm.bstrap.mm.bstrap.Image;
 import idm.bstrap.mm.bstrap.ImageAligning;
 import idm.bstrap.mm.bstrap.ImageProperty;
 import idm.bstrap.mm.bstrap.ImageShape;
-import idm.bstrap.mm.bstrap.Info;
-import idm.bstrap.mm.bstrap.Light;
+import idm.bstrap.mm.bstrap.Italic;
+import idm.bstrap.mm.bstrap.ItalicProperty;
 import idm.bstrap.mm.bstrap.Link;
+import idm.bstrap.mm.bstrap.LinkBrand;
+import idm.bstrap.mm.bstrap.LinkProperty;
+import idm.bstrap.mm.bstrap.ListElement;
+import idm.bstrap.mm.bstrap.ListItem;
+import idm.bstrap.mm.bstrap.ListItemElement;
+import idm.bstrap.mm.bstrap.ListProperty;
 import idm.bstrap.mm.bstrap.MargesProperty;
 import idm.bstrap.mm.bstrap.Margin;
+import idm.bstrap.mm.bstrap.NavBarProperty;
+import idm.bstrap.mm.bstrap.Navigation;
+import idm.bstrap.mm.bstrap.OrderList;
 import idm.bstrap.mm.bstrap.Padding;
 import idm.bstrap.mm.bstrap.Page;
 import idm.bstrap.mm.bstrap.PageContent;
 import idm.bstrap.mm.bstrap.Paragraphe;
-import idm.bstrap.mm.bstrap.Primary;
 import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
-import idm.bstrap.mm.bstrap.Secondary;
 import idm.bstrap.mm.bstrap.Size;
-import idm.bstrap.mm.bstrap.Succes;
+import idm.bstrap.mm.bstrap.StripedRows;
+import idm.bstrap.mm.bstrap.Strong;
+import idm.bstrap.mm.bstrap.Table;
+import idm.bstrap.mm.bstrap.TableCell;
+import idm.bstrap.mm.bstrap.TableProperty;
+import idm.bstrap.mm.bstrap.TableRow;
+import idm.bstrap.mm.bstrap.TableSection;
+import idm.bstrap.mm.bstrap.Tbody;
 import idm.bstrap.mm.bstrap.Text;
+import idm.bstrap.mm.bstrap.TextContainable;
 import idm.bstrap.mm.bstrap.TextContainer;
 import idm.bstrap.mm.bstrap.TextElements;
+import idm.bstrap.mm.bstrap.TextNested;
+import idm.bstrap.mm.bstrap.TextNestedElement;
+import idm.bstrap.mm.bstrap.TextPageContent;
+import idm.bstrap.mm.bstrap.Tfoot;
+import idm.bstrap.mm.bstrap.Thead;
 import idm.bstrap.mm.bstrap.Thumbnail;
 import idm.bstrap.mm.bstrap.Title;
+import idm.bstrap.mm.bstrap.UnOrderedList;
 import idm.bstrap.mm.bstrap.UrlBasedLink;
+import idm.bstrap.mm.bstrap.Vertical;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -143,13 +179,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	private EClass codeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass blockquoteEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -289,48 +318,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass basicEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass primaryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass secondaryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass darkEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass infoEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass lightEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass imagePropertyEClass = null;
 
 	/**
@@ -339,13 +326,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	private EClass imageShapeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass succesEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -415,7 +395,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass linkEClass = null;
+	private EClass buttonLinkEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -457,6 +437,307 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass textPageContentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass listElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass orderListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unOrderedListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass listItemEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass listItemElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass navigationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass centeredEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass listPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass basicListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass horizontalListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass navBarPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass basicEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass verticalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass emphasisEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass italicPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass boldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass linkEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass strongEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass italicEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textContainableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textNestedEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass textNestedElementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass brandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass linkPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass linkBrandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass theadEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tbodyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tfootEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableSectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableRowEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableCellEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tablePropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass basicTableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stripedRowsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass borderedTableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass hoverRowsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass darkTableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass blockQuoteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeBlockEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass codeLineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass horizontalLineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum colorEEnum = null;
 
 	/**
@@ -465,6 +746,13 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	private EEnum sizeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum alignementEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -571,7 +859,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainer_Pagecontents() {
+	public EReference getContainer_Textpagecontents() {
 		return (EReference) containerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -580,7 +868,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainer_Textcontainers() {
+	public EReference getContainer_Containers() {
 		return (EReference) containerEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -618,6 +906,24 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EReference getTextContainer_Textelements() {
 		return (EReference) textContainerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTextContainer_Color() {
+		return (EAttribute) textContainerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTextContainer_Emphasis() {
+		return (EReference) textContainerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -697,24 +1003,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBlockquote() {
-		return blockquoteEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBlockquote_Pagecontents() {
-		return (EReference) blockquoteEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCompositeTextElement() {
 		return compositeTextElementEClass;
 	}
@@ -724,8 +1012,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCompositeTextElement_SubTextElements() {
-		return (EReference) compositeTextElementEClass.getEStructuralFeatures().get(0);
+	public EClass getUrlBasedLink() {
+		return urlBasedLinkEClass;
 	}
 
 	/**
@@ -733,8 +1021,17 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getUrlBasedLink() {
-		return urlBasedLinkEClass;
+	public EAttribute getUrlBasedLink_Url() {
+		return (EAttribute) urlBasedLinkEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getUrlBasedLink_Title() {
+		return (EAttribute) urlBasedLinkEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -798,6 +1095,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EAttribute getMargesProperty_Level() {
 		return (EAttribute) margesPropertyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMargesProperty_Alignement() {
+		return (EAttribute) margesPropertyEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -931,60 +1237,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBasic() {
-		return basicEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPrimary() {
-		return primaryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSecondary() {
-		return secondaryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getDark() {
-		return darkEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInfo() {
-		return infoEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getLight() {
-		return lightEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getImageProperty() {
 		return imagePropertyEClass;
 	}
@@ -996,15 +1248,6 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EClass getImageShape() {
 		return imageShapeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSucces() {
-		return succesEClass;
 	}
 
 	/**
@@ -1057,6 +1300,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFloat_Alignement() {
+		return (EAttribute) floatEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCenter() {
 		return centerEClass;
 	}
@@ -1084,6 +1336,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getButtonStyle_Color() {
+		return (EAttribute) buttonStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getButtonSize() {
 		return buttonSizeEClass;
 	}
@@ -1102,8 +1363,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getLink() {
-		return linkEClass;
+	public EClass getButtonLink() {
+		return buttonLinkEClass;
 	}
 
 	/**
@@ -1174,6 +1435,573 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getTextPageContent() {
+		return textPageContentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getListElement() {
+		return listElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getListElement_Listitems() {
+		return (EReference) listElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getListElement_Listproperty() {
+		return (EReference) listElementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOrderList() {
+		return orderListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getUnOrderedList() {
+		return unOrderedListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getListItem() {
+		return listItemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getListItem_Listitemelements() {
+		return (EReference) listItemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getListItem_Active() {
+		return (EAttribute) listItemEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getListItemElement() {
+		return listItemElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNavigation() {
+		return navigationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNavigation_Listelement() {
+		return (EReference) navigationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNavigation_Navbar() {
+		return (EReference) navigationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getNavigation_Links() {
+		return (EReference) navigationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCentered() {
+		return centeredEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getListProperty() {
+		return listPropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBasicList() {
+		return basicListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHorizontalList() {
+		return horizontalListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNavBarProperty() {
+		return navBarPropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBasic() {
+		return basicEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVertical() {
+		return verticalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEmphasis() {
+		return emphasisEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getItalicProperty() {
+		return italicPropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBold() {
+		return boldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLink() {
+		return linkEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLink_Linkproperties() {
+		return (EReference) linkEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStrong() {
+		return strongEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getItalic() {
+		return italicEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTextContainable() {
+		return textContainableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTextNested() {
+		return textNestedEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTextNested_Textnestedelements() {
+		return (EReference) textNestedEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTextNestedElement() {
+		return textNestedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBrand() {
+		return brandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLinkProperty() {
+		return linkPropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLinkBrand() {
+		return linkBrandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTable() {
+		return tableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTable_Tablesections() {
+		return (EReference) tableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTable_Tableproperties() {
+		return (EReference) tableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getThead() {
+		return theadEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTbody() {
+		return tbodyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTfoot() {
+		return tfootEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableSection() {
+		return tableSectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTableSection_Tablerows() {
+		return (EReference) tableSectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTableSection_Generals() {
+		return (EReference) tableSectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableRow() {
+		return tableRowEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTableRow_Tablecells() {
+		return (EReference) tableRowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTableRow_Generals() {
+		return (EReference) tableRowEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableCell() {
+		return tableCellEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTableCell_Alignment() {
+		return (EAttribute) tableCellEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTableCell_Span() {
+		return (EAttribute) tableCellEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTableProperty() {
+		return tablePropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBasicTable() {
+		return basicTableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStripedRows() {
+		return stripedRowsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBorderedTable() {
+		return borderedTableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHoverRows() {
+		return hoverRowsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDarkTable() {
+		return darkTableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBlockQuote() {
+		return blockQuoteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBlockQuote_Pagecontents() {
+		return (EReference) blockQuoteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCodeBlock() {
+		return codeBlockEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCodeBlock_Codelines() {
+		return (EReference) codeBlockEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getCodeLine() {
+		return codeLineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCodeLine_Content() {
+		return (EAttribute) codeLineEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getHorizontalLine() {
+		return horizontalLineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getColor() {
 		return colorEEnum;
 	}
@@ -1185,6 +2013,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 */
 	public EEnum getSize() {
 		return sizeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getAlignement() {
+		return alignementEEnum;
 	}
 
 	/**
@@ -1221,8 +2058,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		createEReference(pageEClass, PAGE__PAGECONTENTS);
 
 		containerEClass = createEClass(CONTAINER);
-		createEReference(containerEClass, CONTAINER__PAGECONTENTS);
-		createEReference(containerEClass, CONTAINER__TEXTCONTAINERS);
+		createEReference(containerEClass, CONTAINER__TEXTPAGECONTENTS);
+		createEReference(containerEClass, CONTAINER__CONTAINERS);
 
 		fixContainerEClass = createEClass(FIX_CONTAINER);
 
@@ -1230,6 +2067,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		textContainerEClass = createEClass(TEXT_CONTAINER);
 		createEReference(textContainerEClass, TEXT_CONTAINER__TEXTELEMENTS);
+		createEAttribute(textContainerEClass, TEXT_CONTAINER__COLOR);
+		createEReference(textContainerEClass, TEXT_CONTAINER__EMPHASIS);
 
 		paragrapheEClass = createEClass(PARAGRAPHE);
 
@@ -1244,13 +2083,11 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		codeEClass = createEClass(CODE);
 
-		blockquoteEClass = createEClass(BLOCKQUOTE);
-		createEReference(blockquoteEClass, BLOCKQUOTE__PAGECONTENTS);
-
 		compositeTextElementEClass = createEClass(COMPOSITE_TEXT_ELEMENT);
-		createEReference(compositeTextElementEClass, COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS);
 
 		urlBasedLinkEClass = createEClass(URL_BASED_LINK);
+		createEAttribute(urlBasedLinkEClass, URL_BASED_LINK__URL);
+		createEAttribute(urlBasedLinkEClass, URL_BASED_LINK__TITLE);
 
 		imageEClass = createEClass(IMAGE);
 		createEReference(imageEClass, IMAGE__IMAGEPROPERTIES);
@@ -1263,6 +2100,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		margesPropertyEClass = createEClass(MARGES_PROPERTY);
 		createEAttribute(margesPropertyEClass, MARGES_PROPERTY__LEVEL);
+		createEAttribute(margesPropertyEClass, MARGES_PROPERTY__ALIGNEMENT);
 
 		marginEClass = createEClass(MARGIN);
 
@@ -1290,23 +2128,9 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		buttonPropertyEClass = createEClass(BUTTON_PROPERTY);
 
-		basicEClass = createEClass(BASIC);
-
-		primaryEClass = createEClass(PRIMARY);
-
-		secondaryEClass = createEClass(SECONDARY);
-
-		darkEClass = createEClass(DARK);
-
-		infoEClass = createEClass(INFO);
-
-		lightEClass = createEClass(LIGHT);
-
 		imagePropertyEClass = createEClass(IMAGE_PROPERTY);
 
 		imageShapeEClass = createEClass(IMAGE_SHAPE);
-
-		succesEClass = createEClass(SUCCES);
 
 		imageAligningEClass = createEClass(IMAGE_ALIGNING);
 
@@ -1317,17 +2141,19 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		circleEClass = createEClass(CIRCLE);
 
 		floatEClass = createEClass(FLOAT);
+		createEAttribute(floatEClass, FLOAT__ALIGNEMENT);
 
 		centerEClass = createEClass(CENTER);
 
 		responsiveEClass = createEClass(RESPONSIVE);
 
 		buttonStyleEClass = createEClass(BUTTON_STYLE);
+		createEAttribute(buttonStyleEClass, BUTTON_STYLE__COLOR);
 
 		buttonSizeEClass = createEClass(BUTTON_SIZE);
 		createEAttribute(buttonSizeEClass, BUTTON_SIZE__SIZE);
 
-		linkEClass = createEClass(LINK);
+		buttonLinkEClass = createEClass(BUTTON_LINK);
 
 		buttonStateEClass = createEClass(BUTTON_STATE);
 
@@ -1341,9 +2167,116 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		pageContentEClass = createEClass(PAGE_CONTENT);
 		createEReference(pageContentEClass, PAGE_CONTENT__GENERAL_PROPERTIES);
 
+		textPageContentEClass = createEClass(TEXT_PAGE_CONTENT);
+
+		listElementEClass = createEClass(LIST_ELEMENT);
+		createEReference(listElementEClass, LIST_ELEMENT__LISTITEMS);
+		createEReference(listElementEClass, LIST_ELEMENT__LISTPROPERTY);
+
+		orderListEClass = createEClass(ORDER_LIST);
+
+		unOrderedListEClass = createEClass(UN_ORDERED_LIST);
+
+		listItemEClass = createEClass(LIST_ITEM);
+		createEReference(listItemEClass, LIST_ITEM__LISTITEMELEMENTS);
+		createEAttribute(listItemEClass, LIST_ITEM__ACTIVE);
+
+		listItemElementEClass = createEClass(LIST_ITEM_ELEMENT);
+
+		navigationEClass = createEClass(NAVIGATION);
+		createEReference(navigationEClass, NAVIGATION__LISTELEMENT);
+		createEReference(navigationEClass, NAVIGATION__NAVBAR);
+		createEReference(navigationEClass, NAVIGATION__LINKS);
+
+		centeredEClass = createEClass(CENTERED);
+
+		listPropertyEClass = createEClass(LIST_PROPERTY);
+
+		basicListEClass = createEClass(BASIC_LIST);
+
+		horizontalListEClass = createEClass(HORIZONTAL_LIST);
+
+		navBarPropertyEClass = createEClass(NAV_BAR_PROPERTY);
+
+		basicEClass = createEClass(BASIC);
+
+		verticalEClass = createEClass(VERTICAL);
+
+		emphasisEClass = createEClass(EMPHASIS);
+
+		italicPropertyEClass = createEClass(ITALIC_PROPERTY);
+
+		boldEClass = createEClass(BOLD);
+
+		linkEClass = createEClass(LINK);
+		createEReference(linkEClass, LINK__LINKPROPERTIES);
+
+		strongEClass = createEClass(STRONG);
+
+		italicEClass = createEClass(ITALIC);
+
+		textContainableEClass = createEClass(TEXT_CONTAINABLE);
+
+		textNestedEClass = createEClass(TEXT_NESTED);
+		createEReference(textNestedEClass, TEXT_NESTED__TEXTNESTEDELEMENTS);
+
+		textNestedElementEClass = createEClass(TEXT_NESTED_ELEMENT);
+
+		brandEClass = createEClass(BRAND);
+
+		linkPropertyEClass = createEClass(LINK_PROPERTY);
+
+		linkBrandEClass = createEClass(LINK_BRAND);
+
+		tableEClass = createEClass(TABLE);
+		createEReference(tableEClass, TABLE__TABLESECTIONS);
+		createEReference(tableEClass, TABLE__TABLEPROPERTIES);
+
+		theadEClass = createEClass(THEAD);
+
+		tbodyEClass = createEClass(TBODY);
+
+		tfootEClass = createEClass(TFOOT);
+
+		tableSectionEClass = createEClass(TABLE_SECTION);
+		createEReference(tableSectionEClass, TABLE_SECTION__TABLEROWS);
+		createEReference(tableSectionEClass, TABLE_SECTION__GENERALS);
+
+		tableRowEClass = createEClass(TABLE_ROW);
+		createEReference(tableRowEClass, TABLE_ROW__TABLECELLS);
+		createEReference(tableRowEClass, TABLE_ROW__GENERALS);
+
+		tableCellEClass = createEClass(TABLE_CELL);
+		createEAttribute(tableCellEClass, TABLE_CELL__ALIGNMENT);
+		createEAttribute(tableCellEClass, TABLE_CELL__SPAN);
+
+		tablePropertyEClass = createEClass(TABLE_PROPERTY);
+
+		basicTableEClass = createEClass(BASIC_TABLE);
+
+		stripedRowsEClass = createEClass(STRIPED_ROWS);
+
+		borderedTableEClass = createEClass(BORDERED_TABLE);
+
+		hoverRowsEClass = createEClass(HOVER_ROWS);
+
+		darkTableEClass = createEClass(DARK_TABLE);
+
+		blockQuoteEClass = createEClass(BLOCK_QUOTE);
+		createEReference(blockQuoteEClass, BLOCK_QUOTE__PAGECONTENTS);
+
+		codeBlockEClass = createEClass(CODE_BLOCK);
+		createEReference(codeBlockEClass, CODE_BLOCK__CODELINES);
+
+		codeLineEClass = createEClass(CODE_LINE);
+		createEAttribute(codeLineEClass, CODE_LINE__CONTENT);
+
+		horizontalLineEClass = createEClass(HORIZONTAL_LINE);
+
 		// Create enums
 		colorEEnum = createEEnum(COLOR);
 		sizeEEnum = createEEnum(SIZE);
+		alignementEEnum = createEEnum(ALIGNEMENT);
 	}
 
 	/**
@@ -1378,17 +2311,19 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		containerEClass.getESuperTypes().add(this.getPageContent());
 		fixContainerEClass.getESuperTypes().add(this.getContainer());
 		fluidContainerEClass.getESuperTypes().add(this.getContainer());
-		textContainerEClass.getESuperTypes().add(this.getPageContent());
+		textContainerEClass.getESuperTypes().add(this.getTextPageContent());
 		paragrapheEClass.getESuperTypes().add(this.getTextContainer());
+		paragrapheEClass.getESuperTypes().add(this.getListItemElement());
 		titleEClass.getESuperTypes().add(this.getTextContainer());
+		textElementsEClass.getESuperTypes().add(this.getListItemElement());
 		textEClass.getESuperTypes().add(this.getTextElements());
+		textEClass.getESuperTypes().add(this.getTextNestedElement());
 		codeEClass.getESuperTypes().add(this.getText());
-		blockquoteEClass.getESuperTypes().add(this.getPageContent());
 		compositeTextElementEClass.getESuperTypes().add(this.getContainableTextElement());
 		urlBasedLinkEClass.getESuperTypes().add(this.getCompositeTextElement());
 		imageEClass.getESuperTypes().add(this.getUrlBasedLink());
 		containableTextElementEClass.getESuperTypes().add(this.getTextElements());
-		containableTextElementEClass.getESuperTypes().add(this.getPageContent());
+		containableTextElementEClass.getESuperTypes().add(this.getTextPageContent());
 		generalEClass.getESuperTypes().add(this.getPropertyClass());
 		margesPropertyEClass.getESuperTypes().add(this.getGeneral());
 		marginEClass.getESuperTypes().add(this.getMargesProperty());
@@ -1397,20 +2332,14 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		borderPropertyEClass.getESuperTypes().add(this.getGeneral());
 		borderEClass.getESuperTypes().add(this.getBorderProperty());
 		coloredBorderEClass.getESuperTypes().add(this.getBorderProperty());
+		displayPropertyEClass.getESuperTypes().add(this.getPropertyClass());
 		display1EClass.getESuperTypes().add(this.getDisplayProperty());
 		display2EClass.getESuperTypes().add(this.getDisplayProperty());
 		display3EClass.getESuperTypes().add(this.getDisplayProperty());
 		display4EClass.getESuperTypes().add(this.getDisplayProperty());
 		buttonPropertyEClass.getESuperTypes().add(this.getPropertyClass());
-		basicEClass.getESuperTypes().add(this.getButtonStyle());
-		primaryEClass.getESuperTypes().add(this.getButtonStyle());
-		secondaryEClass.getESuperTypes().add(this.getButtonStyle());
-		darkEClass.getESuperTypes().add(this.getButtonStyle());
-		infoEClass.getESuperTypes().add(this.getButtonStyle());
-		lightEClass.getESuperTypes().add(this.getButtonStyle());
 		imagePropertyEClass.getESuperTypes().add(this.getPropertyClass());
 		imageShapeEClass.getESuperTypes().add(this.getImageProperty());
-		succesEClass.getESuperTypes().add(this.getButtonStyle());
 		imageAligningEClass.getESuperTypes().add(this.getImageProperty());
 		roundedEClass.getESuperTypes().add(this.getImageShape());
 		thumbnailEClass.getESuperTypes().add(this.getImageShape());
@@ -1420,11 +2349,54 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		responsiveEClass.getESuperTypes().add(this.getImageAligning());
 		buttonStyleEClass.getESuperTypes().add(this.getButtonProperty());
 		buttonSizeEClass.getESuperTypes().add(this.getButtonProperty());
-		linkEClass.getESuperTypes().add(this.getButtonStyle());
+		buttonLinkEClass.getESuperTypes().add(this.getButtonStyle());
 		buttonStateEClass.getESuperTypes().add(this.getButtonProperty());
 		disabledEClass.getESuperTypes().add(this.getButtonState());
 		activeEClass.getESuperTypes().add(this.getButtonState());
 		buttonEClass.getESuperTypes().add(this.getContainableTextElement());
+		buttonEClass.getESuperTypes().add(this.getTextNested());
+		textPageContentEClass.getESuperTypes().add(this.getPageContent());
+		listElementEClass.getESuperTypes().add(this.getTextPageContent());
+		listElementEClass.getESuperTypes().add(this.getListItemElement());
+		orderListEClass.getESuperTypes().add(this.getListElement());
+		unOrderedListEClass.getESuperTypes().add(this.getListElement());
+		navigationEClass.getESuperTypes().add(this.getTextPageContent());
+		centeredEClass.getESuperTypes().add(this.getNavBarProperty());
+		listPropertyEClass.getESuperTypes().add(this.getPropertyClass());
+		basicListEClass.getESuperTypes().add(this.getListProperty());
+		horizontalListEClass.getESuperTypes().add(this.getListProperty());
+		navBarPropertyEClass.getESuperTypes().add(this.getPropertyClass());
+		basicEClass.getESuperTypes().add(this.getNavBarProperty());
+		verticalEClass.getESuperTypes().add(this.getNavBarProperty());
+		emphasisEClass.getESuperTypes().add(this.getPropertyClass());
+		italicPropertyEClass.getESuperTypes().add(this.getEmphasis());
+		boldEClass.getESuperTypes().add(this.getEmphasis());
+		linkEClass.getESuperTypes().add(this.getUrlBasedLink());
+		linkEClass.getESuperTypes().add(this.getTextNested());
+		strongEClass.getESuperTypes().add(this.getTextContainable());
+		italicEClass.getESuperTypes().add(this.getTextContainable());
+		textContainableEClass.getESuperTypes().add(this.getContainableTextElement());
+		textContainableEClass.getESuperTypes().add(this.getTextNested());
+		textContainableEClass.getESuperTypes().add(this.getTextNestedElement());
+		brandEClass.getESuperTypes().add(this.getNavBarProperty());
+		linkPropertyEClass.getESuperTypes().add(this.getPropertyClass());
+		linkBrandEClass.getESuperTypes().add(this.getLinkProperty());
+		tableEClass.getESuperTypes().add(this.getTextPageContent());
+		theadEClass.getESuperTypes().add(this.getTableSection());
+		tbodyEClass.getESuperTypes().add(this.getTableSection());
+		tfootEClass.getESuperTypes().add(this.getTableSection());
+		tableCellEClass.getESuperTypes().add(this.getTextContainer());
+		tablePropertyEClass.getESuperTypes().add(this.getPropertyClass());
+		basicTableEClass.getESuperTypes().add(this.getTableProperty());
+		stripedRowsEClass.getESuperTypes().add(this.getTableProperty());
+		borderedTableEClass.getESuperTypes().add(this.getTableProperty());
+		hoverRowsEClass.getESuperTypes().add(this.getTableProperty());
+		darkTableEClass.getESuperTypes().add(this.getTableProperty());
+		blockQuoteEClass.getESuperTypes().add(this.getTextPageContent());
+		blockQuoteEClass.getESuperTypes().add(this.getListItemElement());
+		codeBlockEClass.getESuperTypes().add(this.getTextPageContent());
+		codeBlockEClass.getESuperTypes().add(this.getListItemElement());
+		horizontalLineEClass.getESuperTypes().add(this.getTextPageContent());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1436,10 +2408,10 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(containerEClass, idm.bstrap.mm.bstrap.Container.class, "Container", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContainer_Pagecontents(), this.getPageContent(), null, "pagecontents", null, 0, -1,
-				idm.bstrap.mm.bstrap.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEReference(getContainer_Textpagecontents(), this.getTextPageContent(), null, "textpagecontents", null, 0,
+				-1, idm.bstrap.mm.bstrap.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainer_Textcontainers(), this.getTextContainer(), null, "textcontainers", null, 0, -1,
+		initEReference(getContainer_Containers(), this.getContainer(), null, "containers", null, 0, -1,
 				idm.bstrap.mm.bstrap.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1452,6 +2424,11 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEClass(textContainerEClass, TextContainer.class, "TextContainer", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTextContainer_Textelements(), this.getTextElements(), null, "textelements", null, 0, -1,
+				TextContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTextContainer_Color(), this.getColor(), "color", null, 0, 1, TextContainer.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTextContainer_Emphasis(), this.getEmphasis(), null, "emphasis", null, 0, -1,
 				TextContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1474,27 +2451,22 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(codeEClass, Code.class, "Code", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(blockquoteEClass, Blockquote.class, "Blockquote", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBlockquote_Pagecontents(), this.getPageContent(), null, "pagecontents", null, 0, -1,
-				Blockquote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(compositeTextElementEClass, CompositeTextElement.class, "CompositeTextElement", !IS_ABSTRACT,
+		initEClass(compositeTextElementEClass, CompositeTextElement.class, "CompositeTextElement", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCompositeTextElement_SubTextElements(), this.getTextElements(), null, "subTextElements", null,
-				0, -1, CompositeTextElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(urlBasedLinkEClass, UrlBasedLink.class, "UrlBasedLink", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getUrlBasedLink_Url(), ecorePackage.getEString(), "url", null, 0, 1, UrlBasedLink.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUrlBasedLink_Title(), ecorePackage.getEString(), "title", null, 0, 1, UrlBasedLink.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getImage_Imageproperties(), this.getImageProperty(), null, "imageproperties", null, 0, -1,
 				Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(containableTextElementEClass, ContainableTextElement.class, "ContainableTextElement", !IS_ABSTRACT,
+		initEClass(containableTextElementEClass, ContainableTextElement.class, "ContainableTextElement", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(generalEClass, General.class, "General", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1504,8 +2476,11 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(margesPropertyEClass, MargesProperty.class, "MargesProperty", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMargesProperty_Level(), ecorePackage.getEString(), "level", null, 0, 1, MargesProperty.class,
+		initEAttribute(getMargesProperty_Level(), ecorePackage.getEInt(), "level", null, 0, 1, MargesProperty.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMargesProperty_Alignement(), this.getAlignement(), "alignement", null, 0, 1,
+				MargesProperty.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(marginEClass, Margin.class, "Margin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1513,7 +2488,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(backgroundEClass, Background.class, "Background", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBackground_Color(), this.getColor(), "color", null, 0, 1, Background.class, !IS_TRANSIENT,
+		initEAttribute(getBackground_Color(), this.getColor(), "color", "WHITE", 0, 1, Background.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(borderPropertyEClass, BorderProperty.class, "BorderProperty", IS_ABSTRACT, !IS_INTERFACE,
@@ -1544,26 +2519,11 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEClass(buttonPropertyEClass, ButtonProperty.class, "ButtonProperty", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(basicEClass, Basic.class, "Basic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(primaryEClass, Primary.class, "Primary", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(secondaryEClass, Secondary.class, "Secondary", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(darkEClass, Dark.class, "Dark", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(infoEClass, Info.class, "Info", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(lightEClass, Light.class, "Light", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(imagePropertyEClass, ImageProperty.class, "ImageProperty", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(imageShapeEClass, ImageShape.class, "ImageShape", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(succesEClass, Succes.class, "Succes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(imageAligningEClass, ImageAligning.class, "ImageAligning", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1577,21 +2537,27 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(floatEClass, idm.bstrap.mm.bstrap.Float.class, "Float", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFloat_Alignement(), this.getAlignement(), "alignement", "LEFT", 0, 1,
+				idm.bstrap.mm.bstrap.Float.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(centerEClass, Center.class, "Center", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(responsiveEClass, Responsive.class, "Responsive", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(buttonStyleEClass, ButtonStyle.class, "ButtonStyle", IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(buttonStyleEClass, ButtonStyle.class, "ButtonStyle", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getButtonStyle_Color(), this.getColor(), "color", null, 0, 1, ButtonStyle.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(buttonSizeEClass, ButtonSize.class, "ButtonSize", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getButtonSize_Size(), this.getSize(), "size", null, 0, 1, ButtonSize.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(buttonLinkEClass, ButtonLink.class, "ButtonLink", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(buttonStateEClass, ButtonState.class, "ButtonState", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1606,18 +2572,192 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 				Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(pageContentEClass, PageContent.class, "PageContent", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(pageContentEClass, PageContent.class, "PageContent", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPageContent_GeneralProperties(), this.getGeneral(), null, "generalProperties", null, 0, -1,
 				PageContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(textPageContentEClass, TextPageContent.class, "TextPageContent", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(listElementEClass, ListElement.class, "ListElement", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getListElement_Listitems(), this.getListItem(), null, "listitems", null, 0, -1,
+				ListElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getListElement_Listproperty(), this.getListProperty(), null, "listproperty", null, 0, -1,
+				ListElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(orderListEClass, OrderList.class, "OrderList", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(unOrderedListEClass, UnOrderedList.class, "UnOrderedList", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(listItemEClass, ListItem.class, "ListItem", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getListItem_Listitemelements(), this.getListItemElement(), null, "listitemelements", null, 0, -1,
+				ListItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getListItem_Active(), ecorePackage.getEBoolean(), "active", null, 0, 1, ListItem.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(listItemElementEClass, ListItemElement.class, "ListItemElement", IS_ABSTRACT, IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(navigationEClass, Navigation.class, "Navigation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getNavigation_Listelement(), this.getListElement(), null, "listelement", null, 0, -1,
+				Navigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNavigation_Navbar(), this.getNavBarProperty(), null, "navbar", null, 0, -1, Navigation.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getNavigation_Links(), this.getLink(), null, "links", null, 0, -1, Navigation.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(centeredEClass, Centered.class, "Centered", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(listPropertyEClass, ListProperty.class, "ListProperty", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(basicListEClass, BasicList.class, "BasicList", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(horizontalListEClass, HorizontalList.class, "HorizontalList", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(navBarPropertyEClass, NavBarProperty.class, "NavBarProperty", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(basicEClass, Basic.class, "Basic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(verticalEClass, Vertical.class, "Vertical", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(emphasisEClass, Emphasis.class, "Emphasis", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(italicPropertyEClass, ItalicProperty.class, "ItalicProperty", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(boldEClass, Bold.class, "Bold", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLink_Linkproperties(), this.getLinkProperty(), null, "linkproperties", null, 0, -1,
+				Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(strongEClass, Strong.class, "Strong", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(italicEClass, Italic.class, "Italic", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(textContainableEClass, TextContainable.class, "TextContainable", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(textNestedEClass, TextNested.class, "TextNested", IS_ABSTRACT, IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTextNested_Textnestedelements(), this.getTextNestedElement(), null, "textnestedelements",
+				null, 0, -1, TextNested.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(textNestedElementEClass, TextNestedElement.class, "TextNestedElement", IS_ABSTRACT, IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(brandEClass, Brand.class, "Brand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(linkPropertyEClass, LinkProperty.class, "LinkProperty", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(linkBrandEClass, LinkBrand.class, "LinkBrand", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTable_Tablesections(), this.getTableSection(), null, "tablesections", null, 0, -1,
+				Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTable_Tableproperties(), this.getTableProperty(), null, "tableproperties", null, 0, -1,
+				Table.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(theadEClass, Thead.class, "Thead", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tbodyEClass, Tbody.class, "Tbody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tfootEClass, Tfoot.class, "Tfoot", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(tableSectionEClass, TableSection.class, "TableSection", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTableSection_Tablerows(), this.getTableRow(), null, "tablerows", null, 0, -1,
+				TableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTableSection_Generals(), this.getGeneral(), null, "generals", null, 0, -1, TableSection.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tableRowEClass, TableRow.class, "TableRow", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTableRow_Tablecells(), this.getTableCell(), null, "tablecells", null, 0, -1, TableRow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTableRow_Generals(), this.getGeneral(), null, "generals", null, 0, -1, TableRow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tableCellEClass, TableCell.class, "TableCell", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTableCell_Alignment(), this.getAlignement(), "alignment", null, 0, 1, TableCell.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTableCell_Span(), ecorePackage.getEInt(), "span", null, 0, 1, TableCell.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tablePropertyEClass, TableProperty.class, "TableProperty", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(basicTableEClass, BasicTable.class, "BasicTable", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(stripedRowsEClass, StripedRows.class, "StripedRows", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(borderedTableEClass, BorderedTable.class, "BorderedTable", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(hoverRowsEClass, HoverRows.class, "HoverRows", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(darkTableEClass, DarkTable.class, "DarkTable", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(blockQuoteEClass, BlockQuote.class, "BlockQuote", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBlockQuote_Pagecontents(), this.getPageContent(), null, "pagecontents", null, 0, -1,
+				BlockQuote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(codeBlockEClass, CodeBlock.class, "CodeBlock", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCodeBlock_Codelines(), this.getCodeLine(), null, "codelines", null, 0, -1, CodeBlock.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(codeLineEClass, CodeLine.class, "CodeLine", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCodeLine_Content(), ecorePackage.getEString(), "content", null, 0, 1, CodeLine.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(horizontalLineEClass, HorizontalLine.class, "HorizontalLine", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(colorEEnum, Color.class, "Color");
 		addEEnumLiteral(colorEEnum, Color.DARK);
 		addEEnumLiteral(colorEEnum, Color.PRIMARY);
 		addEEnumLiteral(colorEEnum, Color.SECONDARY);
-		addEEnumLiteral(colorEEnum, Color.SUCCES);
+		addEEnumLiteral(colorEEnum, Color.SUCCESS);
 		addEEnumLiteral(colorEEnum, Color.INFO);
 		addEEnumLiteral(colorEEnum, Color.WHITE);
 		addEEnumLiteral(colorEEnum, Color.WARNING);
@@ -1627,6 +2767,13 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		addEEnumLiteral(sizeEEnum, Size.DEFAULT);
 		addEEnumLiteral(sizeEEnum, Size.SMALL);
 		addEEnumLiteral(sizeEEnum, Size.LARGE);
+
+		initEEnum(alignementEEnum, Alignement.class, "Alignement");
+		addEEnumLiteral(alignementEEnum, Alignement.CENTER);
+		addEEnumLiteral(alignementEEnum, Alignement.TOP);
+		addEEnumLiteral(alignementEEnum, Alignement.BOTTOM);
+		addEEnumLiteral(alignementEEnum, Alignement.LEFT);
+		addEEnumLiteral(alignementEEnum, Alignement.RIGHT);
 
 		// Create resource
 		createResource(eNS_URI);

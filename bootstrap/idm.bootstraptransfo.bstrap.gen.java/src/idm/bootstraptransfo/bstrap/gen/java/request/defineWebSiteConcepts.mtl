@@ -1,0 +1,176 @@
+
+[**
+ * This module ensure definition of some general concept of a website application.
+ */]
+[comment encoding = UTF-8 /]
+[module defineWebSiteConcepts('http://www.example.org/bstrap')]
+
+[**
+ * Return the name of the path of the website directory
+ */]
+[query public getWebSitePath(aPage : Page) : String = 'WebSite'/]
+[**
+ * Return the name of a Page (e.g. Simple Page)
+ */]
+[query public getPageName(aPage : Page) : String = self.name.toUpperFirst() /]
+[**
+ * Return the path of a Page (website/simple_page.html)
+ */]
+[query public getPagePath(aPage : Page) : String = self.getWebSitePath()+'/'+aPage.getPageName().toLower().substituteAll(' ', '_')+'.html' /]
+[**
+ * Declare a class for a HTML element (class=)
+ */]
+[query public declareClass(aType : OclAny) : String = 'class=' /]
+[**
+ * Declare a class for a HTML element (class=)
+ */]
+[query public declareComment(aType : OclAny) : String = '<!-- Define for' + self.eClass().name+ '-->' /]
+
+[**
+ * Return a correct format of a close balise (</p>)
+ */]
+[query public getCloseBaliseName(aBalise : String) : String = '</'+aBalise+'>'  /]
+
+[**
+ * Return a correct format of a class name (rounded)
+ */]
+[query public getClassName(aClass : OclAny) : String = self.eClass().name.toLower()/]
+[**
+ * Return a correct format of a List property (<ul class= list-group>)
+ */]
+[query public getListPropertyClassName(aListProperty : ListProperty) : String = 'list-group' /]
+[**
+ * Return a correct format of a List item (<li class= list-group-item>)
+ */]
+
+
+
+[comment]+++++++++++++++Container ++++++++++++++[/comment]
+[**
+ * Declare a class for a container HTML element (class=)
+ */]
+[template public getContainerClass(aContainer : Container)]
+''	
+[/template]
+[**
+ * Declare a class for a container HTML element (class=)
+ */]
+[template public getContainerClass(aContainer : FixContainer)]
+.container
+[/template]
+[**
+ * Declare a class for a container HTML element (class=)
+ */]
+[template public getContainerClass(aContainer : FluidContainer)]
+.container-fluid	
+[/template]
+
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++++++Alignement ++++++++++++++[/comment]
+[**
+ * return an Alignement (l/r/t/b)
+ */]
+
+[template public getAlignement(anAlignement : Alignement)? (self.toString() <> 'CENTER')]
+[self.toString().toLower().at(1)/]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++++++Alignement ++++++++++++++[/comment]
+[**
+ * return a color (primary,secondary,..)
+ */]
+
+[template public getColor(aColor : Color)]
+[self.toString().toLower()/]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++++++Alignement ++++++++++++++[/comment]
+[**
+ * return a Size (primary,secondary,..)
+ */]
+
+[template public getSize(aSize : Size) ? (self.toString() <> 'DEFAULT')]
+[self.toString().toLower().first(2)/]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++++++ ListItem state++++++++++++++[/comment]
+[**
+ * return a ListItem (active)
+ * @param aListItem
+ */]
+[template public getListItemState(aListItem : ListItem) ? (self.active)]
+active
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+
+[comment]+++++++++++++++ ListItem state++++++++++++++[/comment]
+[**
+ * return a ListItem Class when li is in navBar
+ * @param aListItem
+ */]
+[comment][template public getListItemClass(aListElement : ListItem) ? (self.eContainer(ListElement).eContainer(NavBarProperty).oclIsInvalid() = false)]
+nav-item
+[/template][/comment]
+[**
+ * return a ListItem Class
+ * @param aListItem
+ */]
+[template public getListItemClass(aListElement : ListItem)? (self.eContainer().eContainer().oclIsKindOf(Navigation))]
+nav-item
+[/template]
+[template public getListItemClass(aListElement : ListItem)]
+list-group-item
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+
+[comment]+++++++++++++++ td or th ++++++++++++++[/comment]
+[**
+ * return a table cell balise name (td, th)
+ * @param aListItem
+ */]
+[template public getTableCellName(aTableCell : TableCell) ? (self.eContainer(Thead).oclIsKindOf(Thead))]
+th
+[/template]
+[template public getTableCellName(aTableCell : TableCell) ]
+td
+[/template]
+
+[comment]------------------------------------------------------[/comment]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

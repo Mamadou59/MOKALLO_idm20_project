@@ -9,8 +9,8 @@ package idm.bstrap.mm.bstrap;
  *
  *
  * @see idm.bstrap.mm.bstrap.BstrapPackage#getContainableTextElement()
- * @model
+ * @model abstract="true"
  * @generated
  */
-public interface ContainableTextElement extends TextElements, PageContent {
+public interface ContainableTextElement extends TextElements, TextPageContent {
 } // ContainableTextElement

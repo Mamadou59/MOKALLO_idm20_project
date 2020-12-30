@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class BasicImpl extends ButtonStyleImpl implements Basic {
+public class BasicImpl extends NavBarPropertyImpl implements Basic {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -73,9 +73,8 @@ public class MarginItemProvider extends MargesPropertyItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Margin) object).getLevel();
-		return label == null || label.length() == 0 ? getString("_UI_Margin_type")
-				: getString("_UI_Margin_type") + " " + label;
+		Margin margin = (Margin) object;
+		return getString("_UI_Margin_type") + " " + margin.getLevel();
 	}
 
 	/**

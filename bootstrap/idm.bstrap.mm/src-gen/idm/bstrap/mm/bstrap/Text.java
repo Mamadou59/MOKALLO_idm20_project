@@ -18,7 +18,7 @@ package idm.bstrap.mm.bstrap;
  * @model
  * @generated
  */
-public interface Text extends TextElements {
+public interface Text extends TextElements, TextNestedElement {
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->

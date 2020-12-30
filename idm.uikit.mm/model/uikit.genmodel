@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/idm.uikit.mm/src-gen" creationIcons="false" editDirectory="/idm.uikit.mm.edit/src-gen"
+    editorDirectory="/idm.uikit.mm.editor/src-gen" modelPluginID="idm.uikit.mm" modelName="Uikit"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>uikit.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Uikit" basePackage="idm.uikit.mm" disposableProviderFactory="true"
+      ecorePackage="uikit.ecore#/">
+    <genClasses ecoreClass="uikit.ecore#//Page">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//Page/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//Page/pagecontents"/>
+    </genClasses>
+    <genClasses ecoreClass="uikit.ecore#//PageContent"/>
+    <genClasses ecoreClass="uikit.ecore#//Container">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//Container/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="uikit.ecore#//TextPageContent"/>
+    <genClasses ecoreClass="uikit.ecore#//TextContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//TextContainer/textelements"/>
+    </genClasses>
+    <genClasses ecoreClass="uikit.ecore#//Paragraphe"/>
+    <genClasses ecoreClass="uikit.ecore#//Title">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//Title/level"/>
+    </genClasses>
+    <genClasses ecoreClass="uikit.ecore#//ContainableTextElement"/>
+    <genClasses ecoreClass="uikit.ecore#//Button"/>
+    <genClasses ecoreClass="uikit.ecore#//CompositeTextElement"/>
+    <genClasses ecoreClass="uikit.ecore#//TextContainable"/>
+    <genClasses ecoreClass="uikit.ecore#//UrlBasedLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//UrlBasedLink/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//UrlBasedLink/title"/>
+    </genClasses>
+    <genClasses ecoreClass="uikit.ecore#//Link"/>
+    <genClasses ecoreClass="uikit.ecore#//Image"/>
+    <genClasses ecoreClass="uikit.ecore#//Strong"/>
+    <genClasses ecoreClass="uikit.ecore#//Italic"/>
+    <genClasses ecoreClass="uikit.ecore#//TextElement"/>
+    <genClasses ecoreClass="uikit.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//Text/text"/>
+    </genClasses>
+    <genClasses ecoreClass="uikit.ecore#//Code"/>
+    <genClasses ecoreClass="uikit.ecore#//TextNested">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//TextNested/testnestedelements"/>
+    </genClasses>
+    <genClasses ecoreClass="uikit.ecore#//TextNestedElement"/>
+  </genPackages>
+</genmodel:GenModel>

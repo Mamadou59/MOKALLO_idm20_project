@@ -2,6 +2,9 @@
  */
 package idm.bstrap.mm.bstrap.provider;
 
+import idm.bstrap.mm.bstrap.Color;
+import idm.bstrap.mm.bstrap.Paragraphe;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -71,7 +74,10 @@ public class ParagrapheItemProvider extends TextContainerItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Paragraphe_type");
+		Color labelValue = ((Paragraphe) object).getColor();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ? getString("_UI_Paragraphe_type")
+				: getString("_UI_Paragraphe_type") + " " + label;
 	}
 
 	/**

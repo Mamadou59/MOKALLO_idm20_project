@@ -61,8 +61,8 @@ public class ContainerItemProvider extends PageContentItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BstrapPackage.Literals.CONTAINER__PAGECONTENTS);
-			childrenFeatures.add(BstrapPackage.Literals.CONTAINER__TEXTCONTAINERS);
+			childrenFeatures.add(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS);
+			childrenFeatures.add(BstrapPackage.Literals.CONTAINER__CONTAINERS);
 		}
 		return childrenFeatures;
 	}
@@ -124,8 +124,8 @@ public class ContainerItemProvider extends PageContentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Container.class)) {
-		case BstrapPackage.CONTAINER__PAGECONTENTS:
-		case BstrapPackage.CONTAINER__TEXTCONTAINERS:
+		case BstrapPackage.CONTAINER__TEXTPAGECONTENTS:
+		case BstrapPackage.CONTAINER__CONTAINERS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -143,62 +143,56 @@ public class ContainerItemProvider extends PageContentItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
-				BstrapFactory.eINSTANCE.createPageContent()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
-				BstrapFactory.eINSTANCE.createFixContainer()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
-				BstrapFactory.eINSTANCE.createFluidContainer()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
 				BstrapFactory.eINSTANCE.createParagraphe()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
 				BstrapFactory.eINSTANCE.createTitle()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
-				BstrapFactory.eINSTANCE.createBlockquote()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
-				BstrapFactory.eINSTANCE.createContainableTextElement()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
-				BstrapFactory.eINSTANCE.createCompositeTextElement()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
 				BstrapFactory.eINSTANCE.createImage()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
 				BstrapFactory.eINSTANCE.createButton()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTCONTAINERS,
-				BstrapFactory.eINSTANCE.createParagraphe()));
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createOrderList()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTCONTAINERS,
-				BstrapFactory.eINSTANCE.createTitle()));
-	}
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createUnOrderedList()));
 
-	/**
-	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
-		Object childFeature = feature;
-		Object childObject = child;
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createNavigation()));
 
-		boolean qualify = childFeature == BstrapPackage.Literals.CONTAINER__PAGECONTENTS
-				|| childFeature == BstrapPackage.Literals.CONTAINER__TEXTCONTAINERS;
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createLink()));
 
-		if (qualify) {
-			return getString("_UI_CreateChild_text2",
-					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
-		}
-		return super.getCreateChildText(owner, feature, child, selection);
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createStrong()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createItalic()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createTable()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createTableCell()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createBlockQuote()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
+				BstrapFactory.eINSTANCE.createHorizontalLine()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__CONTAINERS,
+				BstrapFactory.eINSTANCE.createFixContainer()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__CONTAINERS,
+				BstrapFactory.eINSTANCE.createFluidContainer()));
 	}
 
 }
