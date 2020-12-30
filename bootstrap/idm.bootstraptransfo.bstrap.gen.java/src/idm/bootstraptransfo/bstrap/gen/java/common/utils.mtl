@@ -98,6 +98,18 @@ textpageContents : Sequence(TextPageContent) = self.eContents(TextPageContent);
 [self.generateContainableTextElement()/]
 [/template]
 
+[**
+ * Handle code generation of a ListElement in a Page  (ListElement)
+ */]
+[template public generateTextPageContentElement(aListElement : ListElement)]
+[self.generateListElement()/]
+[/template]
+[**
+ * Handle code generation of a Navigation in a Page  (Navigation)
+ */]
+[template public generateTextPageContentElement(aNavigation : Navigation)]
+[self.generateNavigationProperty()/]
+[/template]
 
 
 

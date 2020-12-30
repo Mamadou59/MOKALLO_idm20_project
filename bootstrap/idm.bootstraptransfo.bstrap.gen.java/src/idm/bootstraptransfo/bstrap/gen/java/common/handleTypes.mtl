@@ -157,6 +157,76 @@
 
 
 
+[comment]+++++++++++++++ListElement ++++++++++++++[/comment]
+[**
+ * handle ListElement (OrderedList,UnorderedList)  
+ */]
+[template public generateListElement(aListElement : ListElement)]
+[self.declareComment()/]
+[/template]
+[template public generateListElement(aListElement : OrderList)  { aBalise : String = 'ol'; }]
+<[aBalise/]  [self.declareClass()/]"[self.listproperty.getListProperty()/] [self.generalProperties.getGeneralClass()/] [self.getNavigationBarClass()/]">
+[generateListItem(self.listitems)/]
+[aBalise.getCloseBaliseName()/]
+[/template]
+[template public generateListElement(aListElement : UnOrderedList) { aBalise : String = 'ul'; }]
+<[aBalise/] [self.declareClass()/]"[self.listproperty.getListProperty()/] [self.generalProperties.getGeneralClass()/] [self.getNavigationBarClass()/]">
+[generateListItem(self.listitems)/]
+[aBalise.getCloseBaliseName()/]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++++++ListItem ++++++++++++++[/comment]
+[**
+ * handle ListItem (li)  
+ */]
+[template public generateListItem(aListItems : OrderedSet(ListItem))]
+[for (aListItem : ListItem | aListItems)]
+<li [self.declareClass()/] "[self.getListItemClass()/] [self.getListItemState()/]"> [self.listitemelements.generatelistelements()/] </li>
+[/for]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+
+[comment]+++++++++++++++ListItemElement ++++++++++++++[/comment]
+[**
+ * handle ListItem content (Paragraphe,TextElement,ListElement)  
+ */]
+[template public generatelistelements(aListItemElement : ListItemElement)]
+[self.declareComment()/]
+[/template]
+[template public generatelistelements(aListItemElement : Paragraphe)]
+[self.generateTextContainer()/]
+[/template]
+[template public generatelistelements(aListItemElement : TextElements)]
+[self.generateTextElements()/]
+[/template]
+[template public generatelistelements(aListItemElement : ListElement)]
+[self.generateListElement()/]
+[/template]
+[comment][template public generatelistelements(aListItemElement : BlockQuote)]
+[self.generateBlockQuoteElement()/]
+[/template]
+[template public generatelistelements(aListItemElement : CodeBlock)]
+[self.generateCodeBlockElement()/]
+[/template][/comment]
+
+[comment]------------------------------------------------------[/comment]
+
+
+[comment]+++++++++++++++ Main Navigation ++++++++++++++[/comment]
+[**
+ * handle Navigation content (Navigation)  
+ */]
+
+[template public generateNavigationProperty(aNavigation : Navigation) { aBalise : String = 'nav';}]
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.navbar.getNaVBarProperty()/]">
+[self.links.generateTextElements()/]
+[self.listelement.generateListElement()/]
+[aBalise.getCloseBaliseName()/]
+[/template]
+
+[comment]------------------------------------------------------[/comment]
 
 
 
