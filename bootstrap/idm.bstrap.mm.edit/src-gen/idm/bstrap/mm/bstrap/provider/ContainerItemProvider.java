@@ -61,8 +61,7 @@ public class ContainerItemProvider extends PageContentItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS);
-			childrenFeatures.add(BstrapPackage.Literals.CONTAINER__CONTAINERS);
+			childrenFeatures.add(BstrapPackage.Literals.CONTAINER__PAGECONTENTS);
 		}
 		return childrenFeatures;
 	}
@@ -124,8 +123,7 @@ public class ContainerItemProvider extends PageContentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Container.class)) {
-		case BstrapPackage.CONTAINER__TEXTPAGECONTENTS:
-		case BstrapPackage.CONTAINER__CONTAINERS:
+		case BstrapPackage.CONTAINER__PAGECONTENTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -143,56 +141,56 @@ public class ContainerItemProvider extends PageContentItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createParagraphe()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createTitle()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createImage()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createButton()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createOrderList()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createUnOrderedList()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createNavigation()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createLink()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createStrong()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createItalic()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createTable()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createTableCell()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createBlockQuote()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createCodeBlock()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__TEXTPAGECONTENTS,
-				BstrapFactory.eINSTANCE.createHorizontalLine()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__CONTAINERS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
 				BstrapFactory.eINSTANCE.createFixContainer()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__CONTAINERS,
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
 				BstrapFactory.eINSTANCE.createFluidContainer()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createParagraphe()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createTitle()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createImage()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createButton()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createOrderList()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createUnOrderedList()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createNavigation()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createLink()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createStrong()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createItalic()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createTable()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createTableCell()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createBlockQuote()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createCodeBlock()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createHorizontalLine()));
 	}
 
 }
