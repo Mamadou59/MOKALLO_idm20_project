@@ -62,14 +62,13 @@
     <genClasses ecoreClass="usd.ecore#//CompositeTextElement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//CompositeTextElement/subTextElements"/>
     </genClasses>
-    <genClasses ecoreClass="usd.ecore#//Button"/>
+    <genClasses ecoreClass="usd.ecore#//Button">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Button/type"/>
+    </genClasses>
     <genClasses ecoreClass="usd.ecore#//Navigation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference usd.ecore#//Navigation/groupedItems"/>
-    </genClasses>
-    <genClasses ecoreClass="usd.ecore#//ClickableElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//ClickableElement/textContent"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//ClickableElement/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//ClickableElement/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Navigation/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute usd.ecore#//Navigation/textContent"/>
     </genClasses>
     <genClasses ecoreClass="usd.ecore#//ContainableTextElement"/>
     <genClasses ecoreClass="usd.ecore#//Section">

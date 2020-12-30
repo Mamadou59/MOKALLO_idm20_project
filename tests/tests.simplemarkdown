@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="ASCII"?>
-<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="/idm.markdown.parser/src/resources/md/tests.simplemarkdown">
+<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="/tests/tests.simplemarkdown">
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="File for tests markdown parser"/>
+    <elements xsi:type="simplemarkdown:Text" text="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:2,emphasis:italic) File for tests markdown parser"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="Table"/>
+    <elements xsi:type="simplemarkdown:Text" text="(color:dark,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:2,emphasis:italic) Table"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:CodeBlock">
+    <codelines text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})&#xD;&#xA;"/>
+    <codelines text="This is [an example](http://example.com/ &quot;Title&quot;) inline link.&#xD;&#xA;"/>
+    <codelines text="&#xD;&#xA;"/>
+    <codelines text="[This link](http://example.net/) has no title attribute.&#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="And now an image : "/>
+    <elements xsi:type="simplemarkdown:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+      <subtext xsi:type="simplemarkdown:Text" text="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:2, imageShape:circle,imageAligning:center)image"/>
+    </elements>
   </contents>
   <contents xsi:type="simplemarkdown:TableBlock">
     <sections xsi:type="simplemarkdown:TableHead">
       <rows rowNumber="1">
         <cells isHeader="true">
-          <elements xsi:type="simplemarkdown:Text" text="Syntax"/>
+          <elements xsi:type="simplemarkdown:Text" text="tabProperties:(sectionProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),tableProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},tableProperty:darkTable),rowProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Syntax"/>
         </cells>
         <cells isHeader="true">
-          <elements xsi:type="simplemarkdown:Text" text="Description"/>
+          <elements xsi:type="simplemarkdown:Text" text="tabProperties:(cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Description"/>
         </cells>
       </rows>
     </sections>
@@ -30,15 +42,15 @@
     <sections xsi:type="simplemarkdown:TableBody">
       <rows rowNumber="1">
         <cells>
-          <elements xsi:type="simplemarkdown:Text" text="Header"/>
+          <elements xsi:type="simplemarkdown:Text" text="tabProperties:(sectionProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),rowProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Header"/>
         </cells>
         <cells>
-          <elements xsi:type="simplemarkdown:Text" text="Title"/>
+          <elements xsi:type="simplemarkdown:Text" text="tabPproperties:(cell:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Title"/>
         </cells>
       </rows>
       <rows rowNumber="2">
         <cells>
-          <elements xsi:type="simplemarkdown:Text" text="Paragraph"/>
+          <elements xsi:type="simplemarkdown:Text" text="tabProperties:(cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Paragraph"/>
         </cells>
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="Text"/>
@@ -151,9 +163,9 @@
     </sections>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="See syntax and option :"/>
+    <elements xsi:type="simplemarkdown:Text" text="(color:primary,background:primary,margin:{level:5,alignment:left},padding:{level:3,alignment:center},border:{border},emphasis:italic) See syntax and option :"/>
     <elements xsi:type="simplemarkdown:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="Tables Extension"/>
+      <subtext xsi:type="simplemarkdown:Text" text="(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)[Tables Extension]"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
@@ -174,9 +186,19 @@
     <elements xsi:type="simplemarkdown:Text" text="."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
+      <subtext xsi:type="simplemarkdown:Text" text="(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold) [Tables Extension22]"/>
+    </elements>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Emphasis">
+      <subtext xsi:type="simplemarkdown:Text" text="(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold) TextItalic"/>
+    </elements>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Text" text="Ce paragraphe contient un "/>
     <elements xsi:type="simplemarkdown:StrongEmphasis">
-      <subtext xsi:type="simplemarkdown:Text" text="Strong"/>
+      <subtext xsi:type="simplemarkdown:Text" text="(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)Strong"/>
     </elements>
     <elements xsi:type="simplemarkdown:Text" text=" et un "/>
     <elements xsi:type="simplemarkdown:Emphasis">
@@ -555,7 +577,7 @@
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Text" text="And now an image : "/>
     <elements xsi:type="simplemarkdown:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="image"/>
+      <subtext xsi:type="simplemarkdown:Text" text="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:2)image"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
@@ -573,6 +595,11 @@
   <contents xsi:type="simplemarkdown:BulletList">
     <items xsi:type="simplemarkdown:BulletListItem">
       <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, listProperty:basicList)"/>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
         <elements xsi:type="simplemarkdown:Text" text="start list. This is a paragraph"/>
         <elements xsi:type="simplemarkdown:Text" text="on multiple lines."/>
       </elements>
@@ -582,7 +609,7 @@
     </items>
     <items xsi:type="simplemarkdown:BulletListItem">
       <elements xsi:type="simplemarkdown:Paragraph">
-        <elements xsi:type="simplemarkdown:Text" text="item 2."/>
+        <elements xsi:type="simplemarkdown:Text" text="(itemProperty: active) item 2."/>
       </elements>
       <elements xsi:type="simplemarkdown:BulletList">
         <items xsi:type="simplemarkdown:BulletListItem">
@@ -597,6 +624,11 @@
         </items>
       </elements>
       <elements xsi:type="simplemarkdown:BulletList">
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, listProperty:horizontalList)"/>
+          </elements>
+        </items>
         <items xsi:type="simplemarkdown:BulletListItem">
           <elements xsi:type="simplemarkdown:Paragraph">
             <elements xsi:type="simplemarkdown:Text" text="level 2 item 3"/>
@@ -656,10 +688,12 @@
   <contents xsi:type="simplemarkdown:BlockQuote">
     <contents xsi:type="simplemarkdown:Paragraph">
       <elements xsi:type="simplemarkdown:Text" text="Start citation"/>
+      <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})"/>
     </contents>
     <contents xsi:type="simplemarkdown:BlockQuote">
       <contents xsi:type="simplemarkdown:Paragraph">
         <elements xsi:type="simplemarkdown:Text" text="double citation"/>
+        <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})"/>
       </contents>
       <contents xsi:type="simplemarkdown:BulletList">
         <items xsi:type="simplemarkdown:BulletListItem">

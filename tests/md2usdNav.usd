@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="/idm.markdown.parser/src/resources/md/exemplesProjet/navbar.simplemarkdown">
+<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="/tests/navbar.simplemarkdown">
   <contents xsi:type="usd:Title" level="1">
     <textElements xsi:type="usd:Link">
       <subTextElements xsi:type="usd:Text" text="Navbar navbar-expand-md bg-dark navbar-dark collapsable"/>
     </textElements>
   </contents>
-  <contents xsi:type="usd:Navigation" textContent="Navbar brand" type="navbar-brand" url="#">
+  <contents xsi:type="usd:Navigation" type="navbar-brand" textContent="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})Navbar brand">
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
         <elements xsi:type="usd:Link" url="#" title=""/>
@@ -18,7 +18,7 @@
       </items>
     </groupedItems>
   </contents>
-  <contents xsi:type="usd:Navigation" textContent="Navbar brand2" type="navbar-brand" url="#">
+  <contents xsi:type="usd:Navigation" type="navbar-brand" textContent="Navbar brand2">
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
         <elements xsi:type="usd:Link" url="#" title=""/>
@@ -47,6 +47,8 @@
     <textElements xsi:type="usd:Text" text="Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button."/>
   </contents>
   <contents xsi:type="usd:Paragraph">
-    <textElements xsi:type="usd:Button" textContent="Doc bootstrap" type="btn-info" url="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp"/>
+    <textElements xsi:type="usd:Button" type="btn-info">
+      <subTextElements xsi:type="usd:Text" text="[btn-info]Doc bootstrap"/>
+    </textElements>
   </contents>
 </usd:Page>

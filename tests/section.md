@@ -1,28 +1,18 @@
-# My First Bootstrap 4 Page
+# My First Bootstrap section 4 Page
 
-Resize this responsive page to see the effect!
-
-# [Navbar]
-
-[[]Navbar](#)
-[Link 1](#)
-[Link 2](#)
-[Link 3](#)
 
 > Start section
->> # [Section]
->>> ## [Colomn 4]
->>> ## About Me
->>>> ###### Photo of Me:
->>>>> Some text about me in culpa qui officia deserunt mollit anim..
->>> ### Some Links
->>>>> Lorem ipsum dolor sit ame.
->>> ## [Colomn 8]
->>> ## TITLE HEADING
->>>> Start section
->>>> ##### Title description, Sep 2, 2017
->>>>> Some text..
->>>>> Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-
-
-Footer
+> properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fluidContainer})
+> # (color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}) Titre de la section
+> (color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}) Ce paragraph est dans la prémière section
+> > Start section
+> > properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fixContainer})
+> > ## Titre de la sous section
+> > - list in citation
+> > - item 2
+> > - item 3
+> > fin de list
+> > > Start section
+properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fixContainer})
+> > > ### Titre de la sous sous section
+> > > (color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})text du paragraphe

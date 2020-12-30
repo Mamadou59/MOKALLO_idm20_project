@@ -1,0 +1,422 @@
+import queries;
+	
+
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+modeltype bstrapMM "strict" uses "http://www.example.org/bstrap";
+
+transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
+
+//Start parsing Emphasis properties 
+
+/**
+* Map a String contains Emphasis properties to bstrap Emphasis element, 
+* which make disjunction beetwen these maps getItalicProperty,
+* getBoldProperty
+*/
+mapping String::disjunctsEmphasisProperties() : bstrapMM::Emphasis 
+	disjuncts String::getItalicProperty, String::getBoldProperty{
+	
+}
+
+/**
+* Abstract mapper wich map a String contains properties to bstrap Emphasis element.
+*/
+abstract mapping String::getEmphasisProperty() : bstrapMM::Emphasis {}
+
+/**
+* A mapper wich map a String contains properties to bstrap ItalicProperty element.
+*/
+mapping String::getItalicProperty() : bstrapMM::ItalicProperty 
+	inherits String::getEmphasisProperty
+	when {self.find('emphasis:italic') > 0}{}
+
+/**
+* A mapper wich map a String contains properties to bstrap Bold element.
+*/	
+mapping String::getBoldProperty() : bstrapMM::Bold 
+	inherits String::getEmphasisProperty
+	when {self.find('emphasis:bold') > 0}{}
+	
+
+//Start parsing title properties
+
+/**
+* A mapper wich map a String contains properties to bstrap DisplayProperty element.
+* which make dijuction beetwen getDisplay1, getDisplay2, getDisplay3, and getDisplay4
+*/	
+mapping String::disjunctsDisplayProperties() : bstrapMM::DisplayProperty 
+	disjuncts String::getDisplay1, String::getDisplay2,
+				String::getDisplay3,String::getDisplay4{}
+
+abstract mapping String::parsePropertyClasses() : bstrapMM::PropertyClass {}
+
+abstract mapping String::getDisplayProperty() : DisplayProperty 
+	inherits String::parsePropertyClasses{}
+
+/**
+* A mapper to map String to bostrap Display1 element.
+*/
+mapping String::getDisplay1() : bstrapMM::Display1 
+	inherits String::getDisplayProperty
+	when {self.find('display:1') > 0}{
+	}
+
+/**
+* A mapper to map String to bostrap Display2 element.
+*/
+mapping String::getDisplay2() : bstrapMM::Display2 
+	inherits String::getDisplayProperty
+	when {self.find('display:2') > 0}{}
+
+/**
+* A mapper to map String to bostrap Display3 element.
+*/
+mapping String::getDisplay3() : bstrapMM::Display3
+	inherits String::getDisplayProperty
+	when {self.find('display:3') > 0}{}
+
+/**
+* A mapper to map String to bostrap Display4 element.
+*/
+mapping String::getDisplay4() : bstrapMM::Display4 
+	inherits String::getDisplayProperty
+	when {self.find('display:4') > 0}{}
+	
+/**
+* A mapper which map a string properties to specified button properties
+* TODO Don't forgot resolving warning
+*/
+mapping String::parseButtonProperties() : Set(ButtonProperty) {
+	init {
+		result := Set{};
+		
+		if (self.find('btn-primary') > 0){
+			result += object ButtonStyle {
+				color := Color::PRIMARY;
+			};
+		}
+		else if (self.find("btn-info") > 0){
+			result += object ButtonStyle {
+				color := Color::INFO;
+			};
+		}
+		else if (self.find("btn-dark") > 0){
+			result += object ButtonStyle {
+				color := Color::DARK;
+			};
+		}
+		else if (self.find("btn-secondary") > 0){
+			result += object ButtonStyle {
+				color := Color::SECONDARY;
+			};
+		}
+		else if (self.find("btn-success") > 0){
+			result += object ButtonStyle {
+				color := Color::SUCCESS;
+			};
+		}
+		else if (self.find("btn-light") > 0 or self.find("btn-white") > 0){
+			result += object ButtonStyle {
+				color := Color::WHITE;
+			};
+		}
+		else if (self.find("btn-danger") > 0){
+			result += object ButtonStyle {
+				color := Color::DANGER;
+			};
+		}
+		else if (self.find("btn-warning") > 0){
+			result += object ButtonStyle {
+				color := Color::WARNING;
+			};
+		}
+		else if (self.find("btn-link") > 0){
+			result += object ButtonLink {
+			};
+		};
+		
+		if (self.find("active") > 0){
+			result += object Active{};
+		};
+		if (self.find("disabled") > 0){
+			result += object Disabled{};
+		};
+		if (self.find("btn-sm") > 0){
+			result += object ButtonSize{
+				size := Size::SMALL;
+			};
+		};
+		if (self.find("btn-lg") > 0){
+			result += object ButtonSize{
+				size := Size::LARGE;
+			};
+		}	
+	}
+}
+
+/**
+* A mapper which map a string properties to specified bootstrap Nav properties
+* TODO Don't forgot resolving warning
+*/
+mapping String::parseNavProperties() : Set(NavBarProperty) {
+	init {
+		result := Set{};
+		if (self.find('vertical') > 0){
+			result += object Vertical{}
+		}
+		else if (self.find('basic') > 0){
+			result += object Basic{}
+		}
+		else if (self.find('centred') > 0){
+			result += object Centered{}
+		}
+		else if (self.find('brand') > 0 or self.find('navbar-brand') > 0){
+			result += object Brand{}
+		}
+	}
+}
+
+
+// Start parsing general properties
+
+/**
+* helper to get from String contains background properties to bstrap Background element, 
+*/
+helper String::backGroundWrapper() : bstrapMM::Background {
+	var prop := self.substringAfter('background:').substringBefore(',');
+	if(prop <> null){
+		return prop.getBackground();
+	};
+	return null;
+}
+
+/**
+* helper to get from String contains margin properties to bstrap Margin element, 
+*/
+helper String::marginWrapper() : bstrapMM::Margin {
+	var prop := self.substringAfter('margin:').substringBefore('}').substringAfter('{');
+	if(prop <> null){
+		return prop.getMargin();
+	};
+	return null;
+}
+/**
+* helper to get from String contains padding properties to bstrap Padding element, 
+*/
+helper String::paddingWrapper() : bstrapMM::Padding {
+	var prop := self.substringAfter('padding:').substringBefore('}').substringAfter('{');
+	if(prop <> null){
+		return prop.getPadding();	
+	};
+	return null;
+}
+
+/**
+* helper to get from String contains background properties to bstrap Background element, 
+*/
+helper String::getBackground() : bstrapMM::Background {
+	
+	var background := object Background {
+		if(self <> null){
+			color := self.getColor();
+		}else {
+			color :=  bstrap::Color::WHITE;
+		}
+	};
+	return background;
+}
+
+/**
+* helper to check if string contains some properties
+*/
+helper String::containsProperties() : Boolean {
+	return self.startsWith('(') and self.find(":") > 0;
+}
+
+/**
+* helper to get from String contains color properties to bstrap Color element, 
+*/
+helper String::findColor() : bstrapMM::Color {
+	var prop := self.substringAfter('color:').substringBefore(',');
+	return 	prop.getColor();
+}
+
+/**
+* helper to get from String contains color properties to bstrap Color element, 
+*/
+helper String::getColor() : bstrapMM::Color{
+	var prop := self.toLower().trim();
+	var color := Color::DARK;
+	switch {
+		case (prop.=('primary')) color := Color::PRIMARY;
+		case (prop.=('secondary')) color := Color::SECONDARY;
+		case (prop.=('danger')) color := Color::DANGER;
+		case (prop.=('success')) color := Color::SUCCESS;
+		case (prop.=('info')) color := Color::INFO;
+		case (prop.=('white')) color := Color::WHITE;
+		case (prop.=('warning')) color := Color::WARNING;
+	};
+	return color;
+}
+
+/**
+* helper to get from String contains alignment properties to bstrap Alignment element, 
+*/
+helper String::getAlignment() : bstrapMM::Alignement {
+	var prop := self.toLower().trim();
+	var alignment := Alignement::CENTER;
+	switch {
+		case (prop.=('left')) alignment := Alignement::LEFT;
+		case (prop.=('right')) alignment := Alignement::RIGHT;
+		case (prop.=('top')) alignment := Alignement::TOP;
+		case (prop.=('bottom')) alignment := Alignement::BOTTOM;
+	};
+	return alignment;
+}
+
+/**
+* helper to get from String contains margin properties to bstrap Margin element, 
+*/
+helper String::getMargin() : bstrapMM::Margin {
+	var marginProp := object bstrapMM::Margin{
+		level := self.getLevel();
+		if (self.find('alignment:') > 0 ){
+			var prop := self.substringAfter('alignment:').findProperty();
+			alignement := prop.getAlignment();	
+		}
+	};
+	return marginProp;
+}
+
+/**
+* helper to get from String contains padding properties to bstrap Padding element, 
+*/
+helper String::getPadding() : bstrapMM::Padding {
+	var paddingProp := object bstrapMM::Padding{
+		level := self.getLevel();
+		if (self.find('alignment:') > 0 ){
+			var prop := self.substringAfter('alignment:').findProperty();
+			alignement := prop.getAlignment();	
+		}
+	};
+	return paddingProp;
+}
+
+/**
+* helper to get from String contains border properties to bstrap Border element, 
+*/
+helper String::getBorder() : bstrapMM::Border {
+	return object bstrapMM::Border{}
+}
+
+/**
+* helper to get from String contains colored border properties to bstrap ColoredBorder element, 
+*/
+helper String::getColoredBorder() : bstrapMM::ColoredBorder {
+	var coloredBorderProp := object bstrapMM::ColoredBorder {
+		var prop := self.substringAfter('borderColor:').findProperty();
+		color := prop.getColor();
+	};
+	return coloredBorderProp;
+}
+
+/**
+* helper to get from String contains image shape properties to bstrap ImageShape element, 
+*/
+helper String::getImageShape() : bstrapMM::ImageShape {
+	var prop := self.substringAfter("imageShape:").findProperty();
+	switch {
+		case (prop.=('rounded'))  return object Rounded{};
+		case (prop.=('circle'))  return object Circle{};
+		case (prop.=('thumbnail'))  return object Thumbnail{};
+	};
+	return null;
+}
+
+/**
+* helper to get from String contains link properties to bstrap LinkBra element, 
+*/
+helper String::getImageAligning() : bstrapMM::ImageAligning {
+	var prop := self.substringAfter("imageAligning:").findProperty();
+	switch {
+		case (prop.=('float'))  return object Float{};
+		case (prop.=('center'))  return object Center{};
+		case (prop.=('responsive'))  return object Responsive{};
+	};
+	return null;
+}
+
+/**
+* helper to check from given String if it contains properties, 
+*/
+helper String::isPropertyLine() : Boolean {
+	return self.startsWith("properties:(");
+}
+
+/**
+* helper to check if given ListItem is a properties, 
+*/
+helper usdMM::ListItem::isListProperties() : Boolean {
+	return self.elements[usdMM::Paragraph].subobjects()[usdMM::Text] -> selectOne(t | t.text.isPropertyLine()) <> null;
+}
+
+/**
+* helper to construct a BasicList property from a given string which contains property, 
+*/
+helper String::getBasicList() : bstrapMM::ListProperty {
+	var prop := self.toLower();
+	switch {
+		case (prop.find("basiclist") > 0) return object bstrapMM::BasicList {};
+		case (prop.find("horizontallist") > 0) return object bstrapMM::HorizontalList {};
+	};
+	return null ;
+}
+
+/**
+* helper to construct a Table property from a given string which contains property, 
+*/
+helper String::getTabProperty() : bstrapMM::TableProperty {
+	var prop := self.toLower();
+	switch {
+		case (prop.find("basictable") > 0) return object bstrapMM::BasicTable {};
+		case (prop.find("borderedtable") > 0) return object bstrapMM::BorderedTable {};
+		case (prop.find("darktable") > 0) return object bstrapMM::DarkTable {};
+		case (prop.find("stripedrows") > 0) return object bstrapMM::StripedRows {};
+		case (prop.find("hoverrows") > 0) return object bstrapMM::HoverRows {};
+	};
+	return null ;
+}
+
+/**
+* helper to get usd Text element which contains properties, 
+*/
+helper usdMM::Section::getPropertyTextElement() : usdMM::Text {
+	return  self.contents[usdMM::Paragraph].textElements[usdMM::Text] -> 
+				selectOne(t | t.text.toLower().trim().startsWith("properties:"));
+}
+
+/**
+* helper to check if section contains fixcontainer property, 
+*/
+helper usdMM::Section::isFixContainer() : Boolean {
+	var text := self.getPropertyTextElement();
+	return text <> null and text.text.trim().toLower().find("fixcontainer") > 0;
+}
+
+/**
+* helper to check if section contains fluidcontainer property, 
+*/
+helper usdMM::Section::isFluidContainer() : Boolean {
+	var text := self.getPropertyTextElement();
+	return text <> null and text.text.toLower().trim().find("fluidcontainer") > 0;
+}
+
+/**
+* helper to check if in the given Paragraph usd element whe can find at least one element to be displayed in this paragraph, 
+*/
+helper usdMM::Paragraph::isThereElementToBeDisplayed() : Boolean {
+	var textElementsWithProps := self.textElements[usdMM::Text] -> selectOne(t | t.text.isPropertyLine());
+	return (textElementsWithProps -> size() <> self.textElements -> size())	
+}
+
+

@@ -56,15 +56,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="subTextElements" upperBound="-1"
         eType="#//TextElement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//ClickableElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Navigation" eSuperTypes="#//ClickableElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//CompositeTextElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Navigation" eSuperTypes="#//ContainableTextElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupedItems" upperBound="-1"
         eType="#//ListElement" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClickableElement" abstract="true" eSuperTypes="#//ContainableTextElement">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textContent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textContent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ContainableTextElement" abstract="true"
       eSuperTypes="#//PageContent #//TextElement #//ListItemElement"/>

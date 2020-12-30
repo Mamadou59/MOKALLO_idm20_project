@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ASCII"?>
-<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="/idm.markdown.parser/src/resources/md/exemplesProjet/buttons.simplemarkdown">
+<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="/tests/buttons.simplemarkdown">
   <contents xsi:type="simplemarkdown:Title" level="2">
     <elements xsi:type="simplemarkdown:Text" text="Button Styles"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn]Primary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)[btn]Primary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="[btn-primary]Primary"/>

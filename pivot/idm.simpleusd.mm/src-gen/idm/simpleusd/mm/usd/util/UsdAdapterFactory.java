@@ -192,11 +192,6 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseClickableElement(ClickableElement object) {
-			return createClickableElementAdapter();
-		}
-
-		@Override
 		public Adapter caseContainableTextElement(ContainableTextElement object) {
 			return createContainableTextElementAdapter();
 		}
@@ -607,20 +602,6 @@ public class UsdAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createNavigationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link idm.simpleusd.mm.usd.ClickableElement <em>Clickable Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see idm.simpleusd.mm.usd.ClickableElement
-	 * @generated
-	 */
-	public Adapter createClickableElementAdapter() {
 		return null;
 	}
 

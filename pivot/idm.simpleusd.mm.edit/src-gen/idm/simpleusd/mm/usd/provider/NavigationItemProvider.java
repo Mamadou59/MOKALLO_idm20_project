@@ -14,7 +14,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -23,7 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class NavigationItemProvider extends ClickableElementItemProvider {
+public class NavigationItemProvider extends ContainableTextElementItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -45,8 +47,42 @@ public class NavigationItemProvider extends ClickableElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addTypePropertyDescriptor(object);
+			addTextContentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Navigation_type_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Navigation_type_feature",
+								"_UI_Navigation_type"),
+						UsdPackage.Literals.NAVIGATION__TYPE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Text Content feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTextContentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Navigation_textContent_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Navigation_textContent_feature",
+								"_UI_Navigation_type"),
+						UsdPackage.Literals.NAVIGATION__TEXT_CONTENT, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -108,7 +144,7 @@ public class NavigationItemProvider extends ClickableElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Navigation) object).getTextContent();
+		String label = ((Navigation) object).getType();
 		return label == null || label.length() == 0 ? getString("_UI_Navigation_type")
 				: getString("_UI_Navigation_type") + " " + label;
 	}
@@ -125,6 +161,10 @@ public class NavigationItemProvider extends ClickableElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Navigation.class)) {
+		case UsdPackage.NAVIGATION__TYPE:
+		case UsdPackage.NAVIGATION__TEXT_CONTENT:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		case UsdPackage.NAVIGATION__GROUPED_ITEMS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;

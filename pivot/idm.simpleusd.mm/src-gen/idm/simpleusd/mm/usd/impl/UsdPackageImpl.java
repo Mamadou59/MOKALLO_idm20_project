@@ -4,7 +4,6 @@ package idm.simpleusd.mm.usd.impl;
 
 import idm.simpleusd.mm.usd.BlockQuote;
 import idm.simpleusd.mm.usd.Button;
-import idm.simpleusd.mm.usd.ClickableElement;
 import idm.simpleusd.mm.usd.Code;
 import idm.simpleusd.mm.usd.CodeBlock;
 import idm.simpleusd.mm.usd.CodeLine;
@@ -232,13 +231,6 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * @generated
 	 */
 	private EClass navigationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass clickableElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -715,6 +707,15 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getButton_Type() {
+		return (EAttribute) buttonEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getNavigation() {
 		return navigationEClass;
 	}
@@ -733,8 +734,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getClickableElement() {
-		return clickableElementEClass;
+	public EAttribute getNavigation_Type() {
+		return (EAttribute) navigationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -742,26 +743,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getClickableElement_TextContent() {
-		return (EAttribute) clickableElementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getClickableElement_Type() {
-		return (EAttribute) clickableElementEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getClickableElement_Url() {
-		return (EAttribute) clickableElementEClass.getEStructuralFeatures().get(2);
+	public EAttribute getNavigation_TextContent() {
+		return (EAttribute) navigationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1006,14 +989,12 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		createEReference(compositeTextElementEClass, COMPOSITE_TEXT_ELEMENT__SUB_TEXT_ELEMENTS);
 
 		buttonEClass = createEClass(BUTTON);
+		createEAttribute(buttonEClass, BUTTON__TYPE);
 
 		navigationEClass = createEClass(NAVIGATION);
 		createEReference(navigationEClass, NAVIGATION__GROUPED_ITEMS);
-
-		clickableElementEClass = createEClass(CLICKABLE_ELEMENT);
-		createEAttribute(clickableElementEClass, CLICKABLE_ELEMENT__TEXT_CONTENT);
-		createEAttribute(clickableElementEClass, CLICKABLE_ELEMENT__TYPE);
-		createEAttribute(clickableElementEClass, CLICKABLE_ELEMENT__URL);
+		createEAttribute(navigationEClass, NAVIGATION__TYPE);
+		createEAttribute(navigationEClass, NAVIGATION__TEXT_CONTENT);
 
 		containableTextElementEClass = createEClass(CONTAINABLE_TEXT_ELEMENT);
 
@@ -1098,9 +1079,8 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 		codeBlockEClass.getESuperTypes().add(this.getListItemElement());
 		horizontalLineEClass.getESuperTypes().add(this.getPageContent());
 		compositeTextElementEClass.getESuperTypes().add(this.getContainableTextElement());
-		buttonEClass.getESuperTypes().add(this.getClickableElement());
-		navigationEClass.getESuperTypes().add(this.getClickableElement());
-		clickableElementEClass.getESuperTypes().add(this.getContainableTextElement());
+		buttonEClass.getESuperTypes().add(this.getCompositeTextElement());
+		navigationEClass.getESuperTypes().add(this.getContainableTextElement());
 		containableTextElementEClass.getESuperTypes().add(this.getPageContent());
 		containableTextElementEClass.getESuperTypes().add(this.getTextElement());
 		containableTextElementEClass.getESuperTypes().add(this.getListItemElement());
@@ -1209,23 +1189,19 @@ public class UsdPackageImpl extends EPackageImpl implements UsdPackage {
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getButton_Type(), ecorePackage.getEString(), "type", null, 0, 1, Button.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(navigationEClass, Navigation.class, "Navigation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getNavigation_GroupedItems(), this.getListElement(), null, "groupedItems", null, 0, -1,
 				Navigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(clickableElementEClass, ClickableElement.class, "ClickableElement", IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getClickableElement_TextContent(), ecorePackage.getEString(), "textContent", null, 0, 1,
-				ClickableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClickableElement_Type(), ecorePackage.getEString(), "type", null, 0, 1,
-				ClickableElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClickableElement_Url(), ecorePackage.getEString(), "url", null, 0, 1, ClickableElement.class,
+		initEAttribute(getNavigation_Type(), ecorePackage.getEString(), "type", null, 0, 1, Navigation.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNavigation_TextContent(), ecorePackage.getEString(), "textContent", null, 0, 1,
+				Navigation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(containableTextElementEClass, ContainableTextElement.class, "ContainableTextElement", IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="/idm.markdown.parser/src/resources/md/exemplesProjet/navbar.simplemarkdown">
+<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="/tests/navbar.simplemarkdown">
   <contents xsi:type="simplemarkdown:Title" level="1">
     <elements xsi:type="simplemarkdown:LinkWithRef" reference="Navbar navbar-expand-md bg-dark navbar-dark collapsable">
       <subtext xsi:type="simplemarkdown:Text" text="Navbar navbar-expand-md bg-dark navbar-dark collapsable"/>
@@ -7,7 +7,7 @@
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[navbar-brand]Navbar brand"/>
+      <subtext xsi:type="simplemarkdown:Text" text="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})[navbar-brand]Navbar brand"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="Link 1"/>

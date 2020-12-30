@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bstrap:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bstrap="http://www.example.org/bstrap" name="/tests/buttons.simplemarkdown">
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Button Styles"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Button">
+      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+      <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
+      <generalProperties xsi:type="bstrap:Padding" level="2"/>
+      <generalProperties xsi:type="bstrap:Border"/>
+      <textnestedelements xsi:type="bstrap:Text" text="Primary"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Primary"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Secondary"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="SECONDARY"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Success"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="SUCCESS"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Info"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="INFO"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Warning"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="WARNING"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Danger"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="DANGER"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Dark"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Light"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="WHITE"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Link"/>
+      <buttonproperties xsi:type="bstrap:ButtonLink"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Buttton Size"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Large"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Default"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Small"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:ButtonSize" size="SMALL"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Button States"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Primary Button"/>
+      <buttonproperties xsi:type="bstrap:ButtonSize" size="LARGE"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Active Primary"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:Active"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:Disabled"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>
+      <buttonproperties xsi:type="bstrap:Disabled"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Enabled Primary"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+  </pagecontents>
+</bstrap:Page>

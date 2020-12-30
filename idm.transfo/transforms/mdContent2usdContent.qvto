@@ -13,20 +13,19 @@ abstract mapping mdMM::Block::block2PageContent() : usdMM::PageContent {}
 
 /**
 * Map a markdown Paragraph element to usd Paragraph element 
-* wich extends textContainerMd2TextContainerUsd mapper.
+* which extends textContainerMd2TextContainerUsd mapper.
 */
 mapping mdMM::Paragraph::paragraphMd2ParagraphUsd() : usdMM::Paragraph 
 	inherits mdMM::TextContainer::textContainerMd2TextContainerUsd
-	when {not self.isThereNavigationElement() and self.notSectionRef()}{}
+	when {not self.isThereNavigationElement()}{}
 	
 mapping mdMM::Paragraph::paragraphMd2ParagraphUsdIfContentNavigationLink() : usdMM::Navigation 
 	inherits mdMM::Block::block2PageContent
-	when {self.isThereNavigationElement() and self.notSectionRef()}{
+	when {self.isThereNavigationElement()}{
 		var linkElements := self.subobjectsOfType(mdMM::Link);
 		var navLink := self.getNavigationElement(); 
 		textContent := navLink.getTextContent();
 		type := navLink.getType();
-		url := navLink.url;
 		groupedItems := object usdMM::UnorderedList {
 			items += linkElements -> map linkMd2NavElementUsd();
 		};
@@ -34,7 +33,7 @@ mapping mdMM::Paragraph::paragraphMd2ParagraphUsdIfContentNavigationLink() : usd
 
 /**
 * Map a markdown Title element to usd Title element 
-* wich extends textContainerMd2TextContainerUsd mapper.
+* which extends textContainerMd2TextContainerUsd mapper.
 */
 mapping mdMM::Title::titleMd2TitleUsd() : usdMM::Title 
 	inherits mdMM::TextContainer::textContainerMd2TextContainerUsd{
@@ -42,7 +41,7 @@ mapping mdMM::Title::titleMd2TitleUsd() : usdMM::Title
 }
 /**
 * Abstract map for mapping a markdown TextContainer element to usd TextContainer element
-* wich extends block2PageContent mapper.
+* which extends block2PageContent mapper.
 */
 abstract mapping mdMM::TextContainer::textContainerMd2TextContainerUsd() : usdMM::TextContainer 
 	inherits mdMM::Block::block2PageContent {
@@ -72,7 +71,7 @@ mapping mdMM::ListItem::listItemMd2ListItemUsd() : usdMM::ListItem {
 
 /**
 * Mapper from markdown CodeBlock element to usd CodeBlock element 
-* wich extends block2PageContent mapper.
+* which extends block2PageContent mapper.
 */
 mapping mdMM::CodeBlock::codeBlockMd2codeBlockUsd() : usdMM::CodeBlock 
 	inherits mdMM::Block::block2PageContent{
@@ -88,7 +87,7 @@ mapping mdMM::CodeLine::codeLinesMd2CodeLinesUsd() : usdMM::CodeLine {
 
 /**
 * Mapper from markdown BlockQuote element to usd BlockQuote element 
-* wich extends block2PageContent mapper.
+* which extends block2PageContent mapper.
 */
 mapping mdMM::BlockQuote::blockQuoteMd2BlockQuoteUsd() : usdMM::BlockQuote 
 	inherits mdMM::Block::block2PageContent
@@ -98,7 +97,7 @@ mapping mdMM::BlockQuote::blockQuoteMd2BlockQuoteUsd() : usdMM::BlockQuote
 
 /**
 * Mapper from markdown BlockQuote element to usd section element 
-* wich extends block2PageContent mapper.
+* which extends block2PageContent mapper.
 */
 mapping mdMM::BlockQuote::blockQuoteMd2SectionUsd() : usdMM::Section 
 	inherits mdMM::Block::block2PageContent
@@ -109,13 +108,13 @@ mapping mdMM::BlockQuote::blockQuoteMd2SectionUsd() : usdMM::Section
 
 /**
 * Mapper from markdown HorzontalLine element to usd HorzontalLine element 
-* wich extends block2PageContent mapper.
+* which extends block2PageContent mapper.
 */
 mapping mdMM::HorizontalLine::horizontalLineMd2HorizontalLineUsd() : usdMM::HorizontalLine 
 	inherits mdMM::Block::block2PageContent{}
 
 /**
-* Mapper from ListItemElement to usd ListItemElement wich make disjunction beetwen 
+* Mapper from ListItemElement to usd ListItemElement which make disjunction beetwen 
 * orderedListMd2OrderedListUsd, unorderedListMd2UnorderedListUsd, paragraphMd2ParagraphUsd,
 * blockQuoteMd2BlockQuoteUsd, codeBlockMd2codeBlockUsd.
 */
@@ -140,27 +139,27 @@ abstract mapping mdMM::TableSection::tableSectionMd2TableSectionUsd() : usdMM::T
 
 /**
 * Mapper from markdown TableHead element to usd TableHead element 
-* wich extends tableSectionMd2TableSectionUsd mapper.
+* which extends tableSectionMd2TableSectionUsd mapper.
 */
 mapping mdMM::TableHead::tableHeadMd2TableHeadUsd() : usdMM::TableHead 
 	inherits mdMM::TableSection::tableSectionMd2TableSectionUsd {}
 
 /**
 * Mapper from markdown TableBody element to usd TableBody element 
-* wich extends tableSectionMd2TableSectionUsd mapper.
+* which extends tableSectionMd2TableSectionUsd mapper.
 */
 mapping mdMM::TableBody::tableHeadMd2TableHeadUsd() : usdMM::TableBody 
 	inherits mdMM::TableSection::tableSectionMd2TableSectionUsd {}
 	
 /**
 * Mapper from markdown TableSection element to usd TableSection element 
-* wich extends tableSectionMd2TableSectionUsd mapper.
+* which extends tableSectionMd2TableSectionUsd mapper.
 */
 mapping mdMM::TableSeparator::tableSeparatorMd2TableSeparatorUsd() : usdMM::TableSeparator 
 	inherits mdMM::TableSection::tableSectionMd2TableSectionUsd {}
 
 /**
-* Mapper from TableSection md element to usd TableSection element wich make disjunction beetwen 
+* Mapper from TableSection md element to usd TableSection element which make disjunction beetwen 
 * tableHeadMd2TableHeadUsd and tableHeadMd2TableHeadUsd.
 */
 mapping mdMM::TableSection::constructTableSection() : usdMM::TableSection 
@@ -178,17 +177,15 @@ mapping mdMM::TableRow::tableRowMd2TableRowUsd() : usdMM::TableRow {
 
 /**
 * Mapper from markdown TableCell element to usd TableCell element 
-* wich extends textContainerMd2TextContainerUsd mapper.
+* which extends textContainerMd2TextContainerUsd mapper.
 */
 mapping mdMM::TableCell::tableCellMd2TableCellUsd() : usdMM::TableCell 
 	inherits mdMM::TextContainer::textContainerMd2TextContainerUsd {
-	// This error occured 
-	// The type 'md2usd::Set(TableCellAlignement)' does not conform to the type 'usd::TableCellAlignement' of the property 'alignement'
-	// alignement := self.alignement;
+	alignement := self.alignement.getTabCellAlignment();
 	span := self.span;}
 		
 /**
-* Mapper from ListItemElement to usd ListItemElement wich make disjunction beetwen 
+* Mapper from ListItemElement to usd ListItemElement which make disjunction beetwen 
 * paragraphMd2ParagraphUsd, titleMd2TitleUsd, orderedListMd2OrderedListUsd,
 * unorderedListMd2UnorderedListUsd, blockQuoteMd2BlockQuoteUsd, codeBlockMd2codeBlockUsd,
 * horizontalLineMd2HorizontalLineUsd and tableBlockMd2TableUsd.

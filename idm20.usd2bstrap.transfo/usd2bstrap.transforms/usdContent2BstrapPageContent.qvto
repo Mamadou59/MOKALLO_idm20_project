@@ -1,0 +1,542 @@
+import usdTextElement2bstrapTextElements;
+import propertiesParsers;
+
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+modeltype bstrapMM "strict" uses "http://www.example.org/bstrap";
+
+transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
+
+/**
+* Map an usd PageContent element to Bstrap PageContent element.
+*/
+abstract mapping usdMM::PageContent::pageContentUsd2PageContentBstrap() : bstrapMM::PageContent {
+	// TODO don't forgot parsing bstrap properties
+	//generalProperties += self.
+}
+
+/**
+* Abstract mapper wich map an usd TextContainer element to Bstrap TextContainer element.
+* and also parse all bootstrap properties. 
+*/
+abstract mapping usdMM::TextContainer::textContainerUsd2TextContainerBstrap() : bstrapMM::TextContainer 
+	inherits usdMM::PageContent::pageContentUsd2PageContentBstrap{
+		textelements += self.textElements -> map constructTextElement();
+		var textWithProps := self.textElements[usdMM::Text] -> selectOne(t|t.text.containsProperties());
+		if (textWithProps <> null){
+			color := textWithProps.text.findColor();
+			emphasis += textWithProps.text -> map disjunctsEmphasisProperties();
+			var props := textWithProps.text.substringBefore(")")+")";
+			if (props.find('background:') > 0){
+				generalProperties += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generalProperties += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generalProperties += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generalProperties += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generalProperties += prop.getColoredBorder();
+					};
+				}
+			}
+		};		
+}
+
+
+/**
+* A mapper wich map an usd Title element to bstrap Title element.
+*/
+mapping usdMM::Title::titleUsd2TitleBstrap() : bstrapMM::Title 
+	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap{
+		level := self.level;
+		displayproperties += self.textElements[usd::Text] -> selectOne(t|t.text.containsProperties()).text 
+								-> map disjunctsDisplayProperties();
+		
+}
+
+
+/**
+* A mapper wich map an usd Paragraph element to bstrap Paragraph element.
+*/
+mapping usdMM::Paragraph::paragraphUsd2ParagraphBstrap() : bstrapMM::Paragraphe 
+	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap
+	when {self.isThereElementToBeDisplayed()}{}
+	
+	
+/**
+* A mapper which map an usd Navigation element to bstrap Navigation element.
+*/
+mapping usdMM::Navigation::navigationUsd2NavigationBstrap() : bstrapMM::Navigation {
+	links := object bstrapMM::Link{
+		linkproperties := object LinkBrand{};
+		textnestedelements := object bstrapMM::Text{
+			var t := self.textContent.substringAfter(")");
+			if(t = null){
+				t := self.textContent;
+			};
+			text := t;
+		};
+	};
+	// Mapping nav elements
+	listelement += self.groupedItems -> map constructListElement();
+	navbar += self.type.parseNavProperties();
+	
+	if (self.textContent.containsProperties()){
+		var props := self.textContent.substringBefore(")")+")";
+		if (props <> null){
+			if (props.find('background:') > 0){
+				generalProperties += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generalProperties += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generalProperties += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generalProperties += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generalProperties += prop.getColoredBorder();
+					};
+				}
+			}
+		}
+	}
+	
+}
+
+/**
+* Abstract mapper wich map an usd ListElement to Bstrap ListElement.
+* and also parse all bootstrap properties. 
+*/
+abstract mapping usdMM::ListElement::listElementUsd2ListElementBstrap() : bstrapMM::ListElement {
+	listitems += self.items -> map listItemUsd2ListItemBstrap();
+	var textWithProps := self.items.elements[usdMM::Paragraph].subobjects()[usdMM::Text] -> selectOne(t | t.text.isPropertyLine());
+	if (textWithProps <> null){
+		var props := textWithProps.text.substringAfter("properties:");
+		if (props <> null){
+			props := props.trim();
+			if (props.find('background:') > 0){
+				generalProperties += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generalProperties += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generalProperties += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generalProperties += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generalProperties += prop.getColoredBorder();
+					};
+				}
+			};
+			if (props.find("listProperty:") > 0){
+				var prop := props.substringAfter("listProperty:").findProperty();
+				listproperty += prop.getBasicList();
+			}
+		}
+	}
+
+}
+
+/**
+* A mapper wich map an usd OrderedList element to bstrap OrderedList element.
+*/
+mapping usdMM::OrderedList::orderedListUsd2OrderedListBstrap() : bstrapMM::OrderList 
+	inherits usdMM::ListElement::listElementUsd2ListElementBstrap{
+	
+}
+
+/**
+* A mapper wich map an usd UnorderedList element to bstrap UnOrderedList element.
+*/
+mapping usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap() : bstrapMM::UnOrderedList 
+	inherits usdMM::ListElement::listElementUsd2ListElementBstrap{
+}
+
+/**
+* A mapper wich map an usd ListItem element to bstrap ListItem element.
+* and also parse all bootstrap properties.
+*/
+mapping  usdMM::ListItem::listItemUsd2ListItemBstrap() : bstrapMM::ListItem 
+	when {not self.isListProperties()}{
+	listitemelements += self.elements -> map constructListItemElement();
+	var textWithItemProp := self.elements[usdMM::Paragraph].textElements[usdMM::Text] -> selectOne(t | t.text.startsWith("(itemProperty"));
+	if (textWithItemProp <> null and textWithItemProp.text.find("active") > 0){
+		active := true;
+	}
+}
+
+/**
+* A mapper wich map an usd ListElement to bstrap ListElement.
+*/
+mapping usdMM::ListElement::constructListElement() : bstrapMM::ListElement 
+	disjuncts usdMM::OrderedList::orderedListUsd2OrderedListBstrap,
+				usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap{}
+
+/**
+* A mapper wich map an usd ListItemElement to bstrap ListElement.
+*/
+mapping usdMM::ListItemElement::constructListItemElement() : bstrapMM::ListItemElement 
+	disjuncts usdMM::Paragraph::paragraphUsd2ParagraphBstrap, usdMM::OrderedList::orderedListUsd2OrderedListBstrap,
+				usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap, usdMM::Link::linkUsd2LinkBstrap {
+	
+}
+
+/**
+* A mapper wich map an usd CodeBlock element to bstrap CodeBlock element.
+* and also parse all bootstrap properties.
+*/
+mapping usdMM::CodeBlock::codeBlockUsd2CodeBlockBtsrap() : bstrapMM::CodeBlock 
+	inherits usdMM::PageContent::pageContentUsd2PageContentBstrap{
+	codelines += self.codeLines -> map codeLineUsd2CodeLineBstrap();
+	var propsLine := self.codeLines -> selectOne(l | l.text.isPropertyLine());
+	if (propsLine <> null){
+		var props := propsLine.text.substringAfter("properties:");
+		if (props <> null){
+			if (props.find('background:') > 0){
+				generalProperties += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generalProperties += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generalProperties += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generalProperties += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generalProperties += prop.getColoredBorder();
+					};
+				}
+			}
+		}
+	}
+}
+
+/**
+* A mapper wich map an usd CodeLine element to bstrap CodeLine element.
+*/
+mapping usdMM::CodeLine::codeLineUsd2CodeLineBstrap() : bstrapMM::CodeLine 
+	when {not self.text.isPropertyLine()}{
+	content := self.text;	
+}
+
+
+/**
+* A mapper wich map an usd BlockQoute element to bstrap BlockQuote element.
+* and also parse all bootstrap properties.
+*/
+mapping usdMM::BlockQuote::blockQuoteUsd2BlockQuoteBstrap() : bstrapMM::BlockQuote 
+	inherits usdMM::PageContent::pageContentUsd2PageContentBstrap {
+	pagecontents += self.contents -> map constructPageContent();
+	var textWithProps := self.contents[usdMM::Paragraph].subobjects()[usdMM::Text] -> selectOne(t | t.text.isPropertyLine());
+	if (textWithProps <> null) {
+		var props := textWithProps.text.substringAfter("properties:");
+		if (props <> null){
+			props := props.trim();
+			if (props.find('background:') > 0){
+				generalProperties += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generalProperties += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generalProperties += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generalProperties += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generalProperties += prop.getColoredBorder();
+					};
+				}
+			}
+		}
+	}
+}
+
+// Start Table mapping from usd to bootstrap
+
+/**
+* A mapper wich map an usd Table element to bstrap Table element.
+* and also parse all bootstrap properties.
+*/
+mapping usdMM::Table::tableUsd2TableBstrap() : bstrapMM::Table {
+	tablesections += self.tablesections -> map constructTableSection();
+	var textWithProps := self.tablesections[usdMM::TableHead].rows.cells.
+		textElements[usdMM::Text] -> selectOne(t | t.text.startsWith("tabProperties:") and t.text.find("tableProps") > 0);
+		if (textWithProps <> null) {
+		var props := textWithProps.text.substringAfter("tabProperties:");
+		if (props <> null){
+			props := props.trim();
+			if (props.find('background:') > 0){
+				generalProperties += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generalProperties += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generalProperties += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generalProperties += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generalProperties += prop.getColoredBorder();
+					};
+				}
+			};
+			if (props.find("tableProperty:") > 0) {
+				var prop := props.substringAfter("tableProperty:");
+				tableproperties += prop.getTabProperty();
+			}
+		}
+	}
+}
+
+/**
+* Abstract mapper wich map an usd TableSelection element to bstrap TableSelection element.
+* and also parse all bootstrap properties.
+*/
+abstract mapping usdMM::TableSection::tableSectionUsdTableSectionBstrap() :bstrapMM::TableSection {
+	tablerows += self.rows -> map tableRowUsd2TableRowBstrap();
+	var textWithProps := self.rows.cells.
+		textElements[usdMM::Text] -> selectOne(t | t.text.find("sectionProps") > 0);
+	if (textWithProps <> null) {
+		var props := textWithProps.text.substringAfter("sectionProps:");
+		if (props <> null){
+			props := props.trim();
+			if (props.find('background:') > 0){
+				generals += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generals += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generals += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generals += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generals += prop.getColoredBorder();
+					};
+				}
+			}
+		}
+	}
+}
+
+/**
+* A mapper wich map an usd TableRow element to bstrap TableRow element.
+* and also parse all bootstrap properties.
+*/
+mapping usdMM::TableRow::tableRowUsd2TableRowBstrap() : bstrapMM::TableRow {
+	tablecells += self.cells -> map tableCellUsd2TableCellBstrap();
+	var textWithProps := self.cells.
+		textElements[usdMM::Text] -> selectOne(t | t.text.find("rowProps") > 0);
+	if (textWithProps <> null) {
+		var props := textWithProps.text.substringAfter("rowProps:");
+		if (props <> null){
+			props := props.trim();
+			if (props.find('background:') > 0){
+				generals += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generals += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generals += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generals += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generals += prop.getColoredBorder();
+					};
+				}
+			}
+		}
+	}
+}
+
+/**
+* A mapper wich map an usd TableCell element to bstrap TableCell element.
+* and also parse all bootstrap properties.
+*/
+mapping usdMM::TableCell::tableCellUsd2TableCellBstrap() : bstrapMM::TableCell 
+	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap{
+	alignment := self.alignement.getTabAlignment();
+	span := self.span;
+	
+	var textWithProps := self.textElements[usdMM::Text] -> 
+							selectOne(t | t.text.find("rowProps") > 0);
+	if (textWithProps <> null) {
+		var props := textWithProps.text.substringAfter("rowProps:");
+		if (props <> null){
+			props := props.trim();
+			if (props.find('background:') > 0){
+				generalProperties += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generalProperties += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generalProperties += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generalProperties += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generalProperties += prop.getColoredBorder();
+					};
+				}
+			}
+		}
+	}
+}
+
+/**
+* A mapper wich map an usd TableHead element to bstrap Thead element.
+*/
+mapping usdMM::TableHead::tableHeadUsd2TheadBstrap() :  bstrapMM::Thead
+	inherits usdMM::TableSection::tableSectionUsdTableSectionBstrap{
+}
+
+/**
+* A mapper wich map an usd TableBody element to bstrap Tbody element.
+*/
+mapping usdMM::TableBody::tableBodyUsd2TbodyBstrap() :  bstrapMM::Tbody
+	inherits usdMM::TableSection::tableSectionUsdTableSectionBstrap{}
+
+/**
+* Map a usd TableSection element to bstrap TableSection element, 
+* wich make disjunction beetwen these maps tableHeadUsd2TheadBstrap and tableBodyUsd2TbodyBstrap
+*/
+mapping usdMM::TableSection::constructTableSection() : bstrapMM::TableSection 
+	disjuncts usdMM::TableHead::tableHeadUsd2TheadBstrap, usdMM::TableBody::tableBodyUsd2TbodyBstrap {
+}
+
+/**
+* A mapper wich map an usd Section element to bstrap Container element.
+* and also parse all bootstrap properties.
+*/
+abstract mapping usdMM::Section::sectionUsd2ContainerBstrap() : bstrapMM::Container {
+	pagecontents += self.contents -> map constructPageContent();
+	var textWithProps := self.contents[usdMM::Paragraph].textElements[usdMM::Text] -> 
+							selectOne(t | t.text.find("properties:") > 0);
+	if (textWithProps <> null) {
+		var props := textWithProps.text.substringAfter("properties:");
+		if (props <> null){
+			props := props.trim();
+			if (props.find('background:') > 0){
+				generalProperties += props.backGroundWrapper();
+			};
+			if (props.find('margin:') > 0){
+				generalProperties += props.marginWrapper();
+			};
+			if (props.find('padding:') > 0){
+				generalProperties += props.paddingWrapper();
+			};
+			if (props.find('border:') > 0){
+				var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+				if(prop <> null){
+					prop := prop.trim();
+					if (prop.find("border") > 0){
+						generalProperties += prop.getBorder();
+					};
+					if (prop.find("borderColor") > 0){
+						generalProperties += prop.getColoredBorder();
+					};
+				}
+			}
+		}
+	}
+}
+
+/**
+* A mapper wich map an usd Section element to bstrap FixContainer element.
+* and also parse all bootstrap properties.
+*/
+mapping usdMM::Section::sectionUsd2FixContainerBstrap() : bstrapMM::FixContainer 
+	inherits usdMM::Section::sectionUsd2ContainerBstrap
+	when { self.isFixContainer()}{
+	
+}
+
+/**
+* A mapper wich map an usd Section element to bstrap FluidContainer element.
+* and also parse all bootstrap properties.
+*/
+mapping usdMM::Section::sectionUsd2FluidContainerBstrap() : bstrapMM::FluidContainer 
+	inherits usdMM::Section::sectionUsd2ContainerBstrap
+	when { self.isFluidContainer()}{
+}
+
+
+/**
+* A mapper wich map an usd HorizontalLine element to bstrap HorizontalLine element.
+*/
+mapping usdMM::HorizontalLine::horizontalUsd2HorizontalBstrap() : bstrapMM::HorizontalLine {}
+
+
+/**
+* Map a usd PageContent element to bstrap PageContent element, 
+* wich make disjunction beetwen these maps paragraphUsd2ParagraphBstrap,
+* titleUsd2TitleBstrap
+*/
+mapping usdMM::PageContent::constructPageContent() : bstrapMM::PageContent 
+	disjuncts usdMM::Paragraph::paragraphUsd2ParagraphBstrap, usdMM::Title::titleUsd2TitleBstrap,
+				usdMM::OrderedList::orderedListUsd2OrderedListBstrap, usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap,
+				usdMM::Navigation::navigationUsd2NavigationBstrap, usdMM::HorizontalLine::horizontalUsd2HorizontalBstrap,
+				usdMM::CodeBlock::codeBlockUsd2CodeBlockBtsrap, usdMM::BlockQuote::blockQuoteUsd2BlockQuoteBstrap,
+				usdMM::Table::tableUsd2TableBstrap,
+				usdMM::Section::sectionUsd2FixContainerBstrap, usdMM::Section::sectionUsd2FluidContainerBstrap{}
+	
+	
