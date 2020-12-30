@@ -55,14 +55,14 @@
  * @param aButtonState
  */]
 [template private getButtonState(aButtonState : Active)]
-[self.getClassName()/]"
+[self.getClassName()/]
 [/template]
 [**
  * Handle  ButtonState (Disabled)
  * @param aButtonState
  */]
 [template private getButtonState(aButtonState : Disabled)]
-" [self.getClassName()/]
+
 [/template]
 [comment] ---------------------------------------------------------------------------	[/comment]
 

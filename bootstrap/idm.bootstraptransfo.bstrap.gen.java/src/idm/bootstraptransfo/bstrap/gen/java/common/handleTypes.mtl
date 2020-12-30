@@ -81,7 +81,7 @@
  */]
 
 [template public generateContainableTextElement(aTextContainable : Button) { aBalise : String = self.getClassName(); }]
-<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] btn [self.buttonproperties.getButtonProperty()/]"> [self.textnestedelements.generateTestnestedElement()/]
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] btn [self.buttonproperties.getButtonProperty()/]" [aTextContainable.buttonproperties.getButtonState()/]> [self.textnestedelements.generateTestnestedElement()/]
 [getCloseBaliseName(aBalise)/]
 [/template]
 
@@ -112,7 +112,7 @@
 
 
 
-[comment]+++++++++++CompositeTextElement++++++++++++++++++++++++++++++[/comment]
+[comment]+++++++++++UrlBasedLink++++++++++++++++++++++++++++++[/comment]
 [**
  * Handle code generation of a UrlBasedLink in a Page  (Image,Link)
  */]

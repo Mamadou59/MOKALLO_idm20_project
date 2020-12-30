@@ -145,15 +145,20 @@ td
 
 
 
+[comment]+++++++++++++++ Button State ++++++++++++++[/comment]
+[template public getButtonState(aButtonProperty : ButtonProperty)]
+[/template]
+
+[template public getButtonState(aButtonProperty : ButtonState)]
+ disabled
+[/template]
 
 
 
 
 
 
-
-
-
+[comment]------------------------------------------------------[/comment]
 
 
 
