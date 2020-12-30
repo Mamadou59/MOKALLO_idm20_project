@@ -69,22 +69,13 @@ helper mdMM::Paragraph::isThereNavigationElement() : Boolean {
 }
 
 helper mdMM::BlockQuote::isSection() : Boolean {
-	var blockElements := self.subobjectsOfType(mdMM::Paragraph);
-	blockElements -> forOne(p) {
-		var elems := blockElements.elements[Text];
-		elems -> forOne(elem){
-			return elem.text.toLower() = "start section";
-		}
-	};
-	return false;
+	var textWithSectionStart := self.contents[mdMM::Paragraph].elements[mdMM::Text] -> 
+		selectOne(t | t.text.toLower().trim().=("start section"));
+	return textWithSectionStart <> null;
 }
 
-helper mdMM::Paragraph::notSectionRef() : Boolean {
-	var elems := self.elements[Text];
-	elems -> forOne(elem){
-		return (elem.text.toLower() <> "start section");
-	};
-	return true;
+helper mdMM::Text::notSectionRef() : Boolean {
+	return self.text.toLower().trim().<>("start section");
 }
 
 /**

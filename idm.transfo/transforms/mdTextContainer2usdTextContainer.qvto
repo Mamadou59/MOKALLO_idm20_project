@@ -30,7 +30,8 @@ abstract mapping mdMM::TextElement::textElementMd2TextElementUsd() : usdMM::Text
 * wich extends textElementMd2TextElementUsd mapper.
 */
 mapping mdMM::Text::textMd2TextUsd() : usdMM::Text 
-	inherits mdMM::TextElement::textElementMd2TextElementUsd{
+	inherits mdMM::TextElement::textElementMd2TextElementUsd
+	when {self.notSectionRef()}{
 		text := self.text;
 }
 
