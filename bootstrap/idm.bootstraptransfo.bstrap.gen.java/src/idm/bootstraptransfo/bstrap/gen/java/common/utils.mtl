@@ -53,16 +53,9 @@ subContainers : Sequence(Container) = self.eContents(Container);
 textpageContents : Sequence(TextPageContent) = self.eContents(TextPageContent);
 }]
 <[aBalise/] [self.declareClass()/]"[aContainer.getContainerClass()/] [self.generalProperties.getGeneralClass()/]">
-[if (textpageContents -> notEmpty())] 
-[for (aTextPageContent : TextPageContent | textpageContents)]
-  [aTextPageContent.generateTextPageContentElement()/]
+[for (aPageContent : PageContent | aContainer.eContents(PageContent))]
+  [aPageContent.generatePageContentElement()/] 
 [/for]
-[/if]
-[if (subContainers -> notEmpty())]
-[for (aSubContainer : Container | subContainers)]
-  [aSubContainer.generatePageContentElement()/]
-[/for]
-[/if]
 [getCloseBaliseName(aBalise)/]
 [/template]
 
