@@ -70,6 +70,7 @@
     <eLiterals name="WHITE" value="5"/>
     <eLiterals name="WARNING" value="6"/>
     <eLiterals name="DANGER" value="7"/>
+    <eLiterals name="LIGHT" value="8"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Display1" eSuperTypes="#//DisplayProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="Display2" eSuperTypes="#//DisplayProperty"/>
@@ -89,7 +90,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Center" eSuperTypes="#//ImageAligning"/>
   <eClassifiers xsi:type="ecore:EClass" name="Responsive" eSuperTypes="#//ImageAligning"/>
   <eClassifiers xsi:type="ecore:EClass" name="ButtonStyle" eSuperTypes="#//ButtonProperty">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"
+        defaultValueLiteral="LIGHT"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ButtonSize" eSuperTypes="#//ButtonProperty">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="#//Size"/>
@@ -154,6 +156,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Link" eSuperTypes="#//UrlBasedLink #//TextNested">
     <eStructuralFeatures xsi:type="ecore:EReference" name="linkproperties" upperBound="-1"
         eType="#//LinkProperty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="buttonproperties" upperBound="-1"
+        eType="#//ButtonProperty" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Strong" eSuperTypes="#//TextContainable"/>
   <eClassifiers xsi:type="ecore:EClass" name="Italic" eSuperTypes="#//TextContainable"/>
@@ -209,4 +213,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HorizontalLine" eSuperTypes="#//TextPageContent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonOutLine" eSuperTypes="#//ButtonProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonSpinner" eSuperTypes="#//ButtonProperty"/>
 </ecore:EPackage>

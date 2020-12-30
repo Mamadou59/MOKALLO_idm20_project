@@ -2462,13 +2462,22 @@ public interface BstrapPackage extends EPackage {
 	int LINK__LINKPROPERTIES = URL_BASED_LINK_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Buttonproperties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__BUTTONPROPERTIES = URL_BASED_LINK_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = URL_BASED_LINK_FEATURE_COUNT + 2;
+	int LINK_FEATURE_COUNT = URL_BASED_LINK_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Link</em>' class.
@@ -4522,6 +4531,17 @@ public interface BstrapPackage extends EPackage {
 	EReference getLink_Linkproperties();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Link#getButtonproperties <em>Buttonproperties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Buttonproperties</em>'.
+	 * @see idm.bstrap.mm.bstrap.Link#getButtonproperties()
+	 * @see #getLink()
+	 * @generated
+	 */
+	EReference getLink_Buttonproperties();
+
+	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Strong <em>Strong</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5858,6 +5878,14 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LINK__LINKPROPERTIES = eINSTANCE.getLink_Linkproperties();
+
+		/**
+		 * The meta object literal for the '<em><b>Buttonproperties</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LINK__BUTTONPROPERTIES = eINSTANCE.getLink_Buttonproperties();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.StrongImpl <em>Strong</em>}' class.

@@ -63,6 +63,7 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS);
 			childrenFeatures.add(BstrapPackage.Literals.LINK__LINKPROPERTIES);
+			childrenFeatures.add(BstrapPackage.Literals.LINK__BUTTONPROPERTIES);
 		}
 		return childrenFeatures;
 	}
@@ -128,6 +129,7 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 		switch (notification.getFeatureID(Link.class)) {
 		case BstrapPackage.LINK__TEXTNESTEDELEMENTS:
 		case BstrapPackage.LINK__LINKPROPERTIES:
+		case BstrapPackage.LINK__BUTTONPROPERTIES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -159,6 +161,27 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__LINKPROPERTIES,
 				BstrapFactory.eINSTANCE.createLinkBrand()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__BUTTONPROPERTIES,
+				BstrapFactory.eINSTANCE.createButtonStyle()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__BUTTONPROPERTIES,
+				BstrapFactory.eINSTANCE.createButtonSize()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__BUTTONPROPERTIES,
+				BstrapFactory.eINSTANCE.createButtonLink()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__BUTTONPROPERTIES,
+				BstrapFactory.eINSTANCE.createDisabled()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__BUTTONPROPERTIES,
+				BstrapFactory.eINSTANCE.createActive()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__BUTTONPROPERTIES,
+				BstrapFactory.eINSTANCE.createButtonOutLine()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__BUTTONPROPERTIES,
+				BstrapFactory.eINSTANCE.createButtonSpinner()));
 	}
 
 }

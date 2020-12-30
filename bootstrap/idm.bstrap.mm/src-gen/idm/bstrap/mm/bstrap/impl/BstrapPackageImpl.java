@@ -1676,6 +1676,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLink_Buttonproperties() {
+		return (EReference) linkEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStrong() {
 		return strongEClass;
 	}
@@ -2243,6 +2252,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		linkEClass = createEClass(LINK);
 		createEReference(linkEClass, LINK__LINKPROPERTIES);
+		createEReference(linkEClass, LINK__BUTTONPROPERTIES);
 
 		strongEClass = createEClass(STRONG);
 
@@ -2685,6 +2695,9 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLink_Linkproperties(), this.getLinkProperty(), null, "linkproperties", null, 0, -1,
+				Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLink_Buttonproperties(), this.getButtonProperty(), null, "buttonproperties", null, 0, -1,
 				Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

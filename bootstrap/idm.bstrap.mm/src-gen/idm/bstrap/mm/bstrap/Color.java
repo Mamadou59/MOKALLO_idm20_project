@@ -98,13 +98,13 @@ public enum Color implements Enumerator {
 	 */
 	DANGER(7, "DANGER", "DANGER"),
 	/**
-	* The '<em><b>LIGHT</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>LIGHT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #LIGHT_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * @see #LIGHT_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	LIGHT(8, "LIGHT", "LIGHT");
 
 	/**

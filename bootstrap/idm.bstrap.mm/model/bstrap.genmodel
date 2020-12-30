@@ -19,6 +19,7 @@
       <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/WHITE"/>
       <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/WARNING"/>
       <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/DANGER"/>
+      <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Color/LIGHT"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="bstrap.ecore#//Size">
       <genEnumLiterals ecoreEnumLiteral="bstrap.ecore#//Size/DEFAULT"/>
@@ -143,6 +144,7 @@
     <genClasses ecoreClass="bstrap.ecore#//Bold"/>
     <genClasses ecoreClass="bstrap.ecore#//Link">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Link/linkproperties"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Link/buttonproperties"/>
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//Strong"/>
     <genClasses ecoreClass="bstrap.ecore#//Italic"/>
@@ -189,5 +191,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//CodeLine/content"/>
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//HorizontalLine"/>
+    <genClasses ecoreClass="bstrap.ecore#//ButtonOutLine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//ButtonOutLine/color"/>
+    </genClasses>
+    <genClasses ecoreClass="bstrap.ecore#//ButtonSpinner"/>
   </genPackages>
 </genmodel:GenModel>
