@@ -160,22 +160,13 @@ public interface BstrapPackage extends EPackage {
 	int CONTAINER__GENERAL_PROPERTIES = PAGE_CONTENT__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Textpagecontents</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Pagecontents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER__TEXTPAGECONTENTS = PAGE_CONTENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Containers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTAINER__CONTAINERS = PAGE_CONTENT_FEATURE_COUNT + 1;
+	int CONTAINER__PAGECONTENTS = PAGE_CONTENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Container</em>' class.
@@ -184,7 +175,7 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTAINER_FEATURE_COUNT = PAGE_CONTENT_FEATURE_COUNT + 2;
+	int CONTAINER_FEATURE_COUNT = PAGE_CONTENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Container</em>' class.
@@ -215,22 +206,13 @@ public interface BstrapPackage extends EPackage {
 	int FIX_CONTAINER__GENERAL_PROPERTIES = CONTAINER__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Textpagecontents</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Pagecontents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIX_CONTAINER__TEXTPAGECONTENTS = CONTAINER__TEXTPAGECONTENTS;
-
-	/**
-	 * The feature id for the '<em><b>Containers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIX_CONTAINER__CONTAINERS = CONTAINER__CONTAINERS;
+	int FIX_CONTAINER__PAGECONTENTS = CONTAINER__PAGECONTENTS;
 
 	/**
 	 * The number of structural features of the '<em>Fix Container</em>' class.
@@ -270,22 +252,13 @@ public interface BstrapPackage extends EPackage {
 	int FLUID_CONTAINER__GENERAL_PROPERTIES = CONTAINER__GENERAL_PROPERTIES;
 
 	/**
-	 * The feature id for the '<em><b>Textpagecontents</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Pagecontents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLUID_CONTAINER__TEXTPAGECONTENTS = CONTAINER__TEXTPAGECONTENTS;
-
-	/**
-	 * The feature id for the '<em><b>Containers</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FLUID_CONTAINER__CONTAINERS = CONTAINER__CONTAINERS;
+	int FLUID_CONTAINER__PAGECONTENTS = CONTAINER__PAGECONTENTS;
 
 	/**
 	 * The number of structural features of the '<em>Fluid Container</em>' class.
@@ -3495,6 +3468,71 @@ public interface BstrapPackage extends EPackage {
 	int HORIZONTAL_LINE_OPERATION_COUNT = TEXT_PAGE_CONTENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ButtonOutLineImpl <em>Button Out Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.ButtonOutLineImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonOutLine()
+	 * @generated
+	 */
+	int BUTTON_OUT_LINE = 89;
+
+	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON_OUT_LINE__COLOR = BUTTON_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Button Out Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON_OUT_LINE_FEATURE_COUNT = BUTTON_PROPERTY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Button Out Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON_OUT_LINE_OPERATION_COUNT = BUTTON_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.ButtonSpinnerImpl <em>Button Spinner</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.ButtonSpinnerImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonSpinner()
+	 * @generated
+	 */
+	int BUTTON_SPINNER = 90;
+
+	/**
+	 * The number of structural features of the '<em>Button Spinner</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON_SPINNER_FEATURE_COUNT = BUTTON_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Button Spinner</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON_SPINNER_OPERATION_COUNT = BUTTON_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3502,7 +3540,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getColor()
 	 * @generated
 	 */
-	int COLOR = 89;
+	int COLOR = 91;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Size <em>Size</em>}' enum.
@@ -3512,7 +3550,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 90;
+	int SIZE = 92;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Alignement <em>Alignement</em>}' enum.
@@ -3522,7 +3560,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlignement()
 	 * @generated
 	 */
-	int ALIGNEMENT = 91;
+	int ALIGNEMENT = 93;
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Page <em>Page</em>}'.
@@ -3567,26 +3605,15 @@ public interface BstrapPackage extends EPackage {
 	EClass getContainer();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Container#getTextpagecontents <em>Textpagecontents</em>}'.
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Container#getPagecontents <em>Pagecontents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Textpagecontents</em>'.
-	 * @see idm.bstrap.mm.bstrap.Container#getTextpagecontents()
+	 * @return the meta object for the containment reference list '<em>Pagecontents</em>'.
+	 * @see idm.bstrap.mm.bstrap.Container#getPagecontents()
 	 * @see #getContainer()
 	 * @generated
 	 */
-	EReference getContainer_Textpagecontents();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Container#getContainers <em>Containers</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Containers</em>'.
-	 * @see idm.bstrap.mm.bstrap.Container#getContainers()
-	 * @see #getContainer()
-	 * @generated
-	 */
-	EReference getContainer_Containers();
+	EReference getContainer_Pagecontents();
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.FixContainer <em>Fix Container</em>}'.
@@ -4877,6 +4904,37 @@ public interface BstrapPackage extends EPackage {
 	EClass getHorizontalLine();
 
 	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ButtonOutLine <em>Button Out Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Button Out Line</em>'.
+	 * @see idm.bstrap.mm.bstrap.ButtonOutLine
+	 * @generated
+	 */
+	EClass getButtonOutLine();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.ButtonOutLine#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see idm.bstrap.mm.bstrap.ButtonOutLine#getColor()
+	 * @see #getButtonOutLine()
+	 * @generated
+	 */
+	EAttribute getButtonOutLine_Color();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.ButtonSpinner <em>Button Spinner</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Button Spinner</em>'.
+	 * @see idm.bstrap.mm.bstrap.ButtonSpinner
+	 * @generated
+	 */
+	EClass getButtonSpinner();
+
+	/**
 	 * Returns the meta object for enum '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4966,20 +5024,12 @@ public interface BstrapPackage extends EPackage {
 		EClass CONTAINER = eINSTANCE.getContainer();
 
 		/**
-		 * The meta object literal for the '<em><b>Textpagecontents</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Pagecontents</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CONTAINER__TEXTPAGECONTENTS = eINSTANCE.getContainer_Textpagecontents();
-
-		/**
-		 * The meta object literal for the '<em><b>Containers</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTAINER__CONTAINERS = eINSTANCE.getContainer_Containers();
+		EReference CONTAINER__PAGECONTENTS = eINSTANCE.getContainer_Pagecontents();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.FixContainerImpl <em>Fix Container</em>}' class.
@@ -6154,6 +6204,34 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass HORIZONTAL_LINE = eINSTANCE.getHorizontalLine();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ButtonOutLineImpl <em>Button Out Line</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.ButtonOutLineImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonOutLine()
+		 * @generated
+		 */
+		EClass BUTTON_OUT_LINE = eINSTANCE.getButtonOutLine();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BUTTON_OUT_LINE__COLOR = eINSTANCE.getButtonOutLine_Color();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.ButtonSpinnerImpl <em>Button Spinner</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.ButtonSpinnerImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getButtonSpinner()
+		 * @generated
+		 */
+		EClass BUTTON_SPINNER = eINSTANCE.getButtonSpinner();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.

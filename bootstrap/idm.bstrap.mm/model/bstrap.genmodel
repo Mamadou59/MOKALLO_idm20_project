@@ -37,8 +37,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Page/pagecontents"/>
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//Container">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Container/textpagecontents"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Container/containers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bstrap.ecore#//Container/pagecontents"/>
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//FixContainer"/>
     <genClasses ecoreClass="bstrap.ecore#//FluidContainer"/>

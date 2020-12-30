@@ -18,8 +18,10 @@ import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
 import idm.bstrap.mm.bstrap.ButtonLink;
+import idm.bstrap.mm.bstrap.ButtonOutLine;
 import idm.bstrap.mm.bstrap.ButtonProperty;
 import idm.bstrap.mm.bstrap.ButtonSize;
+import idm.bstrap.mm.bstrap.ButtonSpinner;
 import idm.bstrap.mm.bstrap.ButtonState;
 import idm.bstrap.mm.bstrap.ButtonStyle;
 import idm.bstrap.mm.bstrap.Center;
@@ -738,6 +740,20 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass buttonOutLineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass buttonSpinnerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum colorEEnum = null;
 
 	/**
@@ -859,17 +875,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainer_Textpagecontents() {
+	public EReference getContainer_Pagecontents() {
 		return (EReference) containerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getContainer_Containers() {
-		return (EReference) containerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2002,6 +2009,33 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getButtonOutLine() {
+		return buttonOutLineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getButtonOutLine_Color() {
+		return (EAttribute) buttonOutLineEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getButtonSpinner() {
+		return buttonSpinnerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getColor() {
 		return colorEEnum;
 	}
@@ -2058,8 +2092,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		createEReference(pageEClass, PAGE__PAGECONTENTS);
 
 		containerEClass = createEClass(CONTAINER);
-		createEReference(containerEClass, CONTAINER__TEXTPAGECONTENTS);
-		createEReference(containerEClass, CONTAINER__CONTAINERS);
+		createEReference(containerEClass, CONTAINER__PAGECONTENTS);
 
 		fixContainerEClass = createEClass(FIX_CONTAINER);
 
@@ -2273,6 +2306,11 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		horizontalLineEClass = createEClass(HORIZONTAL_LINE);
 
+		buttonOutLineEClass = createEClass(BUTTON_OUT_LINE);
+		createEAttribute(buttonOutLineEClass, BUTTON_OUT_LINE__COLOR);
+
+		buttonSpinnerEClass = createEClass(BUTTON_SPINNER);
+
 		// Create enums
 		colorEEnum = createEEnum(COLOR);
 		sizeEEnum = createEEnum(SIZE);
@@ -2397,6 +2435,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		codeBlockEClass.getESuperTypes().add(this.getTextPageContent());
 		codeBlockEClass.getESuperTypes().add(this.getListItemElement());
 		horizontalLineEClass.getESuperTypes().add(this.getTextPageContent());
+		buttonOutLineEClass.getESuperTypes().add(this.getButtonProperty());
+		buttonSpinnerEClass.getESuperTypes().add(this.getButtonProperty());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2408,10 +2448,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(containerEClass, idm.bstrap.mm.bstrap.Container.class, "Container", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContainer_Textpagecontents(), this.getTextPageContent(), null, "textpagecontents", null, 0,
-				-1, idm.bstrap.mm.bstrap.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainer_Containers(), this.getContainer(), null, "containers", null, 0, -1,
+		initEReference(getContainer_Pagecontents(), this.getPageContent(), null, "pagecontents", null, 0, -1,
 				idm.bstrap.mm.bstrap.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2548,8 +2585,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(buttonStyleEClass, ButtonStyle.class, "ButtonStyle", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getButtonStyle_Color(), this.getColor(), "color", null, 0, 1, ButtonStyle.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getButtonStyle_Color(), this.getColor(), "color", "LIGHT", 0, 1, ButtonStyle.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(buttonSizeEClass, ButtonSize.class, "ButtonSize", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2752,6 +2789,14 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEClass(horizontalLineEClass, HorizontalLine.class, "HorizontalLine", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(buttonOutLineEClass, ButtonOutLine.class, "ButtonOutLine", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getButtonOutLine_Color(), this.getColor(), "color", null, 0, 1, ButtonOutLine.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(buttonSpinnerEClass, ButtonSpinner.class, "ButtonSpinner", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(colorEEnum, Color.class, "Color");
 		addEEnumLiteral(colorEEnum, Color.DARK);
@@ -2762,6 +2807,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		addEEnumLiteral(colorEEnum, Color.WHITE);
 		addEEnumLiteral(colorEEnum, Color.WARNING);
 		addEEnumLiteral(colorEEnum, Color.DANGER);
+		addEEnumLiteral(colorEEnum, Color.LIGHT);
 
 		initEEnum(sizeEEnum, Size.class, "Size");
 		addEEnumLiteral(sizeEEnum, Size.DEFAULT);

@@ -7,10 +7,8 @@
         eType="#//PageContent" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Container" abstract="true" eSuperTypes="#//PageContent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="textpagecontents" upperBound="-1"
-        eType="#//TextPageContent" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="containers" upperBound="-1"
-        eType="#//Container" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pagecontents" upperBound="-1"
+        eType="#//PageContent" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FixContainer" eSuperTypes="#//Container"/>
   <eClassifiers xsi:type="ecore:EClass" name="FluidContainer" eSuperTypes="#//Container"/>

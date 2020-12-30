@@ -16,8 +16,10 @@ import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
 import idm.bstrap.mm.bstrap.ButtonLink;
+import idm.bstrap.mm.bstrap.ButtonOutLine;
 import idm.bstrap.mm.bstrap.ButtonProperty;
 import idm.bstrap.mm.bstrap.ButtonSize;
+import idm.bstrap.mm.bstrap.ButtonSpinner;
 import idm.bstrap.mm.bstrap.ButtonState;
 import idm.bstrap.mm.bstrap.ButtonStyle;
 import idm.bstrap.mm.bstrap.Center;
@@ -597,6 +599,16 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseHorizontalLine(HorizontalLine object) {
 			return createHorizontalLineAdapter();
+		}
+
+		@Override
+		public Adapter caseButtonOutLine(ButtonOutLine object) {
+			return createButtonOutLineAdapter();
+		}
+
+		@Override
+		public Adapter caseButtonSpinner(ButtonSpinner object) {
+			return createButtonSpinnerAdapter();
 		}
 
 		@Override
@@ -1861,6 +1873,34 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createHorizontalLineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ButtonOutLine <em>Button Out Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.ButtonOutLine
+	 * @generated
+	 */
+	public Adapter createButtonOutLineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.ButtonSpinner <em>Button Spinner</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.ButtonSpinner
+	 * @generated
+	 */
+	public Adapter createButtonSpinnerAdapter() {
 		return null;
 	}
 
