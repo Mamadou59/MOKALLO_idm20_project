@@ -33,12 +33,32 @@
 [template public getButtonProperty(aButtonProperty : ButtonStyle)]
  [self.getButtonStyle()/]
 [/template]
-[template public getButtonStyleProperty(aButtonStyle : ButtonStyle)]
- [self.getButtonStyle()/]
-[/template] 
-[template public getButtonStyleProperty(aButtonStyle : ButtonLink)]
- btn-link
-[/template] 
+[**
+ * Handle  ButtonProperty (ButtonOutLine)
+ * @param aButtonProperty
+ */]
+[template public getButtonProperty(aButtonProperty : ButtonOutLine)]
+ [self.getButtonOutLineProperty()/]
+[/template]
+[**
+ * Handle  ButtonProperty (ButtonSpinner)
+ * @param aButtonSpinner
+ */]
+[template public getButtonProperty(aButtonSpinner : ButtonSpinner)]
+ 
+[/template]
+[**
+ * Handle  ButtonProperty (ButtonOutLine)
+ * @param aButtonProperty
+ */]
+[template public getButtonSpinnerProperty(aButtonProperty : ButtonProperty)]
+ [self.generateSpinner()/]
+[/template]
+
+
+
+
+
 
 [comment] ---------------------------------------------------------------------------	[/comment]
 
@@ -61,8 +81,14 @@
  * Handle  ButtonState (Disabled)
  * @param aButtonState
  */]
-[template private getButtonState(aButtonState : Disabled)]
-
+[template private getButtonState(aButtonState : Disabled) ? (self.eContainer(Link).oclIsKindOf(Link))]
+  disabled
+[/template]
+[**
+ * Handle  ButtonState (Disabled)
+ * @param aButtonState
+ */]
+[template private getButtonState(aButtonState : Disabled) ]
 [/template]
 [comment] ---------------------------------------------------------------------------	[/comment]
 
@@ -83,6 +109,29 @@ btn-[self.color.getColor() /]
 btn-[self.getClassName()/]"
 [/template]
 [comment] ---------------------------------------------------------------------------	[/comment]
+
+
+[comment]+++++++++++  Button OutLine   ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle  ButtonOutLine 
+ * @param aBoutonOutLine
+ */]
+[template private getButtonOutLineProperty(aBoutonOutLine : ButtonOutLine)]
+btn-outline-[self.color.getColor()/]
+[/template]
+[comment] ---------------------------------------------------------------------------	[/comment]
+[comment]+++++++++++  Button Spinner   ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle  ButtonSpinner 
+ * @param aBoutonSpinner
+ */]
+[template private generateSpinner(aBoutonSpinner : ButtonProperty)]
+[/template]
+[template private generateSpinner(aBoutonSpinner : ButtonSpinner) { aBaliseName : String = 'span'; }]
+  <[aBaliseName/] [self.declareClass()/] "spinner-border spinner-border-sm">[aBaliseName.getCloseBaliseName()/]
+[/template]
+[comment] ---------------------------------------------------------------------------	[/comment]
+
 
 
 

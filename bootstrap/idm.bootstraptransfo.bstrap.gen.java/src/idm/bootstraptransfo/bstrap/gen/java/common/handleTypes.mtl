@@ -81,7 +81,9 @@
  */]
 
 [template public generateContainableTextElement(aTextContainable : Button) { aBalise : String = self.getClassName(); }]
-<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] btn [self.buttonproperties.getButtonProperty()/]" [aTextContainable.buttonproperties.getButtonState()/]> [self.textnestedelements.generateTestnestedElement()/]
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] btn [self.buttonproperties.getButtonProperty()/]" [aTextContainable.buttonproperties.getButtonState()/]> 
+   [self.buttonproperties.getButtonSpinnerProperty()/]
+   [self.textnestedelements.generateTestnestedElement()/]
 [getCloseBaliseName(aBalise)/]
 [/template]
 
@@ -129,7 +131,7 @@
  * Handle code generation of a UrlBasedLink in a Page  (Link)
  */]
 [template public generateUrlBasedLink(aUrlBasedLink : Link) { aBalise :String = 'a'; }]
-<[aBalise/] href="[self.url/]"  title= "[self.title/]"[self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.linkproperties.getLinkBrand()/]"> [aUrlBasedLink.textnestedelements.generateTestnestedElement()/] [aBalise.getCloseBaliseName()/]
+<[aBalise/] href="[self.url/]"  title= "[self.title/]"[self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.linkproperties.getLinkBrand()/] btn [self.buttonproperties.getButtonProperty()/]" [self.getLinkRole()/] > [aUrlBasedLink.textnestedelements.generateTestnestedElement()/] [aBalise.getCloseBaliseName()/]
 [/template]
 
 
