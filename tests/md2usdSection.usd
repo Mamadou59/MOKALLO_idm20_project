@@ -1,89 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="/tests/section.simplemarkdown">
   <contents xsi:type="usd:Title" level="1">
-    <textElements xsi:type="usd:Text" text="My First Bootstrap 4 Page"/>
-  </contents>
-  <contents xsi:type="usd:Paragraph">
-    <textElements xsi:type="usd:Text" text="Resize this responsive page to see the effect!"/>
-  </contents>
-  <contents xsi:type="usd:Title" level="1">
-    <textElements xsi:type="usd:Link">
-      <subTextElements xsi:type="usd:Text" text="Navbar"/>
-    </textElements>
-  </contents>
-  <contents xsi:type="usd:Paragraph">
-    <textElements xsi:type="usd:Link" url="#" title="">
-      <subTextElements xsi:type="usd:Text" text="[]Navbar"/>
-    </textElements>
-    <textElements xsi:type="usd:Link" url="#" title="">
-      <subTextElements xsi:type="usd:Text" text="Link 1"/>
-    </textElements>
-    <textElements xsi:type="usd:Link" url="#" title="">
-      <subTextElements xsi:type="usd:Text" text="Link 2"/>
-    </textElements>
-    <textElements xsi:type="usd:Link" url="#" title="">
-      <subTextElements xsi:type="usd:Text" text="Link 3"/>
-    </textElements>
+    <textElements xsi:type="usd:Text" text="My First Bootstrap section 4 Page"/>
   </contents>
   <contents xsi:type="usd:Section">
-    <contents xsi:type="usd:BlockQuote">
-      <contents xsi:type="usd:Title" level="1">
-        <textElements xsi:type="usd:Link">
-          <subTextElements xsi:type="usd:Text" text="Section"/>
-        </textElements>
+    <contents xsi:type="usd:Paragraph">
+      <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fluidContainer})"/>
+    </contents>
+    <contents xsi:type="usd:Title" level="1">
+      <textElements xsi:type="usd:Text" text="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}) Titre de la section"/>
+    </contents>
+    <contents xsi:type="usd:Paragraph">
+      <textElements xsi:type="usd:Text" text="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}) Ce paragraph est dans la prémière section"/>
+    </contents>
+    <contents xsi:type="usd:Section">
+      <contents xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fixContainer})"/>
       </contents>
-      <contents xsi:type="usd:BlockQuote">
-        <contents xsi:type="usd:Title" level="2">
-          <textElements xsi:type="usd:Link">
-            <subTextElements xsi:type="usd:Text" text="Colomn 4"/>
-          </textElements>
-        </contents>
-        <contents xsi:type="usd:Title" level="2">
-          <textElements xsi:type="usd:Text" text="About Me"/>
-        </contents>
-        <contents xsi:type="usd:BlockQuote">
-          <contents xsi:type="usd:Title" level="6">
-            <textElements xsi:type="usd:Text" text="Photo of Me:"/>
-          </contents>
-          <contents xsi:type="usd:BlockQuote">
-            <contents xsi:type="usd:Paragraph">
-              <textElements xsi:type="usd:Text" text="Some text about me in culpa qui officia deserunt mollit anim.."/>
-            </contents>
-          </contents>
+      <contents xsi:type="usd:Title" level="2">
+        <textElements xsi:type="usd:Text" text="Titre de la sous section"/>
+      </contents>
+      <contents xsi:type="usd:UnorderedList">
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="list in citation"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="item 2"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="item 3"/>
+            <textElements xsi:type="usd:Text" text="fin de list"/>
+          </elements>
+        </items>
+      </contents>
+      <contents xsi:type="usd:Section">
+        <contents xsi:type="usd:Paragraph">
+          <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fixContainer})"/>
         </contents>
         <contents xsi:type="usd:Title" level="3">
-          <textElements xsi:type="usd:Text" text="Some Links"/>
+          <textElements xsi:type="usd:Text" text="Titre de la sous sous section"/>
         </contents>
-        <contents xsi:type="usd:BlockQuote">
-          <contents xsi:type="usd:BlockQuote">
-            <contents xsi:type="usd:Paragraph">
-              <textElements xsi:type="usd:Text" text="Lorem ipsum dolor sit ame."/>
-            </contents>
-          </contents>
-        </contents>
-        <contents xsi:type="usd:Title" level="2">
-          <textElements xsi:type="usd:Link">
-            <subTextElements xsi:type="usd:Text" text="Colomn 8"/>
-          </textElements>
-        </contents>
-        <contents xsi:type="usd:Title" level="2">
-          <textElements xsi:type="usd:Text" text="TITLE HEADING"/>
-        </contents>
-        <contents xsi:type="usd:Section">
-          <contents xsi:type="usd:Title" level="5">
-            <textElements xsi:type="usd:Text" text="Title description, Sep 2, 2017"/>
-          </contents>
-          <contents xsi:type="usd:BlockQuote">
-            <contents xsi:type="usd:Paragraph">
-              <textElements xsi:type="usd:Text" text="Some text.."/>
-              <textElements xsi:type="usd:Text" text="Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco."/>
-            </contents>
-          </contents>
+        <contents xsi:type="usd:Paragraph">
+          <textElements xsi:type="usd:Text" text="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})text du paragraphe"/>
         </contents>
       </contents>
     </contents>
-  </contents>
-  <contents xsi:type="usd:Paragraph">
-    <textElements xsi:type="usd:Text" text="Footer"/>
   </contents>
 </usd:Page>

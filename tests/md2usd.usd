@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="/idm.markdown.parser/src/resources/md/tests.simplemarkdown">
+<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="/tests/tests.simplemarkdown">
   <contents xsi:type="usd:Title" level="1">
-    <textElements xsi:type="usd:Text" text="File for tests markdown parser"/>
+    <textElements xsi:type="usd:Text" text="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:2,emphasis:italic) File for tests markdown parser"/>
   </contents>
   <contents xsi:type="usd:Title" level="1">
-    <textElements xsi:type="usd:Text" text="Table"/>
+    <textElements xsi:type="usd:Text" text="(color:dark,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:2,emphasis:italic) Table"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})&#xD;&#xA;"/>
+    <codeLines text="This is [an example](http://example.com/ &quot;Title&quot;) inline link.&#xD;&#xA;"/>
+    <codeLines text="&#xD;&#xA;"/>
+    <codeLines text="[This link](http://example.net/) has no title attribute.&#xD;&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="And now an image : "/>
+    <textElements xsi:type="usd:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+      <subTextElements xsi:type="usd:Text" text="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:2, imageShape:circle,imageAligning:center)image"/>
+    </textElements>
   </contents>
   <contents xsi:type="usd:Table">
-    <tableSections xsi:type="usd:TableHead">
+    <tablesections xsi:type="usd:TableHead">
       <rows>
         <cells>
-          <textElements xsi:type="usd:Text" text="Syntax"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(sectionProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),tableProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},tableProperty:darkTable),rowProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Syntax"/>
         </cells>
         <cells>
-          <textElements xsi:type="usd:Text" text="Description"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Description"/>
         </cells>
       </rows>
-    </tableSections>
-    <tableSections xsi:type="usd:TableSeparator">
+    </tablesections>
+    <tablesections xsi:type="usd:TableSeparator">
       <rows>
         <cells>
           <textElements xsi:type="usd:Text" text=":-----------"/>
@@ -26,28 +38,28 @@
           <textElements xsi:type="usd:Text" text="-----------"/>
         </cells>
       </rows>
-    </tableSections>
-    <tableSections xsi:type="usd:TableBody">
+    </tablesections>
+    <tablesections xsi:type="usd:TableBody">
       <rows>
         <cells>
-          <textElements xsi:type="usd:Text" text="Header"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(sectionProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),rowProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Header"/>
         </cells>
         <cells>
-          <textElements xsi:type="usd:Text" text="Title"/>
+          <textElements xsi:type="usd:Text" text="tabPproperties:(cell:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Title"/>
         </cells>
       </rows>
       <rows>
         <cells>
-          <textElements xsi:type="usd:Text" text="Paragraph"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Paragraph"/>
         </cells>
         <cells>
           <textElements xsi:type="usd:Text" text="Text"/>
         </cells>
       </rows>
-    </tableSections>
+    </tablesections>
   </contents>
   <contents xsi:type="usd:Table">
-    <tableSections xsi:type="usd:TableHead">
+    <tablesections xsi:type="usd:TableHead">
       <rows>
         <cells>
           <textElements xsi:type="usd:Text" text="Syntax"/>
@@ -56,8 +68,8 @@
           <textElements xsi:type="usd:Text" text="Description"/>
         </cells>
       </rows>
-    </tableSections>
-    <tableSections xsi:type="usd:TableSeparator">
+    </tablesections>
+    <tablesections xsi:type="usd:TableSeparator">
       <rows>
         <cells>
           <textElements xsi:type="usd:Text" text="-----------"/>
@@ -66,8 +78,8 @@
           <textElements xsi:type="usd:Text" text="-----------"/>
         </cells>
       </rows>
-    </tableSections>
-    <tableSections xsi:type="usd:TableBody">
+    </tablesections>
+    <tablesections xsi:type="usd:TableBody">
       <rows>
         <cells>
           <textElements xsi:type="usd:Text" text="Header"/>
@@ -84,10 +96,10 @@
           <textElements xsi:type="usd:Text" text="Text"/>
         </cells>
       </rows>
-    </tableSections>
+    </tablesections>
   </contents>
   <contents xsi:type="usd:Table">
-    <tableSections xsi:type="usd:TableHead">
+    <tablesections xsi:type="usd:TableHead">
       <rows>
         <cells>
           <textElements xsi:type="usd:Text" text="Heading Centered"/>
@@ -95,15 +107,15 @@
         <cells>
           <textElements xsi:type="usd:Text" text="Heading Left Aligned"/>
         </cells>
-        <cells>
+        <cells alignement="CENTER">
           <textElements xsi:type="usd:Text" text="Heading Centered"/>
         </cells>
-        <cells>
+        <cells alignement="RIGHT">
           <textElements xsi:type="usd:Text" text="Heading Right Aligned"/>
         </cells>
       </rows>
-    </tableSections>
-    <tableSections xsi:type="usd:TableSeparator">
+    </tablesections>
+    <tablesections xsi:type="usd:TableSeparator">
       <rows>
         <cells>
           <textElements xsi:type="usd:Text" text="------------------------"/>
@@ -111,15 +123,15 @@
         <cells>
           <textElements xsi:type="usd:Text" text=":-----------------------"/>
         </cells>
-        <cells>
+        <cells alignement="CENTER">
           <textElements xsi:type="usd:Text" text=":------------------:"/>
         </cells>
-        <cells>
+        <cells alignement="RIGHT">
           <textElements xsi:type="usd:Text" text="------------------------:"/>
         </cells>
       </rows>
-    </tableSections>
-    <tableSections xsi:type="usd:TableBody">
+    </tablesections>
+    <tablesections xsi:type="usd:TableBody">
       <rows>
         <cells>
           <textElements xsi:type="usd:Text" text="Cell text left aligned"/>
@@ -127,10 +139,10 @@
         <cells>
           <textElements xsi:type="usd:Text" text="Cell text left aligned"/>
         </cells>
-        <cells>
+        <cells alignement="CENTER">
           <textElements xsi:type="usd:Text" text="Cell text centered"/>
         </cells>
-        <cells>
+        <cells alignement="RIGHT">
           <textElements xsi:type="usd:Text" text="Cell text right aligned"/>
         </cells>
       </rows>
@@ -141,19 +153,19 @@
         <cells>
           <textElements xsi:type="usd:Text" text="cell 22"/>
         </cells>
-        <cells>
+        <cells alignement="CENTER">
           <textElements xsi:type="usd:Text" text="cell 22"/>
         </cells>
-        <cells>
+        <cells alignement="RIGHT">
           <textElements xsi:type="usd:Text" text="cell 22"/>
         </cells>
       </rows>
-    </tableSections>
+    </tablesections>
   </contents>
   <contents xsi:type="usd:Paragraph">
-    <textElements xsi:type="usd:Text" text="See syntax and option :"/>
+    <textElements xsi:type="usd:Text" text="(color:primary,background:primary,margin:{level:5,alignment:left},padding:{level:3,alignment:center},border:{border},emphasis:italic) See syntax and option :"/>
     <textElements xsi:type="usd:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
-      <subTextElements xsi:type="usd:Text" text="Tables Extension"/>
+      <subTextElements xsi:type="usd:Text" text="(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)[Tables Extension]"/>
     </textElements>
   </contents>
   <contents xsi:type="usd:Title" level="1">
@@ -174,9 +186,19 @@
     <textElements xsi:type="usd:Text" text="."/>
   </contents>
   <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
+      <subTextElements xsi:type="usd:Text" text="(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold) [Tables Extension22]"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold) TextItalic"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
     <textElements xsi:type="usd:Text" text="Ce paragraphe contient un "/>
     <textElements xsi:type="usd:StrongEmphasis">
-      <subTextElements xsi:type="usd:Text" text="Strong"/>
+      <subTextElements xsi:type="usd:Text" text="(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)Strong"/>
     </textElements>
     <textElements xsi:type="usd:Text" text=" et un "/>
     <textElements xsi:type="usd:ItalicEmphasis">
@@ -546,7 +568,7 @@
   <contents xsi:type="usd:Paragraph">
     <textElements xsi:type="usd:Text" text="And now an image : "/>
     <textElements xsi:type="usd:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
-      <subTextElements xsi:type="usd:Text" text="image"/>
+      <subTextElements xsi:type="usd:Text" text="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:2)image"/>
     </textElements>
   </contents>
   <contents xsi:type="usd:Paragraph">
@@ -564,6 +586,11 @@
   <contents xsi:type="usd:UnorderedList">
     <items>
       <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, listProperty:basicList)"/>
+      </elements>
+    </items>
+    <items>
+      <elements xsi:type="usd:Paragraph">
         <textElements xsi:type="usd:Text" text="start list. This is a paragraph"/>
         <textElements xsi:type="usd:Text" text="on multiple lines."/>
       </elements>
@@ -573,7 +600,7 @@
     </items>
     <items>
       <elements xsi:type="usd:Paragraph">
-        <textElements xsi:type="usd:Text" text="item 2."/>
+        <textElements xsi:type="usd:Text" text="(itemProperty: active) item 2."/>
       </elements>
       <elements xsi:type="usd:UnorderedList">
         <items>
@@ -588,6 +615,11 @@
         </items>
       </elements>
       <elements xsi:type="usd:UnorderedList">
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, listProperty:horizontalList)"/>
+          </elements>
+        </items>
         <items>
           <elements xsi:type="usd:Paragraph">
             <textElements xsi:type="usd:Text" text="level 2 item 3"/>
@@ -647,10 +679,12 @@
   <contents xsi:type="usd:BlockQuote">
     <contents xsi:type="usd:Paragraph">
       <textElements xsi:type="usd:Text" text="Start citation"/>
+      <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})"/>
     </contents>
     <contents xsi:type="usd:BlockQuote">
       <contents xsi:type="usd:Paragraph">
         <textElements xsi:type="usd:Text" text="double citation"/>
+        <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})"/>
       </contents>
       <contents xsi:type="usd:UnorderedList">
         <items>
