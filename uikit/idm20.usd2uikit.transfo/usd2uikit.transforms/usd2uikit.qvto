@@ -1,0 +1,16 @@
+import usdContent2UikitContent;
+	
+
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+modeltype uikitMM "strict" uses "http://www.example.org/uikit";
+
+transformation usd2bstrap(in usd : usdMM, out uikit : uikitMM);
+
+main() {
+	usd.rootObjects()[Page] -> map pageUsd2PageUikit();
+}
+
+mapping usdMM:: Page::pageUsd2PageUikit() : uikitMM::Page {
+	name := self.name;
+	pagecontents += self.contents -> map constructPageContent();
+}
