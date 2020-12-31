@@ -15,6 +15,7 @@ mapping mdMM::Link::linkMd2NavElementUsd() : usdMM::ListItem
 	elements := object usdMM::Link {
 		url := self.url;
 		title := self.title;
+		subTextElements += self.subtext -> map contructTextElement();
 	} 	
 }
 
@@ -100,8 +101,9 @@ mapping mdMM::Link::linkButtonMd2ButtonUsd() : usdMM::Button
 	inherits mdMM::CompositeTextElement::compositeTextElementMd2CompositeTextElementUsd
 	when {self.isLinkButton() and not self.isNavigationLink()} {
 		type := self.getType();
-	}
-	
+}
+
+
 /**
 * Mapper from markdown Link element to usd Navigation element 
 */	
