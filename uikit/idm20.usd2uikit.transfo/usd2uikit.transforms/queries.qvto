@@ -1,0 +1,29 @@
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+modeltype uikitMM "strict" uses "http://www.example.org/uikit";
+
+transformation usd2bstrap(in usd : usdMM, out uikit : uikitMM);
+
+/**
+* A query to find property value in to String 
+*/
+query String::findProperty() : String {
+	var prop := self.trim();
+	var propBefore := prop.substringBefore(',');
+	if (propBefore <> null){
+		prop := propBefore;
+	};
+	return prop.toLower().trim();
+}
+
+/**
+* A query to find specific text in to String 
+*/
+query String::getText() : String {
+	var text := self;
+	if (text.startsWith("properties") or text.startsWith("(")){
+		while (text.find(")")>0) {
+			text := text.substringAfter(")");
+		};
+	};
+	return text;
+}
