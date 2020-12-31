@@ -21,15 +21,9 @@ helper mdMM::Paragraph::getNavigationElement() : mdMM::Link {
 * An helper to check if given link is button. 
 */
 helper mdMM::Link::isLinkButton() : Boolean {
-	var textElem := self.allSubobjectsOfType(Text);
-	textElem -> forOne(i){
-		if ((i.text.startsWith('[') or (i.text.startsWith('(') and i.text.find(":") > 0)) and i.text.find("btn") > 0){
-			return true;
-		}else {
-			return false;
-		}
-	};
-	return false;	
+	var textElem := self.subtext[mdMM::Text] -> 
+			selectOne(t | (t.text.startsWith('[') or (t.text.startsWith('(') and t.text.find(":") > 0)) and t.text.find("btn") > 0);
+	return self.url.=("#") and textElem <> null;	
 }
 
 /**

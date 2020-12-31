@@ -15,6 +15,7 @@ mapping mdMM::Link::linkMd2NavElementUsd() : usdMM::ListItem
 	elements := object usdMM::Link {
 		url := self.url;
 		title := self.title;
+		subTextElements += self.subtext -> map contructTextElement();
 	} 	
 }
 

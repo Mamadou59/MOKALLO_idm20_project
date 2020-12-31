@@ -20,8 +20,10 @@ query String::findProperty() : String {
 */
 query String::getText() : String {
 	var text := self;
-	while (text.find(")")>0) {
-		text := text.substringAfter(")");
+	if (text.startsWith("properties") or text.startsWith("(")){
+		while (text.find(")")>0) {
+			text := text.substringAfter(")");
+		};
 	};
 	return text;
 }

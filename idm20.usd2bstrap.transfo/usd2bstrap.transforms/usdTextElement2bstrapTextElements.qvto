@@ -13,8 +13,14 @@ transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
 mapping usdMM::Text::textUsd2TextBstrap() : bstrapMM::Text
 	when {not self.text.isPropertyLine()}{	
 	var textContent := self.text.getText();
+	var container := self.container()[usdMM::Link];
 	if (self.container().metaClassName().=("Link")){
-		textContent := textContent.substringBefore("]").substringAfter("[");
+		if (self.text.find("btn") > 0) {
+			textContent := textContent.substringAfter("]");
+		}
+		else {
+			textContent := textContent.substringBefore("]").substringAfter("[");
+		}
 	};
 	text := textContent.trim();
 }
@@ -82,7 +88,15 @@ abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2Containabl
 */
 mapping usdMM::Link::linkUsd2LinkBstrap() : bstrapMM::Link 
 	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap, 
-			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap{}
+			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap
+			when {not self.isLinkButton()}{}
+
+mapping usdMM::Link::linkUsd2LinkButtonBstrap() : bstrapMM::Link 
+	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap, 
+			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap
+			when {self.isLinkButton()}{
+				buttonproperties += object bstrapMM::ButtonLink {};
+			}
 
 /**
 * A mapper which map an usd ItalicEmphasis element to bstrap Italic element.
@@ -134,7 +148,7 @@ mapping usdMM::Image::imageUsd2ImageBstrap() : bstrapMM::Image
 * With specified properties. 
 */
 mapping usdMM::Button::buttonUsd2ButtonBstrap() : bstrapMM::Button{
-	
+	// Adding button bootstrap properties 
 	result.buttonproperties += self.type.parseButtonProperties();
 	var subText := self.subTextElements[usdMM::Text] -> selectOne(t|true);
 	textnestedelements += object bstrapMM::Text {
@@ -175,5 +189,5 @@ mapping usdMM::TextElement::constructTextElement() : bstrapMM::TextElements
 	disjuncts  usdMM::Code::codeUsd2CodeBstrap, usdMM::Text::textUsd2TextBstrap,
 		usdMM::Link::linkUsd2LinkBstrap, usdMM::Image::imageUsd2ImageBstrap,
 		usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap, usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap,
-		usdMM::Button::buttonUsd2ButtonBstrap{}
+		usdMM::Button::buttonUsd2ButtonBstrap, usdMM::Link::linkUsd2LinkButtonBstrap{}
 
