@@ -156,7 +156,7 @@ mapping String::parseNavProperties() : Set(NavBarProperty) {
 * helper to get from String contains background properties to bstrap Background element, 
 */
 helper String::backGroundWrapper() : bstrapMM::Background {
-	var prop := self.substringAfter('background:').substringBefore(',');
+	var prop := self.substringAfter('background:').findProperty();
 	if(prop <> null){
 		return prop.getBackground();
 	};
@@ -210,7 +210,7 @@ helper String::containsProperties() : Boolean {
 * helper to get from String contains color properties to bstrap Color element, 
 */
 helper String::findColor() : bstrapMM::Color {
-	var prop := self.substringAfter('color:').substringBefore(',');
+	var prop := self.substringAfter('color:').findProperty();
 	return 	prop.getColor();
 }
 
