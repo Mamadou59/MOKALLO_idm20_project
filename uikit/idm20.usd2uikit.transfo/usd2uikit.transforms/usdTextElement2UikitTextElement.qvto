@@ -1,0 +1,82 @@
+
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+modeltype uikitMM "strict" uses "http://www.example.org/uikit";
+
+transformation usd2bstrap(in usd : usdMM, out uikit : uikitMM);
+
+
+mapping usdMM::Text::textUsd2TextUikit() : uikitMM::Text {
+	text := self.text;
+}
+
+mapping usdMM::Code::codeUsd2CodeUikit() : uikitMM::Code 
+	inherits usdMM::Text::textUsd2TextUikit{}
+
+abstract mapping usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkUikit() : uikitMM::UrlBasedLink {
+	url := self.url;
+	title := self.title;
+}
+
+mapping usdMM::Image::imageUsd2ImageUikit() : uikitMM::Image 
+	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkUikit{
+	title := self.subTextElements[usdMM::Text] -> selectOne(t | true).text;
+}
+
+mapping usdMM::Link::linkUsd2LinkUikit() : uikitMM::Link 
+	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkUikit,
+				usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedUikit{
+}
+
+/**
+* An anstract mapper which map an usd CompositeTextElement element to bstrap TextNested element.
+*/
+abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedUikit() : uikitMM::TextNested {
+	 textnestedelements += self.subTextElements -> map contructTextNestedElement();
+}
+
+/**
+* An abstract mapper which map an usd Composite element to bstrap ContainableTextElement element.
+* And also parse a specified propertie to bootstrap properties
+*/
+abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement() : uikitMM::ContainableTextElement {}
+
+/**
+* A mapper which map an usd ItalicEmphasis element to bstrap Italic element.
+* It also extends compositeTextElementUsd2TextNestedBstrap.
+*/
+mapping usdMM::ItalicEmphasis::italicEmpUsd2ItalicUikit() : uikitMM::Italic 
+	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedUikit,
+			usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement{
+}
+
+/**
+* A mapper which map an usd StrongEmphasis element to bstrap Strong element.
+* It also extends compositeTextElementUsd2TextNestedBstrap.
+*/
+mapping usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap() : uikitMM::Strong 
+	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedUikit,
+			usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement{}
+
+/**
+* A mapper which map an usd TextElement element to bstrap TextNestedElement.
+* It also make disjunction beetwen italicEmpUsd2ItalicBstrap, strongEmphasisUsd2StrongBstrap
+* and textUsd2TextBstrap
+*/
+mapping usdMM::TextElement::contructTextNestedElement() : uikitMM::TextNestedElement 
+	disjuncts usdMM::Text::textUsd2TextUikit, usdMM::ItalicEmphasis::italicEmpUsd2ItalicUikit,
+				usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap{}
+				
+				
+mapping usdMM::Button::buttonUsd2ButtonUiki() : uikitMM::Button {}
+/**
+* A mapper wich map an usd TextElement element to uikit TextElement element.
+*/
+mapping usdMM::TextElement::constructTextElement() : uikitMM::TextElement
+	disjuncts usdMM::Code::codeUsd2CodeUikit, usdMM::Text::textUsd2TextUikit,
+				usdMM::Image::imageUsd2ImageUikit, usdMM::Link::linkUsd2LinkUikit,
+				usdMM::ItalicEmphasis::italicEmpUsd2ItalicUikit,
+				usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap,
+				usdMM::Button::buttonUsd2ButtonUiki{}
+				
+				
+				

@@ -1,0 +1,33 @@
+import usdTextElement2UikitTextElement;
+	
+
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+modeltype uikitMM "strict" uses "http://www.example.org/uikit";
+
+transformation usd2bstrap(in usd : usdMM, out uikit : uikitMM);
+
+
+abstract mapping usdMM::PageContent::pageContentUsd2PageContentUikit() : uikitMM::PageContent {}
+
+abstract mapping usdMM::TextContainer::textContainerUsd2TextContainerUikit() : uikitMM::TextContainer {
+	textelements += self.textElements -> map constructTextElement();
+}
+
+mapping usdMM::Title::titleUsd2TitleUikit() : uikitMM::Title 
+	inherits usdMM::TextContainer::textContainerUsd2TextContainerUikit{
+	level := self.level;
+}
+
+mapping usdMM::Section::sectionUsd2ContainerUikit() : uikitMM::Container {
+	contents += self.contents -> map constructPageContent();
+}
+
+/**
+* A mapper wich map an usd Paragraph element to uikit Paragraph element.
+*/
+mapping usdMM::Paragraph::paragraphUsd2ParagraphUikit() : uikitMM::Paragraphe 
+	inherits usdMM::TextContainer::textContainerUsd2TextContainerUikit{}
+
+mapping usdMM::PageContent::constructPageContent() : uikitMM::PageContent 
+	disjuncts usdMM::Title::titleUsd2TitleUikit, usdMM::Paragraph::paragraphUsd2ParagraphUikit,
+				usdMM::Section::sectionUsd2ContainerUikit{}
