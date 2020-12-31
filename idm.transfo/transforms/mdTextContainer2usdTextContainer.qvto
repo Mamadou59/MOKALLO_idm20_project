@@ -15,7 +15,6 @@ mapping mdMM::Link::linkMd2NavElementUsd() : usdMM::ListItem
 	elements := object usdMM::Link {
 		url := self.url;
 		title := self.title;
-		subTextElements += self.subtext -> map contructTextElement();
 	} 	
 }
 
@@ -101,9 +100,8 @@ mapping mdMM::Link::linkButtonMd2ButtonUsd() : usdMM::Button
 	inherits mdMM::CompositeTextElement::compositeTextElementMd2CompositeTextElementUsd
 	when {self.isLinkButton() and not self.isNavigationLink()} {
 		type := self.getType();
-}
-
-
+	}
+	
 /**
 * Mapper from markdown Link element to usd Navigation element 
 */	
@@ -142,8 +140,8 @@ mapping mdMM::Image::imageMd2ImageUsd() : usdMM::Image
 * codeMd2CodeUsd, linkMd2LinkUsd, imageMd2ImageUsd and linkWithRefMd2LinkUsd.
 */
 mapping mdMM::TextElement::contructTextElement() : usdMM::TextElement
-	disjuncts  mdMM::Text::textMd2TextUsd, mdMM::StrongEmphasis::strongEmphasisMd2StrongEmphasisUsd,
-				mdMM::Emphasis::emphasisMd2ItalicEmphasisUsd, mdMM::Code::codeMd2CodeUsd,
+	disjuncts   mdMM::Code::codeMd2CodeUsd, mdMM::Text::textMd2TextUsd, mdMM::StrongEmphasis::strongEmphasisMd2StrongEmphasisUsd,
+				mdMM::Emphasis::emphasisMd2ItalicEmphasisUsd,
 				mdMM::Link::linkMd2LinkUsd, mdMM::Image::imageMd2ImageUsd,
 				mdMM::LinkWithRef::linkWithRefMd2LinkUsd, mdMM::Link::linkButtonMd2ButtonUsd,
 				mdMM::Link::linkMd2NavigationUsd{}
