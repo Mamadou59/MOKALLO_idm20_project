@@ -52,7 +52,7 @@ abstract mapping usdMM::TextContainer::textContainerUsd2TextContainerBstrap() : 
 
 
 /**
-* A mapper wich map an usd Title element to bstrap Title element.
+* A mapper which map an usd Title element to bstrap Title element.
 */
 mapping usdMM::Title::titleUsd2TitleBstrap() : bstrapMM::Title 
 	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap{

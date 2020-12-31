@@ -9,6 +9,7 @@ transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
 
 /**
 * A mapper which map an usd Text element to bstrap Text element.
+* when text isn't property line.
 */
 mapping usdMM::Text::textUsd2TextBstrap() : bstrapMM::Text
 	when {not self.text.isPropertyLine()}{	
@@ -148,12 +149,16 @@ mapping usdMM::Image::imageUsd2ImageBstrap() : bstrapMM::Image
 * With specified properties. 
 */
 mapping usdMM::Button::buttonUsd2ButtonBstrap() : bstrapMM::Button{
+
 	// Adding button bootstrap properties 
 	result.buttonproperties += self.type.parseButtonProperties();
+	
 	var subText := self.subTextElements[usdMM::Text] -> selectOne(t|true);
 	textnestedelements += object bstrapMM::Text {
 		text := subText.text.substringAfter(']');
 	};
+	
+	// Parsing general properties
 	if (subText.text.containsProperties()){
 		var props := subText.text.substringBefore(")")+")";
 		if (props <> null){

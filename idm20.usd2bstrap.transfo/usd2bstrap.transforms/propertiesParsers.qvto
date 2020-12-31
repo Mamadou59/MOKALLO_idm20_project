@@ -83,8 +83,7 @@ mapping String::getDisplay4() : bstrapMM::Display4
 	when {self.find('display:4') > 0}{}
 	
 /**
-* A mapper which map a string properties to specified button properties
-* TODO Don't forgot resolving warning
+* A mapper which map a string properties to specified button properties.
 */
 mapping String::parseButtonProperties() : Set(ButtonProperty) {
 	init {
@@ -263,7 +262,7 @@ helper String::getMargin() : bstrapMM::Margin {
 }
 
 /**
-* helper to get from String contains padding properties to bstrap Padding element, 
+* helper to get from String contains padding properties to bstrap Padding element.
 */
 helper String::getPadding() : bstrapMM::Padding {
 	var paddingProp := object bstrapMM::Padding{
@@ -277,14 +276,14 @@ helper String::getPadding() : bstrapMM::Padding {
 }
 
 /**
-* helper to get from String contains border properties to bstrap Border element, 
+* helper to get from String contains border properties to bstrap Border element. 
 */
 helper String::getBorder() : bstrapMM::Border {
 	return object bstrapMM::Border{}
 }
 
 /**
-* helper to get from String contains colored border properties to bstrap ColoredBorder element, 
+* helper to get from String contains colored border properties to bstrap ColoredBorder element. 
 */
 helper String::getColoredBorder() : bstrapMM::ColoredBorder {
 	var coloredBorderProp := object bstrapMM::ColoredBorder {
@@ -295,7 +294,7 @@ helper String::getColoredBorder() : bstrapMM::ColoredBorder {
 }
 
 /**
-* helper to get from String contains image shape properties to bstrap ImageShape element, 
+* helper to get from String contains image shape properties to bstrap ImageShape element.
 */
 helper String::getImageShape() : bstrapMM::ImageShape {
 	var prop := self.substringAfter("imageShape:").findProperty();
@@ -308,7 +307,7 @@ helper String::getImageShape() : bstrapMM::ImageShape {
 }
 
 /**
-* helper to get from String contains link properties to bstrap LinkBra element, 
+* helper to get from String contains link properties to bstrap LinkBra element.
 */
 helper String::getImageAligning() : bstrapMM::ImageAligning {
 	var prop := self.substringAfter("imageAligning:").findProperty();
@@ -321,7 +320,7 @@ helper String::getImageAligning() : bstrapMM::ImageAligning {
 }
 
 /**
-* helper to check from given String if it contains properties, 
+* helper to check from given String if it contains properties.
 */
 helper String::isPropertyLine() : Boolean {
 	return self.startsWith("properties:(");
@@ -335,7 +334,7 @@ helper usdMM::ListItem::isListProperties() : Boolean {
 }
 
 /**
-* helper to construct a BasicList property from a given string which contains property, 
+* helper to construct a BasicList property from a given string which contains property.
 */
 helper String::getBasicList() : bstrapMM::ListProperty {
 	var prop := self.toLower();
@@ -347,7 +346,7 @@ helper String::getBasicList() : bstrapMM::ListProperty {
 }
 
 /**
-* helper to construct a Table property from a given string which contains property, 
+* helper to construct a Table property from a given string which contains property.
 */
 helper String::getTabProperty() : bstrapMM::TableProperty {
 	var prop := self.toLower();
@@ -362,7 +361,7 @@ helper String::getTabProperty() : bstrapMM::TableProperty {
 }
 
 /**
-* helper to get usd Text element which contains properties, 
+* helper to get usd Text element which contains properties.
 */
 helper usdMM::Section::getPropertyTextElement() : usdMM::Text {
 	return  self.contents[usdMM::Paragraph].textElements[usdMM::Text] -> 
@@ -370,7 +369,7 @@ helper usdMM::Section::getPropertyTextElement() : usdMM::Text {
 }
 
 /**
-* helper to check if section contains fixcontainer property, 
+* helper to check if section contains fixcontainer property.
 */
 helper usdMM::Section::isFixContainer() : Boolean {
 	var text := self.getPropertyTextElement();
@@ -378,7 +377,7 @@ helper usdMM::Section::isFixContainer() : Boolean {
 }
 
 /**
-* helper to check if section contains fluidcontainer property, 
+* helper to check if section contains fluidcontainer property. 
 */
 helper usdMM::Section::isFluidContainer() : Boolean {
 	var text := self.getPropertyTextElement();
@@ -386,7 +385,7 @@ helper usdMM::Section::isFluidContainer() : Boolean {
 }
 
 /**
-* helper to check if in the given Paragraph usd element whe can find at least one element to be displayed in this paragraph, 
+* helper to check if in the given Paragraph usd element whe can find at least one element to be displayed in this paragraph.
 */
 helper usdMM::Paragraph::isThereElementToBeDisplayed() : Boolean {
 	var textElementsWithProps := self.textElements[usdMM::Text] -> selectOne(t | t.text.isPropertyLine() or t.text.toLower().trim().=("start section"));
