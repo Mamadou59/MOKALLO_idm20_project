@@ -13,13 +13,19 @@
     <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
     <listelement xsi:type="bstrap:UnOrderedList">
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text"/>
+        </listitemelements>
       </listitems>
     </listelement>
     <links>
@@ -30,13 +36,19 @@
   <pagecontents xsi:type="bstrap:Navigation">
     <listelement xsi:type="bstrap:UnOrderedList">
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text"/>
+        </listitemelements>
       </listitems>
     </listelement>
     <navbar xsi:type="bstrap:Brand"/>
@@ -52,7 +64,7 @@
     <textelements xsi:type="bstrap:Text" text="Collapsible Navbar"/>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="."/>
+    <textelements xsi:type="bstrap:Text" text="In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window)."/>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
     <textelements xsi:type="bstrap:Text" text="Only when the button is clicked, the navigation bar will be displayed."/>

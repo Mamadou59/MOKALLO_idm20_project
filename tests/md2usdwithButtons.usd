@@ -7,6 +7,9 @@
     <textElements xsi:type="usd:Button" type="btn">
       <subTextElements xsi:type="usd:Text" text="(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)[btn]Primary"/>
     </textElements>
+    <textElements xsi:type="usd:Link" url="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" title="">
+      <subTextElements xsi:type="usd:Text" text="[btn-info]Doc bootstrap"/>
+    </textElements>
     <textElements xsi:type="usd:Button" type="btn-primary">
       <subTextElements xsi:type="usd:Text" text="[btn-primary]Primary"/>
     </textElements>
@@ -39,11 +42,11 @@
     <textElements xsi:type="usd:Text" text="Buttton Size"/>
   </contents>
   <contents xsi:type="usd:Paragraph">
-    <textElements xsi:type="usd:Button" type="btn-primary btn-lg">
-      <subTextElements xsi:type="usd:Text" text="[btn-primary btn-lg]Large"/>
+    <textElements xsi:type="usd:Button" type="btn-primary btn-lg spinner">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary btn-lg spinner]Large"/>
     </textElements>
-    <textElements xsi:type="usd:Button" type="btn-primary btn-md">
-      <subTextElements xsi:type="usd:Text" text="[btn-primary btn-md]Default"/>
+    <textElements xsi:type="usd:Button" type="btn-primary btn-md outline-primary">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary btn-md outline-primary]Default"/>
     </textElements>
     <textElements xsi:type="usd:Button" type="btn-primary btn-sm">
       <subTextElements xsi:type="usd:Text" text="[btn-primary btn-sm]Small"/>
