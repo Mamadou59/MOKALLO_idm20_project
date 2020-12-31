@@ -1453,6 +1453,52 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.ButtonOutLine} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ButtonOutLineItemProvider buttonOutLineItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.ButtonOutLine}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createButtonOutLineAdapter() {
+		if (buttonOutLineItemProvider == null) {
+			buttonOutLineItemProvider = new ButtonOutLineItemProvider(this);
+		}
+
+		return buttonOutLineItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.ButtonSpinner} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ButtonSpinnerItemProvider buttonSpinnerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.ButtonSpinner}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createButtonSpinnerAdapter() {
+		if (buttonSpinnerItemProvider == null) {
+			buttonSpinnerItemProvider = new ButtonSpinnerItemProvider(this);
+		}
+
+		return buttonSpinnerItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1671,6 +1717,10 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 			codeLineItemProvider.dispose();
 		if (horizontalLineItemProvider != null)
 			horizontalLineItemProvider.dispose();
+		if (buttonOutLineItemProvider != null)
+			buttonOutLineItemProvider.dispose();
+		if (buttonSpinnerItemProvider != null)
+			buttonSpinnerItemProvider.dispose();
 	}
 
 }

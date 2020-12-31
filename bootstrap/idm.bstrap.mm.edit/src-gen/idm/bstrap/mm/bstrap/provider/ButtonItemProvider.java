@@ -169,6 +169,12 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
 				BstrapFactory.eINSTANCE.createActive()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
+				BstrapFactory.eINSTANCE.createButtonOutLine()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
+				BstrapFactory.eINSTANCE.createButtonSpinner()));
 	}
 
 }
