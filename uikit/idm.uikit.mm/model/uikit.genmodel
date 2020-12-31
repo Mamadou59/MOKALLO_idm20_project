@@ -10,6 +10,27 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Uikit" basePackage="idm.uikit.mm" disposableProviderFactory="true"
       ecorePackage="uikit.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="uikit.ecore#//Color">
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Color/MUTED"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Color/EMPHASIS"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Color/PRIMARY"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Color/SECONDARY"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Color/SUCCESS"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Color/WARNING"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Color/DANGER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="uikit.ecore#//Size">
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Size/DEFAULT"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Size/SMALL"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Size/LARGE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="uikit.ecore#//Align">
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Align/LEFT"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Align/RIGHT"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Align/TOP"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Align/BOTTOM"/>
+      <genEnumLiterals ecoreEnumLiteral="uikit.ecore#//Align/CENTER"/>
+    </genEnums>
     <genClasses ecoreClass="uikit.ecore#//Page">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//Page/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//Page/pagecontents"/>
@@ -47,5 +68,28 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//TextNested/testnestedelements"/>
     </genClasses>
     <genClasses ecoreClass="uikit.ecore#//TextNestedElement"/>
+    <genClasses ecoreClass="uikit.ecore#//Property"/>
+    <genClasses ecoreClass="uikit.ecore#//GeneralProperty"/>
+    <genClasses ecoreClass="uikit.ecore#//SpecificProperty"/>
+    <genClasses ecoreClass="uikit.ecore#//MargesProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//MargesProperty/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//MargesProperty/align"/>
+    </genClasses>
+    <genClasses ecoreClass="uikit.ecore#//Margin"/>
+    <genClasses ecoreClass="uikit.ecore#//Padding"/>
+    <genClasses ecoreClass="uikit.ecore#//BackgroundProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//BackgroundProperty/color"/>
+    </genClasses>
+    <genClasses ecoreClass="uikit.ecore#//ButtonProperty"/>
+    <genClasses ecoreClass="uikit.ecore#//ButtonBasic"/>
+    <genClasses ecoreClass="uikit.ecore#//ButtonStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//ButtonStyle/color"/>
+    </genClasses>
+    <genClasses ecoreClass="uikit.ecore#//MuteLink"/>
+    <genClasses ecoreClass="uikit.ecore#//LinkProperty"/>
+    <genClasses ecoreClass="uikit.ecore#//ButtonSIze"/>
+    <genClasses ecoreClass="uikit.ecore#//ImageProperty"/>
+    <genClasses ecoreClass="uikit.ecore#//TextModifier"/>
+    <genClasses ecoreClass="uikit.ecore#//HeadingModifier"/>
   </genPackages>
 </genmodel:GenModel>

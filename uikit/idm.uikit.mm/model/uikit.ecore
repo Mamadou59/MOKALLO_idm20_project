@@ -44,4 +44,49 @@
         eType="#//TextNestedElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TextNestedElement" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GeneralProperty" abstract="true" eSuperTypes="#//Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SpecificProperty" abstract="true" eSuperTypes="#//Property"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MargesProperty" abstract="true" eSuperTypes="#//GeneralProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="#//Size"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="align" eType="#//Align"
+        defaultValueLiteral="CENTER"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Margin" eSuperTypes="#//MargesProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Padding" eSuperTypes="#//MargesProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BackgroundProperty" eSuperTypes="#//GeneralProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonProperty" abstract="true" eSuperTypes="#//SpecificProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonBasic" eSuperTypes="#//ButtonProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonStyle" eSuperTypes="#//ButtonProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MuteLink" eSuperTypes="#//LinkProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LinkProperty" abstract="true" eSuperTypes="#//SpecificProperty"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="Color">
+    <eLiterals name="MUTED"/>
+    <eLiterals name="EMPHASIS" value="1"/>
+    <eLiterals name="PRIMARY" value="2"/>
+    <eLiterals name="SECONDARY" value="3"/>
+    <eLiterals name="SUCCESS" value="4"/>
+    <eLiterals name="WARNING" value="5"/>
+    <eLiterals name="DANGER" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Size">
+    <eLiterals name="DEFAULT"/>
+    <eLiterals name="SMALL" value="1"/>
+    <eLiterals name="LARGE" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Align">
+    <eLiterals name="LEFT"/>
+    <eLiterals name="RIGHT" value="1"/>
+    <eLiterals name="TOP" value="2"/>
+    <eLiterals name="BOTTOM" value="3"/>
+    <eLiterals name="CENTER" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ButtonSIze" eSuperTypes="#//ButtonProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ImageProperty" eSuperTypes="#//SpecificProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TextModifier" eSuperTypes="#//LinkProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HeadingModifier" eSuperTypes="#//LinkProperty"/>
 </ecore:EPackage>
