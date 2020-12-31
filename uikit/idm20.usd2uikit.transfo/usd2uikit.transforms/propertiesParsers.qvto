@@ -1,0 +1,186 @@
+import queries;
+	
+
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+modeltype uikitMM "strict" uses "http://www.example.org/uikit";
+
+transformation usd2bstrap(in usd : usdMM, out uikit : uikitMM);
+
+//Start parsing Emphasis properties 
+
+/**
+* helper to check from given String if it contains properties, 
+*/
+helper String::isPropertyLine() : Boolean {
+	return self.startsWith("properties") and (self.find("(") > 0 and self.find(")") > 0 and self.find(":") > 0);
+}
+
+/**
+* helper to get from String contains color properties to uikit Color element, 
+*/
+helper String::findColor() : uikitMM::Color {
+	var prop := self.substringAfter('color:').findProperty();
+	return 	prop.getColor();
+}
+
+/**
+* helper to get from String contains color properties to uikit Color element, 
+*/
+helper String::getColor() : uikitMM::Color{
+	var prop := self.toLower().trim();
+	var color := Color::MUTED;
+	switch {
+		case (prop.find('primary') > 0) color := Color::PRIMARY;
+		case (prop.find('secondary') > 0) color := Color::SECONDARY;
+		case (prop.find('danger') > 0) color := Color::DANGER;
+		case (prop.find('success') > 0) color := Color::SUCCESS;
+		case (prop.find('emphasis') > 0) color := Color::EMPHASIS;
+		case (prop.find('warning') > 0) color := Color::WARNING;
+	};
+	return color;
+}
+
+/**
+* helper to get from String contains background properties to uikit BackgroundProperty element, 
+*/
+helper String::backGroundWrapper() : uikitMM::BackgroundProperty {
+	var prop := self.substringAfter('background:').findProperty();
+	if(prop <> null){
+		return prop.getBackground();
+	};
+	return null;
+}
+
+/**
+* helper to get from String contains margin properties to uikit Margin property element, 
+*/
+helper String::marginWrapper() : uikitMM::Margin {
+	var prop := self.substringAfter('margin:').substringBefore('}').substringAfter('{');
+	if(prop <> null){
+		return prop.getMargin();
+	};
+	return null;
+}
+
+/**
+* helper to get from String contains padding properties to uikit Padding property element, 
+*/
+helper String::paddingWrapper() : uikitMM::Padding {
+	var prop := self.substringAfter('padding:').substringBefore('}').substringAfter('{');
+	if(prop <> null){
+		return prop.getPadding();
+	};
+	return null;
+}
+
+/**
+* helper to get from String contains background properties to uikit BackgroundProperty element, 
+*/
+helper String::getBackground() : uikitMM::BackgroundProperty {
+	
+	var background := object BackgroundProperty {
+		if(self <> null){
+			color := self.getColor();
+		}else {
+			color :=  uikitMM::Color::MUTED;
+		}
+	};
+	return background;
+}
+
+/**
+* helper to get from String contains margin properties to uikit Margin property element, 
+*/
+helper String::getMargin() : uikitMM::Margin {
+	var marginProp := object uikitMM::Margin{
+		size := self.getSize();
+		if (self.find('alignment:') > 0 ){
+			var prop := self.substringAfter('alignment:').findProperty();
+			align := prop.getAlignment();	
+		}
+	};
+	return marginProp;
+}
+
+/**
+* helper to get from String contains margin properties to uikit Margin property element, 
+*/
+helper String::getPadding() : uikitMM::Padding {
+	var marginProp := object uikitMM::Padding{
+		size := self.getSize();
+		if (self.find('alignment:') > 0 ){
+			var prop := self.substringAfter('alignment:').findProperty();
+			align := prop.getAlignment();	
+		}
+	};
+	return marginProp;
+}
+
+/**
+* Helper to get from String contains size property to uikit Size property element
+*/
+helper String::getSize() : uikitMM::Size {
+	var size := uikitMM::Size::DEFAULT;
+	var props := self.toLower().trim();
+	if (props.find("size") > 0){
+		var prop := props.substringAfter("size:").findProperty();
+		switch {
+			case(props.find("default") > 0 or props.find("md") > 0 ) size := uikitMM::Size::DEFAULT;
+			case(props.find("small") > 0 or props.find("sm") > 0) size := uikitMM::Size::SMALL;
+			case(props.find("large") > 0 or props.find("lg") > 0) size := uikitMM::Size::LARGE;
+		}
+	};
+	return size;
+}
+
+/**
+* helper to get from String contains alignment properties to uikit Align element, 
+*/
+helper String::getAlignment() : uikitMM::Align {
+	var prop := self.toLower().trim();
+	var alignment := Align::CENTER;
+	switch {
+		case (prop.=('left')) alignment := Align::LEFT;
+		case (prop.=('right')) alignment := Align::RIGHT;
+		case (prop.=('top')) alignment := Align::TOP;
+		case (prop.=('bottom')) alignment := Align::BOTTOM;
+	};
+	return alignment;
+}
+
+/**
+* helper to get from String contains link  properties to uikit LinkProperty element, 
+*/
+helper String::getLinkProperty() : uikitMM::LinkProperty {
+	var prop := self.findProperty().toLower();
+	switch {
+		case(prop.find("mutelink") > 0) return object uikitMM::MuteLink{};
+		case(prop.find("headingmodifier") > 0) return object uikitMM::HeadingModifier{};
+		case(prop.find("textmodifier") > 0) return object uikitMM::TextModifier{};
+	};
+	return null;
+}
+
+/**
+* helper to check if given Text element will be displayed
+*/
+helper usdMM::Text::toDisplay() : Boolean {
+	return not self.text.startsWith("properties:");
+}
+
+/**
+* helper to check if given Text element is in Title or link or italic or strong
+*/
+helper usdMM::Text::inTitleOrLinkOrEphasisElement() : Boolean {
+	return self.container().oclIsTypeOf(usdMM::Title) or 
+			self.container().oclIsTypeOf(usdMM::Link) or 
+			self.container().oclIsTypeOf(usdMM::ItalicEmphasis)or 
+			self.container().oclIsTypeOf(usdMM::StrongEmphasis);
+}
+
+/**
+* helper to check if string contains some properties
+*/
+helper String::containsProperties() : Boolean {
+	return (self.startsWith('(') and self.find(":") > 0) or self.startsWith("properties:");
+}
