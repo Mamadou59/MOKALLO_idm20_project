@@ -7,6 +7,9 @@
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)[btn]Primary"/>
     </elements>
+    <elements xsi:type="simplemarkdown:Link" url="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" title="">
+      <subtext xsi:type="simplemarkdown:Text" text="[btn-info]Doc bootstrap"/>
+    </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="[btn-primary]Primary"/>
     </elements>
@@ -40,10 +43,10 @@
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-primary btn-lg]Large"/>
+      <subtext xsi:type="simplemarkdown:Text" text="[btn-primary btn-lg spinner]Large"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-primary btn-md]Default"/>
+      <subtext xsi:type="simplemarkdown:Text" text="[btn-primary btn-md outline-primary]Default"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="[btn-primary btn-sm]Small"/>

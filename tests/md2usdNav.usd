@@ -8,26 +8,38 @@
   <contents xsi:type="usd:Navigation" type="navbar-brand" textContent="(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})Navbar brand">
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 2"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 1"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 3"/>
+        </elements>
       </items>
     </groupedItems>
   </contents>
   <contents xsi:type="usd:Navigation" type="navbar-brand" textContent="Navbar brand2">
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 1"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 3"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 2"/>
+        </elements>
       </items>
     </groupedItems>
   </contents>
@@ -49,6 +61,7 @@
   <contents xsi:type="usd:Paragraph">
     <textElements xsi:type="usd:Button" type="btn-info">
       <subTextElements xsi:type="usd:Text" text="[btn-info]Doc bootstrap"/>
+      <subTextElements xsi:type="usd:Link" url="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp"/>
     </textElements>
   </contents>
 </usd:Page>

@@ -11,6 +11,10 @@
       <generalProperties xsi:type="bstrap:Border"/>
       <textnestedelements xsi:type="bstrap:Text" text="Primary"/>
     </textelements>
+    <textelements xsi:type="bstrap:Link" url="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" title="">
+      <textnestedelements xsi:type="bstrap:Text" text="Doc bootstrap"/>
+      <buttonproperties xsi:type="bstrap:ButtonLink"/>
+    </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Primary"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
@@ -37,15 +41,15 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Dark"/>
-      <buttonproperties xsi:type="bstrap:ButtonStyle"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="DARK"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Light"/>
-      <buttonproperties xsi:type="bstrap:ButtonStyle" color="WHITE"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Link"/>
-      <buttonproperties xsi:type="bstrap:ButtonLink"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="DARK"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="2">
@@ -54,9 +58,13 @@
   <pagecontents xsi:type="bstrap:Paragraphe">
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Large"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:ButtonSpinner"/>
+      <buttonproperties xsi:type="bstrap:ButtonSize" size="LARGE"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Default"/>
+      <buttonproperties xsi:type="bstrap:ButtonOutLine" color="PRIMARY"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
@@ -71,13 +79,13 @@
   <pagecontents xsi:type="bstrap:Paragraphe">
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Primary Button"/>
-      <buttonproperties xsi:type="bstrap:ButtonSize" size="LARGE"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:ButtonSize" size="LARGE"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Active Primary"/>
-      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
       <buttonproperties xsi:type="bstrap:Active"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>

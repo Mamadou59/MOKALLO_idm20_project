@@ -83,51 +83,15 @@ mapping String::getDisplay4() : bstrapMM::Display4
 	when {self.find('display:4') > 0}{}
 	
 /**
-* A mapper which map a string properties to specified button properties
-* TODO Don't forgot resolving warning
+* A mapper which map a string properties to specified button properties.
 */
 mapping String::parseButtonProperties() : Set(ButtonProperty) {
 	init {
 		result := Set{};
 		
-		if (self.find('btn-primary') > 0){
+		if (self.find('btn-') > 0){
 			result += object ButtonStyle {
-				color := Color::PRIMARY;
-			};
-		}
-		else if (self.find("btn-info") > 0){
-			result += object ButtonStyle {
-				color := Color::INFO;
-			};
-		}
-		else if (self.find("btn-dark") > 0){
-			result += object ButtonStyle {
-				color := Color::DARK;
-			};
-		}
-		else if (self.find("btn-secondary") > 0){
-			result += object ButtonStyle {
-				color := Color::SECONDARY;
-			};
-		}
-		else if (self.find("btn-success") > 0){
-			result += object ButtonStyle {
-				color := Color::SUCCESS;
-			};
-		}
-		else if (self.find("btn-light") > 0 or self.find("btn-white") > 0){
-			result += object ButtonStyle {
-				color := Color::WHITE;
-			};
-		}
-		else if (self.find("btn-danger") > 0){
-			result += object ButtonStyle {
-				color := Color::DANGER;
-			};
-		}
-		else if (self.find("btn-warning") > 0){
-			result += object ButtonStyle {
-				color := Color::WARNING;
+				color := color := self.substringAfter("btn-").getColor();
 			};
 		}
 		else if (self.find("btn-link") > 0){
@@ -150,7 +114,15 @@ mapping String::parseButtonProperties() : Set(ButtonProperty) {
 			result += object ButtonSize{
 				size := Size::LARGE;
 			};
-		}	
+		};
+		if (self.find("spinner") > 0) {
+			result += object ButtonSpinner {};
+		};
+		if (self.find("outline") > 0) {
+			result += object ButtonOutLine {
+				color := self.substringAfter("outline-").getColor();
+			};
+		}
 	}
 }
 
@@ -183,7 +155,7 @@ mapping String::parseNavProperties() : Set(NavBarProperty) {
 * helper to get from String contains background properties to bstrap Background element, 
 */
 helper String::backGroundWrapper() : bstrapMM::Background {
-	var prop := self.substringAfter('background:').substringBefore(',');
+	var prop := self.substringAfter('background:').findProperty();
 	if(prop <> null){
 		return prop.getBackground();
 	};
@@ -237,7 +209,7 @@ helper String::containsProperties() : Boolean {
 * helper to get from String contains color properties to bstrap Color element, 
 */
 helper String::findColor() : bstrapMM::Color {
-	var prop := self.substringAfter('color:').substringBefore(',');
+	var prop := self.substringAfter('color:').findProperty();
 	return 	prop.getColor();
 }
 
@@ -248,13 +220,14 @@ helper String::getColor() : bstrapMM::Color{
 	var prop := self.toLower().trim();
 	var color := Color::DARK;
 	switch {
-		case (prop.=('primary')) color := Color::PRIMARY;
-		case (prop.=('secondary')) color := Color::SECONDARY;
-		case (prop.=('danger')) color := Color::DANGER;
-		case (prop.=('success')) color := Color::SUCCESS;
-		case (prop.=('info')) color := Color::INFO;
-		case (prop.=('white')) color := Color::WHITE;
-		case (prop.=('warning')) color := Color::WARNING;
+		case (prop.find('primary') > 0) color := Color::PRIMARY;
+		case (prop.find('secondary') > 0) color := Color::SECONDARY;
+		case (prop.find('danger') > 0) color := Color::DANGER;
+		case (prop.find('success') > 0) color := Color::SUCCESS;
+		case (prop.find('info') > 0) color := Color::INFO;
+		case (prop.find('white') > 0) color := Color::WHITE;
+		case (prop.find('warning') > 0) color := Color::WARNING;
+		case (prop.find('light') > 0) color := Color::LIGHT;
 	};
 	return color;
 }
@@ -289,7 +262,7 @@ helper String::getMargin() : bstrapMM::Margin {
 }
 
 /**
-* helper to get from String contains padding properties to bstrap Padding element, 
+* helper to get from String contains padding properties to bstrap Padding element.
 */
 helper String::getPadding() : bstrapMM::Padding {
 	var paddingProp := object bstrapMM::Padding{
@@ -303,14 +276,14 @@ helper String::getPadding() : bstrapMM::Padding {
 }
 
 /**
-* helper to get from String contains border properties to bstrap Border element, 
+* helper to get from String contains border properties to bstrap Border element. 
 */
 helper String::getBorder() : bstrapMM::Border {
 	return object bstrapMM::Border{}
 }
 
 /**
-* helper to get from String contains colored border properties to bstrap ColoredBorder element, 
+* helper to get from String contains colored border properties to bstrap ColoredBorder element. 
 */
 helper String::getColoredBorder() : bstrapMM::ColoredBorder {
 	var coloredBorderProp := object bstrapMM::ColoredBorder {
@@ -321,7 +294,7 @@ helper String::getColoredBorder() : bstrapMM::ColoredBorder {
 }
 
 /**
-* helper to get from String contains image shape properties to bstrap ImageShape element, 
+* helper to get from String contains image shape properties to bstrap ImageShape element.
 */
 helper String::getImageShape() : bstrapMM::ImageShape {
 	var prop := self.substringAfter("imageShape:").findProperty();
@@ -334,7 +307,7 @@ helper String::getImageShape() : bstrapMM::ImageShape {
 }
 
 /**
-* helper to get from String contains link properties to bstrap LinkBra element, 
+* helper to get from String contains link properties to bstrap LinkBra element.
 */
 helper String::getImageAligning() : bstrapMM::ImageAligning {
 	var prop := self.substringAfter("imageAligning:").findProperty();
@@ -347,7 +320,7 @@ helper String::getImageAligning() : bstrapMM::ImageAligning {
 }
 
 /**
-* helper to check from given String if it contains properties, 
+* helper to check from given String if it contains properties.
 */
 helper String::isPropertyLine() : Boolean {
 	return self.startsWith("properties:(");
@@ -361,7 +334,7 @@ helper usdMM::ListItem::isListProperties() : Boolean {
 }
 
 /**
-* helper to construct a BasicList property from a given string which contains property, 
+* helper to construct a BasicList property from a given string which contains property.
 */
 helper String::getBasicList() : bstrapMM::ListProperty {
 	var prop := self.toLower();
@@ -373,7 +346,7 @@ helper String::getBasicList() : bstrapMM::ListProperty {
 }
 
 /**
-* helper to construct a Table property from a given string which contains property, 
+* helper to construct a Table property from a given string which contains property.
 */
 helper String::getTabProperty() : bstrapMM::TableProperty {
 	var prop := self.toLower();
@@ -388,7 +361,7 @@ helper String::getTabProperty() : bstrapMM::TableProperty {
 }
 
 /**
-* helper to get usd Text element which contains properties, 
+* helper to get usd Text element which contains properties.
 */
 helper usdMM::Section::getPropertyTextElement() : usdMM::Text {
 	return  self.contents[usdMM::Paragraph].textElements[usdMM::Text] -> 
@@ -396,7 +369,7 @@ helper usdMM::Section::getPropertyTextElement() : usdMM::Text {
 }
 
 /**
-* helper to check if section contains fixcontainer property, 
+* helper to check if section contains fixcontainer property.
 */
 helper usdMM::Section::isFixContainer() : Boolean {
 	var text := self.getPropertyTextElement();
@@ -404,7 +377,7 @@ helper usdMM::Section::isFixContainer() : Boolean {
 }
 
 /**
-* helper to check if section contains fluidcontainer property, 
+* helper to check if section contains fluidcontainer property. 
 */
 helper usdMM::Section::isFluidContainer() : Boolean {
 	var text := self.getPropertyTextElement();
@@ -412,11 +385,19 @@ helper usdMM::Section::isFluidContainer() : Boolean {
 }
 
 /**
-* helper to check if in the given Paragraph usd element whe can find at least one element to be displayed in this paragraph, 
+* helper to check if in the given Paragraph usd element whe can find at least one element to be displayed in this paragraph.
 */
 helper usdMM::Paragraph::isThereElementToBeDisplayed() : Boolean {
-	var textElementsWithProps := self.textElements[usdMM::Text] -> selectOne(t | t.text.isPropertyLine());
-	return (textElementsWithProps -> size() <> self.textElements -> size())	
+	var textElementsWithProps := self.textElements[usdMM::Text] -> selectOne(t | t.text.isPropertyLine() or t.text.toLower().trim().=("start section"));
+	return (textElementsWithProps -> size() <> self.textElements -> size())	;
 }
 
+/**
+* An helper to check if given link is button. 
+*/
+helper usdMM::Link::isLinkButton() : Boolean {
+	var textElem := self.subTextElements[usdMM::Text] -> 
+			selectOne(t | (t.text.startsWith('[') or (t.text.startsWith('(') and t.text.find(":") > 0)) and t.text.find("btn") > 0);
+	return self.url.<>("#") and textElem <> null;	
+}
 
