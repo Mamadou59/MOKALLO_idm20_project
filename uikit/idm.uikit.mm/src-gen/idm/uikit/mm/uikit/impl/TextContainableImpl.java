@@ -3,18 +3,42 @@
 package idm.uikit.mm.uikit.impl;
 
 import idm.uikit.mm.uikit.TextContainable;
+import idm.uikit.mm.uikit.TextNested;
+import idm.uikit.mm.uikit.TextNestedElement;
 import idm.uikit.mm.uikit.UikitPackage;
 
+import java.util.Collection;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Text Containable</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link idm.uikit.mm.uikit.impl.TextContainableImpl#getTextnestedelements <em>Textnestedelements</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public abstract class TextContainableImpl extends ContainableTextElementImpl implements TextContainable {
+	/**
+	 * The cached value of the '{@link #getTextnestedelements() <em>Textnestedelements</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTextnestedelements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<TextNestedElement> textnestedelements;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -32,6 +56,141 @@ public abstract class TextContainableImpl extends ContainableTextElementImpl imp
 	@Override
 	protected EClass eStaticClass() {
 		return UikitPackage.Literals.TEXT_CONTAINABLE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<TextNestedElement> getTextnestedelements() {
+		if (textnestedelements == null) {
+			textnestedelements = new EObjectContainmentEList<TextNestedElement>(TextNestedElement.class, this,
+					UikitPackage.TEXT_CONTAINABLE__TEXTNESTEDELEMENTS);
+		}
+		return textnestedelements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case UikitPackage.TEXT_CONTAINABLE__TEXTNESTEDELEMENTS:
+			return ((InternalEList<?>) getTextnestedelements()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+		case UikitPackage.TEXT_CONTAINABLE__TEXTNESTEDELEMENTS:
+			return getTextnestedelements();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+		case UikitPackage.TEXT_CONTAINABLE__TEXTNESTEDELEMENTS:
+			getTextnestedelements().clear();
+			getTextnestedelements().addAll((Collection<? extends TextNestedElement>) newValue);
+			return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+		case UikitPackage.TEXT_CONTAINABLE__TEXTNESTEDELEMENTS:
+			getTextnestedelements().clear();
+			return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+		case UikitPackage.TEXT_CONTAINABLE__TEXTNESTEDELEMENTS:
+			return textnestedelements != null && !textnestedelements.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == TextNestedElement.class) {
+			switch (derivedFeatureID) {
+			default:
+				return -1;
+			}
+		}
+		if (baseClass == TextNested.class) {
+			switch (derivedFeatureID) {
+			case UikitPackage.TEXT_CONTAINABLE__TEXTNESTEDELEMENTS:
+				return UikitPackage.TEXT_NESTED__TEXTNESTEDELEMENTS;
+			default:
+				return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == TextNestedElement.class) {
+			switch (baseFeatureID) {
+			default:
+				return -1;
+			}
+		}
+		if (baseClass == TextNested.class) {
+			switch (baseFeatureID) {
+			case UikitPackage.TEXT_NESTED__TEXTNESTEDELEMENTS:
+				return UikitPackage.TEXT_CONTAINABLE__TEXTNESTEDELEMENTS;
+			default:
+				return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 } //TextContainableImpl

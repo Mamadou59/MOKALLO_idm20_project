@@ -5,6 +5,7 @@ package idm.uikit.mm.uikit.impl;
 import idm.uikit.mm.uikit.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -77,8 +78,68 @@ public class UikitFactoryImpl extends EFactoryImpl implements UikitFactory {
 			return createText();
 		case UikitPackage.CODE:
 			return createCode();
+		case UikitPackage.MARGIN:
+			return createMargin();
+		case UikitPackage.PADDING:
+			return createPadding();
+		case UikitPackage.BACKGROUND_PROPERTY:
+			return createBackgroundProperty();
+		case UikitPackage.BUTTON_BASIC:
+			return createButtonBasic();
+		case UikitPackage.BUTTON_STYLE:
+			return createButtonStyle();
+		case UikitPackage.MUTE_LINK:
+			return createMuteLink();
+		case UikitPackage.BUTTON_SIZE:
+			return createButtonSIze();
+		case UikitPackage.IMAGE_PROPERTY:
+			return createImageProperty();
+		case UikitPackage.TEXT_MODIFIER:
+			return createTextModifier();
+		case UikitPackage.HEADING_MODIFIER:
+			return createHeadingModifier();
+		case UikitPackage.TITLE_PROPERTY:
+			return createTitleProperty();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+		case UikitPackage.COLOR:
+			return createColorFromString(eDataType, initialValue);
+		case UikitPackage.SIZE:
+			return createSizeFromString(eDataType, initialValue);
+		case UikitPackage.ALIGN:
+			return createAlignFromString(eDataType, initialValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+		case UikitPackage.COLOR:
+			return convertColorToString(eDataType, instanceValue);
+		case UikitPackage.SIZE:
+			return convertSizeToString(eDataType, instanceValue);
+		case UikitPackage.ALIGN:
+			return convertAlignToString(eDataType, instanceValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -190,6 +251,182 @@ public class UikitFactoryImpl extends EFactoryImpl implements UikitFactory {
 	public Code createCode() {
 		CodeImpl code = new CodeImpl();
 		return code;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Margin createMargin() {
+		MarginImpl margin = new MarginImpl();
+		return margin;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Padding createPadding() {
+		PaddingImpl padding = new PaddingImpl();
+		return padding;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BackgroundProperty createBackgroundProperty() {
+		BackgroundPropertyImpl backgroundProperty = new BackgroundPropertyImpl();
+		return backgroundProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ButtonBasic createButtonBasic() {
+		ButtonBasicImpl buttonBasic = new ButtonBasicImpl();
+		return buttonBasic;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ButtonStyle createButtonStyle() {
+		ButtonStyleImpl buttonStyle = new ButtonStyleImpl();
+		return buttonStyle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MuteLink createMuteLink() {
+		MuteLinkImpl muteLink = new MuteLinkImpl();
+		return muteLink;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ButtonSIze createButtonSIze() {
+		ButtonSIzeImpl buttonSIze = new ButtonSIzeImpl();
+		return buttonSIze;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ImageProperty createImageProperty() {
+		ImagePropertyImpl imageProperty = new ImagePropertyImpl();
+		return imageProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TextModifier createTextModifier() {
+		TextModifierImpl textModifier = new TextModifierImpl();
+		return textModifier;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public HeadingModifier createHeadingModifier() {
+		HeadingModifierImpl headingModifier = new HeadingModifierImpl();
+		return headingModifier;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TitleProperty createTitleProperty() {
+		TitlePropertyImpl titleProperty = new TitlePropertyImpl();
+		return titleProperty;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Color createColorFromString(EDataType eDataType, String initialValue) {
+		Color result = Color.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertColorToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Size createSizeFromString(EDataType eDataType, String initialValue) {
+		Size result = Size.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertSizeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Align createAlignFromString(EDataType eDataType, String initialValue) {
+		Align result = Align.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertAlignToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

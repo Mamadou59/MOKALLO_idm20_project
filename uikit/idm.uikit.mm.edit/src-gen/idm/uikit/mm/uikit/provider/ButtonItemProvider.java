@@ -61,7 +61,8 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(UikitPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS);
+			childrenFeatures.add(UikitPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS);
+			childrenFeatures.add(UikitPackage.Literals.BUTTON__BUTTONPROPERTIES);
 		}
 		return childrenFeatures;
 	}
@@ -123,7 +124,8 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Button.class)) {
-		case UikitPackage.BUTTON__TESTNESTEDELEMENTS:
+		case UikitPackage.BUTTON__TEXTNESTEDELEMENTS:
+		case UikitPackage.BUTTON__BUTTONPROPERTIES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -141,17 +143,26 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				UikitFactory.eINSTANCE.createStrong()));
 
-		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				UikitFactory.eINSTANCE.createItalic()));
 
-		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				UikitFactory.eINSTANCE.createText()));
 
-		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				UikitFactory.eINSTANCE.createCode()));
+
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.BUTTON__BUTTONPROPERTIES,
+				UikitFactory.eINSTANCE.createButtonBasic()));
+
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.BUTTON__BUTTONPROPERTIES,
+				UikitFactory.eINSTANCE.createButtonStyle()));
+
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.BUTTON__BUTTONPROPERTIES,
+				UikitFactory.eINSTANCE.createButtonSIze()));
 	}
 
 }

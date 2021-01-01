@@ -3,6 +3,7 @@
 package idm.uikit.mm.uikit.impl;
 
 import idm.uikit.mm.uikit.Button;
+import idm.uikit.mm.uikit.ButtonProperty;
 import idm.uikit.mm.uikit.TextNested;
 import idm.uikit.mm.uikit.TextNestedElement;
 import idm.uikit.mm.uikit.UikitPackage;
@@ -27,21 +28,32 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link idm.uikit.mm.uikit.impl.ButtonImpl#getTestnestedelements <em>Testnestedelements</em>}</li>
+ *   <li>{@link idm.uikit.mm.uikit.impl.ButtonImpl#getTextnestedelements <em>Textnestedelements</em>}</li>
+ *   <li>{@link idm.uikit.mm.uikit.impl.ButtonImpl#getButtonproperties <em>Buttonproperties</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ButtonImpl extends ContainableTextElementImpl implements Button {
 	/**
-	 * The cached value of the '{@link #getTestnestedelements() <em>Testnestedelements</em>}' containment reference list.
+	 * The cached value of the '{@link #getTextnestedelements() <em>Textnestedelements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTestnestedelements()
+	 * @see #getTextnestedelements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TextNestedElement> testnestedelements;
+	protected EList<TextNestedElement> textnestedelements;
+
+	/**
+	 * The cached value of the '{@link #getButtonproperties() <em>Buttonproperties</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getButtonproperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ButtonProperty> buttonproperties;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,12 +79,25 @@ public class ButtonImpl extends ContainableTextElementImpl implements Button {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TextNestedElement> getTestnestedelements() {
-		if (testnestedelements == null) {
-			testnestedelements = new EObjectContainmentEList<TextNestedElement>(TextNestedElement.class, this,
-					UikitPackage.BUTTON__TESTNESTEDELEMENTS);
+	public EList<TextNestedElement> getTextnestedelements() {
+		if (textnestedelements == null) {
+			textnestedelements = new EObjectContainmentEList<TextNestedElement>(TextNestedElement.class, this,
+					UikitPackage.BUTTON__TEXTNESTEDELEMENTS);
 		}
-		return testnestedelements;
+		return textnestedelements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ButtonProperty> getButtonproperties() {
+		if (buttonproperties == null) {
+			buttonproperties = new EObjectContainmentEList<ButtonProperty>(ButtonProperty.class, this,
+					UikitPackage.BUTTON__BUTTONPROPERTIES);
+		}
+		return buttonproperties;
 	}
 
 	/**
@@ -83,8 +108,10 @@ public class ButtonImpl extends ContainableTextElementImpl implements Button {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case UikitPackage.BUTTON__TESTNESTEDELEMENTS:
-			return ((InternalEList<?>) getTestnestedelements()).basicRemove(otherEnd, msgs);
+		case UikitPackage.BUTTON__TEXTNESTEDELEMENTS:
+			return ((InternalEList<?>) getTextnestedelements()).basicRemove(otherEnd, msgs);
+		case UikitPackage.BUTTON__BUTTONPROPERTIES:
+			return ((InternalEList<?>) getButtonproperties()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -97,8 +124,10 @@ public class ButtonImpl extends ContainableTextElementImpl implements Button {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case UikitPackage.BUTTON__TESTNESTEDELEMENTS:
-			return getTestnestedelements();
+		case UikitPackage.BUTTON__TEXTNESTEDELEMENTS:
+			return getTextnestedelements();
+		case UikitPackage.BUTTON__BUTTONPROPERTIES:
+			return getButtonproperties();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,9 +141,13 @@ public class ButtonImpl extends ContainableTextElementImpl implements Button {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case UikitPackage.BUTTON__TESTNESTEDELEMENTS:
-			getTestnestedelements().clear();
-			getTestnestedelements().addAll((Collection<? extends TextNestedElement>) newValue);
+		case UikitPackage.BUTTON__TEXTNESTEDELEMENTS:
+			getTextnestedelements().clear();
+			getTextnestedelements().addAll((Collection<? extends TextNestedElement>) newValue);
+			return;
+		case UikitPackage.BUTTON__BUTTONPROPERTIES:
+			getButtonproperties().clear();
+			getButtonproperties().addAll((Collection<? extends ButtonProperty>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,8 +161,11 @@ public class ButtonImpl extends ContainableTextElementImpl implements Button {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case UikitPackage.BUTTON__TESTNESTEDELEMENTS:
-			getTestnestedelements().clear();
+		case UikitPackage.BUTTON__TEXTNESTEDELEMENTS:
+			getTextnestedelements().clear();
+			return;
+		case UikitPackage.BUTTON__BUTTONPROPERTIES:
+			getButtonproperties().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -143,8 +179,10 @@ public class ButtonImpl extends ContainableTextElementImpl implements Button {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case UikitPackage.BUTTON__TESTNESTEDELEMENTS:
-			return testnestedelements != null && !testnestedelements.isEmpty();
+		case UikitPackage.BUTTON__TEXTNESTEDELEMENTS:
+			return textnestedelements != null && !textnestedelements.isEmpty();
+		case UikitPackage.BUTTON__BUTTONPROPERTIES:
+			return buttonproperties != null && !buttonproperties.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -158,8 +196,8 @@ public class ButtonImpl extends ContainableTextElementImpl implements Button {
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == TextNested.class) {
 			switch (derivedFeatureID) {
-			case UikitPackage.BUTTON__TESTNESTEDELEMENTS:
-				return UikitPackage.TEXT_NESTED__TESTNESTEDELEMENTS;
+			case UikitPackage.BUTTON__TEXTNESTEDELEMENTS:
+				return UikitPackage.TEXT_NESTED__TEXTNESTEDELEMENTS;
 			default:
 				return -1;
 			}
@@ -176,8 +214,8 @@ public class ButtonImpl extends ContainableTextElementImpl implements Button {
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == TextNested.class) {
 			switch (baseFeatureID) {
-			case UikitPackage.TEXT_NESTED__TESTNESTEDELEMENTS:
-				return UikitPackage.BUTTON__TESTNESTEDELEMENTS;
+			case UikitPackage.TEXT_NESTED__TEXTNESTEDELEMENTS:
+				return UikitPackage.BUTTON__TEXTNESTEDELEMENTS;
 			default:
 				return -1;
 			}

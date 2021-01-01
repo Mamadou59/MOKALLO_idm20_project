@@ -12,5 +12,5 @@ package idm.uikit.mm.uikit;
  * @model abstract="true"
  * @generated
  */
-public interface TextContainable extends ContainableTextElement, TextNestedElement {
+public interface TextContainable extends ContainableTextElement, TextNestedElement, TextNested {
 } // TextContainable

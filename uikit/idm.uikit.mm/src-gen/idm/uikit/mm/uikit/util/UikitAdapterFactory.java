@@ -172,6 +172,91 @@ public class UikitAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseProperty(Property object) {
+			return createPropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseGeneralProperty(GeneralProperty object) {
+			return createGeneralPropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseSpecificProperty(SpecificProperty object) {
+			return createSpecificPropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseMargesProperty(MargesProperty object) {
+			return createMargesPropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseMargin(Margin object) {
+			return createMarginAdapter();
+		}
+
+		@Override
+		public Adapter casePadding(Padding object) {
+			return createPaddingAdapter();
+		}
+
+		@Override
+		public Adapter caseBackgroundProperty(BackgroundProperty object) {
+			return createBackgroundPropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseButtonProperty(ButtonProperty object) {
+			return createButtonPropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseButtonBasic(ButtonBasic object) {
+			return createButtonBasicAdapter();
+		}
+
+		@Override
+		public Adapter caseButtonStyle(ButtonStyle object) {
+			return createButtonStyleAdapter();
+		}
+
+		@Override
+		public Adapter caseMuteLink(MuteLink object) {
+			return createMuteLinkAdapter();
+		}
+
+		@Override
+		public Adapter caseLinkProperty(LinkProperty object) {
+			return createLinkPropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseButtonSIze(ButtonSIze object) {
+			return createButtonSIzeAdapter();
+		}
+
+		@Override
+		public Adapter caseImageProperty(ImageProperty object) {
+			return createImagePropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseTextModifier(TextModifier object) {
+			return createTextModifierAdapter();
+		}
+
+		@Override
+		public Adapter caseHeadingModifier(HeadingModifier object) {
+			return createHeadingModifierAdapter();
+		}
+
+		@Override
+		public Adapter caseTitleProperty(TitleProperty object) {
+			return createTitlePropertyAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -481,6 +566,244 @@ public class UikitAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTextNestedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.Property <em>Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.Property
+	 * @generated
+	 */
+	public Adapter createPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.GeneralProperty <em>General Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.GeneralProperty
+	 * @generated
+	 */
+	public Adapter createGeneralPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.SpecificProperty <em>Specific Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.SpecificProperty
+	 * @generated
+	 */
+	public Adapter createSpecificPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.MargesProperty <em>Marges Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.MargesProperty
+	 * @generated
+	 */
+	public Adapter createMargesPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.Margin <em>Margin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.Margin
+	 * @generated
+	 */
+	public Adapter createMarginAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.Padding <em>Padding</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.Padding
+	 * @generated
+	 */
+	public Adapter createPaddingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.BackgroundProperty <em>Background Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.BackgroundProperty
+	 * @generated
+	 */
+	public Adapter createBackgroundPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.ButtonProperty <em>Button Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.ButtonProperty
+	 * @generated
+	 */
+	public Adapter createButtonPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.ButtonBasic <em>Button Basic</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.ButtonBasic
+	 * @generated
+	 */
+	public Adapter createButtonBasicAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.ButtonStyle <em>Button Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.ButtonStyle
+	 * @generated
+	 */
+	public Adapter createButtonStyleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.MuteLink <em>Mute Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.MuteLink
+	 * @generated
+	 */
+	public Adapter createMuteLinkAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.LinkProperty <em>Link Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.LinkProperty
+	 * @generated
+	 */
+	public Adapter createLinkPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.ButtonSIze <em>Button SIze</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.ButtonSIze
+	 * @generated
+	 */
+	public Adapter createButtonSIzeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.ImageProperty <em>Image Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.ImageProperty
+	 * @generated
+	 */
+	public Adapter createImagePropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.TextModifier <em>Text Modifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.TextModifier
+	 * @generated
+	 */
+	public Adapter createTextModifierAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.HeadingModifier <em>Heading Modifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.HeadingModifier
+	 * @generated
+	 */
+	public Adapter createHeadingModifierAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.uikit.mm.uikit.TitleProperty <em>Title Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.uikit.mm.uikit.TitleProperty
+	 * @generated
+	 */
+	public Adapter createTitlePropertyAdapter() {
 		return null;
 	}
 

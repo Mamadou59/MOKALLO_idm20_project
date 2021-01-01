@@ -326,6 +326,259 @@ public class UikitItemProviderAdapterFactory extends UikitAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.uikit.mm.uikit.Margin} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MarginItemProvider marginItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.uikit.mm.uikit.Margin}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMarginAdapter() {
+		if (marginItemProvider == null) {
+			marginItemProvider = new MarginItemProvider(this);
+		}
+
+		return marginItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.uikit.mm.uikit.Padding} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PaddingItemProvider paddingItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.uikit.mm.uikit.Padding}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPaddingAdapter() {
+		if (paddingItemProvider == null) {
+			paddingItemProvider = new PaddingItemProvider(this);
+		}
+
+		return paddingItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.uikit.mm.uikit.BackgroundProperty} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BackgroundPropertyItemProvider backgroundPropertyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.uikit.mm.uikit.BackgroundProperty}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBackgroundPropertyAdapter() {
+		if (backgroundPropertyItemProvider == null) {
+			backgroundPropertyItemProvider = new BackgroundPropertyItemProvider(this);
+		}
+
+		return backgroundPropertyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.uikit.mm.uikit.ButtonBasic} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ButtonBasicItemProvider buttonBasicItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.uikit.mm.uikit.ButtonBasic}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createButtonBasicAdapter() {
+		if (buttonBasicItemProvider == null) {
+			buttonBasicItemProvider = new ButtonBasicItemProvider(this);
+		}
+
+		return buttonBasicItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.uikit.mm.uikit.ButtonStyle} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ButtonStyleItemProvider buttonStyleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.uikit.mm.uikit.ButtonStyle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createButtonStyleAdapter() {
+		if (buttonStyleItemProvider == null) {
+			buttonStyleItemProvider = new ButtonStyleItemProvider(this);
+		}
+
+		return buttonStyleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.uikit.mm.uikit.MuteLink} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MuteLinkItemProvider muteLinkItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.uikit.mm.uikit.MuteLink}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMuteLinkAdapter() {
+		if (muteLinkItemProvider == null) {
+			muteLinkItemProvider = new MuteLinkItemProvider(this);
+		}
+
+		return muteLinkItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.uikit.mm.uikit.ButtonSIze} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ButtonSIzeItemProvider buttonSIzeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.uikit.mm.uikit.ButtonSIze}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createButtonSIzeAdapter() {
+		if (buttonSIzeItemProvider == null) {
+			buttonSIzeItemProvider = new ButtonSIzeItemProvider(this);
+		}
+
+		return buttonSIzeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.uikit.mm.uikit.ImageProperty} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ImagePropertyItemProvider imagePropertyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.uikit.mm.uikit.ImageProperty}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createImagePropertyAdapter() {
+		if (imagePropertyItemProvider == null) {
+			imagePropertyItemProvider = new ImagePropertyItemProvider(this);
+		}
+
+		return imagePropertyItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.uikit.mm.uikit.TextModifier} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TextModifierItemProvider textModifierItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.uikit.mm.uikit.TextModifier}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTextModifierAdapter() {
+		if (textModifierItemProvider == null) {
+			textModifierItemProvider = new TextModifierItemProvider(this);
+		}
+
+		return textModifierItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.uikit.mm.uikit.HeadingModifier} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HeadingModifierItemProvider headingModifierItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.uikit.mm.uikit.HeadingModifier}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHeadingModifierAdapter() {
+		if (headingModifierItemProvider == null) {
+			headingModifierItemProvider = new HeadingModifierItemProvider(this);
+		}
+
+		return headingModifierItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.uikit.mm.uikit.TitleProperty} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TitlePropertyItemProvider titlePropertyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.uikit.mm.uikit.TitleProperty}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTitlePropertyAdapter() {
+		if (titlePropertyItemProvider == null) {
+			titlePropertyItemProvider = new TitlePropertyItemProvider(this);
+		}
+
+		return titlePropertyItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -446,6 +699,28 @@ public class UikitItemProviderAdapterFactory extends UikitAdapterFactory
 			textItemProvider.dispose();
 		if (codeItemProvider != null)
 			codeItemProvider.dispose();
+		if (marginItemProvider != null)
+			marginItemProvider.dispose();
+		if (paddingItemProvider != null)
+			paddingItemProvider.dispose();
+		if (backgroundPropertyItemProvider != null)
+			backgroundPropertyItemProvider.dispose();
+		if (buttonBasicItemProvider != null)
+			buttonBasicItemProvider.dispose();
+		if (buttonStyleItemProvider != null)
+			buttonStyleItemProvider.dispose();
+		if (muteLinkItemProvider != null)
+			muteLinkItemProvider.dispose();
+		if (buttonSIzeItemProvider != null)
+			buttonSIzeItemProvider.dispose();
+		if (imagePropertyItemProvider != null)
+			imagePropertyItemProvider.dispose();
+		if (textModifierItemProvider != null)
+			textModifierItemProvider.dispose();
+		if (headingModifierItemProvider != null)
+			headingModifierItemProvider.dispose();
+		if (titlePropertyItemProvider != null)
+			titlePropertyItemProvider.dispose();
 	}
 
 }

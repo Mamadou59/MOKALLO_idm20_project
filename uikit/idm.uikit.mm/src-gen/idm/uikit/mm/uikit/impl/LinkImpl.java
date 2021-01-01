@@ -3,6 +3,7 @@
 package idm.uikit.mm.uikit.impl;
 
 import idm.uikit.mm.uikit.Link;
+import idm.uikit.mm.uikit.LinkProperty;
 import idm.uikit.mm.uikit.TextNested;
 import idm.uikit.mm.uikit.TextNestedElement;
 import idm.uikit.mm.uikit.UikitPackage;
@@ -27,21 +28,32 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link idm.uikit.mm.uikit.impl.LinkImpl#getTestnestedelements <em>Testnestedelements</em>}</li>
+ *   <li>{@link idm.uikit.mm.uikit.impl.LinkImpl#getTextnestedelements <em>Textnestedelements</em>}</li>
+ *   <li>{@link idm.uikit.mm.uikit.impl.LinkImpl#getLinkproperties <em>Linkproperties</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	/**
-	 * The cached value of the '{@link #getTestnestedelements() <em>Testnestedelements</em>}' containment reference list.
+	 * The cached value of the '{@link #getTextnestedelements() <em>Textnestedelements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTestnestedelements()
+	 * @see #getTextnestedelements()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TextNestedElement> testnestedelements;
+	protected EList<TextNestedElement> textnestedelements;
+
+	/**
+	 * The cached value of the '{@link #getLinkproperties() <em>Linkproperties</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLinkproperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<LinkProperty> linkproperties;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,12 +79,25 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TextNestedElement> getTestnestedelements() {
-		if (testnestedelements == null) {
-			testnestedelements = new EObjectContainmentEList<TextNestedElement>(TextNestedElement.class, this,
-					UikitPackage.LINK__TESTNESTEDELEMENTS);
+	public EList<TextNestedElement> getTextnestedelements() {
+		if (textnestedelements == null) {
+			textnestedelements = new EObjectContainmentEList<TextNestedElement>(TextNestedElement.class, this,
+					UikitPackage.LINK__TEXTNESTEDELEMENTS);
 		}
-		return testnestedelements;
+		return textnestedelements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<LinkProperty> getLinkproperties() {
+		if (linkproperties == null) {
+			linkproperties = new EObjectContainmentEList<LinkProperty>(LinkProperty.class, this,
+					UikitPackage.LINK__LINKPROPERTIES);
+		}
+		return linkproperties;
 	}
 
 	/**
@@ -83,8 +108,10 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case UikitPackage.LINK__TESTNESTEDELEMENTS:
-			return ((InternalEList<?>) getTestnestedelements()).basicRemove(otherEnd, msgs);
+		case UikitPackage.LINK__TEXTNESTEDELEMENTS:
+			return ((InternalEList<?>) getTextnestedelements()).basicRemove(otherEnd, msgs);
+		case UikitPackage.LINK__LINKPROPERTIES:
+			return ((InternalEList<?>) getLinkproperties()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -97,8 +124,10 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case UikitPackage.LINK__TESTNESTEDELEMENTS:
-			return getTestnestedelements();
+		case UikitPackage.LINK__TEXTNESTEDELEMENTS:
+			return getTextnestedelements();
+		case UikitPackage.LINK__LINKPROPERTIES:
+			return getLinkproperties();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,9 +141,13 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case UikitPackage.LINK__TESTNESTEDELEMENTS:
-			getTestnestedelements().clear();
-			getTestnestedelements().addAll((Collection<? extends TextNestedElement>) newValue);
+		case UikitPackage.LINK__TEXTNESTEDELEMENTS:
+			getTextnestedelements().clear();
+			getTextnestedelements().addAll((Collection<? extends TextNestedElement>) newValue);
+			return;
+		case UikitPackage.LINK__LINKPROPERTIES:
+			getLinkproperties().clear();
+			getLinkproperties().addAll((Collection<? extends LinkProperty>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,8 +161,11 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case UikitPackage.LINK__TESTNESTEDELEMENTS:
-			getTestnestedelements().clear();
+		case UikitPackage.LINK__TEXTNESTEDELEMENTS:
+			getTextnestedelements().clear();
+			return;
+		case UikitPackage.LINK__LINKPROPERTIES:
+			getLinkproperties().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -143,8 +179,10 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case UikitPackage.LINK__TESTNESTEDELEMENTS:
-			return testnestedelements != null && !testnestedelements.isEmpty();
+		case UikitPackage.LINK__TEXTNESTEDELEMENTS:
+			return textnestedelements != null && !textnestedelements.isEmpty();
+		case UikitPackage.LINK__LINKPROPERTIES:
+			return linkproperties != null && !linkproperties.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -158,8 +196,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == TextNested.class) {
 			switch (derivedFeatureID) {
-			case UikitPackage.LINK__TESTNESTEDELEMENTS:
-				return UikitPackage.TEXT_NESTED__TESTNESTEDELEMENTS;
+			case UikitPackage.LINK__TEXTNESTEDELEMENTS:
+				return UikitPackage.TEXT_NESTED__TEXTNESTEDELEMENTS;
 			default:
 				return -1;
 			}
@@ -176,8 +214,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == TextNested.class) {
 			switch (baseFeatureID) {
-			case UikitPackage.TEXT_NESTED__TESTNESTEDELEMENTS:
-				return UikitPackage.LINK__TESTNESTEDELEMENTS;
+			case UikitPackage.TEXT_NESTED__TEXTNESTEDELEMENTS:
+				return UikitPackage.LINK__TEXTNESTEDELEMENTS;
 			default:
 				return -1;
 			}

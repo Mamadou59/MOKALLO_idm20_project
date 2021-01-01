@@ -121,6 +121,105 @@ public interface UikitFactory extends EFactory {
 	Code createCode();
 
 	/**
+	 * Returns a new object of class '<em>Margin</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Margin</em>'.
+	 * @generated
+	 */
+	Margin createMargin();
+
+	/**
+	 * Returns a new object of class '<em>Padding</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Padding</em>'.
+	 * @generated
+	 */
+	Padding createPadding();
+
+	/**
+	 * Returns a new object of class '<em>Background Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Background Property</em>'.
+	 * @generated
+	 */
+	BackgroundProperty createBackgroundProperty();
+
+	/**
+	 * Returns a new object of class '<em>Button Basic</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Button Basic</em>'.
+	 * @generated
+	 */
+	ButtonBasic createButtonBasic();
+
+	/**
+	 * Returns a new object of class '<em>Button Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Button Style</em>'.
+	 * @generated
+	 */
+	ButtonStyle createButtonStyle();
+
+	/**
+	 * Returns a new object of class '<em>Mute Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Mute Link</em>'.
+	 * @generated
+	 */
+	MuteLink createMuteLink();
+
+	/**
+	 * Returns a new object of class '<em>Button SIze</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Button SIze</em>'.
+	 * @generated
+	 */
+	ButtonSIze createButtonSIze();
+
+	/**
+	 * Returns a new object of class '<em>Image Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Image Property</em>'.
+	 * @generated
+	 */
+	ImageProperty createImageProperty();
+
+	/**
+	 * Returns a new object of class '<em>Text Modifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Text Modifier</em>'.
+	 * @generated
+	 */
+	TextModifier createTextModifier();
+
+	/**
+	 * Returns a new object of class '<em>Heading Modifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Heading Modifier</em>'.
+	 * @generated
+	 */
+	HeadingModifier createHeadingModifier();
+
+	/**
+	 * Returns a new object of class '<em>Title Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Title Property</em>'.
+	 * @generated
+	 */
+	TitleProperty createTitleProperty();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

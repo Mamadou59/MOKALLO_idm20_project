@@ -61,7 +61,8 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(UikitPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS);
+			childrenFeatures.add(UikitPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS);
+			childrenFeatures.add(UikitPackage.Literals.LINK__LINKPROPERTIES);
 		}
 		return childrenFeatures;
 	}
@@ -125,7 +126,8 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Link.class)) {
-		case UikitPackage.LINK__TESTNESTEDELEMENTS:
+		case UikitPackage.LINK__TEXTNESTEDELEMENTS:
+		case UikitPackage.LINK__LINKPROPERTIES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -143,17 +145,26 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				UikitFactory.eINSTANCE.createStrong()));
 
-		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				UikitFactory.eINSTANCE.createItalic()));
 
-		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				UikitFactory.eINSTANCE.createText()));
 
-		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TESTNESTEDELEMENTS,
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				UikitFactory.eINSTANCE.createCode()));
+
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.LINK__LINKPROPERTIES,
+				UikitFactory.eINSTANCE.createMuteLink()));
+
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.LINK__LINKPROPERTIES,
+				UikitFactory.eINSTANCE.createTextModifier()));
+
+		newChildDescriptors.add(createChildParameter(UikitPackage.Literals.LINK__LINKPROPERTIES,
+				UikitFactory.eINSTANCE.createHeadingModifier()));
 	}
 
 }

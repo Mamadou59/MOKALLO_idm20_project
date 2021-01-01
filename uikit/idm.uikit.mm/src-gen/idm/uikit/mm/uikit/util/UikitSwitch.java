@@ -188,6 +188,8 @@ public class UikitSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextNestedElement(textContainable);
 			if (result == null)
+				result = caseTextNested(textContainable);
+			if (result == null)
 				result = caseTextPageContent(textContainable);
 			if (result == null)
 				result = caseTextElement(textContainable);
@@ -264,6 +266,8 @@ public class UikitSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseTextNestedElement(strong);
 			if (result == null)
+				result = caseTextNested(strong);
+			if (result == null)
 				result = caseTextPageContent(strong);
 			if (result == null)
 				result = caseTextElement(strong);
@@ -282,6 +286,8 @@ public class UikitSwitch<T> extends Switch<T> {
 				result = caseContainableTextElement(italic);
 			if (result == null)
 				result = caseTextNestedElement(italic);
+			if (result == null)
+				result = caseTextNested(italic);
 			if (result == null)
 				result = caseTextPageContent(italic);
 			if (result == null)
@@ -333,6 +339,201 @@ public class UikitSwitch<T> extends Switch<T> {
 		case UikitPackage.TEXT_NESTED_ELEMENT: {
 			TextNestedElement textNestedElement = (TextNestedElement) theEObject;
 			T result = caseTextNestedElement(textNestedElement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.PROPERTY: {
+			Property property = (Property) theEObject;
+			T result = caseProperty(property);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.GENERAL_PROPERTY: {
+			GeneralProperty generalProperty = (GeneralProperty) theEObject;
+			T result = caseGeneralProperty(generalProperty);
+			if (result == null)
+				result = caseProperty(generalProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.SPECIFIC_PROPERTY: {
+			SpecificProperty specificProperty = (SpecificProperty) theEObject;
+			T result = caseSpecificProperty(specificProperty);
+			if (result == null)
+				result = caseProperty(specificProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.MARGES_PROPERTY: {
+			MargesProperty margesProperty = (MargesProperty) theEObject;
+			T result = caseMargesProperty(margesProperty);
+			if (result == null)
+				result = caseGeneralProperty(margesProperty);
+			if (result == null)
+				result = caseProperty(margesProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.MARGIN: {
+			Margin margin = (Margin) theEObject;
+			T result = caseMargin(margin);
+			if (result == null)
+				result = caseMargesProperty(margin);
+			if (result == null)
+				result = caseGeneralProperty(margin);
+			if (result == null)
+				result = caseProperty(margin);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.PADDING: {
+			Padding padding = (Padding) theEObject;
+			T result = casePadding(padding);
+			if (result == null)
+				result = caseMargesProperty(padding);
+			if (result == null)
+				result = caseGeneralProperty(padding);
+			if (result == null)
+				result = caseProperty(padding);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.BACKGROUND_PROPERTY: {
+			BackgroundProperty backgroundProperty = (BackgroundProperty) theEObject;
+			T result = caseBackgroundProperty(backgroundProperty);
+			if (result == null)
+				result = caseGeneralProperty(backgroundProperty);
+			if (result == null)
+				result = caseProperty(backgroundProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.BUTTON_PROPERTY: {
+			ButtonProperty buttonProperty = (ButtonProperty) theEObject;
+			T result = caseButtonProperty(buttonProperty);
+			if (result == null)
+				result = caseSpecificProperty(buttonProperty);
+			if (result == null)
+				result = caseProperty(buttonProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.BUTTON_BASIC: {
+			ButtonBasic buttonBasic = (ButtonBasic) theEObject;
+			T result = caseButtonBasic(buttonBasic);
+			if (result == null)
+				result = caseButtonProperty(buttonBasic);
+			if (result == null)
+				result = caseSpecificProperty(buttonBasic);
+			if (result == null)
+				result = caseProperty(buttonBasic);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.BUTTON_STYLE: {
+			ButtonStyle buttonStyle = (ButtonStyle) theEObject;
+			T result = caseButtonStyle(buttonStyle);
+			if (result == null)
+				result = caseButtonProperty(buttonStyle);
+			if (result == null)
+				result = caseSpecificProperty(buttonStyle);
+			if (result == null)
+				result = caseProperty(buttonStyle);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.MUTE_LINK: {
+			MuteLink muteLink = (MuteLink) theEObject;
+			T result = caseMuteLink(muteLink);
+			if (result == null)
+				result = caseLinkProperty(muteLink);
+			if (result == null)
+				result = caseSpecificProperty(muteLink);
+			if (result == null)
+				result = caseProperty(muteLink);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.LINK_PROPERTY: {
+			LinkProperty linkProperty = (LinkProperty) theEObject;
+			T result = caseLinkProperty(linkProperty);
+			if (result == null)
+				result = caseSpecificProperty(linkProperty);
+			if (result == null)
+				result = caseProperty(linkProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.BUTTON_SIZE: {
+			ButtonSIze buttonSIze = (ButtonSIze) theEObject;
+			T result = caseButtonSIze(buttonSIze);
+			if (result == null)
+				result = caseButtonProperty(buttonSIze);
+			if (result == null)
+				result = caseSpecificProperty(buttonSIze);
+			if (result == null)
+				result = caseProperty(buttonSIze);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.IMAGE_PROPERTY: {
+			ImageProperty imageProperty = (ImageProperty) theEObject;
+			T result = caseImageProperty(imageProperty);
+			if (result == null)
+				result = caseSpecificProperty(imageProperty);
+			if (result == null)
+				result = caseProperty(imageProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.TEXT_MODIFIER: {
+			TextModifier textModifier = (TextModifier) theEObject;
+			T result = caseTextModifier(textModifier);
+			if (result == null)
+				result = caseLinkProperty(textModifier);
+			if (result == null)
+				result = caseSpecificProperty(textModifier);
+			if (result == null)
+				result = caseProperty(textModifier);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.HEADING_MODIFIER: {
+			HeadingModifier headingModifier = (HeadingModifier) theEObject;
+			T result = caseHeadingModifier(headingModifier);
+			if (result == null)
+				result = caseLinkProperty(headingModifier);
+			if (result == null)
+				result = caseSpecificProperty(headingModifier);
+			if (result == null)
+				result = caseProperty(headingModifier);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case UikitPackage.TITLE_PROPERTY: {
+			TitleProperty titleProperty = (TitleProperty) theEObject;
+			T result = caseTitleProperty(titleProperty);
+			if (result == null)
+				result = caseSpecificProperty(titleProperty);
+			if (result == null)
+				result = caseProperty(titleProperty);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -654,6 +855,261 @@ public class UikitSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTextNestedElement(TextNestedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseProperty(Property object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>General Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>General Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGeneralProperty(GeneralProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Specific Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Specific Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSpecificProperty(SpecificProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Marges Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Marges Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMargesProperty(MargesProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Margin</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Margin</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMargin(Margin object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Padding</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Padding</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePadding(Padding object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Background Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Background Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBackgroundProperty(BackgroundProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Button Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Button Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseButtonProperty(ButtonProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Button Basic</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Button Basic</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseButtonBasic(ButtonBasic object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Button Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Button Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseButtonStyle(ButtonStyle object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Mute Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Mute Link</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMuteLink(MuteLink object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Link Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Link Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLinkProperty(LinkProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Button SIze</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Button SIze</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseButtonSIze(ButtonSIze object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Image Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Image Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImageProperty(ImageProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Text Modifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Text Modifier</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTextModifier(TextModifier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Heading Modifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Heading Modifier</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseHeadingModifier(HeadingModifier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Title Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Title Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTitleProperty(TitleProperty object) {
 		return null;
 	}
 

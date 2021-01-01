@@ -35,28 +35,38 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//Page/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//Page/pagecontents"/>
     </genClasses>
-    <genClasses ecoreClass="uikit.ecore#//PageContent"/>
+    <genClasses ecoreClass="uikit.ecore#//PageContent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//PageContent/generalproperties"/>
+    </genClasses>
     <genClasses ecoreClass="uikit.ecore#//Container">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//Container/contents"/>
     </genClasses>
     <genClasses ecoreClass="uikit.ecore#//TextPageContent"/>
     <genClasses ecoreClass="uikit.ecore#//TextContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//TextContainer/textelements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//TextContainer/color"/>
     </genClasses>
     <genClasses ecoreClass="uikit.ecore#//Paragraphe"/>
     <genClasses ecoreClass="uikit.ecore#//Title">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//Title/level"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//Title/titleproperties"/>
     </genClasses>
     <genClasses ecoreClass="uikit.ecore#//ContainableTextElement"/>
-    <genClasses ecoreClass="uikit.ecore#//Button"/>
+    <genClasses ecoreClass="uikit.ecore#//Button">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//Button/buttonproperties"/>
+    </genClasses>
     <genClasses ecoreClass="uikit.ecore#//CompositeTextElement"/>
     <genClasses ecoreClass="uikit.ecore#//TextContainable"/>
     <genClasses ecoreClass="uikit.ecore#//UrlBasedLink">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//UrlBasedLink/url"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//UrlBasedLink/title"/>
     </genClasses>
-    <genClasses ecoreClass="uikit.ecore#//Link"/>
-    <genClasses ecoreClass="uikit.ecore#//Image"/>
+    <genClasses ecoreClass="uikit.ecore#//Link">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//Link/linkproperties"/>
+    </genClasses>
+    <genClasses ecoreClass="uikit.ecore#//Image">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//Image/imageproperties"/>
+    </genClasses>
     <genClasses ecoreClass="uikit.ecore#//Strong"/>
     <genClasses ecoreClass="uikit.ecore#//Italic"/>
     <genClasses ecoreClass="uikit.ecore#//TextElement"/>
@@ -65,7 +75,7 @@
     </genClasses>
     <genClasses ecoreClass="uikit.ecore#//Code"/>
     <genClasses ecoreClass="uikit.ecore#//TextNested">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//TextNested/testnestedelements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference uikit.ecore#//TextNested/textnestedelements"/>
     </genClasses>
     <genClasses ecoreClass="uikit.ecore#//TextNestedElement"/>
     <genClasses ecoreClass="uikit.ecore#//Property"/>
@@ -87,9 +97,14 @@
     </genClasses>
     <genClasses ecoreClass="uikit.ecore#//MuteLink"/>
     <genClasses ecoreClass="uikit.ecore#//LinkProperty"/>
-    <genClasses ecoreClass="uikit.ecore#//ButtonSIze"/>
+    <genClasses ecoreClass="uikit.ecore#//ButtonSIze">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//ButtonSIze/size"/>
+    </genClasses>
     <genClasses ecoreClass="uikit.ecore#//ImageProperty"/>
     <genClasses ecoreClass="uikit.ecore#//TextModifier"/>
     <genClasses ecoreClass="uikit.ecore#//HeadingModifier"/>
+    <genClasses ecoreClass="uikit.ecore#//TitleProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute uikit.ecore#//TitleProperty/size"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
