@@ -1,0 +1,291 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module handleGeneralProperties.
+ */]
+[module handleTypes('http://www.example.org/uikit')]
+[import idm::uikitptransfo::uikit::gen::html::request::defineConcepts /]
+
+
+[comment]+++++++++++++++TextContainer ++++++++++++++[/comment]
+[**
+ * handle TextContainer (paragraph,Title)  
+ */]
+[template public generateTextContainer(aTextContainer : TextContainer)]
+[self.declareComment()/]
+[/template]
+[**
+ * handle TextContainer (paragraph)  
+ */]
+[template public generateTextContainer(aTextContainer : Paragraphe) { aBaliseName : String = 'p'; }]
+<[aBaliseName/] > [self.textelements.generateTextElements()/] [aBaliseName.getCloseBaliseName()/] 
+[/template]
+
+[**
+ * handle TextContainer (Title)  
+ */]
+[template public generateTextContainer(aTextContainer : Title) { aBalise : String = 'h' + self.level; }]
+<[aBalise/]> [self.textelements.generateTextElements()/] [aBalise.getCloseBaliseName()/]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+
+[comment]+++++++++++++++TextElement ++++++++++++++[/comment]
+[**
+ * handle TextElement (text and containableTextElements)  
+ */]
+
+[template public generateTextElements(aTextElements : TextElement)]
+[self.declareComment()/]
+[/template]
+
+[**
+ * handle TextElement (text)  
+ */]
+
+[template public generateTextElements(aTextElements : Text)]
+ [self.generateText()/]
+[/template]
+[**
+ * handle TextElement (Containaible)  
+ */]
+
+[template public generateTextElements(aTextElements : ContainableTextElement)]
+ [self.generateContainableTextElement()/]
+[/template]
+
+
+
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++++++Text++++++++++++++[/comment]
+[**
+ * handle Text (text and code)  
+ */]
+
+[template public generateText(aText : Text)]
+[self.text/]
+[/template]
+
+[**
+ * handle Text (text and code)  
+ */]
+
+[template public generateText(aText : Code) { aBalise : String = 'code'; }]
+<[aBalise/]> [self.text/] [aBalise.getCloseBaliseName()/]
+[/template]
+
+
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++ContainableTextElement++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle code generation of a containableTextElement in a Page  (TextContainable,CompositeTextElement,Button)
+ */]
+[template public generateContainableTextElement(aContainableTextElement : ContainableTextElement)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle code generation of a containableTextElement in a Page  (TextContainable)
+ */]
+[template public generateContainableTextElement(aContainableTextElement : TextContainable) ]
+[self.generateTextContainable()/]
+[/template]
+[**
+ * Handle code generation of a containableTextElement in a Page  (CompositeTextElement)
+ */]
+[template public generateContainableTextElement(aContainableTextElement : CompositeTextElement) ]
+[self.generateCompositeTextElement()/]
+[/template]
+[**
+ * Handle code generation of a containableTextElement in a Page  (Button)
+ */]
+[template public generateContainableTextElement(aContainableTextElement : Button) { aBalise : String = self.getClassName(); } ]
+<[aBalise/]> [self.textnestedelements.generateTextNestedElements()/] [aBalise.getCloseBaliseName()/]
+[/template]
+
+[comment]------------------------------------------------------[/comment]
+
+
+[comment]+++++++++++++++TextContaible ++++++++++++++[/comment]
+[**
+ * handle TextContainer (Strong,Italic)  
+ */]
+[template public generateTextContainable(aTextContainable : TextContainable)]
+[self.declareComment()/]
+[/template]
+[**
+ * handle TextContainer (Strong)  
+ */]
+[template public generateTextContainable(aTextContainable : Strong) { aBaliseName : String = 'Strong'; }]
+<[aBaliseName/]> [self.textnestedelements.generateTextNestedElements()/] [aBaliseName.getCloseBaliseName()/]
+[/template] 
+[**
+ * handle TextContainer (Italic)  
+ */]
+[template public generateTextContainable(aTextContainable : Italic) { aBaliseName : String = 'em'; }]
+<[aBaliseName/]> [self.textnestedelements.generateTextNestedElements()/] [aBaliseName.getCloseBaliseName()/]
+[/template] 
+
+[comment]------------------------------------------------------[/comment]
+
+
+[comment]+++++++++++CompositeTextElement++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle code generation of a CompositeTextElement in a Page  (UrlBasedLink,...)
+ */]
+[template public generateCompositeTextElement(aCompositeTextElement : CompositeTextElement)]
+[self.declareComment()/]
+[/template]
+
+[**
+ * Handle code generation of a UrlBasedLink in a Page  (UrlBasedLink)
+ */]
+[template public generateCompositeTextElement(aCompositeTextElement : UrlBasedLink)]
+[self.generateUrlBasedLink()/]
+[/template]
+[comment]-------------------- ----------------------------------[/comment]
+
+
+
+[comment]+++++++++++UrlBasedLink++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle code generation of a UrlBasedLink in a Page  (Image,Link)
+ */]
+[template public generateUrlBasedLink(aUrlBasedLink : UrlBasedLink)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle code generation of a UrlBasedLink in a Page  (Image)
+ */]
+[template public generateUrlBasedLink(aUrlBasedLink : Image) { aBalise :String = 'img'; }]
+<[aBalise/] src="[self.url/]" alt= "[self.title/]" title= "[self.title/]"/>
+[/template]
+[**
+ * Handle code generation of a UrlBasedLink in a Page  (Link)
+ */]
+[template public generateUrlBasedLink(aUrlBasedLink : Link) { aBalise :String = 'a'; }]
+<[aBalise/] href="[self.url/]"  title= "[self.title/]"> [aUrlBasedLink.textnestedelements.generateTextNestedElements()/] [aBalise.getCloseBaliseName()/]
+[/template]
+
+
+[comment]-------------------- ----------------------------------[/comment]
+
+[comment]+++++++++++++++ Main TextNestedElement ++++++++++++++[/comment]
+[**
+ * handle TextNestedElement (Text,TextContainable)  
+ */]
+[template public generateTextNestedElements(aTextNestedElement: TextNestedElement)]
+[self.declareComment()/]
+[/template]
+[**
+ * handle TextNestedElement (Text)  
+ */]
+[template public generateTextNestedElements(aTextNestedElement: Text)]
+[self.generateText()/]
+[/template]
+[**
+ * handle TextNestedElement (TextContainable)  
+ */]
+[template public generateTextNestedElements(aTextNestedElement: TextContainable)]
+[self.generateTextContainable()/]
+[/template]
+
+[comment]-------------------- ----------------------------------[/comment]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

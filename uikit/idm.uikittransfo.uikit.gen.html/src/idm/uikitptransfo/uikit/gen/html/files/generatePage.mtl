@@ -1,0 +1,23 @@
+[comment encoding = UTF-8 /]
+[**
+ * This module ensures the generation of a page 
+ */]
+
+[module generatePage('http://www.example.org/uikit')]
+[import idm::uikitptransfo::uikit::gen::html::request::defineConcepts /]
+[import idm::uikitptransfo::uikit::gen::html::common::handlePageGeneration /]
+
+[**
+ * The documentation of the template generateElement.
+ * @param aPage
+ */]
+
+[template public generatePage(aPage : Page)]
+[file (aPage.getPagePath(), false, 'UTF-8')]
+<!DOCTYPE html>
+<html lang="en">
+[aPage.generatePageHeader()/]
+[aPage.generateBody()/]
+</html>
+[/file]
+[/template]

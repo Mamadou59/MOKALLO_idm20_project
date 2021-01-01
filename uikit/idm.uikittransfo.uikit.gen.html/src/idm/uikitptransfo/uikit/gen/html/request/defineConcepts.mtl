@@ -1,0 +1,70 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module defineConcepts.
+ */]
+[module defineConcepts('http://www.example.org/uikit')]
+
+[**
+ * Return the name of the uikit prefixe (uk-)
+ */]
+[query public getUikitPrefixe(aProperty : Property) : String = 'uk-'/]
+[**
+ * Return the name of the path of the website directory
+ */]
+[query public getWebSitePath(aPage : Page) : String = 'WebSite'/]
+[**
+ * Return the name of a Page (e.g. Simple Page)
+ */]
+[query public getPageName(aPage : Page) : String = self.name.toUpperFirst() /]
+[**
+ * Return the path of a Page (website/simple_page.html)
+ */]
+[query public getPagePath(aPage : Page) : String = self.getWebSitePath()+'/'+aPage.getPageName().toLower().substituteAll(' ', '_')+'.html' /]
+[**
+ * Declare a class for a HTML element (class=)
+ */]
+[query public declareClass(aType : OclAny) : String = 'class=' /]
+[**
+ * Declare a class for a HTML element (class=)
+ */]
+[query public declareComment(aType : OclAny) : String = '<!-- Define for' + self.eClass().name+ '-->' /]
+
+[**
+ * Return a correct format of a close balise (</p>)
+ */]
+[query public getCloseBaliseName(aBalise : String) : String = '</'+aBalise+'>'  /]
+
+[**
+ * Return a correct format of a class name (rounded)
+ */]
+[query public getClassName(aClass : OclAny) : String = self.eClass().name.toLower()/]
+
+[comment]+++++++++++++++Alignement ++++++++++++++[/comment]
+[**
+ * return an Alignement (l/r/t/b)
+ */]
+
+[template public getAlignement(anAlignement : Align)? (self.toString() <> 'CENTER')]
+[self.toString().toLower().at(1)/]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++++++Alignement ++++++++++++++[/comment]
+[**
+ * return a color (primary,secondary,..)
+ */]
+
+[template public getColor(aColor : Color)]
+[self.toString().toLower()/]
+[/template]
+[comment]------------------------------------------------------[/comment]
+
+[comment]+++++++++++++++Alignement ++++++++++++++[/comment]
+[**
+ * return a Size (primary,secondary,..)
+ */]
+
+[template public getSize(aSize : Size) ? (self.toString() <> 'DEFAULT')]
+[self.toString().toLower().first(2)/]
+[/template]
+[comment]------------------------------------------------------[/comment]
