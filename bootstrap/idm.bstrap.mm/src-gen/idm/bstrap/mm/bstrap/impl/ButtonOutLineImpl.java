@@ -3,7 +3,7 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.ButtonStyle;
+import idm.bstrap.mm.bstrap.ButtonOutLine;
 import idm.bstrap.mm.bstrap.Color;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Button Style</b></em>'.
+ * An implementation of the model object '<em><b>Button Out Line</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link idm.bstrap.mm.bstrap.impl.ButtonStyleImpl#getColor <em>Color</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.ButtonOutLineImpl#getColor <em>Color</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ButtonStyleImpl extends ButtonPropertyImpl implements ButtonStyle {
+public class ButtonOutLineImpl extends ButtonPropertyImpl implements ButtonOutLine {
 	/**
 	 * The default value of the '{@link #getColor() <em>Color</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,7 +34,7 @@ public class ButtonStyleImpl extends ButtonPropertyImpl implements ButtonStyle {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Color COLOR_EDEFAULT = Color.LIGHT;
+	protected static final Color COLOR_EDEFAULT = Color.DARK;
 
 	/**
 	 * The cached value of the '{@link #getColor() <em>Color</em>}' attribute.
@@ -51,7 +51,7 @@ public class ButtonStyleImpl extends ButtonPropertyImpl implements ButtonStyle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ButtonStyleImpl() {
+	protected ButtonOutLineImpl() {
 		super();
 	}
 
@@ -62,7 +62,7 @@ public class ButtonStyleImpl extends ButtonPropertyImpl implements ButtonStyle {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BstrapPackage.Literals.BUTTON_STYLE;
+		return BstrapPackage.Literals.BUTTON_OUT_LINE;
 	}
 
 	/**
@@ -83,7 +83,8 @@ public class ButtonStyleImpl extends ButtonPropertyImpl implements ButtonStyle {
 		Color oldColor = color;
 		color = newColor == null ? COLOR_EDEFAULT : newColor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BstrapPackage.BUTTON_STYLE__COLOR, oldColor, color));
+			eNotify(new ENotificationImpl(this, Notification.SET, BstrapPackage.BUTTON_OUT_LINE__COLOR, oldColor,
+					color));
 	}
 
 	/**
@@ -94,7 +95,7 @@ public class ButtonStyleImpl extends ButtonPropertyImpl implements ButtonStyle {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case BstrapPackage.BUTTON_STYLE__COLOR:
+		case BstrapPackage.BUTTON_OUT_LINE__COLOR:
 			return getColor();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +109,7 @@ public class ButtonStyleImpl extends ButtonPropertyImpl implements ButtonStyle {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case BstrapPackage.BUTTON_STYLE__COLOR:
+		case BstrapPackage.BUTTON_OUT_LINE__COLOR:
 			setColor((Color) newValue);
 			return;
 		}
@@ -123,7 +124,7 @@ public class ButtonStyleImpl extends ButtonPropertyImpl implements ButtonStyle {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.BUTTON_STYLE__COLOR:
+		case BstrapPackage.BUTTON_OUT_LINE__COLOR:
 			setColor(COLOR_EDEFAULT);
 			return;
 		}
@@ -138,7 +139,7 @@ public class ButtonStyleImpl extends ButtonPropertyImpl implements ButtonStyle {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case BstrapPackage.BUTTON_STYLE__COLOR:
+		case BstrapPackage.BUTTON_OUT_LINE__COLOR:
 			return color != COLOR_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -161,4 +162,4 @@ public class ButtonStyleImpl extends ButtonPropertyImpl implements ButtonStyle {
 		return result.toString();
 	}
 
-} //ButtonStyleImpl
+} //ButtonOutLineImpl

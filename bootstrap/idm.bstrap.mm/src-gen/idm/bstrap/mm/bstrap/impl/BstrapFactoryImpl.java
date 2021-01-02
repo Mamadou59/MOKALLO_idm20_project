@@ -17,7 +17,9 @@ import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
 import idm.bstrap.mm.bstrap.ButtonLink;
+import idm.bstrap.mm.bstrap.ButtonOutLine;
 import idm.bstrap.mm.bstrap.ButtonSize;
+import idm.bstrap.mm.bstrap.ButtonSpinner;
 import idm.bstrap.mm.bstrap.ButtonStyle;
 import idm.bstrap.mm.bstrap.Center;
 import idm.bstrap.mm.bstrap.Centered;
@@ -240,6 +242,10 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createCodeLine();
 		case BstrapPackage.HORIZONTAL_LINE:
 			return createHorizontalLine();
+		case BstrapPackage.BUTTON_OUT_LINE:
+			return createButtonOutLine();
+		case BstrapPackage.BUTTON_SPINNER:
+			return createButtonSpinner();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -881,6 +887,26 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	public HorizontalLine createHorizontalLine() {
 		HorizontalLineImpl horizontalLine = new HorizontalLineImpl();
 		return horizontalLine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ButtonOutLine createButtonOutLine() {
+		ButtonOutLineImpl buttonOutLine = new ButtonOutLineImpl();
+		return buttonOutLine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ButtonSpinner createButtonSpinner() {
+		ButtonSpinnerImpl buttonSpinner = new ButtonSpinnerImpl();
+		return buttonSpinner;
 	}
 
 	/**

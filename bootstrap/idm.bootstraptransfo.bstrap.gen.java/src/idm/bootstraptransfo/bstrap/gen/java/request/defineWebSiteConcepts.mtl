@@ -12,7 +12,13 @@
 [**
  * Return the name of a Page (e.g. Simple Page)
  */]
-[query public getPageName(aPage : Page) : String = self.name.toUpperFirst() /]
+[template public getPageName(aPage : Page){ name : String = self.name; }]
+[if (name.oclIsInvalid() = null)]
+missedpageName
+[else]
+[name.toUpperFirst()/]
+[/if]	
+[/template]
 [**
  * Return the path of a Page (website/simple_page.html)
  */]
@@ -145,21 +151,22 @@ td
 
 
 
+[comment]+++++++++++++++ Button State ++++++++++++++[/comment]
+[template public getButtonState(aButtonProperty : ButtonProperty)]
+[/template]
+
+[template public getButtonState(aButtonProperty : Disabled) ? (self.eContainer(Button).oclIsKindOf(Button))]
+ disabled
+[/template]
+[comment]------------------------------------------------------[/comment]
 
 
+[comment]+++++++++++++++ Link Role ++++++++++++++[/comment]
+[template public getLinkRole(aLink : Link) ? (self.buttonproperties -> notEmpty())]
+ role = "button"
+[/template]
 
-
-
-
-
-
-
-
-
-
-
-
-
+[comment]------------------------------------------------------[/comment]
 
 
 

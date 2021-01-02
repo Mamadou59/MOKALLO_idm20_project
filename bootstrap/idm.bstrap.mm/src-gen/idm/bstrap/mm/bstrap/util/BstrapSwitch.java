@@ -16,8 +16,10 @@ import idm.bstrap.mm.bstrap.Brand;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.Button;
 import idm.bstrap.mm.bstrap.ButtonLink;
+import idm.bstrap.mm.bstrap.ButtonOutLine;
 import idm.bstrap.mm.bstrap.ButtonProperty;
 import idm.bstrap.mm.bstrap.ButtonSize;
+import idm.bstrap.mm.bstrap.ButtonSpinner;
 import idm.bstrap.mm.bstrap.ButtonState;
 import idm.bstrap.mm.bstrap.ButtonStyle;
 import idm.bstrap.mm.bstrap.Center;
@@ -1195,6 +1197,28 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseTextPageContent(horizontalLine);
 			if (result == null)
 				result = casePageContent(horizontalLine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BUTTON_OUT_LINE: {
+			ButtonOutLine buttonOutLine = (ButtonOutLine) theEObject;
+			T result = caseButtonOutLine(buttonOutLine);
+			if (result == null)
+				result = caseButtonProperty(buttonOutLine);
+			if (result == null)
+				result = casePropertyClass(buttonOutLine);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BUTTON_SPINNER: {
+			ButtonSpinner buttonSpinner = (ButtonSpinner) theEObject;
+			T result = caseButtonSpinner(buttonSpinner);
+			if (result == null)
+				result = caseButtonProperty(buttonSpinner);
+			if (result == null)
+				result = casePropertyClass(buttonSpinner);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -2536,6 +2560,36 @@ public class BstrapSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseHorizontalLine(HorizontalLine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Button Out Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Button Out Line</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseButtonOutLine(ButtonOutLine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Button Spinner</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Button Spinner</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseButtonSpinner(ButtonSpinner object) {
 		return null;
 	}
 

@@ -562,6 +562,24 @@ public interface BstrapFactory extends EFactory {
 	HorizontalLine createHorizontalLine();
 
 	/**
+	 * Returns a new object of class '<em>Button Out Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Button Out Line</em>'.
+	 * @generated
+	 */
+	ButtonOutLine createButtonOutLine();
+
+	/**
+	 * Returns a new object of class '<em>Button Spinner</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Button Spinner</em>'.
+	 * @generated
+	 */
+	ButtonSpinner createButtonSpinner();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

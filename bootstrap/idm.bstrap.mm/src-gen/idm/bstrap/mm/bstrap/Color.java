@@ -96,7 +96,16 @@ public enum Color implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DANGER(7, "DANGER", "DANGER");
+	DANGER(7, "DANGER", "DANGER"),
+	/**
+	 * The '<em><b>LIGHT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #LIGHT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	LIGHT(8, "LIGHT", "LIGHT");
 
 	/**
 	 * The '<em><b>DARK</b></em>' literal value.
@@ -187,13 +196,24 @@ public enum Color implements Enumerator {
 	public static final int DANGER_VALUE = 7;
 
 	/**
+	 * The '<em><b>LIGHT</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #LIGHT
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int LIGHT_VALUE = 8;
+
+	/**
 	 * An array of all the '<em><b>Color</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final Color[] VALUES_ARRAY = new Color[] { DARK, PRIMARY, SECONDARY, SUCCESS, INFO, WHITE, WARNING,
-			DANGER, };
+			DANGER, LIGHT, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Color</b></em>' enumerators.
@@ -265,6 +285,8 @@ public enum Color implements Enumerator {
 			return WARNING;
 		case DANGER_VALUE:
 			return DANGER;
+		case LIGHT_VALUE:
+			return LIGHT;
 		}
 		return null;
 	}
