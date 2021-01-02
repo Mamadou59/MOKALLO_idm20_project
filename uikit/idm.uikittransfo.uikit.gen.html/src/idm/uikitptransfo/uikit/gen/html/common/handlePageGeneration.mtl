@@ -1,0 +1,110 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module handleGeneralProperties.
+ */]
+[module handlePageGeneration('http://www.example.org/uikit')]
+[import idm::uikitptransfo::uikit::gen::html::request::defineConcepts /]
+[import idm::uikitptransfo::uikit::gen::html::common::handleTypes /]
+
+
+[**
+ * Generate the head of  a website page
+ */]
+[template public generatePageHeader(aPage : Page)]
+<head>
+  <title>[self.getPageName()/]</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/css/uikit.min.css" />
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.5/dist/js/uikit-icons.min.js"></script>
+</head>
+[/template]
+[**
+ * Generate the body of a website page
+ */]
+[template public generateBody(aPage : Page)]
+<body>
+[for (aPageContent : PageContent | aPage.pagecontents)]
+  [aPageContent.generatePageContentElement()/]
+[/for]
+</body>
+[/template]
+
+[comment]+++++++++++  Page Content   ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle code generation of a  PageContent element in a Page (container,TextPageContent) 
+ */]
+[template public generatePageContentElement(aPageContent : PageContent)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle code generation of a  PageContent element in a Page (container) 
+ */]
+[template public generatePageContentElement(aPageContent : Container) { aBaliseName : String = 'div'; }]
+<[aBaliseName/] [self.declareClass()/] "uk-container" >
+[for (aPageContent : PageContent | self.contents)]
+  [aPageContent.generatePageContentElement()/]
+[/for] 
+[aBaliseName.getCloseBaliseName()/]
+[/template]
+[**
+ * Handle code generation of a  PageContent element in a Page (TextPageContent) 
+ */]
+[template public generatePageContentElement(aPageContent : TextPageContent)]
+[self.generateTextPageContentElement()/]
+[/template]
+
+[comment]-----------------------------------------------------[/comment]
+
+
+[comment]+++++++++++TextPageContent++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle code generation of TextPageContent in a Page (TextContainer,ContainableTextElement)  
+ */]
+[template public generateTextPageContentElement(aTextPageContent : TextPageContent)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle code generation of TextPageContent in a Page (TextContainer)  
+ */]
+[template public generateTextPageContentElement(aTextPageContent : TextContainer)]
+[self.generateTextContainer()/]
+[/template]
+
+[**
+ * Handle code generation of TextPageContent in a Page (Containable)  
+ */]
+[template public generateTextPageContentElement(aTextPageContent : ContainableTextElement)]
+[self.generateContainableTextElement()/]
+[/template]
+
+
+
+[comment]-----------------------------------------------------[/comment]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

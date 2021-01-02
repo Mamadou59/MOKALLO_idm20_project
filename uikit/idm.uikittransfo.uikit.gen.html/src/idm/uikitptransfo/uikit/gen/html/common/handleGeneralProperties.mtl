@@ -1,0 +1,112 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module handleGeneralProperties.
+ */]
+[module handleGeneralProperties('http://www.example.org/uikit')]
+[import idm::uikitptransfo::uikit::gen::html::request::defineConcepts /]
+[import idm::uikitptransfo::uikit::gen::html::common::handleSpecificProperties /]
+
+[comment]+++++++++++Property++++++++++++++++++++++++++++++[/comment]
+[**
+ * handle the gneration of a property(General,Specific)
+ * @param aProperty
+ */]
+[template public getUikitProperty(aProperty : Property)]
+[self.declareComment()/]
+[/template]
+
+[**
+ * handle the gneration of a property (General)
+ * @param aProperty
+ */]
+[template public getUikitProperty(aProperty : GeneralProperty)]
+ [self.getGeneralProperties()/]
+[/template]
+
+[**
+ * handle the gneration of a property (Specific)
+ * @param aProperty
+ */]
+[template public getUikitProperty(aProperty : SpecificProperty)]
+ [self.getSpecificProperties()/]
+[/template]
+[comment]-------------------- ----------------------------------[/comment]
+
+
+[comment]+++++++++++GeneralProperty++++++++++++++++++++++++++++++[/comment]
+[**
+ * handle the gneration of Generalproperties (Marges,Background)
+ * @param aProperty
+ */]
+
+[template public getGeneralProperties(aGeneralProperty : GeneralProperty)]
+[self.declareComment()/]
+[/template]
+[**
+ * handle the gneration of Generalproperties (Marges)
+ * @param aProperty
+ */]
+
+[template public getGeneralProperties(aGeneralProperty : MargesProperty)]
+[self.getMargesProperties()/]
+[/template]
+[**
+ * handle the gneration of Generalproperties (Background)
+ * @param aProperty
+ */]
+
+[template public getGeneralProperties(aGeneralProperty : BackgroundProperty)]
+[self.getBackgroundPropety()/]
+[/template]
+
+
+[comment]-------------------- ----------------------------------[/comment]
+
+
+
+
+
+[comment]+++++++++++MargesProperties++++++++++++++++++++++++++++++[/comment]
+[**
+ * handle the gneration of Generalproperties (Margin,Padding)
+ * @param aProperty
+ */]
+
+[template public getMargesProperties(aMargeProperty : MargesProperty)]
+[self.declareComment()/]
+[/template]
+
+[**
+ * handle the gneration of Generalproperties (Margin,Padding)
+ * @param aProperty
+ */]
+
+[template public getMargesProperties(aMargeProperty : Margin)]
+[self.getUikitPrefixe()/][self.getClassName()/]-[self.size.getSize()/]-[self.align.getAlignement()/]
+[/template]
+[**
+ * handle the gneration of Generalproperties (Padding)
+ * @param aProperty
+ */]
+
+[template public getMargesProperties(aMargeProperty : Padding)]
+[self.getUikitPrefixe()/][self.getClassName()/]-[self.size.getSize()/]-[self.align.getAlignement()/]
+[/template]
+[comment]-------------------- ----------------------------------[/comment]
+
+[comment]+++++++++++MargesProperties++++++++++++++++++++++++++++++[/comment]
+[**
+ * handle the gneration of Generalproperties (Margin,Padding)
+ * @param aProperty
+ */]
+
+[template public getBackgroundPropety(aBackground : BackgroundProperty) { aProperty : String = 'background'; }]
+[self.getUikitPrefixe()/][aProperty/]-[self.color.getColor()/]
+[/template]
+
+[comment]-------------------- ----------------------------------[/comment]
+
+
+
+
+

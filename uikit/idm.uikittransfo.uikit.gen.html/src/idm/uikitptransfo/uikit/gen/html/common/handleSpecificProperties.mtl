@@ -1,0 +1,135 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module handleGeneralProperties.
+ */]
+[module handleSpecificProperties('http://www.example.org/uikit')]
+[import idm::uikitptransfo::uikit::gen::html::request::defineConcepts /]
+
+[comment]+++++++++++SpecificProperty++++++++++++++++++++++++++++++[/comment]
+[**
+ * handle the gneration of Specificproperties (ButtonProperty,ImageProperty,LinkProperty,TitleProperty)
+ * @param aProperty
+ */]
+
+[template public getSpecificProperties(aSpecificProperty : SpecificProperty)]
+[self.declareComment()/]
+[/template]
+[**
+ * handle the gneration of Specificproperties (ButtonProperty)
+ * @param aProperty
+ */]
+
+[template public getSpecificProperties(aSpecificProperty : ButtonProperty)]
+[self.getButtonProperty()/]
+[/template]
+[**
+ * handle the gneration of Specificproperties (LinkProperty)
+ * @param aProperty
+ */]
+
+[template public getSpecificProperties(aSpecificProperty : LinkProperty)]
+[self.getLinkPropertyProperty()/]
+[/template]
+[**
+ * handle the gneration of Specificproperties (ImageProperty)
+ * @param aProperty
+ */]
+
+[template public getSpecificProperties(aSpecificProperty : ImageProperty)]
+[self.getUikitPrefixe()/]img
+[/template]
+
+
+[**
+ * handle the gneration of Specificproperties (ButtonProperty)
+ * @param aProperty
+ */]
+
+[template public getSpecificProperties(aSpecificProperty : TitleProperty){ aPropertyName : String = 'heading'; }]
+[self.getUikitPrefixe()/][aPropertyName/]-[self.size.getSize()/]
+[/template]
+
+[comment]-------------------- ----------------------------------[/comment]
+
+
+
+[comment]+++++++++++ButtonProperty++++++++++++++++++++++++++++++[/comment]
+
+[**
+ * handle the gneration of ButtonProperty (ButtonBasic,ButtonSize,ButtonStyle)
+ * @param aProperty
+ */]
+
+[template public getButtonProperty(aButtonProperty : ButtonProperty)]
+[self.declareComment()/]
+[/template]
+[**
+ * handle the gneration of ButtonProperty (ButtonBasic,ButtonSize,ButtonStyle)
+ * @param aProperty
+ */]
+
+[template public getButtonProperty(aButtonProperty : ButtonBasic)]
+[/template]
+[**
+ * handle the gneration of ButtonProperty (ButtonBasic,ButtonSize,ButtonStyle)
+ * @param aProperty
+ */]
+
+[template public getButtonProperty(aButtonProperty : ButtonSIze){ aPropertyName : String = 'button'; }]
+[self.getUikitPrefixe()/][aPropertyName/] [self.getUikitPrefixe()/][aPropertyName/]-[self.size.getSize()/]
+[/template]
+[**
+ * handle the gneration of ButtonProperty (ButtonBasic,ButtonSize,ButtonStyle)
+ * @param aProperty
+ */]
+
+[template public getButtonProperty(aButtonProperty : ButtonStyle){ aPropertyName : String = 'button'; }]
+[self.getUikitPrefixe()/][aPropertyName/] [self.getUikitPrefixe()/][aPropertyName/]-[self.color.getColor()/]
+[/template]
+
+[comment]-------------------- ----------------------------------[/comment]
+
+[comment]+++++++++++LinkProperty++++++++++++++++++++++++++++++[/comment]
+
+[**
+ * handle the generation of  LinkProperty(MuteLink,TextModifier,HeadingModifier)
+ * @param aProperty
+ */]
+
+[template public getLinkPropertyProperty(aLinkProperty : LinkProperty)]
+[self.declareComment()/]
+[/template]
+
+[**
+ * handle the generation of  LinkProperty(MuteLink)
+ * @param aProperty
+ */]
+
+[template public getLinkPropertyProperty(aLinkProperty : MuteLink) { aProperty : String = 'link-muted'; }]
+[self.getUikitPrefixe()/][aProperty/]
+[/template]
+[**
+ * handle the generation of  LinkProperty(TextModifier)
+ * @param aProperty
+ */]
+
+[template public getLinkPropertyProperty(aLinkProperty : TextModifier) { aProperty : String = 'link-text'; }] 
+[self.getUikitPrefixe()/][aProperty/]
+[/template]
+[**
+ * handle the generation of  LinkProperty(HeadingModifier)
+ * @param aProperty
+ */]
+
+[template public getLinkPropertyProperty(aLinkProperty : HeadingModifier) { aProperty : String = 'link-heading'; }]
+[self.getUikitPrefixe()/][aProperty/]
+[/template]
+[comment]-------------------- ----------------------------------[/comment]
+
+
+
+
+
+
+
+

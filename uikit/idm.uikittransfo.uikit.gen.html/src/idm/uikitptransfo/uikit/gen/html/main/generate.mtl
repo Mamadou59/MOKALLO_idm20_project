@@ -1,0 +1,16 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('http://www.example.org/uikit')]
+[import idm::uikitptransfo::uikit::gen::html::files::generatePage /]
+
+
+[**
+ * Generate a Page html with uikit Property
+ * @param aPage
+ */]
+[template public generateElement(aPage : Page)]
+[comment @main/]
+[self.generatePage()/]
+[/template]
