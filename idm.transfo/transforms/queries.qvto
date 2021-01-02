@@ -27,7 +27,7 @@ query mdMM::Link::getTextContent() : String {
 	textElem -> forOne(i){
 		var textContent := i.text.substringAfter(']');
 		if ((self.isLinkButton() or self.isNavigationLink() ) and i.text.containsProperties()){
-			var prop := "("+i.text.substringBefore(')').substringAfter('(')+")";
+			var prop := i.text.substringBefore(")") +")";
 			textContent:= prop.+(textContent);
 		};
 		return textContent;
