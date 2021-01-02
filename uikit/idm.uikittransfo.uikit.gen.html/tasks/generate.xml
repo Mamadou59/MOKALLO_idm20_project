@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="generate" name="idm.uikitptransfo.uikit.gen.html">
-    <property name="ECLIPSE_HOME" value="../../../modeling-2020-06/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../.."/>
+<project default="generate" name="idm.uikittransfo.uikit.gen.html">
+    <property name="ECLIPSE_HOME" value="../../../../../../modeling-2020-06/eclipse"/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../../../../runtime-EclipseApplication"/>
 
     <!-- The classpath with only the dependencies used by the project -->
-    <path id="idm.uikitptransfo.uikit.gen.html.libraryclasspath">
-        <pathelement location="${ECLIPSE_WORKSPACE}/idm.uikitptransfo.uikit.gen.html/bin"/>
+    <path id="idm.uikittransfo.uikit.gen.html.libraryclasspath">
+        <pathelement location="${ECLIPSE_WORKSPACE}/idm.uikittransfo.uikit.gen.html/bin"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.core.runtime_3.18.0.v20200506-2143.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi_3.15.300.v20200520-1959.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.osgi.compatibility.state_1.1.800.v20200511-1223.jar"/>
@@ -31,23 +31,23 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/com.google.guava_27.1.0.v20190517-1946.jar"/>
     </path>
 
-    <path id="idm.uikitptransfo.uikit.gen.html.classpath">
-        <path refid="idm.uikitptransfo.uikit.gen.html.libraryclasspath"/>
+    <path id="idm.uikittransfo.uikit.gen.html.classpath">
+        <path refid="idm.uikittransfo.uikit.gen.html.libraryclasspath"/>
     </path>
 
     <!-- The classpath with only the jars available in the plugin folder of Eclipse -->
-    <path id="idm.uikitptransfo.uikit.gen.html.libraryclasspath.alljars">
-        <pathelement location="../idm.uikitptransfo.uikit.gen.html/bin"/>
+    <path id="idm.uikittransfo.uikit.gen.html.libraryclasspath.alljars">
+        <pathelement location="../idm.uikittransfo.uikit.gen.html/bin"/>
         <fileset dir="${ECLIPSE_HOME}/plugins/" includes="*.jar"/>
     </path>
 
-    <path id="idm.uikitptransfo.uikit.gen.html.classpath.alljars">
-        <path refid="idm.uikitptransfo.uikit.gen.html.libraryclasspath.alljars"/>
+    <path id="idm.uikittransfo.uikit.gen.html.classpath.alljars">
+        <path refid="idm.uikittransfo.uikit.gen.html.libraryclasspath.alljars"/>
     </path>
 
     <!-- The default task with the jars used by this project -->
     <target name="generate">
-        <java classname="idm.uikitptransfo.uikit.gen.html.main.Generate" classpathref="idm.uikitptransfo.uikit.gen.html.classpath">
+        <java classname="idm.uikitptransfo.uikit.gen.html.main.Generate" classpathref="idm.uikittransfo.uikit.gen.html.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>
@@ -58,7 +58,7 @@
         Keep in mind that having two versions of the same jar can create problems
     -->
     <target name="generate.alljars">
-        <java classname="idm.uikitptransfo.uikit.gen.html.main.Generate" classpathref="idm.uikitptransfo.uikit.gen.html.classpath">
+        <java classname="idm.uikitptransfo.uikit.gen.html.main.Generate" classpathref="idm.uikittransfo.uikit.gen.html.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>

@@ -44,7 +44,7 @@
  * Handle code generation of a  PageContent element in a Page (container) 
  */]
 [template public generatePageContentElement(aPageContent : Container) { aBaliseName : String = 'div'; }]
-<[aBaliseName/]  >
+<[aBaliseName/] [self.declareClass()/] "uk-container" >
 [for (aPageContent : PageContent | self.contents)]
   [aPageContent.generatePageContentElement()/]
 [/for] 
@@ -54,7 +54,7 @@
  * Handle code generation of a  PageContent element in a Page (TextPageContent) 
  */]
 [template public generatePageContentElement(aPageContent : TextPageContent)]
-[self.declareComment()/]
+[self.generateTextPageContentElement()/]
 [/template]
 
 [comment]-----------------------------------------------------[/comment]

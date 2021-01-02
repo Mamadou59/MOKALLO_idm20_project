@@ -4,6 +4,7 @@
  */]
 [module handleTypes('http://www.example.org/uikit')]
 [import idm::uikitptransfo::uikit::gen::html::request::defineConcepts /]
+[import idm::uikitptransfo::uikit::gen::html::common::handleGeneralProperties /]
 
 
 [comment]+++++++++++++++TextContainer ++++++++++++++[/comment]
@@ -17,14 +18,14 @@
  * handle TextContainer (paragraph)  
  */]
 [template public generateTextContainer(aTextContainer : Paragraphe) { aBaliseName : String = 'p'; }]
-<[aBaliseName/] > [self.textelements.generateTextElements()/] [aBaliseName.getCloseBaliseName()/] 
+<[aBaliseName/] [self.declareClass()/]"uk-text-[self.color.getColor()/] [self.generalproperties.getUikitProperty()/] "> [self.textelements.generateTextElements()/] [aBaliseName.getCloseBaliseName()/] 
 [/template]
 
 [**
  * handle TextContainer (Title)  
  */]
 [template public generateTextContainer(aTextContainer : Title) { aBalise : String = 'h' + self.level; }]
-<[aBalise/]> [self.textelements.generateTextElements()/] [aBalise.getCloseBaliseName()/]
+<[aBalise/] [self.declareClass()/]"uk-text-[self.color.getColor()/] [self.generalproperties.getUikitProperty()/] [self.titleproperties.getUikitProperty()/]" > [self.textelements.generateTextElements()/] [aBalise.getCloseBaliseName()/]
 [/template]
 [comment]------------------------------------------------------[/comment]
 
@@ -100,7 +101,7 @@
  * Handle code generation of a containableTextElement in a Page  (Button)
  */]
 [template public generateContainableTextElement(aContainableTextElement : Button) { aBalise : String = self.getClassName(); } ]
-<[aBalise/]> [self.textnestedelements.generateTextNestedElements()/] [aBalise.getCloseBaliseName()/]
+<[aBalise/] [self.declareClass()/]"[self.generalproperties.getUikitProperty()/] [self.buttonproperties.getUikitProperty()/]"> [self.textnestedelements.generateTextNestedElements()/] [aBalise.getCloseBaliseName()/]
 [/template]
 
 [comment]------------------------------------------------------[/comment]
@@ -117,13 +118,13 @@
  * handle TextContainer (Strong)  
  */]
 [template public generateTextContainable(aTextContainable : Strong) { aBaliseName : String = 'Strong'; }]
-<[aBaliseName/]> [self.textnestedelements.generateTextNestedElements()/] [aBaliseName.getCloseBaliseName()/]
+<[aBaliseName/] [self.declareClass()/] "[self.generalproperties.getUikitProperty()/]" > [self.textnestedelements.generateTextNestedElements()/] [aBaliseName.getCloseBaliseName()/]
 [/template] 
 [**
  * handle TextContainer (Italic)  
  */]
 [template public generateTextContainable(aTextContainable : Italic) { aBaliseName : String = 'em'; }]
-<[aBaliseName/]> [self.textnestedelements.generateTextNestedElements()/] [aBaliseName.getCloseBaliseName()/]
+<[aBaliseName/] [self.declareClass()/] "[self.generalproperties.getUikitProperty()/]"> [self.textnestedelements.generateTextNestedElements()/] [aBaliseName.getCloseBaliseName()/]
 [/template] 
 
 [comment]------------------------------------------------------[/comment]
@@ -158,13 +159,13 @@
  * Handle code generation of a UrlBasedLink in a Page  (Image)
  */]
 [template public generateUrlBasedLink(aUrlBasedLink : Image) { aBalise :String = 'img'; }]
-<[aBalise/] src="[self.url/]" alt= "[self.title/]" title= "[self.title/]"/>
+<[aBalise/] src="[self.url/]" alt= "[self.title/]" title= "[self.title/]" [self.declareClass()/] "[self.generalproperties.getUikitProperty()/] [self.imageproperties.getUikitProperty()/]"  />
 [/template]
 [**
  * Handle code generation of a UrlBasedLink in a Page  (Link)
  */]
 [template public generateUrlBasedLink(aUrlBasedLink : Link) { aBalise :String = 'a'; }]
-<[aBalise/] href="[self.url/]"  title= "[self.title/]"> [aUrlBasedLink.textnestedelements.generateTextNestedElements()/] [aBalise.getCloseBaliseName()/]
+<[aBalise/] href="[self.url/]"  title= "[self.title/]" [self.declareClass()/]"[self.generalproperties.getUikitProperty()/] [self.linkproperties.getUikitProperty()/]"> [aUrlBasedLink.textnestedelements.generateTextNestedElements()/] [aBalise.getCloseBaliseName()/]
 [/template]
 
 

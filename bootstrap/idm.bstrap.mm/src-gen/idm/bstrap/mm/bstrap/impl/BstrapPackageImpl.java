@@ -859,17 +859,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContainer_Textpagecontents() {
+	public EReference getContainer_Pagecontents() {
 		return (EReference) containerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getContainer_Containers() {
-		return (EReference) containerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2058,8 +2049,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		createEReference(pageEClass, PAGE__PAGECONTENTS);
 
 		containerEClass = createEClass(CONTAINER);
-		createEReference(containerEClass, CONTAINER__TEXTPAGECONTENTS);
-		createEReference(containerEClass, CONTAINER__CONTAINERS);
+		createEReference(containerEClass, CONTAINER__PAGECONTENTS);
 
 		fixContainerEClass = createEClass(FIX_CONTAINER);
 
@@ -2408,10 +2398,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(containerEClass, idm.bstrap.mm.bstrap.Container.class, "Container", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContainer_Textpagecontents(), this.getTextPageContent(), null, "textpagecontents", null, 0,
-				-1, idm.bstrap.mm.bstrap.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContainer_Containers(), this.getContainer(), null, "containers", null, 0, -1,
+		initEReference(getContainer_Pagecontents(), this.getPageContent(), null, "pagecontents", null, 0, -1,
 				idm.bstrap.mm.bstrap.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

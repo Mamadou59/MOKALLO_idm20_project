@@ -11,7 +11,7 @@
  * handle the gneration of a property(General,Specific)
  * @param aProperty
  */]
-[template public getProperty(aProperty : Property)]
+[template public getUikitProperty(aProperty : Property)]
 [self.declareComment()/]
 [/template]
 
@@ -19,7 +19,7 @@
  * handle the gneration of a property (General)
  * @param aProperty
  */]
-[template public getProperty(aProperty : GeneralProperty)]
+[template public getUikitProperty(aProperty : GeneralProperty)]
  [self.getGeneralProperties()/]
 [/template]
 
@@ -27,7 +27,7 @@
  * handle the gneration of a property (Specific)
  * @param aProperty
  */]
-[template public getProperty(aProperty : SpecificProperty)]
+[template public getUikitProperty(aProperty : SpecificProperty)]
  [self.getSpecificProperties()/]
 [/template]
 [comment]-------------------- ----------------------------------[/comment]
@@ -100,8 +100,8 @@
  * @param aProperty
  */]
 
-[template public getBackgroundPropety(aBackground : BackgroundProperty)]
-[self.getUikitPrefixe()/]-[self.getClassName()/]-[self.color.getColor()/]
+[template public getBackgroundPropety(aBackground : BackgroundProperty) { aProperty : String = 'background'; }]
+[self.getUikitPrefixe()/][aProperty/]-[self.color.getColor()/]
 [/template]
 
 [comment]-------------------- ----------------------------------[/comment]

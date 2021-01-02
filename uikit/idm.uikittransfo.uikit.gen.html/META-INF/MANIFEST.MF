@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Acceleo Html Module Runtime Plug-in
-Bundle-SymbolicName: idm.uikitptransfo.uikit.gen.html
+Bundle-SymbolicName: idm.uikittransfo.uikit.gen.html
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: idm.uikitptransfo.uikit.gen.html.Activator
 Bundle-Vendor: Eclipse Modeling Project
