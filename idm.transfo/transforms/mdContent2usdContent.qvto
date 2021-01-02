@@ -17,8 +17,8 @@ abstract mapping mdMM::Block::block2PageContent() : usdMM::PageContent {}
 */
 mapping mdMM::Paragraph::paragraphMd2ParagraphUsd() : usdMM::Paragraph 
 	inherits mdMM::TextContainer::textContainerMd2TextContainerUsd
-	when {not self.isThereNavigationElement() and self.isThereElementToBeDisplayed()}{}
-
+	when {not self.isThereNavigationElement()}{}
+	
 mapping mdMM::Paragraph::paragraphMd2ParagraphUsdIfContentNavigationLink() : usdMM::Navigation 
 	inherits mdMM::Block::block2PageContent
 	when {self.isThereNavigationElement()}{

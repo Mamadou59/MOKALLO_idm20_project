@@ -21,11 +21,11 @@ abstract mapping usdMM::PageContent::pageContentUsd2PageContentBstrap() : bstrap
 abstract mapping usdMM::TextContainer::textContainerUsd2TextContainerBstrap() : bstrapMM::TextContainer 
 	inherits usdMM::PageContent::pageContentUsd2PageContentBstrap{
 		textelements += self.textElements -> map constructTextElement();
-		var textWithProps := self.textElements[usdMM::Text] -> selectOne(t|t.text.containsProperties());
+		var textWithProps := self.textElements[usdMM::Text] -> selectOne(t|t.text.isPropertyLine() or t.text.containsProperties());
 		if (textWithProps <> null){
 			color := textWithProps.text.findColor();
 			emphasis += textWithProps.text -> map disjunctsEmphasisProperties();
-			var props := textWithProps.text.substringBefore(")")+")";
+			var props := textWithProps.text.substringAfter("properties");
 			if (props.find('background:') > 0){
 				generalProperties += props.backGroundWrapper();
 			};
@@ -52,7 +52,7 @@ abstract mapping usdMM::TextContainer::textContainerUsd2TextContainerBstrap() : 
 
 
 /**
-* A mapper which map an usd Title element to bstrap Title element.
+* A mapper wich map an usd Title element to bstrap Title element.
 */
 mapping usdMM::Title::titleUsd2TitleBstrap() : bstrapMM::Title 
 	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap{
@@ -90,7 +90,7 @@ mapping usdMM::Navigation::navigationUsd2NavigationBstrap() : bstrapMM::Navigati
 	navbar += self.type.parseNavProperties();
 	
 	if (self.textContent.containsProperties()){
-		var props := self.textContent.substringBefore(")")+")";
+		var props := self.textContent.substringAfter("properties");
 		if (props <> null){
 			if (props.find('background:') > 0){
 				generalProperties += props.backGroundWrapper();
@@ -126,7 +126,7 @@ abstract mapping usdMM::ListElement::listElementUsd2ListElementBstrap() : bstrap
 	listitems += self.items -> map listItemUsd2ListItemBstrap();
 	var textWithProps := self.items.elements[usdMM::Paragraph].subobjects()[usdMM::Text] -> selectOne(t | t.text.isPropertyLine());
 	if (textWithProps <> null){
-		var props := textWithProps.text.substringAfter("properties:");
+		var props := textWithProps.text.substringAfter("properties");
 		if (props <> null){
 			props := props.trim();
 			if (props.find('background:') > 0){
@@ -212,7 +212,7 @@ mapping usdMM::CodeBlock::codeBlockUsd2CodeBlockBtsrap() : bstrapMM::CodeBlock
 	codelines += self.codeLines -> map codeLineUsd2CodeLineBstrap();
 	var propsLine := self.codeLines -> selectOne(l | l.text.isPropertyLine());
 	if (propsLine <> null){
-		var props := propsLine.text.substringAfter("properties:");
+		var props := propsLine.text.substringAfter("properties");
 		if (props <> null){
 			if (props.find('background:') > 0){
 				generalProperties += props.backGroundWrapper();
@@ -257,7 +257,7 @@ mapping usdMM::BlockQuote::blockQuoteUsd2BlockQuoteBstrap() : bstrapMM::BlockQuo
 	pagecontents += self.contents -> map constructPageContent();
 	var textWithProps := self.contents[usdMM::Paragraph].subobjects()[usdMM::Text] -> selectOne(t | t.text.isPropertyLine());
 	if (textWithProps <> null) {
-		var props := textWithProps.text.substringAfter("properties:");
+		var props := textWithProps.text.substringAfter("properties");
 		if (props <> null){
 			props := props.trim();
 			if (props.find('background:') > 0){
@@ -470,9 +470,9 @@ mapping usdMM::TableSection::constructTableSection() : bstrapMM::TableSection
 abstract mapping usdMM::Section::sectionUsd2ContainerBstrap() : bstrapMM::Container {
 	pagecontents += self.contents -> map constructPageContent();
 	var textWithProps := self.contents[usdMM::Paragraph].textElements[usdMM::Text] -> 
-							selectOne(t | t.text.find("properties:") > 0);
+							selectOne(t | t.text.containsProperties());
 	if (textWithProps <> null) {
-		var props := textWithProps.text.substringAfter("properties:");
+		var props := textWithProps.text.substringAfter("properties");
 		if (props <> null){
 			props := props.trim();
 			if (props.find('background:') > 0){

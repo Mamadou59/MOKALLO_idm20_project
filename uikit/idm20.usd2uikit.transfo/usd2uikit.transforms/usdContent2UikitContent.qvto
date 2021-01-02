@@ -57,6 +57,21 @@ mapping usdMM::Title::titleUsd2TitleUikit() : uikitMM::Title
 */
 mapping usdMM::Section::sectionUsd2ContainerUikit() : uikitMM::Container {
 	contents += self.contents -> map constructPageContent();
+	var textWithProps := self.contents[usdMM::Paragraph].textElements[usdMM::Text] -> 
+							selectOne(t | t.text.find("properties:") > 0);
+	if (textWithProps <> null) {
+		var props := textWithProps.text.substringAfter("properties:");
+		
+		if (props.find('background:') > 0){
+				generalproperties += props.backGroundWrapper();
+		};
+		if (props.find('margin:') > 0){
+			generalproperties += props.marginWrapper();
+		};
+		if (props.find('padding:') > 0){
+			generalproperties += props.paddingWrapper();
+		};
+	}
 }
 
 /**

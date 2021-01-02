@@ -21,7 +21,7 @@ mapping usdMM::Text::textUsd2TextUikit() : uikitMM::Text
 * when text is subelement of tile or link or italic or strong.
 */
 mapping usdMM::Text::textUsd2TextUikitWhenInTitle() : uikitMM::Text 
-	when {self.inTitleOrLinkOrEphasisElement()}{
+	when {self.inTitleOrLinkOrEphasisOrButtonElement()}{
 	var t := self.text;
 	if (t.isPropertyLine()){
 		t := t.substringAfter(")").trim();

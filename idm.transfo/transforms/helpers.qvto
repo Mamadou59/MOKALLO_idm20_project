@@ -8,66 +8,43 @@ transformation md2usd(in md : mdMM, out usd : usdMM);
 * An helper to get a navigation first link Element
 */
 helper mdMM::Paragraph::getNavigationElement() : mdMM::Link {
-	var linkElements := self.subobjectsOfType(mdMM::Link);
-	linkElements -> forEach(l) {
-		if(l.isNavigationLink()) {
-			return l;
-		}
-	};
-	return null;
+	return self.subobjectsOfType(mdMM::Link) -> 
+					selectOne(l | l.isNavigationLink());
 }
 
 /**
 * An helper to check if given link is button. 
 */
 helper mdMM::Link::isLinkButton() : Boolean {
-	var textElem := self.subtext[mdMM::Text] -> 
-			selectOne(t | (t.text.startsWith('[') or (t.text.startsWith('(') and t.text.find(":") > 0)) and t.text.find("btn") > 0);
-	return self.url.=("#") and textElem <> null;	
+	var textElem := self.allSubobjectsOfType(Text) -> 
+						selectOne(t | 
+								(t.text.startsWith('[') or 
+								(t.text.startsWith('properties') and t.text.find(":") > 0)) 
+								and t.text.find("btn") > 0 and self.url = "#");
+	return textElem <> null;	
 }
 
 /**
 * An helper to check if given String contains properties. 
 */
 helper String::containsProperties() : Boolean {
-	return self.startsWith('(') and self.find(":") > 0;
+	return self.startsWith('properties') and self.find(":") > 0;
 }
 
 /**
 * An helper to check if given link is button. 
 */
 helper mdMM::Link::isNavigationLink() : Boolean {
-	var textElem := self.allSubobjectsOfType(Text);
-	textElem -> forOne(i){
-		if ((i.text.startsWith('[') or (i.text.startsWith('(') and i.text.find(":") > 0)) and i.text.find("nav") > 0){
-			return true;
-		}else {
-			return false;
-		}
-	};
-	return false;	
+	var textElem := self.allSubobjectsOfType(Text) -> selectOne(t | (t.text.startsWith('[') or (t.text.containsProperties())) and t.text.find("nav") > 0);
+	return textElem <> null;	
 }
 
 /**
 * An helper to check if given Paragraph contains Link reference Navigation. 
 */
 helper mdMM::Paragraph::isThereNavigationElement() : Boolean {
-	var linkElements := self.subobjectsOfType(mdMM::Link);
-	linkElements -> forEach(link) {
-		if(link.isNavigationLink()) {
-			return true;
-		}
-	};
-	
-	return false;
-}
-
-/**
-* helper to check if in the given Paragraph md element whe can find at least one element to be displayed in this paragraph, 
-*/
-helper mdMM::Paragraph::isThereElementToBeDisplayed() : Boolean {
-	var textElementsWithProps := self.elements[mdMM::Text] -> selectOne(t | t.text.toLower().trim().=("start section"));
-	return (textElementsWithProps -> size() <> self.elements -> size())	;
+	var linkElement := self.subobjectsOfType(mdMM::Link) -> selectOne(l | l.isNavigationLink());
+	return linkElement <> null;
 }
 
 helper mdMM::BlockQuote::isSection() : Boolean {
