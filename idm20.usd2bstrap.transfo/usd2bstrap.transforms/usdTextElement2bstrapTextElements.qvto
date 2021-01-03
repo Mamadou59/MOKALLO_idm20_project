@@ -197,7 +197,7 @@ mapping usdMM::Button::buttonUsd2ButtonBstrap() : bstrapMM::Button{
 * A mapper wich map an usd TextElement element to bstrap TextElement element.
 */
 mapping usdMM::TextElement::constructTextElement() : bstrapMM::TextElements
-	disjuncts usdMM::Text::textUsdContainPropToDisplay2TextBstrap, usdMM::Text::textUsd2TextBstrap, usdMM::Code::codeUsd2CodeBstrap,
+	disjuncts usdMM::Code::codeUsd2CodeBstrap, usdMM::Text::textUsdContainPropToDisplay2TextBstrap, usdMM::Text::textUsd2TextBstrap, 
 		usdMM::Link::linkUsd2LinkBstrap, usdMM::Link::linkUsd2LinkButtonBstrap, usdMM::Image::imageUsd2ImageBstrap,
 		usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap, usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap,
 		usdMM::Button::buttonUsd2ButtonBstrap{}

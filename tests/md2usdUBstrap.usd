@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="/tests/bstrap.simplemarkdown">
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Dans cette page se une description des concepts basic de la syntaxe markdown vers une page web Bootstrap."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les Propriété générales en Bootstrap"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Les propriétés générales sont représentées entre parenthèses (propriété:valeur,propriété:{propVal1:val1,propVal2:val2}) un élément peut avoir une couleur, un background, un margin et un padding avec une taille un alignment et une bordure colorée ou non."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les titres"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Les propriétés d’un titre sont représentées entre parenthèses sur la même ligne devant le texte du titre. Un titre peut donc avoir en plus des propriétés générales  un emphasis qui soit "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="italic"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" ou "/>
+    <textElements xsi:type="usd:StrongEmphasis">
+      <subTextElements xsi:type="usd:Text" text="Strong"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" et une propriété "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="display"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" qui peux avoir les valeurs {1,2,3,4} spécifique à la taille d'un titre en "/>
+    <textElements xsi:type="usd:StrongEmphasis">
+      <subTextElements xsi:type="usd:Text" text="Bootstrap"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 1 avec un display 1"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 2 avec un display 3"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="3">
+    <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 3 avec un display 4"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Un paragrapgh"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Un paragraph peut aussi avoir toutes les propriétés générales et une propriété emphasis ("/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="italic"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" ou "/>
+    <textElements xsi:type="usd:StrongEmphasis">
+      <subTextElements xsi:type="usd:Text" text="strong"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" pour tout le paragraph)"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="properties:(color:dark,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)"/>
+    <textElements xsi:type="usd:Text" text="Ce paragraph "/>
+    <textElements xsi:type="usd:Code" text="contient un élément code"/>
+    <textElements xsi:type="usd:Text" text=" et à une couleur dark, un backround primary, un margin, un padding, une bordure non clorée et un emphasis bold."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="properties:(color:primary,background:dark,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border, borderColor:danger},emphasis:italic)"/>
+    <textElements xsi:type="usd:Text" text="Ce paragraph à une couleur primary, un backround dark, un margin, un padding, une bordure clorée en danger et un emphasis italic."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les liens sans références"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Un lien est représenté comme suit "/>
+    <textElements xsi:type="usd:Link" url="url" title="">
+      <subTextElements xsi:type="usd:Text" text="(properties) title"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" et peut avoir toutes les propriétés générales"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
+      <subTextElements xsi:type="usd:Text" text="properties:(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold, linkProperty:linkBrand)BootstrapW3school"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les liens avec références"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Les liens avec référence sont directement transformés en des liens sans référence dès la transformation d'un modèle "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="simplemarkdown"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" vers un modèle "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="usd"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" car les références sont retrouvées et mis dans chaque lien lui référençant."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="I get 10 times more traffic from "/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="Google"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" "/>
+    <textElements xsi:type="usd:Link" url="http://google.com/" title="Google">
+      <subTextElements xsi:type="usd:Text" text="1"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" than from"/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="Yahoo"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" "/>
+    <textElements xsi:type="usd:Link" url="http://search.yahoo.com/" title="Yahoo Search">
+      <subTextElements xsi:type="usd:Text" text="2"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" or "/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="MSN"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" "/>
+    <textElements xsi:type="usd:Link" url="http://search.msn.com/" title="MSN Search">
+      <subTextElements xsi:type="usd:Text" text="3"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les images"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Une image avec une forme "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="circle"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" et un alignement "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="center"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+      <subTextElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, imageShape:circle,imageAligning:center)image"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Une image avec une forme "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="rounded"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" et un alignement "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="responsive"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+      <subTextElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, imageShape:circle,imageAligning:center)image"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les deux types de sections"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="En bootstrap, nous transformons les sections en container selon le type de container passer dans les propriétés soit un "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="fixconatainer"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" ou un "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="fluidcontainer"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Section">
+    <contents xsi:type="usd:Paragraph">
+      <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fluidContainer})"/>
+    </contents>
+    <contents xsi:type="usd:Title" level="1">
+      <textElements xsi:type="usd:Text" text="properties:(background:primary,margin:{level:3,alignment:left},padding:{level:3,alignment:center},border:{border,borderColor:secondary}) Titre de la section"/>
+    </contents>
+    <contents xsi:type="usd:Paragraph">
+      <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:2,alignment:left},padding:{level:2,alignment:center},border:{border,borderColor:secondary}) Ce paragraph est dans la première section qui est mis dans un fluid container de bootstrap."/>
+    </contents>
+    <contents xsi:type="usd:Section">
+      <contents xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,border:{border,borderColor:secondary,containerType:fixContainer})"/>
+      </contents>
+      <contents xsi:type="usd:Title" level="2">
+        <textElements xsi:type="usd:Text" text="Titre de la sous section"/>
+      </contents>
+      <contents xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="une sous section qui est mis dans un fluid container de bootstrap qui contient également des lists."/>
+      </contents>
+      <contents xsi:type="usd:UnorderedList">
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="list in section"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="item 2"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="item 3"/>
+            <textElements xsi:type="usd:Text" text="fin de list"/>
+          </elements>
+        </items>
+      </contents>
+      <contents xsi:type="usd:Section">
+        <contents xsi:type="usd:Paragraph">
+          <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fixContainer})"/>
+        </contents>
+        <contents xsi:type="usd:Title" level="3">
+          <textElements xsi:type="usd:Text" text="Titre de la sous sous section"/>
+        </contents>
+        <contents xsi:type="usd:Paragraph">
+          <textElements xsi:type="usd:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+            <subTextElements xsi:type="usd:Text" text="properties:(imageShape:circle,imageAligning:center)image"/>
+          </textElements>
+          <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})"/>
+          <textElements xsi:type="usd:Text" text="text du paragraphe"/>
+        </contents>
+      </contents>
+    </contents>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les boutons"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Button Styles"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Button" type="btn">
+      <subTextElements xsi:type="usd:Text" text="properties:(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)[btn]Primary"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-primary">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary]Primary"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-secondary">
+      <subTextElements xsi:type="usd:Text" text="[btn-secondary]Secondary"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-success">
+      <subTextElements xsi:type="usd:Text" text="[btn-success]Success"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-info">
+      <subTextElements xsi:type="usd:Text" text="[btn-info]Info"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-warning">
+      <subTextElements xsi:type="usd:Text" text="[btn-warning]Warning"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-danger">
+      <subTextElements xsi:type="usd:Text" text="[btn-danger]Danger"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-dark, outline-primary">
+      <subTextElements xsi:type="usd:Text" text="[btn-dark, outline-primary]Dark"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-light, spinner">
+      <subTextElements xsi:type="usd:Text" text="[btn-light, spinner]Light"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-link">
+      <subTextElements xsi:type="usd:Text" text="[btn-link]Link"/>
+    </textElements>
+    <textElements xsi:type="usd:Link" url="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" title="">
+      <subTextElements xsi:type="usd:Text" text="[btn]Doc bootstrap (un lien avec role button)"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Buttton Size"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Button" type="btn-primary btn-lg">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary btn-lg]Large"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-primary btn-md">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary btn-md]Default"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-primary btn-sm">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary btn-sm]Small"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Button States"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Button" type="btn-primary btn-lg">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary btn-lg]Primary Button"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-primary active">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary active]Active Primary"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-primary disabled">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary disabled]Disabled Primary"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="lnk btn-primary disabled">
+      <subTextElements xsi:type="usd:Text" text="[lnk btn-primary disabled]Disabled Primary"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="lnk btn-primary">
+      <subTextElements xsi:type="usd:Text" text="[lnk btn-primary]Enabled Primary"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les blockquote"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Blockquote :"/>
+  </contents>
+  <contents xsi:type="usd:BlockQuote">
+    <contents xsi:type="usd:Paragraph">
+      <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})"/>
+    </contents>
+    <contents xsi:type="usd:BlockQuote">
+      <contents xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="sub block"/>
+        <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})"/>
+      </contents>
+      <contents xsi:type="usd:UnorderedList">
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="list in blockquote"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="item 2"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="item 3"/>
+            <textElements xsi:type="usd:Text" text="end list"/>
+          </elements>
+        </items>
+      </contents>
+    </contents>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les listes"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="List :"/>
+  </contents>
+  <contents xsi:type="usd:UnorderedList">
+    <items>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, listProperty:basicList)"/>
+      </elements>
+    </items>
+    <items>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="start list. This is a paragraph"/>
+        <textElements xsi:type="usd:Text" text="on multiple lines."/>
+      </elements>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="And another paragraph"/>
+      </elements>
+    </items>
+    <items>
+      <elements xsi:type="usd:Paragraph">
+        <textElements xsi:type="usd:Text" text="(itemProperty: active) item 2."/>
+      </elements>
+      <elements xsi:type="usd:UnorderedList">
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="level 2 item 1"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="level 2 item 2"/>
+          </elements>
+        </items>
+      </elements>
+      <elements xsi:type="usd:UnorderedList">
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, listProperty:horizontalList)"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="level 2 item 3"/>
+          </elements>
+          <elements xsi:type="usd:UnorderedList">
+            <items>
+              <elements xsi:type="usd:Paragraph">
+                <textElements xsi:type="usd:Text" text="level 3 item 1"/>
+              </elements>
+            </items>
+            <items>
+              <elements xsi:type="usd:Paragraph">
+                <textElements xsi:type="usd:Text" text="level 3 item 2"/>
+              </elements>
+            </items>
+            <items>
+              <elements xsi:type="usd:Paragraph">
+                <textElements xsi:type="usd:Text" text="level 3 item 3"/>
+              </elements>
+            </items>
+            <items>
+              <elements xsi:type="usd:Paragraph">
+                <textElements xsi:type="usd:Text" text="level 4 item 1"/>
+              </elements>
+              <elements xsi:type="usd:UnorderedList">
+                <items>
+                  <elements xsi:type="usd:Paragraph">
+                    <textElements xsi:type="usd:Text" text="next level ??"/>
+                  </elements>
+                </items>
+              </elements>
+            </items>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="level 2 item 4"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="level 2 item 5"/>
+          </elements>
+        </items>
+      </elements>
+    </items>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Code en block"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Ayant composés que des codeLine, un codeLine peut être réservé pour les propriétés générales qu’ils peuvent avoir. Les propriétés sont toujours précédés par properties:"/>
+  </contents>
+  <contents xsi:type="usd:CodeBlock">
+    <codeLines text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})&#xA;"/>
+    <codeLines text="Ce block contient une ligne de propriétés qui n'est j'amais affichée après la géneration vers bootstrap.&#xA;"/>
+    <codeLines text="Une autre ligne du bloc&#xA;"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Navigation"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Basic navigation"/>
+  </contents>
+  <contents xsi:type="usd:Navigation" type="nav basic" textContent=" Vertical navigation">
+    <groupedItems xsi:type="usd:UnorderedList">
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+    </groupedItems>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Brand navigation"/>
+  </contents>
+  <contents xsi:type="usd:Navigation" type="navbar-brand" textContent="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})Navbar brand">
+    <groupedItems xsi:type="usd:UnorderedList">
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+    </groupedItems>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Vertical navigation"/>
+  </contents>
+  <contents xsi:type="usd:Navigation" type="nav vertical" textContent=" Vertical navigation">
+    <groupedItems xsi:type="usd:UnorderedList">
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+    </groupedItems>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Centred navigation"/>
+  </contents>
+  <contents xsi:type="usd:Navigation" type="nav centred" textContent=" Centred navigation">
+    <groupedItems xsi:type="usd:UnorderedList">
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+      <items>
+        <elements xsi:type="usd:Link" url="#" title=""/>
+      </items>
+    </groupedItems>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Table"/>
+  </contents>
+  <contents xsi:type="usd:Table">
+    <tablesections xsi:type="usd:TableHead">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="tabProperties:(sectionProps:(color:warning,background:primary,margin:{level:5,alignment:left}},border:{border,borderColor:secondary}),tableProps:(color:info,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},tableProperty:darkTable),rowProps:(color:white,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),cellProps:(color:success,background:primary))Syntax"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:warning,background:primary)Description"/>
+        </cells>
+      </rows>
+    </tablesections>
+    <tablesections xsi:type="usd:TableSeparator">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text=":-----------"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="-----------"/>
+        </cells>
+      </rows>
+    </tablesections>
+    <tablesections xsi:type="usd:TableBody">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="tabProperties:(sectionProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center}),rowProps:(color:warning,background:primary),cellProps:(color:dark,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:info}))Header"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="tabPproperties:(cell:(color:danger,background:info,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:danger}))Title"/>
+        </cells>
+      </rows>
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:warning,background:primary))Paragraph"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Text"/>
+        </cells>
+      </rows>
+    </tablesections>
+  </contents>
+  <contents xsi:type="usd:Table">
+    <tablesections xsi:type="usd:TableHead">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Syntax"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Description"/>
+        </cells>
+      </rows>
+    </tablesections>
+    <tablesections xsi:type="usd:TableSeparator">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="-----------"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="-----------"/>
+        </cells>
+      </rows>
+    </tablesections>
+    <tablesections xsi:type="usd:TableBody">
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Header"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Title"/>
+        </cells>
+      </rows>
+      <rows>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Paragraph"/>
+        </cells>
+        <cells>
+          <textElements xsi:type="usd:Text" text="Text"/>
+        </cells>
+      </rows>
+    </tablesections>
+  </contents>
+</usd:Page>

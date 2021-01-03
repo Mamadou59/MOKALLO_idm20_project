@@ -1,28 +1,63 @@
 <?xml version="1.0" encoding="ASCII"?>
 <simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="/tests/uikit.simplemarkdown">
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center},titleSize:small)Title1"/>
+    <elements xsi:type="simplemarkdown:Text" text="Dans cette page se une description des concepts basic de la syntaxe markdown vers une page web Bootstrap."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center})"/>
-    <elements xsi:type="simplemarkdown:Text" text="Ceci est le text d'un paragraph "/>
-    <elements xsi:type="simplemarkdown:Code" text="le text d'un code"/>
+    <elements xsi:type="simplemarkdown:Text" text="#Les titres"/>
   </contents>
-  <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="une "/>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Pour un titre les propri&#xe9;t&#xe9;s sont repr&#xe9;sent&#xe9;es par properties:(propri&#xe9;t&#xe9;:valeur,propri&#xe9;t&#xe9;:{propVal1:val1,propVal2:val2}) sur la m&#xea;me ligne avant le text du titre un titre peut avoir une couleur, un background, un margin et un padding avec une taille un alignment et une propri&#xe9;t&#xe9; sp&#xe9;cifique "/>
     <elements xsi:type="simplemarkdown:StrongEmphasis">
-      <subtext xsi:type="simplemarkdown:Text" text="image"/>
+      <subtext xsi:type="simplemarkdown:Text" text="titleSize"/>
     </elements>
+    <elements xsi:type="simplemarkdown:Text" text="."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center},titleSize:small) Un titre taille 1 avec une size small"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center},titleSize:large) Un titre taille 2 avec une size large"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="3">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center}) Un titre taille 2 sans size"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Un paragrapgh"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center},imageProperty)image"/>
+    <elements xsi:type="simplemarkdown:Text" text="Un paragraph peut aussi avoir toutes les propri&#xe9;t&#xe9;s g&#xe9;n&#xe9;rales."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,backbackground:muted,margin:{size:large,alignment:left},padding:{size:small,alignment:center})"/>
+    <elements xsi:type="simplemarkdown:Text" text="Ceci est le text d'un paragraph "/>
+    <elements xsi:type="simplemarkdown:Code" text="contenant un &#xe9;l&#xe9;ment code"/>
+    <elements xsi:type="simplemarkdown:Text" text=" et qui a une couleur warning un background muted un margin et un padding"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Les Liens"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Un lien en "/>
+    <elements xsi:type="simplemarkdown:Emphasis">
+      <subtext xsi:type="simplemarkdown:Text" text="Uikit"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" en plus des propri&#xe9;t&#xe9;s g&#xe9;n&#xe9;rales peut aussi avoir trois types sp&#xe9;cifiques et est repr&#xe9;sent&#xe9; comme suit "/>
+    <elements xsi:type="simplemarkdown:Link" url="url" title="">
+      <subtext xsi:type="simplemarkdown:Text" text="(properties) title"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="un "/>
-    <elements xsi:type="simplemarkdown:Emphasis">
-      <subtext xsi:type="simplemarkdown:Text" text="lien"/>
+    <elements xsi:type="simplemarkdown:Text" text="un lien avec la propri&#xe9;t&#xe9; "/>
+    <elements xsi:type="simplemarkdown:StrongEmphasis">
+      <subtext xsi:type="simplemarkdown:Text" text="HeadingModifier"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" de uikit"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="3">
+    <elements xsi:type="simplemarkdown:Text" text="Un Titre avec un  "/>
+    <elements xsi:type="simplemarkdown:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:headingModifier})lien vers BootstrapW3school"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="3">
@@ -34,19 +69,7 @@
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:muteLink})Tables Extension22"/>
-    </elements>
-  </contents>
-  <contents xsi:type="simplemarkdown:Title" level="3">
-    <elements xsi:type="simplemarkdown:Text" text="un lien avec la propri&#xe9;t&#xe9; "/>
-    <elements xsi:type="simplemarkdown:StrongEmphasis">
-      <subtext xsi:type="simplemarkdown:Text" text="HeadingModifier"/>
-    </elements>
-    <elements xsi:type="simplemarkdown:Text" text=" de uikit"/>
-  </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:headingModifier})Tables Extension22"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:muteLink})Tables Extension"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="3">
@@ -58,27 +81,70 @@
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:textModifier})Tables Extension22"/>
-    </elements>
-  </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="Ceci est le text d'un paragraph avec un "/>
-    <elements xsi:type="simplemarkdown:StrongEmphasis">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center})strong"/>
-    </elements>
-    <elements xsi:type="simplemarkdown:Text" text=" et un "/>
-    <elements xsi:type="simplemarkdown:Emphasis">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center})italic"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:textModifier})Tables Extension"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="My First Uikit Container"/>
+    <elements xsi:type="simplemarkdown:Text" text="Les liens avec r&#xe9;f&#xe9;rences"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Les liens avec r&#xe9;f&#xe9;rence sont directement transform&#xe9;s en des liens sans r&#xe9;f&#xe9;rence d&#xe8;s la transformation d'un mod&#xe8;le "/>
+    <elements xsi:type="simplemarkdown:Emphasis">
+      <subtext xsi:type="simplemarkdown:Text" text="simplemarkdown"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" vers un mod&#xe8;le "/>
+    <elements xsi:type="simplemarkdown:Emphasis">
+      <subtext xsi:type="simplemarkdown:Text" text="usd"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" car les r&#xe9;f&#xe9;rences sont retrouv&#xe9;es et mis dans chaque lien lui r&#xe9;f&#xe9;ren&#xe7;ant."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="I get 10 times more traffic from "/>
+    <elements xsi:type="simplemarkdown:LinkWithRef" reference="Google">
+      <subtext xsi:type="simplemarkdown:Text" text="Google"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" "/>
+    <elements xsi:type="simplemarkdown:LinkWithRef" reference="1">
+      <subtext xsi:type="simplemarkdown:Text" text="1"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" than from"/>
+    <elements xsi:type="simplemarkdown:LinkWithRef" reference="Yahoo">
+      <subtext xsi:type="simplemarkdown:Text" text="Yahoo"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" "/>
+    <elements xsi:type="simplemarkdown:LinkWithRef" reference="2">
+      <subtext xsi:type="simplemarkdown:Text" text="2"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" or "/>
+    <elements xsi:type="simplemarkdown:LinkWithRef" reference="MSN">
+      <subtext xsi:type="simplemarkdown:Text" text="MSN"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" "/>
+    <elements xsi:type="simplemarkdown:LinkWithRef" reference="3">
+      <subtext xsi:type="simplemarkdown:Text" text="3"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text="."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Reference" reference="1" url="http://google.com/" title="Google"/>
+  <contents xsi:type="simplemarkdown:Reference" reference="2" url="http://search.yahoo.com/" title="Yahoo Search"/>
+  <contents xsi:type="simplemarkdown:Reference" reference="3" url="http://search.msn.com/" title="MSN Search"/>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Les images"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center},imageProperty)image"/>
+    </elements>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="Les Sections"/>
   </contents>
   <contents xsi:type="simplemarkdown:BlockQuote">
     <contents xsi:type="simplemarkdown:Paragraph">
       <elements xsi:type="simplemarkdown:Text" text="Start section"/>
+      <elements xsi:type="simplemarkdown:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center})"/>
     </contents>
-    <contents xsi:type="simplemarkdown:Title" level="1">
+    <contents xsi:type="simplemarkdown:Title" level="2">
       <elements xsi:type="simplemarkdown:Text" text="Titre de la section"/>
     </contents>
     <contents xsi:type="simplemarkdown:Paragraph">
@@ -88,13 +154,13 @@
       <contents xsi:type="simplemarkdown:Paragraph">
         <elements xsi:type="simplemarkdown:Text" text="Start section"/>
       </contents>
-      <contents xsi:type="simplemarkdown:Title" level="2">
+      <contents xsi:type="simplemarkdown:Title" level="3">
         <elements xsi:type="simplemarkdown:Text" text="Titre de la sous section"/>
       </contents>
       <contents xsi:type="simplemarkdown:BulletList">
         <items xsi:type="simplemarkdown:BulletListItem">
           <elements xsi:type="simplemarkdown:Paragraph">
-            <elements xsi:type="simplemarkdown:Text" text="list in citation"/>
+            <elements xsi:type="simplemarkdown:Text" text="list in section"/>
           </elements>
         </items>
         <items xsi:type="simplemarkdown:BulletListItem">
@@ -123,14 +189,14 @@
     </contents>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="Des boutons"/>
+    <elements xsi:type="simplemarkdown:Text" text="Les boutons"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
     <elements xsi:type="simplemarkdown:Text" text="Button Styles"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="(color:secondary,background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center})[btn]Primary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(color:secondary,background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center})[btn]Primary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="[btn-muted]muted"/>
