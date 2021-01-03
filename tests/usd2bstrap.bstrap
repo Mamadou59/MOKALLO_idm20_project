@@ -320,8 +320,8 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Light"/>
-      <buttonproperties xsi:type="bstrap:ButtonStyle"/>
       <buttonproperties xsi:type="bstrap:ButtonSpinner"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Link"/>
@@ -360,13 +360,13 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Active Primary"/>
-      <buttonproperties xsi:type="bstrap:Active"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:Active"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>
-      <buttonproperties xsi:type="bstrap:Disabled"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:Disabled"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>

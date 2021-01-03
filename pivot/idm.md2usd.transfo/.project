@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>idm.transfo</name>
+	<name>idm.md2usd.transfo</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -15,7 +15,7 @@
 			<arguments>
 				<dictionary>
 					<key>src_container</key>
-					<value>transforms</value>
+					<value>md2usd.transforms</value>
 				</dictionary>
 			</arguments>
 		</buildCommand>
