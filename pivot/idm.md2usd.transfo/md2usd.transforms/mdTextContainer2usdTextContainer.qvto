@@ -1,0 +1,147 @@
+import helpers;
+import queries;
+	
+	
+modeltype mdMM "strict" uses "http://www.example.org/simplemarkdown";
+modeltype usdMM "strict" uses "http://www.example.org/usd";
+transformation md2usd(in md : mdMM, out usd : usdMM); 
+	
+
+/**
+* A mapper to map link md to ListItem usd which always contains link
+**/
+mapping mdMM::Link::linkMd2NavElementUsd() : usdMM::ListItem 
+	when {not self.isNavigationLink()}{
+	elements := object usdMM::Link {
+		url := self.url;
+		title := self.title;
+	} 	
+}
+
+
+/**
+* Abstract mapper from markdown TextElement element to usd TextElement element
+* TODO review this mapper usability
+*/
+abstract mapping mdMM::TextElement::textElementMd2TextElementUsd() : usdMM::TextElement {}
+
+/**
+* Mapper from markdown Text element to usd Text element 
+* wich extends textElementMd2TextElementUsd mapper.
+*/
+mapping mdMM::Text::textMd2TextUsd() : usdMM::Text 
+	inherits mdMM::TextElement::textElementMd2TextElementUsd
+	when {self.notSectionRef()}{
+		text := self.text;
+}
+
+/**
+* Mapper from markdown Code element to usd Code element 
+* wich extends textElementMd2TextElementUsd mapper.
+*/
+mapping mdMM::Code::codeMd2CodeUsd() : usdMM::Code 
+	inherits mdMM::Text::textMd2TextUsd {}
+
+
+/**
+* Abstract mapper from markdown CompositeTextElement element to usd CompositeTextElement element
+* TODO review this mapper usability.
+*/
+abstract mapping mdMM::CompositeTextElement::compositeTextElementMd2CompositeTextElementUsd() : usdMM::CompositeTextElement {
+	subTextElements += self.subtext -> map contructTextElement();
+}
+
+// Start Emphasis transformation from mdMM to usdMM
+
+/**
+* Mapper from markdown StrongEmphasis element to usd StrongEmphasis element 
+* wich extends compositeTextElementMd2CompositeTextElementUsd mapper.
+*/
+mapping mdMM::StrongEmphasis::strongEmphasisMd2StrongEmphasisUsd() : usdMM::StrongEmphasis 
+	inherits mdMM::CompositeTextElement::compositeTextElementMd2CompositeTextElementUsd{}
+
+/**
+* Mapper from markdown Emphasis element to usd ItalicEmphasis element 
+* wich extends compositeTextElementMd2CompositeTextElementUsd mapper.
+*/
+mapping mdMM::Emphasis::emphasisMd2ItalicEmphasisUsd() : usdMM::ItalicEmphasis 
+	inherits mdMM::CompositeTextElement::compositeTextElementMd2CompositeTextElementUsd{} 
+// End Emphasis transformation 
+
+// Start Link transformation from mdMM to usdMM
+/**
+* Abstract mapper from markdown UrlBasedLink element to usd UrlBasedLink element 
+* wich extends compositeTextElementMd2CompositeTextElementUsd mapper.
+*/
+abstract mapping mdMM::UrlBasedLink::urlBasedLinkMd2UrlBasedLinkUsd() : usdMM::UrlBasedLink 
+	inherits mdMM::CompositeTextElement::compositeTextElementMd2CompositeTextElementUsd{
+		url := self.url;
+		title := self.title;
+}
+
+/**
+* Mapper from markdown Link element to usd Link element 
+* wich extends urlBasedLinkMd2UrlBasedLinkUsd mapper.
+*/
+mapping mdMM::Link::linkMd2LinkUsd() : usdMM::Link
+	inherits mdMM::UrlBasedLink::urlBasedLinkMd2UrlBasedLinkUsd
+	when {not self.isLinkButton() and not self.isNavigationLink()}  {
+	
+}
+
+// Start transformation from md link to usd button
+
+
+/**
+* Mapper from markdown Link element to usd button element 
+* wich extends textElementMd2TextElementUsd mapper.
+*/
+mapping mdMM::Link::linkButtonMd2ButtonUsd() : usdMM::Button 
+	inherits mdMM::CompositeTextElement::compositeTextElementMd2CompositeTextElementUsd
+	when {self.isLinkButton() and not self.isNavigationLink()} {
+		type := self.getType();
+	}
+	
+/**
+* Mapper from markdown Link element to usd Navigation element 
+*/	
+mapping mdMM::Link::linkMd2NavigationUsd() : usdMM::Navigation 
+	when {self.isNavigationLink() and not self.isLinkButton()}{
+	type := self.getType();
+	textContent := self.getTextContent();
+}
+
+/**
+* Mapper from markdown LinkWithRef element to usd Link element 
+* wich extends compositeTextElementMd2CompositeTextElementUsd mapper.
+*/
+mapping mdMM::LinkWithRef::linkWithRefMd2LinkUsd() : usdMM::Link 
+	inherits mdMM::CompositeTextElement::compositeTextElementMd2CompositeTextElementUsd{
+	init {
+		var ref := self.reference.findLinkReference();
+	}
+	if (ref <> null) then {
+		result.url := ref.url;
+		result.title := ref.title;	
+	} endif;	
+}
+
+/**
+* Mapper from markdown Image element to usd Image element 
+* wich extends urlBasedLinkMd2UrlBasedLinkUsd mapper.
+*/
+mapping mdMM::Image::imageMd2ImageUsd() : usdMM::Image 
+	inherits mdMM::UrlBasedLink::urlBasedLinkMd2UrlBasedLinkUsd {}
+
+
+/**
+* Mapper from TextElement to usd TextElement wich make disjunction beetwen 
+* textMd2TextUsd, strongEmphasisMd2StrongEmphasisUsd, emphasisMd2ItalicEmphasisUsd, 
+* codeMd2CodeUsd, linkMd2LinkUsd, imageMd2ImageUsd and linkWithRefMd2LinkUsd.
+*/
+mapping mdMM::TextElement::contructTextElement() : usdMM::TextElement
+	disjuncts  mdMM::Code::codeMd2CodeUsd, mdMM::Text::textMd2TextUsd, mdMM::StrongEmphasis::strongEmphasisMd2StrongEmphasisUsd,
+				mdMM::Emphasis::emphasisMd2ItalicEmphasisUsd,
+				mdMM::Link::linkMd2LinkUsd, mdMM::Image::imageMd2ImageUsd,
+				mdMM::LinkWithRef::linkWithRefMd2LinkUsd, mdMM::Link::linkButtonMd2ButtonUsd,
+				mdMM::Link::linkMd2NavigationUsd{}

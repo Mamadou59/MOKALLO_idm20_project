@@ -1,37 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bstrap:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bstrap="http://www.example.org/bstrap" name="/tests/tests.simplemarkdown">
+<bstrap:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bstrap="http://www.example.org/bstrap" name="/tests/bstrap.simplemarkdown">
+  <pagecontents xsi:type="bstrap:Title" level="1">
+    <textelements xsi:type="bstrap:Text" text="Dans cette page se une description des concepts basic de la syntaxe markdown vers une page web Bootstrap."/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="1">
+    <textelements xsi:type="bstrap:Text" text="Les Propriété générales en Bootstrap"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Text" text="un élément peut avoir une couleur, un background, un margin et un padding avec une taille un alignment et une bordure colorée ou non."/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="1">
+    <textelements xsi:type="bstrap:Text" text="Les titres"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Text" text="Les propriétés d’un titre sont représentées entre parenthèses sur la même ligne devant le texte du titre. Un titre peut donc avoir en plus des propriétés générales  un emphasis qui soit"/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text="italic"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="ou"/>
+    <textelements xsi:type="bstrap:Strong">
+      <textnestedelements xsi:type="bstrap:Text" text="Strong"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="et une propriété"/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text="display"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="qui peux avoir les valeurs {1,2,3,4} spécifique à la taille d'un titre en"/>
+    <textelements xsi:type="bstrap:Strong">
+      <textnestedelements xsi:type="bstrap:Text" text="Bootstrap"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="."/>
+  </pagecontents>
   <pagecontents xsi:type="bstrap:Title" color="WARNING" level="1">
     <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
     <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
     <generalProperties xsi:type="bstrap:Padding" level="5"/>
     <generalProperties xsi:type="bstrap:Border"/>
     <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-    <textelements xsi:type="bstrap:Text" text="File for tests markdown parser"/>
+    <textelements xsi:type="bstrap:Text" text="Un titre taille 1 avec un display 1"/>
     <emphasis xsi:type="bstrap:ItalicProperty"/>
-    <displayproperties xsi:type="bstrap:Display2"/>
+    <displayproperties xsi:type="bstrap:Display1"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" color="WARNING" level="2">
+    <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+    <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+    <generalProperties xsi:type="bstrap:Padding" level="5"/>
+    <generalProperties xsi:type="bstrap:Border"/>
+    <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    <textelements xsi:type="bstrap:Text" text="Un titre taille 2 avec un display 3"/>
+    <emphasis xsi:type="bstrap:ItalicProperty"/>
+    <displayproperties xsi:type="bstrap:Display1"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" color="WARNING" level="3">
+    <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+    <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+    <generalProperties xsi:type="bstrap:Padding" level="5"/>
+    <generalProperties xsi:type="bstrap:Border"/>
+    <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    <textelements xsi:type="bstrap:Text" text="Un titre taille 3 avec un display 4"/>
+    <emphasis xsi:type="bstrap:ItalicProperty"/>
+    <displayproperties xsi:type="bstrap:Display1"/>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="1">
-    <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
-    <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
-    <generalProperties xsi:type="bstrap:Padding" level="5"/>
-    <generalProperties xsi:type="bstrap:Border"/>
-    <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-    <textelements xsi:type="bstrap:Text" text="Table"/>
-    <emphasis xsi:type="bstrap:ItalicProperty"/>
-    <displayproperties xsi:type="bstrap:Display2"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:CodeBlock">
-    <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
-    <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
-    <generalProperties xsi:type="bstrap:Padding" level="5"/>
-    <generalProperties xsi:type="bstrap:Border"/>
-    <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-    <codelines content="This is [an example](http://example.com/ &quot;Title&quot;) inline link.&#xD;&#xA;"/>
-    <codelines content="&#xD;&#xA;"/>
-    <codelines content="[This link](http://example.net/) has no title attribute.&#xD;&#xA;"/>
+    <textelements xsi:type="bstrap:Text" text="Un paragrapgh"/>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="And now an image :"/>
+    <textelements xsi:type="bstrap:Text" text="Un paragraph peut aussi avoir toutes les propriétés générales et une propriété emphasis ("/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text="italic"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="ou"/>
+    <textelements xsi:type="bstrap:Strong">
+      <textnestedelements xsi:type="bstrap:Text" text="strong"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text=""/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+    <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
+    <generalProperties xsi:type="bstrap:Padding" level="2"/>
+    <generalProperties xsi:type="bstrap:Border"/>
+    <textelements xsi:type="bstrap:Text" text="Ce paragraph"/>
+    <textelements xsi:type="bstrap:Code" text="contient un élément code"/>
+    <textelements xsi:type="bstrap:Text" text="et à une couleur dark, un backround primary, un margin, un padding, une bordure non clorée et un emphasis bold."/>
+    <emphasis xsi:type="bstrap:Bold"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe" color="PRIMARY">
+    <generalProperties xsi:type="bstrap:Background" color="DARK"/>
+    <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
+    <generalProperties xsi:type="bstrap:Padding" level="2"/>
+    <generalProperties xsi:type="bstrap:Border"/>
+    <generalProperties xsi:type="bstrap:ColoredBorder" color="DANGER"/>
+    <textelements xsi:type="bstrap:Text" text="Ce paragraph à une couleur primary, un backround dark, un margin, un padding, une bordure clorée en danger et un emphasis italic."/>
+    <emphasis xsi:type="bstrap:ItalicProperty"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="1">
+    <textelements xsi:type="bstrap:Text" text="Les liens sans références"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Text" text="Un lien est représenté comme suit"/>
+    <textelements xsi:type="bstrap:Link" url="url" title="">
+      <textnestedelements xsi:type="bstrap:Text" text=" title"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="et peut avoir toutes les propriétés générales"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
+      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+      <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
+      <generalProperties xsi:type="bstrap:Padding" level="2"/>
+      <generalProperties xsi:type="bstrap:Border"/>
+      <textnestedelements xsi:type="bstrap:Text" text="BootstrapW3school"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="1">
+    <textelements xsi:type="bstrap:Text" text="Les liens avec références"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Text" text="Les liens avec référence sont directement transformés en des liens sans référence dès la transformation d'un modèle"/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text="simplemarkdown"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="vers un modèle"/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text="usd"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="car les références sont retrouvées et mis dans chaque lien lui référençant."/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Text" text="I get 10 times more traffic from"/>
+    <textelements xsi:type="bstrap:Link">
+      <textnestedelements xsi:type="bstrap:Text" text="Google"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text=""/>
+    <textelements xsi:type="bstrap:Link" url="http://google.com/" title="Google">
+      <textnestedelements xsi:type="bstrap:Text" text="1"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="than from"/>
+    <textelements xsi:type="bstrap:Link">
+      <textnestedelements xsi:type="bstrap:Text" text="Yahoo"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text=""/>
+    <textelements xsi:type="bstrap:Link" url="http://search.yahoo.com/" title="Yahoo Search">
+      <textnestedelements xsi:type="bstrap:Text" text="2"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="or"/>
+    <textelements xsi:type="bstrap:Link">
+      <textnestedelements xsi:type="bstrap:Text" text="MSN"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text=""/>
+    <textelements xsi:type="bstrap:Link" url="http://search.msn.com/" title="MSN Search">
+      <textnestedelements xsi:type="bstrap:Text" text="3"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="."/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="1">
+    <textelements xsi:type="bstrap:Text" text="Les images"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Une image avec une forme "/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text="circle"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text=" et un alignement "/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text="center"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
     <textelements xsi:type="bstrap:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="image">
       <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
       <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
@@ -41,586 +177,255 @@
       <imageproperties xsi:type="bstrap:Circle"/>
     </textelements>
   </pagecontents>
-  <pagecontents xsi:type="bstrap:Table">
-    <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
-    <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
-    <generalProperties xsi:type="bstrap:Padding" level="5"/>
-    <generalProperties xsi:type="bstrap:Border"/>
-    <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-    <tablesections xsi:type="bstrap:Thead">
-      <tablerows>
-        <tablecells alignment="LEFT" span="1">
-          <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
-          <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
-          <generalProperties xsi:type="bstrap:Padding" level="5"/>
-          <generalProperties xsi:type="bstrap:Border"/>
-          <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-          <textelements xsi:type="bstrap:Text" text="tabProperties:(sectionProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),tableProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},tableProperty:darkTable),rowProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Syntax"/>
-        </tablecells>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="tabProperties:(cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Description"/>
-        </tablecells>
-        <generals xsi:type="bstrap:Background" color="PRIMARY"/>
-        <generals xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
-        <generals xsi:type="bstrap:Padding" level="5"/>
-        <generals xsi:type="bstrap:Border"/>
-        <generals xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-      </tablerows>
-      <generals xsi:type="bstrap:Background" color="PRIMARY"/>
-      <generals xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
-      <generals xsi:type="bstrap:Padding" level="5"/>
-      <generals xsi:type="bstrap:Border"/>
-      <generals xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-    </tablesections>
-    <tablesections xsi:type="bstrap:Tbody">
-      <tablerows>
-        <tablecells alignment="LEFT" span="1">
-          <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
-          <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
-          <generalProperties xsi:type="bstrap:Padding" level="5"/>
-          <generalProperties xsi:type="bstrap:Border"/>
-          <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-          <textelements xsi:type="bstrap:Text" text="tabProperties:(sectionProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),rowProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Header"/>
-        </tablecells>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="tabPproperties:(cell:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Title"/>
-        </tablecells>
-        <generals xsi:type="bstrap:Background" color="PRIMARY"/>
-        <generals xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
-        <generals xsi:type="bstrap:Padding" level="5"/>
-        <generals xsi:type="bstrap:Border"/>
-        <generals xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-      </tablerows>
-      <tablerows>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="tabProperties:(cellProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}))Paragraph"/>
-        </tablecells>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Text"/>
-        </tablecells>
-      </tablerows>
-      <generals xsi:type="bstrap:Background" color="PRIMARY"/>
-      <generals xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
-      <generals xsi:type="bstrap:Padding" level="5"/>
-      <generals xsi:type="bstrap:Border"/>
-      <generals xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-    </tablesections>
-    <tableproperties xsi:type="bstrap:DarkTable"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Table">
-    <tablesections xsi:type="bstrap:Thead">
-      <tablerows>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Syntax"/>
-        </tablecells>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Description"/>
-        </tablecells>
-      </tablerows>
-    </tablesections>
-    <tablesections xsi:type="bstrap:Tbody">
-      <tablerows>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Header"/>
-        </tablecells>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Title"/>
-        </tablecells>
-      </tablerows>
-      <tablerows>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Paragraph"/>
-        </tablecells>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Text"/>
-        </tablecells>
-      </tablerows>
-    </tablesections>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Table">
-    <tablesections xsi:type="bstrap:Thead">
-      <tablerows>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Heading Centered"/>
-        </tablecells>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Heading Left Aligned"/>
-        </tablecells>
-        <tablecells span="1">
-          <textelements xsi:type="bstrap:Text" text="Heading Centered"/>
-        </tablecells>
-        <tablecells alignment="RIGHT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Heading Right Aligned"/>
-        </tablecells>
-      </tablerows>
-    </tablesections>
-    <tablesections xsi:type="bstrap:Tbody">
-      <tablerows>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Cell text left aligned"/>
-        </tablecells>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Cell text left aligned"/>
-        </tablecells>
-        <tablecells span="1">
-          <textelements xsi:type="bstrap:Text" text="Cell text centered"/>
-        </tablecells>
-        <tablecells alignment="RIGHT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Cell text right aligned"/>
-        </tablecells>
-      </tablerows>
-      <tablerows>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="cell 21"/>
-        </tablecells>
-        <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="cell 22"/>
-        </tablecells>
-        <tablecells span="1">
-          <textelements xsi:type="bstrap:Text" text="cell 22"/>
-        </tablecells>
-        <tablecells alignment="RIGHT" span="1">
-          <textelements xsi:type="bstrap:Text" text="cell 22"/>
-        </tablecells>
-      </tablerows>
-    </tablesections>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe" color="PRIMARY">
-    <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
-    <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
-    <generalProperties xsi:type="bstrap:Padding" level="3"/>
-    <generalProperties xsi:type="bstrap:Border"/>
-    <textelements xsi:type="bstrap:Text" text="See syntax and option :"/>
-    <textelements xsi:type="bstrap:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
-      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
-      <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
-      <generalProperties xsi:type="bstrap:Padding" level="2"/>
-      <generalProperties xsi:type="bstrap:Border"/>
-      <textnestedelements xsi:type="bstrap:Text" text="Tables Extension"/>
-    </textelements>
-    <emphasis xsi:type="bstrap:ItalicProperty"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="1">
-    <textelements xsi:type="bstrap:Text" text="Text, Strong, Emphasis"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Test"/>
-    <textelements xsi:type="bstrap:Strong">
-      <textnestedelements xsi:type="bstrap:Text" text="ceci est un phrase en strong avec des"/>
-      <textnestedelements xsi:type="bstrap:Italic">
-        <textnestedelements xsi:type="bstrap:Text" text="italiques"/>
-      </textnestedelements>
-      <textnestedelements xsi:type="bstrap:Text" text="et un"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
-      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
-      <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
-      <generalProperties xsi:type="bstrap:Padding" level="2"/>
-      <generalProperties xsi:type="bstrap:Border"/>
-      <textnestedelements xsi:type="bstrap:Text" text="Tables Extension22"/>
-    </textelements>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Une image avec une forme "/>
     <textelements xsi:type="bstrap:Italic">
-      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
-      <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
-      <generalProperties xsi:type="bstrap:Padding" level="2"/>
-      <generalProperties xsi:type="bstrap:Border"/>
-      <textnestedelements xsi:type="bstrap:Text" text="TextItalic"/>
+      <textnestedelements xsi:type="bstrap:Text" text="rounded"/>
     </textelements>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Ce paragraphe contient un"/>
-    <textelements xsi:type="bstrap:Strong">
-      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
-      <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
-      <generalProperties xsi:type="bstrap:Padding" level="2"/>
-      <generalProperties xsi:type="bstrap:Border"/>
-      <textnestedelements xsi:type="bstrap:Text" text="Strong"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="et un"/>
+    <textelements xsi:type="bstrap:Text" text=" et un alignement "/>
     <textelements xsi:type="bstrap:Italic">
-      <textnestedelements xsi:type="bstrap:Text" text="Italique"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text=". Il passe a la"/>
-    <textelements xsi:type="bstrap:Text" text="ligne."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Les"/>
-    <textelements xsi:type="bstrap:Link" url="#" title="">
-      <textnestedelements xsi:type="bstrap:Text"/>
-      <textnestedelements xsi:type="bstrap:Italic">
-        <textnestedelements xsi:type="bstrap:Text" text="Strong"/>
-      </textnestedelements>
-      <textnestedelements xsi:type="bstrap:Text"/>
-      <textnestedelements xsi:type="bstrap:Italic">
-        <textnestedelements xsi:type="bstrap:Text" text="Italiques"/>
-      </textnestedelements>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="1">
-    <textelements xsi:type="bstrap:Text" text="Test Link, LinkRef et Reference"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Ceci est un Link avec un Strong dans le titre :"/>
-    <textelements xsi:type="bstrap:Link" url="#" title="">
-      <textnestedelements xsi:type="bstrap:Text"/>
-      <textnestedelements xsi:type="bstrap:Strong">
-        <textnestedelements xsi:type="bstrap:Text" text="Link"/>
-      </textnestedelements>
+      <textnestedelements xsi:type="bstrap:Text" text="responsive"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Ceci est un LinkRef :"/>
-    <textelements xsi:type="bstrap:Link" url="http://search.msn.com/" title="MSN Search">
-      <textnestedelements xsi:type="bstrap:Text"/>
-      <textnestedelements xsi:type="bstrap:Strong">
-        <textnestedelements xsi:type="bstrap:Text" text="linkref"/>
-      </textnestedelements>
-    </textelements>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Un LinkRef contient un identifiant (ici 'tests' appelé reference. Le Reference correspondante est déclarée à la ligne suivante :"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Ceci est une"/>
-    <textelements xsi:type="bstrap:Link" url="http://search.msn.com/" title="uref test">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Markdown supports two style of links: inline and reference."/>
-    <textelements xsi:type="bstrap:Text" text="In both styles, the link text is delimited by"/>
-    <textelements xsi:type="bstrap:Link">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="2">
-    <textelements xsi:type="bstrap:Text" text="Inline Links Doc"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="To create an inline link, use a set of regular parentheses immediately after the link text’s closing square bracket. Inside the parentheses, put the URL where you want the link to point, along with an optional title for the link, surrounded in quotes. For example:"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:CodeBlock">
-    <codelines content="This is [an example](http://example.com/ &quot;Title&quot;) inline link.&#xD;&#xA;"/>
-    <codelines content="&#xD;&#xA;"/>
-    <codelines content="[This link](http://example.net/) has no title attribute.&#xD;&#xA;"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Will produce:"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:CodeBlock">
-    <codelines content="&lt;p>This is &lt;a href=&quot;http://example.com/&quot; title=&quot;Title&quot;>&#xD;&#xA;"/>
-    <codelines content="an example&lt;/a> inline link.&lt;/p>&#xD;&#xA;"/>
-    <codelines content="&#xD;&#xA;"/>
-    <codelines content="&lt;p>&lt;a href=&quot;http://example.net/&quot;>This link&lt;/a> has no&#xD;&#xA;"/>
-    <codelines content="title attribute.&lt;/p>&#xD;&#xA;"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="If you’re referring to a local resource on the same server, you can use relative paths:"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:CodeBlock">
-    <codelines content="See my [About](/about/) page for details.   &#xD;&#xA;"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="2">
-    <textelements xsi:type="bstrap:Text" text="Inline links tests"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="This is"/>
-    <textelements xsi:type="bstrap:Link" url="http://example.com/" title="Title">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="inline link."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Link" url="http://example.net/" title="">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="has no title attribute."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="See my"/>
-    <textelements xsi:type="bstrap:Link" url="/about/" title="">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="page for details."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="2">
-    <textelements xsi:type="bstrap:Text" text="Reference Links Docs"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Reference-style links use a second set of square brackets, inside which you place a label of your choosing to identify the link:"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:CodeBlock">
-    <codelines content="This is [an example][id] reference-style link.&#xD;&#xA;"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="You can optionally use a space to separate the sets of brackets:"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:CodeBlock">
-    <codelines content="This is [an example] [id] reference-style link.&#xD;&#xA;"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Then, anywhere in the document, you define your link label like this, on a line by itself:"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:CodeBlock">
-    <codelines content="[id]: http://example.com/  &quot;Optional Title Here&quot;&#xD;&#xA;"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="That is:"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:UnOrderedList">
-    <listitems>
-      <listitemelements xsi:type="bstrap:Paragraphe">
-        <textelements xsi:type="bstrap:Text" text="Square brackets containing the link identifier (optionally indented from the left margin using up to three spaces);"/>
-      </listitemelements>
-    </listitems>
-    <listitems>
-      <listitemelements xsi:type="bstrap:Paragraphe">
-        <textelements xsi:type="bstrap:Text" text="followed by a colon;"/>
-      </listitemelements>
-    </listitems>
-    <listitems>
-      <listitemelements xsi:type="bstrap:Paragraphe">
-        <textelements xsi:type="bstrap:Text" text="followed by one or more spaces (or tabs);"/>
-      </listitemelements>
-    </listitems>
-    <listitems>
-      <listitemelements xsi:type="bstrap:Paragraphe">
-        <textelements xsi:type="bstrap:Text" text="followed by the URL for the link;"/>
-      </listitemelements>
-    </listitems>
-    <listitems>
-      <listitemelements xsi:type="bstrap:Paragraphe">
-        <textelements xsi:type="bstrap:Text" text="optionally followed by a title attribute for the link, enclosed in double or single quotes, or enclosed in parentheses."/>
-      </listitemelements>
-    </listitems>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="2">
-    <textelements xsi:type="bstrap:Text" text="Reference Links Tests"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="This is"/>
-    <textelements xsi:type="bstrap:Link">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="reference-style link."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="This is"/>
-    <textelements xsi:type="bstrap:Link">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text=""/>
-    <textelements xsi:type="bstrap:Link">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="reference-style link with space."/>
-    <textelements xsi:type="bstrap:Strong">
-      <textnestedelements xsi:type="bstrap:Text" text="It doesn't work with our parser"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Definitions of the id:"/>
-    <textelements xsi:type="bstrap:Link">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text=": http://example.com/  &quot;Optional Title Here&quot;"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="2">
-    <textelements xsi:type="bstrap:Text" text="References = Link definition Docs"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="When you specify the link with an ID, you must then define this ID."/>
-    <textelements xsi:type="bstrap:Text" text="The definition of the ID is called a"/>
-    <textelements xsi:type="bstrap:Text" text="Reference"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="References can be placed anywhere in your Markdown document. I tend to put them immediately after each paragraph in which they’re used, but if you want, you can put them all at the end of your document, sort of like footnotes."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Link def :"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:CodeBlock">
-    <codelines content="I get 10 times more traffic from [Google] [1] than from&#xD;&#xA;"/>
-    <codelines content="[Yahoo] [2] or [MSN] [3].&#xD;&#xA;"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="References defs :"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:CodeBlock">
-    <codelines content="  [1]: http://google.com/        &quot;Google&quot;&#xD;&#xA;"/>
-    <codelines content="  [2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;&#xD;&#xA;"/>
-    <codelines content="  [3]: http://search.msn.com/    &quot;MSN Search&quot;&#xD;&#xA;"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="2">
-    <textelements xsi:type="bstrap:Text" text="References = Link definition Tests"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="I get 10 times more traffic from"/>
-    <textelements xsi:type="bstrap:Link" url="http://google.com/" title="">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text=""/>
-    <textelements xsi:type="bstrap:Link" url="http://google.com/" title="Google">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="than from"/>
-    <textelements xsi:type="bstrap:Link">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text=""/>
-    <textelements xsi:type="bstrap:Link" url="http://search.yahoo.com/" title="Yahoo Search">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="or"/>
-    <textelements xsi:type="bstrap:Link">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text=""/>
-    <textelements xsi:type="bstrap:Link" url="http://search.msn.com/" title="MSN Search">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="The following three link definitions are equivalent (next line is not visible in final view):"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="This is a link ref with implicit link"/>
-    <textelements xsi:type="bstrap:Link">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Then the definition is (next line is not visible in final view):"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="1">
-    <textelements xsi:type="bstrap:Text" text="Code"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab. For example, given this input:"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="This is a normal paragraph:"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:CodeBlock">
-    <codelines content="This is a code block.&#xA;"/>
-    <codelines content="On several line&#xA;"/>
-    <codelines content="&#xA;"/>
-    <codelines content="And even with a blank line&#xA;"/>
-    <codelines content="&#xA;"/>
-    <codelines content="[link in code](#)&#xA;"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:CodeBlock">
-    <codelines content="Code en debut de ligne&#xD;&#xA;"/>
-    <codelines content="&#xD;&#xA;"/>
-    <codelines content="Avec ````&#xD;&#xA;"/>
-    <codelines content="Comme separateur&#xD;&#xA;"/>
-    <codelines content="  [link in code](#)&#xD;&#xA;"/>
-    <codelines content="&#xD;&#xA;"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="A paragraphe with"/>
-    <textelements xsi:type="bstrap:Text" text="inline code [link in code](#)"/>
-    <textelements xsi:type="bstrap:Text" text="and an end."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="This is a paragraphe."/>
-    <textelements xsi:type="bstrap:Text" text="It continue on this line"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="This is a 2nd paragraphe."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="2">
-    <textelements xsi:type="bstrap:Text" text="Title level 2"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Hello the world."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="2">
-    <textelements xsi:type="bstrap:Text" text="2 Title level 2"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="A line with"/>
-    <textelements xsi:type="bstrap:Strong">
-      <textnestedelements xsi:type="bstrap:Text" text="strong"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="and an"/>
-    <textelements xsi:type="bstrap:Italic">
-      <textnestedelements xsi:type="bstrap:Text" text="italic"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="."/>
-    <textelements xsi:type="bstrap:Text" text="Et aussi un"/>
-    <textelements xsi:type="bstrap:Italic">
-      <textnestedelements xsi:type="bstrap:Text" text="mix"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="A line with double space at the end"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="A normal line."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Title" level="1">
-    <textelements xsi:type="bstrap:Text" text="Links"/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="A paragraph with a"/>
-    <textelements xsi:type="bstrap:Link" url="#" title="">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="not at the end."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Link" url="#" title="">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="at beginning of text."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Try"/>
-    <textelements xsi:type="bstrap:Link" url="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API" title="">
-      <textnestedelements xsi:type="bstrap:Strong">
-        <textnestedelements xsi:type="bstrap:Text" text="strong"/>
-      </textnestedelements>
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Now, try"/>
-    <textelements xsi:type="bstrap:Link" url="https://wiki.eclipse.org/The_Official_Eclipse_FAQs#Workspace_and_Resources_API" title="">
-      <textnestedelements xsi:type="bstrap:Text"/>
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="."/>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="And now an image :"/>
     <textelements xsi:type="bstrap:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="image">
       <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
       <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
       <generalProperties xsi:type="bstrap:Padding" level="5"/>
       <generalProperties xsi:type="bstrap:Border"/>
       <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-    </textelements>
-  </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="And finally a"/>
-    <textelements xsi:type="bstrap:Link" url="#" title="title">
-      <textnestedelements xsi:type="bstrap:Text"/>
+      <imageproperties xsi:type="bstrap:Circle"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="1">
-    <textelements xsi:type="bstrap:Text" text="Title level 1"/>
+    <textelements xsi:type="bstrap:Text" text="Les deux types de sections"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Text" text="En bootstrap, nous transformons les sections en container selon le type de container passer dans les propriétés soit un"/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text="fixconatainer"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text="ou un"/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text="fluidcontainer"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:FluidContainer">
+    <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+    <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+    <generalProperties xsi:type="bstrap:Padding" level="5"/>
+    <generalProperties xsi:type="bstrap:Border"/>
+    <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    <pagecontents xsi:type="bstrap:Title" level="1">
+      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+      <generalProperties xsi:type="bstrap:Margin" level="3" alignement="LEFT"/>
+      <generalProperties xsi:type="bstrap:Padding" level="3"/>
+      <generalProperties xsi:type="bstrap:Border"/>
+      <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+      <textelements xsi:type="bstrap:Text" text="Titre de la section"/>
+    </pagecontents>
+    <pagecontents xsi:type="bstrap:FixContainer">
+      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+      <generalProperties xsi:type="bstrap:Border"/>
+      <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+      <pagecontents xsi:type="bstrap:Title" level="2">
+        <textelements xsi:type="bstrap:Text" text="Titre de la sous section"/>
+      </pagecontents>
+      <pagecontents xsi:type="bstrap:Paragraphe">
+        <textelements xsi:type="bstrap:Text" text="une sous section qui est mis dans un fluid container de bootstrap qui contient également des lists."/>
+      </pagecontents>
+      <pagecontents xsi:type="bstrap:UnOrderedList">
+        <listitems>
+          <listitemelements xsi:type="bstrap:Paragraphe">
+            <textelements xsi:type="bstrap:Text" text="list in section"/>
+          </listitemelements>
+        </listitems>
+        <listitems>
+          <listitemelements xsi:type="bstrap:Paragraphe">
+            <textelements xsi:type="bstrap:Text" text="item 2"/>
+          </listitemelements>
+        </listitems>
+        <listitems>
+          <listitemelements xsi:type="bstrap:Paragraphe">
+            <textelements xsi:type="bstrap:Text" text="item 3"/>
+            <textelements xsi:type="bstrap:Text" text="fin de list"/>
+          </listitemelements>
+        </listitems>
+      </pagecontents>
+      <pagecontents xsi:type="bstrap:FixContainer">
+        <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+        <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+        <generalProperties xsi:type="bstrap:Padding" level="5"/>
+        <generalProperties xsi:type="bstrap:Border"/>
+        <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+        <pagecontents xsi:type="bstrap:Title" level="3">
+          <textelements xsi:type="bstrap:Text" text="Titre de la sous sous section"/>
+        </pagecontents>
+        <pagecontents xsi:type="bstrap:Paragraphe" color="WARNING">
+          <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+          <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+          <generalProperties xsi:type="bstrap:Padding" level="5"/>
+          <generalProperties xsi:type="bstrap:Border"/>
+          <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+          <textelements xsi:type="bstrap:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="image">
+            <imageproperties xsi:type="bstrap:Circle"/>
+          </textelements>
+          <textelements xsi:type="bstrap:Text" text="text du paragraphe"/>
+        </pagecontents>
+      </pagecontents>
+    </pagecontents>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="1">
+    <textelements xsi:type="bstrap:Text" text="Les boutons"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Button Styles"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Button">
+      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+      <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
+      <generalProperties xsi:type="bstrap:Padding" level="2"/>
+      <generalProperties xsi:type="bstrap:Border"/>
+      <textnestedelements xsi:type="bstrap:Text" text="Primary"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Primary"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Secondary"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="SECONDARY"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Success"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="SUCCESS"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Info"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="INFO"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Warning"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="WARNING"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Danger"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="DANGER"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Dark"/>
+      <buttonproperties xsi:type="bstrap:ButtonOutLine" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Light"/>
+      <buttonproperties xsi:type="bstrap:ButtonSpinner"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Link"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="DARK"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Link" url="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" title="">
+      <textnestedelements xsi:type="bstrap:Text" text="Doc bootstrap (un lien avec role button)"/>
+      <buttonproperties xsi:type="bstrap:ButtonLink"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Buttton Size"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Large"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Default"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Small"/>
+      <buttonproperties xsi:type="bstrap:ButtonSize" size="SMALL"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Button States"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Primary Button"/>
+      <buttonproperties xsi:type="bstrap:ButtonSize" size="LARGE"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Active Primary"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:Active"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:Disabled"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:Disabled"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Button">
+      <textnestedelements xsi:type="bstrap:Text" text="Enabled Primary"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="1">
+    <textelements xsi:type="bstrap:Text" text="Les blockquote"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Text" text="Blockquote :"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:BlockQuote">
+    <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+    <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+    <generalProperties xsi:type="bstrap:Padding" level="5"/>
+    <generalProperties xsi:type="bstrap:Border"/>
+    <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    <pagecontents xsi:type="bstrap:BlockQuote">
+      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+      <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+      <generalProperties xsi:type="bstrap:Padding" level="5"/>
+      <generalProperties xsi:type="bstrap:Border"/>
+      <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+      <pagecontents xsi:type="bstrap:Paragraphe" color="WARNING">
+        <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+        <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+        <generalProperties xsi:type="bstrap:Padding" level="5"/>
+        <generalProperties xsi:type="bstrap:Border"/>
+        <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+        <textelements xsi:type="bstrap:Text" text="sub block"/>
+      </pagecontents>
+      <pagecontents xsi:type="bstrap:UnOrderedList">
+        <listitems>
+          <listitemelements xsi:type="bstrap:Paragraphe">
+            <textelements xsi:type="bstrap:Text" text="list in blockquote"/>
+          </listitemelements>
+        </listitems>
+        <listitems>
+          <listitemelements xsi:type="bstrap:Paragraphe">
+            <textelements xsi:type="bstrap:Text" text="item 2"/>
+          </listitemelements>
+        </listitems>
+        <listitems>
+          <listitemelements xsi:type="bstrap:Paragraphe">
+            <textelements xsi:type="bstrap:Text" text="item 3"/>
+            <textelements xsi:type="bstrap:Text" text="end list"/>
+          </listitemelements>
+        </listitems>
+      </pagecontents>
+    </pagecontents>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="1">
+    <textelements xsi:type="bstrap:Text" text="Les listes"/>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
     <textelements xsi:type="bstrap:Text" text="List :"/>
@@ -711,72 +516,210 @@
     </listitems>
     <listproperty xsi:type="bstrap:BasicList"/>
   </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="un paragraphe"/>
-  </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="1">
-    <textelements xsi:type="bstrap:Text" text="Try Citation"/>
+    <textelements xsi:type="bstrap:Text" text="Code en block"/>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Citation :"/>
+    <textelements xsi:type="bstrap:Text" text="Ayant composés que des codeLine, un codeLine peut être réservé pour les propriétés générales qu’ils peuvent avoir. Les propriétés sont toujours précédés par properties:"/>
   </pagecontents>
-  <pagecontents xsi:type="bstrap:BlockQuote">
+  <pagecontents xsi:type="bstrap:CodeBlock">
     <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
     <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
     <generalProperties xsi:type="bstrap:Padding" level="5"/>
     <generalProperties xsi:type="bstrap:Border"/>
     <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-    <pagecontents xsi:type="bstrap:Paragraphe">
-      <textelements xsi:type="bstrap:Text" text="Start citation"/>
-    </pagecontents>
-    <pagecontents xsi:type="bstrap:BlockQuote">
-      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
-      <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
-      <generalProperties xsi:type="bstrap:Padding" level="5"/>
-      <generalProperties xsi:type="bstrap:Border"/>
-      <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-      <pagecontents xsi:type="bstrap:Paragraphe">
-        <textelements xsi:type="bstrap:Text" text="double citation"/>
-      </pagecontents>
-      <pagecontents xsi:type="bstrap:UnOrderedList">
-        <listitems>
-          <listitemelements xsi:type="bstrap:Paragraphe">
-            <textelements xsi:type="bstrap:Text" text="list in citation"/>
-          </listitemelements>
-        </listitems>
-        <listitems>
-          <listitemelements xsi:type="bstrap:Paragraphe">
-            <textelements xsi:type="bstrap:Text" text="item 2"/>
-          </listitemelements>
-        </listitems>
-        <listitems>
-          <listitemelements xsi:type="bstrap:Paragraphe">
-            <textelements xsi:type="bstrap:Text" text="item 3"/>
-            <textelements xsi:type="bstrap:Text" text="fin de list"/>
-          </listitemelements>
-        </listitems>
-      </pagecontents>
-    </pagecontents>
+    <codelines content="Ce block contient une ligne de propriétés qui n'est j'amais affichée après la géneration vers bootstrap.&#xA;"/>
+    <codelines content="Une autre ligne du bloc&#xA;"/>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="1">
-    <textelements xsi:type="bstrap:Text" text="Titre avec un"/>
-    <textelements xsi:type="bstrap:Link" url="#" title="">
-      <textnestedelements xsi:type="bstrap:Text"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="et un"/>
-    <textelements xsi:type="bstrap:Italic">
-      <textnestedelements xsi:type="bstrap:Text" text="italic"/>
-    </textelements>
-    <textelements xsi:type="bstrap:Text" text="*"/>
+    <textelements xsi:type="bstrap:Text" text="Navigation"/>
   </pagecontents>
-  <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Un dernier paragraphe."/>
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Basic navigation"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Navigation">
+    <listelement xsi:type="bstrap:UnOrderedList">
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+    </listelement>
+    <navbar xsi:type="bstrap:Basic"/>
+    <links>
+      <textnestedelements xsi:type="bstrap:Text" text=" Vertical navigation"/>
+      <linkproperties xsi:type="bstrap:LinkBrand"/>
+    </links>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Brand navigation"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Navigation">
+    <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+    <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+    <generalProperties xsi:type="bstrap:Padding" level="5"/>
+    <generalProperties xsi:type="bstrap:Border"/>
+    <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    <listelement xsi:type="bstrap:UnOrderedList">
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+    </listelement>
+    <navbar xsi:type="bstrap:Brand"/>
+    <links>
+      <textnestedelements xsi:type="bstrap:Text" text="Navbar brand"/>
+      <linkproperties xsi:type="bstrap:LinkBrand"/>
+    </links>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Vertical navigation"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Navigation">
+    <listelement xsi:type="bstrap:UnOrderedList">
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+    </listelement>
+    <navbar xsi:type="bstrap:Vertical"/>
+    <links>
+      <textnestedelements xsi:type="bstrap:Text" text=" Vertical navigation"/>
+      <linkproperties xsi:type="bstrap:LinkBrand"/>
+    </links>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="2">
+    <textelements xsi:type="bstrap:Text" text="Centred navigation"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Navigation">
+    <listelement xsi:type="bstrap:UnOrderedList">
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+      <listitems>
+        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+      </listitems>
+    </listelement>
+    <navbar xsi:type="bstrap:Centered"/>
+    <links>
+      <textnestedelements xsi:type="bstrap:Text" text=" Centred navigation"/>
+      <linkproperties xsi:type="bstrap:LinkBrand"/>
+    </links>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="1">
-    <textelements xsi:type="bstrap:Text" text="Lines"/>
+    <textelements xsi:type="bstrap:Text" text="Table"/>
   </pagecontents>
-  <pagecontents xsi:type="bstrap:HorizontalLine"/>
-  <pagecontents xsi:type="bstrap:HorizontalLine"/>
-  <pagecontents xsi:type="bstrap:HorizontalLine"/>
-  <pagecontents xsi:type="bstrap:HorizontalLine"/>
+  <pagecontents xsi:type="bstrap:Table">
+    <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+    <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+    <generalProperties xsi:type="bstrap:Padding" level="5"/>
+    <generalProperties xsi:type="bstrap:Border"/>
+    <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    <tablesections xsi:type="bstrap:Thead">
+      <tablerows>
+        <tablecells alignment="LEFT" span="1">
+          <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+          <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+          <generalProperties xsi:type="bstrap:Padding" level="5"/>
+          <generalProperties xsi:type="bstrap:Border"/>
+          <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+          <textelements xsi:type="bstrap:Text" text="Syntax"/>
+        </tablecells>
+        <tablecells alignment="LEFT" span="1">
+          <textelements xsi:type="bstrap:Text" text="Description"/>
+        </tablecells>
+        <generals xsi:type="bstrap:Background" color="PRIMARY"/>
+        <generals xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+        <generals xsi:type="bstrap:Padding" level="5"/>
+        <generals xsi:type="bstrap:Border"/>
+        <generals xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+      </tablerows>
+      <generals xsi:type="bstrap:Background" color="PRIMARY"/>
+      <generals xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+      <generals xsi:type="bstrap:Padding" level="5"/>
+      <generals xsi:type="bstrap:Border"/>
+      <generals xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    </tablesections>
+    <tablesections xsi:type="bstrap:Tbody">
+      <tablerows>
+        <tablecells alignment="LEFT" span="1">
+          <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+          <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+          <generalProperties xsi:type="bstrap:Padding" level="5"/>
+          <generalProperties xsi:type="bstrap:Border"/>
+          <generalProperties xsi:type="bstrap:ColoredBorder" color="INFO"/>
+          <textelements xsi:type="bstrap:Text" text="Header"/>
+        </tablecells>
+        <tablecells alignment="LEFT" span="1">
+          <textelements xsi:type="bstrap:Text" text="Title"/>
+        </tablecells>
+        <generals xsi:type="bstrap:Background" color="PRIMARY"/>
+        <generals xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+        <generals xsi:type="bstrap:Padding" level="5"/>
+        <generals xsi:type="bstrap:Border"/>
+        <generals xsi:type="bstrap:ColoredBorder" color="INFO"/>
+      </tablerows>
+      <tablerows>
+        <tablecells alignment="LEFT" span="1">
+          <textelements xsi:type="bstrap:Text" text="Paragraph"/>
+        </tablecells>
+        <tablecells alignment="LEFT" span="1">
+          <textelements xsi:type="bstrap:Text" text="Text"/>
+        </tablecells>
+      </tablerows>
+      <generals xsi:type="bstrap:Background" color="PRIMARY"/>
+      <generals xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+      <generals xsi:type="bstrap:Padding" level="5"/>
+      <generals xsi:type="bstrap:Border"/>
+      <generals xsi:type="bstrap:ColoredBorder" color="INFO"/>
+    </tablesections>
+    <tableproperties xsi:type="bstrap:DarkTable"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Table">
+    <tablesections xsi:type="bstrap:Thead">
+      <tablerows>
+        <tablecells alignment="LEFT" span="1">
+          <textelements xsi:type="bstrap:Text" text="Syntax"/>
+        </tablecells>
+        <tablecells alignment="LEFT" span="1">
+          <textelements xsi:type="bstrap:Text" text="Description"/>
+        </tablecells>
+      </tablerows>
+    </tablesections>
+    <tablesections xsi:type="bstrap:Tbody">
+      <tablerows>
+        <tablecells alignment="LEFT" span="1">
+          <textelements xsi:type="bstrap:Text" text="Header"/>
+        </tablecells>
+        <tablecells alignment="LEFT" span="1">
+          <textelements xsi:type="bstrap:Text" text="Title"/>
+        </tablecells>
+      </tablerows>
+      <tablerows>
+        <tablecells alignment="LEFT" span="1">
+          <textelements xsi:type="bstrap:Text" text="Paragraph"/>
+        </tablecells>
+        <tablecells alignment="LEFT" span="1">
+          <textelements xsi:type="bstrap:Text" text="Text"/>
+        </tablecells>
+      </tablerows>
+    </tablesections>
+  </pagecontents>
 </bstrap:Page>

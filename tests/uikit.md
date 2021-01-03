@@ -1,35 +1,63 @@
-# properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center},titleSize:small)Title1
+# Dans cette page se une description des concepts basic de la syntaxe markdown vers une page web Bootstrap.
 
-properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center})
-Ceci est le text d'un paragraph `le text d'un code`
+#Les titres
 
-## une **image**
+Pour un titre les propriétés sont représentées par properties:(propriété:valeur,propriété:{propVal1:val1,propVal2:val2}) sur la même ligne avant le text du titre un titre peut avoir une couleur, un background, un margin et un padding avec une taille un alignment et une propriété spécifique **titleSize**.
+
+# properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center},titleSize:small) Un titre taille 1 avec une size small
+
+## properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center},titleSize:large) Un titre taille 2 avec une size large
+
+### properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center}) Un titre taille 2 sans size
+
+
+# Un paragrapgh
+
+Un paragraph peut aussi avoir toutes les propriétés générales.
+
+properties:(color:warning,backbackground:muted,margin:{size:large,alignment:left},padding:{size:small,alignment:center})
+Ceci est le text d'un paragraph `contenant un élément code` et qui a une couleur warning un background muted un margin et un padding
+
+# Les Liens
+
+Un lien en *Uikit* en plus des propriétés générales peut aussi avoir trois types spécifiques et est représenté comme suit [(properties) title](url)
+
+## un lien avec la propriété **HeadingModifier** de uikit
+
+### Un Titre avec un  [properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:headingModifier})lien vers BootstrapW3school](https://www.w3schools.com/bootstrap4/default.asp)
+
+### un lien avec la propriété **MuteLink** de uikit
+
+[properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:muteLink})Tables Extension](https://github.com/vsch/flexmark-java/wiki/Tables-Extension)
+
+### un lien avec la propriété **TextModifier** de uikit
+
+[properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:textModifier})Tables Extension](https://github.com/vsch/flexmark-java/wiki/Tables-Extension)
+
+# Les liens avec références
+
+Les liens avec référence sont directement transformés en des liens sans référence dès la transformation d'un modèle *simplemarkdown* vers un modèle *usd* car les références sont retrouvées et mis dans chaque lien lui référençant. 
+
+I get 10 times more traffic from [Google] [1] than from
+[Yahoo] [2] or [MSN] [3].
+
+  [1]: http://google.com/        "Google"
+  [2]: http://search.yahoo.com/  "Yahoo Search"
+  [3]: http://search.msn.com/    "MSN Search"
+  
+# Les images
 
 ![properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center},imageProperty)image](https://www.eclipse.org/images/egg-incubation.png)
 
-## un *lien* 
-
-### un lien avec la propriété **MuteLink** de uikit
-[properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:muteLink})Tables Extension22](https://github.com/vsch/flexmark-java/wiki/Tables-Extension)
-
-### un lien avec la propriété **HeadingModifier** de uikit
-
-[properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:headingModifier})Tables Extension22](https://github.com/vsch/flexmark-java/wiki/Tables-Extension)
-
-### un lien avec la propriété **TextModifier** de uikit
-[properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:textModifier})Tables Extension22](https://github.com/vsch/flexmark-java/wiki/Tables-Extension)
-
-Ceci est le text d'un paragraph avec un **properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center})strong** et un *properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center})italic*
-
-
-# My First Uikit Container
+# Les Sections
 
 > Start section
-> # Titre de la section
+> properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center})
+> ## Titre de la section
 > Ce paragraph est dans la prémière section
 > > Start section
-> > ## Titre de la sous section
-> > - list in citation
+> > ### Titre de la sous section
+> > - list in section
 > > - item 2
 > > - item 3
 > > fin de list
@@ -38,11 +66,11 @@ Ceci est le text d'un paragraph avec un **properties:(color:warning,backbackgrou
 > > > text du paragraphe
 
 
-# Des boutons
+# Les boutons
 
 ## Button Styles
 
-[(color:secondary,background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center})[btn]Primary](#)
+[properties:(color:secondary,background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center})[btn]Primary](#)
 [[btn-muted]muted](#)
 [[btn-secondary]Secondary](#)
 [[btn-success]Success](#)
