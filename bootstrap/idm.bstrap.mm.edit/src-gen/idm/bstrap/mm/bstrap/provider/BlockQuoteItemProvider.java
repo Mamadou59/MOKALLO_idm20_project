@@ -189,6 +189,9 @@ public class BlockQuoteItemProvider extends TextPageContentItemProvider {
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BLOCK_QUOTE__PAGECONTENTS,
 				BstrapFactory.eINSTANCE.createHorizontalLine()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BLOCK_QUOTE__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createSpan()));
 	}
 
 }

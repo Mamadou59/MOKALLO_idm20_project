@@ -3,7 +3,14 @@
 package idm.bstrap.mm.bstrap.util;
 
 import idm.bstrap.mm.bstrap.Active;
+import idm.bstrap.mm.bstrap.AlertAnimated;
+import idm.bstrap.mm.bstrap.AlertLink;
+import idm.bstrap.mm.bstrap.AlertProperty;
+import idm.bstrap.mm.bstrap.AlertStyle;
 import idm.bstrap.mm.bstrap.Background;
+import idm.bstrap.mm.bstrap.BadgePill;
+import idm.bstrap.mm.bstrap.BadgeProperty;
+import idm.bstrap.mm.bstrap.BadgeStyle;
 import idm.bstrap.mm.bstrap.Basic;
 import idm.bstrap.mm.bstrap.BasicList;
 import idm.bstrap.mm.bstrap.BasicTable;
@@ -71,6 +78,7 @@ import idm.bstrap.mm.bstrap.Paragraphe;
 import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
+import idm.bstrap.mm.bstrap.Span;
 import idm.bstrap.mm.bstrap.StripedRows;
 import idm.bstrap.mm.bstrap.Strong;
 import idm.bstrap.mm.bstrap.Table;
@@ -1219,6 +1227,108 @@ public class BstrapSwitch<T> extends Switch<T> {
 				result = caseButtonProperty(buttonSpinner);
 			if (result == null)
 				result = casePropertyClass(buttonSpinner);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.SPAN: {
+			Span span = (Span) theEObject;
+			T result = caseSpan(span);
+			if (result == null)
+				result = caseTextContainable(span);
+			if (result == null)
+				result = caseContainableTextElement(span);
+			if (result == null)
+				result = caseTextNested(span);
+			if (result == null)
+				result = caseTextNestedElement(span);
+			if (result == null)
+				result = caseTextElements(span);
+			if (result == null)
+				result = caseTextPageContent(span);
+			if (result == null)
+				result = caseListItemElement(span);
+			if (result == null)
+				result = casePageContent(span);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BADGE_PROPERTY: {
+			BadgeProperty badgeProperty = (BadgeProperty) theEObject;
+			T result = caseBadgeProperty(badgeProperty);
+			if (result == null)
+				result = casePropertyClass(badgeProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BADGE_STYLE: {
+			BadgeStyle badgeStyle = (BadgeStyle) theEObject;
+			T result = caseBadgeStyle(badgeStyle);
+			if (result == null)
+				result = caseBadgeProperty(badgeStyle);
+			if (result == null)
+				result = casePropertyClass(badgeStyle);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.BADGE_PILL: {
+			BadgePill badgePill = (BadgePill) theEObject;
+			T result = caseBadgePill(badgePill);
+			if (result == null)
+				result = caseBadgeProperty(badgePill);
+			if (result == null)
+				result = casePropertyClass(badgePill);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.ALERT_PROPERTY: {
+			AlertProperty alertProperty = (AlertProperty) theEObject;
+			T result = caseAlertProperty(alertProperty);
+			if (result == null)
+				result = caseGeneral(alertProperty);
+			if (result == null)
+				result = casePropertyClass(alertProperty);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.ALERT_STYLE: {
+			AlertStyle alertStyle = (AlertStyle) theEObject;
+			T result = caseAlertStyle(alertStyle);
+			if (result == null)
+				result = caseAlertProperty(alertStyle);
+			if (result == null)
+				result = caseGeneral(alertStyle);
+			if (result == null)
+				result = casePropertyClass(alertStyle);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.ALERT_ANIMATED: {
+			AlertAnimated alertAnimated = (AlertAnimated) theEObject;
+			T result = caseAlertAnimated(alertAnimated);
+			if (result == null)
+				result = caseAlertProperty(alertAnimated);
+			if (result == null)
+				result = caseGeneral(alertAnimated);
+			if (result == null)
+				result = casePropertyClass(alertAnimated);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case BstrapPackage.ALERT_LINK: {
+			AlertLink alertLink = (AlertLink) theEObject;
+			T result = caseAlertLink(alertLink);
+			if (result == null)
+				result = caseLinkProperty(alertLink);
+			if (result == null)
+				result = casePropertyClass(alertLink);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -2590,6 +2700,126 @@ public class BstrapSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseButtonSpinner(ButtonSpinner object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Span</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Span</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSpan(Span object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Badge Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Badge Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBadgeProperty(BadgeProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Badge Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Badge Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBadgeStyle(BadgeStyle object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Badge Pill</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Badge Pill</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBadgePill(BadgePill object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Alert Property</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Alert Property</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAlertProperty(AlertProperty object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Alert Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Alert Style</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAlertStyle(AlertStyle object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Alert Animated</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Alert Animated</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAlertAnimated(AlertAnimated object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Alert Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Alert Link</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAlertLink(AlertLink object) {
 		return null;
 	}
 

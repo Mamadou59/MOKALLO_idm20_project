@@ -152,6 +152,9 @@ public class TextContainableItemProvider extends ContainableTextElementItemProvi
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createItalic()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
+				BstrapFactory.eINSTANCE.createSpan()));
 	}
 
 }

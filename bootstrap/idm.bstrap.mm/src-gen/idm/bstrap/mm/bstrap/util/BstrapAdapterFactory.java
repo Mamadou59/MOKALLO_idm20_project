@@ -3,7 +3,14 @@
 package idm.bstrap.mm.bstrap.util;
 
 import idm.bstrap.mm.bstrap.Active;
+import idm.bstrap.mm.bstrap.AlertAnimated;
+import idm.bstrap.mm.bstrap.AlertLink;
+import idm.bstrap.mm.bstrap.AlertProperty;
+import idm.bstrap.mm.bstrap.AlertStyle;
 import idm.bstrap.mm.bstrap.Background;
+import idm.bstrap.mm.bstrap.BadgePill;
+import idm.bstrap.mm.bstrap.BadgeProperty;
+import idm.bstrap.mm.bstrap.BadgeStyle;
 import idm.bstrap.mm.bstrap.Basic;
 import idm.bstrap.mm.bstrap.BasicList;
 import idm.bstrap.mm.bstrap.BasicTable;
@@ -71,6 +78,7 @@ import idm.bstrap.mm.bstrap.Paragraphe;
 import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
+import idm.bstrap.mm.bstrap.Span;
 import idm.bstrap.mm.bstrap.StripedRows;
 import idm.bstrap.mm.bstrap.Strong;
 import idm.bstrap.mm.bstrap.Table;
@@ -609,6 +617,46 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseButtonSpinner(ButtonSpinner object) {
 			return createButtonSpinnerAdapter();
+		}
+
+		@Override
+		public Adapter caseSpan(Span object) {
+			return createSpanAdapter();
+		}
+
+		@Override
+		public Adapter caseBadgeProperty(BadgeProperty object) {
+			return createBadgePropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseBadgeStyle(BadgeStyle object) {
+			return createBadgeStyleAdapter();
+		}
+
+		@Override
+		public Adapter caseBadgePill(BadgePill object) {
+			return createBadgePillAdapter();
+		}
+
+		@Override
+		public Adapter caseAlertProperty(AlertProperty object) {
+			return createAlertPropertyAdapter();
+		}
+
+		@Override
+		public Adapter caseAlertStyle(AlertStyle object) {
+			return createAlertStyleAdapter();
+		}
+
+		@Override
+		public Adapter caseAlertAnimated(AlertAnimated object) {
+			return createAlertAnimatedAdapter();
+		}
+
+		@Override
+		public Adapter caseAlertLink(AlertLink object) {
+			return createAlertLinkAdapter();
 		}
 
 		@Override
@@ -1901,6 +1949,118 @@ public class BstrapAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createButtonSpinnerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.Span <em>Span</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.Span
+	 * @generated
+	 */
+	public Adapter createSpanAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.BadgeProperty <em>Badge Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.BadgeProperty
+	 * @generated
+	 */
+	public Adapter createBadgePropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.BadgeStyle <em>Badge Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.BadgeStyle
+	 * @generated
+	 */
+	public Adapter createBadgeStyleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.BadgePill <em>Badge Pill</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.BadgePill
+	 * @generated
+	 */
+	public Adapter createBadgePillAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.AlertProperty <em>Alert Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.AlertProperty
+	 * @generated
+	 */
+	public Adapter createAlertPropertyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.AlertStyle <em>Alert Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.AlertStyle
+	 * @generated
+	 */
+	public Adapter createAlertStyleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.AlertAnimated <em>Alert Animated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.AlertAnimated
+	 * @generated
+	 */
+	public Adapter createAlertAnimatedAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link idm.bstrap.mm.bstrap.AlertLink <em>Alert Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see idm.bstrap.mm.bstrap.AlertLink
+	 * @generated
+	 */
+	public Adapter createAlertLinkAdapter() {
 		return null;
 	}
 

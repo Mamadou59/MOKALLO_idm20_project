@@ -64,6 +64,7 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 			childrenFeatures.add(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS);
 			childrenFeatures.add(BstrapPackage.Literals.LINK__LINKPROPERTIES);
 			childrenFeatures.add(BstrapPackage.Literals.LINK__BUTTONPROPERTIES);
+			childrenFeatures.add(BstrapPackage.Literals.LINK__BADGEPROPERTIES);
 		}
 		return childrenFeatures;
 	}
@@ -130,6 +131,7 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 		case BstrapPackage.LINK__TEXTNESTEDELEMENTS:
 		case BstrapPackage.LINK__LINKPROPERTIES:
 		case BstrapPackage.LINK__BUTTONPROPERTIES:
+		case BstrapPackage.LINK__BADGEPROPERTIES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -159,8 +161,14 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createItalic()));
 
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
+				BstrapFactory.eINSTANCE.createSpan()));
+
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__LINKPROPERTIES,
 				BstrapFactory.eINSTANCE.createLinkBrand()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__LINKPROPERTIES,
+				BstrapFactory.eINSTANCE.createAlertLink()));
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__BUTTONPROPERTIES,
 				BstrapFactory.eINSTANCE.createButtonStyle()));
@@ -182,6 +190,12 @@ public class LinkItemProvider extends UrlBasedLinkItemProvider {
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__BUTTONPROPERTIES,
 				BstrapFactory.eINSTANCE.createButtonSpinner()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__BADGEPROPERTIES,
+				BstrapFactory.eINSTANCE.createBadgeStyle()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.LINK__BADGEPROPERTIES,
+				BstrapFactory.eINSTANCE.createBadgePill()));
 	}
 
 }

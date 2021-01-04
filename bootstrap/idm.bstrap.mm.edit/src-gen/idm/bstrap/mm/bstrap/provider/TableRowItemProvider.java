@@ -169,6 +169,12 @@ public class TableRowItemProvider extends ItemProviderAdapter implements IEditin
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TABLE_ROW__GENERALS,
 				BstrapFactory.eINSTANCE.createColoredBorder()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TABLE_ROW__GENERALS,
+				BstrapFactory.eINSTANCE.createAlertStyle()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TABLE_ROW__GENERALS,
+				BstrapFactory.eINSTANCE.createAlertAnimated()));
 	}
 
 	/**

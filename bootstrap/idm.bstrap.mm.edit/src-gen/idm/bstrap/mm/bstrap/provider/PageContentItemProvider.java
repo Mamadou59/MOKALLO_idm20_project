@@ -164,6 +164,12 @@ public class PageContentItemProvider extends ItemProviderAdapter implements IEdi
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE_CONTENT__GENERAL_PROPERTIES,
 				BstrapFactory.eINSTANCE.createColoredBorder()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE_CONTENT__GENERAL_PROPERTIES,
+				BstrapFactory.eINSTANCE.createAlertStyle()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE_CONTENT__GENERAL_PROPERTIES,
+				BstrapFactory.eINSTANCE.createAlertAnimated()));
 	}
 
 	/**

@@ -4,7 +4,7 @@ package idm.bstrap.mm.bstrap.provider;
 
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
-import idm.bstrap.mm.bstrap.Button;
+import idm.bstrap.mm.bstrap.Span;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,19 +18,19 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.Button} object.
+ * This is the item provider adapter for a {@link idm.bstrap.mm.bstrap.Span} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ButtonItemProvider extends ContainableTextElementItemProvider {
+public class SpanItemProvider extends TextContainableItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ButtonItemProvider(AdapterFactory adapterFactory) {
+	public SpanItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,8 +61,7 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS);
-			childrenFeatures.add(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES);
+			childrenFeatures.add(BstrapPackage.Literals.SPAN__BADGEPROPERTIES);
 		}
 		return childrenFeatures;
 	}
@@ -81,14 +80,14 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 	}
 
 	/**
-	 * This returns Button.gif.
+	 * This returns Span.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Button"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Span"));
 	}
 
 	/**
@@ -109,7 +108,7 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Button_type");
+		return getString("_UI_Span_type");
 	}
 
 	/**
@@ -123,9 +122,8 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Button.class)) {
-		case BstrapPackage.BUTTON__TEXTNESTEDELEMENTS:
-		case BstrapPackage.BUTTON__BUTTONPROPERTIES:
+		switch (notification.getFeatureID(Span.class)) {
+		case BstrapPackage.SPAN__BADGEPROPERTIES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -143,41 +141,11 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
-				BstrapFactory.eINSTANCE.createText()));
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.SPAN__BADGEPROPERTIES,
+				BstrapFactory.eINSTANCE.createBadgeStyle()));
 
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
-				BstrapFactory.eINSTANCE.createCode()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
-				BstrapFactory.eINSTANCE.createStrong()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
-				BstrapFactory.eINSTANCE.createItalic()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
-				BstrapFactory.eINSTANCE.createSpan()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
-				BstrapFactory.eINSTANCE.createButtonStyle()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
-				BstrapFactory.eINSTANCE.createButtonSize()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
-				BstrapFactory.eINSTANCE.createButtonLink()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
-				BstrapFactory.eINSTANCE.createDisabled()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
-				BstrapFactory.eINSTANCE.createActive()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
-				BstrapFactory.eINSTANCE.createButtonOutLine()));
-
-		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
-				BstrapFactory.eINSTANCE.createButtonSpinner()));
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.SPAN__BADGEPROPERTIES,
+				BstrapFactory.eINSTANCE.createBadgePill()));
 	}
 
 }

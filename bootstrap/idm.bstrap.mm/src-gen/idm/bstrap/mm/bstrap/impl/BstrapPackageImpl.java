@@ -3,8 +3,15 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.Active;
+import idm.bstrap.mm.bstrap.AlertAnimated;
+import idm.bstrap.mm.bstrap.AlertLink;
+import idm.bstrap.mm.bstrap.AlertProperty;
+import idm.bstrap.mm.bstrap.AlertStyle;
 import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.Background;
+import idm.bstrap.mm.bstrap.BadgePill;
+import idm.bstrap.mm.bstrap.BadgeProperty;
+import idm.bstrap.mm.bstrap.BadgeStyle;
 import idm.bstrap.mm.bstrap.Basic;
 import idm.bstrap.mm.bstrap.BasicList;
 import idm.bstrap.mm.bstrap.BasicTable;
@@ -74,6 +81,7 @@ import idm.bstrap.mm.bstrap.PropertyClass;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
 import idm.bstrap.mm.bstrap.Size;
+import idm.bstrap.mm.bstrap.Span;
 import idm.bstrap.mm.bstrap.StripedRows;
 import idm.bstrap.mm.bstrap.Strong;
 import idm.bstrap.mm.bstrap.Table;
@@ -748,6 +756,62 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * @generated
 	 */
 	private EClass buttonSpinnerEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass spanEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass badgePropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass badgeStyleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass badgePillEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass alertPropertyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass alertStyleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass alertAnimatedEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass alertLinkEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1685,6 +1749,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLink_Badgeproperties() {
+		return (EReference) linkEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStrong() {
 		return strongEClass;
 	}
@@ -2045,6 +2118,96 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSpan() {
+		return spanEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSpan_Badgeproperties() {
+		return (EReference) spanEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBadgeProperty() {
+		return badgePropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBadgeStyle() {
+		return badgeStyleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBadgeStyle_Color() {
+		return (EAttribute) badgeStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBadgePill() {
+		return badgePillEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAlertProperty() {
+		return alertPropertyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAlertStyle() {
+		return alertStyleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAlertAnimated() {
+		return alertAnimatedEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAlertLink() {
+		return alertLinkEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getColor() {
 		return colorEEnum;
 	}
@@ -2253,6 +2416,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		linkEClass = createEClass(LINK);
 		createEReference(linkEClass, LINK__LINKPROPERTIES);
 		createEReference(linkEClass, LINK__BUTTONPROPERTIES);
+		createEReference(linkEClass, LINK__BADGEPROPERTIES);
 
 		strongEClass = createEClass(STRONG);
 
@@ -2320,6 +2484,24 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		createEAttribute(buttonOutLineEClass, BUTTON_OUT_LINE__COLOR);
 
 		buttonSpinnerEClass = createEClass(BUTTON_SPINNER);
+
+		spanEClass = createEClass(SPAN);
+		createEReference(spanEClass, SPAN__BADGEPROPERTIES);
+
+		badgePropertyEClass = createEClass(BADGE_PROPERTY);
+
+		badgeStyleEClass = createEClass(BADGE_STYLE);
+		createEAttribute(badgeStyleEClass, BADGE_STYLE__COLOR);
+
+		badgePillEClass = createEClass(BADGE_PILL);
+
+		alertPropertyEClass = createEClass(ALERT_PROPERTY);
+
+		alertStyleEClass = createEClass(ALERT_STYLE);
+
+		alertAnimatedEClass = createEClass(ALERT_ANIMATED);
+
+		alertLinkEClass = createEClass(ALERT_LINK);
 
 		// Create enums
 		colorEEnum = createEEnum(COLOR);
@@ -2447,6 +2629,14 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		horizontalLineEClass.getESuperTypes().add(this.getTextPageContent());
 		buttonOutLineEClass.getESuperTypes().add(this.getButtonProperty());
 		buttonSpinnerEClass.getESuperTypes().add(this.getButtonProperty());
+		spanEClass.getESuperTypes().add(this.getTextContainable());
+		badgePropertyEClass.getESuperTypes().add(this.getPropertyClass());
+		badgeStyleEClass.getESuperTypes().add(this.getBadgeProperty());
+		badgePillEClass.getESuperTypes().add(this.getBadgeProperty());
+		alertPropertyEClass.getESuperTypes().add(this.getGeneral());
+		alertStyleEClass.getESuperTypes().add(this.getAlertProperty());
+		alertAnimatedEClass.getESuperTypes().add(this.getAlertProperty());
+		alertLinkEClass.getESuperTypes().add(this.getLinkProperty());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2700,6 +2890,9 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		initEReference(getLink_Buttonproperties(), this.getButtonProperty(), null, "buttonproperties", null, 0, -1,
 				Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLink_Badgeproperties(), this.getBadgeProperty(), null, "badgeproperties", null, 0, -1,
+				Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(strongEClass, Strong.class, "Strong", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2808,6 +3001,34 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(buttonSpinnerEClass, ButtonSpinner.class, "ButtonSpinner", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(spanEClass, Span.class, "Span", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSpan_Badgeproperties(), this.getBadgeProperty(), null, "badgeproperties", null, 0, -1,
+				Span.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(badgePropertyEClass, BadgeProperty.class, "BadgeProperty", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(badgeStyleEClass, BadgeStyle.class, "BadgeStyle", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBadgeStyle_Color(), this.getColor(), "color", "LIGHT", 0, 1, BadgeStyle.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(badgePillEClass, BadgePill.class, "BadgePill", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(alertPropertyEClass, AlertProperty.class, "AlertProperty", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(alertStyleEClass, AlertStyle.class, "AlertStyle", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(alertAnimatedEClass, AlertAnimated.class, "AlertAnimated", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(alertLinkEClass, AlertLink.class, "AlertLink", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
