@@ -6,6 +6,25 @@
   <pagecontents xsi:type="bstrap:Title" level="1">
     <textelements xsi:type="bstrap:Text" text="Les Propriété générales en Bootstrap"/>
   </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="1">
+    <textelements xsi:type="bstrap:Text" text="Les Badge"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Text" text="Ceci est le text d'un badge avec les propriétés badge primary et badge pill"/>
+    <textelements xsi:type="bstrap:Span">
+      <textnestedelements xsi:type="bstrap:Text" text=" Badge whitout URL"/>
+      <badgeproperties xsi:type="bstrap:BadgeStyle" color="PRIMARY"/>
+      <badgeproperties xsi:type="bstrap:BadgePill"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Text" text="Ceci est un lien en badge avec les propriétés badge primary et badge pill"/>
+    <textelements xsi:type="bstrap:Link" url="url" title="">
+      <textnestedelements xsi:type="bstrap:Text" text=" Badge with URL"/>
+      <badgeproperties xsi:type="bstrap:BadgeStyle" color="PRIMARY"/>
+      <badgeproperties xsi:type="bstrap:BadgePill"/>
+    </textelements>
+  </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
     <textelements xsi:type="bstrap:Text" text="un élément peut avoir une couleur, un background, un margin et un padding avec une taille un alignment et une bordure colorée ou non."/>
   </pagecontents>
@@ -37,6 +56,8 @@
     <generalProperties xsi:type="bstrap:Padding" level="5"/>
     <generalProperties xsi:type="bstrap:Border"/>
     <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    <generalProperties xsi:type="bstrap:AlertAnimated"/>
+    <generalProperties xsi:type="bstrap:AlertStyle" color="SUCCESS"/>
     <textelements xsi:type="bstrap:Text" text="Un titre taille 1 avec un display 1"/>
     <emphasis xsi:type="bstrap:ItalicProperty"/>
     <displayproperties xsi:type="bstrap:Display1"/>
@@ -80,6 +101,8 @@
     <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
     <generalProperties xsi:type="bstrap:Padding" level="2"/>
     <generalProperties xsi:type="bstrap:Border"/>
+    <generalProperties xsi:type="bstrap:AlertAnimated"/>
+    <generalProperties xsi:type="bstrap:AlertStyle" color="SUCCESS"/>
     <textelements xsi:type="bstrap:Text" text="Ce paragraph"/>
     <textelements xsi:type="bstrap:Code" text="contient un élément code"/>
     <textelements xsi:type="bstrap:Text" text="et à une couleur dark, un backround primary, un margin, un padding, une bordure non clorée et un emphasis bold."/>
@@ -258,6 +281,8 @@
         <generalProperties xsi:type="bstrap:Padding" level="5"/>
         <generalProperties xsi:type="bstrap:Border"/>
         <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+        <generalProperties xsi:type="bstrap:AlertAnimated"/>
+        <generalProperties xsi:type="bstrap:AlertStyle" color="SUCCESS"/>
         <pagecontents xsi:type="bstrap:Title" level="3">
           <textelements xsi:type="bstrap:Text" text="Titre de la sous sous section"/>
         </pagecontents>
@@ -320,8 +345,8 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Light"/>
-      <buttonproperties xsi:type="bstrap:ButtonSpinner"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle"/>
+      <buttonproperties xsi:type="bstrap:ButtonSpinner"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Link"/>
@@ -345,8 +370,8 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Small"/>
-      <buttonproperties xsi:type="bstrap:ButtonSize" size="SMALL"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:ButtonSize" size="SMALL"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="2">
@@ -360,13 +385,13 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Active Primary"/>
-      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
       <buttonproperties xsi:type="bstrap:Active"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>
-      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
       <buttonproperties xsi:type="bstrap:Disabled"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>
@@ -390,6 +415,8 @@
     <generalProperties xsi:type="bstrap:Padding" level="5"/>
     <generalProperties xsi:type="bstrap:Border"/>
     <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    <generalProperties xsi:type="bstrap:AlertAnimated"/>
+    <generalProperties xsi:type="bstrap:AlertStyle" color="SUCCESS"/>
     <pagecontents xsi:type="bstrap:BlockQuote">
       <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
       <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
@@ -436,6 +463,8 @@
     <generalProperties xsi:type="bstrap:Padding" level="5"/>
     <generalProperties xsi:type="bstrap:Border"/>
     <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    <generalProperties xsi:type="bstrap:AlertAnimated"/>
+    <generalProperties xsi:type="bstrap:AlertStyle" color="SUCCESS"/>
     <listitems>
       <listitemelements xsi:type="bstrap:Paragraphe">
         <textelements xsi:type="bstrap:Text" text="start list. This is a paragraph"/>
@@ -528,6 +557,8 @@
     <generalProperties xsi:type="bstrap:Padding" level="5"/>
     <generalProperties xsi:type="bstrap:Border"/>
     <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    <generalProperties xsi:type="bstrap:AlertAnimated"/>
+    <generalProperties xsi:type="bstrap:AlertStyle" color="SUCCESS"/>
     <codelines content="Ce block contient une ligne de propriétés qui n'est j'amais affichée après la géneration vers bootstrap.&#xA;"/>
     <codelines content="Une autre ligne du bloc&#xA;"/>
   </pagecontents>

@@ -2,15 +2,23 @@
 
 # Les Propriété générales en Bootstrap
 
+# Les Badge
+
+Ceci est le text d'un badge avec les propriétés badge primary et badge pill  [[badge badge-primary badgePill] Badge whitout URL]()
+
+Ceci est un lien en badge avec les propriétés badge primary et badge pill [[badge badge-primary badgePill] Badge with URL](url)
+
+
+
 Les propriétés générales sont représentées entre parenthèses (propriété:valeur,propriété:{propVal1:val1,propVal2:val2}) un élément peut avoir une couleur, un background, un margin et un padding avec une taille un alignment et une bordure colorée ou non.
 
 # Les titres
 
 Les propriétés d’un titre sont représentées entre parenthèses sur la même ligne devant le texte du titre. Un titre peut donc avoir en plus des propriétés générales  un emphasis qui soit *italic* ou **Strong** et une propriété *display* qui peux avoir les valeurs {1,2,3,4} spécifique à la taille d'un titre en **Bootstrap**.
 
-# properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 1 avec un display 1
+# properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic, alertProperty:{alertStyle:success,animated}) Un titre taille 1 avec un display 1
 
-## properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 2 avec un display 3
+## properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic,alertProperty:{alertStyle:info}) Un titre taille 2 avec un display 3
 
 ### properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 3 avec un display 4
 
@@ -18,10 +26,10 @@ Les propriétés d’un titre sont représentées entre parenthèses sur la mêm
 
 Un paragraph peut aussi avoir toutes les propriétés générales et une propriété emphasis (*italic* ou **strong** pour tout le paragraph)
 
-properties:(color:dark,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold) 
+properties:(color:dark,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold,alertProperty:{alertStyle:success,animated}) 
 Ce paragraph `contient un élément code` et à une couleur dark, un backround primary, un margin, un padding, une bordure non clorée et un emphasis bold.
 
-properties:(color:primary,background:dark,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border, borderColor:danger},emphasis:italic) 
+properties:(color:primary,background:dark,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border, borderColor:danger},emphasis:italic,alertProperty:{alertStyle:success}) 
 Ce paragraph à une couleur primary, un backround dark, un margin, un padding, une bordure clorée en danger et un emphasis italic.
 
 # Les liens sans références
@@ -68,7 +76,7 @@ En bootstrap, nous transformons les sections en container selon le type de conta
 > > - item 3
 > > fin de list
 > > > Start section
-properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fixContainer})
+properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fixContainer},alertProperty:{alertStyle:success,animated})
 > > > ### Titre de la sous sous section
 > > > ![properties:(imageShape:circle,imageAligning:center)image](https://www.eclipse.org/images/egg-incubation.png)
 > > > properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})
@@ -108,7 +116,7 @@ properties:(color:warning,background:primary,margin:{level:5,alignment:left},pad
 # Les blockquote
 Blockquote :
 
-> properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})
+> properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},alertProperty:{alertStyle:success,animated})
 > > sub block
 > > properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})
 > > - list in blockquote
@@ -122,7 +130,7 @@ Blockquote :
 
 List :
 
-- properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, listProperty:basicList)
+- properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, listProperty:basicList,alertProperty:{alertStyle:success,animated})
 
 - start list. This is a paragraph
   on multiple lines.
@@ -146,7 +154,7 @@ List :
 Ayant composés que des codeLine, un codeLine peut être réservé pour les propriétés générales qu’ils peuvent avoir. Les propriétés sont toujours précédés par properties:
 
 ````
-properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})
+properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},alertProperty:{alertStyle:success,animated})
 Ce block contient une ligne de propriétés qui n'est j'amais affichée après la géneration vers bootstrap.
 Une autre ligne du bloc
 ````
