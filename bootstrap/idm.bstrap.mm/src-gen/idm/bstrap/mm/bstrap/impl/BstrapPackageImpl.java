@@ -2190,6 +2190,15 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAlertStyle_Color() {
+		return (EAttribute) alertStyleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAlertAnimated() {
 		return alertAnimatedEClass;
 	}
@@ -2498,6 +2507,7 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 		alertPropertyEClass = createEClass(ALERT_PROPERTY);
 
 		alertStyleEClass = createEClass(ALERT_STYLE);
+		createEAttribute(alertStyleEClass, ALERT_STYLE__COLOR);
 
 		alertAnimatedEClass = createEClass(ALERT_ANIMATED);
 
@@ -3024,6 +3034,8 @@ public class BstrapPackageImpl extends EPackageImpl implements BstrapPackage {
 
 		initEClass(alertStyleEClass, AlertStyle.class, "AlertStyle", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAlertStyle_Color(), this.getColor(), "color", "LIGHT", 0, 1, AlertStyle.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(alertAnimatedEClass, AlertAnimated.class, "AlertAnimated", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

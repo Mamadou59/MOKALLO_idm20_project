@@ -3737,13 +3737,22 @@ public interface BstrapPackage extends EPackage {
 	int ALERT_STYLE = 96;
 
 	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALERT_STYLE__COLOR = ALERT_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Alert Style</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALERT_STYLE_FEATURE_COUNT = ALERT_PROPERTY_FEATURE_COUNT + 0;
+	int ALERT_STYLE_FEATURE_COUNT = ALERT_PROPERTY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Alert Style</em>' class.
@@ -5317,6 +5326,17 @@ public interface BstrapPackage extends EPackage {
 	EClass getAlertStyle();
 
 	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.AlertStyle#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see idm.bstrap.mm.bstrap.AlertStyle#getColor()
+	 * @see #getAlertStyle()
+	 * @generated
+	 */
+	EAttribute getAlertStyle_Color();
+
+	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.AlertAnimated <em>Alert Animated</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6726,6 +6746,14 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ALERT_STYLE = eINSTANCE.getAlertStyle();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ALERT_STYLE__COLOR = eINSTANCE.getAlertStyle_Color();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.AlertAnimatedImpl <em>Alert Animated</em>}' class.

@@ -230,7 +230,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BadgePill" eSuperTypes="#//BadgeProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="AlertProperty" abstract="true" eSuperTypes="#//General"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AlertStyle" eSuperTypes="#//AlertProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AlertStyle" eSuperTypes="#//AlertProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="#//Color"
+        defaultValueLiteral="LIGHT"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AlertAnimated" eSuperTypes="#//AlertProperty"/>
   <eClassifiers xsi:type="ecore:EClass" name="AlertLink" eSuperTypes="#//LinkProperty"/>
 </ecore:EPackage>

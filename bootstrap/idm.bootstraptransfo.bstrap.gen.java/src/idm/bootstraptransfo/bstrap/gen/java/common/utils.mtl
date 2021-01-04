@@ -52,7 +52,7 @@ aBalise : String = 'div';
 subContainers : Sequence(Container) = self.eContents(Container);
 textpageContents : Sequence(TextPageContent) = self.eContents(TextPageContent);
 }]
-<[aBalise/] [self.declareClass()/]"[aContainer.getContainerClass()/] [self.generalProperties.getGeneralClass()/]">
+<[aBalise/] [self.declareClass()/]"alert [aContainer.getContainerClass()/] [self.generalProperties.getPropertyClass()/]">
 [for (aPageContent : PageContent | aContainer.eContents(PageContent))]
   [aPageContent.generatePageContentElement()/] 
 [/for]
@@ -63,6 +63,7 @@ textpageContents : Sequence(TextPageContent) = self.eContents(TextPageContent);
  * Handle code generation of TextPageContent  element in a Page  (TextPageContent)
  */]
 [template public generatePageContentElement(aPageContent : TextPageContent)]
+[self.isButtonAlert()/]
 [self.generateTextPageContentElement()/]
 [/template]
 [comment]-----------------------------------------------------[/comment]
@@ -138,7 +139,7 @@ textpageContents : Sequence(TextPageContent) = self.eContents(TextPageContent);
  * handle BlockQuote (BlockQuote)  
  */]
 [template public generateBlockQuoteElement(aBlockQuote : BlockQuote) { aBaliseName : String = 'blockquote'; }]
-<[aBaliseName/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] blockquote " >
+<[aBaliseName/] [self.declareClass()/]"[self.generalProperties.getPropertyClass()/] blockquote " >
 [self.pagecontents.generatePageContentElement()/]
 [aBaliseName.getCloseBaliseName()/]
 [/template]

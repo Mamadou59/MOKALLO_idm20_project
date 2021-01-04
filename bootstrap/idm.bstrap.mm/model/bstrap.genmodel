@@ -205,7 +205,9 @@
     </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//BadgePill"/>
     <genClasses ecoreClass="bstrap.ecore#//AlertProperty"/>
-    <genClasses ecoreClass="bstrap.ecore#//AlertStyle"/>
+    <genClasses ecoreClass="bstrap.ecore#//AlertStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bstrap.ecore#//AlertStyle/color"/>
+    </genClasses>
     <genClasses ecoreClass="bstrap.ecore#//AlertAnimated"/>
     <genClasses ecoreClass="bstrap.ecore#//AlertLink"/>
   </genPackages>

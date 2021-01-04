@@ -334,17 +334,21 @@ display-4
 
 
 
-[comment]+++++++++++Main Link Brand () ++++++++++++++++++++++++++++++[/comment]
+[comment]+++++++++++Main Link  () ++++++++++++++++++++++++++++++[/comment]
 [**
- *  Handle  LinkProperty (Brand)
+ *  Handle  LinkProperty (Brand,Alertlink)
  * 	@param aLinkProperty
 */]
-[template public getLinkBrand(aLinkProperty : LinkProperty)]
+[template public getLinkProperty(aLinkProperty : LinkProperty)]
+ [self.declareComment()/]
+[/template]
+[template public getLinkProperty(aLinkProperty : LinkBrand)]
  navbar-brand
 [/template]
-[template public getLinkBrand(aLinkBrand : LinkBrand)]
- navbar-brand
+[template public getLinkProperty(aLinkProperty : AlertLink)]
+ alert-link
 [/template]
+
 
  
 [comment] ---------------------------------------------------------------------------	[/comment]
@@ -378,6 +382,28 @@ display-4
 [comment] ---------------------------------------------------------------------------	[/comment]
 
 
+
+
+
+[comment]+++++++++++Badge Properties () ++++++++++++++++++++++++++++++[/comment]
+[**
+ *  Handle  BadgeProperties (BadgePill,BadgeStyle)
+ * 	@param aLinkProperty
+*/]
+[template public getBadgeProperty(aBadgeProperty : BadgeProperty)]
+ [self.declareComment()/]
+[/template]
+[template public getLinkProperty(aBadgeProperty : BadgePill)]
+ badge-pill 
+[/template]
+[template public getLinkProperty(aBadgeProperty : BadgeStyle)]
+ badge-[self.color.getColor()/]
+
+[/template]
+
+
+ 
+[comment] ---------------------------------------------------------------------------	[/comment]
 
 
 

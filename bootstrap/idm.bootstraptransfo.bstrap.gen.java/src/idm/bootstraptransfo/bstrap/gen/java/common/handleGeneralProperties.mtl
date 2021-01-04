@@ -4,15 +4,100 @@
  */]
 [module handleGeneralProperties('http://www.example.org/bstrap')]
 [import idm::bootstraptransfo::bstrap::gen::java::request::defineWebSiteConcepts /]
+[import idm::bootstraptransfo::bstrap::gen::java::common::handleSpecificProperties /]
+
+[comment]+++++++++++  Properties   ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle all btsr Properties
+ * @param aProperty(General or others)
+ */]
+[template public getPropertyClass(aProperty : PropertyClass)]
+[self.declareComment()/]
+[/template]
+[**
+ * Handle all btsr Properties(General)
+ * @param aProperty
+ */]
+[template public getPropertyClass(aProperty : General)]
+ [aProperty.getGeneralClass()/]
+[/template]
+
+[**
+ * Handle all btsr Properties(ListProperty)
+ * @param aProperty
+ */]
+[template public getPropertyClass(aProperty : ListProperty)]
+ [aProperty.getListProperty()/]
+[/template]
+
+[**
+ * Handle all btsr Properties(ButtonProperty)
+ * @param aProperty
+ */]
+[template public getPropertyClass(aProperty : ButtonProperty)]
+ [aProperty.getButtonProperty()/]
+[/template]
+[**
+ * Handle all btsr Properties(DisplayProperty)
+ * @param aProperty
+ */]
+[template public getPropertyClass(aProperty : DisplayProperty)]
+ [aProperty.getDisplayProperties()/]
+[/template]
+[**
+ * Handle all btsr Properties(NavBarProperty)
+ * @param aProperty
+ */]
+[template public getPropertyClass(aProperty : NavBarProperty)]
+ [aProperty.getNaVBarProperty()/]
+[/template]
+[**
+ * Handle all btsr Properties(ImageProperty)
+ * @param aProperty
+ */]
+[template public getPropertyClass(aProperty : ImageProperty)]
+ [aProperty.getImageProperty()/]
+[/template]
+[**
+ * Handle all btsr Properties(Emphasis)
+ * @param aProperty
+ */]
+[template public getPropertyClass(aProperty : Emphasis)]
+ [aProperty.getEmphasisProperty()/]
+[/template]
+[**
+ * Handle all btsr Properties(TableProperty)
+ * @param aProperty
+ */]
+[template public getPropertyClass(aProperty : TableProperty)]
+ [aProperty.getTableProperty()/]
+[/template]
+[**
+ * Handle all btsr Properties(TableProperty)
+ * @param aProperty
+ */]
+[template public getPropertyClass(aProperty : LinkProperty)]
+ [aProperty.getLinkProperty()/]
+[/template]
+[**
+ * Handle all btsr Properties(BadgeProperty)
+ * @param aProperty
+ */]
+[template public getPropertyClass(aProperty : BadgeProperty)]
+ [aProperty.getBadgeProperty()/]
+[/template]
+
+
+[comment] ---------------------------------------------------------------------------	[/comment]
 
 
 [comment]+++++++++++  general Properties   ++++++++++++++++++++++++++++++[/comment]
 
 [**
- * Handle all generalProperties
+ * Handle all generalProperties (MargesProperty,BorderProperty,AlertProperty)
  * @param aGeneralProperty
  */]
-[template public getGeneralClass(aGeneralProperty : General)]
+[template private getGeneralClass(aGeneralProperty : General)]
 [self.declareComment()/]
 [/template]
 [**
@@ -20,7 +105,7 @@
  * @param aGeneralProperty
  * return  m/p(t,b,l,r)-3
  */]
-[template public getGeneralClass(aGeneralProperty : MargesProperty)]
+[template private getGeneralClass(aGeneralProperty : MargesProperty)]
  [self.getMargesLetter()/]
 [/template]
 [**
@@ -28,7 +113,7 @@
  * @param aGeneralProperty
  * border border/border-color
  */]
-[template public getGeneralClass(aGeneralProperty : BorderProperty)]
+[template private getGeneralClass(aGeneralProperty : BorderProperty)]
   [self.getBorderProperty()/]
 [/template]
 [**
@@ -36,8 +121,16 @@
  * @param aGeneralProperty
  * bg-color
  */]
-[template public getGeneralClass(aGeneralProperty : Background)]
+[template private getGeneralClass(aGeneralProperty : Background)]
  bg-[self.color.getColor()/]
+[/template]
+[**
+ * Handle all generalProperties(Background)
+ * @param aGeneralProperty
+ * bg-color
+ */]
+[template private getGeneralClass(aGeneralProperty : AlertProperty)]
+ [self.getAlertProperty()/]
 [/template]
 
 
@@ -110,21 +203,32 @@ border-[self.color.getColor()/]
 
 [comment] ---------------------------------------------------------------------------	[/comment]
 
-[comment]+++++++++++  Text Properties   ++++++++++++++++++++++++++++++[/comment]
-[template public getEmphasisProperty(anEmphasis : Emphasis)]
+[comment]+++++++++++  AlertProperty    ++++++++++++++++++++++++++++++[/comment]
+[**
+ * Handle BackgroundProperty (AleryStyle,AlertAnimated)
+ * @param anAlertProperty
+ */]
+[template private getAlertProperty(anAlertProperty : AlertProperty)]
 [self.declareComment()/]
 [/template]
-[template public getEmphasisProperty(anEmphasis : ItalicProperty)]
- font-italic
+[**
+ * Handle BackgroundProperty (AleryStyle)
+ * @param anAlertProperty
+ */]
+[template private getAlertProperty(anAlertProperty : AlertStyle)]
+	alert-[self.color.getColor()/]
 [/template]
-[template public getEmphasisProperty(anEmphasis : Bold)]
- font-weight-bold
+[**
+ * Handle BackgroundProperty (AlertAnimated)
+ * @param anAlertProperty
+ */]
+[template private getAlertProperty(anAlertProperty : AlertAnimated)]
+  alert-dismissible fade show
 [/template]
 
 
 
 [comment] ---------------------------------------------------------------------------	[/comment]
-
 
 
 
