@@ -46,6 +46,15 @@ abstract mapping usdMM::TextContainer::textContainerUsd2TextContainerBstrap() : 
 						generalProperties += prop.getColoredBorder();
 					};
 				}
+			};
+			if(props.toLower().find("alertproperty") > 0){
+				var prop := props.toLower().substringAfter('alertproperty');
+				if(prop <> null){
+					if (prop.find("animated")>0) generalProperties += object AlertAnimated{};
+					if (prop.find("alertstyle")>0) 
+								generalProperties += object AlertStyle{
+									color := prop.substringAfter("alertstyle").findProperty().getColor()};
+				}
 			}
 		};		
 }
@@ -112,6 +121,15 @@ mapping usdMM::Navigation::navigationUsd2NavigationBstrap() : bstrapMM::Navigati
 						generalProperties += prop.getColoredBorder();
 					};
 				}
+			};
+			if(props.toLower().find("alertproperty") > 0){
+				var prop := props.toLower().substringAfter('alertproperty');
+				if(prop <> null){
+					if (prop.find("animated")>0) generalProperties += object AlertAnimated{};
+					if (prop.find("alertstyle")>0) 
+								generalProperties += object AlertStyle{
+									color := prop.substringAfter("alertstyle").findProperty().getColor()};
+				}
 			}
 		}
 	}
@@ -153,6 +171,15 @@ abstract mapping usdMM::ListElement::listElementUsd2ListElementBstrap() : bstrap
 			if (props.find("listProperty:") > 0){
 				var prop := props.substringAfter("listProperty:").findProperty();
 				listproperty += prop.getBasicList();
+			};
+			if(props.toLower().find("alertproperty") > 0){
+				var prop := props.toLower().substringAfter('alertproperty');
+				if(prop <> null){
+					if (prop.find("animated")>0) generalProperties += object AlertAnimated{};
+					if (prop.find("alertstyle")>0) 
+								generalProperties += object AlertStyle{
+									color := prop.substringAfter("alertstyle").findProperty().getColor()};
+				}
 			}
 		}
 	}
@@ -234,6 +261,15 @@ mapping usdMM::CodeBlock::codeBlockUsd2CodeBlockBtsrap() : bstrapMM::CodeBlock
 						generalProperties += prop.getColoredBorder();
 					};
 				}
+			};
+			if(props.toLower().find("alertproperty") > 0){
+				var prop := props.toLower().substringAfter('alertproperty');
+				if(prop <> null){
+					if (prop.find("animated")>0) generalProperties += object AlertAnimated{};
+					if (prop.find("alertstyle")>0) 
+								generalProperties += object AlertStyle{
+									color := prop.substringAfter("alertstyle").findProperty().getColor()};
+				}
 			}
 		}
 	}
@@ -279,6 +315,15 @@ mapping usdMM::BlockQuote::blockQuoteUsd2BlockQuoteBstrap() : bstrapMM::BlockQuo
 					if (prop.find("borderColor") > 0){
 						generalProperties += prop.getColoredBorder();
 					};
+				}
+			};
+			if(props.toLower().find("alertproperty") > 0){
+				var prop := props.toLower().substringAfter('alertproperty');
+				if(prop <> null){
+					if (prop.find("animated")>0) generalProperties += object AlertAnimated{};
+					if (prop.find("alertstyle")>0) 
+								generalProperties += object AlertStyle{
+									color := prop.substringAfter("alertstyle").findProperty().getColor()};
 				}
 			}
 		}
@@ -494,6 +539,15 @@ abstract mapping usdMM::Section::sectionUsd2ContainerBstrap() : bstrapMM::Contai
 					if (prop.find("borderColor") > 0){
 						generalProperties += prop.getColoredBorder();
 					};
+				}
+			};
+			if(props.toLower().find("alertproperty") > 0){
+				var prop := props.toLower().substringAfter('alertproperty');
+				if(prop <> null){
+					if (prop.find("animated")>0) generalProperties += object AlertAnimated{};
+					if (prop.find("alertstyle")>0) 
+								generalProperties += object AlertStyle{
+									color := prop.substringAfter("alertstyle").findProperty().getColor()};
 				}
 			}
 		}

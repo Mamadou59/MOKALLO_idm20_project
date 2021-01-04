@@ -6,6 +6,21 @@
   <contents xsi:type="usd:Title" level="1">
     <textElements xsi:type="usd:Text" text="Les Propriété générales en Bootstrap"/>
   </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les Badge"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Ceci est le text d'un badge avec les propriétés badge primary et badge pill  "/>
+    <textElements xsi:type="usd:Link" url="" title="">
+      <subTextElements xsi:type="usd:Text" text="[badge badge-primary badgePill] Badge whitout URL"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Ceci est un lien en badge avec les propriétés badge primary et badge pill "/>
+    <textElements xsi:type="usd:Link" url="url" title="">
+      <subTextElements xsi:type="usd:Text" text="[badge badge-primary badgePill] Badge with URL"/>
+    </textElements>
+  </contents>
   <contents xsi:type="usd:Paragraph">
     <textElements xsi:type="usd:Text" text="Les propriétés générales sont représentées entre parenthèses (propriété:valeur,propriété:{propVal1:val1,propVal2:val2}) un élément peut avoir une couleur, un background, un margin et un padding avec une taille un alignment et une bordure colorée ou non."/>
   </contents>
@@ -32,7 +47,7 @@
     <textElements xsi:type="usd:Text" text="."/>
   </contents>
   <contents xsi:type="usd:Title" level="1">
-    <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 1 avec un display 1"/>
+    <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic, alertProperty:{alertStyle:success,animated}) Un titre taille 1 avec un display 1"/>
   </contents>
   <contents xsi:type="usd:Title" level="2">
     <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 2 avec un display 3"/>
@@ -55,7 +70,7 @@
     <textElements xsi:type="usd:Text" text=" pour tout le paragraph)"/>
   </contents>
   <contents xsi:type="usd:Paragraph">
-    <textElements xsi:type="usd:Text" text="properties:(color:dark,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)"/>
+    <textElements xsi:type="usd:Text" text="properties:(color:dark,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold,alertProperty:{alertStyle:success,animated})"/>
     <textElements xsi:type="usd:Text" text="Ce paragraph "/>
     <textElements xsi:type="usd:Code" text="contient un élément code"/>
     <textElements xsi:type="usd:Text" text=" et à une couleur dark, un backround primary, un margin, un padding, une bordure non clorée et un emphasis bold."/>
@@ -206,7 +221,7 @@
       </contents>
       <contents xsi:type="usd:Section">
         <contents xsi:type="usd:Paragraph">
-          <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fixContainer})"/>
+          <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fixContainer},alertProperty:{alertStyle:success,animated})"/>
         </contents>
         <contents xsi:type="usd:Title" level="3">
           <textElements xsi:type="usd:Text" text="Titre de la sous sous section"/>
@@ -304,7 +319,7 @@
   </contents>
   <contents xsi:type="usd:BlockQuote">
     <contents xsi:type="usd:Paragraph">
-      <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})"/>
+      <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},alertProperty:{alertStyle:success,animated})"/>
     </contents>
     <contents xsi:type="usd:BlockQuote">
       <contents xsi:type="usd:Paragraph">
@@ -340,7 +355,7 @@
   <contents xsi:type="usd:UnorderedList">
     <items>
       <elements xsi:type="usd:Paragraph">
-        <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, listProperty:basicList)"/>
+        <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}, listProperty:basicList,alertProperty:{alertStyle:success,animated})"/>
       </elements>
     </items>
     <items>
@@ -428,7 +443,7 @@
     <textElements xsi:type="usd:Text" text="Ayant composés que des codeLine, un codeLine peut être réservé pour les propriétés générales qu’ils peuvent avoir. Les propriétés sont toujours précédés par properties:"/>
   </contents>
   <contents xsi:type="usd:CodeBlock">
-    <codeLines text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})&#xA;"/>
+    <codeLines text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},alertProperty:{alertStyle:success,animated})&#xA;"/>
     <codeLines text="Ce block contient une ligne de propriétés qui n'est j'amais affichée après la géneration vers bootstrap.&#xA;"/>
     <codeLines text="Une autre ligne du bloc&#xA;"/>
   </contents>
