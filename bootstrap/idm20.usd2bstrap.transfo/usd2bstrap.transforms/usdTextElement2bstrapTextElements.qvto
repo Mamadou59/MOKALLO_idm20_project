@@ -89,6 +89,15 @@ abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2Containabl
 					generalProperties += prop.getColoredBorder();
 				};
 			}
+		};
+		if(props.toLower().find("alertproperty") > 0){
+			var prop := props.toLower().substringAfter('alertproperty');
+			if(prop <> null){
+				if (prop.find("animated")>0) generalProperties += object AlertAnimated{};
+				if (prop.find("alertstyle")>0) 
+							generalProperties += object AlertStyle{
+								color := prop.substringAfter("alertstyle").findProperty().getColor()};
+			}
 		}
 	};
 }
@@ -100,14 +109,54 @@ abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2Containabl
 mapping usdMM::Link::linkUsd2LinkBstrap() : bstrapMM::Link 
 	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap, 
 			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap
-			when {not self.isLinkButton()}{}
+			when {not self.isLinkButton() and not self.isLink2Badge()}{
+	var textElem = self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("badge") > 0);
+	if (textElem <> null) {
+		if (textElem.text.find("badge-") > 0){
+			badgeproperties += object BadgeStyle {
+				color := textElem.text.substringAfter("badge-").getColor();
+			}
+		};
+		if(textElem.text.toLower().find("badgepill") > 0){
+			badgeproperties += object BadgePill{}
+		}
+	}
+}
 
+/**
+* A mapper which map an usd Link element to bstrap Button element.
+* It also extends urlBasedLinkUsd2UrlBasedLinkBstrap and compositeTextElementUsd2TextNestedBstrap
+*/
 mapping usdMM::Link::linkUsd2LinkButtonBstrap() : bstrapMM::Link 
 	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap, 
 			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap
-			when {self.isLinkButton()}{
+			when {self.isLinkButton() and not self.isLink2Badge()}{
 				buttonproperties += object bstrapMM::ButtonLink {};
 			}
+
+/**
+* A mapper which map an usd Link element to bstrap span element whit badgeProperties.
+* It also extends urlBasedLinkUsd2UrlBasedLinkBstrap and compositeTextElementUsd2TextNestedBstrap
+*/
+mapping usdMM::Link::linkUsd2SpanBadge() : bstrapMM::Span 
+	inherits  usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap,
+				usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement
+	when {self.isLink2Badge()} {
+	
+	if (self.url = ""){
+		var textElem = self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("badge") > 0);
+		if (textElem <> null) {
+			if (textElem.text.find("badge-") > 0){
+				badgeproperties += object BadgeStyle {
+					color := textElem.text.substringAfter("badge-").getColor();
+				}
+			};
+			if(textElem.text.toLower().find("badgepill") > 0){
+				badgeproperties += object BadgePill{}
+			}
+		}
+	}
+}
 
 /**
 * A mapper which map an usd ItalicEmphasis element to bstrap Italic element.
@@ -200,5 +249,5 @@ mapping usdMM::TextElement::constructTextElement() : bstrapMM::TextElements
 	disjuncts usdMM::Code::codeUsd2CodeBstrap, usdMM::Text::textUsdContainPropToDisplay2TextBstrap, usdMM::Text::textUsd2TextBstrap, 
 		usdMM::Link::linkUsd2LinkBstrap, usdMM::Link::linkUsd2LinkButtonBstrap, usdMM::Image::imageUsd2ImageBstrap,
 		usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap, usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap,
-		usdMM::Button::buttonUsd2ButtonBstrap{}
+		usdMM::Button::buttonUsd2ButtonBstrap, usdMM::Link::linkUsd2SpanBadge{}
 

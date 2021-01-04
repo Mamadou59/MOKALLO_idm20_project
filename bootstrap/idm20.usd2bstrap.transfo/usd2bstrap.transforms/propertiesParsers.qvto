@@ -411,3 +411,11 @@ helper usdMM::Link::isLinkButton() : Boolean {
 			selectOne(t | (t.text.startsWith('[') or (t.text.startsWith('(') and t.text.find(":") > 0)) and t.text.find("btn") > 0);
 	return self.url.<>("#") and textElem <> null;	
 }
+
+/**
+* An helper to check if given link is badge. 
+*/
+helper usdMM::Link::isLink2Badge() : Boolean {
+		return self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("badge")>0) <> null and self.url = "";
+}
+
