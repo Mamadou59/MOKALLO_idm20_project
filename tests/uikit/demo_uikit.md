@@ -1,4 +1,4 @@
-# properties:(color:secondary,background:success,titleSize:large,margin:{size:large,alignment:center}) UIkit - Demo
+# properties:(color:light,background:secondary,titleSize:large,margin:{size:large,alignment:center}) UIkit - Demo
 
 # properties:(color:secondary,background:success,titleSize:large,margin:{size:large,alignment:center}) Les titres
 
@@ -38,18 +38,6 @@ Light text.
 
 properties:(background:primary,margin:{size:small,alignment:center}) 
 This text is important.
-
-properties:(background:success,margin:{size:small,alignment:center})
-This text indicates success.
-
-properties:(background:emphasis,margin:{size:small,alignment:center}) 
-This text emphasis.
-
-properties:(background:warning,margin:{size:small,alignment:center}) 
-This text represents a warning.
-
-properties:(background:danger,margin:{size:small,alignment:center}) 
-This text represents danger.
 
 properties:(background:secondary,margin:{size:small,alignment:center}) 
 Secondary text.

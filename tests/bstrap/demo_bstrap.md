@@ -47,30 +47,30 @@ properties:(color:light,background:info,emphasis:italic,margin:{level:2,alignmen
 Une navigation est représentée par plusieurs liens dans un même paragraphe dont le premier lien contient les propriétés qui distinguent une navigation des autres représentations utilisées par les liens (button et badge) et peut également contenir des propriétés générales et particulières comme (brand, basic, vertical, centred).
 
 [[nav basic] Basic navigation](#)
-[properties:(background:primary) Link 1](#)
-[properties:(background:warning)Link 2](#)
-[properties:(background:danger) Link 3](#)
+[properties:(background:primary,color:light,margin:{level:2,alignment:center}) Link 1](#)
+[properties:(background:warning,margin:{level:2,alignment:center})Link 2](#)
+[properties:(background:danger,margin:{level:2,alignment:center}) Link 3](#)
 
 ## properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Brand navigation
 
 [properties:(color:light,background:secondary,border:{border,borderColor:danger})[navbar-brand]Navbar brand](#)
-[properties:(background:primary) Link 1](#)
-[properties:(background:warning)Link 2](#)
-[properties:(background:danger) Link 3](#)
+[properties:(background:primary,color:light,margin:{level:2,alignment:center}) Link 1](#)
+[properties:(background:warning,margin:{level:2,alignment:center})Link 2](#)
+[properties:(background:danger,margin:{level:2,alignment:center}) Link 3](#)
 
 ## properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Vertical navigation
 
-[[nav vertical] Vertical navigation](#)
-[properties:(background:primary) Link 1](#)
-[properties:(background:warning)Link 2](#)
-[properties:(background:danger) Link 3](#)
+[[nav vertical]](#)
+[properties:(background:primary,color:light,margin:{level:2,alignment:center}) Link 1](#)
+[properties:(background:warning,margin:{level:2,alignment:center})Link 2](#)
+[properties:(background:danger,margin:{level:2,alignment:center}) Link 3](#)
 
 ## properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Centred navigation
 
 [properties:(border:{border,borderColor:danger})[nav centred] Centred navigation](#)
-[properties:(background:primary) Link 1](#)
-[properties:(background:warning)Link 2](#)
-[properties:(background:danger) Link 3](#)
+[properties:(background:primary,color:light,margin:{level:2,alignment:center}) Link 1](#)
+[properties:(background:warning,margin:{level:2,alignment:center})Link 2](#)
+[properties:(background:danger,margin:{level:2,alignment:center}) Link 3](#)
 
 # properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Buttons
 
@@ -248,27 +248,35 @@ This is a dark alert—check it out!
 
 ## properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Alert style and animated
 
+> Start section
 > properties:(alertProperty:{alertStyle:primary,animated},margin:{level:4,alignment:center},containerType:fixContainer)
 > This is a primary alert—check it out / dismiss it!
 
+> Start section
 > properties:(alertProperty:{alertStyle:secondary,animated},margin:{level:4,alignment:center},containerType:fixContainer)
 > This is a secondary alert—check it out / dismiss it!
 
+> Start section
 > properties:(alertProperty:{alertStyle:success,animated},margin:{level:4,alignment:center},containerType:fixContainer)
 > This is a success alert—check it out / dismiss it!
 
+> Start section
 > properties:(alertProperty:{alertStyle:danger, animated},margin:{level:4,alignment:center},containerType:fixContainer)
 > This is a danger alert—check it out / dismiss it!
 
+> Start section
 > properties:(alertProperty:{alertStyle:warning, animated},margin:{level:4,alignment:center},containerType:fixContainer)
 > This is a warning alert—check it out / dismiss it!
 
+> Start section
 > properties:(alertProperty:{alertStyle:info, animated},margin:{level:4,alignment:center},containerType:fixContainer)
 > This is a info alert—check it out / dismiss it!
 
+> Start section
 > properties:(alertProperty:{alertStyle:light, animated},margin:{level:4,alignment:center},containerType:fixContainer)
 > This is a light alert—check it out / dismiss it!
 
+> Start section
 > properties:(alertProperty:{alertStyle:dark, animated},margin:{level:4,alignment:center},containerType:fixContainer)
 > This is a dark alert—check it out / dismiss it!
 
@@ -312,19 +320,14 @@ Les types de lists sont basicList et horizontalList
   on multiple lines.
 - (itemProperty: active) Active item 2.
   * level 2 item 1
-  * level 2 item 2
   - level 2 item 3
     - level 3 item 1
-    - level 3 item 2
-    - level 3 item 3
-    - level 4 item 1
         - next level ??
   - level 2 item 4
-  - level 2 item 5
  
 ## properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Horizontal lists
 
-- properties:(background:warning,border:{border,borderColor:success}, listProperty:horizontalList,margin:{level:4,alignment:center})
+- properties:(border:{border,borderColor:success}, listProperty:horizontalList,margin:{level:4,alignment:center})
 - (itemProperty: active) Active item 1.
 - item 2
 - item 3
@@ -392,10 +395,10 @@ En bootstrap, nous transformons les sections en container selon le type de conta
 
 ## properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Dark table
 
-| tabProperties:(tableProps:(tableProperty:darkTable,color:light))Syntax      | Description |  Code  |
+| tabProperties:(tableProps:(tableProperty:darkTable),cellProps:(color:light))Syntax      | tabProperties:(cellProps:(color:light))Description |  tabProperties:(cellProps:(color:light))Code  |
 | ----------- | ----------- | ------ |
-| Header      | Title       | code1  |
-| Paragraph   | Text        | code2  |
+| tabProperties:(cellProps:(color:light))Header      | tabProperties:(cellProps:(color:light))Title       | tabProperties:(cellProps:(color:light))code1  |
+| tabProperties:(cellProps:(color:light))Paragraph   | tabProperties:(cellProps:(color:light))Text        | tabProperties:(cellProps:(color:light))code2  |
 
 ## properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Striped rows table
 

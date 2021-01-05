@@ -116,17 +116,17 @@
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:warning)Link 2"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:primary,color:light,margin:{level:2,alignment:center}) Link 1"/>
         </elements>
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:primary) Link 1"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:warning,margin:{level:2,alignment:center})Link 2"/>
         </elements>
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:danger) Link 3"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:danger,margin:{level:2,alignment:center}) Link 3"/>
         </elements>
       </items>
     </groupedItems>
@@ -138,17 +138,17 @@
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:danger) Link 3"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:primary,color:light,margin:{level:2,alignment:center}) Link 1"/>
         </elements>
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:primary) Link 1"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:warning,margin:{level:2,alignment:center})Link 2"/>
         </elements>
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:warning)Link 2"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:danger,margin:{level:2,alignment:center}) Link 3"/>
         </elements>
       </items>
     </groupedItems>
@@ -156,21 +156,21 @@
   <contents xsi:type="usd:Title" level="2">
     <textElements xsi:type="usd:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Vertical navigation"/>
   </contents>
-  <contents xsi:type="usd:Navigation" type="nav vertical" textContent=" Vertical navigation">
+  <contents xsi:type="usd:Navigation" type="nav vertical" textContent="">
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:warning)Link 2"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:primary,color:light,margin:{level:2,alignment:center}) Link 1"/>
         </elements>
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:primary) Link 1"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:warning,margin:{level:2,alignment:center})Link 2"/>
         </elements>
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:danger) Link 3"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:danger,margin:{level:2,alignment:center}) Link 3"/>
         </elements>
       </items>
     </groupedItems>
@@ -182,17 +182,17 @@
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:warning)Link 2"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:primary,color:light,margin:{level:2,alignment:center}) Link 1"/>
         </elements>
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:primary) Link 1"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:warning,margin:{level:2,alignment:center})Link 2"/>
         </elements>
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="properties:(background:danger) Link 3"/>
+          <subTextElements xsi:type="usd:Text" text="properties:(background:danger,margin:{level:2,alignment:center}) Link 3"/>
         </elements>
       </items>
     </groupedItems>
@@ -477,49 +477,49 @@
   <contents xsi:type="usd:Title" level="2">
     <textElements xsi:type="usd:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Alert style and animated"/>
   </contents>
-  <contents xsi:type="usd:BlockQuote">
+  <contents xsi:type="usd:Section">
     <contents xsi:type="usd:Paragraph">
       <textElements xsi:type="usd:Text" text="properties:(alertProperty:{alertStyle:primary,animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
       <textElements xsi:type="usd:Text" text="This is a primary alert—check it out / dismiss it!"/>
     </contents>
   </contents>
-  <contents xsi:type="usd:BlockQuote">
+  <contents xsi:type="usd:Section">
     <contents xsi:type="usd:Paragraph">
       <textElements xsi:type="usd:Text" text="properties:(alertProperty:{alertStyle:secondary,animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
       <textElements xsi:type="usd:Text" text="This is a secondary alert—check it out / dismiss it!"/>
     </contents>
   </contents>
-  <contents xsi:type="usd:BlockQuote">
+  <contents xsi:type="usd:Section">
     <contents xsi:type="usd:Paragraph">
       <textElements xsi:type="usd:Text" text="properties:(alertProperty:{alertStyle:success,animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
       <textElements xsi:type="usd:Text" text="This is a success alert—check it out / dismiss it!"/>
     </contents>
   </contents>
-  <contents xsi:type="usd:BlockQuote">
+  <contents xsi:type="usd:Section">
     <contents xsi:type="usd:Paragraph">
       <textElements xsi:type="usd:Text" text="properties:(alertProperty:{alertStyle:danger, animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
       <textElements xsi:type="usd:Text" text="This is a danger alert—check it out / dismiss it!"/>
     </contents>
   </contents>
-  <contents xsi:type="usd:BlockQuote">
+  <contents xsi:type="usd:Section">
     <contents xsi:type="usd:Paragraph">
       <textElements xsi:type="usd:Text" text="properties:(alertProperty:{alertStyle:warning, animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
       <textElements xsi:type="usd:Text" text="This is a warning alert—check it out / dismiss it!"/>
     </contents>
   </contents>
-  <contents xsi:type="usd:BlockQuote">
+  <contents xsi:type="usd:Section">
     <contents xsi:type="usd:Paragraph">
       <textElements xsi:type="usd:Text" text="properties:(alertProperty:{alertStyle:info, animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
       <textElements xsi:type="usd:Text" text="This is a info alert—check it out / dismiss it!"/>
     </contents>
   </contents>
-  <contents xsi:type="usd:BlockQuote">
+  <contents xsi:type="usd:Section">
     <contents xsi:type="usd:Paragraph">
       <textElements xsi:type="usd:Text" text="properties:(alertProperty:{alertStyle:light, animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
       <textElements xsi:type="usd:Text" text="This is a light alert—check it out / dismiss it!"/>
     </contents>
   </contents>
-  <contents xsi:type="usd:BlockQuote">
+  <contents xsi:type="usd:Section">
     <contents xsi:type="usd:Paragraph">
       <textElements xsi:type="usd:Text" text="properties:(alertProperty:{alertStyle:dark, animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
       <textElements xsi:type="usd:Text" text="This is a dark alert—check it out / dismiss it!"/>
@@ -625,11 +625,6 @@
             <textElements xsi:type="usd:Text" text="level 2 item 1"/>
           </elements>
         </items>
-        <items>
-          <elements xsi:type="usd:Paragraph">
-            <textElements xsi:type="usd:Text" text="level 2 item 2"/>
-          </elements>
-        </items>
       </elements>
       <elements xsi:type="usd:UnorderedList">
         <items>
@@ -640,21 +635,6 @@
             <items>
               <elements xsi:type="usd:Paragraph">
                 <textElements xsi:type="usd:Text" text="level 3 item 1"/>
-              </elements>
-            </items>
-            <items>
-              <elements xsi:type="usd:Paragraph">
-                <textElements xsi:type="usd:Text" text="level 3 item 2"/>
-              </elements>
-            </items>
-            <items>
-              <elements xsi:type="usd:Paragraph">
-                <textElements xsi:type="usd:Text" text="level 3 item 3"/>
-              </elements>
-            </items>
-            <items>
-              <elements xsi:type="usd:Paragraph">
-                <textElements xsi:type="usd:Text" text="level 4 item 1"/>
               </elements>
               <elements xsi:type="usd:UnorderedList">
                 <items>
@@ -671,11 +651,6 @@
             <textElements xsi:type="usd:Text" text="level 2 item 4"/>
           </elements>
         </items>
-        <items>
-          <elements xsi:type="usd:Paragraph">
-            <textElements xsi:type="usd:Text" text="level 2 item 5"/>
-          </elements>
-        </items>
       </elements>
     </items>
   </contents>
@@ -685,7 +660,7 @@
   <contents xsi:type="usd:UnorderedList">
     <items>
       <elements xsi:type="usd:Paragraph">
-        <textElements xsi:type="usd:Text" text="properties:(background:warning,border:{border,borderColor:success}, listProperty:horizontalList,margin:{level:4,alignment:center})"/>
+        <textElements xsi:type="usd:Text" text="properties:(border:{border,borderColor:success}, listProperty:horizontalList,margin:{level:4,alignment:center})"/>
       </elements>
     </items>
     <items>
@@ -940,13 +915,13 @@
     <tablesections xsi:type="usd:TableHead">
       <rows>
         <cells>
-          <textElements xsi:type="usd:Text" text="tabProperties:(tableProps:(tableProperty:darkTable,color:light))Syntax"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(tableProps:(tableProperty:darkTable),cellProps:(color:light))Syntax"/>
         </cells>
         <cells>
-          <textElements xsi:type="usd:Text" text="Description"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:light))Description"/>
         </cells>
         <cells>
-          <textElements xsi:type="usd:Text" text="Code"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:light))Code"/>
         </cells>
       </rows>
     </tablesections>
@@ -966,24 +941,24 @@
     <tablesections xsi:type="usd:TableBody">
       <rows>
         <cells>
-          <textElements xsi:type="usd:Text" text="Header"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:light))Header"/>
         </cells>
         <cells>
-          <textElements xsi:type="usd:Text" text="Title"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:light))Title"/>
         </cells>
         <cells>
-          <textElements xsi:type="usd:Text" text="code1"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:light))code1"/>
         </cells>
       </rows>
       <rows>
         <cells>
-          <textElements xsi:type="usd:Text" text="Paragraph"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:light))Paragraph"/>
         </cells>
         <cells>
-          <textElements xsi:type="usd:Text" text="Text"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:light))Text"/>
         </cells>
         <cells>
-          <textElements xsi:type="usd:Text" text="code2"/>
+          <textElements xsi:type="usd:Text" text="tabProperties:(cellProps:(color:light))code2"/>
         </cells>
       </rows>
     </tablesections>

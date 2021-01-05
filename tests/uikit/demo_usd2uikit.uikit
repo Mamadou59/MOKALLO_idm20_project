@@ -131,26 +131,32 @@
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="muted"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle"/>
     </textelements>
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="Secondary"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="SECONDARY"/>
     </textelements>
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="Success"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="SUCCESS"/>
     </textelements>
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="Emphasis"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="EMPHASIS"/>
     </textelements>
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="Warning"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="WARNING"/>
     </textelements>
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="Danger"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="DANGER"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="uikit:Title" level="2">
@@ -163,16 +169,19 @@
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="Large"/>
       <buttonproperties xsi:type="uikit:ButtonSIze" size="LARGE"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="PRIMARY"/>
     </textelements>
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="Default"/>
       <buttonproperties xsi:type="uikit:ButtonSIze"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="PRIMARY"/>
     </textelements>
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="Small"/>
       <buttonproperties xsi:type="uikit:ButtonSIze" size="SMALL"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="PRIMARY"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="uikit:Title" color="WARNING" level="1">
