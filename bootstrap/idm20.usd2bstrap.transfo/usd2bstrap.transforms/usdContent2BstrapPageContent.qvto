@@ -9,10 +9,7 @@ transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
 /**
 * Map an usd PageContent element to Bstrap PageContent element.
 */
-abstract mapping usdMM::PageContent::pageContentUsd2PageContentBstrap() : bstrapMM::PageContent {
-	// TODO don't forgot parsing bstrap properties
-	//generalProperties += self.
-}
+abstract mapping usdMM::PageContent::pageContentUsd2PageContentBstrap() : bstrapMM::PageContent {}
 
 /**
 * Abstract mapper wich map an usd TextContainer element to Bstrap TextContainer element.
@@ -590,7 +587,7 @@ mapping usdMM::PageContent::constructPageContent() : bstrapMM::PageContent
 				usdMM::OrderedList::orderedListUsd2OrderedListBstrap, usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap,
 				usdMM::Navigation::navigationUsd2NavigationBstrap, usdMM::HorizontalLine::horizontalUsd2HorizontalBstrap,
 				usdMM::CodeBlock::codeBlockUsd2CodeBlockBtsrap, usdMM::BlockQuote::blockQuoteUsd2BlockQuoteBstrap,
-				usdMM::Table::tableUsd2TableBstrap,
-				usdMM::Section::sectionUsd2FixContainerBstrap, usdMM::Section::sectionUsd2FluidContainerBstrap{}
+				usdMM::Table::tableUsd2TableBstrap, usdMM::Section::sectionUsd2FixContainerBstrap, 
+				usdMM::Section::sectionUsd2FluidContainerBstrap{}
 	
 	

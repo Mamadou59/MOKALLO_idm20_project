@@ -12,13 +12,17 @@ transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
 */
 mapping usdMM::Text::textUsd2TextBstrap() : bstrapMM::Text
 	when {not self.text.isPropertyLine()}{	
-	var textContent := self.text.getText();
+	var textContent := self.text;
 	if (self.container().metaClassName().=("Link")){
 		textContent := textContent.substringBefore("]").substringAfter("[");
 	};
 	text := textContent.trim();
 }
 
+/**
+* A mapper which map an usd Text element to bstrap Text element when text contains properties in the same line
+* to display generaly find in these elements title, link, and emphasis.
+*/
 mapping usdMM::Text::textUsdContainPropToDisplay2TextBstrap() : bstrapMM::Text 
 	when {self.inTitleOrLinkOrEphasisElement()}{
 	var t := self.text;
@@ -33,9 +37,7 @@ mapping usdMM::Text::textUsdContainPropToDisplay2TextBstrap() : bstrapMM::Text
 	}else{
 		result.text := self.text.getText();
 	}
-	
 }
-
 
 /**
 * A mapper which map an usd Code element to bstrap code element.
@@ -110,7 +112,7 @@ mapping usdMM::Link::linkUsd2LinkBstrap() : bstrapMM::Link
 	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap, 
 			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap
 			when {not self.isLinkButton() and not self.isLink2Badge()}{
-	var textElem = self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("badge") > 0);
+	var textElem := self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("badge") > 0);
 	if (textElem <> null) {
 		if (textElem.text.find("badge-") > 0){
 			badgeproperties += object BadgeStyle {
@@ -119,6 +121,13 @@ mapping usdMM::Link::linkUsd2LinkBstrap() : bstrapMM::Link
 		};
 		if(textElem.text.toLower().find("badgepill") > 0){
 			badgeproperties += object BadgePill{}
+		}
+	};
+	textElem := self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("linkproperty") > 0);
+	if(textElem <> null){
+		var props := textElem.text.toLower().substringAfter("linkproperty").findProperty();
+		if(props.find("alertlink") > 0) {
+			linkproperties += object AlertLink{}
 		}
 	}
 }

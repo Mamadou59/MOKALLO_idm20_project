@@ -12,13 +12,17 @@ transformation md2usd(in md : mdMM, out usd : usdMM);
 abstract mapping mdMM::Block::block2PageContent() : usdMM::PageContent {}
 
 /**
-* Map a markdown Paragraph element to usd Paragraph element 
+* Map a markdown Paragraph element to usd Paragraph element when paragraph contains any paragraph link
 * which extends textContainerMd2TextContainerUsd mapper.
 */
 mapping mdMM::Paragraph::paragraphMd2ParagraphUsd() : usdMM::Paragraph 
 	inherits mdMM::TextContainer::textContainerMd2TextContainerUsd
 	when {not self.isThereNavigationElement()}{}
-	
+
+/**
+* Map a markdown Paragraph element to usd Paragraph element 
+* which extends textContainerMd2TextContainerUsd mapper.
+*/
 mapping mdMM::Paragraph::paragraphMd2ParagraphUsdIfContentNavigationLink() : usdMM::Navigation 
 	inherits mdMM::Block::block2PageContent
 	when {self.isThereNavigationElement()}{
