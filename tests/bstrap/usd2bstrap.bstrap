@@ -242,6 +242,7 @@
       <generalProperties xsi:type="bstrap:Border"/>
       <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
       <imageproperties xsi:type="bstrap:Circle"/>
+      <imageproperties xsi:type="bstrap:Center"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="2">
@@ -262,6 +263,7 @@
       <generalProperties xsi:type="bstrap:Border"/>
       <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
       <imageproperties xsi:type="bstrap:Circle"/>
+      <imageproperties xsi:type="bstrap:Center"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="1">
@@ -338,6 +340,7 @@
           <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
           <textelements xsi:type="bstrap:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="image">
             <imageproperties xsi:type="bstrap:Circle"/>
+            <imageproperties xsi:type="bstrap:Center"/>
           </textelements>
           <textelements xsi:type="bstrap:Text" text="text du paragraphe"/>
         </pagecontents>
@@ -384,8 +387,8 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Dark"/>
-      <buttonproperties xsi:type="bstrap:ButtonOutLine" color="PRIMARY"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:ButtonOutLine" color="PRIMARY"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Light"/>
@@ -414,8 +417,8 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Small"/>
-      <buttonproperties xsi:type="bstrap:ButtonSize" size="SMALL"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:ButtonSize" size="SMALL"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="2">
@@ -424,8 +427,8 @@
   <pagecontents xsi:type="bstrap:Paragraphe">
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Primary Button"/>
-      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
       <buttonproperties xsi:type="bstrap:ButtonSize" size="LARGE"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Active Primary"/>
@@ -434,8 +437,8 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>
-      <buttonproperties xsi:type="bstrap:Disabled"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:Disabled"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>
@@ -621,12 +624,12 @@
       </listitems>
       <listitems>
         <listitemelements xsi:type="bstrap:Link" url="#" title="">
-          <textnestedelements xsi:type="bstrap:Text" text="Link 2"/>
+          <textnestedelements xsi:type="bstrap:Text" text="Link 3"/>
         </listitemelements>
       </listitems>
       <listitems>
         <listitemelements xsi:type="bstrap:Link" url="#" title="">
-          <textnestedelements xsi:type="bstrap:Text" text="Link 3"/>
+          <textnestedelements xsi:type="bstrap:Text" text="Link 2"/>
         </listitemelements>
       </listitems>
     </listelement>
@@ -648,7 +651,7 @@
     <listelement xsi:type="bstrap:UnOrderedList">
       <listitems>
         <listitemelements xsi:type="bstrap:Link" url="#" title="">
-          <textnestedelements xsi:type="bstrap:Text" text="Link 2"/>
+          <textnestedelements xsi:type="bstrap:Text" text="Link 1"/>
         </listitemelements>
       </listitems>
       <listitems>
@@ -658,7 +661,7 @@
       </listitems>
       <listitems>
         <listitemelements xsi:type="bstrap:Link" url="#" title="">
-          <textnestedelements xsi:type="bstrap:Text" text="Link 1"/>
+          <textnestedelements xsi:type="bstrap:Text" text="Link 2"/>
         </listitemelements>
       </listitems>
     </listelement>
@@ -680,12 +683,12 @@
       </listitems>
       <listitems>
         <listitemelements xsi:type="bstrap:Link" url="#" title="">
-          <textnestedelements xsi:type="bstrap:Text" text="Link 3"/>
+          <textnestedelements xsi:type="bstrap:Text" text="Link 1"/>
         </listitemelements>
       </listitems>
       <listitems>
         <listitemelements xsi:type="bstrap:Link" url="#" title="">
-          <textnestedelements xsi:type="bstrap:Text" text="Link 1"/>
+          <textnestedelements xsi:type="bstrap:Text" text="Link 3"/>
         </listitemelements>
       </listitems>
     </listelement>
@@ -702,12 +705,12 @@
     <listelement xsi:type="bstrap:UnOrderedList">
       <listitems>
         <listitemelements xsi:type="bstrap:Link" url="#" title="">
-          <textnestedelements xsi:type="bstrap:Text" text="Link 3"/>
+          <textnestedelements xsi:type="bstrap:Text" text="Link 1"/>
         </listitemelements>
       </listitems>
       <listitems>
         <listitemelements xsi:type="bstrap:Link" url="#" title="">
-          <textnestedelements xsi:type="bstrap:Text" text="Link 1"/>
+          <textnestedelements xsi:type="bstrap:Text" text="Link 3"/>
         </listitemelements>
       </listitems>
       <listitems>

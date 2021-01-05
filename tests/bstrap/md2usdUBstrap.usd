@@ -490,12 +490,12 @@
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="Link 2"/>
+          <subTextElements xsi:type="usd:Text" text="Link 3"/>
         </elements>
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="Link 3"/>
+          <subTextElements xsi:type="usd:Text" text="Link 2"/>
         </elements>
       </items>
     </groupedItems>
@@ -507,7 +507,7 @@
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="Link 2"/>
+          <subTextElements xsi:type="usd:Text" text="Link 1"/>
         </elements>
       </items>
       <items>
@@ -517,7 +517,7 @@
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="Link 1"/>
+          <subTextElements xsi:type="usd:Text" text="Link 2"/>
         </elements>
       </items>
     </groupedItems>
@@ -534,12 +534,12 @@
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="Link 3"/>
+          <subTextElements xsi:type="usd:Text" text="Link 1"/>
         </elements>
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="Link 1"/>
+          <subTextElements xsi:type="usd:Text" text="Link 3"/>
         </elements>
       </items>
     </groupedItems>
@@ -551,12 +551,12 @@
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="Link 3"/>
+          <subTextElements xsi:type="usd:Text" text="Link 1"/>
         </elements>
       </items>
       <items>
         <elements xsi:type="usd:Link" url="#" title="">
-          <subTextElements xsi:type="usd:Text" text="Link 1"/>
+          <subTextElements xsi:type="usd:Text" text="Link 3"/>
         </elements>
       </items>
       <items>
