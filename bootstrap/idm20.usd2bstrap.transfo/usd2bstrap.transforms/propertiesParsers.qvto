@@ -398,13 +398,21 @@ helper usdMM::Paragraph::isThereElementToBeDisplayed() : Boolean {
 }
 
 /**
-* helper to check if given Text element is in Title or link or italic or strong
+* helper to check if given Text element is in Title or link or italic or strong ot TabCell element
 */
 helper usdMM::Text::inTitleOrLinkOrEphasisElement() : Boolean {
 	return self.container().oclIsTypeOf(usdMM::Title) or 
 			self.container().oclIsTypeOf(usdMM::Link) or 
 			self.container().oclIsTypeOf(usdMM::ItalicEmphasis)or 
-			self.container().oclIsTypeOf(usdMM::StrongEmphasis);
+			self.container().oclIsTypeOf(usdMM::StrongEmphasis) or
+			self.container().oclIsTypeOf(usdMM::TableCell);
+}
+
+/**
+* helper to check if given Text element is in TabCell element
+*/
+helper usdMM::Text::inTabCellWhithProps() : Boolean {
+	return self.container().oclIsTypeOf(usdMM::TableCell) and self.text.toLower().find("tabproperties") > 0;
 }
 
 /**

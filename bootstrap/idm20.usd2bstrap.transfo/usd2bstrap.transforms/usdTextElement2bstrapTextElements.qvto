@@ -30,8 +30,8 @@ mapping usdMM::Text::textUsd2TextBstrap() : bstrapMM::Text
 mapping usdMM::Text::textUsdContainPropToDisplay2TextBstrap() : bstrapMM::Text 
 	when {self.inTitleOrLinkOrEphasisElement()}{
 	var t := self.text;
-	if (t.isPropertyLine()){
-		t := t.substringAfter(")").trim();
+	if (t.isPropertyLine() or self.inTabCellWhithProps()){
+		t := t.getText().trim();
 	};
 	if (self.container().metaClassName().=("Link")){
 		t := t.substringAfter("]");
