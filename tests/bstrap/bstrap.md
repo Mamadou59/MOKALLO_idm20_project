@@ -204,7 +204,7 @@ Une autre ligne du bloc
 | tabProperties:(sectionProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center}),rowProps:(color:warning,background:primary),cellProps:(color:dark,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:info}))Header      | tabPproperties:(cell:(color:danger,background:info,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:danger}))Title       |
 | tabProperties:(cellProps:(color:warning,background:primary))Paragraph   | Text        |
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Syntax      | Description |  Code  |
+| ----------- | ----------- | ------ |
+| Header      | Title       | code1  |
+| Paragraph   | Text        | code2  |

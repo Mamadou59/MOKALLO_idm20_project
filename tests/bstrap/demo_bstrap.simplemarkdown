@@ -1,115 +1,120 @@
 <?xml version="1.0" encoding="ASCII"?>
-<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="/tests/demo_bstrap.simplemarkdown">
+<simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="/tests/bstrap/demo_bstrap.simplemarkdown">
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:1) Boostrap 4 - Demo"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:warning,display:1,margin:{level:1,alignment:center}) Boostrap 4 - Demo"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Badges"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Badges"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:info,emphasis:italic,margin:{level:5,alignment:center},padding:{level:5,alignment:center},border:{border,borderColor:danger})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:info,emphasis:italic,margin:{level:2,alignment:center},padding:{level:5,alignment:center},border:{border,borderColor:danger})"/>
     <elements xsi:type="simplemarkdown:Text" text="Les badges sont r&#xe9;present&#xe9;s comme des liens en "/>
     <elements xsi:type="simplemarkdown:Emphasis">
       <subtext xsi:type="simplemarkdown:Text" text="markdown"/>
     </elements>
     <elements xsi:type="simplemarkdown:Text" text=" mais sans url avec les propri&#xe9;t&#xe9;s badge-COLOR et badgePill."/>
+    <elements xsi:type="simplemarkdown:Text" text="Les links r&#xe9;present&#xe9;s avec des url remplis et les prori&#xe9;t&#xe9;s badge-COLOR et ou badgePill restent des lien mais avec un style de badge"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Badges Style"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Badges Style"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-primary ] Primary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-primary ] Primary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-secondary ] Secondary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-secondary ] Secondary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-info ] Info"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-info ] Info"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-success ] Success"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-success ] Success"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-danger ] Danger"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-danger ] Danger"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-warning ] Warning"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-warning ] Warning"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-light ] Light"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-light ] Light"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-dark ] Dark"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-dark ] Dark"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Pill Badges"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Pill Badges"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-primary badgePill] Primary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-primary badgePill] Primary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-secondary badgePill] Secondary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-secondary badgePill] Secondary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-info badgePill] Info"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-info badgePill] Info"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-success badgePill] Success"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-success badgePill] Success"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-danger badgePill] Danger"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-danger badgePill] Danger"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-warning badgePill] Warning"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-warning badgePill] Warning"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-light badgePill] Light"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-light badgePill] Light"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-dark badgePill] Dark"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-dark badgePill] Dark"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Link Badges"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Link Badges"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-primary ] Primary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-primary ] Primary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-secondary ] Secondary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-secondary ] Secondary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-info ] Info"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-info ] Info"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-success ] Success"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-success ] Success"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-danger badgePill] Danger"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-danger badgePill] Danger"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-warning badgePill] Warning"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-warning badgePill] Warning"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-light badgePill] Light"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-light badgePill] Light"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-dark badgePill] Dark"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center},padding:{level:1,alignment:center})[badge badge-dark badgePill] Dark"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Navigation"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Navigation"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Basic navigation"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Basic navigation"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:info,emphasis:italic,margin:{level:2,alignment:center},padding:{level:5,alignment:center},border:{border,borderColor:danger})"/>
+    <elements xsi:type="simplemarkdown:Text" text="Une navigation est repr&#xe9;sent&#xe9;e par plusieurs liens dans un m&#xea;me paragraphe dont le premier lien contient les propri&#xe9;t&#xe9;s qui distinguent une navigation des autres repr&#xe9;sentations utilis&#xe9;es par les liens (button et badge) et peut &#xe9;galement contenir des propri&#xe9;t&#xe9;s g&#xe9;n&#xe9;rales et particuli&#xe8;res comme (brand, basic, vertical, centred)."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[nav basic] Vertical navigation"/>
+      <subtext xsi:type="simplemarkdown:Text" text="[nav basic] Basic navigation"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(background:primary) Link 1"/>
@@ -122,361 +127,389 @@
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Brand navigation"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Brand navigation"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(color:light,background:secondary,border:{border,borderColor:danger})[navbar-brand]Navbar brand"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="Link 1"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:primary) Link 1"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="Link 2"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:warning)Link 2"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="Link 3"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:danger) Link 3"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Vertical navigation"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Vertical navigation"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="[nav vertical] Vertical navigation"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="Link 1"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:primary) Link 1"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="Link 2"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:warning)Link 2"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="Link 3"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:danger) Link 3"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Centred navigation"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Centred navigation"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:danger})[nav centred] Centred navigation"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="Link 1"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:primary) Link 1"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="Link 2"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:warning)Link 2"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="Link 3"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(background:danger) Link 3"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Buttons"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Buttons"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:info,emphasis:italic,margin:{level:2,alignment:center},padding:{level:5,alignment:center},border:{border,borderColor:danger})"/>
+    <elements xsi:type="simplemarkdown:Text" text="Les liens peuvent &#xea;tre interpr&#xe9;t&#xe9;s comme un bouton d&#xe8;s la premi&#xe8;re transformation de markdown vers USD quand le lien est repr&#xe9;sent&#xe9; avec des propri&#xe9;t&#xe9;s d&#x2019;un button. De USD vers "/>
+    <elements xsi:type="simplemarkdown:Emphasis">
+      <subtext xsi:type="simplemarkdown:Text" text="Bootstrap"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=", si ces propri&#xe9;t&#xe9;s sont significatives, le button est donc directement d&#xe9;cor&#xe9; par les propri&#xe9;t&#xe9;s mises en &#x153;uvre dans les m&#xe9;tadonn&#xe9;es."/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Button Styles"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Button Styles"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn]Primary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center})[btn]Primary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-primary]Primary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-primary]Primary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-secondary]Secondary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-secondary]Secondary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-success]Success"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-success]Success"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-info]Info"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-info]Info"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-warning]Warning"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-warning]Warning"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-danger]Danger"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-danger]Danger"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-dark, outline-primary]Dark"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-dark, outline-primary]Dark"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-light, spinner]Light"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-light, spinner]Light"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-link]Link"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-link]Link"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn]Doc bootstrap (un lien avec role button)"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn]Doc bootstrap (un lien avec role button)"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Button Size"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Button Size"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-primary btn-lg]Large Primary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-primary btn-lg]Large Primary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-success btn-md]Default Success"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-success btn-md]Default Success"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-danger btn-sm]Small Danger"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-danger btn-sm]Small Danger"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Button States"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Button States"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-primary active]Active Primary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-primary active]Active Primary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-success disabled]Disabled Success"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-success disabled]Disabled Success"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Button Spinner"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Button Spinner"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-primary spinner]Spinner Primary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-primary spinner]Spinner Primary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-success spinner]Spinner Success"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-success spinner]Spinner Success"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[btn-danger spinner]Spinner Danger"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:2,alignment:center}[btn-danger spinner]Spinner Danger"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Titles"/>
-  </contents>
-  <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:warning,display:1) Title with display1"/>
-  </contents>
-  <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:warning,display:2) Title with display2"/>
-  </contents>
-  <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:warning,display:3) Title with display3"/>
-  </contents>
-  <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:warning,display:4) Title with display4"/>
-  </contents>
-  <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Colors"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Titles"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:primary)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:info,emphasis:italic,margin:{level:2,alignment:center},padding:{level:5,alignment:center},border:{border,borderColor:danger})"/>
+    <elements xsi:type="simplemarkdown:Text" text="En *Bootstrap, propri&#xe9;t&#xe9;s d'un titre sont mises sur la m&#xea;me ligne que le texte."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:warning,display:1,margin:{level:3,alignment:center}) Title with display1"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:warning,display:2,margin:{level:3,alignment:center}) Title with display2"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:warning,display:3,margin:{level:3,alignment:center}) Title with display3"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:warning,display:4,margin:{level:3,alignment:center}) Title with display4"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Colors"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:primary,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This text is important."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:success)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:success,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This text indicates success."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:info)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:info,margin:{level:3,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This text represents some information."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This text represents a warning."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:danger)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:danger,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This text represents danger."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:secondary)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:secondary,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Secondary text."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Dark grey text."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Light text."/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Background"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Background"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:primary)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(background:primary,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This text is important."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:success)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(background:success,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This text indicates success."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:info)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(background:info,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This text represents some information."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:warning)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(background:warning,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This text represents a warning."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:danger)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(background:danger,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This text represents danger."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:secondary)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(background:secondary, color:light,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Secondary text."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:dark)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(background:dark,color:light,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Dark grey text."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:light)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(background:light,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Light text."/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Emphasis"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Emphasis"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Italic"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Italic"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(emphasis:italic)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(emphasis:italic,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Ceci est un text en italic"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
     <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Bold"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(emphasis:bold)"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(emphasis:bold,margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Ceci est un text en bold"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Border"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Border"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Non colored border"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Non colored border"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Ceci est un text avec une bordure non colori&#xe9;e"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Colored border"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Colored border"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:primary})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:primary},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Ceci est un text avec une bordure colori&#xe9;e en primary"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:secondary})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:secondary},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Ceci est un text avec une bordure colori&#xe9;e en secondary"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:success})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:success},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Ceci est un text avec une bordure colori&#xe9;e en success"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:info})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:info},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Ceci est un text avec une bordure colori&#xe9;e en info"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:danger})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:danger},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Ceci est un text avec une bordure colori&#xe9;e en danger"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:warning})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:warning},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Ceci est un text avec une bordure colori&#xe9;e en warning"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:light})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:light},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Ceci est un text avec une bordure colori&#xe9;e en light"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:dark})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(border:{border,borderColor:dark},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Ceci est un text avec une bordure colori&#xe9;e en dark"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Alert"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Alert"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Alert style"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Alert style"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:primary})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:primary},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a primary alert&#x2014;check it out!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:secondary})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:secondary},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a secondary alert&#x2014;check it out!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:success})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:success},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a success alert&#x2014;check it out!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:danger})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:danger},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a danger alert&#x2014;check it out!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:warning})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:warning},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a warning alert&#x2014;check it out!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:info})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:info},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a info alert&#x2014;check it out!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:light})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:light},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a light alert&#x2014;check it out!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:dark})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:dark},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a dark alert&#x2014;check it out!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Alert style and animated"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Alert style and animated"/>
   </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:primary,animated})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This is a primary alert&#x2014;check it out / dismiss it!"/>
+  <contents xsi:type="simplemarkdown:BlockQuote">
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:primary,animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
+      <elements xsi:type="simplemarkdown:Text" text="This is a primary alert&#x2014;check it out / dismiss it!"/>
+    </contents>
   </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:secondary,animated})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This is a secondary alert&#x2014;check it out / dismiss it!"/>
+  <contents xsi:type="simplemarkdown:BlockQuote">
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:secondary,animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
+      <elements xsi:type="simplemarkdown:Text" text="This is a secondary alert&#x2014;check it out / dismiss it!"/>
+    </contents>
   </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:success,animated})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This is a success alert&#x2014;check it out / dismiss it!"/>
+  <contents xsi:type="simplemarkdown:BlockQuote">
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:success,animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
+      <elements xsi:type="simplemarkdown:Text" text="This is a success alert&#x2014;check it out / dismiss it!"/>
+    </contents>
   </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:danger, animated})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This is a danger alert&#x2014;check it out / dismiss it!"/>
+  <contents xsi:type="simplemarkdown:BlockQuote">
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:danger, animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
+      <elements xsi:type="simplemarkdown:Text" text="This is a danger alert&#x2014;check it out / dismiss it!"/>
+    </contents>
   </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:warning, animated})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This is a warning alert&#x2014;check it out / dismiss it!"/>
+  <contents xsi:type="simplemarkdown:BlockQuote">
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:warning, animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
+      <elements xsi:type="simplemarkdown:Text" text="This is a warning alert&#x2014;check it out / dismiss it!"/>
+    </contents>
   </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:info, animated})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This is a info alert&#x2014;check it out / dismiss it!"/>
+  <contents xsi:type="simplemarkdown:BlockQuote">
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:info, animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
+      <elements xsi:type="simplemarkdown:Text" text="This is a info alert&#x2014;check it out / dismiss it!"/>
+    </contents>
   </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:light, animated})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This is a light alert&#x2014;check it out / dismiss it!"/>
+  <contents xsi:type="simplemarkdown:BlockQuote">
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:light, animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
+      <elements xsi:type="simplemarkdown:Text" text="This is a light alert&#x2014;check it out / dismiss it!"/>
+    </contents>
   </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:dark, animated})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This is a dark alert&#x2014;check it out / dismiss it!"/>
+  <contents xsi:type="simplemarkdown:BlockQuote">
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:dark, animated},margin:{level:4,alignment:center},containerType:fixContainer)"/>
+      <elements xsi:type="simplemarkdown:Text" text="This is a dark alert&#x2014;check it out / dismiss it!"/>
+    </contents>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Alert link"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Alert link"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:primary})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:primary},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a primary alert contains a "/>
     <elements xsi:type="simplemarkdown:Link" url="url" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(linkProperty:(alertLink)) link1"/>
@@ -484,7 +517,7 @@
     <elements xsi:type="simplemarkdown:Text" text="!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:secondary})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:secondary},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a secondary alert contains a "/>
     <elements xsi:type="simplemarkdown:Link" url="url" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(linkProperty:(alertLink)) link2"/>
@@ -492,7 +525,7 @@
     <elements xsi:type="simplemarkdown:Text" text="!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:success})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:success},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a success alert contains a "/>
     <elements xsi:type="simplemarkdown:Link" url="url" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(linkProperty:(alertLink)) link3"/>
@@ -500,7 +533,7 @@
     <elements xsi:type="simplemarkdown:Text" text="!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:danger})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:danger},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a danger alert contains a "/>
     <elements xsi:type="simplemarkdown:Link" url="url" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(linkProperty:(alertLink)) link4"/>
@@ -508,7 +541,7 @@
     <elements xsi:type="simplemarkdown:Text" text="!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:warning})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:warning},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a warning alert contains a "/>
     <elements xsi:type="simplemarkdown:Link" url="url" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(linkProperty:(alertLink)) link5"/>
@@ -516,7 +549,7 @@
     <elements xsi:type="simplemarkdown:Text" text="!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:info})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:info},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a info alert contains a "/>
     <elements xsi:type="simplemarkdown:Link" url="url" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(linkProperty:(alertLink)) link6"/>
@@ -524,7 +557,7 @@
     <elements xsi:type="simplemarkdown:Text" text="!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:light})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:light},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a light alert contains a "/>
     <elements xsi:type="simplemarkdown:Link" url="url" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(linkProperty:(alertLink)) link7"/>
@@ -532,7 +565,7 @@
     <elements xsi:type="simplemarkdown:Text" text="!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:dark})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:dark},margin:{level:4,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="This is a dark alert contains a "/>
     <elements xsi:type="simplemarkdown:Link" url="url" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(linkProperty:(alertLink)) link8"/>
@@ -540,17 +573,20 @@
     <elements xsi:type="simplemarkdown:Text" text="!"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Lists"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Lists"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:info,emphasis:italic,margin:{level:5,alignment:center},padding:{level:5,alignment:center},border:{border,borderColor:danger})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:info,emphasis:italic,margin:{level:3,alignment:center},border:{border,borderColor:danger})"/>
     <elements xsi:type="simplemarkdown:Text" text="Un item est toujours laisser pour les propri&#xe9;t&#xe9;s et qui ne sera jamais affich&#xe9;."/>
     <elements xsi:type="simplemarkdown:Text" text="Les types de lists sont basicList et horizontalList"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Basic lists"/>
   </contents>
   <contents xsi:type="simplemarkdown:BulletList">
     <items xsi:type="simplemarkdown:BulletListItem">
       <elements xsi:type="simplemarkdown:Paragraph">
-        <elements xsi:type="simplemarkdown:Text" text="properties:(background:primary, border:{border,borderColor:danger}, listProperty:basicList)"/>
+        <elements xsi:type="simplemarkdown:Text" text="properties:(background:secondary, border:{border,borderColor:danger}, listProperty:basicList,margin:{level:4,alignment:center})"/>
       </elements>
     </items>
     <items xsi:type="simplemarkdown:BulletListItem">
@@ -558,13 +594,10 @@
         <elements xsi:type="simplemarkdown:Text" text="start list. This is a paragraph"/>
         <elements xsi:type="simplemarkdown:Text" text="on multiple lines."/>
       </elements>
-      <elements xsi:type="simplemarkdown:Paragraph">
-        <elements xsi:type="simplemarkdown:Text" text="And another paragraph"/>
-      </elements>
     </items>
     <items xsi:type="simplemarkdown:BulletListItem">
       <elements xsi:type="simplemarkdown:Paragraph">
-        <elements xsi:type="simplemarkdown:Text" text="(itemProperty: active) item 2."/>
+        <elements xsi:type="simplemarkdown:Text" text="(itemProperty: active) Active item 2."/>
       </elements>
       <elements xsi:type="simplemarkdown:BulletList">
         <items xsi:type="simplemarkdown:BulletListItem">
@@ -579,11 +612,6 @@
         </items>
       </elements>
       <elements xsi:type="simplemarkdown:BulletList">
-        <items xsi:type="simplemarkdown:BulletListItem">
-          <elements xsi:type="simplemarkdown:Paragraph">
-            <elements xsi:type="simplemarkdown:Text" text="properties:(background:warning,border:{border,borderColor:success}, listProperty:horizontalList)"/>
-          </elements>
-        </items>
         <items xsi:type="simplemarkdown:BulletListItem">
           <elements xsi:type="simplemarkdown:Paragraph">
             <elements xsi:type="simplemarkdown:Text" text="level 2 item 3"/>
@@ -631,11 +659,36 @@
       </elements>
     </items>
   </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Horizontal lists"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:BulletList">
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="properties:(background:warning,border:{border,borderColor:success}, listProperty:horizontalList,margin:{level:4,alignment:center})"/>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="(itemProperty: active) Active item 1."/>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="item 2"/>
+      </elements>
+    </items>
+    <items xsi:type="simplemarkdown:BulletListItem">
+      <elements xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="item 3"/>
+      </elements>
+    </items>
+  </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Images"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Images"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Image avec des propri&#xe9;t&#xe9;s circle et center"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Image avec des propri&#xe9;t&#xe9;s circle et center"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Image" url="https://i1.wp.com/gikspirit.com/wp-content/uploads/2020/04/bootstrap-dans-wordpress.png?fit=824%2C412&amp;ssl=1" title="">
@@ -643,15 +696,18 @@
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Image avec des propri&#xe9;t&#xe9;s rounded et float left"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Image avec des propri&#xe9;t&#xe9;s rounded et float left et right"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Image" url="https://i1.wp.com/gikspirit.com/wp-content/uploads/2020/04/bootstrap-dans-wordpress.png?fit=824%2C412&amp;ssl=1" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:5,alignment:left},border:{border,borderColor:danger}, imageShape:rounded,imageAligning:{float:left})Bootstrap4"/>
     </elements>
+    <elements xsi:type="simplemarkdown:Image" url="https://i1.wp.com/gikspirit.com/wp-content/uploads/2020/04/bootstrap-dans-wordpress.png?fit=824%2C412&amp;ssl=1" title="">
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{level:5,alignment:right},border:{border,borderColor:danger}, imageShape:rounded,imageAligning:{float:left})Bootstrap4"/>
+    </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Image avec des propri&#xe9;t&#xe9;s thumbnail et responsive"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Image avec des propri&#xe9;t&#xe9;s thumbnail et responsive"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Image" url="https://i1.wp.com/gikspirit.com/wp-content/uploads/2020/04/bootstrap-dans-wordpress.png?fit=824%2C412&amp;ssl=1" title="">
@@ -659,10 +715,100 @@
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2) Bootstrap Tables"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Section"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:info,emphasis:italic,margin:{level:3,alignment:center},border:{border,borderColor:danger})"/>
+    <elements xsi:type="simplemarkdown:Text" text="En bootstrap, nous transformons les sections en container selon le type de container passer dans les propri&#xe9;t&#xe9;s soit un "/>
+    <elements xsi:type="simplemarkdown:Emphasis">
+      <subtext xsi:type="simplemarkdown:Text" text="fixconatainer"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" ou un "/>
+    <elements xsi:type="simplemarkdown:Emphasis">
+      <subtext xsi:type="simplemarkdown:Text" text="fluidcontainer"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text="."/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Basic table"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Fix container"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:BlockQuote">
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="Start section"/>
+      <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:secondary,margin:{level:4,alignment:center},border:{border,borderColor:secondary,containerType:fixContainer})"/>
+    </contents>
+    <contents xsi:type="simplemarkdown:Title" level="1">
+      <elements xsi:type="simplemarkdown:Text" text="Titre de la section"/>
+    </contents>
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="Un paragraph dans la section"/>
+    </contents>
+    <contents xsi:type="simplemarkdown:BlockQuote">
+      <contents xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Start section"/>
+        <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:secondary,margin:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fixContainer})"/>
+      </contents>
+      <contents xsi:type="simplemarkdown:Title" level="2">
+        <elements xsi:type="simplemarkdown:Text" text="Titre de la sous section"/>
+      </contents>
+      <contents xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Une list"/>
+      </contents>
+      <contents xsi:type="simplemarkdown:BulletList">
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="list in section"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="item 2"/>
+          </elements>
+        </items>
+        <items xsi:type="simplemarkdown:BulletListItem">
+          <elements xsi:type="simplemarkdown:Paragraph">
+            <elements xsi:type="simplemarkdown:Text" text="item 3"/>
+            <elements xsi:type="simplemarkdown:Text" text="fin de liste"/>
+          </elements>
+        </items>
+      </contents>
+    </contents>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Fluid container"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:BlockQuote">
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="Start section"/>
+      <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:secondary,margin:{level:4,alignment:center},border:{border,borderColor:secondary,containerType:fluidContainer})"/>
+    </contents>
+    <contents xsi:type="simplemarkdown:Title" level="1">
+      <elements xsi:type="simplemarkdown:Text" text="Titre de la section"/>
+    </contents>
+    <contents xsi:type="simplemarkdown:Paragraph">
+      <elements xsi:type="simplemarkdown:Text" text="Un paragraph dans la section"/>
+    </contents>
+    <contents xsi:type="simplemarkdown:BlockQuote">
+      <contents xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Start section"/>
+        <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:secondary,margin:{level:5,alignment:center},border:{border,borderColor:secondary,containerType:fluidContainer})"/>
+      </contents>
+      <contents xsi:type="simplemarkdown:Title" level="2">
+        <elements xsi:type="simplemarkdown:Text" text="Titre de la sous section"/>
+      </contents>
+      <contents xsi:type="simplemarkdown:Paragraph">
+        <elements xsi:type="simplemarkdown:Text" text="Une image"/>
+        <elements xsi:type="simplemarkdown:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+          <subtext xsi:type="simplemarkdown:Text" text="properties:(imageShape:circle,imageAligning:center)image"/>
+        </elements>
+      </contents>
+    </contents>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="1">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:success,display:2,margin:{level:2,alignment:center}) Bootstrap Tables"/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Title" level="2">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Basic table"/>
   </contents>
   <contents xsi:type="simplemarkdown:TableBlock">
     <sections xsi:type="simplemarkdown:TableHead">
@@ -673,15 +819,21 @@
         <cells isHeader="true">
           <elements xsi:type="simplemarkdown:Text" text="Description"/>
         </cells>
+        <cells isHeader="true">
+          <elements xsi:type="simplemarkdown:Text" text="Code"/>
+        </cells>
       </rows>
     </sections>
     <sections xsi:type="simplemarkdown:TableSeparator">
       <rows>
         <cells>
-          <elements xsi:type="simplemarkdown:Text" text=":-----------"/>
+          <elements xsi:type="simplemarkdown:Text" text="-----------"/>
         </cells>
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="-----------"/>
+        </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="------"/>
         </cells>
       </rows>
     </sections>
@@ -693,6 +845,9 @@
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="Title"/>
         </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="code1"/>
+        </cells>
       </rows>
       <rows rowNumber="2">
         <cells>
@@ -701,11 +856,14 @@
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="Text"/>
         </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="code2"/>
+        </cells>
       </rows>
     </sections>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Bordered table"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Bordered table"/>
   </contents>
   <contents xsi:type="simplemarkdown:TableBlock">
     <sections xsi:type="simplemarkdown:TableHead">
@@ -716,15 +874,21 @@
         <cells isHeader="true">
           <elements xsi:type="simplemarkdown:Text" text="Description"/>
         </cells>
+        <cells isHeader="true">
+          <elements xsi:type="simplemarkdown:Text" text="Code"/>
+        </cells>
       </rows>
     </sections>
     <sections xsi:type="simplemarkdown:TableSeparator">
       <rows>
         <cells>
-          <elements xsi:type="simplemarkdown:Text" text=":-----------"/>
+          <elements xsi:type="simplemarkdown:Text" text="-----------"/>
         </cells>
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="-----------"/>
+        </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="------"/>
         </cells>
       </rows>
     </sections>
@@ -736,6 +900,9 @@
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="Title"/>
         </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="code1"/>
+        </cells>
       </rows>
       <rows rowNumber="2">
         <cells>
@@ -744,30 +911,39 @@
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="Text"/>
         </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="code2"/>
+        </cells>
       </rows>
     </sections>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Dark table"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Dark table"/>
   </contents>
   <contents xsi:type="simplemarkdown:TableBlock">
     <sections xsi:type="simplemarkdown:TableHead">
       <rows rowNumber="1">
         <cells isHeader="true">
-          <elements xsi:type="simplemarkdown:Text" text="tabProperties:(tableProps:(tableProperty:darkTable))Syntax"/>
+          <elements xsi:type="simplemarkdown:Text" text="tabProperties:(tableProps:(tableProperty:darkTable,color:light))Syntax"/>
         </cells>
         <cells isHeader="true">
           <elements xsi:type="simplemarkdown:Text" text="Description"/>
+        </cells>
+        <cells isHeader="true">
+          <elements xsi:type="simplemarkdown:Text" text="Code"/>
         </cells>
       </rows>
     </sections>
     <sections xsi:type="simplemarkdown:TableSeparator">
       <rows>
         <cells>
-          <elements xsi:type="simplemarkdown:Text" text=":-----------"/>
+          <elements xsi:type="simplemarkdown:Text" text="-----------"/>
         </cells>
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="-----------"/>
+        </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="------"/>
         </cells>
       </rows>
     </sections>
@@ -779,6 +955,9 @@
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="Title"/>
         </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="code1"/>
+        </cells>
       </rows>
       <rows rowNumber="2">
         <cells>
@@ -787,11 +966,14 @@
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="Text"/>
         </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="code2"/>
+        </cells>
       </rows>
     </sections>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Striped rows table"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Striped rows table"/>
   </contents>
   <contents xsi:type="simplemarkdown:TableBlock">
     <sections xsi:type="simplemarkdown:TableHead">
@@ -802,15 +984,21 @@
         <cells isHeader="true">
           <elements xsi:type="simplemarkdown:Text" text="Description"/>
         </cells>
+        <cells isHeader="true">
+          <elements xsi:type="simplemarkdown:Text" text="Code"/>
+        </cells>
       </rows>
     </sections>
     <sections xsi:type="simplemarkdown:TableSeparator">
       <rows>
         <cells>
-          <elements xsi:type="simplemarkdown:Text" text=":-----------"/>
+          <elements xsi:type="simplemarkdown:Text" text="-----------"/>
         </cells>
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="-----------"/>
+        </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="------"/>
         </cells>
       </rows>
     </sections>
@@ -822,6 +1010,9 @@
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="Title"/>
         </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="code1"/>
+        </cells>
       </rows>
       <rows rowNumber="2">
         <cells>
@@ -830,11 +1021,14 @@
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="Text"/>
         </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="code2"/>
+        </cells>
       </rows>
     </sections>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="2">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3) Hover rows table"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:dark,display:3,margin:{level:3,alignment:center}) Hover rows table"/>
   </contents>
   <contents xsi:type="simplemarkdown:TableBlock">
     <sections xsi:type="simplemarkdown:TableHead">
@@ -845,15 +1039,21 @@
         <cells isHeader="true">
           <elements xsi:type="simplemarkdown:Text" text="Description"/>
         </cells>
+        <cells isHeader="true">
+          <elements xsi:type="simplemarkdown:Text" text="Code"/>
+        </cells>
       </rows>
     </sections>
     <sections xsi:type="simplemarkdown:TableSeparator">
       <rows>
         <cells>
-          <elements xsi:type="simplemarkdown:Text" text=":-----------"/>
+          <elements xsi:type="simplemarkdown:Text" text="-----------"/>
         </cells>
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="-----------"/>
+        </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="------"/>
         </cells>
       </rows>
     </sections>
@@ -865,6 +1065,9 @@
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="Title"/>
         </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="code1"/>
+        </cells>
       </rows>
       <rows rowNumber="2">
         <cells>
@@ -872,6 +1075,9 @@
         </cells>
         <cells>
           <elements xsi:type="simplemarkdown:Text" text="Text"/>
+        </cells>
+        <cells>
+          <elements xsi:type="simplemarkdown:Text" text="code2"/>
         </cells>
       </rows>
     </sections>

@@ -1,90 +1,90 @@
-# properties:(color:secondary,background:success,titleSize:large) UIkit - Demo
+# properties:(color:secondary,background:success,titleSize:large,margin:{size:large,alignment:center}) UIkit - Demo
 
-# properties:(color:secondary,background:success,titleSize:large) Les titres
+# properties:(color:secondary,background:success,titleSize:large,margin:{size:large,alignment:center}) Les titres
 
-# properties:(color:warning,backbackground:primary,titleSize:default) Un titre taille 1 avec une size small
+# properties:(color:warning,backbackground:primary,titleSize:default,margin:{size:large,alignment:center}) Un titre taille 1 avec une size small
 
-## properties:(color:warning,backbackground:secondary,titleSize:large) Un titre taille 2 avec une size large
+## properties:(color:warning,backbackground:secondary,titleSize:large,margin:{size:default,alignment:center}) Un titre taille 2 avec une size large
 
 ### properties:(color:warning,backbackground:emphasis) Un titre taille 2 sans size
 
-# properties:(color:secondary,background:success,titleSize:default) UIkit Colors
+# properties:(color:secondary,background:success,titleSize:default,margin:{size:large,alignment:center}) UIkit Colors
 
-properties:(color:primary) 
+properties:(color:primary,margin:{size:small,alignment:center}) 
 This text is important.
 
-properties:(color:success)
+properties:(color:success,margin:{size:small,alignment:center})
 This text indicates success.
 
-properties:(color:emphasis) 
+properties:(color:emphasis,margin:{size:small,alignment:center}) 
 This text is emphasis.
 
-properties:(color:warning) 
+properties:(color:warning,margin:{size:small,alignment:center}) 
 This text represents a warning.
 
-properties:(color:danger) 
+properties:(color:danger,margin:{size:small,alignment:center}) 
 This text represents danger.
 
-properties:(color:secondary) 
+properties:(color:secondary,margin:{size:small,alignment:center}) 
 Secondary text.
 
-properties:(color:muted) 
+properties:(color:muted,margin:{size:small,alignment:center,background:light} 
 muted text.
 
-properties:(color:light) 
+properties:(color:light,margin:{size:small,alignment:center}) 
 Light text.
 
-# properties:(color:secondary,background:success,titleSize:default) UIkit Background
+# properties:(color:secondary,background:success,titleSize:default,margin:{size:large,alignment:center}) UIkit Background
 
-properties:(background:primary) 
+properties:(background:primary,margin:{size:small,alignment:center}) 
 This text is important.
 
-properties:(background:success)
+properties:(background:success,margin:{size:small,alignment:center})
 This text indicates success.
 
-properties:(background:emphasis) 
+properties:(background:emphasis,margin:{size:small,alignment:center}) 
 This text emphasis.
 
-properties:(background:warning) 
+properties:(background:warning,margin:{size:small,alignment:center}) 
 This text represents a warning.
 
-properties:(background:danger) 
+properties:(background:danger,margin:{size:small,alignment:center}) 
 This text represents danger.
 
-properties:(background:secondary) 
+properties:(background:secondary,margin:{size:small,alignment:center}) 
 Secondary text.
 
-properties:(background:muted) 
+properties:(color:light,background:muted,margin:{size:small,alignment:center}) 
 muted text.
 
-properties:(background:light) 
+properties:(background:light,margin:{size:small,alignment:center}) 
 Light text.
 
 
-# properties:(color:warning,backbackground:primary,titleSize:default) Les boutons
+# properties:(color:warning,backbackground:primary,titleSize:default,,margin:{size:large,alignment:center}) Les boutons
 
 ## properties:(color:light,background:secondary,titleSize:large) Button Styles
 
-[[btn]Primary](#)
-[[btn-muted]muted](#)
-[[btn-secondary]Secondary](#)
-[[btn-success]Success](#)
-[[btn-emphasis]Emphasis](#)
-[[btn-warning]Warning](#)
-[[btn-danger]Danger](#)
+[properties:(margin:{size:small,alignment:center})[btn]Primary](#)
+[properties:(margin:{size:small,alignment:center})[btn-muted]muted](#)
+[properties:(margin:{size:small,alignment:center})[btn-secondary]Secondary](#)
+[properties:(margin:{size:small,alignment:center})[btn-success]Success](#)
+[properties:(margin:{size:small,alignment:center})[btn-emphasis]Emphasis](#)
+[properties:(margin:{size:small,alignment:center})[btn-warning]Warning](#)
+[properties:(margin:{size:small,alignment:center})[btn-danger]Danger](#)
 
 
 ## properties:(color:light,background:secondary,titleSize:default) Buttton Size
 
-[[btn-primary btn-lg]Large](#)
-[[btn-primary btn-md]Default](#)
-[[btn-primary btn-sm]Small](#)
+[properties:(margin:{size:small,alignment:center})[btn-primary btn-lg]Large](#)
+[properties:(margin:{size:small,alignment:center})[btn-primary btn-md]Default](#)
+[properties:(margin:{size:small,alignment:center})[btn-primary btn-sm]Small](#)
 
-# properties:(color:warning,backbackground:primary,default) Les images
+# properties:(color:warning,backbackground:primary,default,margin:{size:large,alignment:center}) Les images
 
-![properties:(margin:{size:large,alignment:left},padding:{size:small,alignment:center},imageProperty)UIkit](https://storage.googleapis.com/dpw/app/uploads/2013/08/ui-kit-logo-frontend-framework.png)
+![properties:(margin:{size:small,alignment:left},padding:{size:small,alignment:center},imageProperty)UIkit](https://storage.googleapis.com/dpw/app/uploads/2013/08/ui-kit-logo-frontend-framework.png)
 
-# properties:(color:warning,backbackground:primary,default) Les Liens
+# properties:(color:warning,backbackground:primary,default,margin:{size:large,alignment:center}) Les Liens
 
 Un lien en *Uikit* en plus des propriétés générales peut aussi avoir trois types spécifiques et est représenté comme suit [(properties) title](url)
 
@@ -94,17 +94,17 @@ Un lien en *Uikit* en plus des propriétés générales peut aussi avoir trois t
 
 ### properties:(color:light,background:secondary,titleSize:default) Un lien avec la propriété **MuteLink** de uikit
 
-[properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:muteLink})Tables Extension](https://github.com/vsch/flexmark-java/wiki/Tables-Extension)
+[properties:(background:warning,margin:{size:small,alignment:left},padding:{size:small,alignment:center,linkProperty:muteLink})Tables Extension](https://github.com/vsch/flexmark-java/wiki/Tables-Extension)
 
 ### properties:(color:light,background:secondary,titleSize:default) Un lien avec la propriété **TextModifier** de uikit
 
-[properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:textModifier})Tables Extension](https://github.com/vsch/flexmark-java/wiki/Tables-Extension)
+[properties:(background:warning,margin:{size:small,alignment:left},padding:{size:small,alignment:center,linkProperty:textModifier})Tables Extension](https://github.com/vsch/flexmark-java/wiki/Tables-Extension)
 
 
-# properties:(color:light,background:secondary,titleSize:default) Les Sections
+# properties:(color:light,background:secondary,titleSize:default,margin:{size:large,alignment:center}) Les Sections => Container
 
 > Start section
-> properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center})
+> properties:(background:warning,margin:{size:small,alignment:center},padding:{size:small,alignment:center})
 > ## Titre de la section
 > Ce paragraph est dans la prémière section
 > > Start section
