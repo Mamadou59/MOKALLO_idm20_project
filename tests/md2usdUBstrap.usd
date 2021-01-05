@@ -10,15 +10,15 @@
     <textElements xsi:type="usd:Text" text="Les Badge"/>
   </contents>
   <contents xsi:type="usd:Paragraph">
-    <textElements xsi:type="usd:Text" text="Ceci est le text d'un badge avec les propriétés badge primary et badge pill  "/>
+    <textElements xsi:type="usd:Text" text="Ceci est le text d'un badge avec les propriétés badge success et badge pill  "/>
     <textElements xsi:type="usd:Link" url="" title="">
-      <subTextElements xsi:type="usd:Text" text="[badge badge-primary badgePill] Badge whitout URL"/>
+      <subTextElements xsi:type="usd:Text" text="[badge badge-success badgePill] Badge whitout URL"/>
     </textElements>
   </contents>
   <contents xsi:type="usd:Paragraph">
-    <textElements xsi:type="usd:Text" text="Ceci est un lien en badge avec les propriétés badge primary et badge pill "/>
+    <textElements xsi:type="usd:Text" text="Ceci est un lien en badge avec les propriétés badge danger et badge pill "/>
     <textElements xsi:type="usd:Link" url="url" title="">
-      <subTextElements xsi:type="usd:Text" text="[badge badge-primary badgePill] Badge with URL"/>
+      <subTextElements xsi:type="usd:Text" text="[badge badge-danger badgePill] Badge with URL"/>
     </textElements>
   </contents>
   <contents xsi:type="usd:Paragraph">
@@ -55,6 +55,16 @@
   <contents xsi:type="usd:Title" level="3">
     <textElements xsi:type="usd:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 3 avec un display 4"/>
   </contents>
+  <contents xsi:type="usd:Title" level="3">
+    <textElements xsi:type="usd:Text" text="properties:(margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:4,emphasis:italic, alertProperty:{alertStyle:success,animated}) Un titre taille 3 avec un display 4 avec les propriétés alert "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="success"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" et "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="animeted"/>
+    </textElements>
+  </contents>
   <contents xsi:type="usd:Title" level="1">
     <textElements xsi:type="usd:Text" text="Un paragrapgh"/>
   </contents>
@@ -70,10 +80,14 @@
     <textElements xsi:type="usd:Text" text=" pour tout le paragraph)"/>
   </contents>
   <contents xsi:type="usd:Paragraph">
-    <textElements xsi:type="usd:Text" text="properties:(color:dark,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold,alertProperty:{alertStyle:success,animated})"/>
+    <textElements xsi:type="usd:Text" text="properties:(color:dark,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)"/>
     <textElements xsi:type="usd:Text" text="Ce paragraph "/>
     <textElements xsi:type="usd:Code" text="contient un élément code"/>
     <textElements xsi:type="usd:Text" text=" et à une couleur dark, un backround primary, un margin, un padding, une bordure non clorée et un emphasis bold."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="properties:(alertProperty:{alertStyle:success,animated})"/>
+    <textElements xsi:type="usd:Text" text="Ceci est un paragraphe avec des propriétés alertes"/>
   </contents>
   <contents xsi:type="usd:Paragraph">
     <textElements xsi:type="usd:Text" text="properties:(color:primary,background:dark,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border, borderColor:danger},emphasis:italic)"/>
@@ -91,7 +105,21 @@
   </contents>
   <contents xsi:type="usd:Paragraph">
     <textElements xsi:type="usd:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
-      <subTextElements xsi:type="usd:Text" text="properties:(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold, linkProperty:linkBrand)BootstrapW3school"/>
+      <subTextElements xsi:type="usd:Text" text="properties:(color:secondary,background:success,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)BootstrapW3school"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
+      <subTextElements xsi:type="usd:Text" text="properties:(color:info,background:success,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:italic)BtstrapW3school"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Ceci est un alert contenant un lien avec une propriété "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text=".alertlink"/>
+    </textElements>
+    <textElements xsi:type="usd:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
+      <subTextElements xsi:type="usd:Text" text="properties:(color:info,background:success,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:italic, linkProperty:alertlink)BtstrapW3school"/>
     </textElements>
   </contents>
   <contents xsi:type="usd:Title" level="1">
@@ -456,13 +484,19 @@
   <contents xsi:type="usd:Navigation" type="nav basic" textContent=" Vertical navigation">
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 1"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 2"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 3"/>
+        </elements>
       </items>
     </groupedItems>
   </contents>
@@ -472,13 +506,19 @@
   <contents xsi:type="usd:Navigation" type="navbar-brand" textContent="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary})Navbar brand">
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 2"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 3"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 1"/>
+        </elements>
       </items>
     </groupedItems>
   </contents>
@@ -488,13 +528,19 @@
   <contents xsi:type="usd:Navigation" type="nav vertical" textContent=" Vertical navigation">
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 2"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 3"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 1"/>
+        </elements>
       </items>
     </groupedItems>
   </contents>
@@ -504,13 +550,19 @@
   <contents xsi:type="usd:Navigation" type="nav centred" textContent=" Centred navigation">
     <groupedItems xsi:type="usd:UnorderedList">
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 3"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 1"/>
+        </elements>
       </items>
       <items>
-        <elements xsi:type="usd:Link" url="#" title=""/>
+        <elements xsi:type="usd:Link" url="#" title="">
+          <subTextElements xsi:type="usd:Text" text="Link 2"/>
+        </elements>
       </items>
     </groupedItems>
   </contents>

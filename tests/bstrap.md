@@ -4,9 +4,9 @@
 
 # Les Badge
 
-Ceci est le text d'un badge avec les propriétés badge primary et badge pill  [[badge badge-primary badgePill] Badge whitout URL]()
+Ceci est le text d'un badge avec les propriétés badge success et badge pill  [[badge badge-success badgePill] Badge whitout URL]()
 
-Ceci est un lien en badge avec les propriétés badge primary et badge pill [[badge badge-primary badgePill] Badge with URL](url)
+Ceci est un lien en badge avec les propriétés badge danger et badge pill [[badge badge-danger badgePill] Badge with URL](url)
 
 
 
@@ -18,25 +18,34 @@ Les propriétés d’un titre sont représentées entre parenthèses sur la mêm
 
 # properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic, alertProperty:{alertStyle:success,animated}) Un titre taille 1 avec un display 1
 
-## properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic,alertProperty:{alertStyle:info}) Un titre taille 2 avec un display 3
+## properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 2 avec un display 3
 
 ### properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 3 avec un display 4
+
+### properties:(margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:4,emphasis:italic, alertProperty:{alertStyle:success,animated}) Un titre taille 3 avec un display 4 avec les propriétés alert *success* et *animeted*
 
 # Un paragrapgh
 
 Un paragraph peut aussi avoir toutes les propriétés générales et une propriété emphasis (*italic* ou **strong** pour tout le paragraph)
 
-properties:(color:dark,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold,alertProperty:{alertStyle:success,animated}) 
+properties:(color:dark,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold) 
 Ce paragraph `contient un élément code` et à une couleur dark, un backround primary, un margin, un padding, une bordure non clorée et un emphasis bold.
 
-properties:(color:primary,background:dark,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border, borderColor:danger},emphasis:italic,alertProperty:{alertStyle:success}) 
+properties:(alertProperty:{alertStyle:success,animated})
+Ceci est un paragraphe avec des propriétés alertes 
+
+properties:(color:primary,background:dark,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border, borderColor:danger},emphasis:italic) 
 Ce paragraph à une couleur primary, un backround dark, un margin, un padding, une bordure clorée en danger et un emphasis italic.
 
 # Les liens sans références
 
 Un lien est représenté comme suit [(properties) title](url) et peut avoir toutes les propriétés générales 
 
-[properties:(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold, linkProperty:linkBrand)BootstrapW3school](https://www.w3schools.com/bootstrap4/default.asp)
+[properties:(color:secondary,background:success,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)BootstrapW3school](https://www.w3schools.com/bootstrap4/default.asp)
+
+[properties:(color:info,background:success,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:italic)BtstrapW3school](https://www.w3schools.com/bootstrap4/default.asp)
+
+Ceci est un alert contenant un lien avec une propriété *.alertlink*[properties:(color:info,background:success,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:italic, linkProperty:alertlink)BtstrapW3school](https://www.w3schools.com/bootstrap4/default.asp)
 
 # Les liens avec références
 
