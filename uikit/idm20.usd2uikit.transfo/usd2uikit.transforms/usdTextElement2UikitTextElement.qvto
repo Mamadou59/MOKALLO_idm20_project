@@ -194,10 +194,10 @@ mapping usdMM::Button::buttonUsd2ButtonUikit() : uikitMM::Button {
 			size := ("size:" + btnProps).getSize();
 		}
 	};
-	if (btnProps.=("btn")){
+	if (btnProps.trim().=("btn")){
 		buttonproperties += object uikitMM::ButtonBasic{};
 	}
-	else if (btnProps.find("btn-")) {
+	else if (btnProps.find("btn-") > 0) {
 		buttonproperties += object uikitMM::ButtonStyle{
 			color := color := btnProps.substringAfter("btn-").getColor();
 		}

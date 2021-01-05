@@ -431,3 +431,8 @@ helper usdMM::Link::isLink2Badge() : Boolean {
 		return self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("badge")>0) <> null and self.url = "";
 }
 
+helper usd::Text::inListItemProp() : Boolean {
+	return self.text.toLower().find("itemproperty") > 0 and 
+			self.text.find(":") > 0 and 
+			self.text.toLower().find("active") > 0;
+}

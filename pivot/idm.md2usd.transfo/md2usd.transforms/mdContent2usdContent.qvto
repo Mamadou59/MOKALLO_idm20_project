@@ -31,7 +31,7 @@ mapping mdMM::Paragraph::paragraphMd2ParagraphUsd() : usdMM::Paragraph
 mapping mdMM::Paragraph::paragraphMd2ParagraphUsdIfContentNavigationLink() : usdMM::Navigation 
 	inherits mdMM::Block::block2PageContent
 	when {self.isThereNavigationElement()}{
-		var linkElements := self.subobjectsOfType(mdMM::Link);
+		var linkElements := self.elements[mdMM::Link];
 		var navLink := self.getNavigationElement(); 
 		textContent := navLink.getTextContent();
 		type := navLink.getType();

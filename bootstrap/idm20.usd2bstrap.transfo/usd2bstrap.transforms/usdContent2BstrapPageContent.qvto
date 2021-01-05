@@ -469,13 +469,13 @@ mapping usdMM::TableCell::tableCellUsd2TableCellBstrap() : bstrapMM::TableCell
 	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap{
 	alignment := self.alignement.getTabAlignment();
 	span := self.span;
-	
 	var textWithProps := self.textElements[usdMM::Text] -> 
-							selectOne(t | t.text.find("rowProps") > 0);
+							selectOne(t | t.text.find("cellProps") > 0);
 	if (textWithProps <> null) {
-		var props := textWithProps.text.substringAfter("rowProps:");
+		var props := textWithProps.text.substringAfter("cellProps:");
 		if (props <> null){
 			props := props.trim();
+			color := textWithProps.text.findColor();
 			if (props.find('background:') > 0){
 				generalProperties += props.backGroundWrapper();
 			};

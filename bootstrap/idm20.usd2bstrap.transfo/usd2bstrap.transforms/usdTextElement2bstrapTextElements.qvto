@@ -28,9 +28,9 @@ mapping usdMM::Text::textUsd2TextBstrap() : bstrapMM::Text
 * to display generaly find in these elements title, link, and emphasis.
 */
 mapping usdMM::Text::textUsdContainPropToDisplay2TextBstrap() : bstrapMM::Text 
-	when {self.inTitleOrLinkOrEphasisElement()}{
+	when {self.inTitleOrLinkOrEphasisElement() or self.inListItemProp()}{
 	var t := self.text;
-	if (t.isPropertyLine() or self.inTabCellWhithProps()){
+	if (t.isPropertyLine() or self.inTabCellWhithProps() or self.inListItemProp()){
 		t := t.getText().trim();
 	};
 	if (self.container().metaClassName().=("Link")){
