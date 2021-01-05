@@ -214,7 +214,7 @@ helper String::containsProperties() : Boolean {
 * helper to get from String contains color properties to bstrap Color element, 
 */
 helper String::findColor() : bstrapMM::Color {
-	var prop := self.substringAfter('color:').substringBefore(',');
+	var prop := self.substringAfter('color:').findProperty();
 	return 	prop.getColor();
 }
 
@@ -244,10 +244,10 @@ helper String::getAlignment() : bstrapMM::Alignement {
 	var prop := self.toLower().trim();
 	var alignment := Alignement::CENTER;
 	switch {
-		case (prop.=('left')) alignment := Alignement::LEFT;
-		case (prop.=('right')) alignment := Alignement::RIGHT;
-		case (prop.=('top')) alignment := Alignement::TOP;
-		case (prop.=('bottom')) alignment := Alignement::BOTTOM;
+		case (prop.find('left')>0) alignment := Alignement::LEFT;
+		case (prop.find('right')>0) alignment := Alignement::RIGHT;
+		case (prop.find('top')>0) alignment := Alignement::TOP;
+		case (prop.find('bottom')>0) alignment := Alignement::BOTTOM;
 	};
 	return alignment;
 }
@@ -304,9 +304,9 @@ helper String::getColoredBorder() : bstrapMM::ColoredBorder {
 helper String::getImageShape() : bstrapMM::ImageShape {
 	var prop := self.substringAfter("imageShape:").findProperty();
 	switch {
-		case (prop.=('rounded'))  return object Rounded{};
-		case (prop.=('circle'))  return object Circle{};
-		case (prop.=('thumbnail'))  return object Thumbnail{};
+		case (prop.find('rounded')>0)  return object Rounded{};
+		case (prop.find('circle')>0)  return object Circle{};
+		case (prop.find('thumbnail')>0)  return object Thumbnail{};
 	};
 	return null;
 }
@@ -317,9 +317,9 @@ helper String::getImageShape() : bstrapMM::ImageShape {
 helper String::getImageAligning() : bstrapMM::ImageAligning {
 	var prop := self.substringAfter("imageAligning:").findProperty();
 	switch {
-		case (prop.=('float'))  return object Float{};
-		case (prop.=('center'))  return object Center{};
-		case (prop.=('responsive'))  return object Responsive{};
+		case (prop.find('float')>0)  return object Float{alignement := prop.getAlignment()};
+		case (prop.find('center')>0)  return object Center{};
+		case (prop.find('responsive')>0)  return object Responsive{};
 	};
 	return null;
 }
