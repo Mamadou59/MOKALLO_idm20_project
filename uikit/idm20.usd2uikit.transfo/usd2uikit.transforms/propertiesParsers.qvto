@@ -1,6 +1,9 @@
+/**
+*	This module includes all mapper and helper used for parsing properties in concepts elements 
+*/
+
 import queries;
 	
-
 modeltype usdMM "strict" uses "http://www.example.org/usd";
 modeltype uikitMM "strict" uses "http://www.example.org/uikit";
 

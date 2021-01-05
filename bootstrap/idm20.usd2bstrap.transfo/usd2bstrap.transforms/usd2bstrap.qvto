@@ -1,5 +1,8 @@
+/**
+* This module ensures usd transformation to Bootstrap
+*/
+
 import usdContent2BstrapPageContent;
-	
 
 modeltype usdMM "strict" uses "http://www.example.org/usd";
 modeltype bstrapMM "strict" uses "http://www.example.org/bstrap";

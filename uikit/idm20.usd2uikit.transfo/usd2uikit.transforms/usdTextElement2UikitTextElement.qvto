@@ -1,11 +1,16 @@
+/**
+* This module ensures usd transformation to UIkit of all element not contained directly in page.
+*/
+
+
 import propertiesParsers;
 	
-
 modeltype usdMM "strict" uses "http://www.example.org/usd";
 modeltype uikitMM "strict" uses "http://www.example.org/uikit";
 
 transformation usd2bstrap(in usd : usdMM, out uikit : uikitMM);
 
+// =========== Start transformation Text to Text ===========//
 
 /**
 * A mapper which map an usd Text element to uikit Text element.
@@ -35,6 +40,8 @@ mapping usdMM::Text::textUsd2TextUikitWhenInTitle() : uikitMM::Text
 mapping usdMM::Code::codeUsd2CodeUikit() : uikitMM::Code 
 	inherits usdMM::Text::textUsd2TextUikit{}
 
+// =========== Start transformation UrlBasedLink to UrlBasedLink ===========//
+
 /**
 * An anstract mapper which map an usd UrlBasedLink element to uikit UrlBasedLink element.
 * Also parse specified url properties to uikit genral properties.
@@ -58,21 +65,7 @@ abstract mapping usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkUikit() : uiki
 	}
 }
 
-/**
-* A mapper which map an usd Image element to bstrap Image element.
-* Extends urlBasedLinkUsd2UrlBasedLinkUikit and also parse specified image properties to uikit properties.
-*/
-mapping usdMM::Image::imageUsd2ImageUikit() : uikitMM::Image 
-	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkUikit{
-	title := self.subTextElements[usdMM::Text] -> selectOne(t | true).text.getText();
-	var textWithProps := self.subTextElements[usdMM::Text] -> selectOne(t | t.text.containsProperties());
-	if (textWithProps <> null) {
-		var props := textWithProps.text.substringAfter("properties");
-		if(props.toLower().find("imageproperty") > 0){
-			imageproperties += object uikitMM::ImageProperty{}
-		}
-	}
-}
+// =========== Start transformation Link to Link ===========//
 
 /**
 * A mapper which map an usd Image element to bstrap Image element.
@@ -90,12 +83,34 @@ mapping usdMM::Link::linkUsd2LinkUikit() : uikitMM::Link
 	}
 }
 
+// =========== Start transformation Image to Image ===========//
+
+/**
+* A mapper which map an usd Image element to bstrap Image element.
+* Extends urlBasedLinkUsd2UrlBasedLinkUikit and also parse specified image properties to uikit properties.
+*/
+mapping usdMM::Image::imageUsd2ImageUikit() : uikitMM::Image 
+	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkUikit{
+	title := self.subTextElements[usdMM::Text] -> selectOne(t | true).text.getText();
+	var textWithProps := self.subTextElements[usdMM::Text] -> selectOne(t | t.text.containsProperties());
+	if (textWithProps <> null) {
+		var props := textWithProps.text.substringAfter("properties");
+		if(props.toLower().find("imageproperty") > 0){
+			imageproperties += object uikitMM::ImageProperty{}
+		}
+	}
+}
+
+// =========== Start transformation CompositeTextElement to TextNested ===========//
+
 /**
 * An anstract mapper which map an usd CompositeTextElement element to uikit TextNested element.
 */
 abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedUikit() : uikitMM::TextNested {
 	 textnestedelements += self.subTextElements -> map contructTextNestedElement();
 }
+
+// =========== Start transformation CompositeTextElement to CompositeTextElement ===========//
 
 /**
 * An abstract mapper which map an usd Composite element to uikit ContainableTextElement element.
@@ -118,6 +133,8 @@ abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2Containabl
 	}
 }
 
+// =========== Start transformation ItalicEmphasis to Italic ===========//
+
 /**
 * A mapper which map an usd ItalicEmphasis element to uikit Italic element.
 * It also extends compositeTextElementUsd2TextNestedBstrap.
@@ -126,6 +143,8 @@ mapping usdMM::ItalicEmphasis::italicEmpUsd2ItalicUikit() : uikitMM::Italic
 	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedUikit,
 			usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement{
 }
+
+// =========== Start transformation StrongEmphasis to Italic ===========//
 
 /**
 * A mapper which map an usd StrongEmphasis element to uikit Strong element.
@@ -145,11 +164,13 @@ mapping usdMM::TextElement::contructTextNestedElement() : uikitMM::TextNestedEle
 				usdMM::ItalicEmphasis::italicEmpUsd2ItalicUikit,
 				usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap{}
 				
+// =========== Start transformation Button to Button ===========//
+				
 /**
 * A mapper which map an usd Button element to uikit Button element.
 * With specified properties. 
 */				
-mapping usdMM::Button::buttonUsd2ButtonUiki() : uikitMM::Button {
+mapping usdMM::Button::buttonUsd2ButtonUikit() : uikitMM::Button {
 	var textElem := self.subTextElements[usdMM::Text] -> selectOne(t|true);
 	textnestedelements += object uikitMM::Text {
 		text := textElem.text.substringAfter(']');
@@ -182,6 +203,9 @@ mapping usdMM::Button::buttonUsd2ButtonUiki() : uikitMM::Button {
 		}
 	}
 }
+
+// =========== This mapper make disjunction beetwen all TextElement mappers ===========//
+
 /**
 * A mapper wich map an usd TextElement element to uikit TextElement element.
 */
@@ -190,7 +214,7 @@ mapping usdMM::TextElement::constructTextElement() : uikitMM::TextElement
 				usdMM::Image::imageUsd2ImageUikit, usdMM::Link::linkUsd2LinkUikit,
 				usdMM::ItalicEmphasis::italicEmpUsd2ItalicUikit,
 				usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap,
-				usdMM::Button::buttonUsd2ButtonUiki{}
+				usdMM::Button::buttonUsd2ButtonUikit{}
 				
 				
 				

@@ -1,11 +1,15 @@
-import propertiesParsers;
-	
-	
+/**
+* This module ensures usd transformation to Bootstrap of all element not contained directly in page.
+*/
+
+import propertiesParsers;	
 
 modeltype usdMM "strict" uses "http://www.example.org/usd";
 modeltype bstrapMM "strict" uses "http://www.example.org/bstrap";
 
 transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
+
+// =========== Start transformation Text to Text ===========//
 
 /**
 * A mapper which map an usd Text element to bstrap Text element.
@@ -45,6 +49,8 @@ mapping usdMM::Text::textUsdContainPropToDisplay2TextBstrap() : bstrapMM::Text
 mapping usdMM::Code::codeUsd2CodeBstrap() : bstrapMM::Code 
 	inherits usdMM::Text::textUsd2TextBstrap{}
 
+// =========== Start transformation UrlBasedLink to UrlBasedLink ===========//
+
 /**
 * An anstract mapper which map an usd UrlBasedLink element to bstrap UrlBasedLink element.
 */
@@ -55,54 +61,7 @@ abstract mapping usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap() : bst
 	title := self.title;
 }
 
-
-/**
-* An anstract mapper which map an usd CompositeTextElement element to bstrap TextNested element.
-*/
-abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap() : bstrapMM::TextNested {
-	textnestedelements += self.subTextElements -> map contructTextNestedElement();
-}
-
-/**
-* An abstract mapper which map an usd Composite element to bstrap ContainableTextElement element.
-* And also parse a specified propertie to bootstrap properties
-*/
-abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement() : bstrapMM::ContainableTextElement {
-	var textWithProps := self.subTextElements[usdMM::Text] -> selectOne(t|t.text.containsProperties());
-	if (textWithProps <> null){
-		var props := textWithProps.text.substringBefore(")")+")";
-		if (props.find('background:') > 0){
-			generalProperties += props.backGroundWrapper();
-		};
-		if (props.find('margin:') > 0){
-			generalProperties += props.marginWrapper();
-		};
-		if (props.find('padding:') > 0){
-			generalProperties += props.paddingWrapper();
-		};
-		if (props.find('border:') > 0){
-			var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
-			if(prop <> null){
-				prop := prop.trim();
-				if (prop.find("border") > 0){
-					generalProperties += prop.getBorder();
-				};
-				if (prop.find("borderColor") > 0){
-					generalProperties += prop.getColoredBorder();
-				};
-			}
-		};
-		if(props.toLower().find("alertproperty") > 0){
-			var prop := props.toLower().substringAfter('alertproperty');
-			if(prop <> null){
-				if (prop.find("animated")>0) generalProperties += object AlertAnimated{};
-				if (prop.find("alertstyle")>0) 
-							generalProperties += object AlertStyle{
-								color := prop.substringAfter("alertstyle").findProperty().getColor()};
-			}
-		}
-	};
-}
+// =========== Start transformation Link to Link or Span for Badge bootstrap element ===========//
 
 /**
 * A mapper which map an usd Link element to bstrap Link element.
@@ -167,31 +126,7 @@ mapping usdMM::Link::linkUsd2SpanBadge() : bstrapMM::Span
 	}
 }
 
-/**
-* A mapper which map an usd ItalicEmphasis element to bstrap Italic element.
-* It also extends compositeTextElementUsd2TextNestedBstrap.
-*/
-mapping usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap() : bstrapMM::Italic 
-	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap,
-			usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement{
-}
-
-/**
-* A mapper which map an usd StrongEmphasis element to bstrap Strong element.
-* It also extends compositeTextElementUsd2TextNestedBstrap.
-*/
-mapping usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap() : bstrapMM::Strong 
-	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap,
-			usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement{}
-
-/**
-* A mapper which map an usd TextElement element to bstrap TextNestedElement.
-* It also make disjunction beetwen italicEmpUsd2ItalicBstrap, strongEmphasisUsd2StrongBstrap
-* and textUsd2TextBstrap
-*/
-mapping usdMM::TextElement::contructTextNestedElement() : bstrapMM::TextNestedElement 
-	disjuncts usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap, usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap,
-				usdMM::Text::textUsdContainPropToDisplay2TextBstrap, usdMM::Text::textUsd2TextBstrap{}
+// =========== Start transformation Image to Image ===========//
 
 /**
 * A mapper which map an usd Image element to bstrap Image element.
@@ -210,7 +145,93 @@ mapping usdMM::Image::imageUsd2ImageBstrap() : bstrapMM::Image
 			};
 			
 		}
-	}
+}
+
+// =========== Start transformation CompositeTextElement to TextNested ===========//
+
+/**
+* An anstract mapper which map an usd CompositeTextElement element to bstrap TextNested element.
+*/
+abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap() : bstrapMM::TextNested {
+	textnestedelements += self.subTextElements -> map contructTextNestedElement();
+}
+
+// =========== Start transformation CompositeTextElement to CompositeTextElement ===========//
+
+/**
+* An abstract mapper which map an usd Composite element to bstrap ContainableTextElement element.
+* And also parse a specified propertie to bootstrap properties
+*/
+abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement() : bstrapMM::ContainableTextElement {
+	var textWithProps := self.subTextElements[usdMM::Text] -> selectOne(t|t.text.containsProperties());
+	if (textWithProps <> null){
+		var props := textWithProps.text.substringBefore(")")+")";
+		if (props.find('background:') > 0){
+			generalProperties += props.backGroundWrapper();
+		};
+		if (props.find('margin:') > 0){
+			generalProperties += props.marginWrapper();
+		};
+		if (props.find('padding:') > 0){
+			generalProperties += props.paddingWrapper();
+		};
+		if (props.find('border:') > 0){
+			var prop := props.substringAfter('border:').substringBefore('}').substringAfter('{');
+			if(prop <> null){
+				prop := prop.trim();
+				if (prop.find("border") > 0){
+					generalProperties += prop.getBorder();
+				};
+				if (prop.find("borderColor") > 0){
+					generalProperties += prop.getColoredBorder();
+				};
+			}
+		};
+		if(props.toLower().find("alertproperty") > 0){
+			var prop := props.toLower().substringAfter('alertproperty');
+			if(prop <> null){
+				if (prop.find("animated")>0) generalProperties += object AlertAnimated{};
+				if (prop.find("alertstyle")>0) 
+							generalProperties += object AlertStyle{
+								color := prop.substringAfter("alertstyle").findProperty().getColor()};
+			}
+		}
+	};
+}
+
+// =========== Start transformation ItalicEmphasis to Italic ===========//
+
+/**
+* A mapper which map an usd ItalicEmphasis element to bstrap Italic element.
+* It also extends compositeTextElementUsd2TextNestedBstrap.
+*/
+mapping usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap() : bstrapMM::Italic 
+	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap,
+			usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement{
+}
+
+// =========== Start transformation StrongEmphasis to Strong ===========//
+
+/**
+* A mapper which map an usd StrongEmphasis element to bstrap Strong element.
+* It also extends compositeTextElementUsd2TextNestedBstrap.
+*/
+mapping usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap() : bstrapMM::Strong 
+	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap,
+			usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement{}
+
+// =========== transformation TextElement to TextNestedElement ===========//
+
+/**
+* A mapper which map an usd TextElement element to bstrap TextNestedElement.
+* It also make disjunction beetwen italicEmpUsd2ItalicBstrap, strongEmphasisUsd2StrongBstrap
+* and textUsd2TextBstrap
+*/
+mapping usdMM::TextElement::contructTextNestedElement() : bstrapMM::TextNestedElement 
+	disjuncts usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap, usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap,
+				usdMM::Text::textUsdContainPropToDisplay2TextBstrap, usdMM::Text::textUsd2TextBstrap{}
+
+// =========== Start transformation Button to Button ===========//
 	
 /**
 * A mapper which map an usd Button element to bstrap Button element.
@@ -250,6 +271,8 @@ mapping usdMM::Button::buttonUsd2ButtonBstrap() : bstrapMM::Button{
 		}
 	}
 }
+
+// =========== This mapper make disjunction beetwen all TextElement mappers ===========//
 
 /**
 * A mapper wich map an usd TextElement element to bstrap TextElement element.
