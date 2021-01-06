@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ASCII"?>
 <simplemarkdown:Document xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplemarkdown="http://www.example.org/simplemarkdown" name="/tests/uikit/demo_uikit.simplemarkdown">
   <contents xsi:type="simplemarkdown:Title" level="1">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:secondary,background:success,titleSize:large,margin:{size:large,alignment:center}) UIkit - Demo"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:light,background:secondary,titleSize:large,margin:{size:large,alignment:center}) UIkit - Demo"/>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
     <elements xsi:type="simplemarkdown:Text" text="properties:(color:secondary,background:success,titleSize:large,margin:{size:large,alignment:center}) Les titres"/>
@@ -58,22 +58,6 @@
     <elements xsi:type="simplemarkdown:Text" text="This text is important."/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:success,margin:{size:small,alignment:center})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This text indicates success."/>
-  </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:emphasis,margin:{size:small,alignment:center})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This text emphasis."/>
-  </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:warning,margin:{size:small,alignment:center})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This text represents a warning."/>
-  </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(background:danger,margin:{size:small,alignment:center})"/>
-    <elements xsi:type="simplemarkdown:Text" text="This text represents danger."/>
-  </contents>
-  <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Text" text="properties:(background:secondary,margin:{size:small,alignment:center})"/>
     <elements xsi:type="simplemarkdown:Text" text="Secondary text."/>
   </contents>
@@ -93,22 +77,16 @@
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn]Primary"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn]Basic"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" url="#" title="">
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-primary]Primary"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-muted]muted"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-secondary]Secondary"/>
-    </elements>
-    <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-success]Success"/>
-    </elements>
-    <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-emphasis]Emphasis"/>
-    </elements>
-    <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-warning]Warning"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
       <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-danger]Danger"/>
@@ -122,10 +100,10 @@
       <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-primary btn-lg]Large"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-primary btn-md]Default"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-danger btn-md]Default"/>
     </elements>
     <elements xsi:type="simplemarkdown:Link" url="#" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-primary btn-sm]Small"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(margin:{size:small,alignment:center})[btn-secondarybtn-sm]Small"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">

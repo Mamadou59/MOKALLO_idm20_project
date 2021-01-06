@@ -499,8 +499,8 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Spinner Danger"/>
-      <buttonproperties xsi:type="bstrap:ButtonSpinner"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="DANGER"/>
+      <buttonproperties xsi:type="bstrap:ButtonSpinner"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="1">

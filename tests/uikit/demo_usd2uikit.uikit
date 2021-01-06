@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uikit:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uikit="http://www.example.org/uikit" name="/tests/uikit/demo_uikit.simplemarkdown">
-  <pagecontents xsi:type="uikit:Title" color="SECONDARY" level="1">
-    <generalproperties xsi:type="uikit:BackgroundProperty" color="SUCCESS"/>
+  <pagecontents xsi:type="uikit:Title" level="1">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SECONDARY"/>
     <generalproperties xsi:type="uikit:Margin" size="LARGE"/>
     <textelements xsi:type="uikit:Text" text="UIkit - Demo"/>
     <titleproperties size="LARGE"/>
@@ -77,26 +77,6 @@
     <textelements xsi:type="uikit:Text" text="This text is important."/>
   </pagecontents>
   <pagecontents xsi:type="uikit:Paragraphe">
-    <generalproperties xsi:type="uikit:BackgroundProperty" color="SUCCESS"/>
-    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
-    <textelements xsi:type="uikit:Text" text="This text indicates success."/>
-  </pagecontents>
-  <pagecontents xsi:type="uikit:Paragraphe">
-    <generalproperties xsi:type="uikit:BackgroundProperty" color="EMPHASIS"/>
-    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
-    <textelements xsi:type="uikit:Text" text="This text emphasis."/>
-  </pagecontents>
-  <pagecontents xsi:type="uikit:Paragraphe">
-    <generalproperties xsi:type="uikit:BackgroundProperty" color="WARNING"/>
-    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
-    <textelements xsi:type="uikit:Text" text="This text represents a warning."/>
-  </pagecontents>
-  <pagecontents xsi:type="uikit:Paragraphe">
-    <generalproperties xsi:type="uikit:BackgroundProperty" color="DANGER"/>
-    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
-    <textelements xsi:type="uikit:Text" text="This text represents danger."/>
-  </pagecontents>
-  <pagecontents xsi:type="uikit:Paragraphe">
     <generalproperties xsi:type="uikit:BackgroundProperty" color="SECONDARY"/>
     <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
     <textelements xsi:type="uikit:Text" text="Secondary text."/>
@@ -125,8 +105,13 @@
   <pagecontents xsi:type="uikit:Paragraphe">
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
-      <textnestedelements xsi:type="uikit:Text" text="Primary"/>
+      <textnestedelements xsi:type="uikit:Text" text="Basic"/>
       <buttonproperties xsi:type="uikit:ButtonBasic"/>
+    </textelements>
+    <textelements xsi:type="uikit:Button">
+      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="Primary"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="PRIMARY"/>
     </textelements>
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
@@ -137,21 +122,6 @@
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="Secondary"/>
       <buttonproperties xsi:type="uikit:ButtonStyle" color="SECONDARY"/>
-    </textelements>
-    <textelements xsi:type="uikit:Button">
-      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
-      <textnestedelements xsi:type="uikit:Text" text="Success"/>
-      <buttonproperties xsi:type="uikit:ButtonStyle" color="SUCCESS"/>
-    </textelements>
-    <textelements xsi:type="uikit:Button">
-      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
-      <textnestedelements xsi:type="uikit:Text" text="Emphasis"/>
-      <buttonproperties xsi:type="uikit:ButtonStyle" color="EMPHASIS"/>
-    </textelements>
-    <textelements xsi:type="uikit:Button">
-      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
-      <textnestedelements xsi:type="uikit:Text" text="Warning"/>
-      <buttonproperties xsi:type="uikit:ButtonStyle" color="WARNING"/>
     </textelements>
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
@@ -175,13 +145,13 @@
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="Default"/>
       <buttonproperties xsi:type="uikit:ButtonSIze"/>
-      <buttonproperties xsi:type="uikit:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="DANGER"/>
     </textelements>
     <textelements xsi:type="uikit:Button">
       <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
       <textnestedelements xsi:type="uikit:Text" text="Small"/>
       <buttonproperties xsi:type="uikit:ButtonSIze" size="SMALL"/>
-      <buttonproperties xsi:type="uikit:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="SECONDARY"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="uikit:Title" color="WARNING" level="1">

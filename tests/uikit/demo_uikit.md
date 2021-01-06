@@ -53,20 +53,18 @@ Light text.
 
 ## properties:(color:light,background:secondary,titleSize:large) Button Styles
 
-[properties:(margin:{size:small,alignment:center})[btn]Primary](#)
+[properties:(margin:{size:small,alignment:center})[btn]Basic](#)
+[properties:(margin:{size:small,alignment:center})[btn-primary]Primary](#)
 [properties:(margin:{size:small,alignment:center})[btn-muted]muted](#)
 [properties:(margin:{size:small,alignment:center})[btn-secondary]Secondary](#)
-[properties:(margin:{size:small,alignment:center})[btn-success]Success](#)
-[properties:(margin:{size:small,alignment:center})[btn-emphasis]Emphasis](#)
-[properties:(margin:{size:small,alignment:center})[btn-warning]Warning](#)
 [properties:(margin:{size:small,alignment:center})[btn-danger]Danger](#)
 
 
 ## properties:(color:light,background:secondary,titleSize:default) Buttton Size
 
 [properties:(margin:{size:small,alignment:center})[btn-primary btn-lg]Large](#)
-[properties:(margin:{size:small,alignment:center})[btn-primary btn-md]Default](#)
-[properties:(margin:{size:small,alignment:center})[btn-primary btn-sm]Small](#)
+[properties:(margin:{size:small,alignment:center})[btn-danger btn-md]Default](#)
+[properties:(margin:{size:small,alignment:center})[btn-secondarybtn-sm]Small](#)
 
 # properties:(color:warning,backbackground:primary,default,margin:{size:large,alignment:center}) Les images
 
