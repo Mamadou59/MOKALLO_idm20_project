@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<usd:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:usd="http://www.example.org/usd" name="/tests/uikit.simplemarkdown">
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Dans cette page se une description des concepts basic de la syntaxe markdown vers une page web Bootstrap."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="#Les titres"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Pour un titre les propriétés sont représentées par properties:(propriété:valeur,propriété:{propVal1:val1,propVal2:val2}) sur la même ligne avant le text du titre un titre peut avoir une couleur, un background, un margin et un padding avec une taille un alignment et une propriété spécifique "/>
+    <textElements xsi:type="usd:StrongEmphasis">
+      <subTextElements xsi:type="usd:Text" text="titleSize"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center},titleSize:small) Un titre taille 1 avec une size small"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center},titleSize:large) Un titre taille 2 avec une size large"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="3">
+    <textElements xsi:type="usd:Text" text="properties:(color:warning,backbackground:primary,margin:{size:large,alignment:left},padding:{size:small,alignment:center}) Un titre taille 2 sans size"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Un paragrapgh"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Un paragraph peut aussi avoir toutes les propriétés générales."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="properties:(color:warning,backbackground:muted,margin:{size:large,alignment:left},padding:{size:small,alignment:center})"/>
+    <textElements xsi:type="usd:Text" text="Ceci est le text d'un paragraph "/>
+    <textElements xsi:type="usd:Code" text="contenant un élément code"/>
+    <textElements xsi:type="usd:Text" text=" et qui a une couleur warning un background muted un margin et un padding"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les Liens"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Un lien en "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="Uikit"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" en plus des propriétés générales peut aussi avoir trois types spécifiques et est représenté comme suit "/>
+    <textElements xsi:type="usd:Link" url="url" title="">
+      <subTextElements xsi:type="usd:Text" text="(properties) title"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="un lien avec la propriété "/>
+    <textElements xsi:type="usd:StrongEmphasis">
+      <subTextElements xsi:type="usd:Text" text="HeadingModifier"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" de uikit"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="3">
+    <textElements xsi:type="usd:Text" text="Un Titre avec un  "/>
+    <textElements xsi:type="usd:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
+      <subTextElements xsi:type="usd:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:headingModifier})lien vers BootstrapW3school"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="3">
+    <textElements xsi:type="usd:Text" text="un lien avec la propriété "/>
+    <textElements xsi:type="usd:StrongEmphasis">
+      <subTextElements xsi:type="usd:Text" text="MuteLink"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" de uikit"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
+      <subTextElements xsi:type="usd:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:muteLink})Tables Extension"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="3">
+    <textElements xsi:type="usd:Text" text="un lien avec la propriété "/>
+    <textElements xsi:type="usd:StrongEmphasis">
+      <subTextElements xsi:type="usd:Text" text="TextModifier"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" de uikit"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
+      <subTextElements xsi:type="usd:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center,linkProperty:textModifier})Tables Extension"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les liens avec références"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="Les liens avec référence sont directement transformés en des liens sans référence dès la transformation d'un modèle "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="simplemarkdown"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" vers un modèle "/>
+    <textElements xsi:type="usd:ItalicEmphasis">
+      <subTextElements xsi:type="usd:Text" text="usd"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" car les références sont retrouvées et mis dans chaque lien lui référençant."/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Text" text="I get 10 times more traffic from "/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="Google"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" "/>
+    <textElements xsi:type="usd:Link" url="http://google.com/" title="Google">
+      <subTextElements xsi:type="usd:Text" text="1"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" than from"/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="Yahoo"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" "/>
+    <textElements xsi:type="usd:Link" url="http://search.yahoo.com/" title="Yahoo Search">
+      <subTextElements xsi:type="usd:Text" text="2"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" or "/>
+    <textElements xsi:type="usd:Link">
+      <subTextElements xsi:type="usd:Text" text="MSN"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text=" "/>
+    <textElements xsi:type="usd:Link" url="http://search.msn.com/" title="MSN Search">
+      <subTextElements xsi:type="usd:Text" text="3"/>
+    </textElements>
+    <textElements xsi:type="usd:Text" text="."/>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les images"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="">
+      <subTextElements xsi:type="usd:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center},imageProperty)image"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les Sections"/>
+  </contents>
+  <contents xsi:type="usd:Section">
+    <contents xsi:type="usd:Paragraph">
+      <textElements xsi:type="usd:Text" text="properties:(background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center})"/>
+    </contents>
+    <contents xsi:type="usd:Title" level="2">
+      <textElements xsi:type="usd:Text" text="Titre de la section"/>
+    </contents>
+    <contents xsi:type="usd:Paragraph">
+      <textElements xsi:type="usd:Text" text="Ce paragraph est dans la prémière section"/>
+    </contents>
+    <contents xsi:type="usd:Section">
+      <contents xsi:type="usd:Paragraph"/>
+      <contents xsi:type="usd:Title" level="3">
+        <textElements xsi:type="usd:Text" text="Titre de la sous section"/>
+      </contents>
+      <contents xsi:type="usd:UnorderedList">
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="list in section"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="item 2"/>
+          </elements>
+        </items>
+        <items>
+          <elements xsi:type="usd:Paragraph">
+            <textElements xsi:type="usd:Text" text="item 3"/>
+            <textElements xsi:type="usd:Text" text="fin de list"/>
+          </elements>
+        </items>
+      </contents>
+      <contents xsi:type="usd:Section">
+        <contents xsi:type="usd:Paragraph"/>
+        <contents xsi:type="usd:Title" level="3">
+          <textElements xsi:type="usd:Text" text="Titre de la sous sous section"/>
+        </contents>
+        <contents xsi:type="usd:Paragraph">
+          <textElements xsi:type="usd:Text" text="text du paragraphe"/>
+        </contents>
+      </contents>
+    </contents>
+  </contents>
+  <contents xsi:type="usd:Title" level="1">
+    <textElements xsi:type="usd:Text" text="Les boutons"/>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Button Styles"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Button" type="btn">
+      <subTextElements xsi:type="usd:Text" text="properties:(color:secondary,background:warning,margin:{size:large,alignment:left},padding:{size:small,alignment:center})[btn]Primary"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-muted">
+      <subTextElements xsi:type="usd:Text" text="[btn-muted]muted"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-secondary">
+      <subTextElements xsi:type="usd:Text" text="[btn-secondary]Secondary"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-success">
+      <subTextElements xsi:type="usd:Text" text="[btn-success]Success"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-emphasis">
+      <subTextElements xsi:type="usd:Text" text="[btn-emphasis]Emphasis"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-warning">
+      <subTextElements xsi:type="usd:Text" text="[btn-warning]Warning"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-danger">
+      <subTextElements xsi:type="usd:Text" text="[btn-danger]Danger"/>
+    </textElements>
+  </contents>
+  <contents xsi:type="usd:Title" level="2">
+    <textElements xsi:type="usd:Text" text="Buttton Size"/>
+  </contents>
+  <contents xsi:type="usd:Paragraph">
+    <textElements xsi:type="usd:Button" type="btn-primary btn-lg">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary btn-lg]Large"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-primary btn-md">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary btn-md]Default"/>
+    </textElements>
+    <textElements xsi:type="usd:Button" type="btn-primary btn-sm">
+      <subTextElements xsi:type="usd:Text" text="[btn-primary btn-sm]Small"/>
+    </textElements>
+  </contents>
+</usd:Page>

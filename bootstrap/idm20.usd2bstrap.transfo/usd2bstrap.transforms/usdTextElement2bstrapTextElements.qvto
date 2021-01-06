@@ -1,37 +1,29 @@
-/**
-* This module ensures usd transformation to Bootstrap of all element not contained directly in page.
-*/
-
-import propertiesParsers;	
+import propertiesParsers;
+	
+	
 
 modeltype usdMM "strict" uses "http://www.example.org/usd";
 modeltype bstrapMM "strict" uses "http://www.example.org/bstrap";
 
 transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
 
-// =========== Start transformation Text to Text ===========//
-
 /**
 * A mapper which map an usd Text element to bstrap Text element.
 */
 mapping usdMM::Text::textUsd2TextBstrap() : bstrapMM::Text
 	when {not self.text.isPropertyLine()}{	
-	var textContent := self.text;
+	var textContent := self.text.getText();
 	if (self.container().metaClassName().=("Link")){
 		textContent := textContent.substringBefore("]").substringAfter("[");
 	};
 	text := textContent.trim();
 }
 
-/**
-* A mapper which map an usd Text element to bstrap Text element when text contains properties in the same line
-* to display generaly find in these elements title, link, and emphasis.
-*/
 mapping usdMM::Text::textUsdContainPropToDisplay2TextBstrap() : bstrapMM::Text 
-	when {self.inTitleOrLinkOrEphasisElement() or self.inListItemProp()}{
+	when {self.inTitleOrLinkOrEphasisElement()}{
 	var t := self.text;
-	if (t.isPropertyLine() or self.inTabCellWhithProps() or self.inListItemProp()){
-		t := t.getText().trim();
+	if (t.isPropertyLine()){
+		t := t.substringAfter(")").trim();
 	};
 	if (self.container().metaClassName().=("Link")){
 		t := t.substringAfter("]");
@@ -41,15 +33,15 @@ mapping usdMM::Text::textUsdContainPropToDisplay2TextBstrap() : bstrapMM::Text
 	}else{
 		result.text := self.text.getText();
 	}
+	
 }
+
 
 /**
 * A mapper which map an usd Code element to bstrap code element.
 */
 mapping usdMM::Code::codeUsd2CodeBstrap() : bstrapMM::Code 
 	inherits usdMM::Text::textUsd2TextBstrap{}
-
-// =========== Start transformation UrlBasedLink to UrlBasedLink ===========//
 
 /**
 * An anstract mapper which map an usd UrlBasedLink element to bstrap UrlBasedLink element.
@@ -61,93 +53,6 @@ abstract mapping usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap() : bst
 	title := self.title;
 }
 
-// =========== Start transformation Link to Link or Span for Badge bootstrap element ===========//
-
-/**
-* A mapper which map an usd Link element to bstrap Link element.
-* It also extends urlBasedLinkUsd2UrlBasedLinkBstrap and compositeTextElementUsd2TextNestedBstrap
-*/
-mapping usdMM::Link::linkUsd2LinkBstrap() : bstrapMM::Link 
-	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap, 
-			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap
-			when {not self.isLinkButton() and not self.isLink2Badge()}{
-	var textElem := self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("badge") > 0);
-	if (textElem <> null) {
-		if (textElem.text.find("badge-") > 0){
-			badgeproperties += object BadgeStyle {
-				color := textElem.text.substringAfter("badge-").getColor();
-			}
-		};
-		if(textElem.text.toLower().find("badgepill") > 0){
-			badgeproperties += object BadgePill{}
-		}
-	};
-	textElem := self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("linkproperty") > 0);
-	if(textElem <> null){
-		var props := textElem.text.toLower().substringAfter("linkproperty").findProperty();
-		if(props.find("alertlink") > 0) {
-			linkproperties += object AlertLink{}
-		}
-	}
-}
-
-/**
-* A mapper which map an usd Link element to bstrap Button element.
-* It also extends urlBasedLinkUsd2UrlBasedLinkBstrap and compositeTextElementUsd2TextNestedBstrap
-*/
-mapping usdMM::Link::linkUsd2LinkButtonBstrap() : bstrapMM::Link 
-	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap, 
-			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap
-			when {self.isLinkButton() and not self.isLink2Badge()}{
-				buttonproperties += object bstrapMM::ButtonLink {};
-			}
-
-/**
-* A mapper which map an usd Link element to bstrap span element whit badgeProperties.
-* It also extends urlBasedLinkUsd2UrlBasedLinkBstrap and compositeTextElementUsd2TextNestedBstrap
-*/
-mapping usdMM::Link::linkUsd2SpanBadge() : bstrapMM::Span 
-	inherits  usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap,
-				usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement
-	when {self.isLink2Badge()} {
-	
-	if (self.url = ""){
-		var textElem = self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("badge") > 0);
-		if (textElem <> null) {
-			if (textElem.text.find("badge-") > 0){
-				badgeproperties += object BadgeStyle {
-					color := textElem.text.substringAfter("badge-").getColor();
-				}
-			};
-			if(textElem.text.toLower().find("badgepill") > 0){
-				badgeproperties += object BadgePill{}
-			}
-		}
-	}
-}
-
-// =========== Start transformation Image to Image ===========//
-
-/**
-* A mapper which map an usd Image element to bstrap Image element.
-* Extends urlBasedLinkUsd2UrlBasedLinkBstrap and also parse specified image properties to bootstrap properties.
-*/
-mapping usdMM::Image::imageUsd2ImageBstrap() : bstrapMM::Image 
-	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap{
-		title := self.subTextElements[usdMM::Text] -> selectOne(text| true).text.getText();
-		var textWithProps := self.subTextElements[usdMM::Text] -> selectOne(t|t.text.containsProperties());
-		if (textWithProps <> null){
-			if (textWithProps.text.find("imageShape:") > 0){
-				imageproperties += textWithProps.text.getImageShape();
-			};
-			if (textWithProps.text.find("imageAligning:") > 0){
-				imageproperties += textWithProps.text.getImageAligning();
-			};
-			
-		}
-}
-
-// =========== Start transformation CompositeTextElement to TextNested ===========//
 
 /**
 * An anstract mapper which map an usd CompositeTextElement element to bstrap TextNested element.
@@ -155,8 +60,6 @@ mapping usdMM::Image::imageUsd2ImageBstrap() : bstrapMM::Image
 abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap() : bstrapMM::TextNested {
 	textnestedelements += self.subTextElements -> map contructTextNestedElement();
 }
-
-// =========== Start transformation CompositeTextElement to CompositeTextElement ===========//
 
 /**
 * An abstract mapper which map an usd Composite element to bstrap ContainableTextElement element.
@@ -199,7 +102,61 @@ abstract mapping usdMM::CompositeTextElement::compositeTextElementUsd2Containabl
 	};
 }
 
-// =========== Start transformation ItalicEmphasis to Italic ===========//
+/**
+* A mapper which map an usd Link element to bstrap Link element.
+* It also extends urlBasedLinkUsd2UrlBasedLinkBstrap and compositeTextElementUsd2TextNestedBstrap
+*/
+mapping usdMM::Link::linkUsd2LinkBstrap() : bstrapMM::Link 
+	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap, 
+			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap
+			when {not self.isLinkButton() and not self.isLink2Badge()}{
+	var textElem = self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("badge") > 0);
+	if (textElem <> null) {
+		if (textElem.text.find("badge-") > 0){
+			badgeproperties += object BadgeStyle {
+				color := textElem.text.substringAfter("badge-").getColor();
+			}
+		};
+		if(textElem.text.toLower().find("badgepill") > 0){
+			badgeproperties += object BadgePill{}
+		}
+	}
+}
+
+/**
+* A mapper which map an usd Link element to bstrap Button element.
+* It also extends urlBasedLinkUsd2UrlBasedLinkBstrap and compositeTextElementUsd2TextNestedBstrap
+*/
+mapping usdMM::Link::linkUsd2LinkButtonBstrap() : bstrapMM::Link 
+	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap, 
+			usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap
+			when {self.isLinkButton() and not self.isLink2Badge()}{
+				buttonproperties += object bstrapMM::ButtonLink {};
+			}
+
+/**
+* A mapper which map an usd Link element to bstrap span element whit badgeProperties.
+* It also extends urlBasedLinkUsd2UrlBasedLinkBstrap and compositeTextElementUsd2TextNestedBstrap
+*/
+mapping usdMM::Link::linkUsd2SpanBadge() : bstrapMM::Span 
+	inherits  usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap,
+				usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement
+	when {self.isLink2Badge()} {
+	
+	if (self.url = ""){
+		var textElem = self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("badge") > 0);
+		if (textElem <> null) {
+			if (textElem.text.find("badge-") > 0){
+				badgeproperties += object BadgeStyle {
+					color := textElem.text.substringAfter("badge-").getColor();
+				}
+			};
+			if(textElem.text.toLower().find("badgepill") > 0){
+				badgeproperties += object BadgePill{}
+			}
+		}
+	}
+}
 
 /**
 * A mapper which map an usd ItalicEmphasis element to bstrap Italic element.
@@ -210,8 +167,6 @@ mapping usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap() : bstrapMM::Italic
 			usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement{
 }
 
-// =========== Start transformation StrongEmphasis to Strong ===========//
-
 /**
 * A mapper which map an usd StrongEmphasis element to bstrap Strong element.
 * It also extends compositeTextElementUsd2TextNestedBstrap.
@@ -219,8 +174,6 @@ mapping usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap() : bstrapMM::Italic
 mapping usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap() : bstrapMM::Strong 
 	inherits usdMM::CompositeTextElement::compositeTextElementUsd2TextNestedBstrap,
 			usdMM::CompositeTextElement::compositeTextElementUsd2ContainableTextElement{}
-
-// =========== transformation TextElement to TextNestedElement ===========//
 
 /**
 * A mapper which map an usd TextElement element to bstrap TextNestedElement.
@@ -231,7 +184,24 @@ mapping usdMM::TextElement::contructTextNestedElement() : bstrapMM::TextNestedEl
 	disjuncts usdMM::ItalicEmphasis::italicEmpUsd2ItalicBstrap, usdMM::StrongEmphasis::strongEmphasisUsd2StrongBstrap,
 				usdMM::Text::textUsdContainPropToDisplay2TextBstrap, usdMM::Text::textUsd2TextBstrap{}
 
-// =========== Start transformation Button to Button ===========//
+/**
+* A mapper which map an usd Image element to bstrap Image element.
+* Extends urlBasedLinkUsd2UrlBasedLinkBstrap and also parse specified image properties to bootstrap properties.
+*/
+mapping usdMM::Image::imageUsd2ImageBstrap() : bstrapMM::Image 
+	inherits usdMM::UrlBasedLink::urlBasedLinkUsd2UrlBasedLinkBstrap{
+		title := self.subTextElements[usdMM::Text] -> selectOne(text| true).text.getText();
+		var textWithProps := self.subTextElements[usdMM::Text] -> selectOne(t|t.text.containsProperties());
+		if (textWithProps <> null){
+			if (textWithProps.text.find("imageShape:") > 0){
+				imageproperties += textWithProps.text.getImageShape();
+			};
+			if (textWithProps.text.find("imageAligning:") > 0){
+				imageproperties += textWithProps.text.getImageAligning();
+			};
+			
+		}
+	}
 	
 /**
 * A mapper which map an usd Button element to bstrap Button element.
@@ -271,8 +241,6 @@ mapping usdMM::Button::buttonUsd2ButtonBstrap() : bstrapMM::Button{
 		}
 	}
 }
-
-// =========== This mapper make disjunction beetwen all TextElement mappers ===========//
 
 /**
 * A mapper wich map an usd TextElement element to bstrap TextElement element.

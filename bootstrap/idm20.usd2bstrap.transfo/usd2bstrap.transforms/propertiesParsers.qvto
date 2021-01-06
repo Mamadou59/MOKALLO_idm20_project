@@ -1,7 +1,3 @@
-/**
-*	This module includes all mapper and helper used for parsing properties in concepts elements 
-*/
-
 import queries;
 	
 
@@ -10,7 +6,7 @@ modeltype bstrapMM "strict" uses "http://www.example.org/bstrap";
 
 transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
 
-// =========== Start transformation String to Emphasis property (italic or bold) ===========//
+//Start parsing Emphasis properties 
 
 /**
 * Map a String contains Emphasis properties to bstrap Emphasis element, 
@@ -42,7 +38,7 @@ mapping String::getBoldProperty() : bstrapMM::Bold
 	when {self.find('emphasis:bold') > 0}{}
 	
 
-// =========== Start transformation for title properties ===========//
+//Start parsing title properties
 
 /**
 * A mapper wich map a String contains properties to bstrap DisplayProperty element.
@@ -214,7 +210,7 @@ helper String::containsProperties() : Boolean {
 * helper to get from String contains color properties to bstrap Color element, 
 */
 helper String::findColor() : bstrapMM::Color {
-	var prop := self.substringAfter('color:').findProperty();
+	var prop := self.substringAfter('color:').substringBefore(',');
 	return 	prop.getColor();
 }
 
@@ -244,10 +240,10 @@ helper String::getAlignment() : bstrapMM::Alignement {
 	var prop := self.toLower().trim();
 	var alignment := Alignement::CENTER;
 	switch {
-		case (prop.find('left')>0) alignment := Alignement::LEFT;
-		case (prop.find('right')>0) alignment := Alignement::RIGHT;
-		case (prop.find('top')>0) alignment := Alignement::TOP;
-		case (prop.find('bottom')>0) alignment := Alignement::BOTTOM;
+		case (prop.=('left')) alignment := Alignement::LEFT;
+		case (prop.=('right')) alignment := Alignement::RIGHT;
+		case (prop.=('top')) alignment := Alignement::TOP;
+		case (prop.=('bottom')) alignment := Alignement::BOTTOM;
 	};
 	return alignment;
 }
@@ -304,9 +300,9 @@ helper String::getColoredBorder() : bstrapMM::ColoredBorder {
 helper String::getImageShape() : bstrapMM::ImageShape {
 	var prop := self.substringAfter("imageShape:").findProperty();
 	switch {
-		case (prop.find('rounded')>0)  return object Rounded{};
-		case (prop.find('circle')>0)  return object Circle{};
-		case (prop.find('thumbnail')>0)  return object Thumbnail{};
+		case (prop.=('rounded'))  return object Rounded{};
+		case (prop.=('circle'))  return object Circle{};
+		case (prop.=('thumbnail'))  return object Thumbnail{};
 	};
 	return null;
 }
@@ -317,9 +313,9 @@ helper String::getImageShape() : bstrapMM::ImageShape {
 helper String::getImageAligning() : bstrapMM::ImageAligning {
 	var prop := self.substringAfter("imageAligning:").findProperty();
 	switch {
-		case (prop.find('float')>0)  return object Float{alignement := prop.getAlignment()};
-		case (prop.find('center')>0)  return object Center{};
-		case (prop.find('responsive')>0)  return object Responsive{};
+		case (prop.=('float'))  return object Float{};
+		case (prop.=('center'))  return object Center{};
+		case (prop.=('responsive'))  return object Responsive{};
 	};
 	return null;
 }
@@ -398,21 +394,13 @@ helper usdMM::Paragraph::isThereElementToBeDisplayed() : Boolean {
 }
 
 /**
-* helper to check if given Text element is in Title or link or italic or strong ot TabCell element
+* helper to check if given Text element is in Title or link or italic or strong
 */
 helper usdMM::Text::inTitleOrLinkOrEphasisElement() : Boolean {
 	return self.container().oclIsTypeOf(usdMM::Title) or 
 			self.container().oclIsTypeOf(usdMM::Link) or 
 			self.container().oclIsTypeOf(usdMM::ItalicEmphasis)or 
-			self.container().oclIsTypeOf(usdMM::StrongEmphasis) or
-			self.container().oclIsTypeOf(usdMM::TableCell);
-}
-
-/**
-* helper to check if given Text element is in TabCell element
-*/
-helper usdMM::Text::inTabCellWhithProps() : Boolean {
-	return self.container().oclIsTypeOf(usdMM::TableCell) and self.text.toLower().find("tabproperties") > 0;
+			self.container().oclIsTypeOf(usdMM::StrongEmphasis);
 }
 
 /**
@@ -431,8 +419,3 @@ helper usdMM::Link::isLink2Badge() : Boolean {
 		return self.subTextElements[usdMM::Text] -> selectOne(t | t.text.toLower().find("badge")>0) <> null and self.url = "";
 }
 
-helper usd::Text::inListItemProp() : Boolean {
-	return self.text.toLower().find("itemproperty") > 0 and 
-			self.text.find(":") > 0 and 
-			self.text.toLower().find("active") > 0;
-}

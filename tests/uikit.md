@@ -1,6 +1,6 @@
-# Dans cette page se une description des concepts basic de la syntaxe markdown vers une page web UIkit.
+# Dans cette page se une description des concepts basic de la syntaxe markdown vers une page web Bootstrap.
 
-# Les titres
+#Les titres
 
 Pour un titre les propriétés sont représentées par properties:(propriété:valeur,propriété:{propVal1:val1,propVal2:val2}) sur la même ligne avant le text du titre un titre peut avoir une couleur, un background, un margin et un padding avec une taille un alignment et une propriété spécifique **titleSize**.
 
