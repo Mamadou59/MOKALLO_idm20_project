@@ -155,6 +155,9 @@ public class ButtonItemProvider extends ContainableTextElementItemProvider {
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
 				BstrapFactory.eINSTANCE.createItalic()));
 
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_NESTED__TEXTNESTEDELEMENTS,
+				BstrapFactory.eINSTANCE.createSpan()));
+
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BUTTON__BUTTONPROPERTIES,
 				BstrapFactory.eINSTANCE.createButtonStyle()));
 

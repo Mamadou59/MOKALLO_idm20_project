@@ -190,6 +190,9 @@ public class TextContainerItemProvider extends TextPageContentItemProvider {
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
 				BstrapFactory.eINSTANCE.createItalic()));
 
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__TEXTELEMENTS,
+				BstrapFactory.eINSTANCE.createSpan()));
+
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TEXT_CONTAINER__EMPHASIS,
 				BstrapFactory.eINSTANCE.createItalicProperty()));
 

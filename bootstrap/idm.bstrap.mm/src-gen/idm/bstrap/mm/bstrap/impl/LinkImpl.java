@@ -2,6 +2,7 @@
  */
 package idm.bstrap.mm.bstrap.impl;
 
+import idm.bstrap.mm.bstrap.BadgeProperty;
 import idm.bstrap.mm.bstrap.BstrapPackage;
 import idm.bstrap.mm.bstrap.ButtonProperty;
 import idm.bstrap.mm.bstrap.Link;
@@ -32,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link idm.bstrap.mm.bstrap.impl.LinkImpl#getTextnestedelements <em>Textnestedelements</em>}</li>
  *   <li>{@link idm.bstrap.mm.bstrap.impl.LinkImpl#getLinkproperties <em>Linkproperties</em>}</li>
  *   <li>{@link idm.bstrap.mm.bstrap.impl.LinkImpl#getButtonproperties <em>Buttonproperties</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.impl.LinkImpl#getBadgeproperties <em>Badgeproperties</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +68,16 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	 * @ordered
 	 */
 	protected EList<ButtonProperty> buttonproperties;
+
+	/**
+	 * The cached value of the '{@link #getBadgeproperties() <em>Badgeproperties</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBadgeproperties()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<BadgeProperty> badgeproperties;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,6 +142,19 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<BadgeProperty> getBadgeproperties() {
+		if (badgeproperties == null) {
+			badgeproperties = new EObjectContainmentEList<BadgeProperty>(BadgeProperty.class, this,
+					BstrapPackage.LINK__BADGEPROPERTIES);
+		}
+		return badgeproperties;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -139,6 +164,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 			return ((InternalEList<?>) getLinkproperties()).basicRemove(otherEnd, msgs);
 		case BstrapPackage.LINK__BUTTONPROPERTIES:
 			return ((InternalEList<?>) getButtonproperties()).basicRemove(otherEnd, msgs);
+		case BstrapPackage.LINK__BADGEPROPERTIES:
+			return ((InternalEList<?>) getBadgeproperties()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -157,6 +184,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 			return getLinkproperties();
 		case BstrapPackage.LINK__BUTTONPROPERTIES:
 			return getButtonproperties();
+		case BstrapPackage.LINK__BADGEPROPERTIES:
+			return getBadgeproperties();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -182,6 +211,10 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 			getButtonproperties().clear();
 			getButtonproperties().addAll((Collection<? extends ButtonProperty>) newValue);
 			return;
+		case BstrapPackage.LINK__BADGEPROPERTIES:
+			getBadgeproperties().clear();
+			getBadgeproperties().addAll((Collection<? extends BadgeProperty>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -203,6 +236,9 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 		case BstrapPackage.LINK__BUTTONPROPERTIES:
 			getButtonproperties().clear();
 			return;
+		case BstrapPackage.LINK__BADGEPROPERTIES:
+			getBadgeproperties().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -221,6 +257,8 @@ public class LinkImpl extends UrlBasedLinkImpl implements Link {
 			return linkproperties != null && !linkproperties.isEmpty();
 		case BstrapPackage.LINK__BUTTONPROPERTIES:
 			return buttonproperties != null && !buttonproperties.isEmpty();
+		case BstrapPackage.LINK__BADGEPROPERTIES:
+			return badgeproperties != null && !badgeproperties.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

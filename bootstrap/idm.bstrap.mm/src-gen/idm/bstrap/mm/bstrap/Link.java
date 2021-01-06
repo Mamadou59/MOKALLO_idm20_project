@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link idm.bstrap.mm.bstrap.Link#getLinkproperties <em>Linkproperties</em>}</li>
  *   <li>{@link idm.bstrap.mm.bstrap.Link#getButtonproperties <em>Buttonproperties</em>}</li>
+ *   <li>{@link idm.bstrap.mm.bstrap.Link#getBadgeproperties <em>Badgeproperties</em>}</li>
  * </ul>
  *
  * @see idm.bstrap.mm.bstrap.BstrapPackage#getLink()
@@ -45,5 +46,17 @@ public interface Link extends UrlBasedLink, TextNested {
 	 * @generated
 	 */
 	EList<ButtonProperty> getButtonproperties();
+
+	/**
+	 * Returns the value of the '<em><b>Badgeproperties</b></em>' containment reference list.
+	 * The list contents are of type {@link idm.bstrap.mm.bstrap.BadgeProperty}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Badgeproperties</em>' containment reference list.
+	 * @see idm.bstrap.mm.bstrap.BstrapPackage#getLink_Badgeproperties()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<BadgeProperty> getBadgeproperties();
 
 } // Link

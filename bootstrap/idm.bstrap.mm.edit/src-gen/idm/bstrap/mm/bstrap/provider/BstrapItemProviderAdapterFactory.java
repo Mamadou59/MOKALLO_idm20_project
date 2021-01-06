@@ -1499,6 +1499,144 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.Span} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SpanItemProvider spanItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.Span}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSpanAdapter() {
+		if (spanItemProvider == null) {
+			spanItemProvider = new SpanItemProvider(this);
+		}
+
+		return spanItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.BadgeStyle} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BadgeStyleItemProvider badgeStyleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.BadgeStyle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBadgeStyleAdapter() {
+		if (badgeStyleItemProvider == null) {
+			badgeStyleItemProvider = new BadgeStyleItemProvider(this);
+		}
+
+		return badgeStyleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.BadgePill} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BadgePillItemProvider badgePillItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.BadgePill}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBadgePillAdapter() {
+		if (badgePillItemProvider == null) {
+			badgePillItemProvider = new BadgePillItemProvider(this);
+		}
+
+		return badgePillItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.AlertStyle} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AlertStyleItemProvider alertStyleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.AlertStyle}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAlertStyleAdapter() {
+		if (alertStyleItemProvider == null) {
+			alertStyleItemProvider = new AlertStyleItemProvider(this);
+		}
+
+		return alertStyleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.AlertAnimated} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AlertAnimatedItemProvider alertAnimatedItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.AlertAnimated}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAlertAnimatedAdapter() {
+		if (alertAnimatedItemProvider == null) {
+			alertAnimatedItemProvider = new AlertAnimatedItemProvider(this);
+		}
+
+		return alertAnimatedItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link idm.bstrap.mm.bstrap.AlertLink} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AlertLinkItemProvider alertLinkItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link idm.bstrap.mm.bstrap.AlertLink}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAlertLinkAdapter() {
+		if (alertLinkItemProvider == null) {
+			alertLinkItemProvider = new AlertLinkItemProvider(this);
+		}
+
+		return alertLinkItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1721,6 +1859,18 @@ public class BstrapItemProviderAdapterFactory extends BstrapAdapterFactory
 			buttonOutLineItemProvider.dispose();
 		if (buttonSpinnerItemProvider != null)
 			buttonSpinnerItemProvider.dispose();
+		if (spanItemProvider != null)
+			spanItemProvider.dispose();
+		if (badgeStyleItemProvider != null)
+			badgeStyleItemProvider.dispose();
+		if (badgePillItemProvider != null)
+			badgePillItemProvider.dispose();
+		if (alertStyleItemProvider != null)
+			alertStyleItemProvider.dispose();
+		if (alertAnimatedItemProvider != null)
+			alertAnimatedItemProvider.dispose();
+		if (alertLinkItemProvider != null)
+			alertLinkItemProvider.dispose();
 	}
 
 }

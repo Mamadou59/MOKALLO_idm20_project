@@ -2471,13 +2471,22 @@ public interface BstrapPackage extends EPackage {
 	int LINK__BUTTONPROPERTIES = URL_BASED_LINK_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Badgeproperties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINK__BADGEPROPERTIES = URL_BASED_LINK_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Link</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LINK_FEATURE_COUNT = URL_BASED_LINK_FEATURE_COUNT + 3;
+	int LINK_FEATURE_COUNT = URL_BASED_LINK_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Link</em>' class.
@@ -3542,6 +3551,275 @@ public interface BstrapPackage extends EPackage {
 	int BUTTON_SPINNER_OPERATION_COUNT = BUTTON_PROPERTY_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.SpanImpl <em>Span</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.SpanImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSpan()
+	 * @generated
+	 */
+	int SPAN = 91;
+
+	/**
+	 * The feature id for the '<em><b>General Properties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPAN__GENERAL_PROPERTIES = TEXT_CONTAINABLE__GENERAL_PROPERTIES;
+
+	/**
+	 * The feature id for the '<em><b>Textnestedelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPAN__TEXTNESTEDELEMENTS = TEXT_CONTAINABLE__TEXTNESTEDELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Badgeproperties</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPAN__BADGEPROPERTIES = TEXT_CONTAINABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Span</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPAN_FEATURE_COUNT = TEXT_CONTAINABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Span</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPAN_OPERATION_COUNT = TEXT_CONTAINABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BadgePropertyImpl <em>Badge Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.BadgePropertyImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBadgeProperty()
+	 * @generated
+	 */
+	int BADGE_PROPERTY = 92;
+
+	/**
+	 * The number of structural features of the '<em>Badge Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BADGE_PROPERTY_FEATURE_COUNT = PROPERTY_CLASS_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Badge Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BADGE_PROPERTY_OPERATION_COUNT = PROPERTY_CLASS_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BadgeStyleImpl <em>Badge Style</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.BadgeStyleImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBadgeStyle()
+	 * @generated
+	 */
+	int BADGE_STYLE = 93;
+
+	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BADGE_STYLE__COLOR = BADGE_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Badge Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BADGE_STYLE_FEATURE_COUNT = BADGE_PROPERTY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Badge Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BADGE_STYLE_OPERATION_COUNT = BADGE_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.BadgePillImpl <em>Badge Pill</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.BadgePillImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBadgePill()
+	 * @generated
+	 */
+	int BADGE_PILL = 94;
+
+	/**
+	 * The number of structural features of the '<em>Badge Pill</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BADGE_PILL_FEATURE_COUNT = BADGE_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Badge Pill</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BADGE_PILL_OPERATION_COUNT = BADGE_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.AlertPropertyImpl <em>Alert Property</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.AlertPropertyImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlertProperty()
+	 * @generated
+	 */
+	int ALERT_PROPERTY = 95;
+
+	/**
+	 * The number of structural features of the '<em>Alert Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALERT_PROPERTY_FEATURE_COUNT = GENERAL_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Alert Property</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALERT_PROPERTY_OPERATION_COUNT = GENERAL_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.AlertStyleImpl <em>Alert Style</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.AlertStyleImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlertStyle()
+	 * @generated
+	 */
+	int ALERT_STYLE = 96;
+
+	/**
+	 * The feature id for the '<em><b>Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALERT_STYLE__COLOR = ALERT_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Alert Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALERT_STYLE_FEATURE_COUNT = ALERT_PROPERTY_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Alert Style</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALERT_STYLE_OPERATION_COUNT = ALERT_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.AlertAnimatedImpl <em>Alert Animated</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.AlertAnimatedImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlertAnimated()
+	 * @generated
+	 */
+	int ALERT_ANIMATED = 97;
+
+	/**
+	 * The number of structural features of the '<em>Alert Animated</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALERT_ANIMATED_FEATURE_COUNT = ALERT_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Alert Animated</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALERT_ANIMATED_OPERATION_COUNT = ALERT_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.impl.AlertLinkImpl <em>Alert Link</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see idm.bstrap.mm.bstrap.impl.AlertLinkImpl
+	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlertLink()
+	 * @generated
+	 */
+	int ALERT_LINK = 98;
+
+	/**
+	 * The number of structural features of the '<em>Alert Link</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALERT_LINK_FEATURE_COUNT = LINK_PROPERTY_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Alert Link</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALERT_LINK_OPERATION_COUNT = LINK_PROPERTY_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3549,7 +3827,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getColor()
 	 * @generated
 	 */
-	int COLOR = 91;
+	int COLOR = 99;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Size <em>Size</em>}' enum.
@@ -3559,7 +3837,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSize()
 	 * @generated
 	 */
-	int SIZE = 92;
+	int SIZE = 100;
 
 	/**
 	 * The meta object id for the '{@link idm.bstrap.mm.bstrap.Alignement <em>Alignement</em>}' enum.
@@ -3569,7 +3847,7 @@ public interface BstrapPackage extends EPackage {
 	 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlignement()
 	 * @generated
 	 */
-	int ALIGNEMENT = 93;
+	int ALIGNEMENT = 101;
 
 	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Page <em>Page</em>}'.
@@ -4542,6 +4820,17 @@ public interface BstrapPackage extends EPackage {
 	EReference getLink_Buttonproperties();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Link#getBadgeproperties <em>Badgeproperties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Badgeproperties</em>'.
+	 * @see idm.bstrap.mm.bstrap.Link#getBadgeproperties()
+	 * @see #getLink()
+	 * @generated
+	 */
+	EReference getLink_Badgeproperties();
+
+	/**
 	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Strong <em>Strong</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4953,6 +5242,119 @@ public interface BstrapPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getButtonSpinner();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.Span <em>Span</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Span</em>'.
+	 * @see idm.bstrap.mm.bstrap.Span
+	 * @generated
+	 */
+	EClass getSpan();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link idm.bstrap.mm.bstrap.Span#getBadgeproperties <em>Badgeproperties</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Badgeproperties</em>'.
+	 * @see idm.bstrap.mm.bstrap.Span#getBadgeproperties()
+	 * @see #getSpan()
+	 * @generated
+	 */
+	EReference getSpan_Badgeproperties();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.BadgeProperty <em>Badge Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Badge Property</em>'.
+	 * @see idm.bstrap.mm.bstrap.BadgeProperty
+	 * @generated
+	 */
+	EClass getBadgeProperty();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.BadgeStyle <em>Badge Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Badge Style</em>'.
+	 * @see idm.bstrap.mm.bstrap.BadgeStyle
+	 * @generated
+	 */
+	EClass getBadgeStyle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.BadgeStyle#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see idm.bstrap.mm.bstrap.BadgeStyle#getColor()
+	 * @see #getBadgeStyle()
+	 * @generated
+	 */
+	EAttribute getBadgeStyle_Color();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.BadgePill <em>Badge Pill</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Badge Pill</em>'.
+	 * @see idm.bstrap.mm.bstrap.BadgePill
+	 * @generated
+	 */
+	EClass getBadgePill();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.AlertProperty <em>Alert Property</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Alert Property</em>'.
+	 * @see idm.bstrap.mm.bstrap.AlertProperty
+	 * @generated
+	 */
+	EClass getAlertProperty();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.AlertStyle <em>Alert Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Alert Style</em>'.
+	 * @see idm.bstrap.mm.bstrap.AlertStyle
+	 * @generated
+	 */
+	EClass getAlertStyle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link idm.bstrap.mm.bstrap.AlertStyle#getColor <em>Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Color</em>'.
+	 * @see idm.bstrap.mm.bstrap.AlertStyle#getColor()
+	 * @see #getAlertStyle()
+	 * @generated
+	 */
+	EAttribute getAlertStyle_Color();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.AlertAnimated <em>Alert Animated</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Alert Animated</em>'.
+	 * @see idm.bstrap.mm.bstrap.AlertAnimated
+	 * @generated
+	 */
+	EClass getAlertAnimated();
+
+	/**
+	 * Returns the meta object for class '{@link idm.bstrap.mm.bstrap.AlertLink <em>Alert Link</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Alert Link</em>'.
+	 * @see idm.bstrap.mm.bstrap.AlertLink
+	 * @generated
+	 */
+	EClass getAlertLink();
 
 	/**
 	 * Returns the meta object for enum '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}'.
@@ -5888,6 +6290,14 @@ public interface BstrapPackage extends EPackage {
 		EReference LINK__BUTTONPROPERTIES = eINSTANCE.getLink_Buttonproperties();
 
 		/**
+		 * The meta object literal for the '<em><b>Badgeproperties</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LINK__BADGEPROPERTIES = eINSTANCE.getLink_Badgeproperties();
+
+		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.StrongImpl <em>Strong</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6260,6 +6670,110 @@ public interface BstrapPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BUTTON_SPINNER = eINSTANCE.getButtonSpinner();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.SpanImpl <em>Span</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.SpanImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getSpan()
+		 * @generated
+		 */
+		EClass SPAN = eINSTANCE.getSpan();
+
+		/**
+		 * The meta object literal for the '<em><b>Badgeproperties</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SPAN__BADGEPROPERTIES = eINSTANCE.getSpan_Badgeproperties();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BadgePropertyImpl <em>Badge Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.BadgePropertyImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBadgeProperty()
+		 * @generated
+		 */
+		EClass BADGE_PROPERTY = eINSTANCE.getBadgeProperty();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BadgeStyleImpl <em>Badge Style</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.BadgeStyleImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBadgeStyle()
+		 * @generated
+		 */
+		EClass BADGE_STYLE = eINSTANCE.getBadgeStyle();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BADGE_STYLE__COLOR = eINSTANCE.getBadgeStyle_Color();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.BadgePillImpl <em>Badge Pill</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.BadgePillImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getBadgePill()
+		 * @generated
+		 */
+		EClass BADGE_PILL = eINSTANCE.getBadgePill();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.AlertPropertyImpl <em>Alert Property</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.AlertPropertyImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlertProperty()
+		 * @generated
+		 */
+		EClass ALERT_PROPERTY = eINSTANCE.getAlertProperty();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.AlertStyleImpl <em>Alert Style</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.AlertStyleImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlertStyle()
+		 * @generated
+		 */
+		EClass ALERT_STYLE = eINSTANCE.getAlertStyle();
+
+		/**
+		 * The meta object literal for the '<em><b>Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ALERT_STYLE__COLOR = eINSTANCE.getAlertStyle_Color();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.AlertAnimatedImpl <em>Alert Animated</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.AlertAnimatedImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlertAnimated()
+		 * @generated
+		 */
+		EClass ALERT_ANIMATED = eINSTANCE.getAlertAnimated();
+
+		/**
+		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.impl.AlertLinkImpl <em>Alert Link</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see idm.bstrap.mm.bstrap.impl.AlertLinkImpl
+		 * @see idm.bstrap.mm.bstrap.impl.BstrapPackageImpl#getAlertLink()
+		 * @generated
+		 */
+		EClass ALERT_LINK = eINSTANCE.getAlertLink();
 
 		/**
 		 * The meta object literal for the '{@link idm.bstrap.mm.bstrap.Color <em>Color</em>}' enum.
