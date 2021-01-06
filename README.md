@@ -15,4 +15,4 @@ En passant par une approche *IDM* (*Ingénierie Dirigée par les Modèles*), Nou
 - Enfin pour la technologie choisie, par un générateur de code générer le code correspondant. 
 
 ## Plus de détails
-Pour plus de détails sur l'installation, les configurations, les transformation et la génération vous pouvez suivre les indications données dans ce [rapport]()
+Pour plus de détails sur l'installation, les configurations, les transformation et la génération vous pouvez suivre les indications données dans ce [rapport](https://github.com/Mamadou59/MOKALLO_idm20_project/blob/master/assets/IDM20_RAPPORT.pdf)
