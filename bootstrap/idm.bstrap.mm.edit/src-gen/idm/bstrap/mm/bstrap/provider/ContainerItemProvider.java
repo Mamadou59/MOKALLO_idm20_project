@@ -191,6 +191,9 @@ public class ContainerItemProvider extends PageContentItemProvider {
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
 				BstrapFactory.eINSTANCE.createHorizontalLine()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.CONTAINER__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createSpan()));
 	}
 
 }

@@ -5,6 +5,7 @@ package idm.bstrap.mm.bstrap.provider;
 import idm.bstrap.mm.bstrap.BlockQuote;
 import idm.bstrap.mm.bstrap.BstrapFactory;
 import idm.bstrap.mm.bstrap.BstrapPackage;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -189,6 +191,9 @@ public class BlockQuoteItemProvider extends TextPageContentItemProvider {
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BLOCK_QUOTE__PAGECONTENTS,
 				BstrapFactory.eINSTANCE.createHorizontalLine()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.BLOCK_QUOTE__PAGECONTENTS,
+				BstrapFactory.eINSTANCE.createSpan()));
 	}
 
 }

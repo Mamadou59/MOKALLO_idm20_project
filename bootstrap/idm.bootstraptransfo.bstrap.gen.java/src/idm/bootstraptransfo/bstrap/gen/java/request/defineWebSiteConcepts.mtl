@@ -62,13 +62,13 @@ missedpageName
  * Declare a class for a container HTML element (class=)
  */]
 [template public getContainerClass(aContainer : FixContainer)]
-.container
+container
 [/template]
 [**
  * Declare a class for a container HTML element (class=)
  */]
 [template public getContainerClass(aContainer : FluidContainer)]
-.container-fluid	
+container-fluid	
 [/template]
 
 [comment]------------------------------------------------------[/comment]
@@ -167,6 +167,23 @@ td
 [/template]
 
 [comment]------------------------------------------------------[/comment]
+
+
+
+
+[comment]+++++++++++++++ Link Role ++++++++++++++[/comment]
+[template public geContainerAlertProperty(aContainer : Container) ? (self.generalProperties -> select(e | e.oclIsKindOf(AlertAnimated)) -> notEmpty())]
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+[/template]
+
+[comment]------------------------------------------------------[/comment]
+
+
+
+
+
+
+
 
 
 

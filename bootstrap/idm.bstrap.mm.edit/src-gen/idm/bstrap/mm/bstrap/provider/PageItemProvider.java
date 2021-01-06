@@ -223,6 +223,9 @@ public class PageItemProvider extends ItemProviderAdapter implements IEditingDom
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS,
 				BstrapFactory.eINSTANCE.createHorizontalLine()));
+
+		newChildDescriptors.add(
+				createChildParameter(BstrapPackage.Literals.PAGE__PAGECONTENTS, BstrapFactory.eINSTANCE.createSpan()));
 	}
 
 	/**

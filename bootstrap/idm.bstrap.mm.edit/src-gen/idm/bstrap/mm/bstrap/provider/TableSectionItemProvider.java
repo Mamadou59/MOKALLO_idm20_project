@@ -169,6 +169,12 @@ public class TableSectionItemProvider extends ItemProviderAdapter implements IEd
 
 		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TABLE_SECTION__GENERALS,
 				BstrapFactory.eINSTANCE.createColoredBorder()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TABLE_SECTION__GENERALS,
+				BstrapFactory.eINSTANCE.createAlertStyle()));
+
+		newChildDescriptors.add(createChildParameter(BstrapPackage.Literals.TABLE_SECTION__GENERALS,
+				BstrapFactory.eINSTANCE.createAlertAnimated()));
 	}
 
 	/**

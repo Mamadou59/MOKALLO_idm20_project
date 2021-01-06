@@ -580,6 +580,60 @@ public interface BstrapFactory extends EFactory {
 	ButtonSpinner createButtonSpinner();
 
 	/**
+	 * Returns a new object of class '<em>Span</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Span</em>'.
+	 * @generated
+	 */
+	Span createSpan();
+
+	/**
+	 * Returns a new object of class '<em>Badge Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Badge Style</em>'.
+	 * @generated
+	 */
+	BadgeStyle createBadgeStyle();
+
+	/**
+	 * Returns a new object of class '<em>Badge Pill</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Badge Pill</em>'.
+	 * @generated
+	 */
+	BadgePill createBadgePill();
+
+	/**
+	 * Returns a new object of class '<em>Alert Style</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Alert Style</em>'.
+	 * @generated
+	 */
+	AlertStyle createAlertStyle();
+
+	/**
+	 * Returns a new object of class '<em>Alert Animated</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Alert Animated</em>'.
+	 * @generated
+	 */
+	AlertAnimated createAlertAnimated();
+
+	/**
+	 * Returns a new object of class '<em>Alert Link</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Alert Link</em>'.
+	 * @generated
+	 */
+	AlertLink createAlertLink();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

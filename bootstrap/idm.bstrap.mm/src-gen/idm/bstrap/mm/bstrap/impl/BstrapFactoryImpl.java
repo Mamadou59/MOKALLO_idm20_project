@@ -3,8 +3,13 @@
 package idm.bstrap.mm.bstrap.impl;
 
 import idm.bstrap.mm.bstrap.Active;
+import idm.bstrap.mm.bstrap.AlertAnimated;
+import idm.bstrap.mm.bstrap.AlertLink;
+import idm.bstrap.mm.bstrap.AlertStyle;
 import idm.bstrap.mm.bstrap.Alignement;
 import idm.bstrap.mm.bstrap.Background;
+import idm.bstrap.mm.bstrap.BadgePill;
+import idm.bstrap.mm.bstrap.BadgeStyle;
 import idm.bstrap.mm.bstrap.Basic;
 import idm.bstrap.mm.bstrap.BasicList;
 import idm.bstrap.mm.bstrap.BasicTable;
@@ -55,6 +60,7 @@ import idm.bstrap.mm.bstrap.Paragraphe;
 import idm.bstrap.mm.bstrap.Responsive;
 import idm.bstrap.mm.bstrap.Rounded;
 import idm.bstrap.mm.bstrap.Size;
+import idm.bstrap.mm.bstrap.Span;
 import idm.bstrap.mm.bstrap.StripedRows;
 import idm.bstrap.mm.bstrap.Strong;
 import idm.bstrap.mm.bstrap.Table;
@@ -246,6 +252,18 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 			return createButtonOutLine();
 		case BstrapPackage.BUTTON_SPINNER:
 			return createButtonSpinner();
+		case BstrapPackage.SPAN:
+			return createSpan();
+		case BstrapPackage.BADGE_STYLE:
+			return createBadgeStyle();
+		case BstrapPackage.BADGE_PILL:
+			return createBadgePill();
+		case BstrapPackage.ALERT_STYLE:
+			return createAlertStyle();
+		case BstrapPackage.ALERT_ANIMATED:
+			return createAlertAnimated();
+		case BstrapPackage.ALERT_LINK:
+			return createAlertLink();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -907,6 +925,66 @@ public class BstrapFactoryImpl extends EFactoryImpl implements BstrapFactory {
 	public ButtonSpinner createButtonSpinner() {
 		ButtonSpinnerImpl buttonSpinner = new ButtonSpinnerImpl();
 		return buttonSpinner;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Span createSpan() {
+		SpanImpl span = new SpanImpl();
+		return span;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BadgeStyle createBadgeStyle() {
+		BadgeStyleImpl badgeStyle = new BadgeStyleImpl();
+		return badgeStyle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BadgePill createBadgePill() {
+		BadgePillImpl badgePill = new BadgePillImpl();
+		return badgePill;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AlertStyle createAlertStyle() {
+		AlertStyleImpl alertStyle = new AlertStyleImpl();
+		return alertStyle;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AlertAnimated createAlertAnimated() {
+		AlertAnimatedImpl alertAnimated = new AlertAnimatedImpl();
+		return alertAnimated;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AlertLink createAlertLink() {
+		AlertLinkImpl alertLink = new AlertLinkImpl();
+		return alertLink;
 	}
 
 	/**

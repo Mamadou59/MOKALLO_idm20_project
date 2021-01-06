@@ -17,7 +17,7 @@
  */]
 [template public generateTextContainer(aTextContainer : Paragraphe){ aBalise : String= 'p'; }]
 [comment]gèrer les classes[/comment]
-<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.color.getColorProperty()/] [self.emphasis.getEmphasisProperty()/]">[self.textelements.generateTextElements()/][aBalise.getCloseBaliseName()/]
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getPropertyClass()/] [self.color.getColorProperty()/] [self.emphasis.getPropertyClass()/] ">[self.textelements.generateTextElements()/][aBalise.getCloseBaliseName()/]
 [/template]
 
 [**
@@ -25,14 +25,14 @@
  */]
 [template public generateTextContainer(aTextContainer : Title) { aBalise : String = 'h'+ self.level; }]
 [comment]gèrer les classes[/comment]
-<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.color.getColorProperty()/] [self.displayproperties.getDisplayProperties()/] [self.emphasis.getEmphasisProperty()/]">[self.textelements.generateTextElements()/][getCloseBaliseName(aBalise)/]
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getPropertyClass()/] [self.color.getColorProperty()/] [self.displayproperties.getPropertyClass()/] [self.emphasis.getPropertyClass()/]">[self.textelements.generateTextElements()/][getCloseBaliseName(aBalise)/]
 [/template]
 [**
  * handle TextContainer (TableCell)  
  */]
 [template public generateTextContainer(aTextContainer : TableCell) { aBalise : String = self.getTableCellName(); }]
 [comment]gèrer les classes[/comment]
-<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.color.getColorProperty()/] [self.emphasis.getEmphasisProperty()/] [self.alignment.getAlignement()/] " colspan="[self.span/]">[self.textelements.generateTextElements()/][getCloseBaliseName(aBalise)/]
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getPropertyClass()/] [self.color.getColorProperty()/] [self.emphasis.getPropertyClass()/] [self.alignment.getAlignement()/] " colspan="[self.span/]">[self.textelements.generateTextElements()/][getCloseBaliseName(aBalise)/]
 [/template]
 [comment]------------------------------------------------------[/comment]
 
@@ -81,7 +81,7 @@
  */]
 
 [template public generateContainableTextElement(aTextContainable : Button) { aBalise : String = self.getClassName(); }]
-<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] btn [self.buttonproperties.getButtonProperty()/]" [aTextContainable.buttonproperties.getButtonState()/]> 
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getPropertyClass()/] btn [self.buttonproperties.getPropertyClass()/]" [aTextContainable.buttonproperties.getButtonState()/]> 
    [self.buttonproperties.getButtonSpinnerProperty()/]
    [self.textnestedelements.generateTestnestedElement()/]
 [getCloseBaliseName(aBalise)/]
@@ -125,13 +125,13 @@
  * Handle code generation of a UrlBasedLink in a Page  (Image)
  */]
 [template public generateUrlBasedLink(aUrlBasedLink : Image) { aBalise :String = 'img'; }]
-<[aBalise/] src="[self.url/]" alt= "[self.title/]" title= "[self.title/]" [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [aUrlBasedLink.imageproperties.getImageProperty()/]"/>
+<[aBalise/] src="[self.url/]" alt= "[self.title/]" title= "[self.title/]" [self.declareClass()/]"[self.generalProperties.getPropertyClass()/] [aUrlBasedLink.imageproperties.getPropertyClass()/]"/>
 [/template]
 [**
  * Handle code generation of a UrlBasedLink in a Page  (Link)
  */]
 [template public generateUrlBasedLink(aUrlBasedLink : Link) { aBalise :String = 'a'; }]
-<[aBalise/] href="[self.url/]"  title= "[self.title/]"[self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.linkproperties.getLinkBrand()/] btn [self.buttonproperties.getButtonProperty()/]" [self.getLinkRole()/] > [aUrlBasedLink.textnestedelements.generateTestnestedElement()/] [aBalise.getCloseBaliseName()/]
+<[aBalise/] href="[self.url/]"  title= "[self.title/]"[self.declareClass()/]"[self.generalProperties.getPropertyClass()/] [self.linkproperties.getPropertyClass()/] [self.getLinkButton()/] [self.getLinkBadge()/] [self.getLinkItem()/]" [self.getLinkRole()/] > [aUrlBasedLink.textnestedelements.generateTestnestedElement()/] [aBalise.getCloseBaliseName()/]
 [/template]
 
 
@@ -142,18 +142,22 @@
 
 [comment]+++++++++++++++TextContaible ++++++++++++++[/comment]
 [**
- * handle TextContainer (Strong,Italic)  
+ * handle TextContainer (Strong,Italic,span)  
  */]
 [template public generateTextContainable(aTextContainable : TextContainable)]
 [self.declareComment()/]
 [/template]
 [template public generateTextContainable(aTextContainable : Strong) { aBaliseName : String = 'Strong'; }]
-<[aBaliseName/] [self.declareClass()/] "[self.generalProperties.getGeneralClass()/] "> [self.textnestedelements.generateTestnestedElement()/] [aBaliseName.getCloseBaliseName()/]
+<[aBaliseName/] [self.declareClass()/] "[self.generalProperties.getPropertyClass()/] "> [self.textnestedelements.generateTestnestedElement()/] [aBaliseName.getCloseBaliseName()/]
 [/template] 
 
 [template public generateTextContainable(aTextContainable : Italic) { aBaliseName : String = 'em'; }]
-<[aBaliseName/] [self.declareClass()/] "[self.generalProperties.getGeneralClass()/] "> [self.textnestedelements.generateTestnestedElement()/] [aBaliseName.getCloseBaliseName()/]
+<[aBaliseName/] [self.declareClass()/] "[self.generalProperties.getPropertyClass()/] "> [self.textnestedelements.generateTestnestedElement()/] [aBaliseName.getCloseBaliseName()/]
 [/template] 
+[template public generateTextContainable(aTextContainable : Span) { aBaliseName : String = 'span'; }]
+<[aBaliseName/] [self.declareClass()/] "[self.generalProperties.getPropertyClass()/] badge [self.badgeproperties.getPropertyClass()/]"> [self.textnestedelements.generateTestnestedElement()/] [aBaliseName.getCloseBaliseName()/]
+[/template] 
+
 
 [comment]------------------------------------------------------[/comment]
 
@@ -167,12 +171,12 @@
 [self.declareComment()/]
 [/template]
 [template public generateListElement(aListElement : OrderList)  { aBalise : String = 'ol'; }]
-<[aBalise/]  [self.declareClass()/]"[self.listproperty.getListProperty()/] [self.generalProperties.getGeneralClass()/] [self.getNavigationBarClass()/]">
+<[aBalise/]  [self.declareClass()/]"[self.listproperty.getPropertyClass()/] [self.generalProperties.getPropertyClass()/] [self.getNavigationBarClass()/]">
 [generateListItem(self.listitems)/]
 [aBalise.getCloseBaliseName()/]
 [/template]
 [template public generateListElement(aListElement : UnOrderedList) { aBalise : String = 'ul'; }]
-<[aBalise/] [self.declareClass()/]"[self.listproperty.getListProperty()/] [self.generalProperties.getGeneralClass()/] [self.getNavigationBarClass()/]">
+<[aBalise/] [self.declareClass()/]"[self.listproperty.getPropertyClass()/] [self.generalProperties.getPropertyClass()/] [self.getNavigationBarClass()/]">
 [generateListItem(self.listitems)/]
 [aBalise.getCloseBaliseName()/]
 [/template]
@@ -222,7 +226,7 @@
  */]
 
 [template public generateNavigationProperty(aNavigation : Navigation) { aBalise : String = 'nav';}]
-<[aBalise/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.navbar.getNaVBarProperty()/]">
+<[aBalise/] [self.declareClass()/]"[self.generalProperties.getPropertyClass()/] [self.navbar.getPropertyClass()/]">
 [self.links.generateTextElements()/]
 [self.listelement.generateListElement()/]
 [aBalise.getCloseBaliseName()/]
@@ -237,7 +241,7 @@
  */]
 
 [template public generateTableElement(aTable : Table) { aBaliseName : String = 'table'; }]
-<[aBaliseName/]  [self.declareClass()/]"[self.generalProperties.getGeneralClass()/] [self.tableproperties.getTableProperty()/] ">
+<[aBaliseName/]  [self.declareClass()/]"[self.generalProperties.getPropertyClass()/] [self.tableproperties.getPropertyClass()/] ">
 [self.tablesections.generateTableSectionElements()/]
 [aBaliseName.getCloseBaliseName()/]
 [/template]
@@ -252,17 +256,17 @@
 [self.declareComment()/]
 [/template]
 [template public generateTableSectionElements(aTableSection : Thead) { aBaliseName : String = 'thead'; }]
-<[aBaliseName/] [self.declareClass()/]"[self.generals.getGeneralClass()/]">
+<[aBaliseName/] [self.declareClass()/]"[self.generals.getPropertyClass()/]">
 [self.tablerows.generateTableRow()/]
 [aBaliseName.getCloseBaliseName()/]
 [/template]
 [template public generateTableSectionElements(aTableSection : Tbody) { aBaliseName : String = 'tbody'; }]
-<[aBaliseName/] [self.declareClass()/]"[self.generals.getGeneralClass()/]">
+<[aBaliseName/] [self.declareClass()/]"[self.generals.getPropertyClass()/]">
 [self.tablerows.generateTableRow()/]
 [aBaliseName.getCloseBaliseName()/]
 [/template]
 [template public generateTableSectionElements(aTableSection : Tfoot) { aBaliseName : String = 'tfoot'; }]
-<[aBaliseName/] [self.declareClass()/]"[self.generals.getGeneralClass()/]">
+<[aBaliseName/] [self.declareClass()/]"[self.generals.getPropertyClass()/]">
 [self.tablerows.generateTableRow()/]
 [aBaliseName.getCloseBaliseName()/]
 [/template]
@@ -274,7 +278,7 @@
  * handle TableRows (TableRows)  
  */]
 [template public generateTableRow(aTableRow : TableRow) { aBaliseName : String = 'tr'; }]
-<[aBaliseName/] [self.declareClass()/]"[self.generals.getGeneralClass()/]" >
+<[aBaliseName/] [self.declareClass()/]"[self.generals.getPropertyClass()/]" >
 [self.tablecells.generateTextContainer()/]
 [aBaliseName.getCloseBaliseName()/]
 [/template]
@@ -311,7 +315,7 @@
  * handle CodeBlock (CodeBlock)  
  */]
 [template public generateCodeBlockElement(aCodeBlock : CodeBlock) { aBaliseName : String = 'pre'; }]
-<[aBaliseName/] [self.declareClass()/]"[self.generalProperties.getGeneralClass()/]" >
+<[aBaliseName/] [self.declareClass()/]"[self.generalProperties.getPropertyClass()/]" >
 [self.codelines.generateCodeLineElement()/]
 [aBaliseName.getCloseBaliseName()/]
 [/template]
@@ -336,14 +340,19 @@
 [comment]------------------------------------------------------[/comment]
 
 
+[comment]+++++++++++++++ Main CodeLine ++++++++++++++[/comment]
+
+[template public isButtonAlert(aTextPageContent : TextPageContent) ]
+[comment]? (self.eContainer(Container).oclIsKindOf(Container) = true)
+[if (self.eContainer(Container).generalProperties.eContents(AlertProperty)-> notEmpty())]
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+[/if][/comment]
+[/template]
 
 
 
 
-
-
-
-
+[comment]------------------------------------------------------[/comment]
 
 
 
