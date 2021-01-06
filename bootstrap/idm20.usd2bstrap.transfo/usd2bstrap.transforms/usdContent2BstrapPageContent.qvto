@@ -1,3 +1,7 @@
+/**
+* This module ensures usd transformation to Bootstrap of all element contained directly in PageContent.
+*/
+
 import usdTextElement2bstrapTextElements;
 import propertiesParsers;
 
@@ -6,16 +10,17 @@ modeltype bstrapMM "strict" uses "http://www.example.org/bstrap";
 
 transformation usd2bstrap(in usd : usdMM, out bstrap : bstrapMM);
 
+// =========== Start transformation PageContent to Pagecontent ===========//
+
 /**
 * Map an usd PageContent element to Bstrap PageContent element.
 */
-abstract mapping usdMM::PageContent::pageContentUsd2PageContentBstrap() : bstrapMM::PageContent {
-	// TODO don't forgot parsing bstrap properties
-	//generalProperties += self.
-}
+abstract mapping usdMM::PageContent::pageContentUsd2PageContentBstrap() : bstrapMM::PageContent {}
+
+// =========== Start transformation TextContainer to TextContainer ===========//
 
 /**
-* Abstract mapper wich map an usd TextContainer element to Bstrap TextContainer element.
+* Abstract mapper which map an usd TextContainer element to Bstrap TextContainer element.
 * and also parse all bootstrap properties. 
 */
 abstract mapping usdMM::TextContainer::textContainerUsd2TextContainerBstrap() : bstrapMM::TextContainer 
@@ -59,9 +64,10 @@ abstract mapping usdMM::TextContainer::textContainerUsd2TextContainerBstrap() : 
 		};		
 }
 
+// =========== Start transformation Title to Title ===========//
 
 /**
-* A mapper wich map an usd Title element to bstrap Title element.
+* A mapper which map an usd Title element to bstrap Title element.
 */
 mapping usdMM::Title::titleUsd2TitleBstrap() : bstrapMM::Title 
 	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap{
@@ -71,14 +77,16 @@ mapping usdMM::Title::titleUsd2TitleBstrap() : bstrapMM::Title
 		
 }
 
+// =========== Start transformation Paragraph to Paragraph ===========//
 
 /**
-* A mapper wich map an usd Paragraph element to bstrap Paragraph element.
+* A mapper which map an usd Paragraph element to bstrap Paragraph element.
 */
 mapping usdMM::Paragraph::paragraphUsd2ParagraphBstrap() : bstrapMM::Paragraphe 
 	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap
 	when {self.isThereElementToBeDisplayed()}{}
-	
+
+// =========== Start transformation Navigation to Navigation ===========//
 	
 /**
 * A mapper which map an usd Navigation element to bstrap Navigation element.
@@ -136,8 +144,10 @@ mapping usdMM::Navigation::navigationUsd2NavigationBstrap() : bstrapMM::Navigati
 	
 }
 
+// =========== Start transformation ListElement to ListElement ===========//
+
 /**
-* Abstract mapper wich map an usd ListElement to Bstrap ListElement.
+* Abstract mapper which map an usd ListElement to Bstrap ListElement.
 * and also parse all bootstrap properties. 
 */
 abstract mapping usdMM::ListElement::listElementUsd2ListElementBstrap() : bstrapMM::ListElement {
@@ -187,7 +197,7 @@ abstract mapping usdMM::ListElement::listElementUsd2ListElementBstrap() : bstrap
 }
 
 /**
-* A mapper wich map an usd OrderedList element to bstrap OrderedList element.
+* A mapper which map an usd OrderedList element to bstrap OrderedList element.
 */
 mapping usdMM::OrderedList::orderedListUsd2OrderedListBstrap() : bstrapMM::OrderList 
 	inherits usdMM::ListElement::listElementUsd2ListElementBstrap{
@@ -195,14 +205,14 @@ mapping usdMM::OrderedList::orderedListUsd2OrderedListBstrap() : bstrapMM::Order
 }
 
 /**
-* A mapper wich map an usd UnorderedList element to bstrap UnOrderedList element.
+* A mapper which map an usd UnorderedList element to bstrap UnOrderedList element.
 */
 mapping usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap() : bstrapMM::UnOrderedList 
 	inherits usdMM::ListElement::listElementUsd2ListElementBstrap{
 }
 
 /**
-* A mapper wich map an usd ListItem element to bstrap ListItem element.
+* A mapper which map an usd ListItem element to bstrap ListItem element.
 * and also parse all bootstrap properties.
 */
 mapping  usdMM::ListItem::listItemUsd2ListItemBstrap() : bstrapMM::ListItem 
@@ -215,14 +225,15 @@ mapping  usdMM::ListItem::listItemUsd2ListItemBstrap() : bstrapMM::ListItem
 }
 
 /**
-* A mapper wich map an usd ListElement to bstrap ListElement.
+* A mapper which map an usd ListElement to bstrap ListElement.
+* also make disjunction beetwen ordered and unordered list mappers
 */
 mapping usdMM::ListElement::constructListElement() : bstrapMM::ListElement 
 	disjuncts usdMM::OrderedList::orderedListUsd2OrderedListBstrap,
 				usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap{}
 
 /**
-* A mapper wich map an usd ListItemElement to bstrap ListElement.
+* A mapper which map an usd ListItemElement to bstrap ListElement.
 */
 mapping usdMM::ListItemElement::constructListItemElement() : bstrapMM::ListItemElement 
 	disjuncts usdMM::Paragraph::paragraphUsd2ParagraphBstrap, usdMM::OrderedList::orderedListUsd2OrderedListBstrap,
@@ -230,8 +241,10 @@ mapping usdMM::ListItemElement::constructListItemElement() : bstrapMM::ListItemE
 	
 }
 
+// =========== Start transformation CodeBlock to CodeBlock ===========//
+
 /**
-* A mapper wich map an usd CodeBlock element to bstrap CodeBlock element.
+* A mapper which map an usd CodeBlock element to bstrap CodeBlock element.
 * and also parse all bootstrap properties.
 */
 mapping usdMM::CodeBlock::codeBlockUsd2CodeBlockBtsrap() : bstrapMM::CodeBlock 
@@ -276,16 +289,17 @@ mapping usdMM::CodeBlock::codeBlockUsd2CodeBlockBtsrap() : bstrapMM::CodeBlock
 }
 
 /**
-* A mapper wich map an usd CodeLine element to bstrap CodeLine element.
+* A mapper which map an usd CodeLine element to bstrap CodeLine element.
 */
 mapping usdMM::CodeLine::codeLineUsd2CodeLineBstrap() : bstrapMM::CodeLine 
 	when {not self.text.isPropertyLine()}{
 	content := self.text;	
 }
 
+// =========== Start transformation BlockQuote to BlockQuote ===========//
 
 /**
-* A mapper wich map an usd BlockQoute element to bstrap BlockQuote element.
+* A mapper which map an usd BlockQoute element to bstrap BlockQuote element.
 * and also parse all bootstrap properties.
 */
 mapping usdMM::BlockQuote::blockQuoteUsd2BlockQuoteBstrap() : bstrapMM::BlockQuote 
@@ -330,10 +344,10 @@ mapping usdMM::BlockQuote::blockQuoteUsd2BlockQuoteBstrap() : bstrapMM::BlockQuo
 	}
 }
 
-// Start Table mapping from usd to bootstrap
+// =========== Start transformation Table to Table ===========//
 
 /**
-* A mapper wich map an usd Table element to bstrap Table element.
+* A mapper which map an usd Table element to bstrap Table element.
 * and also parse all bootstrap properties.
 */
 mapping usdMM::Table::tableUsd2TableBstrap() : bstrapMM::Table {
@@ -374,7 +388,7 @@ mapping usdMM::Table::tableUsd2TableBstrap() : bstrapMM::Table {
 }
 
 /**
-* Abstract mapper wich map an usd TableSelection element to bstrap TableSelection element.
+* Abstract mapper which map an usd TableSelection element to bstrap TableSelection element.
 * and also parse all bootstrap properties.
 */
 abstract mapping usdMM::TableSection::tableSectionUsdTableSectionBstrap() :bstrapMM::TableSection {
@@ -411,7 +425,7 @@ abstract mapping usdMM::TableSection::tableSectionUsdTableSectionBstrap() :bstra
 }
 
 /**
-* A mapper wich map an usd TableRow element to bstrap TableRow element.
+* A mapper which map an usd TableRow element to bstrap TableRow element.
 * and also parse all bootstrap properties.
 */
 mapping usdMM::TableRow::tableRowUsd2TableRowBstrap() : bstrapMM::TableRow {
@@ -448,20 +462,20 @@ mapping usdMM::TableRow::tableRowUsd2TableRowBstrap() : bstrapMM::TableRow {
 }
 
 /**
-* A mapper wich map an usd TableCell element to bstrap TableCell element.
+* A mapper which map an usd TableCell element to bstrap TableCell element.
 * and also parse all bootstrap properties.
 */
 mapping usdMM::TableCell::tableCellUsd2TableCellBstrap() : bstrapMM::TableCell 
 	inherits usdMM::TextContainer::textContainerUsd2TextContainerBstrap{
 	alignment := self.alignement.getTabAlignment();
 	span := self.span;
-	
 	var textWithProps := self.textElements[usdMM::Text] -> 
-							selectOne(t | t.text.find("rowProps") > 0);
+							selectOne(t | t.text.find("cellProps") > 0);
 	if (textWithProps <> null) {
-		var props := textWithProps.text.substringAfter("rowProps:");
+		var props := textWithProps.text.substringAfter("cellProps:");
 		if (props <> null){
 			props := props.trim();
+			color := textWithProps.text.findColor();
 			if (props.find('background:') > 0){
 				generalProperties += props.backGroundWrapper();
 			};
@@ -488,28 +502,30 @@ mapping usdMM::TableCell::tableCellUsd2TableCellBstrap() : bstrapMM::TableCell
 }
 
 /**
-* A mapper wich map an usd TableHead element to bstrap Thead element.
+* A mapper which map an usd TableHead element to bstrap Thead element.
 */
 mapping usdMM::TableHead::tableHeadUsd2TheadBstrap() :  bstrapMM::Thead
 	inherits usdMM::TableSection::tableSectionUsdTableSectionBstrap{
 }
 
 /**
-* A mapper wich map an usd TableBody element to bstrap Tbody element.
+* A mapper which map an usd TableBody element to bstrap Tbody element.
 */
 mapping usdMM::TableBody::tableBodyUsd2TbodyBstrap() :  bstrapMM::Tbody
 	inherits usdMM::TableSection::tableSectionUsdTableSectionBstrap{}
 
 /**
 * Map a usd TableSection element to bstrap TableSection element, 
-* wich make disjunction beetwen these maps tableHeadUsd2TheadBstrap and tableBodyUsd2TbodyBstrap
+* which make disjunction beetwen these maps tableHeadUsd2TheadBstrap and tableBodyUsd2TbodyBstrap
 */
 mapping usdMM::TableSection::constructTableSection() : bstrapMM::TableSection 
 	disjuncts usdMM::TableHead::tableHeadUsd2TheadBstrap, usdMM::TableBody::tableBodyUsd2TbodyBstrap {
 }
 
+// =========== Start transformation Section to Conatiner ===========//
+
 /**
-* A mapper wich map an usd Section element to bstrap Container element.
+* A mapper which map an usd Section element to bstrap Container element.
 * and also parse all bootstrap properties.
 */
 abstract mapping usdMM::Section::sectionUsd2ContainerBstrap() : bstrapMM::Container {
@@ -554,8 +570,10 @@ abstract mapping usdMM::Section::sectionUsd2ContainerBstrap() : bstrapMM::Contai
 	}
 }
 
+// =========== Start transformation Section to FixContainer ===========//
+
 /**
-* A mapper wich map an usd Section element to bstrap FixContainer element.
+* A mapper which map an usd Section element to bstrap FixContainer element.
 * and also parse all bootstrap properties.
 */
 mapping usdMM::Section::sectionUsd2FixContainerBstrap() : bstrapMM::FixContainer 
@@ -564,8 +582,10 @@ mapping usdMM::Section::sectionUsd2FixContainerBstrap() : bstrapMM::FixContainer
 	
 }
 
+// =========== Start transformation Section to FluidContainer ===========//
+
 /**
-* A mapper wich map an usd Section element to bstrap FluidContainer element.
+* A mapper which map an usd Section element to bstrap FluidContainer element.
 * and also parse all bootstrap properties.
 */
 mapping usdMM::Section::sectionUsd2FluidContainerBstrap() : bstrapMM::FluidContainer 
@@ -573,16 +593,18 @@ mapping usdMM::Section::sectionUsd2FluidContainerBstrap() : bstrapMM::FluidConta
 	when { self.isFluidContainer()}{
 }
 
+// =========== Start transformation HorizontalLine to HorizontalLine ===========//
 
 /**
-* A mapper wich map an usd HorizontalLine element to bstrap HorizontalLine element.
+* A mapper which map an usd HorizontalLine element to bstrap HorizontalLine element.
 */
 mapping usdMM::HorizontalLine::horizontalUsd2HorizontalBstrap() : bstrapMM::HorizontalLine {}
 
+// =========== This mapper make disjunction beetwen all PageContent elements mappers ===========//
 
 /**
 * Map a usd PageContent element to bstrap PageContent element, 
-* wich make disjunction beetwen these maps paragraphUsd2ParagraphBstrap,
+* which make disjunction beetwen these maps paragraphUsd2ParagraphBstrap,
 * titleUsd2TitleBstrap
 */
 mapping usdMM::PageContent::constructPageContent() : bstrapMM::PageContent 
@@ -590,7 +612,7 @@ mapping usdMM::PageContent::constructPageContent() : bstrapMM::PageContent
 				usdMM::OrderedList::orderedListUsd2OrderedListBstrap, usdMM::UnorderedList::unOrderedListUsd2UnorderedBstrap,
 				usdMM::Navigation::navigationUsd2NavigationBstrap, usdMM::HorizontalLine::horizontalUsd2HorizontalBstrap,
 				usdMM::CodeBlock::codeBlockUsd2CodeBlockBtsrap, usdMM::BlockQuote::blockQuoteUsd2BlockQuoteBstrap,
-				usdMM::Table::tableUsd2TableBstrap,
-				usdMM::Section::sectionUsd2FixContainerBstrap, usdMM::Section::sectionUsd2FluidContainerBstrap{}
+				usdMM::Table::tableUsd2TableBstrap, usdMM::Section::sectionUsd2FixContainerBstrap, 
+				usdMM::Section::sectionUsd2FluidContainerBstrap{}
 	
 	

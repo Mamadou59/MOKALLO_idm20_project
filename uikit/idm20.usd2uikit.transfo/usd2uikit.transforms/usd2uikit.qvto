@@ -1,5 +1,8 @@
-import usdContent2UikitContent;
-	
+/**
+* This module ensures usd transformation to UIkit
+*/
+
+import usdContent2UikitContent;	
 
 modeltype usdMM "strict" uses "http://www.example.org/usd";
 modeltype uikitMM "strict" uses "http://www.example.org/uikit";
@@ -10,6 +13,9 @@ main() {
 	usd.rootObjects()[Page] -> map pageUsd2PageUikit();
 }
 
+/**
+* Map a usd page element to uilkit Page element.
+*/
 mapping usdMM:: Page::pageUsd2PageUikit() : uikitMM::Page {
 	name := self.name;
 	pagecontents += self.contents -> map constructPageContent();

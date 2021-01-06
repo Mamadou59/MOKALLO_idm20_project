@@ -10,15 +10,15 @@
     <elements xsi:type="simplemarkdown:Text" text="Les Badge"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="Ceci est le text d'un badge avec les propri&#xe9;t&#xe9;s badge primary et badge pill  "/>
+    <elements xsi:type="simplemarkdown:Text" text="Ceci est le text d'un badge avec les propri&#xe9;t&#xe9;s badge success et badge pill  "/>
     <elements xsi:type="simplemarkdown:Link" url="" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-primary badgePill] Badge whitout URL"/>
+      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-success badgePill] Badge whitout URL"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="Ceci est un lien en badge avec les propri&#xe9;t&#xe9;s badge primary et badge pill "/>
+    <elements xsi:type="simplemarkdown:Text" text="Ceci est un lien en badge avec les propri&#xe9;t&#xe9;s badge danger et badge pill "/>
     <elements xsi:type="simplemarkdown:Link" url="url" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-primary badgePill] Badge with URL"/>
+      <subtext xsi:type="simplemarkdown:Text" text="[badge badge-danger badgePill] Badge with URL"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
@@ -55,6 +55,16 @@
   <contents xsi:type="simplemarkdown:Title" level="3">
     <elements xsi:type="simplemarkdown:Text" text="properties:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:1,emphasis:italic) Un titre taille 3 avec un display 4"/>
   </contents>
+  <contents xsi:type="simplemarkdown:Title" level="3">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},display:4,emphasis:italic, alertProperty:{alertStyle:success,animated}) Un titre taille 3 avec un display 4 avec les propri&#xe9;t&#xe9;s alert "/>
+    <elements xsi:type="simplemarkdown:Emphasis">
+      <subtext xsi:type="simplemarkdown:Text" text="success"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Text" text=" et "/>
+    <elements xsi:type="simplemarkdown:Emphasis">
+      <subtext xsi:type="simplemarkdown:Text" text="animeted"/>
+    </elements>
+  </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">
     <elements xsi:type="simplemarkdown:Text" text="Un paragrapgh"/>
   </contents>
@@ -70,10 +80,14 @@
     <elements xsi:type="simplemarkdown:Text" text=" pour tout le paragraph)"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
-    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold,alertProperty:{alertStyle:success,animated})"/>
+    <elements xsi:type="simplemarkdown:Text" text="properties:(color:dark,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)"/>
     <elements xsi:type="simplemarkdown:Text" text="Ce paragraph "/>
     <elements xsi:type="simplemarkdown:Code" text="contient un &#xe9;l&#xe9;ment code"/>
     <elements xsi:type="simplemarkdown:Text" text=" et &#xe0; une couleur dark, un backround primary, un margin, un padding, une bordure non clor&#xe9;e et un emphasis bold."/>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="properties:(alertProperty:{alertStyle:success,animated})"/>
+    <elements xsi:type="simplemarkdown:Text" text="Ceci est un paragraphe avec des propri&#xe9;t&#xe9;s alertes"/>
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Text" text="properties:(color:primary,background:dark,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border, borderColor:danger},emphasis:italic)"/>
@@ -91,7 +105,21 @@
   </contents>
   <contents xsi:type="simplemarkdown:Paragraph">
     <elements xsi:type="simplemarkdown:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
-      <subtext xsi:type="simplemarkdown:Text" text="properties:(color:secondary,background:primary,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold, linkProperty:linkBrand)BootstrapW3school"/>
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(color:secondary,background:success,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:bold)BootstrapW3school"/>
+    </elements>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(color:info,background:success,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:italic)BtstrapW3school"/>
+    </elements>
+  </contents>
+  <contents xsi:type="simplemarkdown:Paragraph">
+    <elements xsi:type="simplemarkdown:Text" text="Ceci est un alert contenant un lien avec une propri&#xe9;t&#xe9; "/>
+    <elements xsi:type="simplemarkdown:Emphasis">
+      <subtext xsi:type="simplemarkdown:Text" text=".alertlink"/>
+    </elements>
+    <elements xsi:type="simplemarkdown:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
+      <subtext xsi:type="simplemarkdown:Text" text="properties:(color:info,background:success,margin:{level:4,alignment:left},padding:{level:2,alignment:center},border:{border},emphasis:italic, linkProperty:alertlink)BtstrapW3school"/>
     </elements>
   </contents>
   <contents xsi:type="simplemarkdown:Title" level="1">

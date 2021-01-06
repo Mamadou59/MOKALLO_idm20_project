@@ -1,3 +1,7 @@
+/**
+*	This module includes all queries for transformation 
+*/
+
 modeltype usdMM "strict" uses "http://www.example.org/usd";
 modeltype uikitMM "strict" uses "http://www.example.org/uikit";
 

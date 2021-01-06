@@ -1,16 +1,22 @@
+/**
+* This module ensures usd transformation to UIkit of all element contained directly in PageContent.
+*/
+
 import usdTextElement2UikitTextElement;
 	
-
 modeltype usdMM "strict" uses "http://www.example.org/usd";
 modeltype uikitMM "strict" uses "http://www.example.org/uikit";
 
 transformation usd2bstrap(in usd : usdMM, out uikit : uikitMM);
 
+// =========== Start transformation PageContent to Pagecontent ===========//
 
 /**
 * Abstract mapper to map an usd PageContent element to Uikit PageContent element.
 */
 abstract mapping usdMM::PageContent::pageContentUsd2PageContentUikit() : uikitMM::PageContent {}
+
+// =========== Start transformation TextContainer to TextContainer ===========//
 
 /**
 * Abstract mapper to map an usd TextContainer element to Uikit TextContainer element.
@@ -34,6 +40,8 @@ abstract mapping usdMM::TextContainer::textContainerUsd2TextContainerUikit() : u
 	}
 }
 
+// =========== Start transformation Title to Title ===========//
+
 /**
 * A mapper which map an usd Title element to Uikit Title element.
 */
@@ -51,6 +59,15 @@ mapping usdMM::Title::titleUsd2TitleUikit() : uikitMM::Title
 	}
 	
 }
+
+// =========== Start transformation Paragraph to Pargraph ===========//
+/**
+* A mapper which map an usd Paragraph element to uikit Paragraph element.
+*/
+mapping usdMM::Paragraph::paragraphUsd2ParagraphUikit() : uikitMM::Paragraphe 
+	inherits usdMM::TextContainer::textContainerUsd2TextContainerUikit{}
+
+// =========== Start transformation Section to Container ===========//
 
 /**
 * A mapper which map an usd Section element to Uikit Container element.
@@ -74,11 +91,7 @@ mapping usdMM::Section::sectionUsd2ContainerUikit() : uikitMM::Container {
 	}
 }
 
-/**
-* A mapper which map an usd Paragraph element to uikit Paragraph element.
-*/
-mapping usdMM::Paragraph::paragraphUsd2ParagraphUikit() : uikitMM::Paragraphe 
-	inherits usdMM::TextContainer::textContainerUsd2TextContainerUikit{}
+// =========== This mapper make disjunction beetwen all PageContent elements mappers ===========//
 
 /**
 * Map a usd PageContent element to bstrap PageContent element, 

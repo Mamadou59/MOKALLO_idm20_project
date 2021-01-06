@@ -10,23 +10,23 @@
     <textelements xsi:type="bstrap:Text" text="Les Badge"/>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Ceci est le text d'un badge avec les propriétés badge primary et badge pill"/>
+    <textelements xsi:type="bstrap:Text" text="Ceci est le text d'un badge avec les propriétés badge success et badge pill"/>
     <textelements xsi:type="bstrap:Span">
       <textnestedelements xsi:type="bstrap:Text" text=" Badge whitout URL"/>
-      <badgeproperties xsi:type="bstrap:BadgeStyle" color="PRIMARY"/>
+      <badgeproperties xsi:type="bstrap:BadgeStyle" color="SUCCESS"/>
       <badgeproperties xsi:type="bstrap:BadgePill"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="Ceci est un lien en badge avec les propriétés badge primary et badge pill"/>
+    <textelements xsi:type="bstrap:Text" text="Ceci est un lien en badge avec les propriétés badge danger et badge pill"/>
     <textelements xsi:type="bstrap:Link" url="url" title="">
       <textnestedelements xsi:type="bstrap:Text" text=" Badge with URL"/>
-      <badgeproperties xsi:type="bstrap:BadgeStyle" color="PRIMARY"/>
+      <badgeproperties xsi:type="bstrap:BadgeStyle" color="DANGER"/>
       <badgeproperties xsi:type="bstrap:BadgePill"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
-    <textelements xsi:type="bstrap:Text" text="un élément peut avoir une couleur, un background, un margin et un padding avec une taille un alignment et une bordure colorée ou non."/>
+    <textelements xsi:type="bstrap:Text" text="Les propriétés générales sont représentées entre parenthèses (propriété:valeur,propriété:{propVal1:val1,propVal2:val2}) un élément peut avoir une couleur, un background, un margin et un padding avec une taille un alignment et une bordure colorée ou non."/>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="1">
     <textelements xsi:type="bstrap:Text" text="Les titres"/>
@@ -82,6 +82,24 @@
     <emphasis xsi:type="bstrap:ItalicProperty"/>
     <displayproperties xsi:type="bstrap:Display1"/>
   </pagecontents>
+  <pagecontents xsi:type="bstrap:Title" level="3">
+    <generalProperties xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
+    <generalProperties xsi:type="bstrap:Padding" level="5"/>
+    <generalProperties xsi:type="bstrap:Border"/>
+    <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
+    <generalProperties xsi:type="bstrap:AlertAnimated"/>
+    <generalProperties xsi:type="bstrap:AlertStyle" color="SUCCESS"/>
+    <textelements xsi:type="bstrap:Text" text="Un titre taille 3 avec un display 4 avec les propriétés alert"/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text="success"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Text" text=" et "/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text="animeted"/>
+    </textelements>
+    <emphasis xsi:type="bstrap:ItalicProperty"/>
+    <displayproperties xsi:type="bstrap:Display4"/>
+  </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="1">
     <textelements xsi:type="bstrap:Text" text="Un paragrapgh"/>
   </pagecontents>
@@ -94,19 +112,22 @@
     <textelements xsi:type="bstrap:Strong">
       <textnestedelements xsi:type="bstrap:Text" text="strong"/>
     </textelements>
-    <textelements xsi:type="bstrap:Text" text=""/>
+    <textelements xsi:type="bstrap:Text" text="pour tout le paragraph)"/>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
     <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
     <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
     <generalProperties xsi:type="bstrap:Padding" level="2"/>
     <generalProperties xsi:type="bstrap:Border"/>
-    <generalProperties xsi:type="bstrap:AlertAnimated"/>
-    <generalProperties xsi:type="bstrap:AlertStyle" color="SUCCESS"/>
     <textelements xsi:type="bstrap:Text" text="Ce paragraph"/>
     <textelements xsi:type="bstrap:Code" text="contient un élément code"/>
     <textelements xsi:type="bstrap:Text" text="et à une couleur dark, un backround primary, un margin, un padding, une bordure non clorée et un emphasis bold."/>
     <emphasis xsi:type="bstrap:Bold"/>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <generalProperties xsi:type="bstrap:AlertAnimated"/>
+    <generalProperties xsi:type="bstrap:AlertStyle" color="SUCCESS"/>
+    <textelements xsi:type="bstrap:Text" text="Ceci est un paragraphe avec des propriétés alertes"/>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe" color="PRIMARY">
     <generalProperties xsi:type="bstrap:Background" color="DARK"/>
@@ -129,11 +150,34 @@
   </pagecontents>
   <pagecontents xsi:type="bstrap:Paragraphe">
     <textelements xsi:type="bstrap:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
-      <generalProperties xsi:type="bstrap:Background" color="PRIMARY"/>
+      <generalProperties xsi:type="bstrap:Background" color="SUCCESS"/>
       <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
       <generalProperties xsi:type="bstrap:Padding" level="2"/>
       <generalProperties xsi:type="bstrap:Border"/>
       <textnestedelements xsi:type="bstrap:Text" text="BootstrapW3school"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
+      <generalProperties xsi:type="bstrap:Background" color="SUCCESS"/>
+      <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
+      <generalProperties xsi:type="bstrap:Padding" level="2"/>
+      <generalProperties xsi:type="bstrap:Border"/>
+      <textnestedelements xsi:type="bstrap:Text" text="BtstrapW3school"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="bstrap:Paragraphe">
+    <textelements xsi:type="bstrap:Text" text="Ceci est un alert contenant un lien avec une propriété"/>
+    <textelements xsi:type="bstrap:Italic">
+      <textnestedelements xsi:type="bstrap:Text" text=".alertlink"/>
+    </textelements>
+    <textelements xsi:type="bstrap:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
+      <generalProperties xsi:type="bstrap:Background" color="SUCCESS"/>
+      <generalProperties xsi:type="bstrap:Margin" level="4" alignement="LEFT"/>
+      <generalProperties xsi:type="bstrap:Padding" level="2"/>
+      <generalProperties xsi:type="bstrap:Border"/>
+      <textnestedelements xsi:type="bstrap:Text" text="BtstrapW3school"/>
+      <linkproperties xsi:type="bstrap:AlertLink"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="1">
@@ -198,6 +242,7 @@
       <generalProperties xsi:type="bstrap:Border"/>
       <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
       <imageproperties xsi:type="bstrap:Circle"/>
+      <imageproperties xsi:type="bstrap:Center"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="2">
@@ -218,6 +263,7 @@
       <generalProperties xsi:type="bstrap:Border"/>
       <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
       <imageproperties xsi:type="bstrap:Circle"/>
+      <imageproperties xsi:type="bstrap:Center"/>
     </textelements>
   </pagecontents>
   <pagecontents xsi:type="bstrap:Title" level="1">
@@ -294,6 +340,7 @@
           <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
           <textelements xsi:type="bstrap:Image" url="https://www.eclipse.org/images/egg-incubation.png" title="image">
             <imageproperties xsi:type="bstrap:Circle"/>
+            <imageproperties xsi:type="bstrap:Center"/>
           </textelements>
           <textelements xsi:type="bstrap:Text" text="text du paragraphe"/>
         </pagecontents>
@@ -340,8 +387,8 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Dark"/>
-      <buttonproperties xsi:type="bstrap:ButtonOutLine" color="PRIMARY"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:ButtonOutLine" color="PRIMARY"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Light"/>
@@ -390,13 +437,13 @@
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>
-      <buttonproperties xsi:type="bstrap:Disabled"/>
       <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
+      <buttonproperties xsi:type="bstrap:Disabled"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Disabled Primary"/>
-      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
       <buttonproperties xsi:type="bstrap:Disabled"/>
+      <buttonproperties xsi:type="bstrap:ButtonStyle" color="PRIMARY"/>
     </textelements>
     <textelements xsi:type="bstrap:Button">
       <textnestedelements xsi:type="bstrap:Text" text="Enabled Primary"/>
@@ -476,7 +523,7 @@
     </listitems>
     <listitems active="true">
       <listitemelements xsi:type="bstrap:Paragraphe">
-        <textelements xsi:type="bstrap:Text" text="item 2."/>
+        <textelements xsi:type="bstrap:Text" text="(itemProperty: active) item 2."/>
       </listitemelements>
       <listitemelements xsi:type="bstrap:UnOrderedList">
         <listitems>
@@ -571,13 +618,19 @@
   <pagecontents xsi:type="bstrap:Navigation">
     <listelement xsi:type="bstrap:UnOrderedList">
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 1"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 3"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 2"/>
+        </listitemelements>
       </listitems>
     </listelement>
     <navbar xsi:type="bstrap:Basic"/>
@@ -597,13 +650,19 @@
     <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
     <listelement xsi:type="bstrap:UnOrderedList">
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 1"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 3"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 2"/>
+        </listitemelements>
       </listitems>
     </listelement>
     <navbar xsi:type="bstrap:Brand"/>
@@ -618,13 +677,19 @@
   <pagecontents xsi:type="bstrap:Navigation">
     <listelement xsi:type="bstrap:UnOrderedList">
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 2"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 1"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 3"/>
+        </listitemelements>
       </listitems>
     </listelement>
     <navbar xsi:type="bstrap:Vertical"/>
@@ -639,13 +704,19 @@
   <pagecontents xsi:type="bstrap:Navigation">
     <listelement xsi:type="bstrap:UnOrderedList">
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 1"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 3"/>
+        </listitemelements>
       </listitems>
       <listitems>
-        <listitemelements xsi:type="bstrap:Link" url="#" title=""/>
+        <listitemelements xsi:type="bstrap:Link" url="#" title="">
+          <textnestedelements xsi:type="bstrap:Text" text="Link 2"/>
+        </listitemelements>
       </listitems>
     </listelement>
     <navbar xsi:type="bstrap:Centered"/>
@@ -671,10 +742,10 @@
           <generalProperties xsi:type="bstrap:Padding" level="5"/>
           <generalProperties xsi:type="bstrap:Border"/>
           <generalProperties xsi:type="bstrap:ColoredBorder" color="SECONDARY"/>
-          <textelements xsi:type="bstrap:Text" text="Syntax"/>
+          <textelements xsi:type="bstrap:Text" text="tabProperties:(sectionProps:(color:warning,background:primary,margin:{level:5,alignment:left}},border:{border,borderColor:secondary}),tableProps:(color:info,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary},tableProperty:darkTable),rowProps:(color:white,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:secondary}),cellProps:(color:success,background:primary))Syntax"/>
         </tablecells>
         <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Description"/>
+          <textelements xsi:type="bstrap:Text" text="tabProperties:(cellProps:(color:warning,background:primary)Description"/>
         </tablecells>
         <generals xsi:type="bstrap:Background" color="PRIMARY"/>
         <generals xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
@@ -696,10 +767,10 @@
           <generalProperties xsi:type="bstrap:Padding" level="5"/>
           <generalProperties xsi:type="bstrap:Border"/>
           <generalProperties xsi:type="bstrap:ColoredBorder" color="INFO"/>
-          <textelements xsi:type="bstrap:Text" text="Header"/>
+          <textelements xsi:type="bstrap:Text" text="tabProperties:(sectionProps:(color:warning,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center}),rowProps:(color:warning,background:primary),cellProps:(color:dark,background:primary,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:info}))Header"/>
         </tablecells>
         <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Title"/>
+          <textelements xsi:type="bstrap:Text" text="tabPproperties:(cell:(color:danger,background:info,margin:{level:5,alignment:left},padding:{level:5,alignment:center},border:{border,borderColor:danger}))Title"/>
         </tablecells>
         <generals xsi:type="bstrap:Background" color="PRIMARY"/>
         <generals xsi:type="bstrap:Margin" level="5" alignement="LEFT"/>
@@ -709,7 +780,7 @@
       </tablerows>
       <tablerows>
         <tablecells alignment="LEFT" span="1">
-          <textelements xsi:type="bstrap:Text" text="Paragraph"/>
+          <textelements xsi:type="bstrap:Text" text="tabProperties:(cellProps:(color:warning,background:primary))Paragraph"/>
         </tablecells>
         <tablecells alignment="LEFT" span="1">
           <textelements xsi:type="bstrap:Text" text="Text"/>

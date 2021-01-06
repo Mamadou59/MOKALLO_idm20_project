@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uikit:Page xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uikit="http://www.example.org/uikit" name="/tests/uikit/demo_uikit.simplemarkdown">
+  <pagecontents xsi:type="uikit:Title" level="1">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SECONDARY"/>
+    <generalproperties xsi:type="uikit:Margin" size="LARGE"/>
+    <textelements xsi:type="uikit:Text" text="UIkit - Demo"/>
+    <titleproperties size="LARGE"/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" color="SECONDARY" level="1">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SUCCESS"/>
+    <generalproperties xsi:type="uikit:Margin" size="LARGE"/>
+    <textelements xsi:type="uikit:Text" text="Les titres"/>
+    <titleproperties size="LARGE"/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" color="WARNING" level="1">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="PRIMARY"/>
+    <generalproperties xsi:type="uikit:Margin" size="LARGE"/>
+    <textelements xsi:type="uikit:Text" text="Un titre taille 1 avec une size small"/>
+    <titleproperties/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" color="WARNING" level="2">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SECONDARY"/>
+    <generalproperties xsi:type="uikit:Margin"/>
+    <textelements xsi:type="uikit:Text" text="Un titre taille 2 avec une size large"/>
+    <titleproperties size="LARGE"/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" color="WARNING" level="3">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="EMPHASIS"/>
+    <textelements xsi:type="uikit:Text" text="Un titre taille 2 sans size"/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" color="SECONDARY" level="1">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SUCCESS"/>
+    <generalproperties xsi:type="uikit:Margin" size="LARGE"/>
+    <textelements xsi:type="uikit:Text" text="UIkit Colors"/>
+    <titleproperties/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe" color="PRIMARY">
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <textelements xsi:type="uikit:Text" text="This text is important."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe" color="SUCCESS">
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <textelements xsi:type="uikit:Text" text="This text indicates success."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe" color="EMPHASIS">
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <textelements xsi:type="uikit:Text" text="This text is emphasis."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe" color="WARNING">
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <textelements xsi:type="uikit:Text" text="This text represents a warning."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe" color="DANGER">
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <textelements xsi:type="uikit:Text" text="This text represents danger."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe" color="SECONDARY">
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <textelements xsi:type="uikit:Text" text="Secondary text."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <textelements xsi:type="uikit:Text" text="muted text."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <textelements xsi:type="uikit:Text" text="Light text."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" color="SECONDARY" level="1">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SUCCESS"/>
+    <generalproperties xsi:type="uikit:Margin" size="LARGE"/>
+    <textelements xsi:type="uikit:Text" text="UIkit Background"/>
+    <titleproperties/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="PRIMARY"/>
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <textelements xsi:type="uikit:Text" text="This text is important."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SECONDARY"/>
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <textelements xsi:type="uikit:Text" text="Secondary text."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <generalproperties xsi:type="uikit:BackgroundProperty"/>
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <textelements xsi:type="uikit:Text" text="muted text."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <generalproperties xsi:type="uikit:BackgroundProperty"/>
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <textelements xsi:type="uikit:Text" text="Light text."/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" color="WARNING" level="1">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="PRIMARY"/>
+    <generalproperties xsi:type="uikit:Margin" size="LARGE"/>
+    <textelements xsi:type="uikit:Text" text="Les boutons"/>
+    <titleproperties/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" level="2">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SECONDARY"/>
+    <textelements xsi:type="uikit:Text" text="Button Styles"/>
+    <titleproperties size="LARGE"/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <textelements xsi:type="uikit:Button">
+      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="Basic"/>
+      <buttonproperties xsi:type="uikit:ButtonBasic"/>
+    </textelements>
+    <textelements xsi:type="uikit:Button">
+      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="Primary"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+    <textelements xsi:type="uikit:Button">
+      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="muted"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle"/>
+    </textelements>
+    <textelements xsi:type="uikit:Button">
+      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="Secondary"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="SECONDARY"/>
+    </textelements>
+    <textelements xsi:type="uikit:Button">
+      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="Danger"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="DANGER"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" level="2">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SECONDARY"/>
+    <textelements xsi:type="uikit:Text" text="Buttton Size"/>
+    <titleproperties/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <textelements xsi:type="uikit:Button">
+      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="Large"/>
+      <buttonproperties xsi:type="uikit:ButtonSIze" size="LARGE"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="PRIMARY"/>
+    </textelements>
+    <textelements xsi:type="uikit:Button">
+      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="Default"/>
+      <buttonproperties xsi:type="uikit:ButtonSIze"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="DANGER"/>
+    </textelements>
+    <textelements xsi:type="uikit:Button">
+      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="Small"/>
+      <buttonproperties xsi:type="uikit:ButtonSIze" size="SMALL"/>
+      <buttonproperties xsi:type="uikit:ButtonStyle" color="SECONDARY"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" color="WARNING" level="1">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="PRIMARY"/>
+    <generalproperties xsi:type="uikit:Margin" size="LARGE"/>
+    <textelements xsi:type="uikit:Text" text="Les images"/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <textelements xsi:type="uikit:Image" url="https://storage.googleapis.com/dpw/app/uploads/2013/08/ui-kit-logo-frontend-framework.png" title="UIkit">
+      <generalproperties xsi:type="uikit:Margin" size="SMALL" align="LEFT"/>
+      <generalproperties xsi:type="uikit:Padding" size="SMALL"/>
+      <imageproperties/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" color="WARNING" level="1">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="PRIMARY"/>
+    <generalproperties xsi:type="uikit:Margin" size="LARGE"/>
+    <textelements xsi:type="uikit:Text" text="Les Liens"/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <textelements xsi:type="uikit:Text" text="Un lien en "/>
+    <textelements xsi:type="uikit:Italic">
+      <textnestedelements xsi:type="uikit:Text" text="Uikit"/>
+    </textelements>
+    <textelements xsi:type="uikit:Text" text=" en plus des propriétés générales peut aussi avoir trois types spécifiques et est représenté comme suit "/>
+    <textelements xsi:type="uikit:Link" url="url" title="">
+      <textnestedelements xsi:type="uikit:Text" text="(properties) title"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" level="2">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SECONDARY"/>
+    <textelements xsi:type="uikit:Text" text="Un lien avec la propriété"/>
+    <textelements xsi:type="uikit:Strong">
+      <textnestedelements xsi:type="uikit:Text" text="HeadingModifier"/>
+    </textelements>
+    <textelements xsi:type="uikit:Text" text=" de uikit"/>
+    <titleproperties/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" level="3">
+    <textelements xsi:type="uikit:Text" text="Un Titre avec un  "/>
+    <textelements xsi:type="uikit:Link" url="https://www.w3schools.com/bootstrap4/default.asp" title="">
+      <generalproperties xsi:type="uikit:BackgroundProperty" color="WARNING"/>
+      <generalproperties xsi:type="uikit:Margin" size="LARGE" align="LEFT"/>
+      <generalproperties xsi:type="uikit:Padding" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="lien vers BootstrapW3school"/>
+      <linkproperties xsi:type="uikit:HeadingModifier"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" level="3">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SECONDARY"/>
+    <textelements xsi:type="uikit:Text" text="Un lien avec la propriété"/>
+    <textelements xsi:type="uikit:Strong">
+      <textnestedelements xsi:type="uikit:Text" text="MuteLink"/>
+    </textelements>
+    <textelements xsi:type="uikit:Text" text=" de uikit"/>
+    <titleproperties/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <textelements xsi:type="uikit:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
+      <generalproperties xsi:type="uikit:BackgroundProperty" color="WARNING"/>
+      <generalproperties xsi:type="uikit:Margin" size="SMALL" align="LEFT"/>
+      <generalproperties xsi:type="uikit:Padding" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="Tables Extension"/>
+      <linkproperties xsi:type="uikit:MuteLink"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" level="3">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SECONDARY"/>
+    <textelements xsi:type="uikit:Text" text="Un lien avec la propriété"/>
+    <textelements xsi:type="uikit:Strong">
+      <textnestedelements xsi:type="uikit:Text" text="TextModifier"/>
+    </textelements>
+    <textelements xsi:type="uikit:Text" text=" de uikit"/>
+    <titleproperties/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Paragraphe">
+    <textelements xsi:type="uikit:Link" url="https://github.com/vsch/flexmark-java/wiki/Tables-Extension" title="">
+      <generalproperties xsi:type="uikit:BackgroundProperty" color="WARNING"/>
+      <generalproperties xsi:type="uikit:Margin" size="SMALL" align="LEFT"/>
+      <generalproperties xsi:type="uikit:Padding" size="SMALL"/>
+      <textnestedelements xsi:type="uikit:Text" text="Tables Extension"/>
+      <linkproperties xsi:type="uikit:TextModifier"/>
+    </textelements>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Title" level="1">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="SECONDARY"/>
+    <generalproperties xsi:type="uikit:Margin" size="LARGE"/>
+    <textelements xsi:type="uikit:Text" text="Les Sections => Container"/>
+    <titleproperties/>
+  </pagecontents>
+  <pagecontents xsi:type="uikit:Container">
+    <generalproperties xsi:type="uikit:BackgroundProperty" color="WARNING"/>
+    <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+    <generalproperties xsi:type="uikit:Padding" size="SMALL"/>
+    <contents xsi:type="uikit:Paragraphe">
+      <generalproperties xsi:type="uikit:BackgroundProperty" color="WARNING"/>
+      <generalproperties xsi:type="uikit:Margin" size="SMALL"/>
+      <generalproperties xsi:type="uikit:Padding" size="SMALL"/>
+    </contents>
+    <contents xsi:type="uikit:Title" level="2">
+      <textelements xsi:type="uikit:Text" text="Titre de la section"/>
+    </contents>
+    <contents xsi:type="uikit:Paragraphe">
+      <textelements xsi:type="uikit:Text" text="Ce paragraph est dans la prémière section"/>
+    </contents>
+    <contents xsi:type="uikit:Container">
+      <contents xsi:type="uikit:Paragraphe"/>
+      <contents xsi:type="uikit:Title" level="3">
+        <textelements xsi:type="uikit:Text" text="Titre de la sous section"/>
+      </contents>
+      <contents xsi:type="uikit:Container">
+        <contents xsi:type="uikit:Paragraphe"/>
+        <contents xsi:type="uikit:Title" level="3">
+          <textelements xsi:type="uikit:Text" text="Titre de la sous sous section"/>
+        </contents>
+        <contents xsi:type="uikit:Paragraphe">
+          <textelements xsi:type="uikit:Text" text="text du paragraphe"/>
+        </contents>
+      </contents>
+    </contents>
+  </pagecontents>
+</uikit:Page>
