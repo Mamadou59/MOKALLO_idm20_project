@@ -277,7 +277,7 @@ display-4
 [template public getEmphasisProperty(anEmphasis : Emphasis)]
 [self.declareComment()/]
 [/template]
-[template public getEmphasisProperty(anEmphasis : Italic)]
+[template public getEmphasisProperty(anEmphasis : ItalicProperty)]
  font-italic
 [/template]
 [template public getEmphasisProperty(anEmphasis : Bold)]
@@ -348,6 +348,9 @@ display-4
 [template public getLinkProperty(aLinkProperty : AlertLink)]
  alert-link
 [/template]
+[template public getLinkItem(aLink : Link) ? (aLink.eContainer(Navigation) <> null)]
+  nav-link
+[/template]
 
 
  
@@ -393,17 +396,15 @@ display-4
 [template public getBadgeProperty(aBadgeProperty : BadgeProperty)]
  [self.declareComment()/]
 [/template]
-[template public getLinkProperty(aBadgeProperty : BadgePill)]
+[template public getBadgeProperty(aBadgeProperty : BadgePill)]
  badge-pill 
 [/template]
-[template public getLinkProperty(aBadgeProperty : BadgeStyle)]
+[template public getBadgeProperty(aBadgeProperty : BadgeStyle)]
  badge-[self.color.getColor()/]
 
 [/template]
-
-
- 
 [comment] ---------------------------------------------------------------------------	[/comment]
+
 
 
 

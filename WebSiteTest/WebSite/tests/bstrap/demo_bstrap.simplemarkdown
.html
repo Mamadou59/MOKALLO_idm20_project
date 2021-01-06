@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>/tests/bstrap/demo_bstrap.simplemarkdown
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  
+  <h1 class="  bg-warning  m-1  text-dark   display-1 ">Boostrap 4 - Demo</h1>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Badges</h1>
+  
+  <p class="  bg-info  m-2  p-5   border   border-danger  text-light  ">Les badges sont répresentés comme des liens en<em class= " "> markdown </em>mais sans url avec les propriétés badge-COLOR et badgePill.Les links répresentés avec des url remplis et les proriétés badge-COLOR et ou badgePill restent des lien mais avec un style de badge</p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Badges Style</h2>
+  
+  <p class="  text-dark  "><span class= "  m-2  p-1 badge   badge-primary
+   ">  Primary </span><span class= "  m-2  p-1 badge   badge-secondary
+   ">  Secondary </span><span class= "  m-2  p-1 badge   badge-info
+   ">  Info </span><span class= "  m-2  p-1 badge   badge-success
+   ">  Success </span><span class= "  m-2  p-1 badge   badge-danger
+   ">  Danger </span><span class= "  m-2  p-1 badge   badge-warning
+   ">  Warning </span><span class= "  m-2  p-1 badge   badge-light
+   ">  Light </span><span class= "  m-2  p-1 badge   badge-dark
+   ">  Dark </span></p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Pill Badges</h2>
+  
+  <p class="  text-dark  "><span class= "  m-2  p-1 badge   badge-primary
+     badge-pill ">  Primary </span><span class= "  m-2  p-1 badge   badge-secondary
+     badge-pill ">  Secondary </span><span class= "  m-2  p-1 badge   badge-info
+     badge-pill ">  Info </span><span class= "  m-2  p-1 badge   badge-success
+     badge-pill ">  Success </span><span class= "  m-2  p-1 badge   badge-danger
+     badge-pill ">  Danger </span><span class= "  m-2  p-1 badge   badge-warning
+     badge-pill ">  Warning </span><span class= "  m-2  p-1 badge   badge-light
+     badge-pill ">  Light </span><span class= "  m-2  p-1 badge   badge-dark
+     badge-pill ">  Dark </span></p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Link Badges</h2>
+  
+  <p class="  text-dark  "><a href="#"  title= ""class="  m-2  p-1    badge   badge-primary
+     "  >  Primary </a><a href="#"  title= ""class="  m-2  p-1    badge   badge-secondary
+     "  >  Secondary </a><a href="#"  title= ""class="  m-2  p-1    badge   badge-info
+     "  >  Info </a><a href="#"  title= ""class="  m-2  p-1    badge   badge-success
+     "  >  Success </a><a href="#"  title= ""class="  m-2  p-1    badge   badge-danger
+      badge-pill  "  >  Danger </a><a href="#"  title= ""class="  m-2  p-1    badge   badge-warning
+      badge-pill  "  >  Warning </a><a href="#"  title= ""class="  m-2  p-1    badge   badge-light
+      badge-pill  "  >  Light </a><a href="#"  title= ""class="  m-2  p-1    badge   badge-dark
+      badge-pill  "  >  Dark </a></p>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Navigation</h1>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Basic navigation</h2>
+  
+  <p class="  bg-info  m-2  p-5   border   border-danger  text-light  ">Une navigation est représentée par plusieurs liens dans un même paragraphe dont le premier lien contient les propriétés qui distinguent une navigation des autres représentations utilisées par les liens (button et badge) et peut également contenir des propriétés générales et particulières comme (brand, basic, vertical, centred).</p>
+  
+  <nav class="   navbar navbar-expand-md">
+  <a href=""  title= ""class="   navbar-brand     nav-link"  >  Basic navigation </a>
+  <ul class="   navbar-nav">
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-primary  m-2      nav-link"  >  Link 1 </a> </li>
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-warning  m-2      nav-link"  > Link 2 </a> </li>
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-danger  m-2      nav-link"  >  Link 3 </a> </li>
+  
+  </ul>
+  </nav>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Brand navigation</h2>
+  
+  <nav class="  bg-secondary   border   border-danger   navbar navbar-expand-sm bg-dark navbar-dark">
+  <a href=""  title= ""class="   navbar-brand     nav-link"  > Navbar brand </a>
+  <ul class="   navbar-nav">
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-primary  m-2      nav-link"  >  Link 1 </a> </li>
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-warning  m-2      nav-link"  > Link 2 </a> </li>
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-danger  m-2      nav-link"  >  Link 3 </a> </li>
+  
+  </ul>
+  </nav>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Vertical navigation</h2>
+  
+  <nav class="   navbar">
+  <a href=""  title= ""class="   navbar-brand     nav-link"  >  </a>
+  <ul class="   navbar-nav">
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-primary  m-2      nav-link"  >  Link 1 </a> </li>
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-warning  m-2      nav-link"  > Link 2 </a> </li>
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-danger  m-2      nav-link"  >  Link 3 </a> </li>
+  
+  </ul>
+  </nav>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Centred navigation</h2>
+  
+  <nav class="   border   border-danger   navbar navbar-expand-md justify-content-center">
+  <a href=""  title= ""class="   navbar-brand     nav-link"  >  Centred navigation </a>
+  <ul class="   navbar-nav">
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-primary  m-2      nav-link"  >  Link 1 </a> </li>
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-warning  m-2      nav-link"  > Link 2 </a> </li>
+  <li class= "nav-item "> <a href="#"  title= ""class="  bg-danger  m-2      nav-link"  >  Link 3 </a> </li>
+  
+  </ul>
+  </nav>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Buttons</h1>
+  
+  <p class="  bg-info  m-2  p-5   border   border-danger  text-light  ">Les liens peuvent être interprétés comme un bouton dès la première transformation de markdown vers USD quand le lien est représenté avec des propriétés d’un button. De USD vers<em class= " "> Bootstrap </em>, si ces propriétés sont significatives, le button est donc directement décoré par les propriétés mises en œuvre dans les métadonnées.</p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Button Styles</h2>
+  
+  <p class="  text-dark  "><button class="  m-2 btn " > 
+     
+     Primary
+  </button><button class=" btn   btn-primary" > 
+      
+     Primary
+  </button><button class=" btn   btn-secondary" > 
+      
+     Secondary
+  </button><button class=" btn   btn-success" > 
+      
+     Success
+  </button><button class=" btn   btn-info" > 
+      
+     Info
+  </button><button class=" btn   btn-warning" > 
+      
+     Warning
+  </button><button class=" btn   btn-danger" > 
+      
+     Danger
+  </button><button class=" btn   btn-primary  btn-outline-primary" > 
+       
+     Dark
+  </button><button class=" btn   btn-light  " > 
+         <span class= "spinner-border spinner-border-sm"></span>
+     Light
+  </button><button class=" btn   btn-dark" > 
+      
+     Link
+  </button><a href="https://www.w3schools.com/bootstrap4/bootstrap_navbar.asp"  title= ""class="  m-2    "  >  </a></p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Button Size</h2>
+  
+  <p class="  text-dark  "><button class=" btn   btn-la  btn-primary" > 
+       
+     Large Primary
+  </button><button class=" btn   btn-success" > 
+      
+     Default Success
+  </button><button class=" btn   btn-danger  btn-sm" > 
+       
+     Small Danger
+  </button></p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Button States</h2>
+  
+  <p class="  text-dark  "><button class=" btn   btn-primary  active" active> 
+       
+     Active Primary
+  </button><button class=" btn   btn-success  "  disabled> 
+       
+     Disabled Success
+  </button></p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Button Spinner</h2>
+  
+  <p class="  text-dark  "><button class=" btn     btn-primary" > 
+        <span class= "spinner-border spinner-border-sm"></span> 
+     Spinner Primary
+  </button><button class=" btn   btn-success  " > 
+         <span class= "spinner-border spinner-border-sm"></span>
+     Spinner Success
+  </button><button class=" btn     btn-danger" > 
+        <span class= "spinner-border spinner-border-sm"></span> 
+     Spinner Danger
+  </button></p>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Titles</h1>
+  
+  <p class="  bg-info  m-2  p-5   border   border-danger  text-light   font-italic ">En *Bootstrap, propriétés d'un titre sont mises sur la même ligne que le texte.</p>
+  
+  <h2 class="  bg-warning  m-3  text-dark   display-1 ">Title with display1</h2>
+  
+  <h2 class="  bg-warning  m-3  text-dark   display-2 ">Title with display2</h2>
+  
+  <h2 class="  bg-warning  m-3  text-dark   display-3 ">Title with display3</h2>
+  
+  <h2 class="  bg-warning  m-3  text-dark   display-4 ">Title with display4</h2>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Colors</h1>
+  
+  <p class="  m-4  text-primary  ">This text is important.</p>
+  
+  <p class="  m-4  text-success  ">This text indicates success.</p>
+  
+  <p class="  m-3  text-info  ">This text represents some information.</p>
+  
+  <p class="  m-4  text-warning  ">This text represents a warning.</p>
+  
+  <p class="  m-4  text-danger  ">This text represents danger.</p>
+  
+  <p class="  m-4  text-secondary  ">Secondary text.</p>
+  
+  <p class="  m-4  text-dark  ">Dark grey text.</p>
+  
+  <p class="  m-4  text-light  ">Light text.</p>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Background</h1>
+  
+  <p class="  bg-primary  m-4  text-dark  ">This text is important.</p>
+  
+  <p class="  bg-success  m-4  text-dark  ">This text indicates success.</p>
+  
+  <p class="  bg-info  m-4  text-dark  ">This text represents some information.</p>
+  
+  <p class="  bg-warning  m-4  text-dark  ">This text represents a warning.</p>
+  
+  <p class="  bg-danger  m-4  text-dark  ">This text represents danger.</p>
+  
+  <p class="  bg-secondary  m-4  text-light  ">Secondary text.</p>
+  
+  <p class="  bg-dark  m-4  text-light  ">Dark grey text.</p>
+  
+  <p class="  bg-light  m-4  text-dark  ">Light text.</p>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Emphasis</h1>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Italic</h2>
+  
+  <p class="  m-4  text-dark   font-italic ">Ceci est un text en italic</p>
+  
+  <h2 class="  bg-dark  text-light   display-3 ">Bold</h2>
+  
+  <p class="  m-4  text-dark   font-weight-bold ">Ceci est un text en bold</p>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Border</h1>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Non colored border</h2>
+  
+  <p class="  m-4   border  text-dark  ">Ceci est un text avec une bordure non coloriée</p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Colored border</h2>
+  
+  <p class="  m-4   border   border-primary  text-dark  ">Ceci est un text avec une bordure coloriée en primary</p>
+  
+  <p class="  m-4   border   border-secondary  text-dark  ">Ceci est un text avec une bordure coloriée en secondary</p>
+  
+  <p class="  m-4   border   border-success  text-dark  ">Ceci est un text avec une bordure coloriée en success</p>
+  
+  <p class="  m-4   border   border-info  text-dark  ">Ceci est un text avec une bordure coloriée en info</p>
+  
+  <p class="  m-4   border   border-danger  text-dark  ">Ceci est un text avec une bordure coloriée en danger</p>
+  
+  <p class="  m-4   border   border-warning  text-dark  ">Ceci est un text avec une bordure coloriée en warning</p>
+  
+  <p class="  m-4   border   border-light  text-dark  ">Ceci est un text avec une bordure coloriée en light</p>
+  
+  <p class="  m-4   border   border-dark  text-dark  ">Ceci est un text avec une bordure coloriée en dark</p>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Alert</h1>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Alert style</h2>
+  
+  <p class="  m-4  	alert-primary  text-dark  ">This is a primary alert—check it out!</p>
+  
+  <p class="  m-4  	alert-secondary  text-dark  ">This is a secondary alert—check it out!</p>
+  
+  <p class="  m-4  	alert-success  text-dark  ">This is a success alert—check it out!</p>
+  
+  <p class="  m-4  	alert-danger  text-dark  ">This is a danger alert—check it out!</p>
+  
+  <p class="  m-4  	alert-warning  text-dark  ">This is a warning alert—check it out!</p>
+  
+  <p class="  m-4  	alert-info  text-dark  ">This is a info alert—check it out!</p>
+  
+  <p class="  m-4  	alert-light  text-dark  ">This is a light alert—check it out!</p>
+  
+  <p class="  m-4  	alert-dark  text-dark  ">This is a dark alert—check it out!</p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Alert style and animated</h2>
+  <div class="alert container   m-4    alert-dismissible fade show  	alert-primary">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  
+    
+    <p class="  m-4    alert-dismissible fade show  	alert-primary  text-dark  ">This is a primary alert—check it out / dismiss it!</p> 
+  
+  </div>
+  <div class="alert container   m-4    alert-dismissible fade show  	alert-secondary">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  
+    
+    <p class="  m-4    alert-dismissible fade show  	alert-secondary  text-dark  ">This is a secondary alert—check it out / dismiss it!</p> 
+  
+  </div>
+  <div class="alert container   m-4    alert-dismissible fade show  	alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  
+    
+    <p class="  m-4    alert-dismissible fade show  	alert-success  text-dark  ">This is a success alert—check it out / dismiss it!</p> 
+  
+  </div>
+  <div class="alert container   m-4    alert-dismissible fade show  	alert-danger">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  
+    
+    <p class="  m-4    alert-dismissible fade show  	alert-danger  text-dark  ">This is a danger alert—check it out / dismiss it!</p> 
+  
+  </div>
+  <div class="alert container   m-4    alert-dismissible fade show  	alert-warning">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  
+    
+    <p class="  m-4    alert-dismissible fade show  	alert-warning  text-dark  ">This is a warning alert—check it out / dismiss it!</p> 
+  
+  </div>
+  <div class="alert container   m-4    alert-dismissible fade show  	alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  
+    
+    <p class="  m-4    alert-dismissible fade show  	alert-info  text-dark  ">This is a info alert—check it out / dismiss it!</p> 
+  
+  </div>
+  <div class="alert container   m-4    alert-dismissible fade show  	alert-light">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  
+    
+    <p class="  m-4    alert-dismissible fade show  	alert-light  text-dark  ">This is a light alert—check it out / dismiss it!</p> 
+  
+  </div>
+  <div class="alert container   m-4    alert-dismissible fade show  	alert-dark">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  
+    
+    <p class="  m-4    alert-dismissible fade show  	alert-dark  text-dark  ">This is a dark alert—check it out / dismiss it!</p> 
+  
+  </div>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Alert link</h2>
+  
+  <p class="  m-4  	alert-primary  text-dark  ">This is a primary alert contains a<a href="url"  title= ""class="   alert-link   "  >  link1 </a>!</p>
+  
+  <p class="  m-4  	alert-secondary  text-dark  ">This is a secondary alert contains a<a href="url"  title= ""class="   alert-link   "  >  link2 </a>!</p>
+  
+  <p class="  m-4  	alert-success  text-dark  ">This is a success alert contains a<a href="url"  title= ""class="   alert-link   "  >  link3 </a>!</p>
+  
+  <p class="  m-4  	alert-danger  text-dark  ">This is a danger alert contains a<a href="url"  title= ""class="   alert-link   "  >  link4 </a>!</p>
+  
+  <p class="  m-4  	alert-warning  text-dark  ">This is a warning alert contains a<a href="url"  title= ""class="   alert-link   "  >  link5 </a>!</p>
+  
+  <p class="  m-4  	alert-info  text-dark  ">This is a info alert contains a<a href="url"  title= ""class="   alert-link   "  >  link6 </a>!</p>
+  
+  <p class="  m-4  	alert-light  text-dark  ">This is a light alert contains a<a href="url"  title= ""class="   alert-link   "  >  link7 </a>!</p>
+  
+  <p class="  m-4  	alert-dark  text-dark  ">This is a dark alert contains a<a href="url"  title= ""class="   alert-link   "  >  link8 </a>!</p>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Lists</h1>
+  
+  <p class="  bg-info  m-3   border   border-danger  text-light  ">Un item est toujours laisser pour les propriétés et qui ne sera jamais affiché.Les types de lists sont basicList et horizontalList</p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Basic lists</h2>
+  
+  <ul class="  list-group   bg-secondary  m-4   border   border-danger ">
+  <li class= "list-group-item "> <p class="  text-dark  ">start list. This is a paragraphon multiple lines.</p> </li>
+  <li class= "list-group-item active"> <p class="  text-dark  ">Active item 2.</p><ul class="  ">
+  <li class= "list-group-item "> <p class="  text-dark  ">level 2 item 1</p> </li>
+  
+  </ul><ul class="  ">
+  <li class= "list-group-item "> <p class="  text-dark  ">level 2 item 3</p><ul class="  ">
+  <li class= "list-group-item "> <p class="  text-dark  ">level 3 item 1</p><ul class="  ">
+  <li class= "list-group-item "> <p class="  text-dark  ">next level ??</p> </li>
+  
+  </ul> </li>
+  
+  </ul> </li>
+  <li class= "list-group-item "> <p class="  text-dark  ">level 2 item 4</p> </li>
+  
+  </ul> </li>
+  
+  </ul>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Horizontal lists</h2>
+  
+  <ul class="  list-group list-group-horizontal   m-4   border   border-success ">
+  <li class= "list-group-item active"> <p class="  text-dark  ">Active item 1.</p> </li>
+  <li class= "list-group-item "> <p class="  text-dark  ">item 2</p> </li>
+  <li class= "list-group-item "> <p class="  text-dark  ">item 3</p> </li>
+  
+  </ul>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Images</h1>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Image avec des propriétés circle et center</h2>
+  
+  <p class="  text-dark  "><img src="https://i1.wp.com/gikspirit.com/wp-content/uploads/2020/04/bootstrap-dans-wordpress.png?fit=824%2C412&ssl=1" alt= "Bootstrap4" title= "Bootstrap4" class="  ml-5   border   border-success   rounded-circle  mx-auto d-block"/></p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Image avec des propriétés rounded et float left et right</h2>
+  
+  <p class="  text-dark  "><img src="https://i1.wp.com/gikspirit.com/wp-content/uploads/2020/04/bootstrap-dans-wordpress.png?fit=824%2C412&ssl=1" alt= "Bootstrap4" title= "Bootstrap4" class="  ml-5   border   border-danger   rounded  float-l"/><img src="https://i1.wp.com/gikspirit.com/wp-content/uploads/2020/04/bootstrap-dans-wordpress.png?fit=824%2C412&ssl=1" alt= "Bootstrap4" title= "Bootstrap4" class="  mr-5   border   border-danger   rounded  float-l"/></p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Image avec des propriétés thumbnail et responsive</h2>
+  
+  <p class="  text-dark  "><img src="https://i1.wp.com/gikspirit.com/wp-content/uploads/2020/04/bootstrap-dans-wordpress.png?fit=824%2C412&ssl=1" alt= "Bootstrap4" title= "Bootstrap4" class="  ml-5   border   border-warning   img-thumbnail  img-fluid"/></p>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Section</h1>
+  
+  <p class="  bg-info  m-3   border   border-danger  text-light   font-italic ">En bootstrap, nous transformons les sections en container selon le type de container passer dans les propriétés soit un<em class= " "> fixconatainer </em>ou un<em class= " "> fluidcontainer </em>.</p>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Fix container</h2>
+  <div class="alert container   bg-secondary  m-4   border   border-secondary">
+  
+  
+    
+    <h1 class="  text-dark  ">Titre de la section</h1> 
+    
+    <p class="  text-dark  ">Un paragraph dans la section</p> 
+    <div class="alert container   bg-secondary  m-5   border   border-secondary">
+    
+    
+      
+      <h2 class="  text-dark  ">Titre de la sous section</h2> 
+      
+      <p class="  text-dark  ">Une list</p> 
+      
+      <ul class="  ">
+      <li class= "list-group-item "> <p class="  text-dark  ">list in section</p> </li>
+      <li class= "list-group-item "> <p class="  text-dark  ">item 2</p> </li>
+      <li class= "list-group-item "> <p class="  text-dark  ">item 3fin de liste</p> </li>
+      
+      </ul> 
+    
+    </div> 
+  
+  </div>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Fluid container</h2>
+  <div class="alert container-fluid	   bg-secondary  m-4   border   border-secondary">
+  
+  
+    
+    <h1 class="  text-dark  ">Titre de la section</h1> 
+    
+    <p class="  text-dark  ">Un paragraph dans la section</p> 
+    <div class="alert container-fluid	   bg-secondary  m-5   border   border-secondary">
+    
+    
+      
+      <h2 class="  text-dark  ">Titre de la sous section</h2> 
+      
+      <p class="  text-dark  ">Une image<img src="https://www.eclipse.org/images/egg-incubation.png" alt= "image" title= "image" class="   rounded-circle  mx-auto d-block"/></p> 
+    
+    </div> 
+  
+  </div>
+  
+  <h1 class="  bg-success  m-2  text-dark   display-2 ">Bootstrap Tables</h1>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Basic table</h2>
+  
+  <table  class="   table ">
+  <thead class="">
+  <tr class="" >
+  <th class="  text-dark  l " colspan="1">Syntax</th><th class="  text-dark  l " colspan="1">Description</th><th class="  text-dark  l " colspan="1">Code</th>
+  </tr>
+  </thead><tbody class="">
+  <tr class="" >
+  <td class="  text-dark  l " colspan="1">Header</td><td class="  text-dark  l " colspan="1">Title</td><td class="  text-dark  l " colspan="1">code1</td>
+  </tr><tr class="" >
+  <td class="  text-dark  l " colspan="1">Paragraph</td><td class="  text-dark  l " colspan="1">Text</td><td class="  text-dark  l " colspan="1">code2</td>
+  </tr>
+  </tbody>
+  </table>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Bordered table</h2>
+  
+  <table  class="   table table-bordered ">
+  <thead class="">
+  <tr class="" >
+  <th class="  text-dark  l " colspan="1">Syntax</th><th class="  text-dark  l " colspan="1">Description</th><th class="  text-dark  l " colspan="1">Code</th>
+  </tr>
+  </thead><tbody class="">
+  <tr class="" >
+  <td class="  text-dark  l " colspan="1">Header</td><td class="  text-dark  l " colspan="1">Title</td><td class="  text-dark  l " colspan="1">code1</td>
+  </tr><tr class="" >
+  <td class="  text-dark  l " colspan="1">Paragraph</td><td class="  text-dark  l " colspan="1">Text</td><td class="  text-dark  l " colspan="1">code2</td>
+  </tr>
+  </tbody>
+  </table>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Dark table</h2>
+  
+  <table  class="   table table-dark ">
+  <thead class="">
+  <tr class="" >
+  <th class="  text-light  l " colspan="1">Syntax</th><th class="  text-light  l " colspan="1">Description</th><th class="  text-light  l " colspan="1">Code</th>
+  </tr>
+  </thead><tbody class="">
+  <tr class="" >
+  <td class="  text-light  l " colspan="1">Header</td><td class="  text-light  l " colspan="1">Title</td><td class="  text-light  l " colspan="1">code1</td>
+  </tr><tr class="" >
+  <td class="  text-light  l " colspan="1">Paragraph</td><td class="  text-light  l " colspan="1">Text</td><td class="  text-light  l " colspan="1">code2</td>
+  </tr>
+  </tbody>
+  </table>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Striped rows table</h2>
+  
+  <table  class="   table table-striped ">
+  <thead class="">
+  <tr class="" >
+  <th class="  text-dark  l " colspan="1">Syntax</th><th class="  text-dark  l " colspan="1">Description</th><th class="  text-dark  l " colspan="1">Code</th>
+  </tr>
+  </thead><tbody class="">
+  <tr class="" >
+  <td class="  text-dark  l " colspan="1">Header</td><td class="  text-dark  l " colspan="1">Title</td><td class="  text-dark  l " colspan="1">code1</td>
+  </tr><tr class="" >
+  <td class="  text-dark  l " colspan="1">Paragraph</td><td class="  text-dark  l " colspan="1">Text</td><td class="  text-dark  l " colspan="1">code2</td>
+  </tr>
+  </tbody>
+  </table>
+  
+  <h2 class="  bg-dark  m-3  text-light   display-3 ">Hover rows table</h2>
+  
+  <table  class="   table table-hover ">
+  <thead class="">
+  <tr class="" >
+  <th class="  text-dark  l " colspan="1">Syntax</th><th class="  text-dark  l " colspan="1">Description</th><th class="  text-dark  l " colspan="1">Code</th>
+  </tr>
+  </thead><tbody class="">
+  <tr class="" >
+  <td class="  text-dark  l " colspan="1">Header</td><td class="  text-dark  l " colspan="1">Title</td><td class="  text-dark  l " colspan="1">code1</td>
+  </tr><tr class="" >
+  <td class="  text-dark  l " colspan="1">Paragraph</td><td class="  text-dark  l " colspan="1">Text</td><td class="  text-dark  l " colspan="1">code2</td>
+  </tr>
+  </tbody>
+  </table>
+</body>
+</html>

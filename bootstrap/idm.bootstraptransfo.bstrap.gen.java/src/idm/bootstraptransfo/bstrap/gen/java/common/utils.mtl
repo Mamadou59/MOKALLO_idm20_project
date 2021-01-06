@@ -53,9 +53,12 @@ subContainers : Sequence(Container) = self.eContents(Container);
 textpageContents : Sequence(TextPageContent) = self.eContents(TextPageContent);
 }]
 <[aBalise/] [self.declareClass()/]"alert [aContainer.getContainerClass()/] [self.generalProperties.getPropertyClass()/]">
+[aContainer.geContainerAlertProperty()/]
+
 [for (aPageContent : PageContent | aContainer.eContents(PageContent))]
   [aPageContent.generatePageContentElement()/] 
 [/for]
+
 [getCloseBaliseName(aBalise)/]
 [/template]
 

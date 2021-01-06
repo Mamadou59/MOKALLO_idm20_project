@@ -230,8 +230,16 @@ border-[self.color.getColor()/]
 
 [comment] ---------------------------------------------------------------------------	[/comment]
 
+[comment]+++++++++++++++ Link badge ++++++++++++++[/comment]
+[template public getLinkBadge(aLink : Link) ? (self.badgeproperties -> notEmpty())]
+ badge [self.badgeproperties.getPropertyClass()/]
+[/template]
 
+[comment]------------------------------------------------------[/comment]
 
+[template public getLinkButton(aLink : Link) ? (self.buttonproperties -> notEmpty())]
+ btn [self.buttonproperties.getPropertyClass()/]
+[/template]
 
 
 

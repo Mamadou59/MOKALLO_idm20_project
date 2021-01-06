@@ -1,3 +1,7 @@
+/**
+* This module ensures markdown transformation to usd of all element contains directly in page.
+*/
+
 import mdTextContainer2usdTextContainer;	
 	
 
@@ -5,24 +9,29 @@ modeltype mdMM "strict" uses "http://www.example.org/simplemarkdown";
 modeltype usdMM "strict" uses "http://www.example.org/usd";
 transformation md2usd(in md : mdMM, out usd : usdMM); 
 	
-// Start transformation block to pagecontent
+// =========== Start transformation block to pagecontent ===========//
 /**
 * Map a markdown Block element to usd PageContent element.
 */
 abstract mapping mdMM::Block::block2PageContent() : usdMM::PageContent {}
 
+// =========== Start transformation paragraph to paragraph or Navigation ===========//
 /**
-* Map a markdown Paragraph element to usd Paragraph element 
+* Map a markdown Paragraph element to usd Paragraph element when paragraph contains any paragraph link
 * which extends textContainerMd2TextContainerUsd mapper.
 */
 mapping mdMM::Paragraph::paragraphMd2ParagraphUsd() : usdMM::Paragraph 
 	inherits mdMM::TextContainer::textContainerMd2TextContainerUsd
 	when {not self.isThereNavigationElement()}{}
-	
+
+/**
+* Map a markdown Paragraph element to usd Paragraph element 
+* which extends textContainerMd2TextContainerUsd mapper.
+*/
 mapping mdMM::Paragraph::paragraphMd2ParagraphUsdIfContentNavigationLink() : usdMM::Navigation 
 	inherits mdMM::Block::block2PageContent
 	when {self.isThereNavigationElement()}{
-		var linkElements := self.subobjectsOfType(mdMM::Link);
+		var linkElements := self.elements[mdMM::Link];
 		var navLink := self.getNavigationElement(); 
 		textContent := navLink.getTextContent();
 		type := navLink.getType();
@@ -30,6 +39,19 @@ mapping mdMM::Paragraph::paragraphMd2ParagraphUsdIfContentNavigationLink() : usd
 			items += linkElements -> map linkMd2NavElementUsd();
 		};
 	}
+
+// =========== Start transformation TextConatiner to TextContainer ===========//
+
+/**
+* Abstract map for mapping a markdown TextContainer element to usd TextContainer element
+* which extends block2PageContent mapper.
+*/
+abstract mapping mdMM::TextContainer::textContainerMd2TextContainerUsd() : usdMM::TextContainer 
+	inherits mdMM::Block::block2PageContent {
+		textElements += self.elements -> map contructTextElement();
+}
+
+// =========== Start transformation Title to Title ===========//
 
 /**
 * Map a markdown Title element to usd Title element 
@@ -39,13 +61,14 @@ mapping mdMM::Title::titleMd2TitleUsd() : usdMM::Title
 	inherits mdMM::TextContainer::textContainerMd2TextContainerUsd{
 		level := self.level;
 }
+
+// =========== Start transformation List to ListElement ===========//
+
 /**
-* Abstract map for mapping a markdown TextContainer element to usd TextContainer element
-* which extends block2PageContent mapper.
+* Mapper from markdown ListItem element to usd ListItem element.
 */
-abstract mapping mdMM::TextContainer::textContainerMd2TextContainerUsd() : usdMM::TextContainer 
-	inherits mdMM::Block::block2PageContent {
-		textElements += self.elements -> map contructTextElement();
+mapping mdMM::ListItem::listItemMd2ListItemUsd() : usdMM::ListItem {
+	elements += self.elements -> map constructListItemElement();
 }
 
 /**
@@ -63,11 +86,16 @@ mapping mdMM::BulletList::unorderedListMd2UnorderedListUsd() : usdMM::UnorderedL
 }
 
 /**
-* Mapper from markdown ListItem element to usd ListItem element.
+* Mapper from ListItemElement to usd ListItemElement which make disjunction beetwen 
+* orderedListMd2OrderedListUsd, unorderedListMd2UnorderedListUsd, paragraphMd2ParagraphUsd,
+* blockQuoteMd2BlockQuoteUsd, codeBlockMd2codeBlockUsd.
 */
-mapping mdMM::ListItem::listItemMd2ListItemUsd() : usdMM::ListItem {
-	elements += self.elements -> map constructListItemElement();
-}
+mapping mdMM::ListItemElement::constructListItemElement() : usdMM::ListItemElement 
+	disjuncts mdMM::OrderedList::orderedListMd2OrderedListUsd, mdMM::BulletList::unorderedListMd2UnorderedListUsd,
+	 			mdMM::Paragraph::paragraphMd2ParagraphUsd,mdMM::CodeBlock::codeBlockMd2codeBlockUsd, 
+	 			mdMM::BlockQuote::blockQuoteMd2BlockQuoteUsd{}
+
+// =========== Start transformation CodeBlock to CodeBlock ===========//
 
 /**
 * Mapper from markdown CodeBlock element to usd CodeBlock element 
@@ -85,6 +113,8 @@ mapping mdMM::CodeLine::codeLinesMd2CodeLinesUsd() : usdMM::CodeLine {
 	text := self.text;
 }
 
+// =========== Start transformation BlockQuote to BlockQuote ===========//
+
 /**
 * Mapper from markdown BlockQuote element to usd BlockQuote element 
 * which extends block2PageContent mapper.
@@ -94,6 +124,8 @@ mapping mdMM::BlockQuote::blockQuoteMd2BlockQuoteUsd() : usdMM::BlockQuote
 	when {not self.isSection()}{
 		contents += self.contents -> map constructContent();
 }
+
+// =========== Start transformation BloxkQuote to Section ===========//
 
 /**
 * Mapper from markdown BlockQuote element to usd section element 
@@ -105,6 +137,7 @@ mapping mdMM::BlockQuote::blockQuoteMd2SectionUsd() : usdMM::Section
 		contents += self.contents -> map constructContent();
 }
 
+// =========== Start transformation HorizontalLine to Horizontal ===========//
 
 /**
 * Mapper from markdown HorzontalLine element to usd HorzontalLine element 
@@ -113,16 +146,9 @@ mapping mdMM::BlockQuote::blockQuoteMd2SectionUsd() : usdMM::Section
 mapping mdMM::HorizontalLine::horizontalLineMd2HorizontalLineUsd() : usdMM::HorizontalLine 
 	inherits mdMM::Block::block2PageContent{}
 
-/**
-* Mapper from ListItemElement to usd ListItemElement which make disjunction beetwen 
-* orderedListMd2OrderedListUsd, unorderedListMd2UnorderedListUsd, paragraphMd2ParagraphUsd,
-* blockQuoteMd2BlockQuoteUsd, codeBlockMd2codeBlockUsd.
-*/
-mapping mdMM::ListItemElement::constructListItemElement() : usdMM::ListItemElement 
-	disjuncts mdMM::OrderedList::orderedListMd2OrderedListUsd, mdMM::BulletList::unorderedListMd2UnorderedListUsd,
-	 			mdMM::Paragraph::paragraphMd2ParagraphUsd,mdMM::CodeBlock::codeBlockMd2codeBlockUsd, 
-	 			mdMM::BlockQuote::blockQuoteMd2BlockQuoteUsd{}
-	 			
+
+// =========== Start transformation Table to Table ===========//
+			
 /**
 * Mapper from markdown TableBlock element to usd Table element.
 */
@@ -183,7 +209,9 @@ mapping mdMM::TableCell::tableCellMd2TableCellUsd() : usdMM::TableCell
 	inherits mdMM::TextContainer::textContainerMd2TextContainerUsd {
 	alignement := self.alignement.getTabCellAlignment();
 	span := self.span;}
-		
+
+// =========== This mapper make disjuncts beetwen all PageContent mappers ===========//
+	
 /**
 * Mapper from ListItemElement to usd ListItemElement which make disjunction beetwen 
 * paragraphMd2ParagraphUsd, titleMd2TitleUsd, orderedListMd2OrderedListUsd,

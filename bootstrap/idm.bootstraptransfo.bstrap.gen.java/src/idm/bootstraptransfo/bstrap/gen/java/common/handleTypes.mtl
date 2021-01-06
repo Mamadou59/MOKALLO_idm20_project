@@ -131,7 +131,7 @@
  * Handle code generation of a UrlBasedLink in a Page  (Link)
  */]
 [template public generateUrlBasedLink(aUrlBasedLink : Link) { aBalise :String = 'a'; }]
-<[aBalise/] href="[self.url/]"  title= "[self.title/]"[self.declareClass()/]"[self.generalProperties.getPropertyClass()/] [self.linkproperties.getPropertyClass()/] btn [self.buttonproperties.getPropertyClass()/] badge [self.badgeproperties.getPropertyClass()/] " [self.getLinkRole()/] > [aUrlBasedLink.textnestedelements.generateTestnestedElement()/] [aBalise.getCloseBaliseName()/]
+<[aBalise/] href="[self.url/]"  title= "[self.title/]"[self.declareClass()/]"[self.generalProperties.getPropertyClass()/] [self.linkproperties.getPropertyClass()/] [self.getLinkButton()/] [self.getLinkBadge()/] [self.getLinkItem()/]" [self.getLinkRole()/] > [aUrlBasedLink.textnestedelements.generateTestnestedElement()/] [aBalise.getCloseBaliseName()/]
 [/template]
 
 
@@ -155,7 +155,7 @@
 <[aBaliseName/] [self.declareClass()/] "[self.generalProperties.getPropertyClass()/] "> [self.textnestedelements.generateTestnestedElement()/] [aBaliseName.getCloseBaliseName()/]
 [/template] 
 [template public generateTextContainable(aTextContainable : Span) { aBaliseName : String = 'span'; }]
-<[aBaliseName/] [self.declareClass()/] "[self.generalProperties.getPropertyClass()/] badge [self.badgeproperties.getBadgeProperty()/]"> [self.textnestedelements.generateTestnestedElement()/] [aBaliseName.getCloseBaliseName()/]
+<[aBaliseName/] [self.declareClass()/] "[self.generalProperties.getPropertyClass()/] badge [self.badgeproperties.getPropertyClass()/]"> [self.textnestedelements.generateTestnestedElement()/] [aBaliseName.getCloseBaliseName()/]
 [/template] 
 
 
@@ -342,10 +342,11 @@
 
 [comment]+++++++++++++++ Main CodeLine ++++++++++++++[/comment]
 
-[template public isButtonAlert(aTextPageContent : TextPageContent) ? (self.eContainer(Container).oclIsKindOf(Container))]
+[template public isButtonAlert(aTextPageContent : TextPageContent) ]
+[comment]? (self.eContainer(Container).oclIsKindOf(Container) = true)
 [if (self.eContainer(Container).generalProperties.eContents(AlertProperty)-> notEmpty())]
 	<button type="button" class="close" data-dismiss="alert">&times;</button>
-[/if]
+[/if][/comment]
 [/template]
 
 

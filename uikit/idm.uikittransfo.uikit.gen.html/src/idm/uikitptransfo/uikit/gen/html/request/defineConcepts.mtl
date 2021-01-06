@@ -65,6 +65,6 @@
  */]
 
 [template public getSize(aSize : Size) ? (self.toString() <> 'DEFAULT')]
-[self.toString().toLower().first(2)/]
+[self.toString().toLower()/]
 [/template]
 [comment]------------------------------------------------------[/comment]
